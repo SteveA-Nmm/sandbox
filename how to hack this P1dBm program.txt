@@ -1,0 +1,93 @@
+
+how to hack this P1dBm program
+
+Call Select_Test
+Test_Type = P1dB_Test
+??? from p1db_test to find_p1db_ ....????
+
+
+Main
+For Count 4 ...
+	...
+	...
+Step_Num = 0
+Cal_Index = (((Band_num -1) * ((RF_Freq - Freq_IN_Start)/Cal_Step)) - (Step/Cal_Step)) +((2*Step/Cal_Step) * (1-Mode)) 
+Step_Size
+Cal_Steps = 1+(Band_Size/Step) \\ Number of Cal Steps calculates the 8 in the For Count 8
+IF_Gain_Index = -1
+
+For Count 8 \\ p1dB at only 8 freq per port
+	{
+IF_Gain_Index = IF_Gain_Index +1
+Cal_Index = Cal_Index +((step/Cal_Step)*Mode)-((step/Cal_Step)*(-(Mode-1)))
+Step_Num = Step_Num +1
+Freq_IN = ((Freq_IN + Step)*Mode)+((Freq_IN-Step)*(-(Mode-1)))
+	call Freq_In_Range_Check
+asint32(Freq_LO)
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),1) = A;
+
+Freq_IN
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),2) = A;
+
+MRF_Freq = A - B
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),3) = A;
+
+Freq_Out_Start - (RF_Freq_Offset *(-(Mode-1)))
+Freq_Out_Stop = (((Freq_Out_Start - Band_Size)*Mode) + ((Freq_Out_Start - Band_Size)*(-(Mode-1)))) -(RF_Freq_Offset*(-(Mode-1)))
+Cal_Index
+MRF_Freq = MRF_Freq*1000
+RF_Source_Freq = Freq_IN
+Data_Table[Cal_Index,1] +1  \\RF_Source_Power is from... 
+RF_Source_Power = (Data_Table[(Cal_Index),1]) + Asreal32(RF_Pwr+3 +Input_Atten)
+IF_Freq = MRF_Freq \\ from above calc
+RF_Source_Freq
+Test_Type+"_" +Type
+	call {{Test_Type+"_" +Type}} \\ call Find_P1dB_Down_Converter 
+Find_P1dB_Down_Converter called by Main
+flow chart
+Port
+sheet.cells(10 +((Cycle_Count -1) *10) ,1) =  A
+IF_Freq
+Freq_IN
+LO1_Freq
+Cal_RF_Freq =A
+Input_Power =-21
+RF_Source_Power = AsReal64(Data_Table[(Cal_Index),2]) + Input_Power +3 +Input_Atten
+Temp1 = 25
+call Find_Gain
+	call Tune_RF_Source
+	call Get_Power_Power_Meter
+	Gain = MRF_Pwr -Input_Power
+Gain_Linear = Gain
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),4) =  A \\Gain@ -21dBm input power
+Temp_Num
+If A==0 ((if 0 it's roomtemp and inputpower=-9dBm ELSE is it cold inputpower=-11dBm))
+	Then ....
+Search	||Input_Power =-9
+ramp	||RF_Source_Power = AsReal64(Data_Table[(Cal_Index),3]) + Input_Power +3 +Input_Atten
+up to	||Temp1 = 9
+find	||call Find_Gain
+actual	||	call Tune_RF_Source
+P1dBm	||	call Get_Power_Power_Meter
+output	||	Gain = MRF_Pwr -Input_Power
+Power
+	Power Output @ P1dBm = 18dBm+
+	save to worksheet in new column
+	refactor all the columns
+
+	Call Find_Gain  \\use input power from Power Output @ P1dBm above
+
+Gain_Comp = Gain
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),5) =  A \\Gain@ -9dBm input power
+	row = ((step_num + 10 +(Cycle_cout -1)*10) column=E
+
+Compression = Gain_Linear - Gain_Comp
+sheet.cells(step_num+10 + ((Cycle_Count -1) *10),7) =  A
+	row = ((step_num + 10 +(Cycle_cout -1)*10)
+P1dB_Data[step_num-1,Port_Num-1] =  A
+
+sheet.cells(2,5) = "RF Power In_" +(Input_Power) +"dBm"
+	???  sheet.cells is absolute, it overwrites this cell every iteration???
+
+N12_3541_SN1583_Band_1_P1dB_2000 MHz Step Size_Temp +25C_Test Data_2019_10_21_7264.xlsx
+
