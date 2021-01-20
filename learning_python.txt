@@ -1,0 +1,29 @@
+page 50 Don't use keywords as a function name. Don't use the same name for a function and a variable. The value None is not the same as the string 'None'. Don't use None as a variable or a function name.
+
+
+
+hp.Vee questions to ask
+local variables versus global variables
+objects versus functions
+
+functions break the program down to bite sized pieces.
+functions can have descriptive names that make reading the easier
+
+functions can be used to reduce the use of repetitive code. ** is it now a void or a fruitful function? **
+
+functions can be updated in one place and the change takes place for every call of the function there after with out worry of missing a user object burried deep in the code base.
+
+function can be made portable and reused in other programs.
+
+why not functions? ehe
+
+
++++++++++++im Delete Variables at PreRun - 
+When the Delete Variables at PreRun check box is selected, the values stored in all variables are deleted before the program runs each time. 
+Because Get Variable objects cannot execute until the variables they call are set with Set Variable objects, an error will be returned if a required variable has not been set. 
+When the Delete Variables at PreRun check box is not selected, the values stored in variables will not be deleted at PreRun, and the program runs using data from a previous run. 
+However, you need to be careful, this data may be invalid (not correct for the execution of the program this time), no error will be reported, and you may encounter unexpected results.
+
+Therefore develop code with the check box selected.  Delete Variables at PreRun 
+
+ If Delete Variables at PreRun is turned off, variables will not be deleted, and you must program carefully to avoid propagating invalid data.
