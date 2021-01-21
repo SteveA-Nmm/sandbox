@@ -1,0 +1,42 @@
+create excel worksheet
+SET sheet = createobject("excel.sheet").worksheets(1);
+SET app = sheet.application;
+app.visible = 1;
+SET window = app.windows(1);
+window.caption = A;
+
++++++++++++++++++++++++++
+=cell("address",rangestart)  returns the absolute address
+cell returns information about the formating, location or contents of first cell in a reference
+Range.Address property (
+_________________________
+ExcelApp.cell("address",A)
+
+"cell" is not a member of the referenced ActiveX object
+
+__________________________
+
+++++++++++++++++++++
+
+
+set up excel worksheet
+set sheet = CreateObject("Excel.Application").Workbooks.Add.worksheets(1);
+set ExcelApp = sheet.Application;
+ExcelApp.Visible = TRUE;
+ExcelApp.DisplayAlerts =FALSE;
+ExcelApp.Windows(1).Caption = A;
+sheet.cells(2,1) = Cal_IF_file_Name
+
+
+set USB_Gen = createobject("mcl_gen.usb_gen")
+USB_Gen.Connect(SN);
+USB_Gen.Read_ModelName(ByRef ModelName);
+USB_Gen.Read_SN(ByRef SN);
+
+++++++++++++++++++++++++++++++
+sidecar
+Call Get_Time returns Time & Date
+Month(AsVariantDate(A))
+Mday(AsVariantdate(A))
+then concat the parts to make a time stamp
+

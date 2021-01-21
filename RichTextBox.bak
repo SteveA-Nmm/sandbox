@@ -1,0 +1,782 @@
+(saveFormat "7.0")
+(date "Thu 21/Jan/2021 09:28:41 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(activexControls
+(activexControl 1
+(libid "{3B7C8863-D78F-101B-B9B5-04021C009402}")
+(desc "Microsoft Rich Textbox Control 6.0 (SP6)")
+(filename "C:\\Windows\\SysWow64\\richtx32.ocx")
+(verMajor 1)
+(verMinor 2)
+(lcid 0)))
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 24)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 0 ACTIVEXCONTROL
+(properties
+(name "RichTextBox: RichTextBox1")
+(variableName RichTextBox)
+(variableScope cont)
+(objectType "RichTextLib.RichTextBox"))
+(implementation
+(license 24 #H84DCDAE3A0E1020AED0B0BEC22232C3B2F44434E64691E00
+)
+(state 3475 #H
+21433412080000007F3A0000F23B00002143341201000600770D00000000FFFF0000FFFFFFFF0000
+00000000000000000000000005000080000000000000010000000100010002000C000000443A5C56
+454520352E305C416374697665584175746F6D6174696F6E5C43726561745254462E727466007B5C
+727466315C616E73695C616E7369637067313235325C64656666305C6465666C616E67313033337B
+5C666F6E7474626C7B5C66305C667377697373204D532053616E732053657269663B7D7B5C66315C
+6673776973735C667072713220417269616C3B7D7B5C66325C66726F6D616E5C6670727132205469
+6D6573204E657720526F6D616E3B7D7B5C66335C666D6F6465726E5C667072713120436F75726965
+72204E65773B7D7B5C66345C666E696C5C6663686172736574322053796D626F6C3B7D7D0D0A5C76
+6965776B696E64345C7563315C706172645C66305C667332342020205C625C66315C667332382050
+726F63656475726520666F72206372656174696E672052696368205465787420426F7820436F6E74
+726F6C7320696E20564545200D0A5C706172205C62305C6673323420437265617465205254462043
+6F6E74656E74200D0A5C706172205C706172647B5C706E746578745C66345C2742375C7461627D7B
+5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64656E743336307B5C706E747874625C
+2742377D7D5C66692D3336305C6C693739325C74783336305C66325C667332302047656E65726174
+6520636F6E74656E7420696E20796F7572206661766F7269746520776F72642070726F636573736F
+722E200D0A5C706172207B5C706E746578745C66345C2742375C7461627D55736520746865205361
+7665204173206D656E752C20616E642073656C6563742052544620666F726D617420200D0A5C7061
+72207B5C706E746578745C66345C2742375C7461627D436C6F7365207468652066696C6520696E73
+6964652074686520776F72642070726F636573736F72206F7220657869742074686520776F726420
+5C6673313820200D0A5C706172205C706172645C6C693732305C66733230202070726F636573736F
+722E20496620796F7520736B69702074686973207374657020796F752063616E6E6F742061636365
+7373207468652066696C65205C6673313820200D0A5C706172205C6673323020206C617465722E5C
+6673313820200D0A5C706172205C706172645C66315C667332342041646420546865204163746976
+65205820436F6E74726F6C20746F20796F757220564545206170706C69636174696F6E200D0A5C70
+6172205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C
+626C745C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D3336
+305C6C693739325C74783336305C66325C667332302053656C656374206D656E75206974656D3A20
+5C6920446576696365732F416374697665205820436F6E74726F6C205265666572656E6365735C69
+3020200D0A5C706172207B5C706E746578745C66345C2742375C7461627D4C6F63617465205C6920
+4D6963726F736F667420526963682054657874626F7820436F6E74726F6C20352E305C693020200D
+0A5C706172207B5C706E746578745C66345C2742375C7461627D436865636B206974732063686563
+6B626F7820616E6420636C69636B204F4B200D0A5C706172207B5C706E746578745C66345C274237
+5C7461627D53656C656374206D656E75206974656D205C6920446576696365732F41637469766558
+20436F6E74726F6C732F52696368205465787420426F785C693020200D0A5C706172207B5C706E74
+6578745C66345C2742375C7461627D506C6163652074686520636F6E74726F6C206F6E20796F7572
+2056454520776F726B737061636520200D0A5C706172205C706172645C66315C6673323420416464
+207468652052544620436F6E74656E7420746F20796F7572204163746976655820436F6E74726F6C
+200D0A5C706172205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C
+706E6C766C626C745C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C
+66692D3336305C6C693739325C74783739325C66325C667332302052696768742D636C69636B206F
+6E20746865205254462054657874626F7820636F6E74726F6C200D0A5C706172207B5C706E746578
+745C66345C2742375C7461627D53656C65637420436F6E74726F6C2050726F70657274696573200D
+0A5C706172207B5C706E746578745C66345C2742375C7461627D556E646572207468652047656E65
+72616C207461622C20636C69636B2074686520627574746F6E207769746820746872656520646F74
+7320696E200D0A5C706172205C706172645C6C693739322020697420746F20746865207269676874
+206F66207468652046696C654E616D65206669656C6420200D0A5C706172205C706172647B5C706E
+746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C745C706E66345C706E69
+6E64656E743336307B5C706E747874625C2742377D7D5C66692D3336305C6C693739325C74783739
+32204C6F6361746520796F75722066696C6520616E6420636C69636B204F70656E200D0A5C706172
+205C706172645C66315C66733234204D616B652074686520636F6E74656E74207065727369737465
+6E7420286F7074696F6E616C29200D0A5C706172205C66325C6673323020496620796F752073746F
+702074686572652C207468652066696C652069732072652D726561642065766572792074696D6520
+5645452065786563757465732074686520200D0A5C70617220557365722046756E6374696F6E2063
+6F6E7461696E696E67207468652052544620636F6E74726F6C2E20546F2061766F69642074686973
+20616E64200D0A5C70617220656D6265642074686520636F6E74656E7420696E20796F7572205645
+45206170706C69636174696F6E2C20646F2074686520666F6C6C6F77696E673A200D0A5C70617220
+5C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C74
+5C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D3336305C6C
+693739325C747833363020416464206120666F726D756C6120626F78207769746820746869732063
+6F64653A200D0A5C706172205C706172645C6C69313434305C6633205269636854657874426F7831
+2E5465787452544620200D0A5C706172205C706172647B5C706E746578745C66345C2742375C7461
+627D7B5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64656E743336307B5C706E7478
+74625C2742377D7D5C66692D3336305C6C693739325C74783336305C663220416464206120746578
+7420636F6E7374616E7420616E64206769766520697420612064656661756C742076616C75652069
+6E7075742070696E2E200D0A5C706172207B5C706E746578745C66345C2742375C7461627D436F6E
+6E6563742074686520666F726D756C61206F757470757420746F2061202246726F6D20537472696E
+6722206F626A6563742073657420746F2022546F6B656E204578636C75646522206F662020225C5C
+725C5C6E222E200D0A5C706172205C706172645C6C693732302020436F6E6E65637420697473206F
+757470757420746F206120207465787420636F6E7374616E7420696E70757420616E642072756E20
+746865206170706C69636174696F6E2E20200D0A5C706172205C706172647B5C706E746578745C66
+345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64656E7433
+36307B5C706E747874625C2742377D7D5C66692D3336305C6C693739325C74783336302041646420
+616E20696E7075742070696E206C6162656C65642027412720746F207468652061626F766520666F
+726D756C6120626F7820616E6420200D0A5C706172205C706172645C6C693732302020636F6E6E65
+637420746865206F7574707574206F6620746865207465787420636F6E7374616E7420746F206120
+22546F20537472696E6722206F626A65637420616E64200D0A5C7061722020636F6E6E6563742074
+68652022546F20537472696E6722206F757470757420746F2074686520666F726D756C6120626F78
+2E20456469742074686520666F726D756C6120746F20726561643A200D0A5C706172205C70617264
+5C6C69313434305C6633205269636854657874426F78312E54657874525446203D41200D0A5C7061
+72205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C62
+6C745C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D333630
+5C6C693739325C74783336305C66322044656C65746520746865202744656661756C742056616C75
+652720696E7075742070696E2066726F6D20746865205465787420636F6E7374616E74200D0A5C70
+6172207B5C706E746578745C66345C2742375C7461627D52756E20746865206170706C6963617469
+6F6E20616E6420536176652069742E200D0A5C706172205C70617264204E6F772C20746865205269
+6368205465787420426F7820636F6E74656E742069732073746F726564207769746820796F757220
+564545206170706C69636174696F6E2E200D0A5C70617220200D0A5C706172207D0D0A
+)))
+(device 2 FORMULA
+(properties
+(name "RichTextBox.TextRTF")
+(variableScope cont)
+(expr 2 "RichTextBox2.TextRTF = A;" "richtextbox.textRTF;"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 9 FROMSTRING
+(properties
+(variableScope cont)
+(transactions 1 "READ TEXT x TOKEN EXCLUDE:\"\\r\\n\\\"\" ARRAY:*"))
+(interface
+(input 1
+(name "AString")
+(tag "AString")
+(requires
+(datatype Text))
+(lock name constraints))
+(output 1
+(name "X")
+(optional yes)))
+(implementation
+(attr iopath string read "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 10 LITERALCONSTANT
+(properties
+(name "RTF Source Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(numDims 1)
+(size 257)
+(data  [
+"{\\rtf1\\adeflang1025\\ansi\\ansicpg1252\\uc1\\adeff31507\\deff0\\stshfdbch31506\\stshfloch31506\\stshfhich31506\\stshfbi31507\\deflang1033\\deflangfe1033\\themelang1033\\themelangfe0\\themelangcs0{\\fonttbl{\\f0\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}{\\f2\\fbidi \\fmodern\\fcharset0\\fprq1{\\*\\panose 02070309020205020404}Courier New;}"
+"{\\f34\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02040503050406030204}Cambria Math;}{\\f37\\fbidi \\fswiss\\fcharset0\\fprq2{\\*\\panose 020f0502020204030204}Calibri;}{\\f60\\fbidi \\fscript\\fcharset0\\fprq2{\\*\\panose 030f0702030302020204}Comic Sans MS;}"
+"{\\f140\\fbidi \\fswiss\\fcharset0\\fprq2{\\*\\panose 020b0604030504040204}Tahoma;}{\\flomajor\\f31500\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}"
+"{\\fdbmajor\\f31501\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}{\\fhimajor\\f31502\\fbidi \\fswiss\\fcharset0\\fprq2{\\*\\panose 020f0302020204030204}Calibri Light;}"
+"{\\fbimajor\\f31503\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}{\\flominor\\f31504\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}"
+"{\\fdbminor\\f31505\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}{\\fhiminor\\f31506\\fbidi \\fswiss\\fcharset0\\fprq2{\\*\\panose 020f0502020204030204}Calibri;}"
+"{\\fbiminor\\f31507\\fbidi \\froman\\fcharset0\\fprq2{\\*\\panose 02020603050405020304}Times New Roman;}{\\f609\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}{\\f610\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}"
+"{\\f612\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\f613\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}{\\f614\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}{\\f615\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}"
+"{\\f616\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}{\\f617\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}{\\f629\\fbidi \\fmodern\\fcharset238\\fprq1 Courier New CE;}{\\f630\\fbidi \\fmodern\\fcharset204\\fprq1 Courier New Cyr;}"
+"{\\f632\\fbidi \\fmodern\\fcharset161\\fprq1 Courier New Greek;}{\\f633\\fbidi \\fmodern\\fcharset162\\fprq1 Courier New Tur;}{\\f634\\fbidi \\fmodern\\fcharset177\\fprq1 Courier New (Hebrew);}{\\f635\\fbidi \\fmodern\\fcharset178\\fprq1 Courier New (Arabic);}"
+"{\\f636\\fbidi \\fmodern\\fcharset186\\fprq1 Courier New Baltic;}{\\f637\\fbidi \\fmodern\\fcharset163\\fprq1 Courier New (Vietnamese);}{\\f949\\fbidi \\froman\\fcharset238\\fprq2 Cambria Math CE;}{\\f950\\fbidi \\froman\\fcharset204\\fprq2 Cambria Math Cyr;}"
+"{\\f952\\fbidi \\froman\\fcharset161\\fprq2 Cambria Math Greek;}{\\f953\\fbidi \\froman\\fcharset162\\fprq2 Cambria Math Tur;}{\\f956\\fbidi \\froman\\fcharset186\\fprq2 Cambria Math Baltic;}{\\f957\\fbidi \\froman\\fcharset163\\fprq2 Cambria Math (Vietnamese);}"
+"{\\f979\\fbidi \\fswiss\\fcharset238\\fprq2 Calibri CE;}{\\f980\\fbidi \\fswiss\\fcharset204\\fprq2 Calibri Cyr;}{\\f982\\fbidi \\fswiss\\fcharset161\\fprq2 Calibri Greek;}{\\f983\\fbidi \\fswiss\\fcharset162\\fprq2 Calibri Tur;}"
+"{\\f984\\fbidi \\fswiss\\fcharset177\\fprq2 Calibri (Hebrew);}{\\f985\\fbidi \\fswiss\\fcharset178\\fprq2 Calibri (Arabic);}{\\f986\\fbidi \\fswiss\\fcharset186\\fprq2 Calibri Baltic;}{\\f987\\fbidi \\fswiss\\fcharset163\\fprq2 Calibri (Vietnamese);}"
+"{\\f1209\\fbidi \\fscript\\fcharset238\\fprq2 Comic Sans MS CE;}{\\f1210\\fbidi \\fscript\\fcharset204\\fprq2 Comic Sans MS Cyr;}{\\f1212\\fbidi \\fscript\\fcharset161\\fprq2 Comic Sans MS Greek;}{\\f1213\\fbidi \\fscript\\fcharset162\\fprq2 Comic Sans MS Tur;}"
+"{\\f1216\\fbidi \\fscript\\fcharset186\\fprq2 Comic Sans MS Baltic;}{\\f2009\\fbidi \\fswiss\\fcharset238\\fprq2 Tahoma CE;}{\\f2010\\fbidi \\fswiss\\fcharset204\\fprq2 Tahoma Cyr;}{\\f2012\\fbidi \\fswiss\\fcharset161\\fprq2 Tahoma Greek;}"
+"{\\f2013\\fbidi \\fswiss\\fcharset162\\fprq2 Tahoma Tur;}{\\f2014\\fbidi \\fswiss\\fcharset177\\fprq2 Tahoma (Hebrew);}{\\f2015\\fbidi \\fswiss\\fcharset178\\fprq2 Tahoma (Arabic);}{\\f2016\\fbidi \\fswiss\\fcharset186\\fprq2 Tahoma Baltic;}"
+"{\\f2017\\fbidi \\fswiss\\fcharset163\\fprq2 Tahoma (Vietnamese);}{\\f2018\\fbidi \\fswiss\\fcharset222\\fprq2 Tahoma (Thai);}{\\flomajor\\f31508\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}"
+"{\\flomajor\\f31509\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}{\\flomajor\\f31511\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\flomajor\\f31512\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}"
+"{\\flomajor\\f31513\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}{\\flomajor\\f31514\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}{\\flomajor\\f31515\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}"
+"{\\flomajor\\f31516\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}{\\fdbmajor\\f31518\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}{\\fdbmajor\\f31519\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}"
+"{\\fdbmajor\\f31521\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\fdbmajor\\f31522\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}{\\fdbmajor\\f31523\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}"
+"{\\fdbmajor\\f31524\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}{\\fdbmajor\\f31525\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}{\\fdbmajor\\f31526\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}"
+"{\\fhimajor\\f31528\\fbidi \\fswiss\\fcharset238\\fprq2 Calibri Light CE;}{\\fhimajor\\f31529\\fbidi \\fswiss\\fcharset204\\fprq2 Calibri Light Cyr;}{\\fhimajor\\f31531\\fbidi \\fswiss\\fcharset161\\fprq2 Calibri Light Greek;}"
+"{\\fhimajor\\f31532\\fbidi \\fswiss\\fcharset162\\fprq2 Calibri Light Tur;}{\\fhimajor\\f31533\\fbidi \\fswiss\\fcharset177\\fprq2 Calibri Light (Hebrew);}{\\fhimajor\\f31534\\fbidi \\fswiss\\fcharset178\\fprq2 Calibri Light (Arabic);}"
+"{\\fhimajor\\f31535\\fbidi \\fswiss\\fcharset186\\fprq2 Calibri Light Baltic;}{\\fhimajor\\f31536\\fbidi \\fswiss\\fcharset163\\fprq2 Calibri Light (Vietnamese);}{\\fbimajor\\f31538\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}"
+"{\\fbimajor\\f31539\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}{\\fbimajor\\f31541\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\fbimajor\\f31542\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}"
+"{\\fbimajor\\f31543\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}{\\fbimajor\\f31544\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}{\\fbimajor\\f31545\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}"
+"{\\fbimajor\\f31546\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}{\\flominor\\f31548\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}{\\flominor\\f31549\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}"
+"{\\flominor\\f31551\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\flominor\\f31552\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}{\\flominor\\f31553\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}"
+"{\\flominor\\f31554\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}{\\flominor\\f31555\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}{\\flominor\\f31556\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}"
+"{\\fdbminor\\f31558\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}{\\fdbminor\\f31559\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}{\\fdbminor\\f31561\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}"
+"{\\fdbminor\\f31562\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}{\\fdbminor\\f31563\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}{\\fdbminor\\f31564\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}"
+"{\\fdbminor\\f31565\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}{\\fdbminor\\f31566\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}{\\fhiminor\\f31568\\fbidi \\fswiss\\fcharset238\\fprq2 Calibri CE;}"
+"{\\fhiminor\\f31569\\fbidi \\fswiss\\fcharset204\\fprq2 Calibri Cyr;}{\\fhiminor\\f31571\\fbidi \\fswiss\\fcharset161\\fprq2 Calibri Greek;}{\\fhiminor\\f31572\\fbidi \\fswiss\\fcharset162\\fprq2 Calibri Tur;}"
+"{\\fhiminor\\f31573\\fbidi \\fswiss\\fcharset177\\fprq2 Calibri (Hebrew);}{\\fhiminor\\f31574\\fbidi \\fswiss\\fcharset178\\fprq2 Calibri (Arabic);}{\\fhiminor\\f31575\\fbidi \\fswiss\\fcharset186\\fprq2 Calibri Baltic;}"
+"{\\fhiminor\\f31576\\fbidi \\fswiss\\fcharset163\\fprq2 Calibri (Vietnamese);}{\\fbiminor\\f31578\\fbidi \\froman\\fcharset238\\fprq2 Times New Roman CE;}{\\fbiminor\\f31579\\fbidi \\froman\\fcharset204\\fprq2 Times New Roman Cyr;}"
+"{\\fbiminor\\f31581\\fbidi \\froman\\fcharset161\\fprq2 Times New Roman Greek;}{\\fbiminor\\f31582\\fbidi \\froman\\fcharset162\\fprq2 Times New Roman Tur;}{\\fbiminor\\f31583\\fbidi \\froman\\fcharset177\\fprq2 Times New Roman (Hebrew);}"
+"{\\fbiminor\\f31584\\fbidi \\froman\\fcharset178\\fprq2 Times New Roman (Arabic);}{\\fbiminor\\f31585\\fbidi \\froman\\fcharset186\\fprq2 Times New Roman Baltic;}{\\fbiminor\\f31586\\fbidi \\froman\\fcharset163\\fprq2 Times New Roman (Vietnamese);}}"
+"{\\colortbl;\\red0\\green0\\blue0;\\red0\\green0\\blue255;\\red0\\green255\\blue255;\\red0\\green255\\blue0;\\red255\\green0\\blue255;\\red255\\green0\\blue0;\\red255\\green255\\blue0;\\red255\\green255\\blue255;\\red0\\green0\\blue128;\\red0\\green128\\blue128;\\red0\\green128\\blue0;"
+"\\red128\\green0\\blue128;\\red128\\green0\\blue0;\\red128\\green128\\blue0;\\red128\\green128\\blue128;\\red192\\green192\\blue192;\\red0\\green0\\blue0;\\red0\\green0\\blue0;\\red0\\green176\\blue240;\\red0\\green176\\blue80;\\red112\\green48\\blue160;}{\\*\\defchp \\f31506\\fs22 }"
+"{\\*\\defpap \\ql \\li0\\ri0\\sa160\\sl259\\slmult1\\widctlpar\\wrapdefault\\aspalpha\\aspnum\\faauto\\adjustright\\rin0\\lin0\\itap0 }\\noqfpromote {\\stylesheet{\\ql \\li0\\ri0\\sa160\\sl259\\slmult1\\widctlpar\\wrapdefault\\aspalpha\\aspnum\\faauto\\adjustright\\rin0\\lin0\\itap0 "
+"\\rtlch\\fcs1 \\af31507\\afs22\\alang1025 \\ltrch\\fcs0 \\f31506\\fs22\\lang1033\\langfe1033\\cgrid\\langnp1033\\langfenp1033 \\snext0 \\sqformat \\spriority0 Normal;}{\\*\\cs10 \\additive \\ssemihidden \\sunhideused \\spriority1 Default Paragraph Font;}{\\*"
+"\\ts11\\tsrowd\\trftsWidthB3\\trpaddl108\\trpaddr108\\trpaddfl3\\trpaddft3\\trpaddfb3\\trpaddfr3\\trcbpat1\\trcfpat1\\tblind0\\tblindtype3\\tsvertalt\\tsbrdrt\\tsbrdrl\\tsbrdrb\\tsbrdrr\\tsbrdrdgl\\tsbrdrdgr\\tsbrdrh\\tsbrdrv \\ql \\li0\\ri0\\sa160\\sl259\\slmult1"
+"\\widctlpar\\wrapdefault\\aspalpha\\aspnum\\faauto\\adjustright\\rin0\\lin0\\itap0 \\rtlch\\fcs1 \\af31507\\afs22\\alang1025 \\ltrch\\fcs0 \\f31506\\fs22\\lang1033\\langfe1033\\cgrid\\langnp1033\\langfenp1033 \\snext11 \\ssemihidden \\sunhideused Normal Table;}}"
+"{\\*\\rsidtbl \\rsid3356658\\rsid13251945}{\\mmathPr\\mmathFont34\\mbrkBin0\\mbrkBinSub0\\msmallFrac0\\mdispDef1\\mlMargin0\\mrMargin0\\mdefJc1\\mwrapIndent1440\\mintLim0\\mnaryLim1}{\\info{\\author Steve Applen}{\\operator Steve Applen}{\\creatim\\yr2021\\mo1\\dy21\\hr9\\min7}"
+"{\\revtim\\yr2021\\mo1\\dy21\\hr9\\min10}{\\version1}{\\edmins3}{\\nofpages1}{\\nofwords3}{\\nofchars19}{\\nofcharsws21}{\\vern7}}{\\*\\xmlnstbl {\\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}"
+"\\paperw12240\\paperh15840\\margl1440\\margr1440\\margt1440\\margb1440\\gutter0\\ltrsect "
+"\\widowctrl\\ftnbj\\aenddoc\\trackmoves0\\trackformatting1\\donotembedsysfont1\\relyonvml0\\donotembedlingdata0\\grfdocevents0\\validatexml1\\showplaceholdtext0\\ignoremixedcontent0\\saveinvalidxml0\\showxmlerrors1\\noxlattoyen"
+"\\expshrtn\\noultrlspc\\dntblnsbdb\\nospaceforul\\formshade\\horzdoc\\dgmargin\\dghspace180\\dgvspace180\\dghorigin1440\\dgvorigin1440\\dghshow1\\dgvshow1"
+"\\jexpand\\viewkind1\\viewscale100\\pgbrdrhead\\pgbrdrfoot\\splytwnine\\ftnlytwnine\\htmautsp\\nolnhtadjtbl\\useltbaln\\alntblind\\lytcalctblwd\\lyttblrtgr\\lnbrkrule\\nobrkwrptbl\\snaptogridincell\\allowfieldendsel\\wrppunct"
+"\\asianbrkrule\\rsidroot13251945\\newtblstyruls\\nogrowautofit\\usenormstyforlist\\noindnmbrts\\felnbrelev\\nocxsptable\\indrlsweleven\\noafcnsttbl\\afelev\\utinl\\hwelev\\spltpgpar\\notcvasp\\notbrkcnstfrctbl\\notvatxbx\\krnprsnet\\cachedcolbal \\nouicompat \\fet0"
+"{\\*\\wgrffmtfilter 2450}\\nofeaturethrottle1\\ilfomacatclnup0\\ltrpar \\sectd \\ltrsect\\linex0\\endnhere\\sectlinegrid360\\sectdefaultcl\\sftnbj {\\*\\pnseclvl1\\pnucrm\\pnstart1\\pnindent720\\pnhang {\\pntxta .}}{\\*\\pnseclvl2\\pnucltr\\pnstart1\\pnindent720\\pnhang "
+"{\\pntxta .}}{\\*\\pnseclvl3\\pndec\\pnstart1\\pnindent720\\pnhang {\\pntxta .}}{\\*\\pnseclvl4\\pnlcltr\\pnstart1\\pnindent720\\pnhang {\\pntxta )}}{\\*\\pnseclvl5\\pndec\\pnstart1\\pnindent720\\pnhang {\\pntxtb (}{\\pntxta )}}{\\*\\pnseclvl6\\pnlcltr\\pnstart1\\pnindent720\\pnhang "
+"{\\pntxtb (}{\\pntxta )}}{\\*\\pnseclvl7\\pnlcrm\\pnstart1\\pnindent720\\pnhang {\\pntxtb (}{\\pntxta )}}{\\*\\pnseclvl8\\pnlcltr\\pnstart1\\pnindent720\\pnhang {\\pntxtb (}{\\pntxta )}}{\\*\\pnseclvl9\\pnlcrm\\pnstart1\\pnindent720\\pnhang {\\pntxtb (}{\\pntxta )}}"
+"\\pard\\plain \\ltrpar\\ql \\li0\\ri0\\sa160\\sl259\\slmult1\\widctlpar\\wrapdefault\\aspalpha\\aspnum\\faauto\\adjustright\\rin0\\lin0\\itap0 \\rtlch\\fcs1 \\af31507\\afs22\\alang1025 \\ltrch\\fcs0 \\f31506\\fs22\\lang1033\\langfe1033\\cgrid\\langnp1033\\langfenp1033 {\\rtlch\\fcs1 "
+"\\af31507\\afs18 \\ltrch\\fcs0 \\f60\\fs18\\cf6\\insrsid13251945\\charrsid13251945 Do}{\\rtlch\\fcs1 \\af31507 \\ltrch\\fcs0 \\cf6\\insrsid13251945\\charrsid13251945  }{\\rtlch\\fcs1 \\af0 \\ltrch\\fcs0 \\f0\\cf19\\insrsid13251945\\charrsid13251945 This}{\\rtlch\\fcs1 \\af31507 "
+"\\ltrch\\fcs0 \\cf19\\insrsid13251945\\charrsid13251945  }{\\rtlch\\fcs1 \\ab\\af140 \\ltrch\\fcs0 \\b\\f140\\cf20\\insrsid13251945\\charrsid13251945 Good}{\\rtlch\\fcs1 \\af31507 \\ltrch\\fcs0 \\cf20\\insrsid13251945\\charrsid13251945  }{\\rtlch\\fcs1 \\ai\\af31507 \\ltrch\\fcs0 "
+"\\i\\cf21\\insrsid13251945\\charrsid13251945 Work}{\\rtlch\\fcs1 \\af31507 \\ltrch\\fcs0 \\cf21\\insrsid13251945\\charrsid13251945  }{\\rtlch\\fcs1 \\af2\\afs32 \\ltrch\\fcs0 \\f2\\fs32\\ul\\insrsid13251945\\charrsid13251945 Now}{\\rtlch\\fcs1 \\af31507 \\ltrch\\fcs0 "
+"\\insrsid3356658 "
+"\\par }{\\*\\themedata 504b030414000600080000002100e9de0fbfff0000001c020000130000005b436f6e74656e745f54797065735d2e786d6cac91cb4ec3301045f748fc83e52d4a"
+"9cb2400825e982c78ec7a27cc0c8992416c9d8b2a755fbf74cd25442a820166c2cd933f79e3be372bd1f07b5c3989ca74aaff2422b24eb1b475da5df374fd9ad"
+"5689811a183c61a50f98f4babebc2837878049899a52a57be670674cb23d8e90721f90a4d2fa3802cb35762680fd800ecd7551dc18eb899138e3c943d7e503b6"
+"b01d583deee5f99824e290b4ba3f364eac4a430883b3c092d4eca8f946c916422ecab927f52ea42b89a1cd59c254f919b0e85e6535d135a8de20f20b8c12c3b0"
+"0c895fcf6720192de6bf3b9e89ecdbd6596cbcdd8eb28e7c365ecc4ec1ff1460f53fe813d3cc7f5b7f020000ffff0300504b030414000600080000002100a5d6"
+"a7e7c0000000360100000b0000005f72656c732f2e72656c73848fcf6ac3300c87ef85bd83d17d51d2c31825762fa590432fa37d00e1287f68221bdb1bebdb4f"
+"c7060abb0884a4eff7a93dfeae8bf9e194e720169aaa06c3e2433fcb68e1763dbf7f82c985a4a725085b787086a37bdbb55fbc50d1a33ccd311ba548b6309512"
+"0f88d94fbc52ae4264d1c910d24a45db3462247fa791715fd71f989e19e0364cd3f51652d73760ae8fa8c9ffb3c330cc9e4fc17faf2ce545046e37944c69e462"
+"a1a82fe353bd90a865aad41ed0b5b8f9d6fd010000ffff0300504b0304140006000800000021006b799616830000008a0000001c0000007468656d652f746865"
+"6d652f7468656d654d616e616765722e786d6c0ccc4d0ac3201040e17da17790d93763bb284562b2cbaebbf600439c1a41c7a0d29fdbd7e5e38337cedf14d59b"
+"4b0d592c9c070d8a65cd2e88b7f07c2ca71ba8da481cc52c6ce1c715e6e97818c9b48d13df49c873517d23d59085adb5dd20d6b52bd521ef2cdd5eb9246a3d8b"
+"4757e8d3f729e245eb2b260a0238fd010000ffff0300504b030414000600080000002100b6f4679893070000c9200000160000007468656d652f7468656d652f"
+"7468656d65312e786d6cec59cd8b1bc915bf07f23f347d97f5d5ad8fc1f2a24fcfda33b6b164873dd648a5eef2547789aad28cc56208de532e81c026e49085bd"
+"ed21842cecc22eb9e48f31d8249b3f22afaa5bdd5552c99e191c3061463074977eefd5afde7bf5de53d5ddcf5e26d4bbc05c1096f6fcfa9d9aefe174ce16248d"
+"7afeb3d9a4d2f13d2151ba4094a5b8e76fb0f03fbbf7eb5fdd454732c609f6403e1547a8e7c752ae8eaa5531876124eeb0154ee1bb25e30992f0caa3ea82a34b"
+"d09bd06aa3566b55134452df4b51026a1f2f97648ebd9952e9dfdb2a1f53784da5500373caa74a35b6243476715e5708b11143cabd0b447b3eccb3609733fc52"
+"fa1e4542c2173dbfa6fffceabdbb5574940b517940d6909be8bf5c2e17589c37f49c3c3a2b260d823068f50bfd1a40e53e6edc1eb7c6ad429f06a0f91c569a71"
+"b175b61bc320c71aa0ecd1a17bd41e35eb16ded0dfdce3dc0fd5c7c26b50a63fd8c34f2643b0a285d7a00c1feee1c3417730b2f56b50866fede1dbb5fe28685b"
+"fa3528a6243ddf43d7c25673b85d6d0159327aec8477c360d26ee4ca4b144443115d6a8a254be5a1584bd00bc6270050408a24493db959e1259a43140f112567"
+"9c7827248a21f056286502866b8ddaa4d684ffea13e827ed5174849121ad780113b137a4f87862cec94af6fc07a0d537206f7ffef9cdeb1fdfbcfee9cd575fbd"
+"79fdf77c6eadca923b466964cafdf2dd1ffef3cd6fbd7ffff0ed2f5fff319b7a172f4cfcbbbffdeedd3ffef93ef5b0e2d2146ffff4fdbb1fbf7ffbe7dfffebaf"
+"5f3bb4f7393a33e1339260e13dc297de5396c0021dfcf119bf9ec42c46c494e8a791402952b338f48f656ca11f6d10450edc00db767cce21d5b880f7d72f2cc2"
+"d398af2571687c182716f094313a60dc6985876a2ec3ccb3751ab927e76b13f714a10bd7dc43945a5e1eaf579063894be530c616cd2714a5124538c5d253dfb1"
+"738c1dabfb8210cbaea764ce99604be97d41bc01224e93ccc899154da5d03149c02f1b1741f0b7659bd3e7de8051d7aa47f8c246c2de40d4417e86a965c6fb68"
+"2d51e252394309350d7e8264ec2239ddf0b9891b0b099e8e3065de78818570c93ce6b05ec3e90f21cdb8dd7e4a37898de4929cbb749e20c64ce4889d0f6394ac"
+"5cd829496313fbb938871045de13265df05366ef10f50e7e40e941773f27d872f787b3c133c8b026a53240d4376beef0e57dccacf89d6ee8126157aae9f3c44a"
+"b17d4e9cd131584756689f604cd1255a60ec3dfbdcc160c05696cd4bd20f62c82ac7d815580f901dabea3dc5027a25d5dcece7c91322ac909de2881de073bad9"
+"493c1b9426881fd2fc08bc6eda7c0ca52e7105c0633a3f37818f08f480102f4ea33c16a0c308ee835a9fc4c82a60ea5db8e375c32dff5d658fc1be7c61d1b8c2"
+"be04197c6d1948eca6cc7b6d3343d49aa00c9819822ec3956e41c4727f29a28aab165b3be596f6a62ddd00dd91d5f42424fd6007b4d3fb84ffbbde073a8cb77f"
+"f9c6b10f3e4ebfe3566c25ab6b763a8792c9f14e7f7308b7dbd50c195f904fbfa919a175fa04431dd9cf58b73dcd6d4fe3ffdff73487f6f36d2773a8dfb8ed64"
+"7ce8306e3b99fc70e5e3743265f3027d8d3af0c80e7af4b14f72f0d46749289dca0dc527421ffc08f83db398c0a092d3279eb838055cc5f0a8ca1c4c60e1228e"
+"b48cc799fc0d91f134462b381daafb4a492472d591f0564cc0a1911e76ea5678ba4e4ed9223becacd7d5c16656590592e5782d2cc6e1a04a66e856bb3cc02bd4"
+"6bb6913e68dd1250b2d721614c6693683a48b4b783ca48fa58178ce620a157f65158741d2c3a4afdd6557b2c805ae115f8c1edc1cff49e1f06200242701e07cd"
+"f942f92973f5d6bbda991fd3d3878c69450034d8db08283ddd555c0f2e4fad2e0bb52b78da2261849b4d425b46377822869fc17974aad1abd0b8aeafbba54b2d"
+"7aca147a3e08ad9246bbf33e1637f535c8ede6069a9a9982a6de65cf6f35430899395af5fc251c1ac363b282d811ea3717a211dcbccc25cf36fc4d32cb8a0b39"
+"4222ce0cae934e960d122231f728497abe5a7ee1069aea1ca2b9d51b90103e59725d482b9f1a3970baed64bc5ce2b934dd6e8c284b67af90e1b35ce1fc568bdf"
+"1cac24d91adc3d8d1797de195df3a708422c6cd795011744c0dd413db3e682c0655891c8caf8db294c79da356fa3740c65e388ae62945714339967709dca0b3a"
+"faadb081f196af190c6a98242f8467912ab0a651ad6a5a548d8cc3c1aafb6121653923699635d3ca2aaa6abab39835c3b60cecd8f26645de60b53531e434b3c2"
+"67a97b37e576b7b96ea74f28aa0418bcb09fa3ea5ea12018d4cac92c6a8af17e1a56393b1fb56bc776811fa07695226164fdd656ed8edd8a1ae19c0e066f54f9"
+"416e376a6168b9ed2bb5a5f5adb979b1cdce5e40f2184197bba6526857c2c92e47d0104d754f92a50dd8222f65be35e0c95b73d2f3bfac85fd60d80887955a27"
+"1c57826650ab74c27eb3d20fc3667d1cd66ba341e31514161927f530bbb19fc00506dde4f7f67a7cefee3ed9ded1dc99b3a4caf4dd7c5513d777f7f5c6e1bb7b"
+"8f40d2f9b2d598749bdd41abd26df627956034e854bac3d6a0326a0ddba3c9681876ba9357be77a1c141bf390c5ae34ea5551f0e2b41aba6e877ba9576d068f4"
+"8376bf330efaaff23606569ea58fdc16605ecdebde7f010000ffff0300504b0304140006000800000021000dd1909fb60000001b010000270000007468656d65"
+"2f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73848f4d0ac2301484f78277086f6fd3ba109126dd88d0add40384e4350d36"
+"3f2451eced0dae2c082e8761be9969bb979dc9136332de3168aa1a083ae995719ac16db8ec8e4052164e89d93b64b060828e6f37ed1567914b284d262452282e"
+"3198720e274a939cd08a54f980ae38a38f56e422a3a641c8bbd048f7757da0f19b017cc524bd62107bd5001996509affb3fd381a89672f1f165dfe514173d985"
+"0528a2c6cce0239baa4c04ca5bbabac4df000000ffff0300504b01022d0014000600080000002100e9de0fbfff0000001c020000130000000000000000000000"
+"0000000000005b436f6e74656e745f54797065735d2e786d6c504b01022d0014000600080000002100a5d6a7e7c0000000360100000b00000000000000000000"
+"000000300100005f72656c732f2e72656c73504b01022d00140006000800000021006b799616830000008a0000001c0000000000000000000000000019020000"
+"7468656d652f7468656d652f7468656d654d616e616765722e786d6c504b01022d0014000600080000002100b6f4679893070000c92000001600000000000000"
+"000000000000d60200007468656d652f7468656d652f7468656d65312e786d6c504b01022d00140006000800000021000dd1909fb60000001b01000027000000"
+"000000000000000000009d0a00007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73504b050600000000050005005d010000980b00000000}"
+"{\\*\\colorschememapping 3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822207374616e64616c6f6e653d22796573223f3e0d0a3c613a636c724d"
+"617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d6169"
+"6e22206267313d226c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363"
+"656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d22616363656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b222f3e}"
+"{\\*\\latentstyles\\lsdstimax376\\lsdlockeddef0\\lsdsemihiddendef0\\lsdunhideuseddef0\\lsdqformatdef0\\lsdprioritydef99{\\lsdlockedexcept \\lsdqformat1 \\lsdpriority0 \\lsdlocked0 Normal;\\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 1;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 4;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 6;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 7;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 8;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority9 \\lsdlocked0 heading 9;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 1;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 5;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 6;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 7;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 8;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index 9;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 6;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 7;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 8;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority39 \\lsdlocked0 toc 9;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Normal Indent;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 footnote text;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 annotation text;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 header;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 footer;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 index heading;\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority35 \\lsdlocked0 caption;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 table of figures;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 envelope address;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 envelope return;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 footnote reference;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 annotation reference;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 line number;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 page number;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 endnote reference;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 endnote text;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 table of authorities;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 macro;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 toa heading;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Bullet;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Number;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Bullet 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Bullet 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Bullet 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Bullet 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Number 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Number 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Number 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Number 5;\\lsdqformat1 \\lsdpriority10 \\lsdlocked0 Title;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Closing;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Signature;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority1 \\lsdlocked0 Default Paragraph Font;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text Indent;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Continue;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Continue 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Continue 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Continue 4;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 List Continue 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Message Header;\\lsdqformat1 \\lsdpriority11 \\lsdlocked0 Subtitle;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Salutation;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Date;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text First Indent;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text First Indent 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Note Heading;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text Indent 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Body Text Indent 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Block Text;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Hyperlink;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 FollowedHyperlink;\\lsdqformat1 \\lsdpriority22 \\lsdlocked0 Strong;"
+"\\lsdqformat1 \\lsdpriority20 \\lsdlocked0 Emphasis;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Document Map;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Plain Text;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 E-mail Signature;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Top of Form;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Bottom of Form;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Normal (Web);\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Acronym;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Address;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Cite;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Code;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Definition;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Keyboard;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Preformatted;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Sample;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Typewriter;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 HTML Variable;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Normal Table;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 annotation subject;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 No List;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Outline List 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Outline List 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Outline List 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Simple 1;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Simple 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Simple 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Classic 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Classic 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Classic 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Classic 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Colorful 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Colorful 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Colorful 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Columns 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Columns 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Columns 3;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Columns 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Columns 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 6;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 7;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Grid 8;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 4;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 5;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 6;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 7;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table List 8;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table 3D effects 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table 3D effects 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table 3D effects 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Contemporary;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Elegant;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Professional;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Subtle 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Subtle 2;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Web 1;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Web 2;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Web 3;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Balloon Text;\\lsdpriority39 \\lsdlocked0 Table Grid;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Table Theme;\\lsdsemihidden1 \\lsdlocked0 Placeholder Text;"
+"\\lsdqformat1 \\lsdpriority1 \\lsdlocked0 No Spacing;\\lsdpriority60 \\lsdlocked0 Light Shading;\\lsdpriority61 \\lsdlocked0 Light List;\\lsdpriority62 \\lsdlocked0 Light Grid;\\lsdpriority63 \\lsdlocked0 Medium Shading 1;\\lsdpriority64 \\lsdlocked0 Medium Shading 2;"
+"\\lsdpriority65 \\lsdlocked0 Medium List 1;\\lsdpriority66 \\lsdlocked0 Medium List 2;\\lsdpriority67 \\lsdlocked0 Medium Grid 1;\\lsdpriority68 \\lsdlocked0 Medium Grid 2;\\lsdpriority69 \\lsdlocked0 Medium Grid 3;\\lsdpriority70 \\lsdlocked0 Dark List;"
+"\\lsdpriority71 \\lsdlocked0 Colorful Shading;\\lsdpriority72 \\lsdlocked0 Colorful List;\\lsdpriority73 \\lsdlocked0 Colorful Grid;\\lsdpriority60 \\lsdlocked0 Light Shading Accent 1;\\lsdpriority61 \\lsdlocked0 Light List Accent 1;"
+"\\lsdpriority62 \\lsdlocked0 Light Grid Accent 1;\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 1;\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 1;\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 1;\\lsdsemihidden1 \\lsdlocked0 Revision;"
+"\\lsdqformat1 \\lsdpriority34 \\lsdlocked0 List Paragraph;\\lsdqformat1 \\lsdpriority29 \\lsdlocked0 Quote;\\lsdqformat1 \\lsdpriority30 \\lsdlocked0 Intense Quote;\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 1;\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 1;"
+"\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 1;\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 1;\\lsdpriority70 \\lsdlocked0 Dark List Accent 1;\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 1;\\lsdpriority72 \\lsdlocked0 Colorful List Accent 1;"
+"\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 1;\\lsdpriority60 \\lsdlocked0 Light Shading Accent 2;\\lsdpriority61 \\lsdlocked0 Light List Accent 2;\\lsdpriority62 \\lsdlocked0 Light Grid Accent 2;\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 2;"
+"\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 2;\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 2;\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 2;\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 2;\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 2;"
+"\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 2;\\lsdpriority70 \\lsdlocked0 Dark List Accent 2;\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 2;\\lsdpriority72 \\lsdlocked0 Colorful List Accent 2;\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 2;"
+"\\lsdpriority60 \\lsdlocked0 Light Shading Accent 3;\\lsdpriority61 \\lsdlocked0 Light List Accent 3;\\lsdpriority62 \\lsdlocked0 Light Grid Accent 3;\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 3;\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 3;"
+"\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 3;\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 3;\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 3;\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 3;\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 3;"
+"\\lsdpriority70 \\lsdlocked0 Dark List Accent 3;\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 3;\\lsdpriority72 \\lsdlocked0 Colorful List Accent 3;\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 3;\\lsdpriority60 \\lsdlocked0 Light Shading Accent 4;"
+"\\lsdpriority61 \\lsdlocked0 Light List Accent 4;\\lsdpriority62 \\lsdlocked0 Light Grid Accent 4;\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 4;\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 4;\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 4;"
+"\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 4;\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 4;\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 4;\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 4;\\lsdpriority70 \\lsdlocked0 Dark List Accent 4;"
+"\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 4;\\lsdpriority72 \\lsdlocked0 Colorful List Accent 4;\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 4;\\lsdpriority60 \\lsdlocked0 Light Shading Accent 5;\\lsdpriority61 \\lsdlocked0 Light List Accent 5;"
+"\\lsdpriority62 \\lsdlocked0 Light Grid Accent 5;\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 5;\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 5;\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 5;\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 5;"
+"\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 5;\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 5;\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 5;\\lsdpriority70 \\lsdlocked0 Dark List Accent 5;\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 5;"
+"\\lsdpriority72 \\lsdlocked0 Colorful List Accent 5;\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 5;\\lsdpriority60 \\lsdlocked0 Light Shading Accent 6;\\lsdpriority61 \\lsdlocked0 Light List Accent 6;\\lsdpriority62 \\lsdlocked0 Light Grid Accent 6;"
+"\\lsdpriority63 \\lsdlocked0 Medium Shading 1 Accent 6;\\lsdpriority64 \\lsdlocked0 Medium Shading 2 Accent 6;\\lsdpriority65 \\lsdlocked0 Medium List 1 Accent 6;\\lsdpriority66 \\lsdlocked0 Medium List 2 Accent 6;"
+"\\lsdpriority67 \\lsdlocked0 Medium Grid 1 Accent 6;\\lsdpriority68 \\lsdlocked0 Medium Grid 2 Accent 6;\\lsdpriority69 \\lsdlocked0 Medium Grid 3 Accent 6;\\lsdpriority70 \\lsdlocked0 Dark List Accent 6;\\lsdpriority71 \\lsdlocked0 Colorful Shading Accent 6;"
+"\\lsdpriority72 \\lsdlocked0 Colorful List Accent 6;\\lsdpriority73 \\lsdlocked0 Colorful Grid Accent 6;\\lsdqformat1 \\lsdpriority19 \\lsdlocked0 Subtle Emphasis;\\lsdqformat1 \\lsdpriority21 \\lsdlocked0 Intense Emphasis;"
+"\\lsdqformat1 \\lsdpriority31 \\lsdlocked0 Subtle Reference;\\lsdqformat1 \\lsdpriority32 \\lsdlocked0 Intense Reference;\\lsdqformat1 \\lsdpriority33 \\lsdlocked0 Book Title;\\lsdsemihidden1 \\lsdunhideused1 \\lsdpriority37 \\lsdlocked0 Bibliography;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdqformat1 \\lsdpriority39 \\lsdlocked0 TOC Heading;\\lsdpriority41 \\lsdlocked0 Plain Table 1;\\lsdpriority42 \\lsdlocked0 Plain Table 2;\\lsdpriority43 \\lsdlocked0 Plain Table 3;\\lsdpriority44 \\lsdlocked0 Plain Table 4;"
+"\\lsdpriority45 \\lsdlocked0 Plain Table 5;\\lsdpriority40 \\lsdlocked0 Grid Table Light;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light;\\lsdpriority47 \\lsdlocked0 Grid Table 2;\\lsdpriority48 \\lsdlocked0 Grid Table 3;\\lsdpriority49 \\lsdlocked0 Grid Table 4;"
+"\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful;\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 1;\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 1;"
+"\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 1;\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 1;\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 1;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 1;"
+"\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 1;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 2;\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 2;\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 2;"
+"\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 2;\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 2;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 2;\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 2;"
+"\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 3;\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 3;\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 3;\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 3;"
+"\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 3;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 3;\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 3;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 4;"
+"\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 4;\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 4;\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 4;\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 4;"
+"\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 4;\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 4;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 5;\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 5;"
+"\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 5;\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 5;\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 5;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 5;"
+"\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 5;\\lsdpriority46 \\lsdlocked0 Grid Table 1 Light Accent 6;\\lsdpriority47 \\lsdlocked0 Grid Table 2 Accent 6;\\lsdpriority48 \\lsdlocked0 Grid Table 3 Accent 6;"
+"\\lsdpriority49 \\lsdlocked0 Grid Table 4 Accent 6;\\lsdpriority50 \\lsdlocked0 Grid Table 5 Dark Accent 6;\\lsdpriority51 \\lsdlocked0 Grid Table 6 Colorful Accent 6;\\lsdpriority52 \\lsdlocked0 Grid Table 7 Colorful Accent 6;"
+"\\lsdpriority46 \\lsdlocked0 List Table 1 Light;\\lsdpriority47 \\lsdlocked0 List Table 2;\\lsdpriority48 \\lsdlocked0 List Table 3;\\lsdpriority49 \\lsdlocked0 List Table 4;\\lsdpriority50 \\lsdlocked0 List Table 5 Dark;"
+"\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful;\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 1;\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 1;\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 1;"
+"\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 1;\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 1;\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 1;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 1;"
+"\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 2;\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 2;\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 2;\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 2;"
+"\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 2;\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 2;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 2;\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 3;"
+"\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 3;\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 3;\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 3;\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 3;"
+"\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 3;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 3;\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 4;\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 4;"
+"\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 4;\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 4;\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 4;\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 4;"
+"\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 4;\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 5;\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 5;\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 5;"
+"\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 5;\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 5;\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 5;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 5;"
+"\\lsdpriority46 \\lsdlocked0 List Table 1 Light Accent 6;\\lsdpriority47 \\lsdlocked0 List Table 2 Accent 6;\\lsdpriority48 \\lsdlocked0 List Table 3 Accent 6;\\lsdpriority49 \\lsdlocked0 List Table 4 Accent 6;"
+"\\lsdpriority50 \\lsdlocked0 List Table 5 Dark Accent 6;\\lsdpriority51 \\lsdlocked0 List Table 6 Colorful Accent 6;\\lsdpriority52 \\lsdlocked0 List Table 7 Colorful Accent 6;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Mention;"
+"\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Smart Hyperlink;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Hashtag;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Unresolved Mention;\\lsdsemihidden1 \\lsdunhideused1 \\lsdlocked0 Smart Link;}}{\\*\\datastore 01050000"
+"02000000180000004d73786d6c322e534158584d4c5265616465722e362e3000000000000000000000060000"
+"d0cf11e0a1b11ae1000000000000000000000000000000003e000300feff090006000000000000000000000001000000010000000000000000100000feffffff00000000feffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"fffffffffffffffffdfffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+"ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e50000000000000000000000007017"
+"7d4718f0d601feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000"
+"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000"
+"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff000000000000000000000000000000000000000000000000"
+"0000000000000000000000000000000000000000000000000105000000000000}}{\\rtf1\\ansi\\ansicpg1252\\deff0\\deftab720{\\fonttbl{\\f0\\fswiss MS Sans Serif;}{\\f1\\froman\\fcharset2 Symbol;}{\\f2\\fswiss\\fprq2 Arial;}{\\f3\\froman\\fprq2 Times New Roman;}{\\f4\\fmodern\\fprq1 Courier New;}}"
+"{\\colortbl\\red0\\green0\\blue0;}"
+"\\deflang1033\\horzdoc{\\*\\fchars }{\\*\\lchars }\\pard\\plain\\f2\\fs28\\b Procedure for creating Rich Text Box Controls in VEE"
+"\\par \\plain\\f2\\fs24 Create RTF Content"
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Generate content in your favorite word processor."
+"\\par {\\pntext\\f1\\\'b7\\tab}Use the Save As menu, and select RTF format "
+"\\par {\\pntext\\f1\\\'b7\\tab}Close the file inside the word processor or exit the word \\plain\\f3\\fs18 "
+"\\par \\pard\\li720\\plain\\f3\\fs20  processor. If you skip this step you cannot access the file \\plain\\f3\\fs18 "
+"\\par \\plain\\f3\\fs20  later.\\plain\\f3\\fs18 "
+"\\par \\pard\\plain\\f2\\fs24 Add The Active X Control to your VEE application"
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Select menu item: \\plain\\f3\\fs20\\i Devices/Active X Control References\\plain\\f3\\fs20 "
+"\\par {\\pntext\\f1\\\'b7\\tab}Locate \\plain\\f3\\fs20\\i Microsoft Rich Textbox Control 5.0\\plain\\f3\\fs20 "
+"\\par {\\pntext\\f1\\\'b7\\tab}Check its checkbox and click OK"
+"\\par {\\pntext\\f1\\\'b7\\tab}Select menu item \\plain\\f3\\fs20\\i Devices/ActiveX Controls/Rich Text Box\\plain\\f3\\fs20 "
+"\\par {\\pntext\\f1\\\'b7\\tab}Place the control on your VEE workspace "
+"\\par \\pard\\plain\\f2\\fs24 Add the RTF Content to your ActiveX Control"
+"\\par \\pard\\li792\\fi-360\\tx792{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Right-click on the RTF Textbox control"
+"\\par {\\pntext\\f1\\\'b7\\tab}Select Control Properties"
+"\\par {\\pntext\\f1\\\'b7\\tab}Under the General tab, click the button with three dots in"
+"\\par \\pard\\li792\\plain\\f3\\fs20  it to the right of the FileName field "
+"\\par \\pard\\li792\\fi-360\\tx792{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Locate your file and click Open"
+"\\par \\pard\\plain\\f2\\fs24 Make the content persistent (optional)"
+"\\par \\plain\\f3\\fs20 If you stop there, the file is re-read every time VEE executes the "
+"\\par User Function containing the RTF control. To avoid this and"
+"\\par embed the content in your VEE application, do the following:"
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Add a formula box with this code:"
+"\\par \\pard\\li1440\\plain\\f4\\fs20 RichTextBox1.TextRTF "
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Add a text constant and give it a default value input pin."
+"\\par {\\pntext\\f1\\\'b7\\tab}Connect the formula output to a \"From String\" object set to \"Token Exclude\" of  \"\\\\r\\\\n\"."
+"\\par \\pard\\li720\\plain\\f3\\fs20  Connect its output to a  text constant input and run the application. "
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Add an input pin labeled \'A\' to the above formula box and "
+"\\par \\pard\\li720\\plain\\f3\\fs20  connect the output of the text constant to a \"To String\" object and"
+"\\par  connect the \"To String\" output to the formula box. Edit the formula to read:"
+"\\par \\pard\\li1440\\plain\\f4\\fs20 RichTextBox1.TextRTF =A"
+"\\par \\pard\\li792\\fi-360\\tx360{\\*\\pn\\pnlvlblt\\pnf1\\pnindent360{\\pntxtb\\\'b7}}\\plain\\f3\\fs20 {\\pntext\\f1\\\'b7\\tab}Delete the \'Default Value\' input pin from the Text constant"
+"\\par {\\pntext\\f1\\\'b7\\tab}Run the application and Save it."
+"\\par \\pard\\plain\\f3\\fs20 Now, the Rich Text Box content is stored with your VEE application."
+"\\par " "\\par }" ]))
+(initValue Text
+(data  ""))))
+(device 11 TOSTRING
+(properties
+(variableScope cont)
+(transactions 1 "WRITE TEXT a"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 12 LITERALCONSTANT
+(properties
+(name "RTF Text from the RichTextBox Control")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Text))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(numDims 1)
+(size 48)
+(data  [
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss MS Sans Serif;}{\\f1\\fswiss\\fprq2 Arial;}{\\f2\\froman\\fprq2 Times New Roman;}{\\f3\\fmodern\\fprq1 Courier New;}{\\f4\\fnil\\fcharset2 Symbol;}}"
+"\\viewkind4\\uc1\\pard\\f0\\fs24   \\b\\f1\\fs28 Procedure for creating Rich Text Box Controls in VEE "
+"\\par \\b0\\fs24 Create RTF Content "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360\\f2\\fs20 Generate content in your favorite word processor. "
+"\\par {\\pntext\\f4\\\'B7\\tab}Use the Save As menu, and select RTF format  "
+"\\par {\\pntext\\f4\\\'B7\\tab}Close the file inside the word processor or exit the word \\fs18  "
+"\\par \\pard\\li720\\fs20  processor. If you skip this step you cannot access the file \\fs18  "
+"\\par \\fs20  later.\\fs18  "
+"\\par \\pard\\f1\\fs24 Add The Active X Control to your VEE application "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360\\f2\\fs20 Select menu item: \\i Devices/Active X Control References\\i0  "
+"\\par {\\pntext\\f4\\\'B7\\tab}Locate \\i Microsoft Rich Textbox Control 5.0\\i0  "
+"\\par {\\pntext\\f4\\\'B7\\tab}Check its checkbox and click OK "
+"\\par {\\pntext\\f4\\\'B7\\tab}Select menu item \\i Devices/ActiveX Controls/Rich Text Box\\i0  "
+"\\par {\\pntext\\f4\\\'B7\\tab}Place the control on your VEE workspace  "
+"\\par \\pard\\f1\\fs24 Add the RTF Content to your ActiveX Control "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx792\\f2\\fs20 Right-click on the RTF Textbox control "
+"\\par {\\pntext\\f4\\\'B7\\tab}Select Control Properties "
+"\\par {\\pntext\\f4\\\'B7\\tab}Under the General tab, click the button with three dots in "
+"\\par \\pard\\li792  it to the right of the FileName field  "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx792 Locate your file and click Open "
+"\\par \\pard\\f1\\fs24 Make the content persistent (optional) "
+"\\par \\f2\\fs20 If you stop there, the file is re-read every time VEE executes the  "
+"\\par User Function containing the RTF control. To avoid this and "
+"\\par embed the content in your VEE application, do the following: "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360 Add a formula box with this code: "
+"\\par \\pard\\li1440\\f3 RichTextBox1.TextRTF  "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360\\f2 Add a text constant and give it a default value input pin. "
+"\\par {\\pntext\\f4\\\'B7\\tab}Connect the formula output to a " "From String"
+" object set to " "Token Exclude" " of  " "\\\\r\\\\n" ". "
+"\\par \\pard\\li720  Connect its output to a  text constant input and run the application.  "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360 Add an input pin labeled \'A\' to the above formula box and  "
+"\\par \\pard\\li720  connect the output of the text constant to a " "To String"
+" object and " "\\par  connect the " "To String"
+" output to the formula box. Edit the formula to read: "
+"\\par \\pard\\li1440\\f3 RichTextBox1.TextRTF =A "
+"\\par \\pard{\\pntext\\f4\\\'B7\\tab}{\\*\\pn\\pnlvlblt\\pnf4\\pnindent360{\\pntxtb\\\'B7}}\\fi-360\\li792\\tx360\\f2 Delete the \'Default Value\' input pin from the Text constant "
+"\\par {\\pntext\\f4\\\'B7\\tab}Run the application and Save it. "
+"\\par \\pard Now, the Rich Text Box content is stored with your VEE application. "
+"\\par  " "\\par }" ]))
+(initValue Text
+(data  ""))))
+(device 13 NOTE
+(properties
+(name "Warranty Disclaimer")
+(variableScope cont)
+(text2 4 "This example is provided as an"
+"illustration \"as is\", and Agilent Technologies"
+"makes no warranty of any kind" "with regard to this example.")))
+(device 14 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Requirements: RichTextBox control (richtx32.ocx)\\par\r\n              needs to be installed\\par\r\n\\par\r\nThis example demonstrates how to get RTF text\\par\r\ninto the RichTextBox control and then how to \\par\r\nsave that text in an VEE program so that a\\par\r\nseparate .rtf file doesn\'t have to be\\par\r\ndistributed with your program.  When you run\\par\r\nthis program, the RichTextBox control will\\par\r\ndisplay the instructions on how to do this.\\par\r\n}\r\n"
+)))
+(device 15 CONFIRM25
+(properties
+(name "Done")
+(variableScope cont)
+(enterButton 1)
+(escapeButton 1)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 21 ACTIVEXCONTROL
+(properties
+(name "RichTextBox3")
+(variableName RichTextBox3)
+(variableScope cont)
+(objectType "RichTextLib.RichTextBox"))
+(implementation
+(license 24 #H84DCDAE3A0E1020AED0B0BEC22232C3B2F44434E64691E00
+)
+(state 684 #H
+2143341208000000D22B00003B3200002143341201000600900200000000FFFF0000FFFFFFFF0000
+00000000000000000000000005000080000000000000010000000100010002000C000000433A5C55
+736572735C736170706C656E5C446F63756D656E74735C4769744875625C73616E64626F785C446F
+205468697320476F6F6420576F726B204E6F772E727466007B5C727466315C616E73695C616E7369
+637067313235325C64656666305C6465666C616E67313033335C6465666C616E676665313033337B
+5C666F6E7474626C7B5C66305C667363726970745C66707271325C66636861727365743020436F6D
+69632053616E73204D533B7D7B5C66315C6673776973735C66707271325C66636861727365743020
+43616C696272693B7D7B5C66325C66726F6D616E5C66707271325C6663686172736574302054696D
+6573204E657720526F6D616E3B7D7B5C66335C6673776973735C66707271325C6663686172736574
+30205461686F6D613B7D7B5C66345C666D6F6465726E5C66707271315C6663686172736574302043
+6F7572696572204E65773B7D7D0D0A7B5C636F6C6F7274626C203B5C7265643235355C677265656E
+305C626C7565303B5C726564305C677265656E3137365C626C75653234303B5C726564305C677265
+656E3137365C626C756538303B5C7265643131325C677265656E34385C626C75653136303B7D0D0A
+5C766965776B696E64345C7563315C706172645C73613136305C736C3235325C736C6D756C74315C
+6366315C66305C6673313820446F5C66315C6673323220205C6366325C663220546869735C663120
+205C6366335C625C663320476F6F645C62305C663120205C6366345C6920576F726B5C693020205C
+6366305C756C5C66345C66733332204E6F775C756C6E6F6E655C66315C66733232200D0A5C706172
+207D0D0A
+)))
+(device 23 ACTIVEXCONTROL
+(properties
+(name "RichTextBox2")
+(variableName RichTextBox2)
+(variableScope cont)
+(objectType "RichTextLib.RichTextBox"))
+(implementation
+(license 24 #H84DCDAE3A0E1020AED0B0BEC22232C3B2F44434E64691E00
+)
+(state 3433 #H
+21433412080000000D140000751A000021433412010006004D0D00000000FFFF0000FFFF01000000
+0000000000000000000000000500008000000000000001000000010001000200080000007B5C7274
+66315C616E73695C616E7369637067313235325C64656666305C6465666C616E67313033337B5C66
+6F6E7474626C7B5C66305C667377697373204D532053616E732053657269663B7D7B5C66315C6673
+776973735C667072713220417269616C3B7D7B5C66325C66726F6D616E5C66707271322054696D65
+73204E657720526F6D616E3B7D7B5C66335C666D6F6465726E5C667072713120436F757269657220
+4E65773B7D7B5C66345C666E696C5C6663686172736574322053796D626F6C3B7D7D0D0A5C766965
+776B696E64345C7563315C706172645C66305C667332342020205C625C66315C667332382050726F
+63656475726520666F72206372656174696E672052696368205465787420426F7820436F6E74726F
+6C7320696E20564545200D0A5C706172205C62305C66733234204372656174652052544620436F6E
+74656E74200D0A5C706172205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A
+5C706E5C706E6C766C626C745C706E66345C706E696E64656E743336307B5C706E747874625C2742
+377D7D5C66692D3336305C6C693739325C74783336305C66325C667332302047656E657261746520
+636F6E74656E7420696E20796F7572206661766F7269746520776F72642070726F636573736F722E
+200D0A5C706172207B5C706E746578745C66345C2742375C7461627D557365207468652053617665
+204173206D656E752C20616E642073656C6563742052544620666F726D617420200D0A5C70617220
+7B5C706E746578745C66345C2742375C7461627D436C6F7365207468652066696C6520696E736964
+652074686520776F72642070726F636573736F72206F7220657869742074686520776F7264205C66
+73313820200D0A5C706172205C706172645C6C693732305C66733230202070726F636573736F722E
+20496620796F7520736B69702074686973207374657020796F752063616E6E6F7420616363657373
+207468652066696C65205C6673313820200D0A5C706172205C6673323020206C617465722E5C6673
+313820200D0A5C706172205C706172645C66315C6673323420416464205468652041637469766520
+5820436F6E74726F6C20746F20796F757220564545206170706C69636174696F6E200D0A5C706172
+205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C
+745C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D3336305C
+6C693739325C74783336305C66325C667332302053656C656374206D656E75206974656D3A205C69
+20446576696365732F416374697665205820436F6E74726F6C205265666572656E6365735C693020
+200D0A5C706172207B5C706E746578745C66345C2742375C7461627D4C6F63617465205C69204D69
+63726F736F667420526963682054657874626F7820436F6E74726F6C20352E305C693020200D0A5C
+706172207B5C706E746578745C66345C2742375C7461627D436865636B2069747320636865636B62
+6F7820616E6420636C69636B204F4B200D0A5C706172207B5C706E746578745C66345C2742375C74
+61627D53656C656374206D656E75206974656D205C6920446576696365732F416374697665582043
+6F6E74726F6C732F52696368205465787420426F785C693020200D0A5C706172207B5C706E746578
+745C66345C2742375C7461627D506C6163652074686520636F6E74726F6C206F6E20796F75722056
+454520776F726B737061636520200D0A5C706172205C706172645C66315C66733234204164642074
+68652052544620436F6E74656E7420746F20796F7572204163746976655820436F6E74726F6C200D
+0A5C706172205C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E
+6C766C626C745C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C6669
+2D3336305C6C693739325C74783739325C66325C667332302052696768742D636C69636B206F6E20
+746865205254462054657874626F7820636F6E74726F6C200D0A5C706172207B5C706E746578745C
+66345C2742375C7461627D53656C65637420436F6E74726F6C2050726F70657274696573200D0A5C
+706172207B5C706E746578745C66345C2742375C7461627D556E646572207468652047656E657261
+6C207461622C20636C69636B2074686520627574746F6E207769746820746872656520646F747320
+696E200D0A5C706172205C706172645C6C693739322020697420746F20746865207269676874206F
+66207468652046696C654E616D65206669656C6420200D0A5C706172205C706172647B5C706E7465
+78745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64
+656E743336307B5C706E747874625C2742377D7D5C66692D3336305C6C693739325C747837393220
+4C6F6361746520796F75722066696C6520616E6420636C69636B204F70656E200D0A5C706172205C
+706172645C66315C66733234204D616B652074686520636F6E74656E742070657273697374656E74
+20286F7074696F6E616C29200D0A5C706172205C66325C6673323020496620796F752073746F7020
+74686572652C207468652066696C652069732072652D726561642065766572792074696D65205645
+452065786563757465732074686520200D0A5C70617220557365722046756E6374696F6E20636F6E
+7461696E696E67207468652052544620636F6E74726F6C2E20546F2061766F696420746869732061
+6E64200D0A5C70617220656D6265642074686520636F6E74656E7420696E20796F75722056454520
+6170706C69636174696F6E2C20646F2074686520666F6C6C6F77696E673A200D0A5C706172205C70
+6172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C745C70
+6E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D3336305C6C6937
+39325C747833363020416464206120666F726D756C6120626F782077697468207468697320636F64
+653A200D0A5C706172205C706172645C6C69313434305C6633205269636854657874426F78312E54
+65787452544620200D0A5C706172205C706172647B5C706E746578745C66345C2742375C7461627D
+7B5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64656E743336307B5C706E74787462
+5C2742377D7D5C66692D3336305C6C693739325C74783336305C6632204164642061207465787420
+636F6E7374616E7420616E64206769766520697420612064656661756C742076616C756520696E70
+75742070696E2E200D0A5C706172207B5C706E746578745C66345C2742375C7461627D436F6E6E65
+63742074686520666F726D756C61206F757470757420746F2061202246726F6D20537472696E6722
+206F626A6563742073657420746F2022546F6B656E204578636C75646522206F662020225C5C725C
+5C6E222E200D0A5C706172205C706172645C6C693732302020436F6E6E65637420697473206F7574
+70757420746F206120207465787420636F6E7374616E7420696E70757420616E642072756E207468
+65206170706C69636174696F6E2E20200D0A5C706172205C706172647B5C706E746578745C66345C
+2742375C7461627D7B5C2A5C706E5C706E6C766C626C745C706E66345C706E696E64656E74333630
+7B5C706E747874625C2742377D7D5C66692D3336305C6C693739325C74783336302041646420616E
+20696E7075742070696E206C6162656C65642027412720746F207468652061626F766520666F726D
+756C6120626F7820616E6420200D0A5C706172205C706172645C6C693732302020636F6E6E656374
+20746865206F7574707574206F6620746865207465787420636F6E7374616E7420746F2061202254
+6F20537472696E6722206F626A65637420616E64200D0A5C7061722020636F6E6E65637420746865
+2022546F20537472696E6722206F757470757420746F2074686520666F726D756C6120626F782E20
+456469742074686520666F726D756C6120746F20726561643A200D0A5C706172205C706172645C6C
+69313434305C6633205269636854657874426F78312E54657874525446203D41200D0A5C70617220
+5C706172647B5C706E746578745C66345C2742375C7461627D7B5C2A5C706E5C706E6C766C626C74
+5C706E66345C706E696E64656E743336307B5C706E747874625C2742377D7D5C66692D3336305C6C
+693739325C74783336305C66322044656C65746520746865202744656661756C742056616C756527
+20696E7075742070696E2066726F6D20746865205465787420636F6E7374616E74200D0A5C706172
+207B5C706E746578745C66345C2742375C7461627D52756E20746865206170706C69636174696F6E
+20616E6420536176652069742E200D0A5C706172205C70617264204E6F772C207468652052696368
+205465787420426F7820636F6E74656E742069732073746F726564207769746820796F7572205645
+45206170706C69636174696F6E2E200D0A5C70617220200D0A5C706172207D0D0A
+)))
+(configuration
+(connect D4:1 D1:1)
+(connect D1:1 D2:1)
+(connect D3:1 D4:1)
+(connect D2:1 D5:1)
+(connect D5:0 D8:0)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 1354 954)
+(wndState max)
+(active detail)
+(detail
+(extent 1916 869)
+(anchorPt -370 -437)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 189 16))
+(open
+(extent 566 580))
+(pinCenter 770 930))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 150 0))
+(open
+(extent 244 66))
+(terminals on)
+(pinCenter 1120 520))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 70 15))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 1390 520))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 99 0))
+(open
+(extent 415 117))
+(pinCenter 270 520))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 53 15))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 720 520))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 229 0))
+(open
+(extent 714 156))
+(pinCenter 1850 590))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 338 48)
+(iconImage "disclaim.icn")
+(label off))
+(open
+(extent 419 127)
+(editing disabled))
+(pinCenter 1260 1060))
+(devCarrierFor 14
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 363 179)
+(editing disabled))
+(titleBg "Teal")
+(pinCenter 1260 930))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 34 0))
+(open
+(extent 116 28))
+(title off)
+(bg "Teal")
+(pinCenter 1270 790))
+(devCarrierFor 21
+(active open)
+(icon
+(extent 80 0))
+(open
+(extent 424 486))
+(pinCenter 240 900))
+(devCarrierFor 23
+(active open)
+(icon
+(extent 80 0))
+(open
+(extent 194 256))
+(pinCenter 1660 940))
+(connect D4:1 D1:1
+(points 2 887 520 965 520))
+(connect D1:1 D2:1
+(points 2 1294 520 1352 520))
+(connect D3:1 D4:1
+(points 2 480 520 573 520))
+(connect D2:1 D5:1
+(points 4 1427 520 1450 520 1450 590 1490 590))
+(connect D5:0 D8:0
+(points 4 1850 670 1850 690 1270 690 1270 773)))
+(stackingOrder 6 8 7 1 5 4 2 0 10 9 3))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
