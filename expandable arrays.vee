@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 20/Jan/2021 11:12:22 ")
+(date "Wed 27/Jan/2021 16:04:59 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -184,7 +184,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 72)
+(nextID 94)
 (popupTitleText "Untitled")
 (popupMoveable 1))
 (deviceList
@@ -377,13 +377,13 @@
 (tag "Array")))
 (implementation
 (numDims 1)
-(dimSizes "201")
+(dimSizes "401")
 (type "Real64")
 (initEnum "Lin Ramp")
 (initialValue
 (data  0))
 (from 1)
-(thru 201)))
+(thru 401)))
 (device 20 FORMULA
 (properties
 (name "start")
@@ -421,7 +421,7 @@
 (active detail)
 (detail
 (extent 192 173)
-(anchorPt 156 26)
+(anchorPt 153 -36)
 (configuration
 (devCarrierFor 22
 (active open)
@@ -432,8 +432,9 @@
 (editing enabled))
 (pinCenter 153 178))
 (devCarrierFor 18
-(active open)
-(icon)
+(active icon)
+(icon
+(extent 85 15))
 (open
 (extent 214 156))
 (pinCenter 743 538))
@@ -508,19 +509,19 @@
 (terminals on)
 (pinCenter 153 328))
 (connect D3:1 D1:1
-(points 6 781 418 803 418 803 348 613 348 613 538 633 538))
+(points 6 781 418 800 418 800 450 680 450 680 538 698 538))
 (connect D4:0 D2:0
-(points 6 153 478 153 498 593 498 593 338 743 338 743 363))
+(points 6 153 478 153 500 590 500 590 350 743 350 743 363))
 (connect D9:1 D2:1
 (points 2 562 368 705 368))
 (connect D4:1 D2:2
-(points 6 189 468 583 468 583 418 673 418 673 388 705 388))
+(points 6 189 468 580 468 580 420 680 420 680 388 705 388))
 (connect D2:0 D3:0
 (points 2 743 393 743 408))
 (connect D4:1 D3:1
-(points 4 189 468 583 468 583 418 704 418))
+(points 4 189 468 580 468 580 418 704 418))
 (connect I4:1 D4:1
-(points 4 -156 120 -20 120 -20 468 117 468))
+(points 4 -153 182 -140 182 -140 468 117 468))
 (connect D10:1 D5:1
 (points 6 169 328 183 328 183 308 113 308 113 418 125 418))
 (connect D8:1 D5:2
@@ -528,9 +529,9 @@
 (connect D7:1 D5:3
 (points 6 169 388 193 388 193 298 103 298 103 438 125 438))
 (connect I3:1 D7:1
-(points 4 -156 80 -30 80 -30 388 136 388))
+(points 4 -153 142 -30 142 -30 388 136 388))
 (connect I2:1 D8:1
-(points 4 -156 40 -40 40 -40 360 133 360))
+(points 4 -153 102 -40 102 -40 360 133 360))
 (connect D6:0 D9:0
 (points 2 403 241 403 287))
 (connect D10:1 D9:1
@@ -540,10 +541,10 @@
 (connect D5:1 D9:3
 (points 4 180 428 203 428 203 408 243 408))
 (connect I1:1 D10:1
-(points 4 -156 0 -40 0 -40 328 136 328))
+(points 4 -153 62 -40 62 -40 328 136 328))
 (connect D3:1 O1:1
-(points 4 781 418 870 418 870 60 35 60)))
-(stackingOrder 8 7 5 4 2 3 1 6 10 9 0))))
+(points 4 781 418 870 418 870 122 38 122)))
+(stackingOrder 8 7 5 3 6 10 9 0 1 2 4))))
 (context 1
 (properties
 (name "ArrayInit")
@@ -721,7 +722,7 @@
 (device 9 TOGLOBAL
 (properties
 (variableScope cont)
-(globalName "expandme"))
+(globalName "Band2"))
 (interface
 (input 1
 (name "Data")
@@ -738,7 +739,7 @@
 (device 10 FROMGLOBAL
 (properties
 (variableScope cont)
-(globalName "expandme"))
+(globalName "Band2"))
 (interface
 (input 1
 (type control)
@@ -884,9 +885,9 @@
 (connect I4:1 D6:1
 (points 4 -120 572 10 572 10 440 154 440))
 (connect D10:1 D8:1
-(points 6 818 390 840 390 840 320 650 320 650 510 670 510))
+(points 6 818 390 910 390 910 610 650 610 650 510 670 510))
 (connect D6:0 D9:0
-(points 6 190 450 190 470 630 470 630 310 780 310 780 335))
+(points 6 190 450 190 470 630 470 630 320 780 320 780 335))
 (connect D4:1 D9:1
 (points 2 599 340 742 340))
 (connect D6:1 D9:2
@@ -896,7 +897,7 @@
 (connect D6:1 D10:1
 (points 4 226 440 620 440 620 390 741 390))
 (connect D10:1 O1:1
-(points 4 818 390 840 390 840 332 835 332)))
+(points 4 818 390 910 390 910 332 835 332)))
 (stackingOrder 0 1 2 3 4 5 6 7 8 9 10)))))
 (device 0 NOTE
 (properties
@@ -904,16 +905,6 @@
 (text2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 delete variables at pre run\\par\r\ncreate array1D\\par\r\nset size of array\\par\r\ninitialize array\\par\r\n}\r\n"
 )))
-(device 30 FROMGLOBAL
-(properties
-(name "Get expandme")
-(variableScope cont)
-(globalName "expandme"))
-(interface
-(output 1
-(name "Data")
-(tag "Data")
-(lock name constraints))))
 (device 31 TEXTDISPLAY
 (properties
 (variableScope cont))
@@ -959,7 +950,7 @@
 (lock name constraints)))
 (implementation
 (value Int32
-(data  201))
+(data  401))
 (initValue Int32
 (data  0))))
 (device 40 CONSTANT
@@ -1059,9 +1050,157 @@
 (output 1
 (name "X")
 (optional yes))))
-(device 71 LITERALCONSTANT
+(device 73 DECLVAR
 (properties
-(name "ArrayName")
+(name "Declare Port")
+(scope glob)
+(globalName "Port"))
+(implementation
+(value Text
+(data  ""))))
+(device 74 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Port=\"Band 2\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 75 FROMGLOBAL
+(properties
+(name "Get Port")
+(variableScope cont)
+(globalName "Port"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 79 CONTEXT
+(properties
+(name "Initialize Excel Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(trigMode deg)
+(nextID 43)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 29 IMPORT
+(properties
+(name "Import Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(libType userFunction)
+(libName "xlLib")
+(fileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\ExcelLibrary\\ExcelLibrary.vxe"
+))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 30 FORMULA
+(properties
+(name "Excel Runtime Library File Specifier")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(expr 1 "installDir() + \"\\\\Lib\\\\ExcelLibrary\\\\ExcelLibrary.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 33 CALL
+(properties
+(name "Call xlLib.Initialize")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(callFunc "xlLib.Initialize")
+(parmMode rev30)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:0 D2:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 749 382)
+(anchorPt -327 -349)
+(configuration
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 224 82))
+(pinCenter 890 420))
+(devCarrierFor 30
+(active open)
+(icon
+(extent 196 15))
+(open
+(extent 295 50))
+(terminals on)
+(pinCenter 550 440))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 115 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 890 460))
+(connect D1:0 D0:0
+(points 6 560 467 560 490 780 490 780 390 890 390 890 410))
+(connect D1:1 D0:1
+(points 4 750 440 770 440 770 420 846 420))
+(connect D0:0 D2:0
+(points 2 890 430 890 450)))
+(stackingOrder 0 1 2))))
+(device 80 CONTEXT
+(properties
+(name "remove_spaces")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "string")
+(optional yes))
+(output 1
+(type data)
+(name "newString")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "Text")
 (variableScope cont)
 (enableEditing 1))
 (interface
@@ -1070,28 +1209,432 @@
 (lock name constraints)))
 (implementation
 (value Text
-(data  "foome"))
+(data  " "))
 (initValue Text
 (data  ""))))
+(device 1 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  ""))
+(initValue Text
+(data  ""))))
+(device 2 CONTEXT
+(properties
+(name "StringReplace")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'stringReplace\'")
+(customHelpMenuHelpLink "To_Use_String_Replace")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "string")
+(optional yes))
+(input 2
+(name "outSubString")
+(optional yes))
+(input 3
+(name "inSubString")
+(optional yes))
+(input 4
+(name "caseSensitive")
+(optional yes))
+(output 1
+(type data)
+(name "newString")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 NOTE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'stringReplace\'")
+(customHelpMenuHelpLink "To_Use_String_Replace")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 StringReplace searches \'string\' for \'outSubString\' and replaces all occurrences with \'inSubString\'. \\par\r\n\\par\r\nCASE SENSITIVE\\par\r\nUse 0 to ignore case, 1 to make the substitutions only if the case of outSubString matches inside string.\\par\r\n\\par\r\n\\cf1\\b To enhance performance, try to use Case Sensitive replace instead of Case Insensitive replace when possible.\\par\r\n\\cf0\\b0\\par\r\nNOTES:\\par\r\nExcel utilities do not require an open workbook.\\par\r\n}\r\n"
+)))
+(device 5 CALL
+(properties
+(name "Call xlLib.stringReplace")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'stringReplace\'")
+(customHelpMenuHelpLink "To_Use_String_Replace")
+(variableScope cont)
+(callFunc "xlLib.stringReplace")
+(parmMode rev30))
+(interface
+(input 1
+(name "string")
+(optional yes))
+(input 2
+(name "outSubString")
+(optional yes))
+(input 3
+(name "inSubString")
+(optional yes))
+(input 4
+(name "caseSensitive")
+(optional yes))
+(output 1
+(name "newString")
+(optional yes))))
 (configuration
-(connect D10:0 D8:0)
-(connect D3:1 D8:1)
-(connect D10:1 D9:1)
-(connect D7:0 D10:0)
-(connect D4:1 D10:1)
-(connect D5:1 D10:2)
-(connect D6:1 D10:3)
-(connect D3:1 D10:4)
-(connect D4:1 D11:1)
-(connect D12:1 D11:4)))
+(connect I1:1 D1:1)
+(connect I2:1 D1:2)
+(connect I3:1 D1:3)
+(connect I4:1 D1:4)
+(connect D1:1 O1:1)))
 (contextCarrier
-(wndRestoredOrigin 92 25)
-(wndRestoredExtent 702 385)
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt -52 130)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 354 266)
+(editing enabled))
+(pinCenter 320 320))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 146 0))
+(open
+(extent 176 82))
+(terminals on)
+(pinCenter 255 -10))
+(connect I1:1 D1:1
+(points 4 52 -91 0 -91 0 -40 64 -40))
+(connect I2:1 D1:2
+(points 4 52 -21 24 -21 24 -20 64 -20))
+(connect I3:1 D1:3
+(points 4 52 49 0 49 0 0 64 0))
+(connect I4:1 D1:4
+(points 4 52 119 10 119 10 20 64 20))
+(connect D1:1 O1:1
+(points 8 415 -10 430 -10 430 30 370 30 370 50 320 50 320 19 401 19)))
+(stackingOrder 0 1))))
+(configuration
+(connect I1:1 D2:1)
+(connect D0:1 D2:2)
+(connect D1:1 D2:3)
+(connect D1:1 D2:4)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 312 248)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 80 140))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 80 180))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 85 45))
+(terminals on)
+(pinCenter 200 90))
+(connect I1:1 D2:1
+(points 4 0 123 10 123 10 70 155 70))
+(connect D0:1 D2:2
+(points 4 95 140 120 140 120 80 155 80))
+(connect D1:1 D2:3
+(points 4 95 180 130 180 130 90 155 90))
+(connect D1:1 D2:4
+(points 4 95 180 130 180 130 100 155 100))
+(connect D2:1 O1:1
+(points 4 245 90 270 90 270 123 311 123)))
+(stackingOrder 0 1 2))))
+(device 81 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B1_freq")
+(optional yes))
+(input 3
+(name "B1_nf")
+(optional yes))
+(input 4
+(name "B2_freq")
+(optional yes))
+(input 5
+(name "B2_nf")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 82 CONTEXT
+(properties
+(name "Initialize Excel Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(trigMode deg)
+(nextID 43)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 29 IMPORT
+(properties
+(name "Import Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(libType userFunction)
+(libName "xlLib")
+(fileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\ExcelLibrary\\ExcelLibrary.vxe"
+))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 30 FORMULA
+(properties
+(name "Excel Runtime Library File Specifier")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(expr 1 "installDir() + \"\\\\Lib\\\\ExcelLibrary\\\\ExcelLibrary.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 33 CALL
+(properties
+(name "Call xlLib.Initialize")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(callFunc "xlLib.Initialize")
+(parmMode rev30)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:0 D2:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 749 382)
+(anchorPt -327 -349)
+(configuration
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 224 82))
+(pinCenter 890 420))
+(devCarrierFor 30
+(active open)
+(icon
+(extent 196 15))
+(open
+(extent 295 50))
+(terminals on)
+(pinCenter 550 440))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 115 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 890 460))
+(connect D1:0 D0:0
+(points 6 560 467 560 490 780 490 780 390 890 390 890 410))
+(connect D1:1 D0:1
+(points 4 750 440 770 440 770 420 846 420))
+(connect D0:0 D2:0
+(points 2 890 430 890 450)))
+(stackingOrder 0 1 2))))
+(device 85 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 86 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "band = \"B2_nf\"" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 87 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "band = \"B1_nf\"" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 88 IFTHENELSE
+(properties
+(name "If A == B")
+(variableScope cont)
+(cases 1 "A==B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 89 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Band 1"))
+(initValue Text
+(data  ""))))
+(device 90 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 91 DECLVAR
+(properties
+(name "Declare band")
+(scope glob)
+(globalName "band"))
+(implementation
+(value Text
+(data  ""))))
+(device 93 CONSTANT
+(properties
+(name "stop")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  201))
+(initValue Int32
+(data  0))))
+(configuration
+(connect D16:1 D1:1)
+(connect D9:0 D7:0)
+(connect D2:1 D7:1)
+(connect D9:1 D8:1)
+(connect D12:0 D9:0)
+(connect D3:1 D9:1)
+(connect D4:1 D9:2)
+(connect D5:1 D9:3)
+(connect D2:1 D9:4)
+(connect D3:1 D10:1)
+(connect D25:1 D10:2)
+(connect D5:1 D10:3)
+(connect D15:1 D10:4)
+(connect D6:0 D12:0)
+(connect D7:0 D13:0)
+(connect D17:0 D15:0)
+(connect D13:1 D15:1)
+(connect D15:1 D16:1)
+(connect D9:1 D16:2)
+(connect D9:1 D16:3)
+(connect D10:1 D16:4)
+(connect D10:1 D16:5)
+(connect D20:1 D18:1)
+(connect D19:1 D18:2)
+(connect D21:2 D19:1)
+(connect D21:1 D20:1)
+(connect D13:0 D21:0)
+(connect D13:1 D21:1)
+(connect D22:1 D21:2)
+(connect D18:1 D23:1)))
+(contextCarrier
+(wndRestoredOrigin 182 11)
+(wndRestoredExtent 1290 833)
 (wndState max)
 (active detail)
 (detail
-(extent 1621 869)
-(anchorPt 302 23)
+(extent 907 563)
+(anchorPt 341 29)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1101,20 +1644,12 @@
 (extent 410 180)
 (editing enabled))
 (pinCenter 1210 -160))
-(devCarrierFor 30
-(active open)
-(icon
-(extent 88 0))
-(open
-(extent 73 51))
-(terminals on)
-(pinCenter 675 930))
 (devCarrierFor 31
 (active open)
 (icon)
 (open
 (extent 254 376))
-(pinCenter 1630 410))
+(pinCenter 1250 450))
 (devCarrierFor 32
 (active open)
 (icon
@@ -1165,7 +1700,7 @@
 (icon)
 (open
 (extent 454 206))
-(pinCenter 500 250))
+(pinCenter 610 210))
 (devCarrierFor 46
 (active icon)
 (icon
@@ -1181,35 +1716,174 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 630 520))
-(devCarrierFor 71
+(pinCenter 620 470))
+(devCarrierFor 73
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 204 126))
+(pinCenter -60 30))
+(devCarrierFor 74
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 60 120))
+(devCarrierFor 75
 (active open)
 (icon
-(extent 67 0))
+(extent 48 0))
 (open
-(extent 174 29))
-(pinCenter 460 640))
-(connect D10:0 D8:0
+(extent 73 51))
+(terminals on)
+(pinCenter 405 610))
+(devCarrierFor 79
+(active icon)
+(icon
+(extent 127 15))
+(terminals on)
+(pinCenter -250 410))
+(devCarrierFor 80
+(active icon)
+(icon
+(extent 97 15))
+(terminals on)
+(pinCenter 550 610))
+(devCarrierFor 81
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 102))
+(terminals on)
+(pinCenter 900 450))
+(devCarrierFor 82
+(active icon)
+(icon
+(extent 127 15))
+(terminals on)
+(pinCenter 540 730))
+(devCarrierFor 85
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 590 850))
+(devCarrierFor 86
+(active open)
+(icon)
+(open
+(extent 145 65))
+(terminals on)
+(pinCenter 270 910))
+(devCarrierFor 87
+(active open)
+(icon)
+(open
+(extent 145 65))
+(terminals on)
+(pinCenter 270 830))
+(devCarrierFor 88
+(active icon)
+(icon
+(extent 46 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 80 850))
+(devCarrierFor 89
+(active open)
+(icon)
+(open
+(extent 74 36))
+(pinCenter -20 860))
+(devCarrierFor 90
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 710 850))
+(devCarrierFor 91
+(active icon)
+(icon
+(extent 81 15))
+(open
+(extent 199 115))
+(pinCenter -120 680))
+(devCarrierFor 93
+(active open)
+(icon
+(extent 28 0))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 510 410))
+(connect D16:1 D1:1
+(points 2 1011 450 1120 450))
+(connect D9:0 D7:0
 (points 2 210 279 210 524))
-(connect D3:1 D8:1
-(points 6 -181 520 -160 520 -160 510 110 510 110 570 126 570))
-(connect D10:1 D9:1
-(points 2 253 250 270 250))
-(connect D7:0 D10:0
-(points 4 270 73 270 90 210 90 210 220))
-(connect D4:1 D10:1
+(connect D2:1 D7:1
+(points 4 -181 520 -160 520 -160 570 126 570))
+(connect D9:1 D8:1
+(points 4 253 250 270 250 270 210 380 210))
+(connect D12:0 D9:0
+(points 4 70 147 70 170 210 170 210 220))
+(connect D3:1 D9:1
 (points 4 -184 120 -150 120 -150 230 166 230))
-(connect D5:1 D10:2
+(connect D4:1 D9:2
 (points 4 -184 200 -160 200 -160 240 166 240))
-(connect D6:1 D10:3
+(connect D5:1 D9:3
 (points 4 -184 290 -160 290 -160 250 166 250))
-(connect D3:1 D10:4
-(points 6 -181 520 -160 520 -160 510 110 510 110 260 166 260))
-(connect D4:1 D11:1
-(points 6 -184 120 -150 120 -150 230 150 230 150 500 591 500))
-(connect D12:1 D11:4
-(points 4 549 640 570 640 570 530 591 530)))
-(stackingOrder 1 0 7 4 5 6 2 9 8 12 3 10 11))
+(connect D2:1 D9:4
+(points 4 -181 520 -150 520 -150 260 166 260))
+(connect D3:1 D10:1
+(points 6 -184 120 -150 120 -150 190 290 190 290 450 581 450))
+(connect D25:1 D10:2
+(points 4 546 410 560 410 560 460 581 460))
+(connect D5:1 D10:3
+(points 6 -184 290 -160 290 -160 250 150 250 150 470 581 470))
+(connect D15:1 D10:4
+(points 8 601 610 620 610 620 580 640 580 640 560 560 560 560 480 581 480))
+(connect D6:0 D12:0
+(points 6 270 73 270 90 220 90 220 50 70 50 70 74))
+(connect D7:0 D13:0
+(points 6 210 598 210 620 310 620 310 540 410 540 410 564))
+(connect D17:0 D15:0
+(points 6 540 740 540 760 630 760 630 570 550 570 550 600))
+(connect D13:1 D15:1
+(points 2 484 610 499 610))
+(connect D15:1 D16:1
+(points 8 601 610 620 610 620 580 640 580 640 560 680 560 680 410 789 410))
+(connect D9:1 D16:2
+(points 8 253 250 270 250 270 210 360 210 360 340 690 340 690 430 789 430))
+(connect D9:1 D16:3
+(points 10 253 250 270 250 270 210 360 210 360 340 690 340 690 430 760 430 760
+450 789 450))
+(connect D10:1 D16:4
+(points 2 659 470 789 470))
+(connect D10:1 D16:5
+(points 4 659 470 760 470 760 490 789 490))
+(connect D20:1 D18:1
+(points 4 395 830 420 830 420 840 574 840))
+(connect D19:1 D18:2
+(points 4 395 910 420 910 420 860 574 860))
+(connect D21:2 D19:1
+(points 4 105 860 130 860 130 910 165 910))
+(connect D21:1 D20:1
+(points 4 105 840 130 840 130 830 165 830))
+(connect D13:0 D21:0
+(points 4 410 638 410 660 80 660 80 835))
+(connect D13:1 D21:1
+(points 6 484 610 490 610 490 670 40 670 40 840 54 840))
+(connect D22:1 D21:2
+(points 2 19 860 54 860))
+(connect D18:1 D23:1
+(points 2 605 850 647 850)))
+(stackingOrder 0 6 3 4 5 7 2 11 8 12 14 13 15 17 19 20 23 18 24 22 21 10 25 16 1
+9))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)

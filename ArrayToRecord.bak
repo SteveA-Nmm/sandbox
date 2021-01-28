@@ -1,0 +1,472 @@
+(saveFormat "7.0")
+(date "Wed 27/Jan/2021 15:12:18 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrumentxxx"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "dvm"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp3478a.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "PowerMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML2437A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 132)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB2::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB2::8::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "newInstrument3"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAlias "COM3")
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 0 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "B1_nf")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(input 2
+(name "B2_nf")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(output 1
+(name "Record"))))
+(device 1 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "0<=A AND A<10"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 2 CALL
+(properties
+(name "Call xlLib.SendRecord")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription "Help on the Excel Library function \'SendRecord\'")
+(customHelpMenuHelpLink "To_Send_a_Record_to_a_Named_Range")
+(variableScope cont)
+(callFunc "xlLib.SendRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "Record")
+(optional yes))
+(output 1
+(name "MissingNames")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Size")
+(lock name constraints)
+(optional yes))))
+(device 3 CONTEXT
+(properties
+(name "SendDataSettings")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'SendDataSettings\'")
+(customHelpMenuHelpLink "To_Send_Data_Settings")
+(variableScope cont)
+(trigMode deg)
+(nextID 17)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 3 NOTE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'SendDataSettings\'")
+(customHelpMenuHelpLink "To_Send_Data_Settings")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 Orientation for arrays:\\par\r\n\\par\r\nSelect Vertical for a 1D array to appear in a single Worksheet column, or horizontal for a single row.\\par\r\n\\par\r\nFor 2D arrays, the first dimension is oriented the same as for a 1D array.\\par\r\n\\par\r\nFor 3D arrays, the orientation on each sheet for the first 2 dimensions is the same as for 2D arrays.\\par\r\n\\par\r\nZlabel is used to label the 2D data table that appears on the worksheets for each of the 3rd dimension elements. The labeled cell is immediately above the data.\\par\r\n\\par\r\n}\r\n"
+)))
+(device 6 NOTE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'SendDataSettings\'")
+(customHelpMenuHelpLink "To_Send_Data_Settings")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 Three-D arrays:\\par\r\n \\par\r\nSelect CreateNewSheets to add a blank sheet if needed for each element in the third dimension. Each sheet contains a two-D array.\\par\r\n\\par\r\nCopyStartingSheet is similar, but more powerful.  This setting will automatically copy the starting sheet when creating a new sheet, so any formatting (including charts) on that sheet will appear on all sheets added.\\par\r\n\\par\r\nUseSingleSheet places all data on a single sheet with two-D arrays separated by blank rows. \\par\r\n\\par\r\nFor all settings, each time a two-D array is printed, it is preceeded by a row containing the value of the current element in the third dimension. \\par\r\n}\r\n"
+)))
+(device 14 CALL
+(properties
+(name "Call xlLib.SendDataSettings")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'SendDataSettings\'")
+(customHelpMenuHelpLink "To_Send_Data_Settings")
+(variableScope cont)
+(callFunc "xlLib.SendDataSettings")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 16 RECCONST
+(properties
+(name "SendData Settings")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'SendDataSettings\'")
+(customHelpMenuHelpLink "To_Send_Data_Settings")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Record")
+(lock name constraints)))
+(implementation
+(value Record
+(schema
+(numFields 3)
+(fieldName "Orientation"
+(type Enum)
+(values
+("Vertical" 0)
+("Horizontal" 1)))
+(fieldName "ThreeDArrays"
+(type Enum)
+(values
+("CreateNewSheets" 0)
+("CopyStartingSheet" 1)
+("UseSingleSheet" 2)))
+(fieldName "Zlabel"
+(type Text)))
+(data 
+(record
+("Orientation" "Vertical")
+("ThreeDArrays" "CreateNewSheets")
+("Zlabel" "Z="))))))
+(configuration
+(connect D3:1 D2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 966 890)
+(anchorPt -162 -489)
+(configuration
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 345 297)
+(editing enabled))
+(pinCenter 670 580))
+(devCarrierFor 6
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 394 306)
+(editing enabled))
+(pinCenter 700 940))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 185 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 320 720))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 113 15))
+(open
+(extent 263 147)
+(formatters))
+(pinCenter 280 560))
+(connect D3:1 D2:1
+(points 6 414 560 430 560 430 660 210 660 210 720 225 720)))
+(stackingOrder 1 3 0 2))))
+(device 5 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  0))
+(initValue Real
+(data  0))))
+(configuration
+(connect D4:1 D0:1)
+(connect D4:1 D0:2)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 588 385)
+(wndState max)
+(active detail)
+(detail
+(extent 793 563)
+(anchorPt 98 176)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 54))
+(terminals on)
+(pinCenter 315 10))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 145 270))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 154 25))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 450 400))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 125 15))
+(terminals on)
+(pinCenter 380 470))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 80 29)
+(showFormat real))
+(pinCenter 110 0))
+(connect D4:1 D0:1
+(points 4 152 0 170 0 170 -10 214 -10))
+(connect D4:1 D0:2
+(points 4 152 0 180 0 180 30 214 30)))
+(stackingOrder 2 3 1 0 4))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
