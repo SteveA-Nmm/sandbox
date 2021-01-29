@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 27/Jan/2021 16:04:59 ")
+(date "Thu 28/Jan/2021 11:19:36 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -1526,7 +1526,7 @@
 (device 87 FORMULA
 (properties
 (variableScope cont)
-(expr 2 "band = \"B1_nf\"" ""))
+(expr 2 "band = \"b1_nf\"" ""))
 (interface
 (input 1
 (name "A")
@@ -1633,8 +1633,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 907 563)
-(anchorPt 341 29)
+(extent 931 887)
+(anchorPt 180 -305)
 (configuration
 (devCarrierFor 0
 (active open)

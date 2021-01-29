@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Wed 27/Jan/2021 15:24:58 ")
+(date "Thu 28/Jan/2021 14:52:24 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M)
+(workspaceStackingOrder M.40 M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -214,10 +214,9 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 14)
+(nextID 42)
 (popupTitleText "Untitled")
-(popupMoveable 1)
-(deleteGlobals 0))
+(popupMoveable 1))
 (deviceList
 (UserFunctions
 (nextID 1)
@@ -408,13 +407,13 @@
 (tag "Array")))
 (implementation
 (numDims 1)
-(dimSizes "401")
+(dimSizes "4")
 (type "Real64")
 (initEnum "Lin Ramp")
 (initialValue
 (data  0))
 (from 1)
-(thru 401)))
+(thru 4)))
 (device 20 FORMULA
 (properties
 (name "start")
@@ -452,7 +451,7 @@
 (active detail)
 (detail
 (extent 953 506)
-(anchorPt 9 -83)
+(anchorPt 12 -82)
 (configuration
 (devCarrierFor 22
 (active open)
@@ -467,7 +466,7 @@
 (icon)
 (open
 (extent 214 156))
-(pinCenter 743 538))
+(pinCenter 1000 310))
 (devCarrierFor 16
 (active icon)
 (icon
@@ -539,11 +538,11 @@
 (terminals on)
 (pinCenter 153 328))
 (connect D3:1 D1:1
-(points 6 781 418 803 418 803 348 613 348 613 538 633 538))
+(points 4 781 418 870 418 870 310 890 310))
 (connect D4:0 D2:0
 (points 6 153 478 153 498 593 498 593 338 743 338 743 363))
 (connect D9:1 D2:1
-(points 2 562 368 705 368))
+(points 2 572 368 705 368))
 (connect D4:1 D2:2
 (points 6 189 468 583 468 583 418 673 418 673 388 705 388))
 (connect D2:0 D3:0
@@ -551,7 +550,7 @@
 (connect D4:1 D3:1
 (points 4 189 468 583 468 583 418 704 418))
 (connect I4:1 D4:1
-(points 4 -9 515 -20 515 -20 468 117 468))
+(points 4 -12 514 -20 514 -20 468 117 468))
 (connect D10:1 D5:1
 (points 6 169 328 200 328 200 290 100 290 100 418 125 418))
 (connect D8:1 D5:2
@@ -559,22 +558,22 @@
 (connect D7:1 D5:3
 (points 6 169 388 210 388 210 510 100 510 100 438 125 438))
 (connect I3:1 D7:1
-(points 4 -9 395 -30 395 -30 388 136 388))
+(points 4 -12 394 -30 394 -30 388 136 388))
 (connect I2:1 D8:1
-(points 4 -9 275 -40 275 -40 360 133 360))
+(points 4 -12 274 -40 274 -40 360 133 360))
 (connect D6:0 D9:0
 (points 2 403 241 403 287))
 (connect D10:1 D9:1
-(points 2 169 328 243 328))
+(points 2 169 328 233 328))
 (connect D8:1 D9:2
-(points 4 166 360 203 358 203 368 243 368))
+(points 4 166 360 203 358 203 368 233 368))
 (connect D5:1 D9:3
-(points 4 180 428 200 428 200 408 243 408))
+(points 4 180 428 200 428 200 408 233 408))
 (connect I1:1 D10:1
-(points 4 -9 155 -40 155 -40 328 136 328))
+(points 4 -12 154 -40 154 -40 328 136 328))
 (connect D3:1 O1:1
-(points 4 781 418 870 418 870 335 943 335)))
-(stackingOrder 8 7 4 2 3 1 6 10 9 0 5)))))
+(points 4 781 418 870 418 870 334 940 334)))
+(stackingOrder 8 7 4 2 3 6 10 9 0 5 1)))))
 (device 0 TORECORD
 (properties
 (variableScope cont)
@@ -585,11 +584,6 @@
 (requires
 (datatype Real64)
 (shape "Array"))
-(optional yes))
-(input 2
-(name "B2_nf")
-(requires
-(datatype Real64))
 (optional yes))
 (output 1
 (name "Record"))))
@@ -675,7 +669,7 @@
 (lock name constraints)))
 (implementation
 (value Int32
-(data  401))
+(data  4))
 (initValue Int32
 (data  0))))
 (device 11 CONSTANT
@@ -696,7 +690,7 @@
 (properties
 (name "rec.field = b")
 (variableScope cont)
-(expr 2 "//rec.B1_nf[*] = b[1:4]" "rec.B1_nf[*]=b[1:3]"))
+(expr 2 "rec.B1_nf[*] = b[*]" "//rec.B1_nf[*]=b[1:3]"))
 (interface
 (input 1
 (name "rec")
@@ -721,9 +715,544 @@
 (data  "B1_nf"))
 (initValue Text
 (data  ""))))
+(device 17 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 18 FROMGLOBAL
+(properties
+(name "Get globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 19 FORMULA
+(properties
+(name "rec.field = b")
+(variableScope cont)
+(expr 4 "rec.B1_nf[*] = b[*]" "// below loses record shape" "//rec.B1_nf = b"
+"//rec=b"))
+(interface
+(input 1
+(name "rec")
+(optional yes))
+(input 2
+(name "b")
+(optional yes))
+(output 1
+(name "rec")
+(optional yes))))
+(device 20 FROMGLOBAL
+(properties
+(name "Get globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 21 CONSTANT
+(properties
+(name "Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 4)
+(data  [ 0 1111 2222 3333 ]))
+(initValue Real
+(data  0))))
+(device 22 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 23 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 24 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 25 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 26 FORMULA
+(properties
+(name "rec.field = b")
+(variableScope cont)
+(expr 2 "Rec.b1_nf[*] = A[*]" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "Rec")
+(optional yes))
+(output 1
+(name "Rec")
+(optional yes))))
+(device 28 CONSTANT
+(properties
+(name "Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 4)
+(data  [ 44444 55555 22222 11111 ]))
+(initValue Real
+(data  0))))
+(device 29 FROMGLOBAL
+(properties
+(name "Get globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 30 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "globalR"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 35 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 39 CONTEXT
+(properties
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 4)
+(data  [ 6666 7777 8888 9999 ]))
+(initValue Real
+(data  0))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "globalR"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"Rec.b1_nf[*] = A[*]\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "rec.field = b")
+(variableScope cont)
+(expr 1 "Rec.b1_nf[*] = A[*]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "Rec")
+(optional yes))
+(input 3
+(type control)
+(name "Formula")
+(tag "Formula")
+(requires
+(datatype Text))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(optional yes))))
+(device 4 FROMGLOBAL
+(properties
+(name "Get globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 5 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(configuration
+(connect D0:1 D3:1)
+(connect D1:1 D3:2)
+(connect D2:1 D3:3)
+(connect D3:0 D4:0)
+(connect D3:1 D5:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 1443 426)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 124 106)
+(showFormat real))
+(pinCenter 130 130))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 62 16))
+(open
+(extent 204 66))
+(terminals on)
+(pinCenter 375 130))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 62 16))
+(open
+(extent 204 66))
+(terminals on)
+(pinCenter 375 230))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 91 25))
+(open
+(extent 434 116))
+(terminals on)
+(pinCenter 905 170))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 90 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 880 330))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 1300 170))
+(connect D0:1 D3:1
+(points 6 194 130 210 130 210 60 570 60 570 130 615 130))
+(connect D1:1 D3:2
+(points 4 539 130 560 130 560 170 615 170))
+(connect D2:1 D3:3
+(points 4 539 230 560 230 560 210 615 210))
+(connect D3:0 D4:0
+(points 2 890 230 890 283))
+(connect D3:1 D5:1
+(points 2 1164 170 1203 170)))
+(stackingOrder 0 1 2 3 5 4))))
+(device 40 CONTEXT
+(properties
+(name "paramaratize")
+(variableScope cont)
+(trigMode deg)
+(nextID 8)
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 4)
+(data  [ 88 77 66 55 ]))
+(initValue Real
+(data  0))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "globalR"))
+(interface
+(input 1
+(type control)
+(name "Formula")
+(tag "Formula")
+(requires
+(datatype Text))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"Rec.\"+A+\" = A[*]\""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "rec.field = b")
+(variableScope cont)
+(expr 1 "Rec.b1_nf[*] = A[*]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "Rec")
+(optional yes))
+(input 3
+(type control)
+(name "Formula")
+(tag "Formula")
+(requires
+(datatype Text))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(optional yes))))
+(device 4 FROMGLOBAL
+(properties
+(name "Get globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 5 TOGLOBAL
+(properties
+(name "Set globalR")
+(variableScope cont)
+(globalName "globalR"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 6 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "globalR"))
+(initValue Text
+(data  ""))))
+(device 7 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "b1_nf[*]"))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D6:0 D1:0)
+(connect D6:1 D1:1)
+(connect D1:0 D2:0)
+(connect D7:1 D2:1)
+(connect D2:0 D3:0)
+(connect D0:1 D3:1)
+(connect D1:1 D3:2)
+(connect D2:1 D3:3)
+(connect D3:0 D4:0)
+(connect D3:1 D5:1)))
+(contextCarrier
+(wndOrigin 41 206)
+(wndState res)
+(active detail)
+(detail
+(extent 1443 426)
+(anchorPt 14 87)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 124 106)
+(showFormat real))
+(pinCenter 70 120))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 62 16))
+(open
+(extent 204 66))
+(terminals on)
+(pinCenter 375 130))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 62 16))
+(open
+(extent 204 66))
+(terminals on)
+(pinCenter 365 240))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 91 25))
+(open
+(extent 434 116))
+(terminals on)
+(pinCenter 905 170))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 90 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 880 290))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 1300 170))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 214 30))
+(pinCenter 210 -20))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 214 30))
+(pinCenter 490 -20))
+(connect D6:0 D1:0
+(points 4 210 -3 210 30 370 30 370 76))
+(connect D6:1 D1:1
+(points 6 319 -20 340 -20 340 20 180 20 180 130 200 130))
+(connect D1:0 D2:0
+(points 4 370 165 370 180 380 180 380 186))
+(connect D7:1 D2:1
+(points 6 599 -20 620 -20 620 40 170 40 170 240 230 240))
+(connect D2:0 D3:0
+(points 6 380 275 380 300 580 300 580 70 890 70 890 91))
+(connect D0:1 D3:1
+(points 6 134 120 150 120 150 60 570 60 570 130 615 130))
+(connect D1:1 D3:2
+(points 4 539 130 560 130 560 170 615 170))
+(connect D2:1 D3:3
+(points 4 529 240 550 240 550 210 615 210))
+(connect D3:0 D4:0
+(points 2 890 230 890 243))
+(connect D3:1 D5:1
+(points 2 1164 170 1203 170)))
+(stackingOrder 5 6 3 1 0 7 2 4))))
 (configuration
 (connect D2:1 D0:1)
-(connect D2:1 D0:2)
 (connect D7:1 D1:1)
 (connect D0:0 D3:0)
 (connect D6:1 D3:1)
@@ -731,15 +1260,32 @@
 (connect D4:1 D3:3)
 (connect D8:1 D3:4)
 (connect D0:1 D7:1)
-(connect D3:1 D7:2)))
+(connect D3:1 D7:2)
+(connect D0:1 D9:1)
+(connect D3:0 D10:0)
+(connect D10:0 D11:0)
+(connect D10:1 D11:1)
+(connect D13:1 D11:2)
+(connect D11:0 D12:0)
+(connect D12:1 D14:1)
+(connect D7:1 D15:1)
+(connect D11:1 D16:1)
+(connect D11:1 D17:1)
+(connect D21:0 D18:0)
+(connect D19:1 D18:1)
+(connect D21:1 D18:2)
+(connect D18:0 D20:0)
+(connect D12:0 D21:0)
+(connect D18:1 D22:1)
+(connect D20:0 D23:0)
+(connect D23:0 D24:0)))
 (contextCarrier
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 588 385)
-(wndState max)
+(wndOrigin 2 2)
+(wndState res)
 (active detail)
 (detail
-(extent 1893 869)
-(anchorPt 438 118)
+(extent 588 385)
+(anchorPt -402 -1462)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -748,20 +1294,20 @@
 (open
 (extent 97 54))
 (terminals on)
-(pinCenter 335 40))
+(pinCenter 235 50))
 (devCarrierFor 6
 (active open)
 (icon)
 (open
 (extent 224 196))
-(pinCenter 1140 410))
+(pinCenter 1120 300))
 (devCarrierFor 7
 (active open)
 (icon)
 (open
-(extent 117 74)
+(extent 94 206)
 (showFormat real))
-(pinCenter 60 20))
+(pinCenter -160 70))
 (devCarrierFor 8
 (active icon)
 (icon
@@ -769,7 +1315,7 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 230 290))
+(pinCenter 230 330))
 (devCarrierFor 9
 (active open)
 (icon
@@ -800,34 +1346,186 @@
 (open
 (extent 434 116))
 (terminals on)
-(pinCenter 660 410))
+(pinCenter 660 300))
 (devCarrierFor 13
 (active open)
 (icon)
 (open
 (extent 174 29))
 (pinCenter -70 460))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 600 80))
+(devCarrierFor 18
+(active open)
+(icon
+(extent 90 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 220 450))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 434 116))
+(terminals on)
+(pinCenter 660 550))
+(devCarrierFor 20
+(active open)
+(icon
+(extent 90 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 200 730))
+(devCarrierFor 21
+(active open)
+(icon)
+(open
+(extent 94 206)
+(showFormat real))
+(pinCenter -100 640))
+(devCarrierFor 22
+(active open)
+(icon)
+(open
+(extent 224 196))
+(pinCenter 1080 730))
+(devCarrierFor 23
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 1020 130))
+(devCarrierFor 24
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 770 670))
+(devCarrierFor 25
+(active open)
+(icon)
+(open
+(extent 224 196))
+(pinCenter 1180 520))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 91 25))
+(open
+(extent 434 116))
+(terminals on)
+(pinCenter 840 970))
+(devCarrierFor 28
+(active open)
+(icon)
+(open
+(extent 184 206)
+(showFormat real))
+(pinCenter -130 910))
+(devCarrierFor 29
+(active open)
+(icon
+(extent 90 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 210 1170))
+(devCarrierFor 30
+(active open)
+(icon
+(extent 62 16))
+(open
+(extent 524 156))
+(terminals on)
+(pinCenter 85 1000))
+(devCarrierFor 35
+(active open)
+(icon
+(extent 88 0))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 1010 1110))
+(devCarrierFor 39
+(active icon)
+(icon
+(extent 86 16))
+(terminals on)
+(pinCenter 560 1510))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 99 16))
+(terminals on)
+(pinCenter 560 1600))
 (connect D2:1 D0:1
-(points 2 121 20 234 20))
-(connect D2:1 D0:2
-(points 4 121 20 200 20 200 60 234 60))
+(points 4 -111 70 -90 70 -90 50 124 50))
 (connect D7:1 D1:1
-(points 2 909 410 1025 410))
+(points 2 919 300 1005 300))
 (connect D0:0 D3:0
-(points 4 340 69 340 90 230 90 230 260))
+(points 4 240 79 240 100 230 100 230 300))
 (connect D6:1 D3:1
-(points 4 36 170 70 170 70 270 186 270))
+(points 4 36 170 70 170 70 310 186 310))
 (connect D5:1 D3:2
-(points 4 36 250 60 250 60 280 186 280))
+(points 4 36 250 60 250 60 320 186 320))
 (connect D4:1 D3:3
-(points 4 36 340 60 340 60 290 186 290))
+(points 4 36 340 60 340 60 330 186 330))
 (connect D8:1 D3:4
-(points 4 19 460 70 460 70 300 186 300))
+(points 4 19 460 70 460 70 340 186 340))
 (connect D0:1 D7:1
-(points 6 446 40 470 40 470 90 390 90 390 380 410 380))
+(points 4 356 50 380 50 380 270 400 270))
 (connect D3:1 D7:2
-(points 4 273 290 290 290 290 440 410 440)))
-(stackingOrder 2 4 5 6 8 0 3 1 7))
+(points 2 273 330 400 330))
+(connect D0:1 D9:1
+(points 4 356 50 380 50 380 80 503 80))
+(connect D3:0 D10:0
+(points 2 230 359 230 403))
+(connect D10:0 D11:0
+(points 6 230 479 230 500 350 500 350 450 660 450 660 471))
+(connect D10:1 D11:1
+(points 4 316 450 340 450 340 520 400 520))
+(connect D13:1 D11:2
+(points 4 -51 640 -30 640 -30 580 400 580))
+(connect D11:0 D12:0
+(points 4 660 610 660 630 210 630 210 683))
+(connect D12:1 D14:1
+(points 2 296 730 965 730))
+(connect D7:1 D15:1
+(points 6 919 300 940 300 940 200 900 200 900 130 923 130))
+(connect D11:1 D16:1
+(points 6 919 550 940 550 940 720 650 720 650 670 673 670))
+(connect D11:1 D17:1
+(points 4 919 550 940 550 940 520 1065 520))
+(connect D21:0 D18:0
+(points 8 100 1080 100 1100 210 1100 210 1090 440 1090 440 870 840 870 840 891))
+(connect D19:1 D18:1
+(points 6 -36 910 -30 910 -30 880 430 880 430 940 580 940))
+(connect D21:1 D18:2
+(points 2 409 1000 580 1000))
+(connect D18:0 D20:0
+(points 4 840 1030 840 1100 220 1100 220 1123))
+(connect D12:0 D21:0
+(points 4 210 759 210 780 100 780 100 901))
+(connect D18:1 D22:1
+(points 6 1099 970 1120 970 1120 1160 890 1160 890 1110 913 1110))
+(connect D20:0 D23:0
+(points 4 220 1199 220 1220 560 1220 560 1499))
+(connect D23:0 D24:0
+(points 2 560 1520 560 1589)))
+(stackingOrder 4 5 6 8 2 1 3 0 9 7 14 13 15 16 17 10 11 19 12 21 18 22 20 24 23)
+)
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

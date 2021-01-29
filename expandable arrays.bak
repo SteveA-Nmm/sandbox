@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 27/Jan/2021 14:53:31 ")
+(date "Wed 27/Jan/2021 16:04:59 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -186,8 +186,7 @@
 (trigMode deg)
 (nextID 94)
 (popupTitleText "Untitled")
-(popupMoveable 1)
-(deleteGlobals 0))
+(popupMoveable 1))
 (deviceList
 (UserFunctions
 (nextID 2)
@@ -422,7 +421,7 @@
 (active detail)
 (detail
 (extent 192 173)
-(anchorPt 158 26)
+(anchorPt 153 -36)
 (configuration
 (devCarrierFor 22
 (active open)
@@ -512,7 +511,7 @@
 (connect D3:1 D1:1
 (points 6 781 418 800 418 800 450 680 450 680 538 698 538))
 (connect D4:0 D2:0
-(points 6 153 478 153 500 590 500 590 340 743 340 743 363))
+(points 6 153 478 153 500 590 500 590 350 743 350 743 363))
 (connect D9:1 D2:1
 (points 2 562 368 705 368))
 (connect D4:1 D2:2
@@ -520,9 +519,9 @@
 (connect D2:0 D3:0
 (points 2 743 393 743 408))
 (connect D4:1 D3:1
-(points 4 189 468 583 468 583 418 704 418))
+(points 4 189 468 580 468 580 418 704 418))
 (connect I4:1 D4:1
-(points 4 -158 120 -20 120 -20 468 117 468))
+(points 4 -153 182 -140 182 -140 468 117 468))
 (connect D10:1 D5:1
 (points 6 169 328 183 328 183 308 113 308 113 418 125 418))
 (connect D8:1 D5:2
@@ -530,9 +529,9 @@
 (connect D7:1 D5:3
 (points 6 169 388 193 388 193 298 103 298 103 438 125 438))
 (connect I3:1 D7:1
-(points 4 -158 80 -30 80 -30 388 136 388))
+(points 4 -153 142 -30 142 -30 388 136 388))
 (connect I2:1 D8:1
-(points 4 -158 40 -40 40 -40 360 133 360))
+(points 4 -153 102 -40 102 -40 360 133 360))
 (connect D6:0 D9:0
 (points 2 403 241 403 287))
 (connect D10:1 D9:1
@@ -542,10 +541,10 @@
 (connect D5:1 D9:3
 (points 4 180 428 203 428 203 408 243 408))
 (connect I1:1 D10:1
-(points 4 -158 0 -40 0 -40 328 136 328))
+(points 4 -153 62 -40 62 -40 328 136 328))
 (connect D3:1 O1:1
-(points 4 781 418 870 418 870 60 33 60)))
-(stackingOrder 8 7 5 4 3 6 10 9 0 1 2))))
+(points 4 781 418 870 418 870 122 38 122)))
+(stackingOrder 8 7 5 3 6 10 9 0 1 2 4))))
 (context 1
 (properties
 (name "ArrayInit")
@@ -1634,8 +1633,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1893 869)
-(anchorPt 397 -35)
+(extent 907 563)
+(anchorPt 341 29)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1883,8 +1882,8 @@
 (points 2 19 860 54 860))
 (connect D18:1 D23:1
 (points 2 605 850 647 850)))
-(stackingOrder 0 6 3 4 5 7 2 11 8 12 14 13 15 17 19 20 23 18 24 22 21 9 10 25 16
-1))
+(stackingOrder 0 6 3 4 5 7 2 11 8 12 14 13 15 17 19 20 23 18 24 22 21 10 25 16 1
+9))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)
