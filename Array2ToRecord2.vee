@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Thu 28/Jan/2021 16:51:21 ")
+(date "Thu 28/Jan/2021 17:34:09 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -887,7 +887,7 @@
 (active detail)
 (detail
 (extent 1332 656)
-(anchorPt -89 145)
+(anchorPt -298 111)
 (configuration
 (devCarrierFor 2
 (active open)
@@ -932,11 +932,11 @@
 (connect D4:0 D0:0
 (points 2 380 160 380 186))
 (connect I1:1 D0:1
-(points 6 89 12 -130 12 -130 130 200 130 200 240 230 240))
+(points 6 298 46 -130 46 -130 130 200 130 200 240 230 240))
 (connect D0:0 D1:0
 (points 6 380 275 380 300 580 300 580 70 890 70 890 91))
 (connect I2:1 D1:1
-(points 4 89 352 600 352 600 130 615 130))
+(points 4 298 386 600 386 600 130 615 130))
 (connect D4:1 D1:2
 (points 4 534 130 550 130 550 170 615 170))
 (connect D0:1 D1:3
@@ -944,15 +944,15 @@
 (connect D1:0 D2:0
 (points 2 890 230 890 253))
 (connect I1:1 D2:1
-(points 8 89 12 200 12 200 240 210 240 210 320 610 320 610 300 793 300))
+(points 8 298 46 200 46 200 240 210 240 210 320 610 320 610 300 793 300))
 (connect D1:1 D3:1
 (points 2 1164 170 1203 170))
 (connect I1:1 D3:2
-(points 6 89 12 200 12 200 60 1180 60 1180 190 1203 190))
+(points 6 298 46 200 46 200 60 1180 60 1180 190 1203 190))
 (connect I1:1 D4:1
-(points 4 89 12 -130 12 -130 130 225 130))
+(points 4 298 46 -130 46 -130 130 225 130))
 (connect D2:1 O1:1
-(points 4 986 300 1400 300 1400 182 1420 182)))
+(points 4 986 300 1400 300 1400 216 1629 216)))
 (stackingOrder 0 1 4 2 3))))
 (device 12 TOGLOBAL
 (properties
@@ -1127,6 +1127,7 @@
 (optional yes))))
 (device 59 TEXTDISPLAY
 (properties
+(name "CheckItsStillRecord")
 (variableScope cont))
 (interface
 (input 1
@@ -1705,6 +1706,7 @@
 (implementation))
 (device 84 TEXTDISPLAY
 (properties
+(name "MissingNames")
 (variableScope cont))
 (interface
 (input 1
@@ -1748,8 +1750,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1613 869)
-(anchorPt 58 -122)
+(extent 651 860)
+(anchorPt -356 -726)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1901,9 +1903,10 @@
 (pinCenter 245 900))
 (devCarrierFor 59
 (active open)
-(icon)
+(icon
+(extent 151 0))
 (open
-(extent 184 66))
+(extent 187 66))
 (pinCenter 870 970))
 (devCarrierFor 74
 (active icon)
@@ -1960,7 +1963,8 @@
 (pinCenter 540 1320))
 (devCarrierFor 84
 (active open)
-(icon)
+(icon
+(extent 112 0))
 (open
 (extent 154 196))
 (pinCenter 850 1260))
@@ -2011,7 +2015,7 @@
 (connect D19:1 D16:1
 (points 4 380 900 400 900 400 1260 429 1260))
 (connect D11:1 D20:1
-(points 2 631 970 775 970))
+(points 2 631 970 774 970))
 (connect D22:0 D21:0
 (points 2 540 1129 540 1150))
 (connect D25:1 D21:1
@@ -2030,8 +2034,8 @@
 (points 2 540 1270 540 1304))
 (connect D16:1 D29:1
 (points 2 651 1260 770 1260)))
-(stackingOrder 4 5 6 2 1 0 3 9 14 12 10 7 17 13 8 23 22 21 24 26 27 28 16 29 11
-25 20 18 19 15))
+(stackingOrder 4 5 6 2 1 0 3 9 14 12 10 7 17 13 8 23 22 21 24 26 27 28 25 18 19
+15 11 16 29 20))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)
