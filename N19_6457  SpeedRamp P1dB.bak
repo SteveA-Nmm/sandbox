@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Tue 19/Jan/2021 16:47:23 ")
+(date "Tue 19/Jan/2021 17:05:36 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -198,11 +198,13 @@
 (device 0 ROOTCONTEXT
 (automationRefs
 (automationRef 1
-(libid "{00020813-0000-0000-C000-000000000046}")
-(desc "Microsoft Excel 8.0 Object Library")
-(filename "C:\\Program Files\\Microsoft Office\\Office\\EXCEL8.OLB")
-(verMajor 1)
-(verMinor 2)
+(libid "{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}")
+(desc "Microsoft Office 16.0 Object Library")
+(filename
+"C:\\Program Files\\Microsoft Office\\Root\\VFS\\ProgramFilesCommonX86\\Microsoft Shared\\OFFICE16\\MSO.DLL"
+)
+(verMajor 2)
+(verMinor 8)
 (lcid 0)))
 (properties
 (variableName Main)
