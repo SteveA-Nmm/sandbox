@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Thu 04/Mar/2021 16:24:29 ")
+(date "Thu 04/Mar/2021 16:44:58 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -338,7 +338,7 @@
 (name "Data"))))
 (device 52 CONTEXT
 (properties
-(name "max")
+(name "DeclareRunningMax")
 (variableScope cont)
 (trigMode deg)
 (nextID 11)
@@ -822,7 +822,7 @@
 (active detail)
 (detail
 (extent 884 735)
-(anchorPt -124 261)
+(anchorPt -40 316)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -896,9 +896,9 @@
 (devCarrierFor 52
 (active icon)
 (icon
-(extent 29 15))
+(extent 125 15))
 (terminals on)
-(pinCenter 200 -120))
+(pinCenter 250 -120))
 (devCarrierFor 56
 (active open)
 (icon)
@@ -918,7 +918,7 @@
 (terminals on)
 (pinCenter 350 90))
 (connect D10:0 D0:0
-(points 2 200 -110 200 -17))
+(points 4 250 -110 250 -90 200 -90 200 -17))
 (connect D13:1 D1:1
 (points 4 404 90 430 90 430 110 549 110))
 (connect D0:0 D1:2
@@ -938,7 +938,7 @@
 (connect D13:1 D9:1
 (points 4 404 90 420 90 420 40 880 40))
 (connect D3:0 D10:0
-(points 2 200 -155 200 -130))
+(points 4 200 -155 200 -140 250 -140 250 -130))
 (connect D12:2 D11:1
 (points 2 531 0 565 0))
 (connect D13:1 D12:1
@@ -947,7 +947,7 @@
 (points 4 250 20 350 20 350 0 449 0))
 (connect D0:1 D13:0
 (points 3 250 20 350 20 350 65)))
-(stackingOrder 2 4 6 5 7 0 10 3 12 8 11 13 1 9))
+(stackingOrder 2 4 6 5 7 0 3 8 11 13 1 9 12 10))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

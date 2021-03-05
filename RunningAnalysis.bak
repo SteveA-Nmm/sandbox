@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Thu 04/Mar/2021 16:21:54 ")
+(date "Thu 04/Mar/2021 16:24:29 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -252,6 +252,8 @@
 (deviceList
 (device 0 FORCOUNT
 (properties
+(breakpoint 1)
+(activateBreakpoint 0)
 (variableScope cont)
 (count 1000))
 (interface
@@ -820,7 +822,7 @@
 (active detail)
 (detail
 (extent 884 735)
-(anchorPt -143 252)
+(anchorPt -124 261)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -836,7 +838,7 @@
 (open
 (extent 117 56))
 (terminals on)
-(pinCenter 620 190))
+(pinCenter 580 120))
 (devCarrierFor 4
 (active open)
 (icon)
@@ -890,7 +892,7 @@
 (open
 (extent 194 316)
 (noformatter))
-(pinCenter 920 30))
+(pinCenter 980 40))
 (devCarrierFor 52
 (active icon)
 (icon
@@ -902,7 +904,7 @@
 (icon)
 (open
 (extent 124 36))
-(pinCenter 630 10))
+(pinCenter 630 0))
 (devCarrierFor 57
 (active icon)
 (icon
@@ -918,34 +920,34 @@
 (connect D10:0 D0:0
 (points 2 200 -110 200 -17))
 (connect D13:1 D1:1
-(points 6 404 90 420 90 420 80 490 80 490 180 589 180))
+(points 4 404 90 430 90 430 110 549 110))
 (connect D0:0 D1:2
-(points 3 200 38 200 200 589 200))
+(points 5 200 38 200 140 420 140 420 130 549 130))
 (connect D1:1 D2:1
-(points 4 650 190 670 190 670 150 760 150))
+(points 4 610 120 630 120 630 150 760 150))
 (connect D1:1 D4:1
-(points 6 650 190 670 190 670 230 300 230 300 300 318 300))
+(points 6 610 120 630 120 630 160 300 160 300 300 318 300))
 (connect D4:1 D5:1
 (points 2 401 300 440 300))
 (connect D1:1 D6:1
-(points 6 650 190 670 190 670 230 300 230 300 380 322 380))
+(points 6 610 120 630 120 630 160 300 160 300 380 322 380))
 (connect D6:1 D7:1
 (points 4 397 380 420 380 420 390 450 390))
 (connect D12:1 D8:1
 (points 4 531 -20 550 -20 550 -70 565 -70))
 (connect D13:1 D9:1
-(points 6 404 90 420 90 420 80 610 80 610 30 820 30))
+(points 4 404 90 420 90 420 40 880 40))
 (connect D3:0 D10:0
 (points 2 200 -155 200 -130))
 (connect D12:2 D11:1
-(points 4 531 0 550 0 550 10 565 10))
+(points 2 531 0 565 0))
 (connect D13:1 D12:1
 (points 4 404 90 420 90 420 -20 449 -20))
 (connect D0:1 D12:2
 (points 4 250 20 350 20 350 0 449 0))
 (connect D0:1 D13:0
 (points 3 250 20 350 20 350 65)))
-(stackingOrder 2 4 6 5 7 0 9 10 3 1 13 12 8 11))
+(stackingOrder 2 4 6 5 7 0 10 3 12 8 11 13 1 9))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
