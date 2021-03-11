@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Mon 08/Feb/2021 12:15:11 ")
+(date "Mon 08/Feb/2021 12:16:52 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M M.0)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -214,13 +214,13 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 1)
+(nextID 2)
 (popupTitleText "Untitled")
 (popupMoveable 1))
 (deviceList
 (device 0 CONTEXT
 (properties
-(name "Initial_meta_data")
+(name "Init_metadata")
 (variableScope cont)
 (trigMode deg)
 (nextID 21)
@@ -529,12 +529,9 @@
 (connect D2:1 D3:1)
 (connect D3:1 D4:1)))
 (contextCarrier
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 1510 1019)
-(wndState max)
 (active detail)
 (detail
-(extent 1810 869)
+(extent 359 483)
 (anchorPt 753 255)
 (configuration
 (devCarrierFor 0
@@ -587,7 +584,7 @@
 (editing enabled))
 (pinCenter 1120 520))
 (devCarrierFor 18
-(active open)
+(active icon)
 (icon
 (extent 107 15))
 (open
@@ -623,22 +620,22 @@
 (points 4 139 250 160 250 160 190 179 190))
 (connect D3:1 D4:1
 (points 4 441 -20 460 -20 460 190 480 190)))
-(stackingOrder 7 8 0 5 6 3 2 1 4))))
+(stackingOrder 7 8 0 5 3 2 1 4 6))))
 (configuration))
 (contextCarrier
-(wndOrigin 2 2)
+(wndOrigin 562 79)
 (wndState res)
 (active detail)
 (detail
 (extent 814 562)
-(anchorPt 6 1)
+(anchorPt 172 186)
 (configuration
 (devCarrierFor 0
 (active icon)
 (icon
-(extent 104 15))
+(extent 82 15))
 (terminals on)
-(pinCenter 490 330))))
+(pinCenter 350 150))))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)
