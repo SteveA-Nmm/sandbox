@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 10/Mar/2021 16:57:32 ")
+(date "Wed 10/Mar/2021 16:59:57 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -459,6 +459,9 @@
 (device 21 CONTEXT
 (properties
 (name "VersionSelfHash")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\b\\f0\\fs24 Namespaces\\b0 : System, System.Text, System.Security.Cryptography\\par\r\nDevice -> Import .NET Namespaces....\\par\r\n\\par\r\n\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
 (variableScope cont)
 (trigMode deg)
 (nextID 10)
@@ -616,7 +619,7 @@
 (active detail)
 (detail
 (extent 1212 662)
-(anchorPt -323 -53)
+(anchorPt 80 -20)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -861,7 +864,7 @@
 (active detail)
 (detail
 (extent 1611 834)
-(anchorPt 307 97)
+(anchorPt 346 80)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -975,7 +978,7 @@
 (points 4 154 250 170 250 170 170 201 170))
 (connect D9:1 D11:1
 (points 4 438 580 450 580 450 580 463 580)))
-(stackingOrder 7 4 3 6 1 2 5 9 0 10 11 8))))
+(stackingOrder 7 4 3 6 1 2 5 0 10 11 9 8))))
 (device 3 START25
 (properties
 (variableScope cont)))
