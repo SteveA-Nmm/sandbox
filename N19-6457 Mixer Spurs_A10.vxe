@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 24/Mar/2021 12:26:24 ")
+(date "Thu 25/Mar/2021 09:22:04 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -2813,7 +2813,7 @@
 (device 27 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 150 325)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -3308,7 +3308,7 @@
 (device 92 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 314 172)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -3877,7 +3877,7 @@
 (device 165 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 202 172)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -4095,7 +4095,7 @@
 (device 183 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 314 172)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -4313,7 +4313,7 @@
 (device 201 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 314 172)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -6947,7 +6947,7 @@
 (device 604 MESSAGEBOX
 (properties
 (variableScope cont)
-(position 415 259)
+(position 398 122)
 (message "Set Thumbwheeel Switch to Band")
 (symbol Information))
 (interface
@@ -29434,7 +29434,7 @@
 (optional yes))))
 (device 272 IFTHENELSE
 (properties
-(name "If A < B")
+(name "If A < B AND C!=D")
 (variableScope cont)
 (cases 1 "A<B AND C!=D"))
 (interface
@@ -80177,7 +80177,7 @@
 (variableScope glob)
 (locked 1)
 (trigMode deg)
-(nextID 71)
+(nextID 75)
 (popupTitleText "UserFunction7")
 (popupMoveable 1))
 (deviceList
@@ -80187,27 +80187,10 @@
 (variableScope cont)
 (callFunc "Excel_Write_Data")
 (parmMode rev30)))
-(device 2 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 3 FORMULA
-(properties
-(name "Count")
-(variableScope cont)
-(expr 1 "Count = Count + 1"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
 (device 4 FORCOUNT
 (properties
 (variableScope cont)
-(count 9))
+(count 10))
 (interface
 (input 1
 (name "Count")
@@ -80225,7 +80208,7 @@
 (properties
 (name "Count Initial")
 (variableScope cont)
-(expr 1 "Count = -1"))
+(expr 1 "Count = 0"))
 (interface
 (output 1
 (name "Result")
@@ -80627,48 +80610,72 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
+(device 73 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 74 FORMULA
+(properties
+(name "Count + 1")
+(variableScope cont)
+(expr 1 "Count = Count +1"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
 (configuration
-(connect D2:0 D0:0)
-(connect D2:1 D1:1)
-(connect D3:1 D2:0)
-(connect D4:0 D3:0)
-(connect D33:4 D3:1)
-(connect D30:0 D4:0)
-(connect D6:1 D5:1)
-(connect D8:0 D6:0)
-(connect D8:1 D6:1)
-(connect D32:0 D7:0)
+(connect D1:1 D0:0)
+(connect D2:0 D1:0)
+(connect D33:1 D1:1)
+(connect D28:0 D2:0)
+(connect D4:1 D3:1)
+(connect D6:0 D4:0)
+(connect D6:1 D4:1)
+(connect D30:0 D5:0)
+(connect D5:0 D6:0)
+(connect D25:0 D7:0)
+(connect D4:1 D7:1)
 (connect D7:0 D8:0)
-(connect D27:0 D9:0)
-(connect D6:1 D9:1)
-(connect D9:0 D10:0)
-(connect D12:0 D11:0)
-(connect D20:0 D12:0)
-(connect D11:0 D13:0)
-(connect D11:1 D14:1)
-(connect D13:1 D15:1)
-(connect D13:0 D16:0)
-(connect D21:2 D17:0)
-(connect D16:1 D17:1)
-(connect D18:1 D17:2)
-(connect D16:1 D19:1)
-(connect D31:0 D20:0)
-(connect D16:0 D21:0)
-(connect D16:1 D21:1)
+(connect D10:0 D9:0)
+(connect D18:0 D10:0)
+(connect D9:0 D11:0)
+(connect D9:1 D12:1)
+(connect D11:1 D13:1)
+(connect D11:0 D14:0)
+(connect D19:2 D15:0)
+(connect D14:1 D15:1)
+(connect D16:1 D15:2)
+(connect D14:1 D17:1)
+(connect D29:0 D18:0)
+(connect D14:0 D19:0)
+(connect D14:1 D19:1)
+(connect D20:1 D19:2)
+(connect D23:2 D21:0)
+(connect D14:1 D21:1)
 (connect D22:1 D21:2)
-(connect D25:2 D23:0)
-(connect D16:1 D23:1)
+(connect D15:2 D23:0)
+(connect D14:1 D23:1)
 (connect D24:1 D23:2)
-(connect D17:2 D25:0)
-(connect D16:1 D25:1)
-(connect D26:1 D25:2)
-(connect D6:0 D27:0)
-(connect D6:1 D27:1)
-(connect D23:2 D28:0)
-(connect D28:0 D29:0)
-(connect D29:0 D30:0)
-(connect D10:0 D31:0)
-(connect D34:1 D33:1)))
+(connect D4:0 D25:0)
+(connect D4:1 D25:1)
+(connect D21:2 D26:0)
+(connect D26:0 D27:0)
+(connect D27:0 D28:0)
+(connect D8:0 D29:0)
+(connect D32:1 D31:1)
+(connect D31:4 D33:1)
+(connect D0:0 D34:0)))
 (contextCarrier
 (active panel)
 (panel
@@ -87182,9 +87189,9 @@
 (name "Real64 Input")
 (variableScope cont)
 (popupTitle "Real64 Input")
-(position 150 325)
+(position 392 121)
 (prompt
-"Set power for Band_6.  (test Band_1 & Band_2 at -10dBm, the rest at -5dBm)")
+"Set power for Band_4.  (test Band_1 & Band_2 at -10dBm, the rest at -5dBm)")
 (initialValue "-5")
 (valueConstraint "-16<=value AND value<=0")
 (vErrorMessage "You must enter a Real64 number between -15 and 0."))
@@ -92340,7 +92347,7 @@
 (device 324 FORCOUNT
 (properties
 (variableScope cont)
-(count 3))
+(count 10))
 (interface
 (input 1
 (name "Count")
@@ -95205,7 +95212,7 @@
 (itemList
 (numDims 1)
 (size 3)
-(data  [ "Temp +55C" "Temp +25C" "Temp 0C" ]))
+(data  [ "Temp +60C" "Temp +25C" "Temp 0C" ]))
 (defaultValue "Temp +25C")))
 (device 822 CALL
 (properties
@@ -96288,7 +96295,7 @@
 ("test_type" "pre_test")
 ("description" "sums and differences upto 10x3")
 ("ATPversion" "ATP")
-("notes" "reports users selected input power")
+("notes" "reports users selected input power; +60C hot")
 ("CalFile1" "cal 1")
 ("CalFile2" "cal 2")
 ("CalFile3" "cal 3")
@@ -96296,8 +96303,8 @@
 ("hash_compiled" "0x_comp")
 ("hash_source" "0x_source")
 ("qual_date" "0")
-("release_date" "3/24/2021")
-("version" "v4.0")
+("release_date" "3/25/2021")
+("version" "v4.1")
 ("status" "dev")
 ("author" "sapplen"))))))
 (device 2 TOGLOBAL
@@ -97500,7 +97507,7 @@
 (borderStyle flat)
 (extent 184 26))
 (widget 352 detail
-(relativeOrigin 16 46)
+(relativeOrigin 30 50)
 (bg "Yellow Green")
 (font "Arial" 20 bold)
 (PID 118)
