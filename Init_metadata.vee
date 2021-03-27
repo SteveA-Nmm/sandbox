@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Tue 23/Mar/2021 13:32:47 ")
+(date "Sat 27/Mar/2021 11:34:07 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M.2)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -231,7 +231,7 @@
 (name "Init_metadata")
 (variableScope cont)
 (trigMode deg)
-(nextID 28)
+(nextID 30)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -303,7 +303,7 @@
 ("test_type" "pre_test")
 ("description" "description of program")
 ("ATPversion" "ATPversion")
-("notes" "SelfHash MachineName")
+("notes" "note pad, SelfHash, MachineName")
 ("CalFile1" "cal 1")
 ("CalFile2" "cal 2")
 ("CalFile3" "cal 3")
@@ -311,8 +311,8 @@
 ("hash_compiled" "0x_comp")
 ("hash_source" "0x_source")
 ("qual_date" "2_8_2021")
-("release_date" "3/10/2021")
-("version" "v1.1")
+("release_date" "3/27/2021")
+("version" "v1.1.1")
 ("status" "dev")
 ("author" "sapplen")
 ("MachineName" "SkyNet_Global_Defence_Network"))))))
@@ -451,10 +451,10 @@
 (variableScope cont)))
 (device 20 NOTE
 (properties
-(name "revisions notes")
+(name "metadata revisions")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 v1.1 3/10/2021 added VersionSelfHash, MachineName\\par\r\nv1.0  2/8/2021 init_metadata\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 v1.1.1 3/27/2021 program notes\\par\r\nv1.1 3/10/2021 added VersionSelfHash, MachineName\\par\r\nv1.0  2/8/2021 init_metadata\\par\r\n}\r\n"
 )))
 (device 21 CONTEXT
 (properties
@@ -464,7 +464,7 @@
 )
 (variableScope cont)
 (trigMode deg)
-(nextID 10)
+(nextID 11)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -586,7 +586,7 @@
 (arrayFormat block))))
 (device 8 FORMULA
 (properties
-(name "hash_compiled")
+(name "metadata.hash_compiled")
 (variableScope cont)
 (expr 2 "metadata.hash_compiled=A" ""))
 (interface
@@ -604,6 +604,13 @@
 (interface
 (input 1
 (name "Data"))))
+(device 10 NOTE
+(properties
+(name "TLDR")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Not working?   You need these.\\par\r\n\\par\r\nDevice >> .NET Assemmbly References...  >> mscorlib\\par\r\nDevice >> Import .NET Namespaces... >> System\\par\r\nDevice >> Import .NET Namespaces... >> SystemSecurity.Cryptography\\par\r\nDevice >> Import .NET Namespaces... >> System.Text\\par\r\n\\par\r\n\\par\r\n}\r\n"
+)))
 (configuration
 (connect D4:0 D2:0)
 (connect D4:1 D2:1)
@@ -619,7 +626,7 @@
 (active detail)
 (detail
 (extent 1212 662)
-(anchorPt 80 -20)
+(anchorPt 154 -65)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -686,18 +693,27 @@
 (devCarrierFor 8
 (active icon)
 (icon
-(extent 116 16))
+(extent 158 16))
 (open
 (extent 345 111))
 (terminals on)
 (titleBg "Pale Red")
-(pinCenter 1080 570))
+(pinCenter 1100 570))
 (devCarrierFor 9
 (active open)
 (icon)
 (open
 (extent 634 36))
-(pinCenter 1180 340))
+(pinCenter 1200 330))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 68 0)
+(iconImage "notepad.icn"))
+(open
+(extent 754 166)
+(editing enabled))
+(pinCenter 120 310))
 (connect D4:0 D2:0
 (points 2 710 358 710 395))
 (connect D4:1 D2:1
@@ -715,25 +731,10 @@
 (connect D2:1 D7:1
 (points 2 889 470 913 470))
 (connect D6:1 D8:1
-(points 4 986 570 1002 570 1002 570 1019 570))
+(points 4 986 570 1002 570 1002 570 1018 570))
 (connect D8:1 D9:1
-(points 6 1140 570 1160 570 1160 390 850 390 850 340 860 340)))
-(stackingOrder 0 2 4 5 6 7 9 1 3 8))))
-(device 24 FORMULA
-(properties
-(name "Environment.MachineName")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}{\\f2\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f3\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\sb100\\sa100\\ul\\b\\f0\\fs24 System.Environment.MachineName\\ulnone\\b0\\par\r\nThis function returns \\f1 a string containing the name of this computer.  \\f0 It is a .NET Framework call and can be found in the Function and Object Browser here: \\f2\\fs17\\par\r\n\\pard\\b\\f0\\fs24 Assembly\\b0 : Mscorlib\\par\r\n\\b Namespace\\b0 : System\\par\r\n\\b Type\\b0 : Environment\\f2\\fs17\\par\r\n\\f3\\fs20\\par\r\n}\r\n"
-)
-(variableScope cont)
-(expr 2 "// See object description for more information"
-"System.Environment.MachineName;"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
+(points 6 1181 570 1160 570 1160 390 850 390 850 330 880 330)))
+(stackingOrder 0 2 4 5 6 7 1 3 9 8 10))))
 (device 26 FROMRECORD
 (properties
 (variableScope cont))
@@ -836,9 +837,40 @@
 (tag "Name List")
 (lock name constraints)
 (optional yes))))
-(device 27 FORMULA
+(device 28 NOTE
 (properties
-(name "MachineName")
+(name "program notes")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 close the metadata revisions notes and begin\\par\r\nusing this notes box to update the actual program\\par\r\n}\r\n"
+)))
+(device 29 CONTEXT
+(properties
+(name "local details")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "Environment.MachineName")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}{\\f2\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f3\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\sb100\\sa100\\ul\\b\\f0\\fs24 System.Environment.MachineName\\ulnone\\b0\\par\r\nThis function returns \\f1 a string containing the name of this computer.  \\f0 It is a .NET Framework call and can be found in the Function and Object Browser here: \\f2\\fs17\\par\r\n\\pard\\b\\f0\\fs24 Assembly\\b0 : Mscorlib\\par\r\n\\b Namespace\\b0 : System\\par\r\n\\b Type\\b0 : Environment\\f2\\fs17\\par\r\n\\f3\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 2 "// See object description for more information"
+"System.Environment.MachineName;"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FORMULA
+(properties
+(name "metadata.MachineName")
 (variableScope cont)
 (expr 3 "metadata.MachineName=A" "" ""))
 (interface
@@ -851,22 +883,47 @@
 (lock name constraints)
 (optional yes))))
 (configuration
+(connect D0:1 D1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 851 229)
+(anchorPt 2 12)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 212 16))
+(open
+(extent 374 67))
+(terminals on)
+(pinCenter 285 130))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 151 16))
+(open
+(extent 254 83))
+(terminals on)
+(titleBg "Pale Red")
+(pinCenter 710 110))
+(connect D0:1 D1:1
+(points 4 534 130 434 130 434 110 632 110)))
+(stackingOrder 0 1))))
+(configuration
 (connect D6:0 D0:0)
 (connect D0:0 D1:0)
 (connect D0:1 D1:1)
-(connect D1:0 D2:0)
-(connect D10:23 D3:1)
-(connect D10:0 D8:0)
-(connect D8:0 D9:0)
-(connect D2:1 D10:1)
-(connect D9:1 D11:1)))
+(connect D11:0 D2:0)
+(connect D9:23 D3:1)
+(connect D1:0 D8:0)
+(connect D2:1 D9:1)
+(connect D8:0 D11:0)))
 (contextCarrier
-(wndOrigin 20 54)
-(wndState res)
 (active detail)
 (detail
 (extent 1611 834)
-(anchorPt 239 65)
+(anchorPt 447 292)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -877,28 +934,28 @@
 (formatters))
 (pinCenter -180 160))
 (devCarrierFor 2
-(active open)
+(active icon)
 (icon
 (extent 103 24))
 (open
 (extent 73 51))
 (terminals on)
-(pinCenter 110 110))
+(pinCenter -180 530))
 (devCarrierFor 3
-(active open)
+(active icon)
 (icon
 (extent 104 24))
 (open
 (extent 73 51))
 (terminals on)
-(pinCenter 90 250))
+(pinCenter 110 170))
 (devCarrierFor 6
 (active open)
 (icon
 (extent 132 15))
 (open
-(extent 175 396))
-(pinCenter 570 190))
+(extent 174 406))
+(pinCenter 570 200))
 (devCarrierFor 7
 (active open)
 (icon
@@ -925,26 +982,18 @@
 (devCarrierFor 20
 (active open)
 (icon
-(extent 92 0)
+(extent 119 0)
 (iconImage "notepad.icn"))
 (open
 (extent 410 180)
 (editing enabled))
-(pinCenter 890 -60))
+(pinCenter 920 -50))
 (devCarrierFor 21
 (active icon)
 (icon
 (extent 126 16))
 (terminals on)
-(pinCenter 330 490))
-(devCarrierFor 24
-(active open)
-(icon
-(extent 212 16))
-(open
-(extent 274 67))
-(terminals on)
-(pinCenter 315 580))
+(pinCenter 110 -170))
 (devCarrierFor 26
 (active open)
 (icon
@@ -953,34 +1002,38 @@
 (extent 12 462))
 (terminals on)
 (pinCenter 320 170))
-(devCarrierFor 27
+(devCarrierFor 28
 (active open)
 (icon
-(extent 108 16))
+(extent 92 51)
+(iconImage "notepad.icn"))
 (open
-(extent 254 83))
+(extent 410 180)
+(editing enabled))
+(pinCenter 920 -130))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 74 15))
 (terminals on)
-(titleBg "Pale Red")
-(pinCenter 505 580))
+(pinCenter 110 -140))
 (connect D6:0 D0:0
-(points 4 -180 -235 -180 -219 -180 -219 -180 -202))
+(points 2 -180 -235 -180 -202))
 (connect D0:0 D1:0
-(points 8 -180 504 -180 520 30 520 30 220 40 220 40 80 100 80 100 64))
+(points 2 -180 504 -180 515))
 (connect D0:1 D1:1
-(points 4 14 160 30 160 30 110 21 110))
-(connect D1:0 D2:0
-(points 4 100 138 100 179 100 179 100 204))
-(connect D10:23 D3:1
-(points 4 458 390 470 390 470 190 480 190))
-(connect D10:0 D8:0
-(points 2 330 403 330 479))
-(connect D8:0 D9:0
-(points 4 330 500 330 534 330 534 330 526))
-(connect D2:1 D10:1
-(points 4 179 250 170 250 170 170 201 170))
-(connect D9:1 D11:1
-(points 4 514 580 450 580 450 580 345 580)))
-(stackingOrder 7 4 3 6 5 0 1 8 9 11 10 2))))
+(points 6 14 160 30 160 30 560 -250 560 -250 530 -234 530))
+(connect D11:0 D2:0
+(points 2 110 -130 110 155))
+(connect D9:23 D3:1
+(points 4 458 390 470 390 470 200 480 200))
+(connect D1:0 D8:0
+(points 8 -180 544 -180 570 40 570 40 150 30 150 30 -200 110 -200 110 -181))
+(connect D2:1 D9:1
+(points 2 164 170 201 170))
+(connect D8:0 D11:0
+(points 2 110 -160 110 -150)))
+(stackingOrder 4 3 6 5 0 10 7 9 2 1 11 8))))
 (device 3 START25
 (properties
 (variableScope cont)))
@@ -998,6 +1051,8 @@
 (connect D1:0 D0:0)
 (connect D0:0 D2:0)))
 (contextCarrier
+(wndOrigin 102 102)
+(wndState res)
 (active detail)
 (detail
 (extent 1064 562)
@@ -1023,12 +1078,12 @@
 (open
 (extent 73 51))
 (terminals on)
-(pinCenter 540 470))
+(pinCenter 560 470))
 (connect D1:0 D0:0
 (points 2 570 315 570 345))
 (connect D0:0 D2:0
-(points 2 570 374 550 424)))
-(stackingOrder 1 0 2))
+(points 2 570 374 570 424)))
+(stackingOrder 1 2 0))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)

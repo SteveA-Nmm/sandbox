@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Wed 10/Feb/2021 08:56:27 ")
+(date "Sat 27/Mar/2021 15:05:53 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M.62.0 M.62.1 M.48 M.0 M M.1)
+(workspaceStackingOrder M.0 M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -820,7 +820,7 @@
 (value Text
 (numDims 1)
 (size 3)
-(data  [ "Band_1" "Band2" "Band3" ]))
+(data  [ "Band1" "Band2" "Band3" ]))
 (initValue Text
 (data  ""))))
 (device 4 LITERALCONSTANT
@@ -1162,16 +1162,6 @@
 (connect I3:1 D2:1
 (points 4 -129 319 -27 319 -27 300 64 300)))
 (stackingOrder 1 2 0))))
-(device 36 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "Band = \"Band_1\""))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
 (configuration
 (connect D2:0 D3:0)
 (connect D11:0 D4:0)
@@ -1185,15 +1175,14 @@
 (connect D9:0 D11:0)
 (connect D1:1 D11:1)
 (connect D2:1 D11:2)
-(connect D3:1 D11:3)
-(connect D4:0 D12:0)))
+(connect D3:1 D11:3)))
 (contextCarrier
-(wndOrigin 493 72)
+(wndOrigin 22 22)
 (wndState res)
 (active detail)
 (detail
 (extent 1324 838)
-(anchorPt -867 328)
+(anchorPt -680 51)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -1286,13 +1275,6 @@
 (extent 94 34))
 (terminals on)
 (pinCenter 1750 80))
-(devCarrierFor 36
-(active open)
-(icon)
-(open
-(extent 145 51))
-(terminals on)
-(pinCenter 1745 400))
 (connect D2:0 D3:0
 (points 4 1160 99 1160 91 1160 91 1160 112))
 (connect D11:0 D4:0
@@ -1318,10 +1300,8 @@
 (connect D2:1 D11:2
 (points 4 1281 60 1300 60 1300 80 1700 80))
 (connect D3:1 D11:3
-(points 4 1281 170 1300 170 1300 90 1700 90))
-(connect D4:0 D12:0
-(points 2 1760 330 1760 354)))
-(stackingOrder 1 3 0 6 10 7 2 8 4 12 9 5 11))))
+(points 4 1281 170 1300 170 1300 90 1700 90)))
+(stackingOrder 1 3 0 6 10 7 2 8 4 9 5 11))))
 (device 1 CONTEXT
 (properties
 (name "Select Temp Port Band")
@@ -1682,22 +1662,19 @@
 (connect D23:1 D15:1)
 (connect D23:0 D16:0)
 (connect D23:2 D16:1)
-(connect D22:0 D17:0)
+(connect D5:0 D17:0)
 (connect D2:3 D18:1)
 (connect D4:3 D18:2)
 (connect D23:3 D18:3)
 (connect D18:1 D19:0)
-(connect D5:0 D22:0)
 (connect D17:0 D23:0)
 (connect D17:1 D23:1)
 (connect D22:1 D23:2)))
 (contextCarrier
-(wndOrigin 434 16)
-(wndState res)
 (active detail)
 (detail
 (extent 1341 780)
-(anchorPt 206 52)
+(anchorPt 217 -33)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -1867,7 +1844,7 @@
 (open
 (extent 88 53))
 (terminals on)
-(pinCenter 230 410))
+(pinCenter 110 550))
 (devCarrierFor 27
 (active icon)
 (icon
@@ -1926,25 +1903,24 @@
 (points 6 230 569 230 590 300 590 300 530 390 530 390 540))
 (connect D23:2 D16:1
 (points 2 269 550 353 550))
-(connect D22:0 D17:0
-(points 2 230 420 230 470))
+(connect D5:0 D17:0
+(points 8 390 260 390 270 400 270 400 280 450 280 450 360 230 360 230 470))
 (connect D2:3 D18:1
-(points 6 291 80 300 80 300 130 690 130 690 220 904 220))
+(points 10 291 80 300 80 300 90 320 90 320 110 390 110 390 120 690 120 690 220
+904 220))
 (connect D4:3 D18:2
 (points 6 264 320 280 320 280 370 690 370 690 230 904 230))
 (connect D23:3 D18:3
-(points 6 269 560 290 560 290 600 700 600 700 240 904 240))
+(points 6 269 560 280 560 280 460 700 460 700 240 904 240))
 (connect D18:1 D19:0
 (points 3 935 230 1020 230 1020 330))
-(connect D5:0 D22:0
-(points 8 390 260 390 270 400 270 400 280 450 280 450 360 230 360 230 400))
 (connect D17:0 D23:0
 (points 2 230 490 230 530))
 (connect D17:1 D23:1
-(points 6 249 480 270 480 270 510 170 510 170 540 190 540))
+(points 6 249 480 270 480 270 450 170 450 170 540 190 540))
 (connect D22:1 D23:2
-(points 6 264 410 280 410 280 380 160 380 160 560 190 560)))
-(stackingOrder 8 9 12 13 14 11 10 3 16 18 19 6 7 20 21 1 5 2 0 4 15 23 22 17))))
+(points 4 144 550 160 550 160 560 190 560)))
+(stackingOrder 8 9 12 13 14 11 10 3 16 18 19 6 7 20 21 1 5 2 0 4 15 23 17 22))))
 (device 7 NOTE
 (properties
 (name "Record a VEE data type")
@@ -5651,7 +5627,7 @@
 (active detail)
 (detail
 (extent 2215 1030)
-(anchorPt 918 66)
+(anchorPt -887 199)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -10835,12 +10811,10 @@
 (connect D49:2 D48:1)
 (connect D39:0 D49:0)))
 (contextCarrier
-(wndOrigin 843 35)
-(wndState res)
 (active detail)
 (detail
 (extent 1020 816)
-(anchorPt -725 -827)
+(anchorPt -667 -202)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -16700,8 +16674,6 @@
 (connect D11:1 O6:1)
 (connect D9:1 O7:1)))
 (contextCarrier
-(wndOrigin 766 69)
-(wndState res)
 (active detail)
 (detail
 (extent 440 753)
@@ -17433,8 +17405,6 @@
 (connect D11:1 O6:1)
 (connect D9:1 O7:1)))
 (contextCarrier
-(wndOrigin 22 22)
-(wndState res)
 (active detail)
 (detail
 (extent 440 753)
@@ -17755,7 +17725,7 @@
 (points 4 231 110 260 110 260 260 309 260))
 (connect D2:1 D4:1
 (points 2 591 220 721 220)))
-(stackingOrder 0 1 2 3 4))))
+(stackingOrder 0 2 3 4 1))))
 (device 63 FROMGLOBAL
 (properties
 (name "Get Bands")
@@ -17799,12 +17769,13 @@
 (connect D15:0 D17:0)
 (connect D17:1 D18:1)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 1761 836)
+(wndState max)
 (active detail)
 (detail
-(extent 651 836)
-(anchorPt 523 41)
+(extent 1125 589)
+(anchorPt 682 -63)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -17828,14 +17799,14 @@
 (editing enabled))
 (pinCenter 120 90))
 (devCarrierFor 44
-(active icon)
+(active open)
 (icon
 (extent 68 51)
 (iconImage "notepad.icn"))
 (open
 (extent 414 716)
 (editing enabled))
-(pinCenter 130 260))
+(pinCenter 750 230))
 (devCarrierFor 45
 (active icon)
 (icon
@@ -17847,19 +17818,19 @@
 (icon
 (extent 63 15))
 (terminals on)
-(pinCenter 40 380))
+(pinCenter 230 450))
 (devCarrierFor 49
 (active icon)
 (icon
 (extent 74 15))
 (terminals on)
-(pinCenter 50 430))
+(pinCenter 140 450))
 (devCarrierFor 54
 (active icon)
 (icon
 (extent 90 15))
 (terminals on)
-(pinCenter -60 440))
+(pinCenter 350 450))
 (devCarrierFor 56
 (active open)
 (icon
@@ -17909,7 +17880,7 @@
 (icon
 (extent 70 15))
 (terminals on)
-(pinCenter -190 100))
+(pinCenter -520 310))
 (devCarrierFor 63
 (active icon)
 (icon
@@ -17956,7 +17927,7 @@
 (points 4 -220 220 -220 250 -130 250 -130 310))
 (connect D17:1 D18:1
 (points 6 -103 320 -90 320 -90 330 -100 330 -100 340 -90 340)))
-(stackingOrder 2 3 4 6 5 8 9 10 13 14 15 7 17 18 16 12 11 0 1))
+(stackingOrder 8 9 10 13 15 17 18 16 11 2 4 5 7 6 14 3 0 12 1))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)

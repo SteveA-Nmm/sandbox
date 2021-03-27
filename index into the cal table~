@@ -1,0 +1,126 @@
+Problem statement N19_6457 mixer spur
+
+there are 6 bands. 
+The start frequencies don't fit to a fixed step size. 
+A 10MHz step size would land on every start and stop frequency.
+How do i index into the calibration table and step to the next test frequency?
+
+solution
+What was used on _A9? 
+	Cal_Start_IF = 4500
+	Cal_Stop_IF_Freq = 11600
+
+	Cal_Start_RF_Freq = 18000
+	Cal_Stop_RF_Freq = 40000
+
+	Cal_Step = 100
+
+Ok, measure within 40Mz of Start and stop frequencies.
+band1 4500   close to 4480
+band2 5700   close to 5660
+band3 6300   close to 6340
+band4 6600   close to 6620
+band5 6800  actual 6800
+band6 4800  actual 4800
+
+so the caltable is every 100MHz, for a total of 71points. 
+How do i enter it at band2 and continue. ?
+
+
+
+Main:Band_Select 
+	A==0
+	Cal_Index = -1
+	Cal_Steps =6
+	Band = "Band_1"
+	Band_num = 1
+	Freq_LO = LO_Freq[Band_num-1]
+A==1
+Cal_Index = 5
+Cal_Steps =10
+Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]
+Band = "Band_1"
+Band_num = 1
+Freq_LO = LO_Freq[Band_num-1]
+	A==2
+	Cal_Index = 15
+	Cal_Steps =10
+	Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]
+	Band = "Band_1"
+	Band_num = 1
+	Freq_LO = LO_Freq[Band_num-1]
+A==3  band1
+	A==4 band1
+
+A==5 band2
+Cal_Index = 11
+Cal_Steps =4
+Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]  >>5700
+Band = "Band_2"
+Band_num = 2
+Freq_LO = LO_Freq[Band_num-1]
+	A==6 band2
+	Cal_Index = 15
+	Cal_Steps =10
+	Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]
+	Band = "Band_2"
+	Band_num = 2
+	Freq_LO = LO_Freq[Band_num-1]
+A==7 band2
+	A==8 ban2
+A=9 band2
+	A==10 band3
+	Cal_Index = 18
+	Cal_Steps =7
+	Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]
+	Band = "Band_3"
+	Band_num = 3
+	Freq_LO = LO_Freq[Band_num-1]
+A==11 ....
+
+A==15 band4
+Cal_Index = 20
+Cal_Steps =5
+Cal_RF_Freq = IF_Data_Table[Cal_Index+1,0]
+Band = "Band_4"
+Band_num = 4
+Freq_LO = LO_Freq[Band_num-1]
+
+
+Main: Freq_IN = IF_Data_Table[Cal_Index,0]
+Main: RF_Source_Power = AsReal64(IF_Data_Table[(Cal_Index),1]) + RF_Pwr+3 +Input_Atten"
+
+
+       RF_Source_Power = AsReal64(IF_Data_Table[(Cal_Index),1]) + RF_Pwr+3 +Input_Atten
+
+
+Excel_Open_IF_Cal_File loads up IF_Data_Table
+
+
+blank:?:? Calibrate_IF_Input_Power:Excel_Open_IF_Cal_File
+Main:SETUP_INITIAL:Excel_Open_IF_Cal_File >>> loads IF_Data_Table from an excel cal file
+
+and there is the answwe3e=er  answer
+The cal file drives what input frequencies can be used and the order must be known before hand.
+The rest of the program is hardcoded for the index into the cal file. 
+It can NOT jump around given a frequency; you must know the index explicitly. 
+
+What i want is :
+cal table as big or small with whatever steps I choose. 
+cal table stays useable between programs. 
+interpolate between frequencies,
+warning if frequency doesn't exist in cal table.
+
+What i Need to do this is
+a way to search the table for a frequecy and return the calibration associated with it.
+Excel >> Utilities >> Search Array
+requires excel utilities open,  (program must manage what excel file are open and explicitly close one by one when done)
+
+
+
+
+
+
+
+
+
