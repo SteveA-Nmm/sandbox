@@ -1,0 +1,842 @@
+(saveFormat "7.0")
+(date "Mon 24/May/2021 10:50:30 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v8)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrumentxxx"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "dvm"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp3478a.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "PowerMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML2437A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 132)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB2::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB2::8::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument6"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAlias "NetworkAnalyzer")
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument7"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument8"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::25::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::25::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument9"
+(type ASRL)
+(channel 194)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL4::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL4::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "PrologixLanGPIB"
+(type TCPIP)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Prologix"
+(type USB)
+(channel 174)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "USB4::2391::1031::US432109::0::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "USB4::2391::1031::US432109::0::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument3"
+(type ASRL)
+(channel 201)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL11::INSTR-16")
+(model "")
+(eoiEnabled 1)
+(VISAlias "COM3")
+(VISAddr "ASRL11::INSTR-16")
+(model ""
+(standard 488.2))
+(baudRate 115200)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "hp8757d6_hp836x0"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757d6.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757d_standalone"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757d.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757d_id"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\VEE-Panel-Instrument-Driver\\files\\hp8757d.id"
+)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 22)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 1 CONSTANT
+(properties
+(name "IF input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  8880))
+(initValue Real
+(data  0))))
+(device 2 CONSTANT
+(properties
+(name "LO input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  26880))
+(initValue Real
+(data  0))))
+(device 5 FORMULA
+(properties
+(name "HSM upconvertor")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 1 "LO-IN"))
+(interface
+(input 1
+(name "IN")
+(optional yes))
+(input 2
+(name "LO")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 TEXTDISPLAY
+(properties
+(name "RF output")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 8 TEXTDISPLAY
+(properties
+(name "RF output")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 9 FORMULA
+(properties
+(name "LSM upconvertor")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 1 "LO+IN"))
+(interface
+(input 1
+(name "IN")
+(optional yes))
+(input 2
+(name "LO")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 10 CONSTANT
+(properties
+(name "LO input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  9120))
+(initValue Real
+(data  0))))
+(device 11 CONSTANT
+(properties
+(name "IF input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  8880))
+(initValue Real
+(data  0))))
+(device 13 TEXTDISPLAY
+(properties
+(name "RF output")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 14 FORMULA
+(properties
+(name "HSM downconvertor")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 1 "IN-LO"))
+(interface
+(input 1
+(name "IN")
+(optional yes))
+(input 2
+(name "LO")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 15 CONSTANT
+(properties
+(name "LO input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  9120))
+(initValue Real
+(data  0))))
+(device 16 CONSTANT
+(properties
+(name "RF input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  18000))
+(initValue Real
+(data  0))))
+(device 17 TEXTDISPLAY
+(properties
+(name "RF output")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 18 FORMULA
+(properties
+(name "HSM downconvertor")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 1 "LO-IN"))
+(interface
+(input 1
+(name "IN")
+(optional yes))
+(input 2
+(name "LO")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 19 CONSTANT
+(properties
+(name "LO input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  26880))
+(initValue Real
+(data  0))))
+(device 20 CONSTANT
+(properties
+(name "RF input")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  18000))
+(initValue Real
+(data  0))))
+(device 21 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 NST as a LSM downconverter at this range.\\par\r\nBoth are HSM downconvertors and only one is sensible.\\par\r\n}\r\n"
+)))
+(configuration
+(connect D0:1 D2:1)
+(connect D1:1 D2:2)
+(connect D2:1 D3:1)
+(connect D5:1 D4:1)
+(connect D7:1 D5:1)
+(connect D6:1 D5:2)
+(connect D9:1 D8:1)
+(connect D11:1 D9:1)
+(connect D10:1 D9:2)
+(connect D13:1 D12:1)
+(connect D15:1 D13:1)
+(connect D14:1 D13:2)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 492 381)
+(wndState max)
+(active detail)
+(detail
+(extent 1619 856)
+(anchorPt 477 -60)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(extent 44 0))
+(open
+(extent 110 36)
+(showFormat real))
+(pinCenter 80 160))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 51 0))
+(open
+(extent 107 36)
+(showFormat real))
+(pinCenter 80 220))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 107 0))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 325 180))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 58 0))
+(open
+(extent 184 66))
+(pinCenter 640 180))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 58 0))
+(open
+(extent 184 66))
+(pinCenter 640 310))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 106 0))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 335 310))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 51 0))
+(open
+(extent 107 36)
+(showFormat real))
+(pinCenter 80 350))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 44 0))
+(open
+(extent 110 36)
+(showFormat real))
+(pinCenter 80 290))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 58 0))
+(open
+(extent 184 66))
+(pinCenter 640 490))
+(devCarrierFor 14
+(active open)
+(icon
+(extent 126 0))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 335 490))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 51 0))
+(open
+(extent 107 36)
+(showFormat real))
+(pinCenter 80 530))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 49 0))
+(open
+(extent 110 36)
+(showFormat real))
+(pinCenter 80 470))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 58 0))
+(open
+(extent 184 66))
+(pinCenter 650 620))
+(devCarrierFor 18
+(active open)
+(icon
+(extent 126 0))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 335 620))
+(devCarrierFor 19
+(active open)
+(icon
+(extent 51 0))
+(open
+(extent 107 36)
+(showFormat real))
+(pinCenter 80 660))
+(devCarrierFor 20
+(active open)
+(icon
+(extent 49 0))
+(open
+(extent 110 36)
+(showFormat real))
+(pinCenter 80 600))
+(devCarrierFor 21
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 424 226)
+(editing enabled))
+(pinCenter -190 570))
+(connect D0:1 D2:1
+(points 4 137 160 170 160 170 170 220 170))
+(connect D1:1 D2:2
+(points 4 136 220 170 220 170 190 220 190))
+(connect D2:1 D3:1
+(points 4 460 180 512 180 512 180 545 180))
+(connect D5:1 D4:1
+(points 4 470 310 532 310 532 310 545 310))
+(connect D7:1 D5:1
+(points 4 137 290 190 290 190 300 230 300))
+(connect D6:1 D5:2
+(points 4 136 350 190 350 190 320 230 320))
+(connect D9:1 D8:1
+(points 4 470 490 532 490 532 490 545 490))
+(connect D11:1 D9:1
+(points 4 137 470 190 470 190 480 230 480))
+(connect D10:1 D9:2
+(points 4 136 530 190 530 190 500 230 500))
+(connect D13:1 D12:1
+(points 4 470 620 532 620 532 620 555 620))
+(connect D15:1 D13:1
+(points 4 137 600 190 600 190 610 230 610))
+(connect D14:1 D13:2
+(points 4 136 660 190 660 190 630 230 630)))
+(stackingOrder 1 3 2 0 4 7 6 5 8 10 9 13 14 11 15 16 12))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))

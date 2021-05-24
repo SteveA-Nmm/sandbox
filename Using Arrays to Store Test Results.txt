@@ -1,0 +1,13 @@
+Using Arrays to Store Test Results
+commas
+In the subarray syntax, commas are used to separate array dimensions. 
+If B is a two-dimensional array with three elements in each dimension, 
+B[1,0] returns the first element in the 
+second row of B. 
+
+    0  1   =three rows, two columns 
+00
+01  r
+02
+this is just Array2D two columns
+Array3D is not 3 columns

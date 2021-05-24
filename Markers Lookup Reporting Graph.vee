@@ -1,0 +1,770 @@
+(saveFormat "7.0")
+(date "Mon 26/Apr/2021 13:37:39 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v8)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrumentxxx"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "dvm"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp3478a.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "PowerMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML2437A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 132)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB2::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB2::8::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "newInstrument3"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAlias "COM3")
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 0 EXVEEOBJECT
+(properties
+(name "Reporting Graph")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.VTBMain")
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\Graph.dll"
+)
+(objectData
+"\"XAxis\"=\"X-Axis\"|\"YAxis\"=\"Y-Axis\"|\"Marker0\"=\"True\"|\"Marker1\"=\"True\"|\"Marker2\"=\"True\"|\"Marker3\"=\"True\"|\"MarkerValue0\"=\"450\"|\"MarkerValue1\"=\"100\"|\"MarkerValue2\"=\"0.309016994374949\"|\"MarkerValue3\"=\"-0.809016994374947\"|\"PanelState\"=\"True\"|\"Traces\"=\"1\"|\"TracesName0\"=\"Data 1 \"|\"TracesColor0\"=\"#FFFFA500\"|\"GraphColor\"=\"-16777216\"|\"BorderColor\"=\"-1\"|\"FontColor\"=\"-1\"|\"FontSize\"=\"12\"|\"GridColor\"=\"-1\"|\"TicColor\"=\"-1\"|\"GridX\"=\"False\"|\"GridY\"=\"True\""
+))
+(interface
+(input 1
+(name "Data 1")
+(tag "Data 1")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(type control)
+(name "X1 Marker")
+(tag "X1 Marker")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(input 3
+(type control)
+(name "Y1 Marker")
+(tag "Y1 Marker")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(input 4
+(type control)
+(name "X2 Marker")
+(tag "X2 Marker")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(input 5
+(type control)
+(name "Y2 Marker")
+(tag "Y2 Marker")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 1 VFUNCTIONGENERATOR
+(properties
+(variableScope cont)
+(function Cosine)
+(frequency 200)
+(amplitude 1)
+(dcOffset 0)
+(degRad Deg)
+(phaseShift 0)
+(interval 0.02)
+(numPoints 1000))
+(interface
+(output 1
+(name "Func")
+(lock name constraints))))
+(device 4 EXVEEOBJECT
+(properties
+(name "Markers Lookup")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.MarkersLookup")
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\Graph.dll"
+))
+(interface
+(input 1
+(name "X-value")
+(tag "X-value")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Y-traceData")
+(tag "Y-traceData")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Y-value")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A[0]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  450))
+(initValue Real
+(data  0))))
+(device 9 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  100))
+(initValue Real
+(data  0))))
+(device 10 CONTEXT
+(properties
+(name "marker")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Y-traceData")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(input 2
+(name "X-value")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 EXVEEOBJECT
+(properties
+(name "Markers Lookup")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.MarkersLookup")
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\Graph.dll"
+))
+(interface
+(input 1
+(name "X-value")
+(tag "X-value")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Y-traceData")
+(tag "Y-traceData")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Y-value")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A[0]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I2:1 D0:1)
+(connect I1:1 D0:2)
+(connect D0:1 D1:1)
+(connect D1:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 401 357)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 94 34))
+(open
+(extent 94 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 215 120))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 174 66))
+(terminals on)
+(pinCenter 185 260))
+(connect I2:1 D0:1
+(points 4 0 268 20 268 20 100 65 100))
+(connect I1:1 D0:2
+(points 4 0 88 10 88 10 140 65 140))
+(connect D0:1 D1:1
+(points 8 334 120 350 120 350 170 340 170 340 180 50 180 50 260 65 260))
+(connect D1:1 O1:1
+(points 4 334 260 350 260 350 178 400 178)))
+(stackingOrder 0 1))))
+(device 11 CONTEXT
+(properties
+(name "marker")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Y-traceData")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(input 2
+(name "X-value")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 EXVEEOBJECT
+(properties
+(name "Markers Lookup")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.MarkersLookup")
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\Graph.dll"
+))
+(interface
+(input 1
+(name "X-value")
+(tag "X-value")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Y-traceData")
+(tag "Y-traceData")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Y-value")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A[0]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I2:1 D0:1)
+(connect I1:1 D0:2)
+(connect D0:1 D1:1)
+(connect D1:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 401 357)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 94 34))
+(open
+(extent 94 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 215 120))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 174 66))
+(terminals on)
+(pinCenter 185 260))
+(connect I2:1 D0:1
+(points 4 0 268 20 268 20 100 65 100))
+(connect I1:1 D0:2
+(points 4 0 88 10 88 10 140 65 140))
+(connect D0:1 D1:1
+(points 8 334 120 350 120 350 170 340 170 340 180 50 180 50 260 65 260))
+(connect D1:1 O1:1
+(points 4 334 260 350 260 350 178 400 178)))
+(stackingOrder 0 1))))
+(device 12 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  100))
+(initValue Real
+(data  0))))
+(device 13 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D2:0 D0:0)
+(connect D1:1 D0:1)
+(connect D4:1 D0:2)
+(connect D3:1 D0:3)
+(connect D5:1 D0:4)
+(connect D6:1 D0:5)
+(connect D1:0 D2:0)
+(connect D4:1 D2:1)
+(connect D1:1 D2:2)
+(connect D2:1 D3:1)
+(connect D1:1 D6:1)
+(connect D5:1 D6:2)
+(connect D1:1 D7:1)
+(connect D8:1 D7:2)
+(connect D7:1 D9:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 1100 590)
+(wndState max)
+(active detail)
+(detail
+(extent 1893 895)
+(anchorPt 384 -205)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "vTools\\General\\xy-trace++.jpg"))
+(open
+(extent 794 826))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 1050 700))
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "virtual.icn"))
+(open
+(extent 223 190))
+(terminals on)
+(pinCenter 270 350))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 94 34))
+(open
+(extent 94 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 295 610))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 174 66))
+(terminals on)
+(pinCenter 265 750))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 79 30)
+(showFormat real))
+(pinCenter 70 590))
+(devCarrierFor 9
+(active open)
+(icon)
+(open
+(extent 79 30)
+(showFormat real))
+(pinCenter 70 900))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 46 25))
+(terminals on)
+(pinCenter 280 890))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 46 25))
+(terminals on)
+(pinCenter 280 1000))
+(devCarrierFor 12
+(active open)
+(icon)
+(open
+(extent 79 30)
+(showFormat real))
+(pinCenter 70 1010))
+(devCarrierFor 13
+(active open)
+(icon)
+(open
+(extent 124 25))
+(pinCenter 440 1000))
+(connect D2:0 D0:0
+(points 6 280 650 280 680 460 680 460 250 1020 250 1020 266))
+(connect D1:1 D0:1
+(points 4 434 350 450 350 450 380 560 380))
+(connect D4:1 D0:2
+(points 6 112 590 140 590 140 530 430 530 430 540 560 540))
+(connect D3:1 D0:3
+(points 4 414 750 430 750 430 700 560 700))
+(connect D5:1 D0:4
+(points 4 112 900 230 900 230 860 560 860))
+(connect D6:1 D0:5
+(points 4 305 890 520 890 520 1020 560 1020))
+(connect D1:0 D2:0
+(points 2 280 447 280 551))
+(connect D4:1 D2:1
+(points 2 112 590 145 590))
+(connect D1:1 D2:2
+(points 6 434 350 450 350 450 470 130 470 130 630 145 630))
+(connect D2:1 D3:1
+(points 6 414 610 430 610 430 670 130 670 130 750 145 750))
+(connect D1:1 D6:1
+(points 10 434 350 450 350 450 470 130 470 130 630 120 630 120 760 130 760 130
+880 254 880))
+(connect D5:1 D6:2
+(points 2 112 900 254 900))
+(connect D1:1 D7:1
+(points 12 434 350 450 350 450 470 130 470 130 630 120 630 120 760 130 760 130
+880 220 880 220 990 254 990))
+(connect D8:1 D7:2
+(points 2 112 1010 254 1010))
+(connect D7:1 D9:1
+(points 2 305 1000 375 1000)))
+(stackingOrder 4 2 1 3 6 7 8 0 5 9))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
