@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Mon 24/May/2021 10:50:30 ")
+(date "Thu 17/Jun/2021 11:35:39 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -425,7 +425,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 22)
+(nextID 23)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -460,7 +460,7 @@
 (data  0))))
 (device 5 FORMULA
 (properties
-(name "HSM upconvertor")
+(name "HSM upconverter")
 (description2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
 )
@@ -494,12 +494,12 @@
 (name "Data"))))
 (device 9 FORMULA
 (properties
-(name "LSM upconvertor")
+(name "LSM upconverter")
 (description2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
 )
 (variableScope cont)
-(expr 1 "LO+IN"))
+(expr 1 "IN+LO"))
 (interface
 (input 1
 (name "IN")
@@ -549,7 +549,7 @@
 (name "Data"))))
 (device 14 FORMULA
 (properties
-(name "HSM downconvertor")
+(name "LSM downconverter")
 (description2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
 )
@@ -604,7 +604,7 @@
 (name "Data"))))
 (device 18 FORMULA
 (properties
-(name "HSM downconvertor")
+(name "HSM downconverter")
 (description2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Mixer history - heterodyning\\par\r\n\\par\r\nThe RF port is where the high frequency signal is input that you want to downconvert, \\par\r\nor where the high frequency signal is output from an upconverter.\\par\r\n(lets just say input RF = downconvert; output RF = upconvert)\\par\r\n\\par\r\nHigh side mixer versus low-side mixer (HSM/LSM)\\par\r\nIn a single-sideband receiver you can process either one of the sidebands. \\par\r\nA high-side mixer is one in which the LO is higher in frequency than the RF, \\par\r\na low-side mixer is one in which the LO is lower in frequency.\\par\r\n\\par\r\nexample: output RF upconvertor, and LO is higher in frequency than the RF, = HSM\\par\r\n\\par\r\n\\par\r\nConversion loss/gain\\par\r\nThis is the difference in amplitude of the available RF signal to the IF signal output (downconverter), or from the IF signal to the RF signal (upconverter). For passive mixers, the conversion gain magnitude is always less than unity, perhaps -5 to -10 dB.\\par\r\n}\r\n"
 )
@@ -650,11 +650,17 @@
 (data  18000))
 (initValue Real
 (data  0))))
+(device 22 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\b\\f0\\fs24 High\\b0 -Side Mixing; the \\b LO \\b0 frequency is \\b above \\b0 the RF frequency.\\par\r\n\\par\r\n        HSM upcon with LowPass on output seems easy \\u10084?\\par\r\n\\par\r\n\\par\r\n\\par\r\n                LSM upconverter is kinda ri\\\'b7dic\\\'b7u\\\'b7lous!\\par\r\n                maybe with a highpass on output.\\par\r\n}\r\n"
+)))
 (device 21 NOTE
 (properties
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 NST as a LSM downconverter at this range.\\par\r\nBoth are HSM downconvertors and only one is sensible.\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Low-Side Mixing; the LO frequency is below the RF frequency.\\par\r\n\\par\r\n\\par\r\n        \\b   LSM downconverter is really ridiculous!\\par\r\n}\r\n"
 )))
 (configuration
 (connect D0:1 D2:1)
@@ -675,8 +681,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1619 856)
-(anchorPt 477 -60)
+(extent 1596 895)
+(anchorPt 484 -41)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -685,7 +691,7 @@
 (open
 (extent 110 36)
 (showFormat real))
-(pinCenter 80 160))
+(pinCenter 80 290))
 (devCarrierFor 2
 (active open)
 (icon
@@ -693,7 +699,7 @@
 (open
 (extent 107 36)
 (showFormat real))
-(pinCenter 80 220))
+(pinCenter 80 350))
 (devCarrierFor 5
 (active open)
 (icon
@@ -701,21 +707,21 @@
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 325 180))
+(pinCenter 325 340))
 (devCarrierFor 6
 (active open)
 (icon
 (extent 58 0))
 (open
 (extent 184 66))
-(pinCenter 640 180))
+(pinCenter 640 340))
 (devCarrierFor 8
 (active open)
 (icon
 (extent 58 0))
 (open
 (extent 184 66))
-(pinCenter 640 310))
+(pinCenter 640 650))
 (devCarrierFor 9
 (active open)
 (icon
@@ -723,7 +729,7 @@
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 335 310))
+(pinCenter 325 650))
 (devCarrierFor 10
 (active open)
 (icon
@@ -731,7 +737,7 @@
 (open
 (extent 107 36)
 (showFormat real))
-(pinCenter 80 350))
+(pinCenter 80 660))
 (devCarrierFor 11
 (active open)
 (icon
@@ -739,22 +745,22 @@
 (open
 (extent 110 36)
 (showFormat real))
-(pinCenter 80 290))
+(pinCenter 80 600))
 (devCarrierFor 13
 (active open)
 (icon
 (extent 58 0))
 (open
 (extent 184 66))
-(pinCenter 640 490))
+(pinCenter 640 520))
 (devCarrierFor 14
 (active open)
 (icon
-(extent 126 0))
+(extent 125 0))
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 335 490))
+(pinCenter 325 520))
 (devCarrierFor 15
 (active open)
 (icon
@@ -777,7 +783,7 @@
 (extent 58 0))
 (open
 (extent 184 66))
-(pinCenter 650 620))
+(pinCenter 650 220))
 (devCarrierFor 18
 (active open)
 (icon
@@ -785,7 +791,7 @@
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 335 620))
+(pinCenter 325 220))
 (devCarrierFor 19
 (active open)
 (icon
@@ -793,7 +799,7 @@
 (open
 (extent 107 36)
 (showFormat real))
-(pinCenter 80 660))
+(pinCenter 80 230))
 (devCarrierFor 20
 (active open)
 (icon
@@ -801,7 +807,15 @@
 (open
 (extent 110 36)
 (showFormat real))
-(pinCenter 80 600))
+(pinCenter 80 170))
+(devCarrierFor 22
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 424 226)
+(editing enabled))
+(pinCenter -200 260))
 (devCarrierFor 21
 (active open)
 (icon
@@ -809,32 +823,32 @@
 (open
 (extent 424 226)
 (editing enabled))
-(pinCenter -190 570))
+(pinCenter -200 570))
 (connect D0:1 D2:1
-(points 4 137 160 170 160 170 170 220 170))
+(points 4 137 290 170 290 170 330 220 330))
 (connect D1:1 D2:2
-(points 4 136 220 170 220 170 190 220 190))
+(points 4 136 350 170 350 170 350 220 350))
 (connect D2:1 D3:1
-(points 4 460 180 512 180 512 180 545 180))
+(points 4 460 340 512 340 512 340 545 340))
 (connect D5:1 D4:1
-(points 4 470 310 532 310 532 310 545 310))
+(points 4 460 650 532 650 532 650 545 650))
 (connect D7:1 D5:1
-(points 4 137 290 190 290 190 300 230 300))
+(points 4 137 600 190 600 190 640 220 640))
 (connect D6:1 D5:2
-(points 4 136 350 190 350 190 320 230 320))
+(points 4 136 660 190 660 190 660 220 660))
 (connect D9:1 D8:1
-(points 4 470 490 532 490 532 490 545 490))
+(points 4 460 520 532 520 532 520 545 520))
 (connect D11:1 D9:1
-(points 4 137 470 190 470 190 480 230 480))
+(points 4 137 470 190 470 190 510 220 510))
 (connect D10:1 D9:2
-(points 4 136 530 190 530 190 500 230 500))
+(points 4 136 530 190 530 190 530 220 530))
 (connect D13:1 D12:1
-(points 4 470 620 532 620 532 620 555 620))
+(points 4 460 220 532 220 532 220 555 220))
 (connect D15:1 D13:1
-(points 4 137 600 190 600 190 610 230 610))
+(points 4 137 170 190 170 190 210 220 210))
 (connect D14:1 D13:2
-(points 4 136 660 190 660 190 630 230 630)))
-(stackingOrder 1 3 2 0 4 7 6 5 8 10 9 13 14 11 15 16 12))
+(points 4 136 230 190 230 190 230 220 230)))
+(stackingOrder 1 3 0 4 7 6 8 10 14 11 15 2 16 9 12 17 5 13))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

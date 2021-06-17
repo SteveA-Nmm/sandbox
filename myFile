@@ -1,0 +1,52 @@
+(schema
+ (numFields 6)
+ (fieldName "Technician"
+  (type Text)
+ )
+ (fieldName "ModelNum"
+  (type Text)
+ )
+ (fieldName "SerialNum"
+  (type Text)
+ )
+ (fieldName "CalID"
+  (type Text)
+ )
+ (fieldName "CalDueDate"
+  (type Int64)
+ )
+ (fieldName "ENRtable"
+  (type Record)
+  (schema
+   (numFields 2)
+   (fieldName "GHz"
+	(type Real64)
+	(numDims 1)
+	(size 3)
+   )
+   (fieldName "ENR"
+	(type Real64)
+	(numDims 1)
+	(size 3)
+   )
+  )
+ )
+)
+
+(record
+ ( "Technician" "stefve applen")
+ ( "ModelNum" "model 1")
+ ( "SerialNum" "lodn 1234 A 6989")
+ ( "CalID" "1239")
+ ( "CalDueDate" 63790441200)
+ ( "ENRtable"
+  (record
+   ( "GHz"
+	 [ 1 2 3 ]
+   )
+   ( "ENR"
+	 [ 1 2 3 ]
+   )
+  )
+)
+)
