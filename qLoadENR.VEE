@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Wed 23/Jun/2021 10:48:20 ")
+(date "Wed 23/Jun/2021 10:50:53 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder M)
+(workspaceStackingOrder M M.54)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -2691,7 +2691,7 @@
 ("test_type" "pre_test")
 ("description" "description of program")
 ("ATPversion" "ATPversion")
-("notes" "note pad, SelfHash, MachineName")
+("notes" "fine tuning")
 ("CalFile1" "cal 1")
 ("CalFile2" "cal 2")
 ("CalFile3" "cal 3")
@@ -2700,7 +2700,7 @@
 ("hash_source" "0x_source")
 ("qual_date" "6_16_2021")
 ("release_date" "6/16/2021")
-("version" "v1.0")
+("version" "v1.1.0")
 ("status" "dev")
 ("author" "sapplen")
 ("MachineName" "SkyNet_Global_Defence_Network"))))))
@@ -3309,10 +3309,12 @@
 (connect D2:1 D9:1)
 (connect D8:0 D11:0)))
 (contextCarrier
+(wndOrigin 2 2)
+(wndState res)
 (active detail)
 (detail
 (extent 1611 834)
-(anchorPt 449 303)
+(anchorPt 441 99)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -3839,7 +3841,7 @@
 (contextCarrier
 (wndOrigin 22 12)
 (wndState res)
-(active panel)
+(active detail)
 (panel
 (extent 535 656)
 (drawGrid "on")
@@ -3861,7 +3863,7 @@
 (extent 51 26)))
 (detail
 (extent 1547 708)
-(anchorPt 96 -27)
+(anchorPt -134 -55)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -4015,7 +4017,7 @@
 (points 2 524 710 555 710))
 (connect D4:0 D15:0
 (points 2 310 385 310 400)))
-(stackingOrder 1 6 8 7 2 3 14 13 5 11 12 15 9 10 0 4))
+(stackingOrder 1 6 8 7 2 3 14 13 5 11 12 15 9 0 4 10))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
