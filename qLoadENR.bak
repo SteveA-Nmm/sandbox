@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 23/Jun/2021 10:48:20 ")
+(date "Wed 23/Jun/2021 10:47:09 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -435,6 +435,22 @@
 (VISAddr "GPIB2::19::INSTR")
 (model ""
 (standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 131)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB1::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB1::8::INSTR")
+(model ""
+(standard 488)))
 (iodevice "newInstrument"
 (type GPIB-VISA)
 (channel 131)
@@ -450,23 +466,7 @@
 (eoiEnabled 1)
 (VISAddr "GPIB1::8::INSTR")
 (model ""
-(standard 488.2)))
-(iodevice "NFMeter"
-(type GPIB-VISA)
-(channel 130)
-(readTerm "\n")
-(fs ",")
-(eol "\n")
-(multiField dataOnly)
-(arrayFormat linear)
-(timeout 5)
-(byteOrder 0)
-(ppAddr "GPIB0::8::INSTR")
-(model "")
-(eoiEnabled 1)
-(VISAddr "GPIB0::8::INSTR")
-(model ""
-(standard 488))))
+(standard 488.2))))
 (SaveCF no)
 (device 0 ROOTCONTEXT
 (assemblyRefs
@@ -1359,7 +1359,7 @@
 (variableScope cont)))
 (device 12 IODEVICE
 (properties
-(name "NFMeter ( @GPIB0::8::INSTR)")
+(name "NFMeter ( @GPIB1::8::INSTR)")
 (variableScope cont)
 (transactions 2 "WRITE TEXT a, \"EN\" EOL" "WAIT INTERVAL:.1"))
 (interface
@@ -3782,7 +3782,7 @@
 (optional yes))))
 (device 1 IODEVICE
 (properties
-(name "NFMeter ( @GPIB0::8::INSTR)")
+(name "NFMeter ( @GPIB1::8::INSTR)")
 (variableScope cont)
 (transactions 2 "WRITE TEXT \"SN\"+a+\"EN\" EOL" "WRITE TEXT \"NR\" EOL"))
 (interface
