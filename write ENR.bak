@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Mon 28/Jun/2021 09:57:10 ")
+(date "Thu 17/Jun/2021 13:44:34 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder M M.180.21)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -421,13 +421,6 @@
 (standard 488))))
 (SaveCF no)
 (device 0 ROOTCONTEXT
-(assemblyRefs
-(assemblyRef 1
-(displayName
-"mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")
-(filename "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorlib.dll"))
-(selectedNamespaces
-"System.Collections,System.Text,System.Security.Cryptography,"))
 (properties
 (variableName Main)
 (variableScope glob)
@@ -4441,12 +4434,10 @@
 (connect D6:1 D8:1)
 (connect D8:1 D9:1)))
 (contextCarrier
-(wndOrigin 42 42)
-(wndState res)
 (active detail)
 (detail
 (extent 1212 662)
-(anchorPt 383 -72)
+(anchorPt 157 -30)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -4554,7 +4545,7 @@
 (points 4 986 570 1002 570 1002 570 1018 570))
 (connect D8:1 D9:1
 (points 6 1181 570 1160 570 1160 390 850 390 850 330 880 330)))
-(stackingOrder 0 2 4 5 6 7 3 9 8 10 1))))
+(stackingOrder 0 2 4 5 6 7 1 3 9 8 10))))
 (device 26 FROMRECORD
 (properties
 (variableScope cont))
@@ -4750,7 +4741,7 @@
 (active detail)
 (detail
 (extent 1492 791)
-(anchorPt 741 386)
+(anchorPt 796 277)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -4869,7 +4860,7 @@
 (points 2 194 170 201 170))
 (connect D8:0 D11:0
 (points 2 140 -160 140 -150)))
-(stackingOrder 3 6 5 9 2 0 12 11 1 7 10 4 8))))
+(stackingOrder 3 6 5 9 2 0 7 12 11 8 1 10 4))))
 (configuration
 (connect D8:0 D0:0)
 (connect D16:0 D3:0)
@@ -4898,7 +4889,7 @@
 (contextCarrier
 (wndOrigin 3 6)
 (wndState res)
-(active panel)
+(active detail)
 (panel
 (extent 1065 873)
 (drawGrid "on")
@@ -4911,7 +4902,7 @@
 (extent 51 26)))
 (detail
 (extent 1347 749)
-(anchorPt 615 903)
+(anchorPt 489 817)
 (configuration
 (devCarrierFor 77
 (active icon)
@@ -5126,7 +5117,7 @@
 (points 2 263 -280 296 -280))
 (connect D4:0 D22:0
 (points 2 -40 -660 -40 -645)))
-(stackingOrder 13 3 10 9 2 4 7 1 15 6 5 19 21 12 18 16 0 20 14 11 8 17 22))
+(stackingOrder 13 3 10 9 2 4 7 1 15 6 5 19 21 12 18 16 0 20 14 11 8 22 17))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

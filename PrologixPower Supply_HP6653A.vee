@@ -1,0 +1,1483 @@
+(saveFormat "7.0")
+(date "Tue 29/Jun/2021 08:10:11 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v8.5)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "newInstrument3"
+(type ASRL)
+(channel 191)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL1::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL1::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstrument4"
+(type ASRL)
+(channel 200)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL10::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL10::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "8563E"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 14)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "8340B"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 19)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Wil_6647"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 6)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP436A"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 15)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB)
+(gateway "This host")
+(channel 0)
+(subchannel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument6"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "Prologix"
+(type ASRL)
+(channel 194)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL4::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL4::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstrument"
+(type ASRL)
+(channel 194)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL4::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL4::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096)))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(automationRefs
+(automationRef 1
+(libid "{6D5A2A3C-5238-11D2-9496-080009EE2E50}")
+(desc "Agilent VEE DynamicIO 1.0 Type Library")
+(filename
+"C:\\Program Files\\Common Files\\Agilent\\VEE DynamicIO\\dynamicio.dll")
+(verMajor 1)
+(verMinor 0)
+(lcid 0)))
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 152)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 38 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 64 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"*TST?\" EOL" "READ TEXT x INT16"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 67 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"*CLS\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 68 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"*RST\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 70 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"*OPC\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 71 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT A EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 79 DELAY
+(properties
+(variableScope cont)
+(delay 10))
+(interface
+(output 1
+(name "Done"))))
+(device 81 DELAY
+(properties
+(variableScope cont)
+(delay 10))
+(interface
+(output 1
+(name "Done"))))
+(device 84 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"OUTP ON\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 86 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"*IDN?\" EOL" "READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 89 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 90 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"Curr?\" EOL" "READ TEXT x REAL32"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes))
+(output 3
+(name "z")
+(optional yes))
+(output 4
+(name "Current")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 92 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 94 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"Volt?\" EOL" "READ TEXT x REAL32"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes))
+(output 3
+(name "z")
+(optional yes))
+(output 4
+(name "Voltage")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 96 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 97 DECLVAR
+(properties
+(name "Declare Voltage")
+(scope glob)
+(globalName "Voltage"))
+(implementation
+(value Real32
+(data  0))))
+(device 98 DECLVAR
+(properties
+(name "Declare Current")
+(scope glob)
+(globalName "Current"))
+(implementation
+(value Real32
+(data  0))))
+(device 99 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Voltage"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 100 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Current"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 101 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Voltage = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 102 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Current  = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 106 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"SOUR:VOLT \" +A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 108 INPUTDLG
+(properties
+(variableScope cont)
+(prompt "+35 Volt Power Supply Voltage")
+(initialValue "0")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")))
+(device 109 INPUTDLG
+(properties
+(variableScope cont)
+(prompt "+35 Volt Power Supply Current Limit")
+(initialValue "0")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")))
+(device 112 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Voltage"))
+(initValue Text
+(data  ""))))
+(device 113 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Current Limit"))
+(initValue Text
+(data  ""))))
+(device 116 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 117 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 118 CONFIRM25
+(properties
+(name "CYCLE VOLTAGE")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 119 START25
+(properties
+(variableScope cont)))
+(device 120 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 121 DECLVAR
+(properties
+(name "Declare Count")
+(scope glob)
+(globalName "Count"))
+(implementation
+(value Int64
+(data  0))))
+(device 122 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Count = 0"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 123 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 124 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"Meas:Volt:DC?\" EOL" "READ TEXT x REAL32"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 125 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"Meas:Curr:DC?\" EOL" "READ TEXT x REAL32"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 126 BREAK
+(properties
+(variableScope cont)))
+(device 127 CONFIRM25
+(properties
+(name "STOP")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 129 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "Count = Count +1"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 130 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 131 IFTHENELSE
+(properties
+(name "If A == B")
+(variableScope cont)
+(cases 1 "A==B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 132 CONSTANT
+(properties
+(name "Int64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int64")
+(lock name constraints)))
+(implementation
+(value Int64
+(data  1000))
+(initValue Int64
+(data  0))))
+(device 133 BREAK
+(properties
+(variableScope cont)))
+(device 135 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"OUTP OFF\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 136 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"OUTP ON\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 138 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 139 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 140 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"SYST:REM:STAT REM\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 141 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 142 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"OUTP OFF\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 143 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"*RST\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 144 IODEVICE
+(properties
+(name "newInstrument ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT A EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument")))
+(device 145 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"SOUR:CURR \" +A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 146 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 148 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "HP6653A"))
+(initValue Text
+(data  ""))))
+(device 151 IODEVICE
+(properties
+(name "Prologix ( @ASRL4::INSTR)")
+(variableScope cont)
+(transactions 3 "WRITE TEXT \"++mode 1\" EOL" "WRITE TEXT \"++auto 1\" EOL"
+"WRITE TEXT \"++gpib 12\" EOL"))
+(implementation
+(ioDevType 19)
+(iopath "Prologix")))
+(configuration
+(connect D1:1 D0:1)
+(connect D9:0 D1:0)
+(connect D3:0 D2:0)
+(connect D1:0 D3:0)
+(connect D2:0 D4:0)
+(connect D21:0 D5:0)
+(connect D21:1 D5:1)
+(connect D30:1 D6:0)
+(connect D43:0 D7:0)
+(connect D18:0 D8:0)
+(connect D23:0 D9:0)
+(connect D9:1 D10:1)
+(connect D13:0 D11:0)
+(connect D17:1 D12:1)
+(connect D51:0 D13:0)
+(connect D18:1 D14:1)
+(connect D20:0 D17:0)
+(connect D17:0 D18:0)
+(connect D11:0 D19:0)
+(connect D13:1 D19:1)
+(connect D19:0 D20:0)
+(connect D11:1 D20:1)
+(connect D4:0 D21:0)
+(connect D22:1 D21:1)
+(connect D49:0 D22:0)
+(connect D22:0 D23:0)
+(connect D29:0 D24:0)
+(connect D24:0 D25:0)
+(connect D35:1 D26:1)
+(connect D34:1 D27:1)
+(connect D8:0 D28:0)
+(connect D32:0 D30:0)
+(connect D28:0 D32:0)
+(connect D30:0 D33:0)
+(connect D6:0 D34:0)
+(connect D34:0 D35:0)
+(connect D37:1 D36:0)
+(connect D32:0 D37:0)
+(connect D44:0 D38:0)
+(connect D38:1 D39:1)
+(connect D38:0 D40:0)
+(connect D38:1 D40:1)
+(connect D41:1 D40:2)
+(connect D40:1 D42:0)
+(connect D35:0 D43:0)
+(connect D7:0 D44:0)
+(connect D22:1 D45:1)
+(connect D23:1 D46:1)
+(connect D25:0 D47:0)
+(connect D21:1 D48:1)
+(connect D50:0 D49:0)
+(connect D47:0 D50:0)
+(connect D52:0 D51:0)
+(connect D52:1 D51:1)
+(connect D5:0 D52:0)
+(connect D23:1 D52:1)
+(connect D52:1 D53:1))
+(ShowOnExecPanel))
+(contextCarrier
+(wndRestoredOrigin 72 8)
+(wndRestoredExtent 492 377)
+(wndState max)
+(active detail)
+(panel
+(extent 1385 673)
+(drawGrid "on")
+(widget 10 detail
+(relativeOrigin 60 40)
+(PID 8)
+(title off)
+(tabStop off)
+(tabIndex 8)
+(borderStyle flat)
+(extent 446 46))
+(widget 14 detail
+(relativeOrigin 110 150)
+(PID 10)
+(title off)
+(tabStop off)
+(tabIndex 10)
+(borderStyle flat)
+(extent 66 26))
+(widget 12 detail
+(relativeOrigin 110 120)
+(PID 11)
+(title off)
+(tabStop off)
+(tabIndex 11)
+(borderStyle flat)
+(extent 56 26))
+(widget 24 detail
+(relativeOrigin 20 120)
+(PID 12)
+(title off)
+(tabIndex 12)
+(borderStyle flat)
+(extent 66 29))
+(widget 25 detail
+(relativeOrigin 20 150)
+(PID 13)
+(title off)
+(tabIndex 13)
+(borderStyle flat)
+(extent 86 26))
+(widget 28 detail
+(relativeOrigin 20 200)
+(bg "Yellow Green")
+(font "Arial" 20 bold)
+(PID 14)
+(title off)
+(tabIndex 14)
+(borderStyle none)
+(extent 180 60))
+(widget 27 detail
+(relativeOrigin 180 120)
+(PID 15)
+(title off)
+(tabStop off)
+(tabIndex 15)
+(borderStyle flat)
+(extent 96 26)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(widget 26 detail
+(relativeOrigin 180 150)
+(PID 16)
+(title off)
+(tabStop off)
+(tabIndex 16)
+(borderStyle flat)
+(extent 96 26))
+(widget 37 detail
+(relativeOrigin 40 270)
+(bg "Med Dark Orange")
+(font "Arial" 20 bold)
+(PID 17)
+(title off)
+(tabIndex 17)
+(borderStyle none)
+(extent 134 54))
+(widget 39 detail
+(relativeOrigin 330 200)
+(PID 18)
+(title off)
+(tabStop off)
+(tabIndex 18)
+(borderStyle flat)
+(extent 124 76)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))
+(scFont "Arial" 20 bold)))
+(detail
+(extent 1689 856)
+(anchorPt 566 2114)
+(configuration
+(devCarrierFor 38
+(active open)
+(icon)
+(open
+(extent 104 26))
+(pinCenter 310 -1030))
+(devCarrierFor 64
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 234 86))
+(terminals on)
+(pinCenter 30 -1030))
+(devCarrierFor 67
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 56))
+(terminals on)
+(pinCenter 30 -790))
+(devCarrierFor 68
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 234 86))
+(terminals on)
+(pinCenter 30 -900))
+(devCarrierFor 70
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 56))
+(terminals on)
+(pinCenter 30 -690))
+(devCarrierFor 71
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 30 -570))
+(devCarrierFor 79
+(active open)
+(icon)
+(open
+(extent 71 31))
+(pinCenter 590 -900))
+(devCarrierFor 81
+(active open)
+(icon)
+(open
+(extent 71 31))
+(pinCenter 600 -390))
+(devCarrierFor 84
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 56))
+(terminals on)
+(pinCenter -30 150))
+(devCarrierFor 86
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 234 86))
+(terminals on)
+(pinCenter 30 -1160))
+(devCarrierFor 89
+(active open)
+(icon)
+(open
+(extent 524 46))
+(pinCenter 480 -1150))
+(devCarrierFor 90
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 82))
+(terminals on)
+(pinCenter 5 -180))
+(devCarrierFor 92
+(active open)
+(icon)
+(open
+(extent 124 16)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(pinCenter 190 -80))
+(devCarrierFor 94
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 82))
+(terminals on)
+(pinCenter 5 -300))
+(devCarrierFor 96
+(active open)
+(icon)
+(open
+(extent 124 16))
+(pinCenter 190 -30))
+(devCarrierFor 97
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 199 115))
+(pinCenter 300 -1220))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 199 115))
+(pinCenter 300 -1250))
+(devCarrierFor 99
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter -30 -80))
+(devCarrierFor 100
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter -30 -30))
+(devCarrierFor 101
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 335 -330))
+(devCarrierFor 102
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 335 -210))
+(devCarrierFor 106
+(active open)
+(icon)
+(open
+(extent 144 51))
+(terminals on)
+(pinCenter -265 -570))
+(devCarrierFor 108
+(active open)
+(icon)
+(open
+(extent 254 107))
+(terminals on)
+(pinCenter 20 -1470))
+(devCarrierFor 109
+(active open)
+(icon)
+(open
+(extent 254 107))
+(terminals on)
+(pinCenter 20 -1320))
+(devCarrierFor 112
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 30 -1990))
+(devCarrierFor 113
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 30 -1920))
+(devCarrierFor 116
+(active open)
+(icon)
+(open
+(extent 144 36))
+(pinCenter 860 -670))
+(devCarrierFor 117
+(active open)
+(icon)
+(open
+(extent 134 26)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(pinCenter 850 -800))
+(devCarrierFor 118
+(active open)
+(icon
+(extent 104 0))
+(open
+(extent 134 54))
+(title off)
+(pinCenter -30 220))
+(devCarrierFor 119
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 20 -2100))
+(devCarrierFor 120
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter -30 390))
+(devCarrierFor 121
+(active icon)
+(icon
+(extent 86 15))
+(open
+(extent 199 115))
+(pinCenter 310 -1290))
+(devCarrierFor 122
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter -30 310))
+(devCarrierFor 123
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter -30 510))
+(devCarrierFor 124
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 590 -800))
+(devCarrierFor 125
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 590 -670))
+(devCarrierFor 126
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 270 350))
+(devCarrierFor 127
+(active open)
+(icon
+(extent 36 0))
+(open
+(extent 134 54))
+(title off)
+(pinCenter 150 320))
+(devCarrierFor 129
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 145 51))
+(terminals on)
+(pinCenter 595 -60))
+(devCarrierFor 130
+(active open)
+(icon)
+(open
+(extent 124 26)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(pinCenter 830 -60))
+(devCarrierFor 131
+(active icon)
+(icon
+(extent 46 25))
+(open)
+(terminals on)
+(pinCenter 600 30))
+(devCarrierFor 132
+(active open)
+(icon)
+(open
+(extent 54 36)
+(showFormat int))
+(pinCenter 510 40))
+(devCarrierFor 133
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 630 90))
+(devCarrierFor 135
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 600 -520))
+(devCarrierFor 136
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 630 -240))
+(devCarrierFor 138
+(active open)
+(icon)
+(open
+(extent 104 26))
+(pinCenter 420 -1490))
+(devCarrierFor 139
+(active open)
+(icon)
+(open
+(extent 104 26))
+(pinCenter 420 -1360))
+(devCarrierFor 140
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 294 56))
+(terminals on)
+(pinCenter 30 -1820))
+(devCarrierFor 141
+(active open)
+(icon)
+(open
+(extent 154 26))
+(pinCenter -220 -680))
+(devCarrierFor 142
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 56))
+(terminals on)
+(pinCenter 30 -1590))
+(devCarrierFor 143
+(active open)
+(icon
+(extent 209 0)
+(iconImage "io.icn"))
+(open
+(extent 234 66))
+(terminals on)
+(pinCenter 30 -1700))
+(devCarrierFor 144
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 40 -430))
+(devCarrierFor 145
+(active open)
+(icon)
+(open
+(extent 164 51))
+(terminals on)
+(pinCenter -265 -420))
+(devCarrierFor 146
+(active open)
+(icon)
+(open
+(extent 154 26))
+(pinCenter -270 -320))
+(devCarrierFor 148
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter -240 -1990))
+(devCarrierFor 151
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 324 226))
+(terminals on)
+(pinCenter 480 -1980))
+(connect D1:1 D0:1
+(points 2 179 -1030 255 -1030))
+(connect D9:0 D1:0
+(points 2 30 -1115 30 -1094))
+(connect D3:0 D2:0
+(points 2 30 -855 30 -839))
+(connect D1:0 D3:0
+(points 2 30 -985 30 -964))
+(connect D2:0 D4:0
+(points 2 30 -760 30 -739))
+(connect D21:0 D5:0
+(points 8 -250 -542 -250 -530 -120 -530 -120 -650 40 -650 40 -640 30 -640 30
+-629))
+(connect D21:1 D5:1
+(points 4 -131 -570 -121 -570 -121 -570 -115 -570))
+(connect D30:1 D6:0
+(points 11 6 390 350 390 350 -160 470 -160 470 -280 480 -280 480 -400 430 -400
+430 -960 590 -960 590 -936))
+(connect D43:0 D7:0
+(points 2 600 -480 600 -426))
+(connect D18:0 D8:0
+(points 2 -30 -20 -30 101))
+(connect D23:0 D9:0
+(points 2 35 -1264 30 -1224))
+(connect D9:1 D10:1
+(points 4 179 -1160 200 -1160 200 -1150 215 -1150))
+(connect D13:0 D11:0
+(points 2 25 -257 25 -242))
+(connect D17:1 D12:1
+(points 2 -3 -80 125 -80))
+(connect D51:0 D13:0
+(points 4 40 -390 40 -380 20 -380 25 -362))
+(connect D18:1 D14:1
+(points 2 -3 -30 125 -30))
+(connect D20:0 D17:0
+(points 8 350 -182 340 -140 190 -140 190 -130 110 -130 110 -110 -30 -110 -30 -90
+))
+(connect D17:0 D18:0
+(points 2 -30 -70 -30 -40))
+(connect D11:0 D19:0
+(points 6 25 -137 20 -120 200 -120 200 -400 340 -400 350 -376))
+(connect D13:1 D19:1
+(points 4 189 -330 207 -330 207 -330 230 -330))
+(connect D19:0 D20:0
+(points 4 350 -302 350 -280 350 -280 350 -256))
+(connect D11:1 D20:1
+(points 4 189 -210 207 -210 207 -210 230 -210))
+(connect D4:0 D21:0
+(points 4 30 -660 30 -640 -250 -640 -250 -616))
+(connect D22:1 D21:1
+(points 10 209 -1500 220 -1500 220 -1490 240 -1490 240 -1340 230 -1340 230 -1240
+-380 -1240 -380 -570 -370 -570))
+(connect D49:0 D22:0
+(points 2 30 -1560 35 -1544))
+(connect D22:0 D23:0
+(points 2 35 -1414 35 -1394))
+(connect D29:0 D24:0
+(points 4 20 -2087 20 -2080 30 -2080 30 -2025))
+(connect D24:0 D25:0
+(points 2 30 -1973 30 -1955))
+(connect D35:1 D26:1
+(points 2 734 -670 785 -670))
+(connect D34:1 D27:1
+(points 2 734 -800 780 -800))
+(connect D8:0 D28:0
+(points 2 -30 180 -30 190))
+(connect D32:0 D30:0
+(points 2 -30 320 -30 362))
+(connect D28:0 D32:0
+(points 2 -30 249 -30 300))
+(connect D30:0 D33:0
+(points 2 -30 418 -30 474))
+(connect D6:0 D34:0
+(points 2 590 -882 590 -859))
+(connect D34:0 D35:0
+(points 2 590 -760 590 -729))
+(connect D37:1 D36:0
+(points 3 219 320 270 320 270 340))
+(connect D32:0 D37:0
+(points 6 -30 320 -30 340 20 340 20 270 150 270 150 290))
+(connect D44:0 D38:0
+(points 4 630 -200 630 -180 600 -180 610 -106))
+(connect D38:1 D39:1
+(points 4 730 -60 745 -60 745 -60 765 -60))
+(connect D38:0 D40:0
+(points 2 610 -32 600 15))
+(connect D38:1 D40:1
+(points 6 730 -60 740 -60 740 -10 560 -10 560 20 574 20))
+(connect D41:1 D40:2
+(points 2 539 40 574 40))
+(connect D40:1 D42:0
+(points 5 625 20 650 20 650 60 630 60 630 80))
+(connect D35:0 D43:0
+(points 4 590 -630 590 -610 600 -610 600 -579))
+(connect D7:0 D44:0
+(points 4 600 -372 600 -350 630 -350 630 -299))
+(connect D22:1 D45:1
+(points 4 209 -1500 220 -1500 220 -1490 365 -1490))
+(connect D23:1 D46:1
+(points 4 209 -1350 230 -1350 230 -1360 365 -1360))
+(connect D25:0 D47:0
+(points 2 30 -1903 30 -1869))
+(connect D21:1 D48:1
+(points 6 -131 -570 -130 -570 -130 -630 -320 -630 -320 -680 -300 -680))
+(connect D50:0 D49:0
+(points 2 30 -1665 30 -1639))
+(connect D47:0 D50:0
+(points 2 30 -1790 30 -1754))
+(connect D52:0 D51:0
+(points 6 -250 -392 -250 -380 -110 -380 -110 -500 40 -500 40 -489))
+(connect D52:1 D51:1
+(points 4 -121 -420 -111 -420 -111 -430 -105 -430))
+(connect D5:0 D52:0
+(points 4 30 -530 30 -510 -250 -510 -250 -466))
+(connect D23:1 D52:1
+(points 6 209 -1350 220 -1350 220 -1250 -390 -1250 -390 -420 -380 -420))
+(connect D52:1 D53:1
+(points 6 -121 -420 -120 -420 -120 -390 -370 -390 -370 -320 -350 -320)))
+(stackingOrder 9 1 15 18 11 20 23 22 29 16 31 30 19 33 13 5 28 32 34 35 27 26 7
+39 40 41 42 37 36 6 38 44 10 45 46 2 4 0 43 25 3 49 47 51 48 53 12 14 17 8 21 52
+24 54 50 55))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
