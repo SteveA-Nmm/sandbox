@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Tue 29/Jun/2021 08:10:11 ")
+(date "Tue 06/Jul/2021 09:53:05 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -823,7 +823,7 @@
 (connect D7:0 D44:0)
 (connect D22:1 D45:1)
 (connect D23:1 D46:1)
-(connect D25:0 D47:0)
+(connect D55:0 D47:0)
 (connect D21:1 D48:1)
 (connect D50:0 D49:0)
 (connect D47:0 D50:0)
@@ -831,7 +831,8 @@
 (connect D52:1 D51:1)
 (connect D5:0 D52:0)
 (connect D23:1 D52:1)
-(connect D52:1 D53:1))
+(connect D52:1 D53:1)
+(connect D25:0 D55:0))
 (ShowOnExecPanel))
 (contextCarrier
 (wndRestoredOrigin 72 8)
@@ -933,8 +934,8 @@
 (integerBase decimal))
 (scFont "Arial" 20 bold)))
 (detail
-(extent 1689 856)
-(anchorPt 566 2114)
+(extent 1689 830)
+(anchorPt 566 2276)
 (configuration
 (devCarrierFor 38
 (active open)
@@ -1455,8 +1456,8 @@
 (points 4 209 -1500 220 -1500 220 -1490 365 -1490))
 (connect D23:1 D46:1
 (points 4 209 -1350 230 -1350 230 -1360 365 -1360))
-(connect D25:0 D47:0
-(points 2 30 -1903 30 -1869))
+(connect D55:0 D47:0
+(points 2 480 -1865 30 -1869))
 (connect D21:1 D48:1
 (points 6 -131 -570 -130 -570 -130 -630 -320 -630 -320 -680 -300 -680))
 (connect D50:0 D49:0
@@ -1472,7 +1473,9 @@
 (connect D23:1 D52:1
 (points 6 209 -1350 220 -1350 220 -1250 -390 -1250 -390 -420 -380 -420))
 (connect D52:1 D53:1
-(points 6 -121 -420 -120 -420 -120 -390 -370 -390 -370 -320 -350 -320)))
+(points 6 -121 -420 -120 -420 -120 -390 -370 -390 -370 -320 -350 -320))
+(connect D25:0 D55:0
+(points 2 30 -1903 480 -2114)))
 (stackingOrder 9 1 15 18 11 20 23 22 29 16 31 30 19 33 13 5 28 32 34 35 27 26 7
 39 40 41 42 37 36 6 38 44 10 45 46 2 4 0 43 25 3 49 47 51 48 53 12 14 17 8 21 52
 24 54 50 55))

@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Wed 23/Jun/2021 14:59:41 ")
+(date "Thu 22/Jul/2021 15:52:56 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M F0)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -561,8 +561,6 @@
 (connect D0:13 D23:1)
 (connect D0:12 D24:1)))
 (contextCarrier
-(wndOrigin 225 19)
-(wndState res)
 (active panel)
 (panel
 (extent 659 780)
@@ -2181,12 +2179,12 @@
 (connect D0:0 D3:0)
 (connect D2:0 D4:0)))
 (contextCarrier
-(wndOrigin 9 9)
+(wndOrigin 16 11)
 (wndState res)
 (active detail)
 (detail
 (extent 1352 814)
-(anchorPt -107 -148)
+(anchorPt -107 -149)
 (configuration
 (devCarrierFor 2
 (active icon)
@@ -2208,7 +2206,7 @@
 (open
 (extent 216 53))
 (terminals on)
-(pinCenter 570 450))
+(pinCenter 570 430))
 (devCarrierFor 14
 (active icon)
 (icon
@@ -2216,7 +2214,7 @@
 (open
 (extent 364 76))
 (terminals on)
-(pinCenter 570 390))
+(pinCenter 570 400))
 (devCarrierFor 15
 (active open)
 (icon)
@@ -2233,12 +2231,12 @@
 (connect D1:0 D0:0
 (points 2 570 315 570 345))
 (connect D3:0 D2:0
-(points 4 570 400 570 430 570 430 570 440))
+(points 4 570 410 570 430 570 430 570 420))
 (connect D0:0 D3:0
-(points 4 570 374 570 387 570 387 570 380))
+(points 4 570 374 570 387 570 387 570 390))
 (connect D2:0 D4:0
-(points 2 570 460 570 474)))
-(stackingOrder 1 2 4 5 3 0))
+(points 4 570 440 570 467 570 467 570 474)))
+(stackingOrder 1 4 5 0 3 2))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)
