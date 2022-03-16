@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Mon 27/Sep/2021 17:09:52 ")
+(date "Mon 27/Sep/2021 17:08:46 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -4662,7 +4662,7 @@
 (name "program notes")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 write ENR\\par\r\nVersion 1.0.1 9/27/2021 also output csv compatible with LabVIEW NF utility \\par\r\n\\par\r\nVersion 1.0 6/17/2021 with inputs from Danny\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 write ENR\\par\r\nVersion 1.0 6/17/2021 with inputs from Danny\\par\r\n}\r\n"
 )))
 (device 29 CONTEXT
 (properties
@@ -4753,7 +4753,7 @@
 (active detail)
 (detail
 (extent 1833 869)
-(anchorPt 829 406)
+(anchorPt 808 271)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -4833,7 +4833,7 @@
 (terminals on)
 (pinCenter 320 170))
 (devCarrierFor 28
-(active open)
+(active icon)
 (icon
 (extent 92 51)
 (iconImage "notepad.icn"))
@@ -4872,7 +4872,7 @@
 (points 2 194 170 201 170))
 (connect D8:0 D11:0
 (points 2 140 -160 140 -150)))
-(stackingOrder 3 6 5 9 2 12 1 7 4 8 11 0 10))))
+(stackingOrder 3 6 5 9 2 12 1 7 10 4 8 11 0))))
 (configuration
 (connect D8:0 D0:0)
 (connect D16:0 D3:0)

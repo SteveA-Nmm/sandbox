@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 29/Sep/2021 15:08:42 ")
+(date "Wed 29/Sep/2021 15:08:07 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -3229,12 +3229,12 @@
 (contextCarrier
 (wndOrigin 561 46)
 (wndState res)
-(active detail)
+(active panel)
 (panel
 (extent 388 399)
 (drawGrid "on")
 (widget 2 detail
-(relativeOrigin 90 40)
+(relativeOrigin 83 33)
 (PID 0)
 (title off)
 (tabIndex 0)
@@ -3278,7 +3278,7 @@
 (open
 (extent 51 26))
 (title off)
-(pinCenter 660 480))
+(pinCenter 660 500))
 (devCarrierFor 40
 (active icon)
 (icon
@@ -3332,7 +3332,7 @@
 (title off)
 (pinCenter 820 550))
 (connect D2:0 D1:0
-(points 4 660 495 660 520 660 520 660 525))
+(points 2 660 515 660 525))
 (connect D7:1 D3:0
 (points 3 843 660 860 660 860 700))
 (connect D1:0 D4:0
@@ -3342,8 +3342,8 @@
 (connect D4:1 D7:0
 (points 3 696 590 790 590 790 645))
 (connect D2:0 D9:0
-(points 4 660 495 660 510 820 510 820 534)))
-(stackingOrder 3 1 0 4 8 5 7 9 6 2))
+(points 4 660 515 660 510 820 510 820 534)))
+(stackingOrder 3 1 0 2 4 8 5 7 9 6))
 (numberFormats
 (realFormat standard)
 (realSigDigits 1)
