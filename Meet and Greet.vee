@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Wed 16/Mar/2022 13:28:48 ")
+(date "Thu 24/Mar/2022 09:53:56 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M.33.6 M.33 M)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "8720B"
 (type GPIB-VISA)
@@ -241,7 +241,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 35)
+(nextID 37)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -535,8 +535,6 @@
 (ShowOnExecPanel
 (relativeOrigin 204 309)))
 (contextCarrier
-(wndOrigin 62 62)
-(wndState res)
 (active panel)
 (panel
 (extent 235 151)
@@ -618,8 +616,6 @@
 (ShowOnExecPanel
 (relativeOrigin 514 343)))
 (contextCarrier
-(wndOrigin 42 42)
-(wndState res)
 (active detail)
 (panel
 (extent 371 211)
@@ -774,6 +770,16 @@
 (output 1
 (name "Continuous")
 (lock name constraints))))
+(device 35 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 why:\\par\r\nThis is a study to understand nested loops using Until Break inside of user objects. It works as expected. Program flow does not continue out of a user object until the Break is encountered. I had been programing with a flat layout and the loops weren\'t working as i imagined they should.\\par\r\n\\par\r\nKey learning: If, inside the user object there exists an Stop, the program flow stops dead in its tracks when the Stop is encountered.\\par\r\n \\par\r\n3/24/2022 SA\\par\r\n}\r\n"
+)))
+(device 36 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
 (configuration
 (connect D3:0 D0:0)
 (connect D0:0 D1:0)
@@ -789,11 +795,11 @@
 (connect D1:1 D12:0))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 9 12)
+(wndOrigin 10 13)
 (wndState res)
-(active panel)
+(active detail)
 (panel
-(extent 679 177)
+(extent 679 176)
 (drawGrid "on")
 (widget 0 detail
 (relativeOrigin 150 60)
@@ -811,7 +817,7 @@
 (extent 51 30)))
 (detail
 (extent 1042 711)
-(anchorPt -59 210)
+(anchorPt -100 -20)
 (configuration
 (devCarrierFor 12
 (active open)
@@ -910,6 +916,21 @@
 (open)
 (terminals on)
 (pinCenter 400 130))
+(devCarrierFor 35
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 414 256)
+(editing enabled))
+(pinCenter 330 510))
+(devCarrierFor 36
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 320 290))
 (connect D3:0 D0:0
 (points 2 200 -65 200 -35))
 (connect D0:0 D1:0
@@ -934,7 +955,7 @@
 (points 3 436 130 650 130 650 176))
 (connect D1:1 D12:0
 (points 3 243 50 400 50 400 102)))
-(stackingOrder 0 2 1 3 12 11 10 9 8 7 4 5 6))
+(stackingOrder 0 2 1 3 12 11 10 9 8 7 4 5 6 14 13))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

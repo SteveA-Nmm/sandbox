@@ -1,0 +1,658 @@
+(saveFormat "7.0")
+(date "Thu 24/Mar/2022 09:40:03 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "8720B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::18::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::18::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "InstrumentGPIB"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HPEPM"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "SpecAna"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP856XE"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument3"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 30)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(UserFunctions
+(nextID 1)
+(context 0
+(properties
+(name "AllowMismatch")
+(variableName AllowMismatch)
+(variableScope glob)
+(trigMode deg)
+(nextID 9)
+(popupTitleText "UserFunction")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Desired Setting")
+(optional yes))
+(input 2
+(name "Allowed Mismatch")
+(optional yes))
+(input 3
+(name "Measured Value")
+(optional yes))
+(output 1
+(type data)
+(name "Go")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "percent error")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "Limits")
+(variableScope cont)
+(expr 2 "U=A+B;" "L=A-B;"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "U")
+(optional yes))
+(output 2
+(name "L")
+(optional yes))))
+(device 1 TEXTDISPLAY
+(properties
+(name "Desired Value")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 2 TEXTDISPLAY
+(properties
+(name "Measured Value")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 3 TEXTDISPLAY
+(properties
+(name "Upper Limit Error")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 4 TEXTDISPLAY
+(properties
+(name "Lower Limit Error")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 5 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "L<=A AND A<=U"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "U")
+(optional yes))
+(input 3
+(name "L")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 6 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 8 FORMULA
+(properties
+(name "percent error")
+(variableScope cont)
+(expr 1 "((B-A)/A)*100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I1:1 D1:1)
+(connect I3:1 D2:1)
+(connect D0:1 D3:1)
+(connect D0:2 D4:1)
+(connect D0:0 D5:0)
+(connect I3:1 D5:1)
+(connect D0:1 D5:2)
+(connect D0:2 D5:3)
+(connect D5:1 D6:1)
+(connect D5:2 D6:2)
+(connect I1:1 D7:1)
+(connect I3:1 D7:2)
+(connect D6:1 O1:1)
+(connect D7:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 722 531)
+(anchorPt 19 -30)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 38 0))
+(open
+(extent 145 65))
+(terminals on)
+(pinCenter 170 430))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 84 0))
+(open
+(extent 244 36)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 0)
+(integerBase decimal)))
+(pinCenter 520 100))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 96 0))
+(open
+(extent 244 36)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 0)
+(integerBase decimal)))
+(pinCenter 520 240))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 103 0))
+(open
+(extent 244 36)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 0)
+(integerBase decimal)))
+(pinCenter 520 170))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 103 0))
+(open
+(extent 244 36)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 0)
+(integerBase decimal)))
+(pinCenter 520 310))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 118 86))
+(terminals on)
+(pinCenter 515 420))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 690 420))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 77 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 160 240))
+(connect I1:1 D0:1
+(points 4 -19 115 20 115 20 410 65 410))
+(connect I2:1 D0:2
+(points 4 -19 295 10 295 10 450 65 450))
+(connect I1:1 D1:1
+(points 4 -19 115 20 115 20 100 395 100))
+(connect I3:1 D2:1
+(points 8 -19 475 20 475 20 500 390 500 390 340 380 340 380 240 395 240))
+(connect D0:1 D3:1
+(points 4 275 410 360 410 360 170 395 170))
+(connect D0:2 D4:1
+(points 6 275 450 300 450 300 450 370 450 370 310 395 310))
+(connect D0:0 D5:0
+(points 6 170 465 170 490 380 490 380 350 520 350 520 356))
+(connect I3:1 D5:1
+(points 6 -19 475 20 475 20 500 390 500 390 390 423 390))
+(connect D0:1 D5:2
+(points 4 275 410 349 410 349 420 423 420))
+(connect D0:2 D5:3
+(points 4 275 450 300 450 300 450 423 450))
+(connect D5:1 D6:1
+(points 4 616 400 640 400 640 410 674 410))
+(connect D5:2 D6:2
+(points 4 616 440 640 440 640 430 674 430))
+(connect I1:1 D7:1
+(points 2 -19 115 55 230))
+(connect I3:1 D7:2
+(points 2 -19 475 55 250))
+(connect D6:1 O1:1
+(points 4 705 420 730 420 730 155 702 155))
+(connect D7:1 O2:1
+(points 2 285 240 702 435)))
+(stackingOrder 1 3 4 5 6 2 0 7)))))
+(device 2 CONSTANT
+(properties
+(name "Desired Value")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  18000000000))
+(initValue Real
+(data  0))))
+(device 6 FORMULA
+(properties
+(name "simulated measurement")
+(variableScope cont)
+(expr 1 "A-1000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 15 TEXTDISPLAY
+(properties
+(name "Go?")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 21 CONSTANT
+(properties
+(name "Allowed Error")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  1000))
+(initValue Real
+(data  0))))
+(device 26 CONSTANT
+(properties
+(name "Measured Value")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  17999999000))
+(initValue Real
+(data  0))))
+(device 27 CALL
+(properties
+(name "Call AllowMismatch")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 AllowMismatch \\par\r\nWhy: \\f1\\fs17\\par\r\n\\f2\\fs20 The hp synthesizers, when queried for their frequency setting, don\'t always return the exact frequency as written to the frequency setting. It returns the synthesized output frequency value. Sometimes it\'s exactly the same,  but not always.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(callFunc "AllowMismatch")
+(parmMode rev30))
+(interface
+(input 1
+(name "Desired Setting")
+(optional yes))
+(input 2
+(name "Allowed Mismatch")
+(optional yes))
+(input 3
+(name "Measured Value")
+(optional yes))
+(output 1
+(name "Go")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "percent error")
+(lock name constraints)
+(optional yes))))
+(device 28 TEXTDISPLAY
+(properties
+(name "percent error")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 29 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 how to use:\\par\r\nenter a value for the Allowed Error.\\par\r\nchange the value in simulated measurement.\\par\r\nview the Go? decision and the percent error. \\par\r\n\\par\r\nwhy:\\par\r\nThe hp synthesizers don\'t return the exact frequency as set when queried. \\par\r\n}\r\n"
+)))
+(configuration
+(connect D0:1 D1:1)
+(connect D5:1 D2:1)
+(connect D1:0 D4:0)
+(connect D1:1 D4:1)
+(connect D0:1 D5:1)
+(connect D3:1 D5:2)
+(connect D4:1 D5:3)
+(connect D5:2 D6:1)))
+(contextCarrier
+(wndOrigin 113 15)
+(wndState res)
+(active detail)
+(detail
+(extent 878 532)
+(anchorPt 564 199)
+(configuration
+(devCarrierFor 2
+(active open)
+(icon
+(extent 84 0))
+(open
+(extent 144 36)
+(showFormat real))
+(pinCenter -100 -110))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 149 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter -360 50))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 27 0))
+(open
+(extent 121 25))
+(pinCenter 240 -50))
+(devCarrierFor 21
+(active open)
+(icon
+(extent 80 0))
+(open
+(extent 144 36)
+(showFormat real))
+(pinCenter -100 -40))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 96 0))
+(open
+(extent 144 36)
+(showFormat real))
+(pinCenter -100 50))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 116 34))
+(open
+(extent 176 62))
+(terminals on)
+(pinCenter 80 -40))
+(devCarrierFor 28
+(active open)
+(icon
+(extent 77 0))
+(open
+(extent 121 25)
+(formatter
+(realFormat fixed)
+(realSigDigits 9)
+(realRadixSpec 9)
+(integerBase decimal)))
+(pinCenter 240 10))
+(devCarrierFor 29
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 554 176)
+(editing enabled))
+(pinCenter -130 220))
+(connect D0:1 D1:1
+(points 6 -26 -110 -10 -110 -10 -170 -480 -170 -480 50 -465 50))
+(connect D5:1 D2:1
+(points 2 140 -50 177 -50))
+(connect D1:0 D4:0
+(points 6 -350 77 -350 100 -210 100 -210 0 -100 0 -100 11))
+(connect D1:1 D4:1
+(points 2 -235 50 -175 50))
+(connect D0:1 D5:1
+(points 4 -26 -110 -10 -110 -10 -50 19 -50))
+(connect D3:1 D5:2
+(points 2 -26 -40 19 -40))
+(connect D4:1 D5:3
+(points 4 -26 50 -10 50 -10 -30 19 -30))
+(connect D5:2 D6:1
+(points 4 140 -30 160 -30 160 10 177 10)))
+(stackingOrder 0 4 2 6 5 1 3 7))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
