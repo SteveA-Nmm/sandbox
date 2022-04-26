@@ -1,0 +1,29 @@
+Get-<file> | Out-String -Stream | Get-FileHash -Algorithm SHA1 >> log.txt
+
+ Out-String  '.\N20-6737 NoiseFigure_A4.vxe' -Stream | Get-FileHash -Algorithm SHA1 >> log.txt
+
+cat '.\N20-6737 NoiseFigure_A4.vxe' | Get-FileHash -InputStream -Algorithm SHA1
+
+
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.2
+$wc = [System.Net.WebClient]::new()
+$pkgurl = 'https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/powershell_6.2.4-1.debian.9_amd64.deb'
+$publishedHash = '8E28E54D601F0751922DE24632C1E716B4684876255CF82304A9B19E89A9CCAC'
+$FileHash = Get-FileHash -InputStream ($wc.OpenRead($pkgurl))
+$FileHash.Hash -eq $publishedHash
+
+True
+
+cat '.\N20-6737 NoiseFigure_A4.vxe' | Get-FileHash -InputStream -Algorithm SHA1
+cat '.\N20-6737 NoiseFigure_A4.vxe' | Get-FileHash -Algorithm SHA1
+Get-FileHash '.\N20-6737 NoiseFigure_A4.vxe' -Algorithm SHA1
+cat '.\N20-6737 NoiseFigure_A4.vxe' | Get-FileHash -InputStream -Algorithm SHA1Get-FileHash : Missing an argument for parameter 'InputStream'. Specify a parameter of type 'System.IO.Stream' and try again.
+At line:1 char:52
++ ... t '.\N20-6737 NoiseFigure_A4.vxe' | Get-FileHash -InputStream -Algori ...
++                                                      ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-FileHash], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Get-FileHash
+
+$wc = [System.Net.WebClient]::new()
+$pkgurl = '.\N20-6737 NoiseFigure_A4.vxe'
+Get-FileHash -InputStream ($wc.OpenRead($pkgurl))
