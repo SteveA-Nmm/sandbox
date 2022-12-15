@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 28/Jul/2022 15:09:57 ")
+(date "Wed 23/Nov/2022 12:17:37 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
-(prefExecMode v6)
+(prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M)
+(workspaceStackingOrder F1 M)
 (SaveCF no)
 (device 0 ROOTCONTEXT
 (properties
@@ -443,10 +443,12 @@
 (connect D9:1 O1:1)
 (connect D6:5 O2:1)))
 (contextCarrier
+(wndOrigin 73 154)
+(wndState res)
 (active detail)
 (detail
 (extent 820 519)
-(anchorPt -27 142)
+(anchorPt 81 147)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -482,7 +484,7 @@
 (extent 174 29))
 (pinCenter 220 160))
 (devCarrierFor 4
-(active icon)
+(active open)
 (icon
 (extent 74 34))
 (open
@@ -490,7 +492,7 @@
 (carbonCopy))
 (terminals on)
 (titleBg "Light Beige")
-(pinCenter 310 130))
+(pinCenter 315 130))
 (devCarrierFor 5
 (active icon)
 (icon
@@ -535,15 +537,15 @@
 (connect D1:2 D2:2
 (points 4 136 130 160 130 160 130 185 130))
 (connect D2:1 D4:1
-(points 4 234 120 252 120 252 120 270 120))
+(points 4 234 120 252 120 252 110 255 110))
 (connect D3:1 D4:2
-(points 4 234 160 250 160 250 130 270 130))
+(points 4 234 160 250 160 250 130 255 130))
 (connect D5:1 D4:3
-(points 4 236 190 260 190 260 140 270 140))
+(points 4 236 190 260 190 260 150 255 150))
 (connect D0:1 D6:1
 (points 4 138 80 160 80 160 90 382 90))
 (connect D4:1 D6:2
-(points 2 349 130 382 130))
+(points 4 364 130 365 130 365 130 382 130))
 (connect D6:2 D7:1
 (points 4 437 100 460 100 460 90 528 90))
 (connect D6:3 D8:1
@@ -557,10 +559,10 @@
 (connect D6:4 D9:4
 (points 6 437 120 460 120 460 140 660 140 660 110 728 110))
 (connect D9:1 O1:1
-(points 4 772 100 790 100 790 -13 846 -13))
+(points 4 772 100 790 100 790 -18 738 -18))
 (connect D6:5 O2:1
-(points 4 437 130 450 130 450 247 846 247)))
-(stackingOrder 1 3 4 5 7 8 6 0 9 2)))))
+(points 4 437 130 450 130 450 242 738 242)))
+(stackingOrder 1 3 5 7 8 6 0 9 2 4)))))
 (device 15 NOTE
 (properties
 (variableScope cont)
@@ -1036,7 +1038,7 @@
 (active detail)
 (detail
 (extent 964 549)
-(anchorPt -180 174)
+(anchorPt 29 76)
 (configuration
 (devCarrierFor 15
 (active icon)
@@ -1055,7 +1057,7 @@
 (title off)
 (pinCenter 390 50))
 (devCarrierFor 22
-(active icon)
+(active open)
 (icon
 (extent 53 15))
 (open
@@ -1086,14 +1088,14 @@
 (terminals on)
 (pinCenter 390 180))
 (connect D1:0 D2:0
-(points 2 390 63 390 80))
+(points 4 390 63 390 71 390 71 390 11))
 (connect D5:1 D3:1
 (points 2 441 170 555 170))
 (connect D5:2 D4:1
 (points 4 441 190 460 190 460 290 555 290))
 (connect D2:0 D5:0
-(points 2 390 100 390 165)))
-(stackingOrder 1 2 3 4 0 5))
+(points 4 390 151 390 132 390 132 390 165)))
+(stackingOrder 1 3 4 0 5 2))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
