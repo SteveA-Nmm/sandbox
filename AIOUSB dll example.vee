@@ -1,0 +1,695 @@
+(saveFormat "7.0")
+(date "Fri 13/Jan/2023 14:32:46 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "8720B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::18::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::18::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "InstrumentGPIB"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HPEPM"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "SpecAna"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP856XE"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument3"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "SkalarAnalyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757d.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "Skalar analyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757C"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "newInstrument7"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument8"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::5::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::5::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument9"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::9::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::9::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstr19200"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 19200)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstr9600"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "hp8757A"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "PassThru"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 26)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(device 5 IMPORT
+(properties
+(name "Import Library")
+(variableScope cont)
+(libType DLL)
+(libName "MyAIOUSB")
+(fileName "..\\..\\..\\..\\..\\Windows\\System32\\AIOUSB.dll")
+(defnFileName
+"..\\..\\..\\..\\Public\\Documents\\ACCES\\USBP-DIO16RO8\\Win32\\Driver.SRC\\AIOUSB\\Headers\\xAIOUSB.h"
+))
+(interface
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 9 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 12 CALL
+(properties
+(name "Call MyAIOUSB.DIO_Configure")
+(variableScope cont)
+(callFunc "MyAIOUSB.DIO_Configure")
+(parmMode rev30))
+(interface
+(input 1
+(name "DeviceIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 2
+(name "bTristate")
+(requires
+(datatype Int16))
+(optional yes))
+(input 3
+(name "pOutMask")
+(requires
+(datatype Int16))
+(optional yes))
+(input 4
+(name "pData")
+(requires
+(datatype Int16))
+(optional yes))
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "pOutMask")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "pData")
+(lock name constraints)
+(optional yes))))
+(device 14 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 15 CONSTANT
+(properties
+(name "false")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Boolean")
+(lock name constraints)))
+(implementation
+(value Boolean
+(data  false))
+(initValue Boolean
+(data  false))))
+(device 17 CONSTANT
+(properties
+(name "1")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  1))
+(initValue Int32
+(data  0))))
+(device 19 CONSTANT
+(properties
+(name "pData")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  22))
+(initValue Int32
+(data  0))))
+(device 20 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 21 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 22 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 23 START25
+(properties
+(variableScope cont)))
+(device 24 NOTE
+(properties
+(name "pData decode")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Calibri;}{\\f1\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\trowd\\trgaph30\\trleft-30\\cellx1002\\cellx2034\\pard\\intbl\\cf1\\f0\\fs22 16\\cell 10000\\cell\\row\r\n\\intbl 18\\cell 10010\\cell\\row\r\n\\intbl 20\\cell 10100\\cell\\row\r\n\\intbl 21\\cell 10101\\cell\\row\r\n\\intbl 22\\cell 10110\\cell\\row\r\n\\intbl 23\\cell 10111\\cell\\row\r\n\\intbl 24\\cell 11000\\cell\\row\r\n\\pard\\f1\\fs24\\par\r\n}\r\n"
+)))
+(device 25 NOTE
+(properties
+(name "ReadMe")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 ACESS I/O:  USBP-DIO16   documentation C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\USBP-DIO16RO8\\par\r\nThe AIOUSB API Library is contained in the AIOUSB.dll file. This DLL is provided in both 32-bit and 64-bit versions, and is installed automatically to the correct directories based on the version of Windows being used.\\par\r\n\\par\r\n32-bit (x86/IA32) Windows: the 32-bit AIOUSB.dll is installed to your \\\\Windows\\\\System32 directory.\\par\r\n64-bit (x64/AMD64) Windows: the 32-bit AIOUSB.dll is installed in \\\\Windows\\\\SysWOW64\\\\; the 64-bit DLL goes into \\\\Windows\\\\System32\\\\.\\par\r\n\"Header\" files are in C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\Headers\\\\ and includes language-specific convenience wrappers for C (AIOUSB.h), Visual Basic 6 (AIOUSB.bas), Visual Basic .NET (AIOUSB.vb), Delphi (AIOUSB.pas), and C# (AIOUSB.cs).\\par\r\n\\par\r\nFor those languages that link with .lib files they are located in the C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\C Libraries\\\\ folder.\\par\r\n\\par\r\n\\pard\\keepn\\sb100\\sa100\\cf0\\kerning36\\b\\f1\\fs48 VEE:The Definition File\\par\r\n\\pard\\sb100\\sa100\\kerning0\\b0\\fs24 The Call object or Formula expression determines the type of data it should pass to the function based on the contents of the definition file. The definition file defines the type of data the function returns, the function name, and the arguments the function accepts. The data has the following form:\\par\r\n<return type> <function name> (<type> <paramname>, <type> <paramname>, ...) ;\\par\r\n\\pard\\cf1\\f0\\par\r\n}\r\n"
+)))
+(configuration
+(connect D0:1 D1:1)
+(connect D10:0 D2:0)
+(connect D3:1 D2:1)
+(connect D4:1 D2:2)
+(connect D5:1 D2:3)
+(connect D6:1 D2:4)
+(connect D2:1 D7:1)
+(connect D2:2 D8:1)
+(connect D2:3 D9:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 492 348)
+(wndState max)
+(active detail)
+(detail
+(extent 1291 869)
+(anchorPt 321 -36)
+(configuration
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 229 113))
+(pinCenter 80 260))
+(devCarrierFor 9
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 270 230))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 184 0))
+(open
+(extent 176 90))
+(terminals on)
+(pinCenter 395 500))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 70 430))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 31 0))
+(open
+(extent 86 29))
+(pinCenter 70 490))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 50 550))
+(devCarrierFor 19
+(active open)
+(icon
+(extent 37 0))
+(open
+(extent 73 29)
+(showFormat int))
+(pinCenter 50 620))
+(devCarrierFor 20
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 670 440))
+(devCarrierFor 21
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 670 500))
+(devCarrierFor 22
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 670 550))
+(devCarrierFor 23
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 390 380))
+(devCarrierFor 24
+(active open)
+(icon
+(extent 84 51)
+(iconImage "notepad.icn"))
+(open
+(extent 410 180)
+(editing enabled))
+(pinCenter 480 690))
+(devCarrierFor 25
+(active open)
+(icon
+(extent 68 0)
+(iconImage "notepad.icn"))
+(open
+(extent 1084 196)
+(editing enabled))
+(pinCenter 350 200))
+(connect D0:1 D1:1
+(points 6 197 260 210 260 210 250 200 250 200 230 207 230))
+(connect D10:0 D2:0
+(points 2 390 393 390 434))
+(connect D3:1 D2:1
+(points 4 106 430 140 430 140 470 224 470))
+(connect D4:1 D2:2
+(points 2 115 490 224 490))
+(connect D5:1 D2:3
+(points 4 86 550 140 550 140 510 224 510))
+(connect D6:1 D2:4
+(points 4 89 620 150 620 150 530 224 530))
+(connect D2:1 D7:1
+(points 4 555 470 580 470 580 440 607 440))
+(connect D2:2 D8:1
+(points 2 555 500 607 500))
+(connect D2:3 D9:1
+(points 4 555 530 580 530 580 550 607 550)))
+(stackingOrder 3 10 0 1 2 7 8 9 11 6 5 4 12))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
