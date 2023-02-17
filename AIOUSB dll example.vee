@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Fri 17/Feb/2023 09:46:30 ")
+(date "Fri 17/Feb/2023 11:02:57 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -400,9 +400,10 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 26)
+(nextID 27)
 (popupTitleText "Untitled")
-(popupMoveable 1))
+(popupMoveable 1)
+(deleteGlobals 0))
 (deviceList
 (device 5 IMPORT
 (properties
@@ -410,10 +411,8 @@
 (variableScope cont)
 (libType DLL)
 (libName "MyAIOUSB")
-(fileName "..\\..\\..\\..\\..\\Windows\\System32\\AIOUSB.dll")
-(defnFileName
-"..\\..\\..\\..\\Public\\Documents\\ACCES\\USBP-DIO16RO8\\Win32\\Driver.SRC\\AIOUSB\\Headers\\xAIOUSB.h"
-))
+(fileName "AIOUSB.dll")
+(defnFileName "AIOUSB_dll_VEE.h"))
 (interface
 (output 1
 (type exception)
@@ -519,7 +518,7 @@
 (lock name constraints)))
 (implementation
 (value Int32
-(data  22))
+(data  6))
 (initValue Int32
 (data  0))))
 (device 20 TEXTDISPLAY
@@ -574,8 +573,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 818 503)
-(anchorPt 148 -438)
+(extent 1248 586)
+(anchorPt 281 -136)
 (configuration
 (devCarrierFor 5
 (active open)
@@ -596,7 +595,7 @@
 (open
 (extent 176 90))
 (terminals on)
-(pinCenter 295 500))
+(pinCenter 295 470))
 (devCarrierFor 14
 (active open)
 (icon)
@@ -638,20 +637,20 @@
 (icon)
 (open
 (extent 121 22))
-(pinCenter 670 500))
+(pinCenter 670 480))
 (devCarrierFor 22
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 670 550))
+(pinCenter 670 520))
 (devCarrierFor 23
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 290 180))
+(pinCenter 290 200))
 (devCarrierFor 24
 (active open)
 (icon
@@ -669,28 +668,28 @@
 (open
 (extent 1084 196)
 (editing enabled))
-(pinCenter 560 110))
+(pinCenter 520 -10))
 (connect D10:0 D0:0
-(points 2 290 193 290 233))
+(points 2 290 213 290 233))
 (connect D0:1 D1:1
 (points 2 627 320 657 320))
 (connect D0:0 D2:0
-(points 2 290 389 290 434))
+(points 2 290 389 290 404))
 (connect D3:1 D2:1
-(points 4 56 440 90 440 90 470 124 470))
+(points 2 56 440 124 440))
 (connect D4:1 D2:2
-(points 2 65 490 124 490))
+(points 4 65 490 90 490 90 460 124 460))
 (connect D5:1 D2:3
-(points 4 56 540 90 540 90 510 124 510))
+(points 4 56 540 100 540 100 480 124 480))
 (connect D6:1 D2:4
-(points 4 59 590 100 590 100 530 124 530))
+(points 4 59 590 110 590 110 500 124 500))
 (connect D2:1 D7:1
-(points 4 455 470 480 470 480 440 607 440))
+(points 2 455 440 607 440))
 (connect D2:2 D8:1
-(points 2 455 500 607 500))
+(points 4 455 470 480 470 480 480 607 480))
 (connect D2:3 D9:1
-(points 4 455 530 480 530 480 550 607 550)))
-(stackingOrder 7 8 9 12 1 0 4 5 6 3 10 2 11))
+(points 4 455 500 480 500 480 520 607 520)))
+(stackingOrder 7 1 0 4 5 6 3 11 2 10 12 8 9))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
