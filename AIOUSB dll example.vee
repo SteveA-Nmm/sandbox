@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Tue 17/Jan/2023 08:47:12 ")
+(date "Fri 17/Feb/2023 09:46:30 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -548,7 +548,7 @@
 (name "pData decode")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Calibri;}{\\f1\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\trowd\\trgaph30\\trleft-30\\cellx1002\\cellx2034\\pard\\intbl\\cf1\\f0\\fs22 16\\cell 10000\\cell\\row\r\n\\intbl 18\\cell 10010\\cell\\row\r\n\\intbl 20\\cell 10100\\cell\\row\r\n\\intbl 21\\cell 10101\\cell\\row\r\n\\intbl 22\\cell 10110\\cell\\row\r\n\\intbl 23\\cell 10111\\cell\\row\r\n\\intbl 24\\cell 11000\\cell\\row\r\n\\pard\\f1\\fs24\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Calibri;}{\\f1\\fnil\\fcharset0 Calibri;}{\\f2\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\trowd\\trgaph30\\trleft-30\\cellx1002\\cellx2034\\pard\\intbl\\cf1\\f0\\fs22 16\\f1  \\f0\\cell 10000\\cell\\row\r\n\\intbl 18\\cell 10010\\cell\\row\r\n\\intbl 20\\cell 10100\\cell\\row\r\n\\intbl 21\\cell 10101\\cell\\row\r\n\\intbl 22\\cell 10110\\cell\\row\r\n\\intbl 23\\cell 10111\\cell\\row\r\n\\intbl 24\\cell 11000\\cell\\row\r\n\\pard\\f2\\fs24\\par\r\n}\r\n"
 )))
 (device 25 NOTE
 (properties
@@ -574,21 +574,21 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1291 869)
-(anchorPt 321 -36)
+(extent 818 503)
+(anchorPt 148 -438)
 (configuration
 (devCarrierFor 5
 (active open)
 (icon)
 (open
-(extent 229 113))
-(pinCenter 80 230))
+(extent 669 133))
+(pinCenter 290 320))
 (devCarrierFor 9
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 290 230))
+(pinCenter 720 320))
 (devCarrierFor 12
 (active open)
 (icon
@@ -596,21 +596,21 @@
 (open
 (extent 176 90))
 (terminals on)
-(pinCenter 395 500))
+(pinCenter 295 500))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 70 430))
+(pinCenter 20 440))
 (devCarrierFor 15
 (active open)
 (icon
 (extent 31 0))
 (open
 (extent 86 29))
-(pinCenter 70 490))
+(pinCenter 20 490))
 (devCarrierFor 17
 (active open)
 (icon
@@ -618,7 +618,7 @@
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 50 550))
+(pinCenter 20 540))
 (devCarrierFor 19
 (active open)
 (icon
@@ -626,7 +626,7 @@
 (open
 (extent 73 29)
 (showFormat int))
-(pinCenter 50 620))
+(pinCenter 20 590))
 (devCarrierFor 20
 (active open)
 (icon)
@@ -651,16 +651,16 @@
 (open
 (extent 47 22))
 (title off)
-(pinCenter 390 380))
+(pinCenter 290 180))
 (devCarrierFor 24
 (active open)
 (icon
 (extent 84 51)
 (iconImage "notepad.icn"))
 (open
-(extent 410 180)
+(extent 404 180)
 (editing enabled))
-(pinCenter 480 690))
+(pinCenter 150 750))
 (devCarrierFor 25
 (active icon)
 (icon
@@ -671,26 +671,26 @@
 (editing enabled))
 (pinCenter 560 110))
 (connect D10:0 D0:0
-(points 8 390 393 390 410 340 410 340 350 370 350 370 130 80 130 80 153))
+(points 2 290 193 290 233))
 (connect D0:1 D1:1
-(points 2 197 230 227 230))
+(points 2 627 320 657 320))
 (connect D0:0 D2:0
-(points 6 80 289 80 310 330 310 330 420 390 420 390 434))
+(points 2 290 389 290 434))
 (connect D3:1 D2:1
-(points 4 106 430 140 430 140 470 224 470))
+(points 4 56 440 90 440 90 470 124 470))
 (connect D4:1 D2:2
-(points 2 115 490 224 490))
+(points 2 65 490 124 490))
 (connect D5:1 D2:3
-(points 4 86 550 140 550 140 510 224 510))
+(points 4 56 540 90 540 90 510 124 510))
 (connect D6:1 D2:4
-(points 4 89 620 150 620 150 530 224 530))
+(points 4 59 590 100 590 100 530 124 530))
 (connect D2:1 D7:1
-(points 4 555 470 580 470 580 440 607 440))
+(points 4 455 470 480 470 480 440 607 440))
 (connect D2:2 D8:1
-(points 2 555 500 607 500))
+(points 2 455 500 607 500))
 (connect D2:3 D9:1
-(points 4 555 530 580 530 580 550 607 550)))
-(stackingOrder 3 10 2 7 8 9 11 6 5 4 12 1 0))
+(points 4 455 530 480 530 480 550 607 550)))
+(stackingOrder 7 8 9 12 1 0 4 5 6 3 10 2 11))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

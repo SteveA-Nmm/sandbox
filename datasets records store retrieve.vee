@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Mon 17/May/2021 11:37:21 ")
+(date "Wed 08/Feb/2023 15:22:46 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -1394,7 +1394,7 @@
 (properties
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 why:\\par\r\nuses veeos library\\par\r\nrecords are created with meaningful field names.\\par\r\nadding fields to existing records is immedeate\\par\r\nit\'s a DRY structure\\par\r\ndeclare variable record not required per se\\par\r\nmeaningful record and field names structure the data into the correct variables.\\par\r\n\\par\r\nbetter suited to progamatically initializing arrays using looping. example updating existing results versus starting fresh.\\par\r\n\\par\r\n\\par\r\n\\par\r\n\\par\r\n\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 why:\\par\r\nuses veeos library\\par\r\nrecords are created with meaningful field names.\\par\r\nadding fields to existing records is immedeate\\par\r\nit\'s a DRY structure\\par\r\ndeclare variable record not required per se\\par\r\nmeaningful record and field names structure the data into the correct variables.\\par\r\n\\par\r\nbetter suited to progamatically initializing arrays using looping. example updating existing results versus starting fresh.\\par\r\n\\par\r\n}\r\n"
 )))
 (configuration
 (connect D7:0 D0:0)
@@ -1457,8 +1457,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1223 815)
-(anchorPt 358 -837)
+(extent 1664 892)
+(anchorPt 634 -733)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -1473,7 +1473,7 @@
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 155 -20))
+(pinCenter 160 -20))
 (devCarrierFor 3
 (active open)
 (icon)
@@ -1569,7 +1569,7 @@
 (open
 (extent 274 76))
 (terminals on)
-(pinCenter 810 1020))
+(pinCenter 815 1020))
 (devCarrierFor 19
 (active icon)
 (icon
@@ -1696,7 +1696,7 @@
 (open
 (extent 145 67))
 (terminals on)
-(pinCenter 135 730))
+(pinCenter 140 730))
 (devCarrierFor 45
 (active icon)
 (icon
@@ -1712,7 +1712,7 @@
 (open
 (extent 88 53))
 (terminals on)
-(pinCenter 190 1030))
+(pinCenter 195 1030))
 (devCarrierFor 48
 (active open)
 (icon
@@ -1726,7 +1726,7 @@
 (open
 (extent 145 67))
 (terminals on)
-(pinCenter -145 1000))
+(pinCenter -150 1000))
 (devCarrierFor 50
 (active icon)
 (icon
@@ -1764,7 +1764,7 @@
 (open
 (extent 145 67))
 (terminals on)
-(pinCenter -175 1260))
+(pinCenter -180 1260))
 (devCarrierFor 58
 (active open)
 (icon)
@@ -1778,7 +1778,7 @@
 (open
 (extent 145 67))
 (terminals on)
-(pinCenter -165 1380))
+(pinCenter -170 1380))
 (devCarrierFor 60
 (active open)
 (icon)
@@ -1792,7 +1792,7 @@
 (open
 (extent 145 67))
 (terminals on)
-(pinCenter -165 1510))
+(pinCenter -170 1510))
 (devCarrierFor 62
 (active icon)
 (icon
@@ -1805,17 +1805,17 @@
 (icon
 (iconImage "notepad.icn"))
 (open
-(extent 464 236)
+(extent 484 256)
 (editing enabled))
-(pinCenter 10 1350))
+(pinCenter 0 1340))
 (connect D7:0 D0:0
 (points 2 170 -160 170 -147))
 (connect D0:1 D1:1
-(points 8 220 -110 230 -110 230 -80 110 -80 110 -90 30 -90 30 -20 50 -20))
+(points 6 220 -110 240 -110 240 -200 40 -200 40 -20 55 -20))
 (connect D3:1 D2:1
-(points 4 522 -10 618 -10 618 -10 715 -10))
+(points 2 522 -10 715 -10))
 (connect D1:1 D3:1
-(points 4 290 -20 364 -20 364 -20 438 -20))
+(points 2 285 -20 438 -20))
 (connect D4:1 D3:2
 (points 4 226 30 310 30 310 -10 438 -10))
 (connect D5:1 D3:3
@@ -1823,28 +1823,28 @@
 (connect D1:0 D4:0
 (points 2 170 8 170 20))
 (connect D3:0 D6:0
-(points 4 480 18 480 34 480 34 480 50))
+(points 2 480 18 480 50))
 (connect D3:1 D6:1
 (points 6 522 -10 540 -10 540 90 420 90 420 60 442 60))
 (connect D8:0 D7:0
-(points 10 -60 1185 -60 1200 -20 1200 -20 1180 10 1180 10 930 -100 930 -100 -200
-170 -200 170 -180))
+(points 8 -60 1185 -60 1200 -100 1200 -100 1190 -310 1190 -310 -210 170 -210 170
+-180))
 (connect D10:1 D9:1
 (points 2 412 520 461 520))
 (connect D18:1 D9:2
 (points 4 269 570 430 570 430 530 461 530))
 (connect D4:1 D9:3
-(points 6 226 30 310 30 310 110 440 110 440 540 461 540))
+(points 6 226 30 310 30 310 560 440 560 440 540 461 540))
 (connect D6:0 D10:0
 (points 4 480 70 480 100 380 100 380 505))
 (connect D16:1 D10:1
 (points 2 269 510 348 510))
 (connect D30:1 D10:2
-(points 6 270 730 290 730 290 720 320 720 320 530 348 530))
+(points 6 265 730 290 730 290 720 320 720 320 530 348 530))
 (connect D17:1 D12:1
 (points 2 674 540 755 540))
 (connect D25:1 D13:1
-(points 6 694 870 710 870 710 810 530 810 530 1020 620 1020))
+(points 8 694 870 700 870 700 900 680 900 680 920 620 920 620 1020 635 1020))
 (connect D17:1 D14:1
 (points 6 674 540 690 540 690 600 550 600 550 760 570 760))
 (connect D3:1 D15:1
@@ -1854,7 +1854,7 @@
 (connect D11:1 D17:2
 (points 4 269 620 530 620 530 540 545 540))
 (connect D5:1 D17:3
-(points 8 212 60 300 60 300 560 440 560 440 570 520 570 520 560 545 560))
+(points 6 212 60 300 60 300 580 530 580 530 560 545 560))
 (connect D15:1 D19:1
 (points 4 640 -170 660 -170 660 -220 750 -220))
 (connect D14:1 D20:1
@@ -1868,57 +1868,57 @@
 (connect D21:3 D24:1
 (points 4 980 880 1000 880 1000 950 1090 950))
 (connect D26:1 D25:1
-(points 8 909 940 990 940 990 960 1000 960 1000 1080 520 1080 520 860 545 860))
+(points 8 909 940 1010 940 1010 820 750 820 750 810 530 810 530 860 545 860))
 (connect D44:1 D25:2
-(points 2 430 850 545 880))
+(points 4 430 850 450 850 450 880 545 880))
 (connect D17:1 D27:1
 (points 8 674 540 690 540 690 600 550 600 550 680 390 680 390 700 400 700))
 (connect D30:1 D27:2
-(points 4 270 730 290 730 290 720 400 720))
+(points 4 265 730 290 730 290 720 400 720))
 (connect D27:0 D28:0
 (points 2 440 725 440 740))
 (connect D30:1 D28:1
-(points 6 270 730 290 730 290 720 370 720 370 750 400 750))
+(points 6 265 730 290 730 290 720 370 720 370 750 400 750))
 (connect D0:1 D30:1
-(points 10 220 -110 230 -110 230 -80 110 -80 110 -90 30 -90 30 -20 10 -20 10 730
-30 730))
+(points 8 220 -110 240 -110 240 -200 40 -200 40 -20 20 -20 20 730 35 730))
 (connect D34:0 D31:0
-(points 6 -130 1036 -130 1060 50 1060 50 850 200 850 200 870))
+(points 6 -140 1036 -140 1060 50 1060 50 850 200 850 200 870))
 (connect D34:1 D31:1
-(points 4 -10 1000 40 1000 40 880 169 880))
+(points 4 -25 1000 40 1000 40 880 169 880))
 (connect D31:0 D32:0
 (points 2 200 890 200 983))
 (connect D0:0 D33:0
-(points 6 170 -92 170 -80 160 -80 160 -100 -30 -100 -30 843))
+(points 6 170 -92 170 -80 110 -80 110 -90 -30 -90 -30 843))
 (connect D33:1 D34:1
-(points 6 20 880 30 880 30 920 -270 920 -270 1000 -250 1000))
+(points 6 20 880 30 880 30 920 -270 920 -270 1000 -255 1000))
 (connect D31:1 D35:1
-(points 4 230 880 283 880 283 920 297 920))
+(points 4 230 880 250 880 250 920 297 920))
 (connect D32:1 D36:1
-(points 2 286 1030 317 1030))
+(points 2 281 1030 317 1030))
 (connect D39:0 D38:0
-(points 6 -160 1296 -160 1310 -10 1310 -10 1190 180 1190 180 1211))
+(points 6 -170 1296 -170 1310 -160 1310 -160 1130 180 1130 180 1211))
 (connect D39:1 D38:1
-(points 2 -40 1260 5 1260))
+(points 2 -55 1260 15 1260))
 (connect D32:0 D39:0
-(points 4 200 1059 200 1080 -160 1080 -160 1206))
+(points 4 200 1059 200 1080 -170 1080 -170 1206))
 (connect D41:0 D40:0
-(points 6 -150 1416 -150 1440 0 1440 0 1310 190 1310 190 1331))
+(points 8 -160 1416 -160 1440 -300 1440 -300 1120 360 1120 360 1310 190 1310 190
+1331))
 (connect D41:1 D40:1
-(points 2 -30 1380 15 1380))
+(points 2 -45 1380 25 1380))
 (connect D39:0 D41:0
-(points 4 -160 1296 -160 1310 -150 1310 -150 1326))
+(points 4 -170 1296 -170 1310 -160 1310 -160 1326))
 (connect D43:0 D42:0
-(points 8 -150 1546 -150 1560 -140 1560 -140 1450 10 1450 10 1440 190 1440 190
-1461))
+(points 14 -160 1546 -160 1560 -150 1560 -150 1550 -40 1550 -40 1540 -20 1540
+-20 1490 20 1490 20 1470 180 1470 180 1450 190 1450 190 1461))
 (connect D43:1 D42:1
-(points 2 -30 1510 15 1510))
+(points 2 -45 1510 25 1510))
 (connect D41:0 D43:0
-(points 2 -150 1416 -150 1456))
+(points 2 -160 1416 -160 1456))
 (connect D31:1 D44:1
-(points 2 230 880 369 840))
+(points 4 230 880 260 880 260 840 369 840))
 (connect D33:0 D44:2
-(points 2 -30 898 369 860)))
+(points 5 -30 898 -30 930 270 930 270 860 369 860)))
 (stackingOrder 0 1 4 2 5 7 16 12 19 9 22 15 21 20 6 27 29 23 11 30 14 28 26 24
 13 34 8 37 36 10 31 33 32 41 43 39 17 38 40 42 18 25 35 44 45 3))
 (numberFormats

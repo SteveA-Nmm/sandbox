@@ -1,0 +1,97 @@
+(schema
+ (numFields 1)
+ (fieldName "AllResults"
+  (type Record)
+  (numDims 1)
+  (size 10)
+  (schema
+   (numFields 3)
+   (fieldName "TestNum"
+	(type Text)
+   )
+   (fieldName "RandNum"
+	(type Real64)
+   )
+   (fieldName "TestArray"
+	(type Real64)
+	(numDims 1)
+	(size 3)
+   )
+  )
+ )
+)
+
+(record
+ ( "AllResults"
+  (record
+   ( "TestNum" "test0")
+   ( "RandNum" 0.174102783203125)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test1")
+   ( "RandNum" 0.858917236328125)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test2")
+   ( "RandNum" 0.710479736328125)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test3")
+   ( "RandNum" 0.513519287109375)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test4")
+   ( "RandNum" 0.303985595703125)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test5")
+   ( "RandNum" 0.014984130859375)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test6")
+   ( "RandNum" 0.091400146484375)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test7")
+   ( "RandNum" 0.36444091796875)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test8")
+   ( "RandNum" 0.147308349609375)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+  (record
+   ( "TestNum" "test9")
+   ( "RandNum" 0.1658935546875)
+   ( "TestArray"
+	 [ 1 2 3 ]
+   )
+  )
+ )
+)

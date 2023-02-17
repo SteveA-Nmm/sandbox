@@ -1,0 +1,341 @@
+(saveFormat "7.0")
+(date "Wed 25/Jan/2023 11:36:04 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v8.5)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "ML2437A"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 13)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "8563E"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 14)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(eoiEnabled 1)
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(automationRefs
+(automationRef 1
+(libid "{6D5A2A3C-5238-11D2-9496-080009EE2E50}")
+(desc "Agilent VEE DynamicIO 1.0 Type Library")
+(filename
+"C:\\Program Files\\Common Files\\Agilent\\VEE DynamicIO\\dynamicio.dll")
+(verMajor 1)
+(verMinor 0)
+(lcid 0)))
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 37)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 3 INPUTDLG
+(properties
+(variableScope cont)
+(position 897 153)
+(prompt "Enter Text:")
+(initialValue "ID")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")))
+(device 5 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 10 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 14 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 17 IODEVICE
+(properties
+(name "ML2437A ( @ 713)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"EMUL HP 437B\" EOL" "WRITE TEXT \"PR\" EOL"))
+(implementation
+(ioDevType 1)
+(iopath "ML2437A")))
+(device 18 IODEVICE
+(properties
+(name "ML2437A ( @ 713)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT a EOL" "READ TEXT x STR"))
+(interface
+(input 1
+(name "a")
+(optional yes))
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 1)
+(iopath "ML2437A")))
+(device 21 FORCOUNT
+(properties
+(variableScope cont)
+(count 3))
+(interface
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 22 IODEVICE
+(properties
+(name "ML2437A ( @ 713)")
+(variableScope cont)
+(transactions 5 "WRITE TEXT \"*IDN?\" EOL" "WRITE TEXT \"*RST\" EOL"
+"WRITE TEXT \"*TST?\" EOL" "READ TEXT y STR" "READ TEXT z STR"))
+(interface
+(output 1
+(name "y")
+(optional yes))
+(output 2
+(name "z")
+(optional yes)))
+(implementation
+(ioDevType 1)
+(iopath "ML2437A")))
+(device 32 IODEVICE
+(properties
+(name "ML2437A ( @ 713)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"EMUL ML24XX\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes))
+(output 3
+(name "z")
+(optional yes)))
+(implementation
+(ioDevType 1)
+(iopath "ML2437A")))
+(device 33 DELAY
+(properties
+(variableScope cont)
+(delay 0.1))
+(interface
+(output 1
+(name "Done"))))
+(device 34 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 35 START25
+(properties
+(variableScope cont)))
+(device 36 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D6:1 D0:0)
+(connect D6:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:0 D2:0)
+(connect D5:0 D3:0)
+(connect D5:1 D3:1)
+(connect D12:0 D4:0)
+(connect D0:0 D5:0)
+(connect D0:1 D5:1)
+(connect D4:0 D6:0)
+(connect D9:0 D7:0)
+(connect D11:0 D8:0)
+(connect D8:0 D9:0)
+(connect D7:0 D10:0)
+(connect D7:1 D10:1)
+(connect D10:0 D12:0)
+(connect D7:2 D12:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 492 377)
+(wndState max)
+(active detail)
+(detail
+(extent 1327 686)
+(anchorPt -56 436)
+(configuration
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 56 25))
+(open
+(extent 254 107))
+(terminals on)
+(pinCenter 1000 60))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 650 120))
+(devCarrierFor 10
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 650 210))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 1340 210))
+(devCarrierFor 17
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 650 -80))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 110 51)
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 1000 210))
+(devCarrierFor 21
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 95 31))
+(pinCenter 650 20))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 111 51)
+(iconImage "io.icn"))
+(open
+(extent 234 116))
+(terminals on)
+(pinCenter 190 -220))
+(devCarrierFor 32
+(active icon)
+(icon
+(extent 111 51)
+(iconImage "io.icn"))
+(open
+(extent 224 76))
+(terminals on)
+(pinCenter 190 -330))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 190 -280))
+(devCarrierFor 34
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 650 -260))
+(devCarrierFor 35
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 190 -400))
+(devCarrierFor 36
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 650 -200))
+(connect D6:1 D0:0
+(points 3 700 20 1000 20 1000 45))
+(connect D6:0 D1:0
+(points 2 650 38 650 86))
+(connect D0:1 D1:1
+(points 8 1030 50 1040 50 1040 30 920 30 920 70 460 70 460 120 480 120))
+(connect D1:0 D2:0
+(points 2 650 135 650 174))
+(connect D5:0 D3:0
+(points 6 1000 238 1000 260 1080 260 1080 160 1340 160 1340 176))
+(connect D5:1 D3:1
+(points 2 1057 210 1170 210))
+(connect D12:0 D4:0
+(points 2 650 -185 650 -138))
+(connect D0:0 D5:0
+(points 2 1000 75 1000 182))
+(connect D0:1 D5:1
+(points 6 1030 50 1040 50 1040 30 920 30 920 210 942 210))
+(connect D4:0 D6:0
+(points 2 650 -41 650 -16))
+(connect D9:0 D7:0
+(points 2 190 -270 190 -248))
+(connect D11:0 D8:0
+(points 2 190 -387 190 -358))
+(connect D8:0 D9:0
+(points 2 190 -302 190 -290))
+(connect D7:0 D10:0
+(points 6 190 -192 190 -170 280 -170 280 -310 650 -310 650 -294))
+(connect D7:1 D10:1
+(points 4 248 -230 270 -230 270 -260 480 -260))
+(connect D10:0 D12:0
+(points 2 650 -245 650 -234))
+(connect D7:2 D12:1
+(points 4 248 -210 270 -210 270 -200 480 -200)))
+(stackingOrder 11 9 12 10 4 6 7 8 3 2 1 5 0))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
