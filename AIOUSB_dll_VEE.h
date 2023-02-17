@@ -1,4 +1,6 @@
+// AIOUSB_dll_VEE.h : Header file for hp VEE, modified from 
 // AIOUSB.h : Header file for AIOUSB.dll
+// 
 //
 //For Borland C++ Builder, use CBAIOUSB.lib
 //For Microsoft Visual C++, use VCAIOUSB.lib
@@ -20,8 +22,13 @@ extern "C" {
 
 
 long ResolveDeviceIndex( long DeviceIndex);
+// 29 __declspec(dllimport) unsigned long ResolveDeviceIndex(unsigned long DeviceIndex);
 long DIO_Configure( long DeviceIndex, short bTristate, short* pOutMask, short* pData);
-
+//__declspec(dllimport) unsigned long DIO_Configure(unsigned long DeviceIndex, unsigned char bTristate, void *pOutMask, void *pData);
+long DIO_Read8(long DeviceIndex, long ByteIndex, char *pBuffer);
+//132 __declspec(dllimport) unsigned long DIO_Read8(unsigned long DeviceIndex, unsigned long ByteIndex, unsigned char *pBuffer);
+long DIO_Write8(long DeviceIndex, long ByteIndex, char* Data);
+//136 __declspec(dllimport) unsigned long DIO_Write8(unsigned long DeviceIndex, unsigned long ByteIndex, unsigned char Data);
 
 
 

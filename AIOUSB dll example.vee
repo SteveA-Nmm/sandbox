@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Fri 17/Feb/2023 11:02:57 ")
+(date "Fri 17/Feb/2023 14:16:24 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -400,7 +400,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 27)
+(nextID 36)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -411,7 +411,7 @@
 (variableScope cont)
 (libType DLL)
 (libName "MyAIOUSB")
-(fileName "AIOUSB.dll")
+(fileName "..\\..\\..\\..\\..\\Windows\\SysWOW64\\AIOUSB.dll")
 (defnFileName "AIOUSB_dll_VEE.h"))
 (interface
 (output 1
@@ -556,6 +556,81 @@
 (text2 1
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 ACESS I/O:  USBP-DIO16   documentation C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\USBP-DIO16RO8\\par\r\nThe AIOUSB API Library is contained in the AIOUSB.dll file. This DLL is provided in both 32-bit and 64-bit versions, and is installed automatically to the correct directories based on the version of Windows being used.\\par\r\n\\par\r\n32-bit (x86/IA32) Windows: the 32-bit AIOUSB.dll is installed to your \\\\Windows\\\\System32 directory.\\par\r\n64-bit (x64/AMD64) Windows: the 32-bit AIOUSB.dll is installed in \\\\Windows\\\\SysWOW64\\\\; the 64-bit DLL goes into \\\\Windows\\\\System32\\\\.\\par\r\n\"Header\" files are in C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\Headers\\\\ and includes language-specific convenience wrappers for C (AIOUSB.h), Visual Basic 6 (AIOUSB.bas), Visual Basic .NET (AIOUSB.vb), Delphi (AIOUSB.pas), and C# (AIOUSB.cs).\\par\r\n\\par\r\nFor those languages that link with .lib files they are located in the C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\C Libraries\\\\ folder.\\par\r\n\\par\r\n\\pard\\keepn\\sb100\\sa100\\cf0\\kerning36\\b\\f1\\fs48 VEE:The Definition File\\par\r\n\\pard\\sb100\\sa100\\kerning0\\b0\\fs24 The Call object or Formula expression determines the type of data it should pass to the function based on the contents of the definition file. The definition file defines the type of data the function returns, the function name, and the arguments the function accepts. The data has the following form:\\par\r\n<return type> <function name> (<type> <paramname>, <type> <paramname>, ...) ;\\par\r\n\\pard\\cf1\\f0\\par\r\n}\r\n"
 )))
+(device 28 CALL
+(properties
+(name "Call MyAIOUSB.DIO_Write8")
+(variableScope cont)
+(callFunc "MyAIOUSB.DIO_Write8")
+(parmMode rev30))
+(interface
+(input 1
+(name "DeviceIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 2
+(name "ByteIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 3
+(name "Data")
+(requires
+(datatype Text))
+(optional yes))
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Data")
+(lock name constraints)
+(optional yes))))
+(device 29 CONSTANT
+(properties
+(name "pData")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  6))
+(initValue Int32
+(data  0))))
+(device 30 CONSTANT
+(properties
+(name "1")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 32 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 35 START25
+(properties
+(variableScope cont)))
 (configuration
 (connect D10:0 D0:0)
 (connect D0:1 D1:1)
@@ -566,15 +641,19 @@
 (connect D6:1 D2:4)
 (connect D2:1 D7:1)
 (connect D2:2 D8:1)
-(connect D2:3 D9:1)))
+(connect D2:3 D9:1)
+(connect D17:0 D13:0)
+(connect D16:1 D13:1)
+(connect D15:1 D13:2)
+(connect D14:1 D13:3)))
 (contextCarrier
 (wndRestoredOrigin 2 2)
-(wndRestoredExtent 492 348)
+(wndRestoredExtent 932 743)
 (wndState max)
 (active detail)
 (detail
-(extent 1248 586)
-(anchorPt 281 -136)
+(extent 1916 892)
+(anchorPt 707 -76)
 (configuration
 (devCarrierFor 5
 (active open)
@@ -659,7 +738,7 @@
 (open
 (extent 404 180)
 (editing enabled))
-(pinCenter 150 750))
+(pinCenter 110 910))
 (devCarrierFor 25
 (active icon)
 (icon
@@ -669,6 +748,44 @@
 (extent 1084 196)
 (editing enabled))
 (pinCenter 520 -10))
+(devCarrierFor 28
+(active open)
+(icon
+(extent 163 0))
+(open
+(extent 176 70))
+(terminals on)
+(pinCenter 305 680))
+(devCarrierFor 29
+(active open)
+(icon
+(extent 37 0))
+(open
+(extent 73 29)
+(showFormat int))
+(pinCenter -70 740))
+(devCarrierFor 30
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter -120 670))
+(devCarrierFor 32
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter -120 600))
+(devCarrierFor 35
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 300 590))
 (connect D10:0 D0:0
 (points 2 290 213 290 233))
 (connect D0:1 D1:1
@@ -688,8 +805,16 @@
 (connect D2:2 D8:1
 (points 4 455 470 480 470 480 480 607 480))
 (connect D2:3 D9:1
-(points 4 455 500 480 500 480 520 607 520)))
-(stackingOrder 7 1 0 4 5 6 3 11 2 10 12 8 9))
+(points 4 455 500 480 500 480 520 607 520))
+(connect D17:0 D13:0
+(points 2 300 603 300 624))
+(connect D16:1 D13:1
+(points 4 -84 600 -50 600 -50 660 134 660))
+(connect D15:1 D13:2
+(points 4 -84 670 -60 670 -60 680 134 680))
+(connect D14:1 D13:3
+(points 4 -31 740 -10 740 -10 700 134 700)))
+(stackingOrder 7 1 0 4 5 6 3 10 12 8 9 11 2 13 16 15 14 17))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

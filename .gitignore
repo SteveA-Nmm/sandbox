@@ -1,2 +1,13 @@
 ### hpVEE Virtual Engineering Environment ###
 *.bak
+
+# VIM  ignore stuff
+# Swap
+# *.swp
+[._]*.sw[a-p]
+# Temporary
+*~
+# Persistent undo
+# *.un~
+[._]*.un~
+# VIM  ignore stuff
