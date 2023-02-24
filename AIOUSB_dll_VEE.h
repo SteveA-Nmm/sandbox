@@ -21,6 +21,14 @@ extern "C" {
 #define TIME_METHOD_WHEN_INPUT_ENABLE 1
 
 
+long GetDevices(void);
+// 23 __declspec(dllimport) unsigned long GetDevices(void);
+
+// 24 __declspec(dllimport) unsigned long QueryDeviceInfo(unsigned long DeviceIndex, unsigned long *pPID, unsigned long *pNameSize, char *pName, unsigned long *pDIOBytes, unsigned long *pCounters);
+
+long AIOUSB_CloseDevice(unsigned long DeviceIndex);
+// 25__declspec(dllimport) unsigned long AIOUSB_CloseDevice(unsigned long DeviceIndex);
+
 long ResolveDeviceIndex( long DeviceIndex);
 // 29 __declspec(dllimport) unsigned long ResolveDeviceIndex(unsigned long DeviceIndex);
 long DIO_Configure( long DeviceIndex, short bTristate, short* pOutMask, short* pData);
