@@ -26,7 +26,7 @@ long GetDevices(void);
 
 // 24 __declspec(dllimport) unsigned long QueryDeviceInfo(unsigned long DeviceIndex, unsigned long *pPID, unsigned long *pNameSize, char *pName, unsigned long *pDIOBytes, unsigned long *pCounters);
 
-long AIOUSB_CloseDevice(unsigned long DeviceIndex);
+long AIOUSB_CloseDevice(long DeviceIndex);
 // 25__declspec(dllimport) unsigned long AIOUSB_CloseDevice(unsigned long DeviceIndex);
 
 long ResolveDeviceIndex( long DeviceIndex);
