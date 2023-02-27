@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Fri 24/Feb/2023 17:24:52 ")
+(date "Mon 27/Feb/2023 15:11:48 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M)
+(workspaceStackingOrder F1 M)
 (sysconfig
 (iodevice "8720B"
 (type GPIB-VISA)
@@ -400,11 +400,1925 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 54)
+(nextID 140)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
 (deviceList
+(UserFunctions
+(nextID 2)
+(context 0
+(properties
+(name "PushSelect")
+(variableName PushSelect)
+(variableScope glob)
+(trigMode deg)
+(nextID 54)
+(popupTitleText "USB Wheel")
+(popupMoveable 1))
+(deviceList
+(device 0 CONFIRM25
+(properties
+(name "1")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 1 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "0"))
+(initValue Text
+(data  ""))))
+(device 2 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "1"))
+(initValue Text
+(data  ""))))
+(device 3 CONFIRM25
+(properties
+(name "2")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 4 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "2"))
+(initValue Text
+(data  ""))))
+(device 5 CONFIRM25
+(properties
+(name "3")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 6 CONFIRM25
+(properties
+(name "4")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 7 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "3"))
+(initValue Text
+(data  ""))))
+(device 8 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "F")
+(optional yes))
+(input 6
+(name "G")
+(optional yes))
+(input 7
+(name "E")
+(optional yes))
+(output 1
+(name "Data"))))
+(device 9 CONFIRM25
+(properties
+(name "5")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 10 CONSTANT
+(properties
+(name "1")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 11 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 12 CONFIRM25
+(properties
+(name "6")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 13 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "4"))
+(initValue Text
+(data  ""))))
+(device 14 CALL
+(properties
+(name "Call MyAIOUSB.DIO_Write8")
+(variableScope cont)
+(callFunc "MyAIOUSB.DIO_Write8")
+(parmMode rev30))
+(interface
+(input 1
+(name "DeviceIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 2
+(name "ByteIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 3
+(name "Data")
+(requires
+(datatype Int16))
+(optional yes))
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))))
+(device 16 CONFIRM25
+(properties
+(name "ThumbWheel")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 17 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 18 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "5"))
+(initValue Text
+(data  ""))))
+(device 19 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "8"))
+(initValue Text
+(data  ""))))
+(device 37 NEXT
+(properties
+(variableScope cont)))
+(device 39 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "F")
+(optional yes))
+(input 6
+(name "G")
+(optional yes))
+(input 7
+(name "E")
+(optional yes))
+(output 1
+(name "Data"))))
+(device 40 NEXT
+(properties
+(variableScope cont)))
+(device 41 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 43 TEXTDISPLAY
+(properties
+(name "Band")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 53 CONTEXT
+(properties
+(name "Band is +1 ")
+(variableScope cont)
+(trigMode deg)
+(nextID 8)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 2 CONTEXT
+(properties
+(name "toInt16")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toInt16(a)\\par\r\n    a: number or text- value to be converted\\par\r\n    return: Int16 -  input value converted to signed 16-bit integer\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nConvert strings or numbers to signed 16-bit integers. Text inputs assumed to be in hex.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toInt16")
+(variableScope cont)
+(callFunc "o_toInt16")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 361 141)
+(drawGrid "on"))))
+(device 4 CONTEXT
+(properties
+(name "OneThru Six")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "B+A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Band "))
+(initValue Text
+(data  ""))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D2:1 D0:1)
+(connect D1:1 D0:2)
+(connect I1:1 D2:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 567 281)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 370 140))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 114 39))
+(pinCenter 160 200))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 94 50))
+(terminals on)
+(pinCenter 140 110))
+(connect D2:1 D0:1
+(points 4 239 110 250 110 250 130 265 130))
+(connect D1:1 D0:2
+(points 4 219 200 250 200 250 150 265 150))
+(connect I1:1 D2:1
+(points 4 0 140 10 140 10 110 60 110))
+(connect D0:1 O1:1
+(points 4 495 140 530 140 530 140 566 140)))
+(stackingOrder 0 1 2))))
+(device 5 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 6 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A==8"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 7 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "manual"))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D3:2 D0:0)
+(connect I1:1 D0:1)
+(connect D0:1 D1:1)
+(connect D4:1 D2:1)
+(connect D1:1 D2:2)
+(connect I1:1 D3:1)
+(connect D3:1 D4:0)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 580 266)
+(anchorPt 6 -1)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 41 15))
+(open
+(extent 74 36)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 220 170))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 73 15))
+(terminals on)
+(pinCenter 340 170))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 520 130))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 58 51))
+(terminals on)
+(pinCenter 175 90))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 390 80))
+(connect D3:2 D0:0
+(points 5 246 100 270 100 270 140 220 140 220 160))
+(connect I1:1 D0:1
+(points 4 -6 133 30 133 30 170 197 170))
+(connect D0:1 D1:1
+(points 2 243 170 301 170))
+(connect D4:1 D2:1
+(points 4 479 80 490 80 490 120 504 120))
+(connect D1:1 D2:2
+(points 4 379 170 400 170 400 140 504 140))
+(connect I1:1 D3:1
+(points 4 -6 133 20 133 20 90 113 90))
+(connect D3:1 D4:0
+(points 5 246 80 270 80 270 30 390 30 390 45))
+(connect D2:1 O1:1
+(points 4 535 130 557 130 557 133 573 133)))
+(stackingOrder 1 4 2 0 3))))
+(configuration
+(connect D22:1 D0:0)
+(connect D0:0 D1:0)
+(connect D3:0 D2:0)
+(connect D22:1 D3:0)
+(connect D5:0 D4:0)
+(connect D22:1 D5:0)
+(connect D22:1 D6:0)
+(connect D6:0 D7:0)
+(connect D1:1 D8:1)
+(connect D2:1 D8:2)
+(connect D4:1 D8:3)
+(connect D7:1 D8:4)
+(connect D13:1 D8:5)
+(connect D17:1 D8:6)
+(connect D18:1 D8:7)
+(connect D22:1 D9:0)
+(connect D22:1 D12:0)
+(connect D9:0 D13:0)
+(connect D11:1 D14:1)
+(connect D10:1 D14:2)
+(connect D8:1 D14:3)
+(connect D22:1 D15:0)
+(connect D14:1 D16:1)
+(connect D12:0 D17:0)
+(connect D15:0 D18:0)
+(connect D20:1 D19:0)
+(connect D1:0 D20:1)
+(connect D2:0 D20:2)
+(connect D4:0 D20:3)
+(connect D7:0 D20:4)
+(connect D13:0 D20:5)
+(connect D17:0 D20:6)
+(connect D18:0 D20:7)
+(connect D14:0 D21:0)
+(connect D24:1 D23:1)
+(connect D8:1 D24:1))
+(ShowOnExecPanel
+(relativeOrigin 603 417)))
+(contextCarrier
+(active detail)
+(panel
+(extent 210 309)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 40 20)
+(PID 0)
+(title off)
+(tabIndex 0)
+(borderStyle none)
+(extent 47 22))
+(widget 3 detail
+(relativeOrigin 40 60)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 47 22))
+(widget 5 detail
+(relativeOrigin 40 100)
+(PID 2)
+(title off)
+(tabIndex 2)
+(borderStyle none)
+(extent 47 22))
+(widget 6 detail
+(relativeOrigin 40 130)
+(PID 3)
+(title off)
+(tabIndex 3)
+(borderStyle none)
+(extent 47 22))
+(widget 9 detail
+(relativeOrigin 40 170)
+(PID 4)
+(title off)
+(tabIndex 4)
+(borderStyle none)
+(extent 47 22))
+(widget 12 detail
+(relativeOrigin 40 210)
+(PID 5)
+(title off)
+(tabIndex 5)
+(borderStyle none)
+(extent 47 22))
+(widget 15 detail
+(relativeOrigin 40 250)
+(PID 6)
+(title off)
+(tabIndex 6)
+(borderStyle none)
+(extent 80 30))
+(widget 23 detail
+(relativeOrigin 100 30)
+(PID 8)
+(title off)
+(tabStop off)
+(tabIndex 8)
+(borderStyle flat)
+(extent 91 22)))
+(detail
+(extent 1811 778)
+(anchorPt 333 90)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 -20))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 -10))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 70))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 60))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 160))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 150))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 240))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 250))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 26 25))
+(open
+(extent 12 142))
+(terminals on)
+(pinCenter 515 290))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 340))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 24 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 690 250))
+(devCarrierFor 11
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 690 190))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 430))
+(devCarrierFor 13
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 350))
+(devCarrierFor 14
+(active open)
+(icon
+(extent 163 0))
+(open
+(extent 236 70))
+(terminals on)
+(pinCenter 1005 270))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 81 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 510))
+(devCarrierFor 17
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 1300 270))
+(devCarrierFor 18
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 440))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 540))
+(devCarrierFor 37
+(active icon)
+(icon
+(extent 28 15))
+(open)
+(terminals on)
+(pinCenter -100 410))
+(devCarrierFor 39
+(active open)
+(icon
+(extent 26 25))
+(open
+(extent 12 142))
+(terminals on)
+(pinCenter -235 380))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 28 15))
+(open)
+(terminals on)
+(pinCenter 1000 370))
+(devCarrierFor 41
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter -330 -60))
+(devCarrierFor 43
+(active open)
+(icon
+(extent 33 0))
+(open
+(extent 121 22))
+(pinCenter 760 40))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 68 15))
+(terminals on)
+(pinCenter 640 40))
+(connect D22:1 D0:0
+(points 3 -294 -60 100 -60 100 -34))
+(connect D0:0 D1:0
+(points 6 100 -7 100 10 150 10 150 -60 280 -60 280 -45))
+(connect D3:0 D2:0
+(points 6 100 73 100 90 150 90 150 30 280 30 280 35))
+(connect D22:1 D3:0
+(points 5 -294 -60 50 -60 50 20 100 20 100 46))
+(connect D5:0 D4:0
+(points 6 100 163 100 180 150 180 150 120 280 120 280 125))
+(connect D22:1 D5:0
+(points 5 -294 -60 50 -60 50 120 100 120 100 136))
+(connect D22:1 D6:0
+(points 5 -294 -60 50 -60 50 190 100 190 100 226))
+(connect D6:0 D7:0
+(points 6 100 253 100 270 150 270 150 200 280 200 280 215))
+(connect D1:1 D8:1
+(points 4 369 -10 420 -10 420 230 476 230))
+(connect D2:1 D8:2
+(points 4 369 70 410 70 410 250 476 250))
+(connect D4:1 D8:3
+(points 4 369 160 400 160 400 270 476 270))
+(connect D7:1 D8:4
+(points 4 369 250 390 250 390 290 476 290))
+(connect D13:1 D8:5
+(points 4 369 350 390 350 390 310 476 310))
+(connect D17:1 D8:6
+(points 4 369 440 400 440 400 330 476 330))
+(connect D18:1 D8:7
+(points 4 369 540 410 540 410 350 476 350))
+(connect D22:1 D9:0
+(points 5 -294 -60 50 -60 50 280 100 280 100 326))
+(connect D22:1 D12:0
+(points 7 -294 -60 50 -60 50 370 60 370 60 390 100 390 100 416))
+(connect D9:0 D13:0
+(points 6 100 353 100 370 150 370 150 300 280 300 280 315))
+(connect D11:1 D14:1
+(points 4 726 190 760 190 760 250 804 250))
+(connect D10:1 D14:2
+(points 4 726 250 750 250 750 270 804 270))
+(connect D8:1 D14:3
+(points 2 563 290 804 290))
+(connect D22:1 D15:0
+(points 7 -294 -60 50 -60 50 370 60 370 60 470 100 470 100 496))
+(connect D14:1 D16:1
+(points 2 1195 270 1237 270))
+(connect D12:0 D17:0
+(points 6 100 443 100 460 150 460 150 390 280 390 280 405))
+(connect D15:0 D18:0
+(points 6 100 523 100 540 150 540 150 490 280 490 280 505))
+(connect D20:1 D19:0
+(points 3 -187 380 -100 380 -100 400))
+(connect D1:0 D20:1
+(points 7 280 7 280 20 170 20 170 100 -320 100 -320 320 -274 320))
+(connect D2:0 D20:2
+(points 5 280 87 280 110 -310 110 -310 340 -274 340))
+(connect D4:0 D20:3
+(points 7 280 177 280 190 140 190 140 200 -300 200 -300 360 -274 360))
+(connect D7:0 D20:4
+(points 7 280 267 280 290 40 290 40 270 -290 270 -290 380 -274 380))
+(connect D13:0 D20:5
+(points 7 280 367 280 380 50 380 50 470 -290 470 -290 400 -274 400))
+(connect D17:0 D20:6
+(points 5 280 457 280 480 -300 480 -300 420 -274 420))
+(connect D18:0 D20:7
+(points 5 280 557 280 580 -280 580 -280 440 -274 440))
+(connect D14:0 D21:0
+(points 2 1000 307 1000 360))
+(connect D24:1 D23:1
+(points 2 676 40 697 40))
+(connect D8:1 D24:1
+(points 4 563 290 580 290 580 40 603 40)))
+(stackingOrder 1 2 4 7 10 11 13 14 16 17 5 15 12 9 6 3 22 18 20 0 19 21 23 24 8))))
+(context 1
+(properties
+(name "PushSelect1")
+(variableName PushSelect1)
+(variableScope glob)
+(trigMode deg)
+(nextID 58)
+(popupTitleText "USB Wheel")
+(popupMoveable 1))
+(deviceList
+(device 0 CONFIRM25
+(properties
+(name "1")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 1 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "0"))
+(initValue Text
+(data  ""))))
+(device 2 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "1"))
+(initValue Text
+(data  ""))))
+(device 3 CONFIRM25
+(properties
+(name "2")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 4 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "2"))
+(initValue Text
+(data  ""))))
+(device 5 CONFIRM25
+(properties
+(name "3")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 6 CONFIRM25
+(properties
+(name "4")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 7 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "3"))
+(initValue Text
+(data  ""))))
+(device 8 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "F")
+(optional yes))
+(input 6
+(name "G")
+(optional yes))
+(input 7
+(name "E")
+(optional yes))
+(output 1
+(name "Data"))))
+(device 9 CONFIRM25
+(properties
+(name "5")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 10 CONSTANT
+(properties
+(name "1")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 11 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 12 CONFIRM25
+(properties
+(name "6")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 13 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "4"))
+(initValue Text
+(data  ""))))
+(device 14 CALL
+(properties
+(name "Call MyAIOUSB.DIO_Write8")
+(variableScope cont)
+(callFunc "MyAIOUSB.DIO_Write8")
+(parmMode rev30))
+(interface
+(input 1
+(name "DeviceIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 2
+(name "ByteIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(input 3
+(name "Data")
+(requires
+(datatype Int16))
+(optional yes))
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))))
+(device 16 CONFIRM25
+(properties
+(name "ThumbWheel")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 17 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 18 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "5"))
+(initValue Text
+(data  ""))))
+(device 19 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "8"))
+(initValue Text
+(data  ""))))
+(device 40 NEXT
+(properties
+(variableScope cont)))
+(device 41 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 43 TEXTDISPLAY
+(properties
+(name "Band")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 53 CONTEXT
+(properties
+(name "Band is +1 ")
+(variableScope cont)
+(trigMode deg)
+(nextID 8)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 2 CONTEXT
+(properties
+(name "toInt16")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toInt16(a)\\par\r\n    a: number or text- value to be converted\\par\r\n    return: Int16 -  input value converted to signed 16-bit integer\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nConvert strings or numbers to signed 16-bit integers. Text inputs assumed to be in hex.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toInt16")
+(variableScope cont)
+(callFunc "o_toInt16")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 361 141)
+(drawGrid "on"))))
+(device 4 CONTEXT
+(properties
+(name "OneThru Six")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "B+A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Band "))
+(initValue Text
+(data  ""))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D2:1 D0:1)
+(connect D1:1 D0:2)
+(connect I1:1 D2:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 567 281)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 370 140))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 114 39))
+(pinCenter 160 200))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 94 50))
+(terminals on)
+(pinCenter 140 110))
+(connect D2:1 D0:1
+(points 4 239 110 250 110 250 130 265 130))
+(connect D1:1 D0:2
+(points 4 219 200 250 200 250 150 265 150))
+(connect I1:1 D2:1
+(points 4 0 140 10 140 10 110 60 110))
+(connect D0:1 O1:1
+(points 4 495 140 530 140 530 140 566 140)))
+(stackingOrder 0 1 2))))
+(device 5 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 6 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A==8"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 7 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "manual"))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D3:2 D0:0)
+(connect I1:1 D0:1)
+(connect D0:1 D1:1)
+(connect D4:1 D2:1)
+(connect D1:1 D2:2)
+(connect I1:1 D3:1)
+(connect D3:1 D4:0)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 580 266)
+(anchorPt 6 -1)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 41 15))
+(open
+(extent 74 36)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 220 170))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 73 15))
+(terminals on)
+(pinCenter 340 170))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 520 130))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 58 51))
+(terminals on)
+(pinCenter 175 90))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 390 80))
+(connect D3:2 D0:0
+(points 5 246 100 270 100 270 140 220 140 220 160))
+(connect I1:1 D0:1
+(points 4 -6 133 30 133 30 170 197 170))
+(connect D0:1 D1:1
+(points 2 243 170 301 170))
+(connect D4:1 D2:1
+(points 4 479 80 490 80 490 120 504 120))
+(connect D1:1 D2:2
+(points 4 379 170 400 170 400 140 504 140))
+(connect I1:1 D3:1
+(points 4 -6 133 20 133 20 90 113 90))
+(connect D3:1 D4:0
+(points 5 246 80 270 80 270 30 390 30 390 45))
+(connect D2:1 O1:1
+(points 4 535 130 557 130 557 133 573 133)))
+(stackingOrder 1 4 2 0 3))))
+(device 54 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 56 EXITCONTEXT
+(properties
+(variableScope cont)))
+(device 57 EXITCONTEXT
+(properties
+(variableScope cont)))
+(configuration
+(connect D20:1 D0:0)
+(connect D0:0 D1:0)
+(connect D3:0 D2:0)
+(connect D20:1 D3:0)
+(connect D5:0 D4:0)
+(connect D20:1 D5:0)
+(connect D20:1 D6:0)
+(connect D6:0 D7:0)
+(connect D1:1 D8:1)
+(connect D2:1 D8:2)
+(connect D4:1 D8:3)
+(connect D7:1 D8:4)
+(connect D13:1 D8:5)
+(connect D17:1 D8:6)
+(connect D18:1 D8:7)
+(connect D20:1 D9:0)
+(connect D20:1 D12:0)
+(connect D9:0 D13:0)
+(connect D11:1 D14:1)
+(connect D10:1 D14:2)
+(connect D8:1 D14:3)
+(connect D20:1 D15:0)
+(connect D14:1 D16:1)
+(connect D12:0 D17:0)
+(connect D15:0 D18:0)
+(connect D14:0 D19:0)
+(connect D22:1 D21:1)
+(connect D8:1 D22:1)
+(connect D20:1 D23:0)
+(connect D20:0 D24:0)
+(connect D23:0 D25:0))
+(ShowOnExecPanel
+(relativeOrigin 852 155)))
+(contextCarrier
+(wndOrigin -110 40)
+(wndState res)
+(active detail)
+(panel
+(extent 210 309)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 40 20)
+(PID 0)
+(title off)
+(tabIndex 0)
+(borderStyle none)
+(extent 47 22))
+(widget 3 detail
+(relativeOrigin 40 60)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 47 22))
+(widget 5 detail
+(relativeOrigin 40 100)
+(PID 2)
+(title off)
+(tabIndex 2)
+(borderStyle none)
+(extent 47 22))
+(widget 6 detail
+(relativeOrigin 40 130)
+(PID 3)
+(title off)
+(tabIndex 3)
+(borderStyle none)
+(extent 47 22))
+(widget 9 detail
+(relativeOrigin 40 170)
+(PID 4)
+(title off)
+(tabIndex 4)
+(borderStyle none)
+(extent 47 22))
+(widget 12 detail
+(relativeOrigin 40 210)
+(PID 5)
+(title off)
+(tabIndex 5)
+(borderStyle none)
+(extent 47 22))
+(widget 15 detail
+(relativeOrigin 40 250)
+(PID 6)
+(title off)
+(tabIndex 6)
+(borderStyle none)
+(extent 80 30))
+(widget 21 detail
+(relativeOrigin 100 30)
+(PID 8)
+(title off)
+(tabStop off)
+(tabIndex 8)
+(borderStyle flat)
+(extent 91 22))
+(widget 23 detail
+(relativeOrigin 163 287)
+(PID 9)
+(title off)
+(tabIndex 9)
+(borderStyle none)
+(extent 47 22)))
+(detail
+(extent 1811 737)
+(anchorPt 509 21)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 -20))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 -10))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 70))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 60))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 160))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 150))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 240))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 250))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 26 25))
+(open
+(extent 12 142))
+(terminals on)
+(pinCenter 515 290))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 340))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 24 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 690 250))
+(devCarrierFor 11
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 690 190))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 430))
+(devCarrierFor 13
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 350))
+(devCarrierFor 14
+(active open)
+(icon
+(extent 163 0))
+(open
+(extent 236 70))
+(terminals on)
+(pinCenter 1005 270))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 81 0))
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 510))
+(devCarrierFor 17
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 1300 270))
+(devCarrierFor 18
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 440))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 280 540))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 28 15))
+(open)
+(terminals on)
+(pinCenter 1000 370))
+(devCarrierFor 41
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter -70 -80))
+(devCarrierFor 43
+(active open)
+(icon
+(extent 33 0))
+(open
+(extent 121 22))
+(pinCenter 760 40))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 68 15))
+(terminals on)
+(pinCenter 640 40))
+(devCarrierFor 54
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 120 610))
+(devCarrierFor 56
+(active icon)
+(icon
+(extent 92 15))
+(open)
+(terminals on)
+(pinCenter -70 -10))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 92 15))
+(open)
+(terminals on)
+(pinCenter 120 660))
+(connect D20:1 D0:0
+(points 3 -34 -80 100 -80 100 -34))
+(connect D0:0 D1:0
+(points 6 100 -7 100 10 150 10 150 -60 280 -60 280 -45))
+(connect D3:0 D2:0
+(points 6 100 73 100 90 150 90 150 30 280 30 280 35))
+(connect D20:1 D3:0
+(points 5 -34 -80 50 -80 50 20 100 20 100 46))
+(connect D5:0 D4:0
+(points 6 100 163 100 180 150 180 150 120 280 120 280 125))
+(connect D20:1 D5:0
+(points 5 -34 -80 50 -80 50 100 100 100 100 136))
+(connect D20:1 D6:0
+(points 5 -34 -80 50 -80 50 190 100 190 100 226))
+(connect D6:0 D7:0
+(points 6 100 253 100 270 150 270 150 200 280 200 280 215))
+(connect D1:1 D8:1
+(points 4 369 -10 420 -10 420 230 476 230))
+(connect D2:1 D8:2
+(points 4 369 70 410 70 410 250 476 250))
+(connect D4:1 D8:3
+(points 4 369 160 400 160 400 270 476 270))
+(connect D7:1 D8:4
+(points 4 369 250 390 250 390 290 476 290))
+(connect D13:1 D8:5
+(points 4 369 350 390 350 390 310 476 310))
+(connect D17:1 D8:6
+(points 4 369 440 400 440 400 330 476 330))
+(connect D18:1 D8:7
+(points 4 369 540 410 540 410 350 476 350))
+(connect D20:1 D9:0
+(points 5 -34 -80 50 -80 50 280 100 280 100 326))
+(connect D20:1 D12:0
+(points 5 -34 -80 50 -80 50 380 100 380 100 416))
+(connect D9:0 D13:0
+(points 6 100 353 100 370 150 370 150 300 280 300 280 315))
+(connect D11:1 D14:1
+(points 4 726 190 760 190 760 250 804 250))
+(connect D10:1 D14:2
+(points 4 726 250 750 250 750 270 804 270))
+(connect D8:1 D14:3
+(points 2 563 290 804 290))
+(connect D20:1 D15:0
+(points 7 -34 -80 50 -80 50 450 90 450 90 470 100 470 100 496))
+(connect D14:1 D16:1
+(points 2 1195 270 1237 270))
+(connect D12:0 D17:0
+(points 6 100 443 100 460 150 460 150 390 280 390 280 405))
+(connect D15:0 D18:0
+(points 6 100 523 100 540 150 540 150 490 280 490 280 505))
+(connect D14:0 D19:0
+(points 2 1000 307 1000 360))
+(connect D22:1 D21:1
+(points 2 676 40 697 40))
+(connect D8:1 D22:1
+(points 4 563 290 580 290 580 40 603 40))
+(connect D20:1 D23:0
+(points 5 -34 -80 50 -80 50 550 120 550 120 596))
+(connect D20:0 D24:0
+(points 2 -70 -52 -70 -20))
+(connect D23:0 D25:0
+(points 2 120 623 120 650)))
+(stackingOrder 1 2 4 7 10 11 13 14 16 17 5 15 12 9 6 3 18 0 19 21 22 8 20 23 24
+25)))))
 (device 5 IMPORT
 (properties
 (name "Import Library")
@@ -420,7 +2334,333 @@
 (lock name constraints)
 (optional yes)))
 (implementation))
-(device 12 CALL
+(device 23 START25
+(properties
+(variableScope cont)))
+(device 24 NOTE
+(properties
+(name "pData decode")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Calibri;}{\\f1\\fnil\\fcharset0 Calibri;}{\\f2\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\trowd\\trgaph30\\trleft-30\\cellx1002\\cellx2034\\pard\\intbl\\cf1\\f0\\fs22 16\\f1  \\f0\\cell 10000\\cell\\row\r\n\\intbl 18\\cell 10010\\cell\\row\r\n\\intbl 20\\cell 10100\\cell\\row\r\n\\intbl 21\\cell 10101\\cell\\row\r\n\\intbl 22\\cell 10110\\cell\\row\r\n\\intbl 23\\cell 10111\\cell\\row\r\n\\intbl 24\\cell 11000\\cell\\row\r\n\\pard\\f2\\fs24\\par\r\n}\r\n"
+)))
+(device 25 NOTE
+(properties
+(name "ReadMe")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 ACESS I/O:  USBP-DIO16   documentation C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\USBP-DIO16RO8\\par\r\nThe AIOUSB API Library is contained in the AIOUSB.dll file. This DLL is provided in both 32-bit and 64-bit versions, and is installed automatically to the correct directories based on the version of Windows being used.\\par\r\n\\par\r\n32-bit (x86/IA32) Windows: the 32-bit AIOUSB.dll is installed to your \\\\Windows\\\\System32 directory.\\par\r\n64-bit (x64/AMD64) Windows: the 32-bit AIOUSB.dll is installed in \\\\Windows\\\\SysWOW64\\\\; the 64-bit DLL goes into \\\\Windows\\\\System32\\\\.\\par\r\n\"Header\" files are in C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\Headers\\\\ and includes language-specific convenience wrappers for C (AIOUSB.h), Visual Basic 6 (AIOUSB.bas), Visual Basic .NET (AIOUSB.vb), Delphi (AIOUSB.pas), and C# (AIOUSB.cs).\\par\r\n\\par\r\nFor those languages that link with .lib files they are located in the C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\C Libraries\\\\ folder.\\par\r\n\\par\r\n\\pard\\keepn\\sb100\\sa100\\cf0\\kerning36\\b\\f1\\fs48 VEE:The Definition File\\par\r\n\\pard\\sb100\\sa100\\kerning0\\b0\\fs24 The Call object or Formula expression determines the type of data it should pass to the function based on the contents of the definition file. The definition file defines the type of data the function returns, the function name, and the arguments the function accepts. The data has the following form:\\par\r\n<return type> <function name> (<type> <paramname>, <type> <paramname>, ...) ;\\par\r\n\\pard\\cf1\\f0\\par\r\n}\r\n"
+)))
+(device 69 CONFIRM25
+(properties
+(name "Close")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 71 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 74 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 83 CONTEXT
+(properties
+(name "Get device Wheel")
+(variableScope cont)
+(trigMode deg)
+(nextID 26)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call MyAIOUSB.GetDevices")
+(variableScope cont)
+(callFunc "MyAIOUSB.GetDevices")
+(parmMode rev30))
+(interface
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))))
+(device 1 IFTHENELSE
+(properties
+(name "if USBWheel")
+(variableScope cont)
+(cases 1 "USBWheel==1"))
+(interface
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 3 MESSAGEBOX
+(properties
+(variableScope cont)
+(message
+"The Acces I/O  is not enabled. Plug in USB and retry. Or, Ignore and use Thumb Wheel."
+)
+(symbol Information))
+(interface
+(output 1
+(name "Abort")
+(lock name constraints))
+(output 2
+(name "Retry")
+(lock name constraints))
+(output 3
+(name "Ignore")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "Abort  Retry  Ignore")
+(buttonLabel1 "Abort")
+(buttonLabel2 "Retry")
+(buttonLabel3 "Ignore")
+(bdefault "Retry")))
+(device 5 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 6 NEXT
+(properties
+(variableScope cont)))
+(device 10 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 11 BREAK
+(properties
+(variableScope cont)))
+(device 17 CONTEXT
+(properties
+(name "Thumb or USB")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 DECLVAR
+(properties
+(name "Declare ThumbWheel")
+(scope glob)
+(globalName "ThumbWheel"))
+(implementation
+(value Int16
+(data  0))))
+(device 1 DECLVAR
+(properties
+(name "Declare USBWheel")
+(scope glob)
+(globalName "USBWheel"))
+(implementation
+(value Int16
+(data  0))))
+(device 2 TOGLOBAL
+(properties
+(name "Set ThumbWheel")
+(variableScope cont)
+(globalName "ThumbWheel"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 4 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  0))
+(initValue Int16
+(data  0))))
+(device 5 TOGLOBAL
+(properties
+(name "Set USBWheel")
+(variableScope cont)
+(globalName "USBWheel"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(configuration
+(connect D3:1 D2:1)
+(connect D3:1 D4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 311 236)
+(anchorPt 10 -11)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 132 15))
+(open
+(extent 199 115))
+(pinCenter 130 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 116 15))
+(open
+(extent 213 115))
+(pinCenter 130 100))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 99 51))
+(terminals on)
+(pinCenter 200 200))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 60 180))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 89 15))
+(open
+(extent 99 51))
+(terminals on)
+(pinCenter 200 150))
+(connect D3:1 D2:1
+(points 4 96 180 120 180 120 200 145 200))
+(connect D3:1 D4:1
+(points 4 96 180 120 180 120 150 153 150)))
+(stackingOrder 3 2 0 1 4))))
+(device 18 TOGLOBAL
+(properties
+(name "Set ThumbWheel")
+(variableScope cont)
+(globalName "ThumbWheel"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 19 TOGLOBAL
+(properties
+(name "Set USBWheel")
+(variableScope cont)
+(globalName "USBWheel"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 20 BREAK
+(properties
+(variableScope cont)))
+(device 21 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "OK then, use the thumb wheel.")
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK")
+(buttonLabel1 "OK")
+(buttonLabel2 "")
+(buttonLabel3 "")
+(bdefault "OK")))
+(device 23 CONTEXT
+(properties
+(name "Configure Acces I/O")
+(variableScope cont)
+(trigMode deg)
+(nextID 10)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 1 CONSTANT
+(properties
+(name "false")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Boolean")
+(lock name constraints)))
+(implementation
+(value Boolean
+(data  false))
+(initValue Boolean
+(data  false))))
+(device 2 CONSTANT
+(properties
+(name "1")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  1))
+(initValue Int32
+(data  0))))
+(device 3 CONSTANT
+(properties
+(name "pData")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  5))
+(initValue Int32
+(data  0))))
+(device 4 CALL
 (properties
 (name "Call MyAIOUSB.DIO_Configure")
 (variableScope cont)
@@ -459,7 +2699,391 @@
 (name "pData")
 (lock name constraints)
 (optional yes))))
-(device 14 CONSTANT
+(device 5 IFTHENELSE
+(properties
+(name "If A == B")
+(variableScope cont)
+(cases 1 "A==B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 6 MESSAGEBOX
+(properties
+(variableScope cont)
+(position 0 200)
+(message "The Acces I/O is configured. Set the thumb wheel to \"0\".")
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK")
+(buttonLabel1 "OK")
+(buttonLabel2 "")
+(buttonLabel3 "")
+(bdefault "OK")))
+(device 7 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 8 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 9 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:1 D4:1)
+(connect D1:1 D4:2)
+(connect D2:1 D4:3)
+(connect D3:1 D4:4)
+(connect D4:0 D5:0)
+(connect D4:3 D5:1)
+(connect D3:1 D5:2)
+(connect D5:1 D6:0)
+(connect D4:1 D7:1)
+(connect D4:2 D8:1)
+(connect D4:3 D9:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 891 378)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 110 100))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 31 0))
+(open
+(extent 86 29))
+(pinCenter 110 150))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 11 0))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 110 200))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 37 0))
+(open
+(extent 73 29)
+(showFormat int))
+(pinCenter 110 250))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 184 45))
+(open
+(extent 176 90))
+(terminals on)
+(pinCenter 465 150))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 46 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 455 290))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 81 15))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 650 310))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 760 100))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 760 140))
+(devCarrierFor 9
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 760 180))
+(connect D0:1 D4:1
+(points 4 146 100 180 100 180 120 294 120))
+(connect D1:1 D4:2
+(points 4 155 150 180 150 180 140 294 140))
+(connect D2:1 D4:3
+(points 4 146 200 190 200 190 160 294 160))
+(connect D3:1 D4:4
+(points 4 149 250 200 250 200 180 294 180))
+(connect D4:0 D5:0
+(points 4 460 197 460 209 460 209 460 244))
+(connect D4:3 D5:1
+(points 6 625 180 570 180 570 200 370 200 370 280 392 280))
+(connect D3:1 D5:2
+(points 4 149 250 210 250 210 300 392 300))
+(connect D5:1 D6:0
+(points 3 528 280 650 280 650 300))
+(connect D4:1 D7:1
+(points 6 625 120 560 120 560 130 570 130 570 100 697 100))
+(connect D4:2 D8:1
+(points 4 625 150 570 150 570 140 697 140))
+(connect D4:3 D9:1
+(points 4 625 180 570 180 570 180 697 180)))
+(stackingOrder 0 1 2 3 5 6 7 8 9 4))))
+(device 25 IFTHENELSE
+(properties
+(name "if USBWheel")
+(variableScope cont)
+(cases 1 "USBWheel==1"))
+(interface
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(configuration
+(connect D5:1 D0:0)
+(connect D0:0 D1:0)
+(connect D1:2 D2:0)
+(connect D2:1 D3:0)
+(connect D2:2 D4:0)
+(connect D7:0 D5:0)
+(connect D1:1 D6:0)
+(connect D2:3 D8:1)
+(connect D0:1 D9:1)
+(connect D11:1 D10:0)
+(connect D8:0 D11:0)
+(connect D13:1 D12:0)
+(connect D5:0 D13:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 776 613)
+(anchorPt 142 52)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 163 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 120 110))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 75 25))
+(open
+(extent 167 51))
+(terminals on)
+(pinCenter 140 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 81 34))
+(open
+(extent 594 134))
+(terminals on)
+(pinCenter 220 270))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 530 390))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 28 15))
+(open)
+(terminals on)
+(pinCenter 450 410))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter -30 60))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 340 220))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 89 15))
+(terminals on)
+(pinCenter -30 0))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 99 51))
+(terminals on)
+(pinCenter 340 300))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 89 15))
+(open
+(extent 99 51))
+(terminals on)
+(pinCenter 340 110))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 400 410))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 81 15))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 340 360))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 117 15))
+(terminals on)
+(pinCenter 50 280))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 75 25))
+(open
+(extent 167 51))
+(terminals on)
+(pinCenter -30 180))
+(connect D5:1 D0:0
+(points 3 6 60 140 60 140 64))
+(connect D0:0 D1:0
+(points 4 140 138 140 142 140 142 140 165))
+(connect D1:2 D2:0
+(points 3 180 190 220 190 220 250))
+(connect D2:1 D3:0
+(points 3 263 260 530 260 530 362))
+(connect D2:2 D4:0
+(points 3 263 270 450 270 450 400))
+(connect D7:0 D5:0
+(points 2 -30 10 -30 32))
+(connect D1:1 D6:0
+(points 3 180 170 340 170 340 210))
+(connect D2:3 D8:1
+(points 4 263 280 270 280 270 300 285 300))
+(connect D0:1 D9:1
+(points 4 280 110 258 110 258 110 293 110))
+(connect D11:1 D10:0
+(points 3 383 360 400 360 400 400))
+(connect D8:0 D11:0
+(points 2 340 310 340 350))
+(connect D13:1 D12:0
+(points 3 10 170 50 170 50 270))
+(connect D5:0 D13:0
+(points 2 -30 88 -30 165)))
+(stackingOrder 4 6 5 3 10 8 11 1 9 2 7 12 0 13))))
+(device 97 IFTHENELSE
+(properties
+(name "if ThumbWheel")
+(variableScope cont)
+(cases 1 "ThumbWheel==1"))
+(interface
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 98 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "Use opposable thumbs.")
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK")
+(buttonLabel1 "OK")
+(buttonLabel2 "")
+(buttonLabel3 "")
+(bdefault "OK")))
+(device 99 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 100 NEXT
+(properties
+(variableScope cont)))
+(device 101 CONTEXT
+(properties
+(name "CleanUp")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
 (properties
 (name "Int32")
 (variableScope cont)
@@ -473,21 +3097,87 @@
 (data  0))
 (initValue Int32
 (data  0))))
-(device 15 CONSTANT
+(device 1 CALL
 (properties
-(name "false")
+(name "Call MyAIOUSB.AIOUSB_CloseDevice")
+(variableScope cont)
+(callFunc "MyAIOUSB.AIOUSB_CloseDevice")
+(parmMode rev30))
+(interface
+(input 1
+(name "DeviceIndex")
+(requires
+(datatype Int32))
+(optional yes))
+(output 1
+(name "Ret Value")
+(lock name constraints)
+(optional yes))))
+(device 2 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 711 197)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 100 110))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 227 0))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 335 110))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 580 110))
+(connect D0:1 D1:1
+(points 2 136 110 164 110))
+(connect D1:1 D2:1
+(points 2 495 110 517 110)))
+(stackingOrder 0 1 2))))
+(device 125 CONTEXT
+(properties
+(name "construction debris")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Int32")
 (variableScope cont)
 (enableEditing 1))
 (interface
 (output 1
-(name "Boolean")
+(name "Int32")
 (lock name constraints)))
 (implementation
-(value Boolean
-(data  false))
-(initValue Boolean
-(data  false))))
-(device 17 CONSTANT
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 1 CONSTANT
 (properties
 (name "1")
 (variableScope cont)
@@ -498,59 +3188,10 @@
 (lock name constraints)))
 (implementation
 (value Int32
-(data  1))
+(data  0))
 (initValue Int32
 (data  0))))
-(device 19 CONSTANT
-(properties
-(name "pData")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  5))
-(initValue Int32
-(data  0))))
-(device 20 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 21 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 22 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 23 START25
-(properties
-(variableScope cont)))
-(device 24 NOTE
-(properties
-(name "pData decode")
-(variableScope cont)
-(text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Calibri;}{\\f1\\fnil\\fcharset0 Calibri;}{\\f2\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\trowd\\trgaph30\\trleft-30\\cellx1002\\cellx2034\\pard\\intbl\\cf1\\f0\\fs22 16\\f1  \\f0\\cell 10000\\cell\\row\r\n\\intbl 18\\cell 10010\\cell\\row\r\n\\intbl 20\\cell 10100\\cell\\row\r\n\\intbl 21\\cell 10101\\cell\\row\r\n\\intbl 22\\cell 10110\\cell\\row\r\n\\intbl 23\\cell 10111\\cell\\row\r\n\\intbl 24\\cell 11000\\cell\\row\r\n\\pard\\f2\\fs24\\par\r\n}\r\n"
-)))
-(device 25 NOTE
-(properties
-(name "ReadMe")
-(variableScope cont)
-(text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 ACESS I/O:  USBP-DIO16   documentation C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\USBP-DIO16RO8\\par\r\nThe AIOUSB API Library is contained in the AIOUSB.dll file. This DLL is provided in both 32-bit and 64-bit versions, and is installed automatically to the correct directories based on the version of Windows being used.\\par\r\n\\par\r\n32-bit (x86/IA32) Windows: the 32-bit AIOUSB.dll is installed to your \\\\Windows\\\\System32 directory.\\par\r\n64-bit (x64/AMD64) Windows: the 32-bit AIOUSB.dll is installed in \\\\Windows\\\\SysWOW64\\\\; the 64-bit DLL goes into \\\\Windows\\\\System32\\\\.\\par\r\n\"Header\" files are in C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\Headers\\\\ and includes language-specific convenience wrappers for C (AIOUSB.h), Visual Basic 6 (AIOUSB.bas), Visual Basic .NET (AIOUSB.vb), Delphi (AIOUSB.pas), and C# (AIOUSB.cs).\\par\r\n\\par\r\nFor those languages that link with .lib files they are located in the C:\\\\Users\\\\Public\\\\Documents\\\\ACCES\\\\\\{packagename\\}\\\\Win32\\\\Driver.SRC\\\\AIOUSB\\\\C Libraries\\\\ folder.\\par\r\n\\par\r\n\\pard\\keepn\\sb100\\sa100\\cf0\\kerning36\\b\\f1\\fs48 VEE:The Definition File\\par\r\n\\pard\\sb100\\sa100\\kerning0\\b0\\fs24 The Call object or Formula expression determines the type of data it should pass to the function based on the contents of the definition file. The definition file defines the type of data the function returns, the function name, and the arguments the function accepts. The data has the following form:\\par\r\n<return type> <function name> (<type> <paramname>, <type> <paramname>, ...) ;\\par\r\n\\pard\\cf1\\f0\\par\r\n}\r\n"
-)))
-(device 29 CONSTANT
+(device 2 CONSTANT
 (properties
 (name "pData")
 (variableScope cont)
@@ -564,44 +3205,7 @@
 (data  6))
 (initValue Int32
 (data  0))))
-(device 30 CONSTANT
-(properties
-(name "1")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  0))
-(initValue Int32
-(data  0))))
-(device 32 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  0))
-(initValue Int32
-(data  0))))
-(device 35 START25
-(properties
-(variableScope cont)))
-(device 42 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 44 CALL
+(device 3 CALL
 (properties
 (name "Call MyAIOUSB.DIO_Write8")
 (variableScope cont)
@@ -627,163 +3231,596 @@
 (name "Ret Value")
 (lock name constraints)
 (optional yes))))
-(device 45 CALL
-(properties
-(name "Call MyAIOUSB.AIOUSB_CloseDevice")
-(variableScope cont)
-(callFunc "MyAIOUSB.AIOUSB_CloseDevice")
-(parmMode rev30))
-(interface
-(input 1
-(name "DeviceIndex")
-(requires
-(datatype Int32))
-(optional yes))
-(output 1
-(name "Ret Value")
-(lock name constraints)
-(optional yes))))
-(device 46 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  0))
-(initValue Int32
-(data  0))))
-(device 48 TEXTDISPLAY
+(device 4 TEXTDISPLAY
 (properties
 (variableScope cont))
 (interface
 (input 1
 (name "Data"))))
-(device 49 START25
+(device 5 START25
 (properties
 (variableScope cont)))
-(device 50 CALL
-(properties
-(name "Call MyAIOUSB.GetDevices")
-(variableScope cont)
-(callFunc "MyAIOUSB.GetDevices")
-(parmMode rev30))
-(interface
-(output 1
-(name "Ret Value")
-(lock name constraints)
-(optional yes))))
-(device 51 START25
-(properties
-(variableScope cont)))
-(device 52 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
 (configuration
-(connect D9:0 D0:0)
-(connect D22:0 D1:0)
-(connect D2:1 D1:1)
-(connect D3:1 D1:2)
-(connect D4:1 D1:3)
-(connect D5:1 D1:4)
-(connect D1:1 D6:1)
-(connect D1:2 D7:1)
-(connect D1:3 D8:1)
-(connect D17:1 D16:1)
-(connect D15:0 D17:0)
-(connect D14:1 D17:1)
-(connect D13:1 D17:2)
-(connect D12:1 D17:3)
-(connect D21:0 D18:0)
-(connect D19:1 D18:1)
-(connect D18:1 D20:1)
-(connect D23:0 D22:0)
-(connect D22:1 D24:1)))
+(connect D5:0 D3:0)
+(connect D0:1 D3:1)
+(connect D1:1 D3:2)
+(connect D2:1 D3:3)
+(connect D3:1 D4:1)))
 (contextCarrier
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 932 743)
-(wndState max)
 (active detail)
 (detail
-(extent 1703 869)
-(anchorPt 184 -61)
+(extent 844 295)
+(anchorPt -22 19)
 (configuration
-(devCarrierFor 5
-(active open)
-(icon)
-(open
-(extent 669 133))
-(pinCenter 240 200))
-(devCarrierFor 12
-(active open)
-(icon
-(extent 184 0))
-(open
-(extent 176 90))
-(terminals on)
-(pinCenter 295 470))
-(devCarrierFor 14
+(devCarrierFor 0
 (active open)
 (icon)
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 20 440))
-(devCarrierFor 15
+(pinCenter 120 100))
+(devCarrierFor 1
 (active open)
 (icon
-(extent 31 0))
-(open
-(extent 86 29))
-(pinCenter 20 490))
-(devCarrierFor 17
-(active open)
-(icon
-(extent 11 0))
+(extent 24 15))
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 20 540))
-(devCarrierFor 19
+(pinCenter 120 160))
+(devCarrierFor 2
 (active open)
 (icon
 (extent 37 0))
 (open
 (extent 73 29)
 (showFormat int))
-(pinCenter 20 590))
-(devCarrierFor 20
+(pinCenter 120 220))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 163 0))
+(open
+(extent 236 70))
+(terminals on)
+(pinCenter 445 180))
+(devCarrierFor 4
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 670 440))
-(devCarrierFor 21
+(pinCenter 730 180))
+(devCarrierFor 5
 (active open)
 (icon)
 (open
-(extent 121 22))
-(pinCenter 670 480))
-(devCarrierFor 22
-(active open)
-(icon)
+(extent 47 22))
+(title off)
+(pinCenter 440 50))
+(connect D5:0 D3:0
+(points 2 440 63 440 124))
+(connect D0:1 D3:1
+(points 4 156 100 190 100 190 160 244 160))
+(connect D1:1 D3:2
+(points 4 156 160 180 160 180 180 244 180))
+(connect D2:1 D3:3
+(points 4 159 220 180 220 180 200 244 200))
+(connect D3:1 D4:1
+(points 2 635 180 667 180)))
+(stackingOrder 0 1 2 3 4 5))))
+(device 131 CALL
+(properties
+(name "Call PushSelect")
+(variableScope cont)
+(callFunc "PushSelect")
+(parmMode rev30)))
+(device 135 IFTHENELSE
+(properties
+(name "if USBWheel")
+(variableScope cont)
+(cases 1 "USBWheel==1"))
+(interface
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 136 CONTEXT
+(properties
+(name "veeosInit")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\nveeosInit has no underlying function\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nPlace this object at the beginning of any program that uses the veeos library. Set \"Run Every Time\" to cause this object to execute each time your program is run.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 33)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 12 START25
+(properties
+(variableScope cont)))
+(device 18 TOGGLE25
+(properties
+(name "Run Every Time")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 20 IFTHENELSE
+(properties
+(name "force run")
+(variableScope cont)
+(cases 1 "A==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 21 TOGLOBAL
+(properties
+(name "Set veeosInit_already_run")
+(variableScope cont)
+(globalName "veeosInit_already_run"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 22 CONSTANT
+(properties
+(name "0")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "UInt8")
+(lock name constraints)))
+(implementation
+(value UInt8
+(data  0))
+(initValue UInt8
+(data  0))))
+(device 24 LABEL
+(properties
+(name "This item FIRST in all VEEOS programs")
+(variableScope cont)
+(labelValue "This item FIRST in all VEEOS programs"))
+(implementation))
+(device 25 CONTEXT
+(properties
+(name "choose bootstrap library")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "local bootstrap")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "bootstrapLib.vxe"))
+(initValue Text
+(data  ""))))
+(device 2 FORMULA
+(properties
+(name "system bootstrap")
+(variableScope cont)
+(expr 1 "installDir()+\"/veeos/lib/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOMEPATH\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 VECTORCONCATENATOR
+(properties
+(name "bootstrap file list")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 9 CONTEXT
+(properties
+(name "choose bootstrap source")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 16)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 8 EXITCONTEXT
+(properties
+(variableScope cont)))
+(device 11 FORMULA
+(properties
+(name "each item")
+(variableScope cont)
+(expr 1 "A[n]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "n")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 12 FORMULA
+(properties
+(name "how many?")
+(variableScope cont)
+(expr 1 "totSize(A)"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORCOUNT
+(properties
+(variableScope cont)
+(count 5))
+(interface
+(input 1
+(name "Count")
+(tag "Count")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 14 FROMFILE
+(properties
+(name "see if file exists and is finite size")
+(variableScope cont)
+(transactions 2 "READ BINARY x BYTE" "EXECUTE CLOSE"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file read
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 15 GATE
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(tag "InData"))
+(output 1
+(name "X"))))
+(configuration
+(connect D5:0 D0:0)
+(connect D2:1 D1:1)
+(connect D3:1 D1:2)
+(connect I1:1 D2:1)
+(connect D2:2 D3:1)
+(connect D1:0 D4:0)
+(connect D1:1 D4:1)
+(connect D4:1 D5:0)
+(connect D1:1 D5:1)
+(connect D5:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 11 FORMULA
+(properties
+(name "user specified bootstrap")
+(variableScope cont)
+(expr 1 "getenv(\"MY_BOOTSTRAPLIB\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOME\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D5:1 D3:1)
+(connect D0:1 D3:2)
+(connect D6:1 D3:3)
+(connect D2:1 D3:4)
+(connect D1:1 D3:5)
+(connect D3:1 D4:1)
+(connect D4:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 26 IMPORT
+(properties
+(name "Import Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libType userFunction)
+(libName "bootstrapLib")
+(fileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 27 DELETE
+(properties
+(name "Delete Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libName "bootstrapLib"))
+(implementation))
+(device 29 CALL
+(properties
+(name "Call bootstrapLib.init")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(callFunc "bootstrapLib.init")
+(parmMode rev30))
+(interface
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes))))
+(device 31 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6600)
+(message "no valid VEEOS Bootstrap Library found")))
+(device 32 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6601)
+(message "VEEOS Bootstrap Library: init() function not found or failed")))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D4:1 D3:1)
+(connect D2:1 D4:0)
+(connect D1:0 D6:0)
+(connect D6:0 D7:0)
+(connect D6:1 D7:1)
+(connect D9:0 D8:0)
+(connect D7:0 D9:0)
+(connect D7:1 D10:0)
+(connect D9:1 D11:0)))
+(contextCarrier
+(active panel)
+(panel
+(extent 173 114)
+(drawGrid "off")
+(widget 5 detail
+(relativeOrigin 0 0)
+(bg "Light Beige")
+(fg "Black")
+(font "Arial" 9)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle none)
+(extent 228 27)
+(just l))
+(widget 0 detail
+(relativeOrigin 10 30)
+(bg "Light Beige")
+(fg "Black")
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 151 51))
+(widget 1 detail
+(relativeOrigin 20 90)
+(bg "Light Beige")
+(fg "Black")
+(PID 2)
+(title off)
+(tabIndex 2)
+(borderStyle none)
+(extent 120 25)
+(scaled off)
+(format check box))
+(panelBg "Light Beige"))))
+(device 137 CALL
+(properties
+(name "Call PushSelect1")
+(variableScope cont)
+(callFunc "PushSelect1")
+(parmMode rev30)))
+(device 139 BREAK
+(properties
+(variableScope cont)))
+(configuration
+(connect D16:0 D0:0)
+(connect D5:0 D4:0)
+(connect D7:0 D5:0)
+(connect D12:0 D6:0)
+(connect D0:0 D7:0)
+(connect D5:1 D8:0)
+(connect D10:0 D9:0)
+(connect D15:2 D10:0)
+(connect D9:1 D11:0)
+(connect D4:0 D12:0)
+(connect D5:1 D15:0)
+(connect D1:0 D16:0)
+(connect D15:1 D17:0)
+(connect D17:0 D18:0))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active detail)
+(panel
+(extent 377 461)
+(drawGrid "on")
+(widget 1 detail
+(relativeOrigin 20 40)
+(PID 0)
+(title off)
+(tabIndex 0)
+(borderStyle none)
+(extent 47 22))
+(widget 4 detail
+(relativeOrigin 20 120)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 47 22))
+(widget 10 detail
+(relativeOrigin 20 80)
+(PID 3)
+(title off)
+(tabIndex 3)
+(borderStyle none)
+(extent 47 22)))
+(detail
+(extent 1510 764)
+(anchorPt -276 11)
+(configuration
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 82 15))
 (open
-(extent 121 22))
-(pinCenter 670 520))
+(extent 669 133))
+(pinCenter 370 140))
 (devCarrierFor 23
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 240 90))
+(pinCenter 370 80))
 (devCarrierFor 24
 (active open)
 (icon
@@ -792,7 +3829,7 @@
 (open
 (extent 404 180)
 (editing enabled))
-(pinCenter 110 910))
+(pinCenter -50 830))
 (devCarrierFor 25
 (active icon)
 (icon
@@ -801,140 +3838,148 @@
 (open
 (extent 1084 196)
 (editing enabled))
-(pinCenter 520 -10))
-(devCarrierFor 29
+(pinCenter -180 -50))
+(devCarrierFor 69
 (active open)
 (icon
 (extent 37 0))
 (open
-(extent 73 29)
-(showFormat int))
-(pinCenter -140 720))
-(devCarrierFor 30
-(active open)
+(extent 47 22))
+(title off)
+(pinCenter 370 290))
+(devCarrierFor 71
+(active icon)
 (icon
-(extent 24 15))
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter 370 230))
+(devCarrierFor 74
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
 (open
-(extent 67 29)
-(showFormat int))
-(pinCenter -120 660))
-(devCarrierFor 32
-(active open)
-(icon)
+(extent 65 31))
+(pinCenter 370 390))
+(devCarrierFor 83
+(active icon)
+(icon
+(extent 104 15))
+(terminals on)
+(pinCenter 370 170))
+(devCarrierFor 97
+(active icon)
+(icon
+(extent 91 25))
 (open
-(extent 67 29)
-(showFormat int))
-(pinCenter -180 560))
-(devCarrierFor 35
+(extent 167 51))
+(terminals on)
+(pinCenter 930 280))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 81 15))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 700 360))
+(devCarrierFor 99
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 300 590))
-(devCarrierFor 42
-(active open)
-(icon)
-(open
-(extent 121 22))
-(pinCenter 600 720))
-(devCarrierFor 44
-(active open)
+(pinCenter 700 310))
+(devCarrierFor 100
+(active icon)
 (icon
-(extent 163 0))
-(open
-(extent 236 70))
+(extent 28 15))
+(open)
 (terminals on)
-(pinCenter 205 680))
-(devCarrierFor 45
-(active open)
+(pinCenter 760 460))
+(devCarrierFor 101
+(active icon)
 (icon
-(extent 227 0))
+(extent 53 15))
+(terminals on)
+(pinCenter 370 330))
+(devCarrierFor 125
+(active icon)
+(icon
+(extent 115 15))
+(terminals on)
+(pinCenter 890 680))
+(devCarrierFor 131
+(active icon)
+(icon
+(extent 96 15))
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 955 630))
-(devCarrierFor 46
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 720 630))
-(devCarrierFor 48
-(active open)
-(icon)
-(open
-(extent 121 22))
-(pinCenter 1240 630))
-(devCarrierFor 49
-(active open)
-(icon)
-(open
-(extent 47 22))
-(title off)
-(pinCenter 960 560))
-(devCarrierFor 50
-(active open)
+(pinCenter 740 680))
+(devCarrierFor 135
+(active icon)
 (icon
-(extent 163 0))
+(extent 75 25))
+(open
+(extent 167 51))
+(terminals on)
+(pinCenter 510 270))
+(devCarrierFor 136
+(active icon)
+(icon
+(extent 53 15))
+(open
+(extent 175 117)
+(carbonCopy))
+(titleBg "Light Beige")
+(pinCenter 370 110))
+(devCarrierFor 137
+(active icon)
+(icon
+(extent 104 15))
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 970 350))
-(devCarrierFor 51
-(active open)
-(icon)
-(open
-(extent 47 22))
-(title off)
-(pinCenter 1000 270))
-(devCarrierFor 52
-(active open)
-(icon)
-(open
-(extent 121 22))
-(pinCenter 1250 350))
-(connect D9:0 D0:0
-(points 2 240 103 240 113))
-(connect D22:0 D1:0
-(points 6 990 378 990 400 830 400 830 380 290 380 290 404))
-(connect D2:1 D1:1
-(points 2 56 440 124 440))
-(connect D3:1 D1:2
-(points 4 65 490 90 490 90 460 124 460))
-(connect D4:1 D1:3
-(points 4 56 540 100 540 100 480 124 480))
-(connect D5:1 D1:4
-(points 4 59 590 110 590 110 500 124 500))
-(connect D1:1 D6:1
-(points 2 455 440 607 440))
-(connect D1:2 D7:1
-(points 4 455 470 480 470 480 480 607 480))
-(connect D1:3 D8:1
-(points 4 455 500 480 500 480 520 607 520))
-(connect D17:1 D16:1
-(points 2 395 680 537 720))
-(connect D15:0 D17:0
-(points 2 300 603 200 624))
-(connect D14:1 D17:1
-(points 2 -144 560 4 660))
-(connect D13:1 D17:2
-(points 2 -84 660 4 680))
-(connect D12:1 D17:3
-(points 2 -101 720 4 700))
-(connect D21:0 D18:0
-(points 2 960 573 950 584))
-(connect D19:1 D18:1
-(points 2 756 630 784 630))
-(connect D18:1 D20:1
-(points 2 1115 630 1177 630))
-(connect D23:0 D22:0
-(points 4 1000 283 1000 290 990 290 990 304))
-(connect D22:1 D24:1
-(points 2 1130 350 1187 350)))
-(stackingOrder 3 4 5 2 9 11 7 8 10 1 15 12 16 14 13 17 19 18 6 21 20 22 23 24 0)
-)
+(pinCenter 570 360))
+(devCarrierFor 139
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 570 450))
+(connect D16:0 D0:0
+(points 2 370 120 370 130))
+(connect D5:0 D4:0
+(points 2 370 258 370 276))
+(connect D7:0 D5:0
+(points 2 370 180 370 202))
+(connect D12:0 D6:0
+(points 2 370 340 370 362))
+(connect D0:0 D7:0
+(points 2 370 150 370 160))
+(connect D5:1 D8:0
+(points 3 406 230 930 230 930 265))
+(connect D10:0 D9:0
+(points 2 700 323 700 350))
+(connect D15:2 D10:0
+(points 3 550 280 700 280 700 296))
+(connect D9:1 D11:0
+(points 3 743 360 760 360 760 450))
+(connect D4:0 D12:0
+(points 2 370 303 370 320))
+(connect D5:1 D15:0
+(points 3 406 230 510 230 510 255))
+(connect D1:0 D16:0
+(points 2 370 93 370 100))
+(connect D15:1 D17:0
+(points 3 550 260 570 260 570 350))
+(connect D17:0 D18:0
+(points 2 570 370 570 440)))
+(stackingOrder 3 2 12 7 4 6 5 17 15 18 0 1 16 10 9 11 14 8 13))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
