@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Mon 10/May/2021 09:18:58 ")
+(date "Thu 09/Mar/2023 16:44:41 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -246,9 +246,10 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 32)
+(nextID 63)
 (popupTitleText "Untitled")
-(popupMoveable 1))
+(popupMoveable 1)
+(deleteGlobals 0))
 (deviceList
 (device 0 EXVEEOBJECT
 (properties
@@ -292,12 +293,6 @@
 (lock name constraints)
 (optional yes)))
 (implementation))
-(device 3 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
 (device 4 START25
 (properties
 (variableScope cont)))
@@ -345,7 +340,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  21520))
+(data  20930))
 (initValue Real
 (data  0))))
 (device 9 CONSTANT
@@ -359,7 +354,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  3.98107170553497))
+(data  4.52035365636024))
 (initValue Real
 (data  0))))
 (device 10 CONSTANT
@@ -373,7 +368,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  6.30957344480193))
+(data  4.89390091847749))
 (initValue Real
 (data  0))))
 (device 11 CONSTANT
@@ -387,7 +382,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  21520))
+(data  21034.4827586207))
 (initValue Real
 (data  0))))
 (device 12 CONSTANT
@@ -401,42 +396,10 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  20640))
+(data  20882.7586206897))
 (initValue Real
 (data  0))))
 (device 14 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "(y0*(x1-x) +y1*(x-x0))/(x1-x0) +.05"))
-(interface
-(input 1
-(name "x0")
-(optional yes))
-(input 2
-(name "x1")
-(optional yes))
-(input 3
-(name "y0")
-(optional yes))
-(input 4
-(name "y1")
-(optional yes))
-(input 5
-(name "x")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 15 TEXTDISPLAY
-(properties
-(name "y")
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 16 FORMULA
 (properties
 (variableScope cont)
 (expr 1 "(y0*(x1-x) +y1*(x-x0))/(x1-x0)"))
@@ -461,13 +424,32 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
-(device 17 TEXTDISPLAY
+(device 16 FORMULA
 (properties
-(name "y")
-(variableScope cont))
+(variableScope cont)
+(expr 3 "(y0*(x1-x) +y1*(x-x0))/(x1-x0)" "//table can be increasing "
+"//or decreasing"))
 (interface
 (input 1
-(name "Data"))))
+(name "x0")
+(optional yes))
+(input 2
+(name "x1")
+(optional yes))
+(input 3
+(name "y0")
+(optional yes))
+(input 4
+(name "y1")
+(optional yes))
+(input 5
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
 (device 18 ALLOCATEARRAY
 (properties
 (name "Alloc Real64")
@@ -505,13 +487,13 @@
 (tag "Array")))
 (implementation
 (numDims 1)
-(dimSizes "24")
+(dimSizes "66")
 (type "Real64")
 (initEnum "Log Ramp")
 (initialValue
 (data  0))
-(from 3.98107170553497)
-(thru 6.30957344480193)))
+(from 4.52035365636024)
+(thru 4.89390091847749)))
 (device 20 ALLOCATEARRAY
 (properties
 (name "Alloc Real64")
@@ -549,13 +531,13 @@
 (tag "Array")))
 (implementation
 (numDims 1)
-(dimSizes "24")
+(dimSizes "66")
 (type "Real64")
 (initEnum "Lin Ramp")
 (initialValue
 (data  0))
-(from 20640)
-(thru 21520)))
+(from 20882.7586206897)
+(thru 21034.4827586207)))
 (device 22 CONSTANT
 (properties
 (name "UInt16")
@@ -567,7 +549,7 @@
 (lock name constraints)))
 (implementation
 (value UInt16
-(data  24))
+(data  66))
 (initValue UInt16
 (data  0))))
 (device 23 CONSTANT
@@ -589,13 +571,24 @@
 (implementation
 (value Real
 (numDims 1)
-(size 24)
-(data  [ 20640 20678.26086956522 20716.52173913044 20754.78260869565
-20793.04347826087 20831.30434782609 20869.5652173913 20907.82608695652
-20946.08695652174 20984.34782608696 21022.60869565217 21060.86956521739
-21099.13043478261 21137.39130434783 21175.65217391304 21213.91304347826
-21252.17391304348 21290.4347826087 21328.69565217391 21366.95652173913
-21405.21739130435 21443.47826086956 21481.73913043478 21520 ]))
+(size 66)
+(data  [ 20882.7586206897 20885.09283819633 20887.42705570296 20889.76127320959
+20892.09549071622 20894.42970822286 20896.76392572948 20899.09814323612
+20901.43236074275 20903.76657824938 20906.10079575601 20908.43501326264
+20910.76923076927 20913.1034482759 20915.43766578253 20917.77188328916
+20920.10610079579 20922.44031830242 20924.77453580905 20927.10875331568
+20929.44297082231 20931.77718832895 20934.11140583558 20936.44562334221
+20938.77984084884 20941.11405835547 20943.4482758621 20945.78249336873
+20948.11671087536 20950.45092838199 20952.78514588862 20955.11936339525
+20957.45358090189 20959.78779840851 20962.12201591515 20964.45623342178
+20966.79045092841 20969.12466843504 20971.45888594167 20973.7931034483
+20976.12732095493 20978.46153846156 20980.79575596819 20983.12997347482
+20985.46419098145 20987.79840848809 20990.13262599472 20992.46684350135
+20994.80106100798 20997.13527851461 20999.46949602124 21001.80371352787
+21004.1379310345 21006.47214854113 21008.80636604776 21011.14058355439
+21013.47480106102 21015.80901856765 21018.14323607428 21020.47745358092
+21022.81167108754 21025.14588859418 21027.48010610081 21029.81432360744
+21032.14854111407 21034.4827586207 ]))
 (initValue Real
 (data  0))))
 (device 24 CONSTANT
@@ -617,13 +610,24 @@
 (implementation
 (value Real
 (numDims 1)
-(size 24)
-(data  [ 3.981071705534971 4.061585988376977 4.143728614092725 4.227532514733783
-4.313031288378534 4.400259212602086 4.489251258218603 4.580043103301553
-4.672671147487522 4.767172526569298 4.8635851273841 4.9619476030029
-5.062299388226952 5.16468071539771 5.269132630526507 5.375697009750429
-5.484416576121016 5.595334916732482 5.708496500196355 5.82394669446952
-5.941731785042833 6.061898993497571 6.184496496437186 6.30957344480193 ]))
+(size 66)
+(data  [ 4.520353656360239 4.525878780330111 4.531410657531523 4.536949296218793
+4.54249470465633 4.548046891118644 4.553605863890357 4.559171631266218
+4.564744201551117 4.570323583060093 4.575909784118346 4.581502813061253
+4.587102678234383 4.5927093879935 4.598322950704585 4.603943374743841
+4.609570668497714 4.615204840362895 4.620845898746342 4.626493852065289
+4.632148708747252 4.637810477230056 4.643479165961836 4.64915478340105
+4.6548373380165 4.660526838287335 4.666223292703069 4.671926709763593
+4.677637097979187 4.683354465870534 4.68907882196873 4.694810174815299
+4.700548532962205 4.706293904971863 4.71204629941716 4.717805724881454
+4.723572189958598 4.729345703252948 4.735126273379378 4.74091390896329
+4.74670861864063 4.752510411057901 4.75831929487217 4.764135278751088
+4.769958371372901 4.775788581426463 4.781625917611243 4.78747038863735
+4.793322003225534 4.799180770107208 4.805046698024454 4.81091979573004
+4.816800071987434 4.822687535570815 4.828582195265082 4.834484059865879
+4.840393138179596 4.846309439023387 4.852232971225186 4.85816374362371
+4.864101765068491 4.870047044419867 4.875999590549011 4.881959412337936
+4.887926518679516 4.89390091847749 ]))
 (initValue Real
 (data  0))))
 (device 30 FORMULA
@@ -643,46 +647,382 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
+(device 33 CONSTANT
+(properties
+(name "y")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  4.636662690246665))
+(initValue Real
+(data  0))))
+(device 34 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A-B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 35 CONSTANT
+(properties
+(name "Y Lookup - Y Formula")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  7.993605777301127E-014))
+(initValue Real
+(data  0))))
+(device 36 CONSTANT
+(properties
+(name "y")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  4.636662690246665))
+(initValue Real
+(data  0))))
+(device 37 CONSTANT
+(properties
+(name "Y Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 30)
+(data  [ 1 1.082636733874054 1.17210229753348 1.268961003167922
+1.373823795883263 1.487352107293511 1.610262027560939 1.743328822199988
+1.887391822135097 2.043359717856942 2.212216291070449 2.395026619987486
+2.592943797404667 2.807216203941177 3.039195382313197 3.290344562312669
+3.562247890262442 3.856620421163471 4.175318936560402 4.520353656360243
+4.893900918477494 5.298316906283708 5.736152510448679 6.210169418915617
+6.723357536499337 7.27895384398315 7.880462815669913 8.531678524172808
+9.23670857187386 10 ]))
+(initValue Real
+(data  0))))
+(device 38 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;\\red0\\green255\\blue0;\\red255\\green0\\blue0;\\red0\\green0\\blue255;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 0019: \\cf2 20.88k                   4.52035365636024\\par\r\n20.8827586206897k   4.52035365636024\\par\r\n\\cf1\\par\r\n0020:\\cf3  21.03k                    4.89390091847749\\par\r\n21.0344827586207k    4.89390091847749\\par\r\n\\par\r\n\\cf1 0021: \\cf4 21.19k                    5.29831690628371\\par\r\n21.1862068965517k    5.29831690628371\\par\r\n\\par\r\n4.80900381345085\\par\r\n4.8090038134508\\cf1\\par\r\n}\r\n"
+)))
+(device 39 CONSTANT
+(properties
+(name "X Real64 Array")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 30)
+(data  [ 18000 18151.72413793104 18303.44827586207 18455.17241379311
+18606.89655172414 18758.62068965517 18910.34482758621 19062.06896551724
+19213.79310344828 19365.51724137931 19517.24137931034 19668.96551724138
+19820.68965517241 19972.41379310345 20124.13793103448 20275.86206896552
+20427.58620689655 20579.31034482759 20731.03448275862 20882.75862068966
+21034.48275862069 21186.20689655173 21337.93103448276 21489.65517241379
+21641.37931034483 21793.10344827586 21944.8275862069 22096.55172413793
+22248.27586206896 22400 ]))
+(initValue Real
+(data  0))))
+(device 40 CONSTANT
+(properties
+(name "Y Lookup Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  4.636662690246745))
+(initValue Real
+(data  0))))
+(device 41 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 42 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A-4.62649385206529 "))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 43 CONSTANT
+(properties
+(name "Y Lookup - Y Formula")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  0.0101688381814542))
+(initValue Real
+(data  0))))
+(device 47 START25
+(properties
+(variableScope cont)))
+(device 52 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(input 2
+(name "y")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 55 TOGLOBAL
+(properties
+(name "Set foo")
+(variableScope cont)
+(globalName "foo"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 56 FROMGLOBAL
+(properties
+(name "Get foo")
+(variableScope cont)
+(globalName "foo"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 57 DECLVAR
+(properties
+(scope glob)
+(globalName "global1"))
+(implementation
+(value Record
+(schema
+(numFields 2)
+(fieldName "x"
+(type Real64)
+(numDims 1)
+(size 30))
+(fieldName "y"
+(type Real64)
+(numDims 1)
+(size 30)))
+(data 
+(record
+("x" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ])
+("y" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]))))))
+(device 60 TOGLOBAL
+(properties
+(name "Set global1")
+(variableScope cont)
+(globalName "global1"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 61 FROMGLOBAL
+(properties
+(name "Get global1")
+(variableScope cont)
+(globalName "global1"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 62 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "x")
+(tag "A")
+(optional yes))
+(output 4
+(name "y")
+(tag "B")
+(optional yes))))
 (configuration
-(connect D2:0 D0:0)
-(connect D5:1 D0:1)
-(connect D4:1 D0:2)
-(connect D3:1 D0:3)
-(connect D0:1 D1:1)
-(connect D5:0 D3:0)
-(connect D3:0 D4:0)
-(connect D0:0 D10:0)
-(connect D9:1 D10:1)
+(connect D1:0 D0:0)
+(connect D4:1 D0:1)
+(connect D21:1 D0:2)
+(connect D23:1 D0:3)
+(connect D2:0 D3:0)
+(connect D0:0 D9:0)
+(connect D8:1 D9:1)
+(connect D7:1 D9:2)
+(connect D5:1 D9:3)
+(connect D6:1 D9:4)
+(connect D4:1 D9:5)
+(connect D9:0 D10:0)
+(connect D7:1 D10:1)
 (connect D8:1 D10:2)
 (connect D6:1 D10:3)
-(connect D7:1 D10:4)
-(connect D5:1 D10:5)
-(connect D10:1 D11:1)
-(connect D10:0 D12:0)
-(connect D8:1 D12:1)
-(connect D9:1 D12:2)
+(connect D5:1 D10:4)
+(connect D4:1 D10:5)
+(connect D1:0 D11:0)
+(connect D13:1 D11:1)
+(connect D5:1 D11:2)
+(connect D6:1 D11:3)
+(connect D11:0 D12:0)
+(connect D13:1 D12:1)
+(connect D8:1 D12:2)
 (connect D7:1 D12:3)
-(connect D6:1 D12:4)
-(connect D5:1 D12:5)
-(connect D12:1 D13:1)
-(connect D2:0 D14:0)
-(connect D16:1 D14:1)
-(connect D6:1 D14:2)
-(connect D7:1 D14:3)
-(connect D14:0 D15:0)
-(connect D16:1 D15:1)
-(connect D9:1 D15:2)
-(connect D8:1 D15:3)
-(connect D15:1 D17:1)
-(connect D14:1 D18:1)))
+(connect D12:1 D14:1)
+(connect D11:1 D15:1)
+(connect D9:1 D17:1)
+(connect D0:1 D18:1)
+(connect D9:1 D18:2)
+(connect D18:1 D19:1)
+(connect D10:1 D20:1)
+(connect D23:0 D21:0)
+(connect D4:0 D23:0)
+(connect D0:1 D24:1)
+(connect D0:1 D26:1)
+(connect D26:1 D27:1)
+(connect D28:0 D29:0)
+(connect D23:1 D29:1)
+(connect D21:1 D29:2)
+(connect D29:1 D30:1)
+(connect D30:0 D31:0)
+(connect D31:0 D33:0)
+(connect D29:1 D33:1)
+(connect D33:0 D34:0)
+(connect D31:1 D35:1)))
 (contextCarrier
 (wndRestoredOrigin 2 2)
 (wndRestoredExtent 748 418)
 (wndState max)
 (active detail)
 (detail
-(extent 1561 740)
-(anchorPt 528 153)
+(extent 1391 728)
+(anchorPt 870 -517)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -692,20 +1032,14 @@
 (extent 42 76))
 (terminals on)
 (titleBg "Light Golden Orange")
-(pinCenter 295 230))
-(devCarrierFor 3
-(active open)
-(icon)
-(open
-(extent 124 25))
-(pinCenter 480 230))
+(pinCenter 320 220))
 (devCarrierFor 4
 (active open)
 (icon)
 (open
 (extent 51 26))
 (title off)
-(pinCenter 280 120))
+(pinCenter 310 100))
 (devCarrierFor 6
 (active open)
 (icon
@@ -713,7 +1047,7 @@
 (open
 (extent 114 176)
 (showFormat real))
-(pinCenter -160 170))
+(pinCenter -280 170))
 (devCarrierFor 7
 (active open)
 (icon
@@ -721,14 +1055,15 @@
 (open
 (extent 124 176)
 (showFormat real))
-(pinCenter -160 380))
+(pinCenter -280 380))
 (devCarrierFor 8
 (active open)
 (icon)
 (open
 (extent 79 30)
 (showFormat real))
-(pinCenter -160 30))
+(titleBg "Red")
+(pinCenter -610 40))
 (devCarrierFor 9
 (active open)
 (icon
@@ -736,7 +1071,8 @@
 (open
 (extent 79 30)
 (showFormat real))
-(pinCenter -20 470))
+(titleBg "Yellow Green")
+(pinCenter -140 470))
 (devCarrierFor 10
 (active open)
 (icon
@@ -744,7 +1080,8 @@
 (open
 (extent 79 30)
 (showFormat real))
-(pinCenter -20 520))
+(titleBg "Blue")
+(pinCenter -140 520))
 (devCarrierFor 11
 (active open)
 (icon
@@ -752,7 +1089,8 @@
 (open
 (extent 79 30)
 (showFormat real))
-(pinCenter -20 420))
+(titleBg "Blue")
+(pinCenter -140 420))
 (devCarrierFor 12
 (active open)
 (icon
@@ -760,36 +1098,23 @@
 (open
 (extent 79 30)
 (showFormat real))
-(pinCenter -20 370))
+(titleBg "Yellow Green")
+(pinCenter -140 370))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
-(extent 254 64))
-(title off)
-(pinCenter 280 360))
-(devCarrierFor 15
-(active open)
-(icon
-(extent 10 0))
-(open
-(extent 124 25))
-(pinCenter 480 360))
+(extent 244 106))
+(terminals on)
+(pinCenter 300 350))
 (devCarrierFor 16
 (active open)
 (icon
 (extent 50 15))
 (open
-(extent 254 56))
-(title off)
-(pinCenter 280 450))
-(devCarrierFor 17
-(active open)
-(icon
-(extent 10 0))
-(open
-(extent 124 25))
-(pinCenter 480 450))
+(extent 244 106))
+(terminals on)
+(pinCenter 300 480))
 (devCarrierFor 18
 (active icon)
 (icon
@@ -797,7 +1122,7 @@
 (open
 (extent 234 166))
 (terminals on)
-(pinCenter 140 40))
+(pinCenter 70 40))
 (devCarrierFor 20
 (active icon)
 (icon
@@ -805,28 +1130,28 @@
 (open
 (extent 234 166))
 (terminals on)
-(pinCenter 140 -10))
+(pinCenter 70 -10))
 (devCarrierFor 22
 (active open)
 (icon)
 (open
 (extent 76 30)
 (showFormat int))
-(pinCenter 10 30))
+(pinCenter -70 30))
 (devCarrierFor 23
 (active open)
 (icon)
 (open
-(extent 144 266)
+(extent 144 506)
 (showFormat real))
-(pinCenter 690 -140))
+(pinCenter 730 30))
 (devCarrierFor 24
 (active open)
 (icon)
 (open
-(extent 154 526)
+(extent 144 506)
 (showFormat real))
-(pinCenter 700 290))
+(pinCenter 900 30))
 (devCarrierFor 30
 (active open)
 (icon
@@ -834,70 +1159,258 @@
 (open
 (extent 102 51))
 (terminals on)
-(pinCenter 1165 220))
-(connect D2:0 D0:0
-(points 2 280 135 280 171))
-(connect D5:1 D0:1
-(points 4 -118 30 -70 30 -70 210 211 210))
-(connect D4:1 D0:2
-(points 6 -96 380 -80 380 -80 310 -70 310 -70 230 211 230))
-(connect D3:1 D0:3
-(points 4 -101 170 -80 170 -80 250 211 250))
-(connect D0:1 D1:1
-(points 2 348 230 415 230))
-(connect D5:0 D3:0
-(points 2 -160 47 -160 61))
-(connect D3:0 D4:0
-(points 2 -160 260 -160 271))
-(connect D0:0 D10:0
-(points 2 280 270 280 325))
-(connect D9:1 D10:1
-(points 4 22 370 40 370 40 340 150 340))
+(pinCenter 1080 110))
+(devCarrierFor 33
+(active open)
+(icon
+(extent 10 0))
+(open
+(extent 84 46)
+(showFormat real))
+(titleBg "Red")
+(pinCenter 550 350))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 660 410))
+(devCarrierFor 35
+(active open)
+(icon
+(extent 129 0))
+(open
+(extent 174 36)
+(showFormat real))
+(titleBg "Red")
+(pinCenter 820 410))
+(devCarrierFor 36
+(active open)
+(icon
+(extent 10 0))
+(open
+(extent 84 46)
+(showFormat real))
+(pinCenter 550 480))
+(devCarrierFor 37
+(active open)
+(icon
+(extent 91 0))
+(open
+(extent 144 466)
+(showFormat real))
+(pinCenter -460 380))
+(devCarrierFor 38
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 454 216)
+(editing enabled))
+(pinCenter 370 -110))
+(devCarrierFor 39
+(active open)
+(icon
+(extent 92 0))
+(open
+(extent 144 466)
+(showFormat real))
+(pinCenter -610 380))
+(devCarrierFor 40
+(active open)
+(icon
+(extent 103 0))
+(open
+(extent 139 29)
+(showFormat real))
+(titleBg "Red")
+(pinCenter 520 220))
+(devCarrierFor 41
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter -260 -120))
+(devCarrierFor 42
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 620 600))
+(devCarrierFor 43
+(active open)
+(icon
+(extent 129 0))
+(open
+(extent 174 36)
+(showFormat real))
+(titleBg "Red")
+(pinCenter 870 600))
+(devCarrierFor 47
+(active open)
+(icon)
+(open
+(extent 44 23))
+(title off)
+(pinCenter -310 700))
+(devCarrierFor 52
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 100 54))
+(terminals on)
+(pinCenter -325 790))
+(devCarrierFor 55
+(active open)
+(icon
+(extent 44 0))
+(open
+(extent 74 51))
+(terminals on)
+(pinCenter -95 790))
+(devCarrierFor 56
+(active open)
+(icon
+(extent 44 0))
+(open
+(extent 74 51))
+(terminals on)
+(pinCenter -105 900))
+(devCarrierFor 57
+(active open)
+(icon)
+(open
+(extent 298 120))
+(pinCenter 160 1060))
+(devCarrierFor 60
+(active open)
+(icon
+(extent 69 0))
+(open
+(extent 73 51))
+(terminals on)
+(pinCenter -95 1000))
+(devCarrierFor 61
+(active open)
+(icon
+(extent 69 0))
+(open
+(extent 73 51))
+(terminals on)
+(pinCenter -105 1100))
+(devCarrierFor 62
+(active open)
+(icon
+(extent 95 51)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 90))
+(terminals on)
+(pinCenter 108 900))
+(connect D1:0 D0:0
+(points 2 310 115 310 161))
+(connect D4:1 D0:1
+(points 6 -568 40 -200 40 -200 70 -60 70 -60 200 246 200))
+(connect D21:1 D0:2
+(points 6 -386 380 -360 380 -360 490 -200 490 -200 220 246 220))
+(connect D23:1 D0:3
+(points 10 -536 380 -520 380 -520 370 -360 370 -360 30 -190 30 -190 60 -50 60
+-50 240 246 240))
+(connect D2:0 D3:0
+(points 2 -280 260 -280 271))
+(connect D0:0 D9:0
+(points 2 310 260 310 276))
+(connect D8:1 D9:1
+(points 4 -98 370 -80 370 -80 310 145 310))
+(connect D7:1 D9:2
+(points 6 -98 420 -80 420 -80 440 120 440 120 330 145 330))
+(connect D5:1 D9:3
+(points 4 -98 470 130 470 130 350 145 350))
+(connect D6:1 D9:4
+(points 6 -98 520 -70 520 -70 480 140 480 140 370 145 370))
+(connect D4:1 D9:5
+(points 6 -568 40 -200 40 -200 70 -60 70 -60 390 145 390))
+(connect D9:0 D10:0
+(points 2 310 405 310 406))
+(connect D7:1 D10:1
+(points 4 -98 420 -80 420 -80 440 145 440))
 (connect D8:1 D10:2
-(points 6 22 420 40 420 40 430 120 430 120 350 150 350))
+(points 4 -98 370 -70 370 -70 460 145 460))
 (connect D6:1 D10:3
-(points 6 22 470 40 470 40 460 130 460 130 360 150 360))
-(connect D7:1 D10:4
-(points 6 22 520 50 520 50 450 140 450 140 370 150 370))
-(connect D5:1 D10:5
-(points 6 -118 30 -70 30 -70 210 110 210 110 380 150 380))
-(connect D10:1 D11:1
-(points 2 409 360 415 360))
-(connect D10:0 D12:0
-(points 2 280 394 280 419))
-(connect D8:1 D12:1
-(points 4 22 420 40 420 40 430 150 430))
-(connect D9:1 D12:2
-(points 4 22 370 50 370 50 440 150 440))
+(points 4 -98 520 -70 520 -70 480 145 480))
+(connect D5:1 D10:4
+(points 4 -98 470 -80 470 -80 500 145 500))
+(connect D4:1 D10:5
+(points 8 -568 40 -200 40 -200 70 -60 70 -60 390 110 390 110 520 145 520))
+(connect D1:0 D11:0
+(points 6 310 115 310 140 60 140 60 10 70 10 70 20))
+(connect D13:1 D11:1
+(points 2 -30 30 29 30))
+(connect D5:1 D11:2
+(points 4 -98 470 0 470 0 40 29 40))
+(connect D6:1 D11:3
+(points 6 -98 520 -70 520 -70 480 -10 480 -10 50 29 50))
+(connect D11:0 D12:0
+(points 6 70 59 70 80 130 80 130 -50 70 -50 70 -30))
+(connect D13:1 D12:1
+(points 4 -30 30 0 30 0 -20 29 -20))
+(connect D8:1 D12:2
+(points 6 -98 370 -80 370 -80 310 10 310 10 -10 29 -10))
 (connect D7:1 D12:3
-(points 4 22 520 50 520 50 450 150 450))
-(connect D6:1 D12:4
-(points 4 22 470 40 470 40 460 150 460))
-(connect D5:1 D12:5
-(points 6 -118 30 -70 30 -70 210 110 210 110 470 150 470))
-(connect D12:1 D13:1
-(points 2 409 450 415 450))
-(connect D2:0 D14:0
-(points 6 280 135 280 150 230 150 230 10 140 10 140 20))
-(connect D16:1 D14:1
-(points 2 50 30 99 30))
-(connect D6:1 D14:2
-(points 6 22 470 40 470 40 460 70 460 70 40 99 40))
-(connect D7:1 D14:3
-(points 6 22 520 50 520 50 450 60 450 60 50 99 50))
-(connect D14:0 D15:0
-(points 6 140 59 140 80 200 80 200 -50 140 -50 140 -30))
-(connect D16:1 D15:1
-(points 4 50 30 70 30 70 -20 99 -20))
-(connect D9:1 D15:2
-(points 6 22 370 40 370 40 340 80 340 80 -10 99 -10))
-(connect D8:1 D15:3
-(points 6 22 420 40 420 40 430 90 430 90 0 99 0))
-(connect D15:1 D17:1
-(points 4 181 -10 210 -10 210 -140 615 -140))
-(connect D14:1 D18:1
-(points 4 181 40 370 40 370 290 620 290)))
-(stackingOrder 0 8 6 10 12 11 13 3 4 1 2 17 18 16 5 15 14 7 9 19))
+(points 6 -98 420 -80 420 -80 440 20 440 20 0 29 0))
+(connect D12:1 D14:1
+(points 6 111 -10 140 -10 140 0 160 0 160 30 655 30))
+(connect D11:1 D15:1
+(points 6 111 40 620 40 620 310 820 310 820 30 825 30))
+(connect D9:1 D17:1
+(points 2 474 350 505 350))
+(connect D0:1 D18:1
+(points 6 373 220 430 220 430 260 610 260 610 400 632 400))
+(connect D9:1 D18:2
+(points 4 474 350 490 350 490 420 632 420))
+(connect D18:1 D19:1
+(points 2 687 410 730 410))
+(connect D10:1 D20:1
+(points 2 474 480 505 480))
+(connect D23:0 D21:0
+(points 6 -610 615 -610 640 -370 640 -370 110 -460 110 -460 126))
+(connect D4:0 D23:0
+(points 2 -610 57 -610 126))
+(connect D0:1 D24:1
+(points 2 373 220 448 220))
+(connect D0:1 D26:1
+(points 8 373 220 430 220 430 260 610 260 610 530 500 530 500 600 515 600))
+(connect D26:1 D27:1
+(points 2 745 600 780 600))
+(connect D28:0 D29:0
+(points 2 -310 714 -310 742))
+(connect D23:1 D29:1
+(points 8 -536 380 -520 380 -520 370 -350 370 -350 650 -430 650 -430 770 -408
+770))
+(connect D21:1 D29:2
+(points 8 -386 380 -360 380 -360 490 -340 490 -340 660 -440 660 -440 810 -408
+810))
+(connect D29:1 D30:1
+(points 2 -213 790 -175 790))
+(connect D30:0 D31:0
+(points 2 -100 818 -100 854))
+(connect D31:0 D33:0
+(points 2 -100 928 -100 954))
+(connect D29:1 D33:1
+(points 4 -213 790 -190 790 -190 1000 -174 1000))
+(connect D33:0 D34:0
+(points 2 -100 1028 -100 1054))
+(connect D31:1 D35:1
+(points 4 -26 900 12 900 12 900 10 900)))
+(stackingOrder 2 3 12 20 9 10 11 13 16 5 7 6 17 14 15 23 21 24 4 18 1 0 25 22 19
+27 26 8 30 33 34 31 32 29 28 35))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
