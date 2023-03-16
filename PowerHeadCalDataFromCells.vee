@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 16/Mar/2023 14:29:26 ")
+(date "Thu 16/Mar/2023 14:41:24 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M M.99 M.99.56)
+(workspaceStackingOrder)
 (sysconfig
 (iodevice "hp438"
 (type GPIB-VISA)
@@ -1510,8 +1510,6 @@
 (connect D8:1 D9:0)
 (connect D4:0 O1:1)))
 (contextCarrier
-(wndOrigin 62 62)
-(wndState res)
 (active detail)
 (detail
 (extent 910 401)
@@ -1789,8 +1787,6 @@
 (ShowOnExecPanel
 (relativeOrigin 311 -2)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (panel
 (extent 571 953)
@@ -2222,7 +2218,7 @@
 (properties
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 PowerHeadCalDataFromCells\\par\r\n\\par\r\nThis is a clean version of the hp438A called by Calibration_Equipment.\\par\r\nUserObject hp438 loads the cal factor array to a global variable.\\par\r\nThe Initialize Excel Library was inside on the original.\\par\r\nThis hp438 assumes excel is working.\\par\r\n\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 PowerHeadCalDataFromCells  3/16/2023 Steve Applen\\par\r\n\\par\r\nThis is a clean version of the hp438A called by Calibration_Equipment.\\par\r\nUserObject hp438 loads the cal factor array to a global variable.\\par\r\nThe Initialize Excel Library was inside on the original.\\par\r\nThis hp438 assumes excel is working.\\par\r\n\\par\r\n}\r\n"
 )))
 (device 115 LABEL
 (properties
@@ -2240,8 +2236,6 @@
 (connect D4:0 D11:0))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (panel
 (extent 1339 739)
@@ -2265,7 +2259,7 @@
 (editing enabled)))
 (detail
 (extent 1339 742)
-(anchorPt 565 498)
+(anchorPt 21 423)
 (configuration
 (devCarrierFor 76
 (active open)
@@ -2360,7 +2354,7 @@
 (open
 (extent 410 180)
 (editing enabled))
-(pinCenter 520 -170))
+(pinCenter 480 -170))
 (devCarrierFor 115
 (active open)
 (icon
@@ -2384,7 +2378,7 @@
 (points 2 160 -70 160 -68))
 (connect D4:0 D11:0
 (points 2 160 -250 160 -240)))
-(stackingOrder 0 3 1 9 8 7 5 10 4 6 11 13 12 2))
+(stackingOrder 0 3 1 9 8 7 5 10 4 6 11 13 2 12))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
