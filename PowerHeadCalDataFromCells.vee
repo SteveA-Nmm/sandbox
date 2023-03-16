@@ -1,0 +1,2392 @@
+(saveFormat "7.0")
+(date "Thu 16/Mar/2023 14:29:26 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M M.99 M.99.56)
+(sysconfig
+(iodevice "hp438"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(automationRefs
+(automationRef 1
+(libid "{00020813-0000-0000-C000-000000000046}")
+(desc "Microsoft Excel 8.0 Object Library")
+(filename "C:\\Program Files\\Microsoft Office\\Office\\EXCEL8.OLB")
+(verMajor 1)
+(verMinor 2)
+(lcid 0)))
+(assemblyRefs
+(assemblyRef 1
+(displayName
+"mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+)
+(filename "C:\\WINDOWS\\Microsoft.NET\\Framework\\v1.1.4322\\mscorlib.dll"))
+(assemblyRef 2
+(displayName
+"System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+)
+(filename "C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\System.Data.dll"))
+(assemblyRef 3
+(displayName
+"System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")
+(filename "C:\\WINDOWS\\Microsoft.NET\\Framework\\v1.1.4322\\System.dll"))
+(selectedNamespaces
+"System.Data,System.Data.Common,System.Data.Odbc,System.Data.OleDb,System.Data.Sql,System.Data.SqlClient,"
+))
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 116)
+(popupTitleText "hp438 example")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(UserFunctions
+(nextID 1)
+(context 0
+(properties
+(name "ProductionOrDevelopment")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs24 Software development is done on  a sub directory or on a root server, set aside for maintainance, upgrade and qualification activities prior to release into the produciton environment.\\par\r\n\\par\r\nProduction release is first tested in the development environment. Therefore, a current copy of the production test program should be in the development environment as well as the revision control system.\\par\r\n\\par\r\nThis object enables the program owner to enter a path and set the software for development. It must be included in all VEE test programs.\\par\r\n\\par\r\nCurrently production software saves final data to the A:\\\\  \"server\"\\par\r\n\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableName ProductionOrDevelopment)
+(variableScope glob)
+(trigMode deg)
+(nextID 69)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 2 DECLVAR
+(properties
+(name "Declare dvlp_lcl")
+(scope glob)
+(globalName "dvlp_lcl"))
+(implementation
+(value Text
+(data  ""))))
+(device 4 LITERALCONSTANT
+(properties
+(name "DevProd Local")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  ""))
+(initValue Text
+(data  ""))))
+(device 5 FORMULA
+(properties
+(name "dvlp_svr")
+(variableScope cont)
+(expr 1 "dvlp_svr = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 DECLVAR
+(properties
+(name "Declare dvlp_svr")
+(scope glob)
+(globalName "dvlp_svr"))
+(implementation
+(value Text
+(data  ""))))
+(device 8 FORMULA
+(properties
+(name "dvpl_lcl")
+(variableScope cont)
+(expr 2 "dvlp_lcl = A" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 DECLVAR
+(properties
+(name "Declare prod_lcl")
+(scope glob)
+(globalName "prod_lcl"))
+(implementation
+(value Text
+(data  ""))))
+(device 16 LITERALCONSTANT
+(properties
+(name "Production Server")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "A:\\"))
+(initValue Text
+(data  ""))))
+(device 18 LITERALCONSTANT
+(properties
+(name "Production Local")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "C:\\"))
+(initValue Text
+(data  ""))))
+(device 19 FORMULA
+(properties
+(name "prod_lcl")
+(variableScope cont)
+(expr 1 "prod_lcl = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 20 FORMULA
+(properties
+(name "prod_svr")
+(variableScope cont)
+(expr 1 "prod_svr = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 25 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A==\"Prod\""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 26 LITERALCONSTANT
+(properties
+(name "Test Progam Developer Use Only")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Dvlp"))
+(initValue Text
+(data  ""))))
+(device 31 NOTE
+(properties
+(name "development or production")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 dvlp lcl     C:\\\\<CurrentDirectory>\\\\..\\\\\\par\r\ndvlp svr    C:\\\\<CurrentDirectory>\\\\..\\\\A_Server\\\\\\par\r\nprod lcl    C:\\\\\\par\r\nprod svr   A:\\\\\\par\r\n\\par\r\nIF?THEN/ELSE   \\par\r\nhost_local \\par\r\nhost_server\\par\r\nEnables development of the program without stepping on production environment data.\\par\r\nBuild fully qualified paths inside user objects/functions as needed.\\par\r\nhost_local + \"VEE Test Data\\\\\" + Model_Num +  \"\\\\\" + Test  + \"\\\\\" + \\{file name\\}\\par\r\n\\par\r\nhost_server+\"VEE Test Data\\\\\" + Model_Num + \"\\\\\" + Test + \"_A1\"+  \"\\\\\" + \\{file name\\}\\par\r\n\\{ What is the purpose of the _A1 and _B1 notation on the program names and the file directory?\\par\r\n These suffixes were added instead of using Source Code Control software like git.\\} \\par\r\n\\par\r\n\\par\r\n}\r\n"
+)))
+(device 39 DECLVAR
+(properties
+(name "Declare prod_svr")
+(scope glob)
+(globalName "prod_svr"))
+(implementation
+(value Text
+(data  ""))))
+(device 40 DECLVAR
+(properties
+(name "Declare host_local")
+(scope glob)
+(globalName "host_local"))
+(implementation
+(value Text
+(data  ""))))
+(device 42 DECLVAR
+(properties
+(name "Declare host_server")
+(scope glob)
+(globalName "host_server"))
+(implementation
+(value Text
+(data  ""))))
+(device 44 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "ProdOrDvlp = A" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 45 DECLVAR
+(properties
+(name "Declare ProdOrDvlp")
+(scope glob)
+(globalName "ProdOrDvlp"))
+(implementation
+(value Text
+(data  ""))))
+(device 46 DECLVAR
+(properties
+(name "Declare Prod_status")
+(scope glob)
+(globalName "Prod_status"))
+(implementation
+(value Text
+(data  ""))))
+(device 49 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 51 LITERALCONSTANT
+(properties
+(name "DevProd Server")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "C:\\Env_Sim\\Dev\\Serv_A\\"))
+(initValue Text
+(data  ""))))
+(device 53 NOTE
+(properties
+(name "version information")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 11/8/2022  Add GetCurrentDirectory and built in development subdir to use with Git.\\par\r\nRenamed: N12-3541 VSWR_J6_J7_J1-J4\\par\r\nRelease Date: 2-20-20 Thursday ; working name: hacked RAv200_J6_J7_J1-J4_tests\\par\r\n}\r\n"
+)))
+(device 55 TEXTDISPLAY
+(properties
+(name "host_local")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 57 FORMULA
+(properties
+(name "Development Local Directory.GetCurrentDirectory( )")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f2\\fnil\\fcharset0 Microsoft Sans Serif;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\ul\\b\\f0\\fs24 System.IO.Directory.GetCurrentDirectory\\par\r\n\\cf0\\ulnone\\b0\\f1 This function returns the \"current directory\" from where you ran the VEE program.  It is a .NET Framework call and can be found in the Function and Object Browser here: \\f2\\fs17\\par\r\n\\b\\f1\\fs24\\par\r\nAssembly\\b0 : Mscorlib\\par\r\n\\b Namespace\\b0 : System.IO\\par\r\n\\b Type\\b0 : System.IO.Directory\\cf1\\ul\\b\\f0\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 2 "// See object description for more information"
+"System.IO.Directory.GetCurrentDirectory( );"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 58 FORMULA
+(properties
+(name "Development Server")
+(variableScope cont)
+(expr 2 "A+ \"\\\\..\\\\A_Server\\\\\" " ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 59 FORMULA
+(properties
+(name "Development Local")
+(variableScope cont)
+(expr 1 "A+\"\\\\..\\\\\""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 60 FORMULA
+(properties
+(name "production")
+(variableScope cont)
+(expr 6 "host_local = prod_lcl;" "host_server=prod_svr;"
+"Prod_status = ProdOrDvlp;" "" "" "")))
+(device 62 TEXTDISPLAY
+(properties
+(name "host_server")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 65 FORMULA
+(properties
+(name "development")
+(variableScope cont)
+(expr 6 "host_local  =  dvlp_lcl;" "host_server = dvlp_svr;"
+"Prod_status = ProdOrDvlp;" "" "" "")))
+(device 66 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 67 FORMULA
+(properties
+(name "LetsGo")
+(variableScope cont)
+(expr 3 "a=host_local;" "b=host_server;" "c=Prod_status;"))
+(interface
+(output 1
+(name "a")
+(optional yes))
+(output 2
+(name "b")
+(optional yes))
+(output 3
+(name "c")
+(optional yes))))
+(device 68 START25
+(properties
+(variableScope cont)))
+(configuration
+(connect D4:0 D2:0)
+(connect D23:1 D2:1)
+(connect D16:0 D4:0)
+(connect D23:1 D4:1)
+(connect D2:0 D8:0)
+(connect D7:1 D8:1)
+(connect D8:0 D9:0)
+(connect D6:1 D9:1)
+(connect D9:0 D10:0)
+(connect D16:1 D10:1)
+(connect D31:0 D16:0)
+(connect D11:1 D16:1)
+(connect D16:1 D19:1)
+(connect D30:1 D22:1)
+(connect D16:0 D23:0)
+(connect D23:1 D24:1)
+(connect D23:1 D25:1)
+(connect D10:1 D26:0)
+(connect D30:2 D27:1)
+(connect D10:2 D28:0)
+(connect D26:0 D29:1)
+(connect D28:0 D29:2)
+(connect D29:1 D30:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 1529 740)
+(anchorPt 123 33)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 199 115))
+(pinCenter 650 230))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 85 15))
+(open
+(extent 414 16))
+(pinCenter -220 340))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 49 15))
+(open
+(extent 144 66))
+(terminals on)
+(pinCenter 550 280))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 100 15))
+(open
+(extent 199 115))
+(pinCenter 650 280))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 45 15))
+(open
+(extent 134 65))
+(terminals on)
+(pinCenter 550 230))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 99 15))
+(open
+(extent 199 115))
+(pinCenter 650 340))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 106 0))
+(open
+(extent 414 16))
+(pinCenter 220 390))
+(devCarrierFor 18
+(active open)
+(icon
+(extent 101 0))
+(open
+(extent 414 16))
+(pinCenter 220 340))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 48 15))
+(open
+(extent 134 50))
+(terminals on)
+(pinCenter 550 340))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 550 390))
+(devCarrierFor 25
+(active open)
+(icon)
+(open
+(extent 85 71))
+(terminals on)
+(pinCenter 545 480))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 200 0))
+(open
+(extent 236 29))
+(pinCenter 220 120))
+(devCarrierFor 31
+(active icon)
+(icon
+(extent 160 51)
+(iconImage "notepad.icn"))
+(open
+(extent 724 366)
+(editing enabled))
+(pinCenter 840 180))
+(devCarrierFor 39
+(active icon)
+(icon
+(extent 103 15))
+(open
+(extent 199 115))
+(pinCenter 650 390))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 199 115))
+(pinCenter 120 170))
+(devCarrierFor 42
+(active icon)
+(icon
+(extent 122 15))
+(open
+(extent 199 115))
+(pinCenter 280 170))
+(devCarrierFor 44
+(active open)
+(icon)
+(open
+(extent 234 67))
+(terminals on)
+(pinCenter 540 120))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 119 15))
+(open
+(extent 199 115))
+(pinCenter 190 50))
+(devCarrierFor 46
+(active icon)
+(icon
+(extent 124 15))
+(open
+(extent 199 115))
+(pinCenter 190 630))
+(devCarrierFor 49
+(active open)
+(icon
+(extent 83 17))
+(open
+(extent 124 46))
+(pinCenter 820 120))
+(devCarrierFor 51
+(active open)
+(icon
+(extent 93 15))
+(open
+(extent 414 16))
+(pinCenter -220 390))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 115 51)
+(iconImage "notepad.icn"))
+(open
+(extent 644 245)
+(editing enabled))
+(pinCenter 450 30))
+(devCarrierFor 55
+(active open)
+(icon
+(extent 63 0))
+(open
+(extent 644 35))
+(pinCenter 1080 280))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 323 17))
+(open
+(extent 334 65))
+(terminals on)
+(pinCenter 140 230))
+(devCarrierFor 58
+(active icon)
+(icon
+(extent 122 17))
+(open
+(extent 164 65))
+(terminals on)
+(pinCenter 420 280))
+(devCarrierFor 59
+(active icon)
+(icon
+(extent 112 17))
+(open
+(extent 144 50))
+(terminals on)
+(pinCenter 420 230))
+(devCarrierFor 60
+(active icon)
+(icon
+(extent 63 15))
+(open
+(extent 224 135))
+(terminals on)
+(pinCenter 780 580))
+(devCarrierFor 62
+(active open)
+(icon
+(extent 74 0))
+(open
+(extent 644 35))
+(pinCenter 1080 350))
+(devCarrierFor 65
+(active icon)
+(icon
+(extent 72 15))
+(open
+(extent 224 135))
+(terminals on)
+(pinCenter 680 580))
+(devCarrierFor 66
+(active icon)
+(icon
+(extent 27 25))
+(open)
+(terminals on)
+(pinCenter 880 650))
+(devCarrierFor 67
+(active open)
+(icon
+(extent 43 0))
+(open
+(extent 145 82))
+(terminals on)
+(pinCenter 890 790))
+(devCarrierFor 68
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 550 -10))
+(connect D4:0 D2:0
+(points 2 550 240 550 270))
+(connect D23:1 D2:1
+(points 6 304 230 330 230 330 250 500 250 500 280 523 280))
+(connect D16:0 D4:0
+(points 2 550 156 550 220))
+(connect D23:1 D4:1
+(points 6 304 230 330 230 330 250 500 250 500 230 525 230))
+(connect D2:0 D8:0
+(points 2 550 290 550 330))
+(connect D7:1 D8:1
+(points 2 429 340 523 340))
+(connect D8:0 D9:0
+(points 2 550 350 550 380))
+(connect D6:1 D9:1
+(points 2 429 390 521 390))
+(connect D9:0 D10:0
+(points 2 550 400 550 424))
+(connect D16:1 D10:1
+(points 6 709 120 730 120 730 310 450 310 450 480 470 480))
+(connect D31:0 D16:0
+(points 2 550 5 550 66))
+(connect D11:1 D16:1
+(points 2 340 120 390 120))
+(connect D16:1 D19:1
+(points 2 709 120 755 120))
+(connect D30:1 D22:1
+(points 8 995 770 1030 770 1030 440 730 440 730 340 740 340 740 280 755 280))
+(connect D16:0 D23:0
+(points 4 550 156 550 200 140 200 140 219))
+(connect D23:1 D24:1
+(points 4 304 230 330 230 330 280 356 280))
+(connect D23:1 D25:1
+(points 2 304 230 361 230))
+(connect D10:1 D26:0
+(points 5 630 460 840 460 840 560 780 560 780 570))
+(connect D30:2 D27:1
+(points 6 995 790 1020 790 1020 450 740 450 740 350 755 350))
+(connect D10:2 D28:0
+(points 3 630 500 680 500 680 570))
+(connect D26:0 D29:1
+(points 5 780 590 780 600 840 600 840 640 864 640))
+(connect D28:0 D29:2
+(points 3 680 590 680 660 864 660))
+(connect D29:1 D30:0
+(points 5 896 650 920 650 920 690 890 690 890 728)))
+(stackingOrder 9 10 5 13 3 16 15 17 18 0 6 11 20 1 8 21 14 4 26 29 31 12 19 27
+22 2 24 30 28 23 7 25)))))
+(device 76 DECLVAR
+(properties
+(name "Declare HP_8487A_Cal_Table")
+(scope glob)
+(globalName "HP_8487A_Cal_Table"))
+(implementation
+(value Text
+(numDims 2)
+(size 1 1)
+(data  [ [ "" ] ]))))
+(device 81 CALL
+(properties
+(name "Call ProductionOrDevelopment")
+(variableScope cont)
+(callFunc "ProductionOrDevelopment")
+(parmMode rev30)))
+(device 99 CONTEXT
+(properties
+(name "hp438")
+(variableScope cont)
+(trigMode deg)
+(nextID 63)
+(popupTitleText "hp438 cal factor table")
+(popupMoveable 1))
+(deviceList
+(device 1 ENUMCONSTANT
+(properties
+(name "Radio Buttons")
+(variableScope cont)
+(waitForEvent 1)
+(enableEditing 1))
+(interface
+(output 1
+(name "Enum")
+(lock name constraints))
+(output 2
+(name "Ordinal")
+(lock name constraints)))
+(implementation
+(value Enum
+(values
+("HP8487A_MY41090621" 0)
+("HP8487A_3318A01585" 1)
+("HP8487A_2937A00631" 2))
+(data  "HP8487A_MY41090621"))
+(initValue Text
+(data  "HP8487A_MY41090621"))))
+(device 14 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 17 LABEL
+(properties
+(name "Cal Factor Table")
+(variableScope cont)
+(labelValue "Cal Factor Table"))
+(implementation))
+(device 18 LABEL
+(properties
+(name "Select Power Head")
+(variableScope cont)
+(labelValue "Select Power Head"))
+(implementation))
+(device 22 NOTE
+(properties
+(name "Example")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 This example prompts the user to select an existing Excel Workbook file, then reads in data from a range determined by a Vee text box. The retrieved data is displayed.\\par\r\n\\par\r\nNotice Excel is never displayed.  Use of the Settings object to make Excel visible is not needed here.\\par\r\n\\par\r\nAlso, notice an error occurs if the active sheet is a chart instead of a Worksheet.\\par\r\n}\r\n"
+)))
+(device 26 LABEL
+(properties
+(name "foobaz")
+(variableScope cont)
+(labelValue "foobaz"))
+(interface
+(input 1
+(name "Label")
+(tag "Label")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES)))
+(implementation))
+(device 39 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 54 CONTEXT
+(properties
+(name "CheckIfFileExists")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Then")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(variableScope cont)
+(expr 1
+"host_local + \"\\\\VEE Calibration Files\\\\Power_Head_Cal_Files\\\\\" + A + \".xls\""
+))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FORMULA
+(properties
+(name "File.Exists(path)")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fcharset0 Times New Roman;}{\\f2\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f3\\fnil\\fcharset0 Microsoft Sans Serif;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\ul\\b\\f0\\fs24 System.IO.File.Exists\\par\r\n\\pard\\sb100\\sa100\\cf0\\ulnone\\b0\\f1 This function Determines whether the specified file exists.  \\f2 It is a .NET Framework call and can be found in the Function and Object Browser here: \\f3\\fs17\\par\r\n\\pard\\b\\f2\\fs24\\par\r\nAssembly\\b0 : Mscorlib\\par\r\n\\b Namespace\\b0 : System.IO\\par\r\n\\b Type\\b0 : System.IO.File\\i\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 2 "// See object description for more information"
+"System.IO.File.Exists(path);"))
+(interface
+(input 1
+(name "path")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"That file doesn\'t exit in \" +A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A==true"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 4 MESSAGEBOX
+(properties
+(variableScope cont)
+(position 335 169)
+(message "That file doesn\'t exit in ")
+(symbol Exclamation))
+(interface
+(input 1
+(name "Message")
+(tag "Message")
+(requires
+(datatype Text))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "OK")
+(lock name constraints))
+(output 2
+(name "retry")
+(lock name constraints)))
+(implementation
+(customButtons 1)
+(displayMode 3)
+(buttons "<Custom...>")
+(buttonLabel1 "OK")
+(buttonLabel2 "retry")
+(buttonLabel3 "")
+(bdefault "OK")))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:1 D1:1)
+(connect D0:1 D2:1)
+(connect D1:1 D3:1)
+(connect D3:2 D4:0)
+(connect D2:1 D4:1)
+(connect D0:1 O1:1)
+(connect D3:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 689 465)
+(anchorPt 76 58)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 444 66))
+(terminals on)
+(pinCenter 100 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 99 15))
+(open
+(extent 284 66))
+(terminals on)
+(pinCenter 110 110))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 100 150))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 75 51))
+(terminals on)
+(pinCenter 230 110))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 84 25))
+(open
+(extent 637 144))
+(terminals on)
+(pinCenter 230 160))
+(connect I1:1 D0:1
+(points 4 -76 174 10 174 10 70 72 70))
+(connect D0:1 D1:1
+(points 6 127 70 150 70 150 40 40 40 40 110 58 110))
+(connect D0:1 D2:1
+(points 6 127 70 150 70 150 40 40 40 40 150 72 150))
+(connect D1:1 D3:1
+(points 2 162 110 192 110))
+(connect D3:2 D4:0
+(points 5 268 120 280 120 280 140 230 140 230 145))
+(connect D2:1 D4:1
+(points 4 127 150 150 150 150 160 185 160))
+(connect D0:1 O1:1
+(points 4 127 70 150 70 150 54 612 54))
+(connect D3:1 O2:1
+(points 4 268 100 290 100 290 294 612 294)))
+(stackingOrder 3 1 0 2 4))))
+(device 55 CONTEXT
+(properties
+(name "LoadHP8487CalTable")
+(variableScope cont)
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "fileName")
+(optional yes))
+(output 1
+(type data)
+(name "Data")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "A5:B39"))
+(initValue Text
+(data  ""))))
+(device 1 CALL
+(properties
+(name "Call xlLib.DataFromCells")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'DataFromCells\'")
+(customHelpMenuHelpLink "To_Gather_Data_from_Cells")
+(variableScope cont)
+(callFunc "xlLib.DataFromCells")
+(parmMode rev30))
+(interface
+(input 1
+(name "CellsRange")
+(optional yes))
+(output 1
+(name "Data")
+(lock name constraints)
+(optional yes))))
+(device 2 CALL
+(properties
+(name "Call xlLib.CloseWorkbook")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'CloseWorkbook\'")
+(customHelpMenuHelpLink "To_Close_Workbooks")
+(variableScope cont)
+(callFunc "xlLib.CloseWorkbook")
+(parmMode rev30)))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "HP_8487A_Cal_Table=A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 4 FROMGLOBAL
+(properties
+(name "Get HP_8487A_Cal_Table")
+(variableScope cont)
+(globalName "HP_8487A_Cal_Table"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 5 CONTEXT
+(properties
+(name "OpenWorkbook")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'OpenWorkbookRW\'")
+(customHelpMenuHelpLink "To_Open_an_Existing_Workbook")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "fileName")
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call xlLib.OpenWorkbookRW")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'OpenWorkbookRW\'")
+(customHelpMenuHelpLink "To_Open_an_Existing_Workbook")
+(variableScope cont)
+(callFunc "xlLib.OpenWorkbookRW")
+(parmMode rev30))
+(interface
+(input 1
+(name "fileName")
+(optional yes))
+(input 2
+(name "OpenMode")
+(optional yes))))
+(device 1 RECCONST
+(properties
+(name "Open Workbook")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'OpenWorkbookRW\'")
+(customHelpMenuHelpLink "To_Open_an_Existing_Workbook")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Record")
+(lock name constraints)))
+(implementation
+(value Record
+(schema
+(numFields 1)
+(fieldName "ReadOnly"
+(type Enum)
+(values
+("True" 0)
+("False" 1))))
+(data 
+(record
+("ReadOnly" "False"))))))
+(device 2 NOTE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'OpenWorkbookRW\'")
+(customHelpMenuHelpLink "To_Open_an_Existing_Workbook")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 OpenWorkbookRW can open a workbook\\par\r\nfor Read-Only or Read-Write\\par\r\naccess by changing the ReadOnly\\par\r\nmode in the Open Workbook settings.\\par\r\n\\par\r\n}\r\n"
+)))
+(configuration
+(connect I1:1 D0:1)
+(connect D1:1 D0:2)))
+(contextCarrier
+(active detail)
+(detail
+(extent 692 402)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 100 0))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 505 110))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 96 0))
+(open
+(extent 245 87)
+(formatters))
+(pinCenter 160 190))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 272 127)
+(editing enabled))
+(pinCenter 460 280))
+(connect I1:1 D0:1
+(points 4 0 200 10 200 10 100 334 100))
+(connect D1:1 D0:2
+(points 4 285 190 310 190 310 120 334 120)))
+(stackingOrder 0 1 2))))
+(configuration
+(connect D5:0 D0:0)
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:0 D2:0)
+(connect D1:1 D3:1)
+(connect D2:0 D4:0)
+(connect I1:1 D5:1)
+(connect D4:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 334 287)
+(anchorPt 4 26)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 75 27))
+(pinCenter 150 90))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 165 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 150 150))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 165 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 150 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 280 150))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 157 15))
+(open
+(extent 153 51))
+(terminals on)
+(pinCenter 150 210))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 93 15))
+(terminals on)
+(pinCenter 150 10))
+(connect D5:0 D0:0
+(points 2 150 20 150 56))
+(connect D0:0 D1:0
+(points 2 150 106 150 140))
+(connect D0:1 D1:1
+(points 6 190 90 210 90 210 40 50 40 50 150 65 150))
+(connect D1:0 D2:0
+(points 2 150 160 150 170))
+(connect D1:1 D3:1
+(points 2 235 150 252 150))
+(connect D2:0 D4:0
+(points 2 150 190 150 200))
+(connect I1:1 D5:1
+(points 4 -4 117 10 117 10 10 101 10))
+(connect D4:1 O1:1
+(points 4 231 210 320 210 320 117 329 117)))
+(stackingOrder 0 1 3 4 2 5))))
+(device 56 CONTEXT
+(properties
+(name "UserVerifyGood")
+(variableScope cont)
+(trigMode deg)
+(nextID 13)
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "Break")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 MESSAGEBOX
+(properties
+(name "Verify Correct Power Head Cal Table")
+(variableScope cont)
+(popupTitle "Cal Table Correct?")
+(position 534 142)
+(message "Is this Cal Table Correct")
+(symbol Information))
+(interface
+(output 1
+(name "Yes")
+(lock name constraints))
+(output 2
+(name "No")
+(lock name constraints))
+(output 3
+(name "retry")
+(lock name constraints)))
+(implementation
+(customButtons 1)
+(displayMode 3)
+(buttons "<Custom...>")
+(buttonLabel1 "Yes")
+(buttonLabel2 "No")
+(buttonLabel3 "retry")
+(bdefault "Yes")))
+(device 1 MESSAGEBOX
+(properties
+(name "well then, Go Fix it!")
+(variableScope cont)
+(popupTitle "Well then, go fix it!")
+(position 97 273)
+(message
+"Abort & Update the Excel Power Head Calibration File (C:\\VEE\\Calibration\\Power_Head_Cal_Files)"
+)
+(symbol Information))
+(interface
+(output 1
+(name "Abort")
+(lock name constraints))
+(output 2
+(name "retry")
+(lock name constraints)))
+(implementation
+(customButtons 1)
+(displayMode 3)
+(buttons "<Custom...>")
+(buttonLabel1 "Abort")
+(buttonLabel2 "retry")
+(buttonLabel3 "")
+(bdefault "Abort")))
+(device 2 CONTEXT
+(properties
+(name "Quit Excel Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call xlLib.QuitExcelLibrary")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(callFunc "xlLib.QuitExcelLibrary")
+(parmMode rev30)))
+(device 1 DELETE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(libName "xlLib"))
+(implementation))
+(configuration
+(connect D0:0 D1:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 288 221)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 145 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 140 70))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 151 31))
+(pinCenter 140 140))
+(connect D0:0 D1:0
+(points 2 140 80 140 104)))
+(stackingOrder 0 1))))
+(device 3 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 4 INPUTDLG
+(properties
+(name "user name")
+(variableScope cont)
+(position 541 142)
+(prompt "Enter Your Name")
+(initialValue "Joe Sixpack")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text.")
+(errorMessagePosition 892 145))
+(interface
+(input 1
+(name "Default Value")
+(tag "Default Value")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")))
+(device 7 FROMGLOBAL
+(properties
+(name "Get Tech_Name")
+(variableScope cont)
+(globalName "Tech_Name"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 8 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "You must enter a name.")
+(symbol Question))
+(interface
+(output 1
+(name "Abort")
+(lock name constraints))
+(output 2
+(name "retry")
+(lock name constraints)))
+(implementation
+(customButtons 1)
+(displayMode 3)
+(buttons "<Custom...>")
+(buttonLabel1 "Abort")
+(buttonLabel2 "retry")
+(buttonLabel3 "")
+(bdefault "Abort")))
+(device 9 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 10 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(output 1
+(name "Data"))))
+(device 11 NEXT
+(properties
+(variableScope cont)))
+(device 12 NOTE
+(properties
+(name "UserVerifyGood")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 3/16/2023 I\'m Steve Applen and I approves of this message.\\par\r\n}\r\n"
+)))
+(configuration
+(connect D0:2 D1:0)
+(connect D7:1 D2:0)
+(connect D2:0 D3:0)
+(connect D0:1 D4:0)
+(connect D5:1 D4:1)
+(connect D4:2 D6:0)
+(connect D6:1 D7:1)
+(connect D1:1 D7:2)
+(connect D0:3 D8:1)
+(connect D1:2 D8:2)
+(connect D6:2 D8:3)
+(connect D8:1 D9:0)
+(connect D4:0 O1:1)))
+(contextCarrier
+(wndOrigin 62 62)
+(wndState res)
+(active detail)
+(detail
+(extent 910 401)
+(anchorPt 150 26)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 224 34))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 70 50))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 114 34))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 280 170))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 103 15))
+(terminals on)
+(pinCenter 640 240))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 66 31))
+(pinCenter 640 290))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 67 25))
+(open
+(extent 252 107))
+(terminals on)
+(pinCenter 390 70))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 97 15))
+(open
+(extent 99 51))
+(terminals on)
+(pinCenter 290 70))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 84 25))
+(open
+(extent 227 134))
+(terminals on)
+(pinCenter 440 170))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 600 170))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 26 34))
+(open)
+(terminals on)
+(pinCenter 510 260))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 30 15))
+(open)
+(terminals on)
+(pinCenter 560 290))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 96 0)
+(iconImage "notepad.icn"))
+(open
+(extent 424 46)
+(editing enabled))
+(pinCenter 110 300))
+(connect D0:2 D1:0
+(points 5 184 50 200 50 200 100 280 100 280 150))
+(connect D7:1 D2:0
+(points 3 615 170 640 170 640 230))
+(connect D2:0 D3:0
+(points 2 640 250 640 262))
+(connect D0:1 D4:0
+(points 3 184 40 390 40 390 55))
+(connect D5:1 D4:1
+(points 2 341 70 354 70))
+(connect D4:2 D6:0
+(points 3 426 80 440 80 440 155))
+(connect D6:1 D7:1
+(points 2 484 160 584 160))
+(connect D1:1 D7:2
+(points 6 339 160 370 160 370 220 510 220 510 180 584 180))
+(connect D0:3 D8:1
+(points 6 184 60 190 60 190 210 340 210 340 250 494 250))
+(connect D1:2 D8:2
+(points 4 339 180 360 180 360 260 494 260))
+(connect D6:2 D8:3
+(points 6 484 180 500 180 500 210 470 210 470 270 494 270))
+(connect D8:1 D9:0
+(points 3 525 260 560 260 560 280))
+(connect D4:0 O1:1
+(points 5 390 85 390 110 650 110 650 174 759 174)))
+(stackingOrder 2 3 5 7 9 4 1 6 10 8 0))))
+(device 57 BREAK
+(properties
+(variableScope cont)))
+(device 60 CONTEXT
+(properties
+(name "hp438 real or virtual")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "Data")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 IFTHENELSE
+(properties
+(name "If  Power_Meter_On?")
+(variableScope cont)
+(cases 1 "Power_Meter_On"))
+(interface
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 1 IODEVICE
+(properties
+(name "hp438 ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 4 "WRITE TEXT \"PR\" EOL" "WRITE TEXT \"?ID\" EOL"
+"READ TEXT x STR" "WRITE TEXT \"LG\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "hp438")))
+(device 2 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 3 FROMGLOBAL
+(properties
+(name "Get Power_Meter_TXT")
+(variableScope cont)
+(globalName "Power_Meter_TXT"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 4 FORMULA
+(properties
+(name "Power_Meter")
+(variableScope cont)
+(expr 1 "Power_Meter = A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D0:1 D1:0)
+(connect D1:0 D2:1)
+(connect D0:2 D2:2)
+(connect D2:1 D3:0)
+(connect D1:1 D4:1)
+(connect D3:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 658 251)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 132 0))
+(open
+(extent 132 51))
+(terminals on)
+(pinCenter 155 130))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 170 51)
+(iconImage "io.icn"))
+(open
+(extent 284 126))
+(terminals on)
+(pinCenter 390 90))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 430 150))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 140 15))
+(open
+(extent 138 51))
+(terminals on)
+(pinCenter 460 180))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 79 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 540 90))
+(connect D0:1 D1:0
+(points 5 263 120 280 120 280 40 390 40 390 62))
+(connect D1:0 D2:1
+(points 3 390 118 390 140 414 140))
+(connect D0:2 D2:2
+(points 6 263 140 280 140 280 150 390 150 390 160 414 160))
+(connect D2:1 D3:0
+(points 3 445 150 460 150 460 170))
+(connect D1:1 D4:1
+(points 2 477 90 498 90))
+(connect D3:1 O1:1
+(points 4 532 180 550 180 550 125 657 125)))
+(stackingOrder 0 1 2 3 4))))
+(device 62 START25
+(properties
+(variableScope cont)))
+(configuration
+(connect D6:1 D0:0)
+(connect D8:1 D1:1)
+(connect D11:1 D5:1)
+(connect D11:0 D6:0)
+(connect D0:1 D7:1)
+(connect D7:2 D8:0)
+(connect D7:1 D8:1)
+(connect D8:0 D9:0)
+(connect D9:1 D10:0)
+(connect D12:0 D11:0))
+(ShowOnExecPanel
+(relativeOrigin 311 -2)))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active detail)
+(panel
+(extent 571 953)
+(drawGrid "on")
+(widget 1 detail
+(relativeOrigin 270 50)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 204 736))
+(widget 3 detail
+(relativeOrigin 50 130)
+(PID 2)
+(title off)
+(tabStop off)
+(tabIndex 2)
+(borderStyle none)
+(extent 154 20)
+(just l))
+(widget 2 detail
+(relativeOrigin 270 20)
+(PID 3)
+(title off)
+(tabStop off)
+(tabIndex 3)
+(borderStyle none)
+(extent 102 27)
+(just l))
+(widget 5 detail
+(relativeOrigin 70 60)
+(PID 5)
+(title off)
+(tabStop off)
+(tabIndex 5)
+(borderStyle none)
+(extent 80 30)
+(just l))
+(widget 0 detail
+(relativeOrigin 50 150)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle flat)
+(extent 164 76)
+(format buttons)))
+(detail
+(extent 1466 743)
+(anchorPt -35 223)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(extent 85 25))
+(open
+(extent 174 76)
+(format buttons))
+(pinCenter 370 150))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 204 736))
+(pinCenter 870 450))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 99 0))
+(open
+(extent 102 27)
+(just l))
+(title off)
+(pinCenter 710 80))
+(devCarrierFor 18
+(active open)
+(icon
+(extent 118 0))
+(open
+(extent 154 34)
+(just l))
+(title off)
+(pinCenter 200 110))
+(devCarrierFor 22
+(active open)
+(icon
+(extent 68 51)
+(iconImage "notepad.icn"))
+(open
+(extent 354 196)
+(editing enabled))
+(pinCenter 740 -130))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 30 0))
+(open
+(extent 114 24)
+(just l))
+(title off)
+(pinCenter 440 -110))
+(devCarrierFor 39
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter 250 10))
+(devCarrierFor 54
+(active icon)
+(icon
+(extent 106 25))
+(terminals on)
+(pinCenter 530 130))
+(devCarrierFor 55
+(active icon)
+(icon
+(extent 132 25))
+(terminals on)
+(pinCenter 600 210))
+(devCarrierFor 56
+(active icon)
+(icon
+(extent 96 15))
+(terminals on)
+(pinCenter 600 270))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 38 15))
+(open)
+(terminals on)
+(pinCenter 660 320))
+(devCarrierFor 60
+(active icon)
+(icon
+(extent 124 25))
+(terminals on)
+(pinCenter 250 -110))
+(devCarrierFor 62
+(active open)
+(icon)
+(open
+(extent 44 23))
+(title off)
+(pinCenter 250 -170))
+(connect D6:1 D0:0
+(points 3 286 10 370 10 370 91))
+(connect D8:1 D1:1
+(points 4 668 210 700 210 700 450 765 450))
+(connect D11:1 D5:1
+(points 2 314 -110 380 -110))
+(connect D11:0 D6:0
+(points 2 250 -95 250 -18))
+(connect D0:1 D7:1
+(points 2 459 130 474 130))
+(connect D7:2 D8:0
+(points 3 585 140 600 140 600 195))
+(connect D7:1 D8:1
+(points 6 585 120 610 120 610 170 510 170 510 210 531 210))
+(connect D8:0 D9:0
+(points 2 600 225 600 260))
+(connect D9:1 D10:0
+(points 3 650 270 660 270 660 310))
+(connect D12:0 D11:0
+(points 2 250 -156 250 -125)))
+(stackingOrder 2 10 11 5 4 12 3 1 0 6 7 8 9))))
+(device 101 DECLVAR
+(properties
+(name "Declare Power_Meter_On")
+(scope glob)
+(globalName "Power_Meter_On"))
+(implementation
+(value Int16
+(data  0))))
+(device 102 FORMULA
+(properties
+(name "Power_Meter_On = 0")
+(variableScope cont)
+(expr 5 "Power_Meter_On = 0;" "Power_Meter_TXT=\"foobaz\";"
+"Tech_Name=\"Joe Sixpack\";" "" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 104 DECLVAR
+(properties
+(name "Declare Power_Meter_TXT")
+(scope glob)
+(globalName "Power_Meter_TXT"))
+(implementation
+(value Text
+(data  ""))))
+(device 106 CONTEXT
+(properties
+(name "CloseAllWorkbooks")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'CloseAllWorkbooks\'")
+(customHelpMenuHelpLink "To_Close_Workbooks")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call xlLib.CloseAllWorkbooks")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'CloseAllWorkbooks\'")
+(customHelpMenuHelpLink "To_Close_Workbooks")
+(variableScope cont)
+(callFunc "xlLib.CloseAllWorkbooks")
+(parmMode rev30)))
+(device 1 NOTE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'CloseAllWorkbooks\'")
+(customHelpMenuHelpLink "To_Close_Workbooks")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 This closes all open \\par\r\nWorkbooks without saving\\par\r\nor prompting to save. \\par\r\n\\par\r\n}\r\n"
+)))
+(configuration))
+(contextCarrier
+(active detail)
+(detail
+(extent 626 248)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 163 0))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 180 140))
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 222 102)
+(editing enabled))
+(pinCenter 440 130)))
+(stackingOrder 0 1))))
+(device 107 CONTEXT
+(properties
+(name "Quit Excel Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call xlLib.QuitExcelLibrary")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(callFunc "xlLib.QuitExcelLibrary")
+(parmMode rev30)))
+(device 1 DELETE
+(properties
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on the Excel Library function \'QuitExcelLibrary\'")
+(customHelpMenuHelpLink "To_Quit_Vxl")
+(variableScope cont)
+(libName "xlLib"))
+(implementation))
+(configuration
+(connect D0:0 D1:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 288 221)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 145 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 140 70))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 151 31))
+(pinCenter 140 140))
+(connect D0:0 D1:0
+(points 2 140 80 140 104)))
+(stackingOrder 0 1))))
+(device 108 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 109 START25
+(properties
+(variableScope cont)))
+(device 111 DECLVAR
+(properties
+(name "Declare Tech_Name")
+(scope glob)
+(globalName "Tech_Name"))
+(implementation
+(value Text
+(data  ""))))
+(device 112 CONTEXT
+(properties
+(name "Initialize Excel Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(trigMode deg)
+(nextID 43)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 29 IMPORT
+(properties
+(name "Import Library")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(libType userFunction)
+(libName "xlLib")
+(fileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\ExcelLibrary\\ExcelLibrary.vxe"
+))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 30 FORMULA
+(properties
+(name "Excel Runtime Library File Specifier")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(expr 1 "installDir() + \"\\\\Lib\\\\ExcelLibrary\\\\ExcelLibrary.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 33 CALL
+(properties
+(name "Call xlLib.Initialize")
+(customHelpMenuName "Excel Help")
+(customHelpMenuDescription
+"Help on loading the Excel Library, and calling its function \'Initialize\'")
+(customHelpMenuHelpLink "Initialize")
+(variableScope cont)
+(callFunc "xlLib.Initialize")
+(parmMode rev30)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:0 D2:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 749 382)
+(anchorPt -327 -349)
+(configuration
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 224 82))
+(pinCenter 890 420))
+(devCarrierFor 30
+(active open)
+(icon
+(extent 196 15))
+(open
+(extent 295 50))
+(terminals on)
+(pinCenter 550 440))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 115 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 890 460))
+(connect D1:0 D0:0
+(points 6 560 467 560 490 780 490 780 390 890 390 890 410))
+(connect D1:1 D0:1
+(points 4 750 440 770 440 770 420 846 420))
+(connect D0:0 D2:0
+(points 2 890 430 890 450)))
+(stackingOrder 0 1 2))))
+(device 113 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 PowerHeadCalDataFromCells\\par\r\n\\par\r\nThis is a clean version of the hp438A called by Calibration_Equipment.\\par\r\nUserObject hp438 loads the cal factor array to a global variable.\\par\r\nThe Initialize Excel Library was inside on the original.\\par\r\nThis hp438 assumes excel is working.\\par\r\n\\par\r\n}\r\n"
+)))
+(device 115 LABEL
+(properties
+(name "hp438")
+(variableScope cont)
+(labelValue "hp438"))
+(implementation))
+(configuration
+(connect D9:0 D1:0)
+(connect D11:0 D2:0)
+(connect D1:0 D4:0)
+(connect D2:0 D6:0)
+(connect D6:0 D7:0)
+(connect D7:0 D8:0)
+(connect D4:0 D11:0))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active detail)
+(panel
+(extent 1339 739)
+(drawGrid "on")
+(widget 13 detail
+(relativeOrigin 200 50)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle none)
+(extent 47 27)
+(just l))
+(widget 12 detail
+(relativeOrigin 0 110)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle flat)
+(extent 410 180)
+(editing enabled)))
+(detail
+(extent 1339 742)
+(anchorPt 565 498)
+(configuration
+(devCarrierFor 76
+(active open)
+(icon
+(extent 184 15))
+(open
+(extent 220 115))
+(pinCenter -440 -330))
+(devCarrierFor 81
+(active icon)
+(icon
+(extent 191 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 160 -290))
+(devCarrierFor 99
+(active icon)
+(icon
+(extent 39 15))
+(open
+(extent 1157 953)
+(carbonCopy))
+(terminals on)
+(pinCenter 160 -180))
+(devCarrierFor 101
+(active open)
+(icon
+(extent 161 15))
+(open
+(extent 199 115))
+(pinCenter -220 -330))
+(devCarrierFor 102
+(active icon)
+(icon
+(extent 132 15))
+(open
+(extent 254 106))
+(terminals on)
+(pinCenter 160 -260))
+(devCarrierFor 104
+(active open)
+(icon
+(extent 160 15))
+(open
+(extent 214 116))
+(pinCenter -440 -190))
+(devCarrierFor 106
+(active icon)
+(icon
+(extent 118 15))
+(terminals on)
+(pinCenter 160 -110))
+(devCarrierFor 107
+(active icon)
+(icon
+(extent 103 15))
+(terminals on)
+(pinCenter 160 -80))
+(devCarrierFor 108
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 66 31))
+(pinCenter 160 -40))
+(devCarrierFor 109
+(active open)
+(icon)
+(open
+(extent 44 23))
+(title off)
+(pinCenter 160 -350))
+(devCarrierFor 111
+(active open)
+(icon
+(extent 125 15))
+(open
+(extent 202 115))
+(pinCenter -220 -190))
+(devCarrierFor 112
+(active icon)
+(icon
+(extent 127 15))
+(terminals on)
+(pinCenter 160 -230))
+(devCarrierFor 113
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 410 180)
+(editing enabled))
+(pinCenter 520 -170))
+(devCarrierFor 115
+(active open)
+(icon
+(extent 39 0))
+(open
+(extent 47 27)
+(just l))
+(title off)
+(pinCenter -340 -440))
+(connect D9:0 D1:0
+(points 2 160 -336 160 -300))
+(connect D11:0 D2:0
+(points 2 160 -220 160 -190))
+(connect D1:0 D4:0
+(points 2 160 -280 160 -270))
+(connect D2:0 D6:0
+(points 2 160 -170 160 -120))
+(connect D6:0 D7:0
+(points 2 160 -100 160 -90))
+(connect D7:0 D8:0
+(points 2 160 -70 160 -68))
+(connect D4:0 D11:0
+(points 2 160 -250 160 -240)))
+(stackingOrder 0 3 1 9 8 7 5 10 4 6 11 13 12 2))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
