@@ -1,0 +1,120 @@
+(saveFormat "7.0")
+(date "Fri 17/Mar/2023 10:14:41 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "newInstrument ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 6 "WRITE TEXT \"PR\" EOL" "WRITE TEXT \"?ID\" STR EOL"
+"READ TEXT x STR" "WRITE TEXT \"LL\" EOL" "WRITE TEXT \"AP\" EOL"
+"READ TEXT y REAL64"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "newInstrument")))
+(device 1 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 3 START25
+(properties
+(variableScope cont)))
+(device 4 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D2:0 D0:0)
+(connect D0:1 D1:1)
+(connect D0:2 D3:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 1037 348)
+(wndState max)
+(active detail)
+(detail
+(extent 1164 586)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 302 51)
+(iconImage "io.icn"))
+(open
+(extent 287 116))
+(terminals on)
+(pinCenter 330 280))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 284 136))
+(pinCenter 870 140))
+(devCarrierFor 3
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 400 40))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 284 136))
+(pinCenter 860 360))
+(connect D2:0 D0:0
+(points 4 400 53 400 70 330 70 330 201))
+(connect D0:1 D1:1
+(points 4 506 250 530 250 530 140 725 140))
+(connect D0:2 D3:1
+(points 4 506 310 530 310 530 360 715 360)))
+(stackingOrder 2 1 3 0))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
