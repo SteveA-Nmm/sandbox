@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 07/Dec/2022 09:56:03 ")
+(date "Wed 22/Mar/2023 12:25:38 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -400,7 +400,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 27)
+(nextID 32)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -467,7 +467,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  10.3455334444))
+(data  -0.0006845))
 (initValue Real
 (data  0))))
 (device 8 CONSTANT
@@ -918,12 +918,18 @@
 (device 11 FORMULA
 (properties
 (variableScope cont)
-(expr 2 "round(A)" ""))
+(expr 3 "o=round(A);" "round(B*A)/B;" ""))
 (interface
 (input 1
 (name "A")
 (optional yes))
+(input 2
+(name "B")
+(optional yes))
 (output 1
+(name "o")
+(optional yes))
+(output 2
 (name "Result")
 (tag "Result")
 (lock name constraints)
@@ -1001,6 +1007,7 @@
 (data  0))))
 (device 22 TEXTDISPLAY
 (properties
+(name "Corrupted")
 (variableScope cont))
 (interface
 (input 1
@@ -1023,7 +1030,7 @@
 (lock name constraints)))
 (implementation
 (value Real
-(data  10.35))
+(data  -684.5))
 (initValue Real
 (data  0))))
 (device 25 NOTE
@@ -1031,30 +1038,52 @@
 (name "numDig significant digits")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\b\\f0\\fs32 click inside the Real64 data constant  10.346\\par\r\nto see the full precision 10.3455334444\\par\r\n\\cf2\\b0\\fs24\\par\r\nafter toEngr the full precision is correctly rounded 10.35\\par\r\nBUT, it\'s now text and must be converted back to Real.\\par\r\n\\par\r\nimpressive........................\\par\r\nAccuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close measurements of the same item are to each other. Precision is independent of accuracy.\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}{\\f1\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Usage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n\\cf1\\b\\f1\\fs32\\par\r\n\\cf2\\b0\\fs24 Stop after converting toEngr. Do not try and convert back to real64. It\'s now a string and will be corrupted for values less than 1.\\par\r\n\\par\r\nimpressive........................\\par\r\nAccuracy refers to how close a measurement is to the true or accepted value. Precision refers to how close measurements of the same item are to each other. Precision is independent of accuracy.\\par\r\n}\r\n"
 )))
+(device 27 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 29 CONSTANT
+(properties
+(name "Int64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int64")
+(lock name constraints)))
+(implementation
+(value Int64
+(data  1000000))
+(initValue Int64
+(data  0))))
 (configuration
 (connect D4:0 D0:0)
 (connect D1:1 D0:1)
 (connect D2:1 D0:2)
 (connect D0:1 D3:1)
 (connect D1:1 D5:1)
-(connect D5:1 D6:1)
+(connect D13:1 D5:2)
+(connect D5:2 D6:1)
 (connect D8:0 D7:0)
 (connect D10:1 D7:1)
 (connect D8:1 D7:2)
 (connect D10:0 D8:0)
 (connect D7:1 D9:1)
 (connect D0:0 D10:0)
-(connect D0:1 D10:1)))
+(connect D0:1 D10:1)
+(connect D5:1 D12:1)))
 (contextCarrier
 (wndRestoredOrigin 2 2)
 (wndRestoredExtent 702 385)
 (wndState max)
 (active detail)
 (detail
-(extent 1018 586)
-(anchorPt -256 137)
+(extent 1601 892)
+(anchorPt 177 270)
 (configuration
 (devCarrierFor 6
 (active open)
@@ -1099,15 +1128,15 @@
 (active open)
 (icon)
 (open
-(extent 145 65))
+(extent 174 85))
 (terminals on)
-(pinCenter 750 100))
+(pinCenter 740 90))
 (devCarrierFor 12
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 990 90))
+(pinCenter 990 120))
 (devCarrierFor 20
 (active open)
 (icon
@@ -1117,36 +1146,51 @@
 (carbonCopy))
 (terminals on)
 (titleBg "Light Beige")
-(pinCenter 865 320))
+(pinCenter 865 350))
 (devCarrierFor 21
 (active open)
 (icon)
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 690 330))
+(pinCenter 690 360))
 (devCarrierFor 22
 (active open)
-(icon)
+(icon
+(extent 62 0))
 (open
 (extent 121 22))
-(pinCenter 990 320))
+(pinCenter 990 350))
 (devCarrierFor 24
 (active open)
 (icon)
 (open
 (extent 80 29)
 (showFormat real))
-(pinCenter 690 280))
+(pinCenter 690 310))
 (devCarrierFor 25
 (active open)
 (icon
 (extent 149 0)
 (iconImage "notepad.icn"))
 (open
-(extent 524 196)
+(extent 594 256)
 (editing enabled))
-(pinCenter 550 30))
+(pinCenter 300 -70))
+(devCarrierFor 27
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 990 60))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 32 15))
+(open
+(extent 68 29)
+(showFormat int))
+(pinCenter 590 110))
 (connect D4:0 D0:0
 (points 2 520 150 520 166))
 (connect D1:1 D0:1
@@ -1156,24 +1200,28 @@
 (connect D0:1 D3:1
 (points 2 584 210 627 210))
 (connect D1:1 D5:1
-(points 8 417 170 440 170 440 160 560 160 560 150 640 150 640 100 645 100))
-(connect D5:1 D6:1
-(points 4 875 100 900 100 900 90 927 90))
+(points 4 417 170 440 170 440 70 620 70))
+(connect D13:1 D5:2
+(points 2 608 110 620 110))
+(connect D5:2 D6:1
+(points 4 879 110 900 110 900 120 927 120))
 (connect D8:0 D7:0
-(points 6 690 347 690 370 760 370 760 260 850 260 850 276))
+(points 6 690 377 690 400 760 400 760 290 850 290 850 306))
 (connect D10:1 D7:1
-(points 4 732 280 750 280 750 310 785 310))
+(points 4 732 310 750 310 750 340 785 340))
 (connect D8:1 D7:2
-(points 2 726 330 785 330))
+(points 2 726 360 785 360))
 (connect D10:0 D8:0
-(points 2 690 297 690 295))
+(points 2 690 327 690 325))
 (connect D7:1 D9:1
-(points 2 914 320 927 320))
+(points 2 914 350 927 350))
 (connect D0:0 D10:0
-(points 6 520 235 520 260 600 260 600 240 690 240 690 245))
+(points 4 520 235 520 260 690 260 690 275))
 (connect D0:1 D10:1
-(points 4 584 210 610 210 610 280 647 280)))
-(stackingOrder 4 3 9 2 8 10 7 6 5 0 1 11))
+(points 4 584 210 610 210 610 310 647 310))
+(connect D5:1 D12:1
+(points 4 879 70 900 70 900 60 927 60)))
+(stackingOrder 4 2 8 7 0 1 6 5 13 11 9 12 10 3))
 (numberFormats
 (realFormat standard)
 (realSigDigits 5)

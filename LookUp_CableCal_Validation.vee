@@ -1,0 +1,3176 @@
+(saveFormat "7.0")
+(date "Wed 22/Mar/2023 12:27:56 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "8720B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::18::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::18::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "InstrumentGPIB"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HPEPM"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "SpecAna"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP856XE"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument3"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "SkalarAnalyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757d.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "Skalar analyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument7"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument8"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::5::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::5::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument9"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::9::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::9::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstr19200"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 19200)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstr9600"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "hp8757A"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "PassThru"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757C"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "hp8757c5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c5.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757c6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c6.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757c4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c4.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d4.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d5.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d6.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d7"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d7.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP8753"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP3478"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp3478a.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument10"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Jedi"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument11"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "serial"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(assemblyRefs
+(assemblyRef 1
+(displayName
+"mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")
+(filename "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorlib.dll"))
+(selectedNamespaces "System.IO,"))
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 55)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 7 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 10 XYPLOT
+(properties
+(name "swept cal hp8757")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 13 TEXTDISPLAY
+(properties
+(name "Lookup")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 17 TEXTDISPLAY
+(properties
+(name "Frequency")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 18 CONTEXT
+(properties
+(name "OpenCalFile")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "freq")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "gain")
+(lock constraints)
+(optional yes))
+(output 4
+(type data)
+(name "gain")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "Directory.GetCurrentDirectory( )")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f2\\fnil\\fcharset0 Microsoft Sans Serif;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\ul\\b\\f0\\fs24 System.IO.Directory.GetCurrentDirectory\\par\r\n\\cf0\\ulnone\\b0\\f1 This function returns the \"current directory\" from where you ran the VEE program.  It is a .NET Framework call and can be found in the Function and Object Browser here: \\f2\\fs17\\par\r\n\\b\\f1\\fs24\\par\r\nAssembly\\b0 : Mscorlib\\par\r\n\\b Namespace\\b0 : System.IO\\par\r\n\\b Type\\b0 : System.IO.Directory\\cf1\\ul\\b\\f0\\par\r\n}\r\n"
+)
+(variableScope cont)
+(expr 2 "// See object description for more information"
+"System.IO.Directory.GetCurrentDirectory( );"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FILESELECT
+(properties
+(name "File Name Selection")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory "C:\\Users\\sapplen\\Documents\\GitHub\\sandbox")
+(initialFile "SweptCal2023_03_21_161447.txt")
+(dialogMode Reading))
+(interface
+(input 1
+(name "Initial Directory")
+(tag "Initial Directory")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 2 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 3 FORMULA
+(properties
+(name "XY parse")
+(variableScope cont)
+(expr 2 "freq=a[0,*];" "gain=a[1,*]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "freq")
+(optional yes))
+(output 2
+(name "gain")
+(optional yes))))
+(device 4 FROMFILE
+(properties
+(variableScope cont)
+(transactions 3 "EXECUTE REWIND" "READ CONTAINER x" "READ CONTAINER y"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(name "y")
+(optional yes)))
+(implementation
+(attr iopath file read
+"C:\\Users\\sapplen\\Documents\\GitHub\\sandbox\\SweptCal2023_03_21_161447.txt"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 5 TEXTDISPLAY
+(properties
+(name "Swept cal file")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:1 D1:1)
+(connect D1:2 D2:0)
+(connect D4:2 D3:1)
+(connect D1:0 D4:0)
+(connect D1:1 D4:1)
+(connect D1:1 D5:1)
+(connect D3:1 O1:1)
+(connect D3:1 O2:1)
+(connect D3:2 O3:1)
+(connect D3:2 O4:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 906 53)
+(drawGrid "on")
+(widget 5 detail
+(relativeOrigin 0 0)
+(PID 0)
+(title on)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 904 26)))
+(detail
+(extent 1041 388)
+(anchorPt 1 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 185 15))
+(open
+(extent 282 65))
+(terminals on)
+(pinCenter 160 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 419 106))
+(terminals on)
+(pinCenter 160 120))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 66 31))
+(pinCenter 160 200))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 135 65))
+(terminals on)
+(pinCenter 170 290))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 56 25))
+(open
+(extent 234 116))
+(terminals on)
+(pinCenter 350 110))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 83 0))
+(open
+(extent 904 26))
+(pinCenter 550 120))
+(connect D0:1 D1:1
+(points 6 255 70 280 70 280 40 50 40 50 120 96 120))
+(connect D1:2 D2:0
+(points 5 223 130 230 130 230 150 160 150 160 164))
+(connect D4:2 D3:1
+(points 6 380 120 400 120 400 240 120 240 120 290 141 290))
+(connect D1:0 D4:0
+(points 6 160 135 160 150 40 150 40 30 350 30 350 95))
+(connect D1:1 D4:1
+(points 2 223 110 319 110))
+(connect D1:1 D5:1
+(points 6 223 110 240 110 240 230 90 230 90 120 95 120))
+(connect D3:1 O1:1
+(points 6 199 280 410 280 410 140 1010 140 1010 53 1039 53))
+(connect D3:1 O2:1
+(points 4 199 280 410 280 410 143 1039 143))
+(connect D3:2 O3:1
+(points 6 199 300 220 300 220 320 1010 320 1010 233 1039 233))
+(connect D3:2 O4:1
+(points 4 199 300 220 300 220 323 1039 323)))
+(stackingOrder 0 2 4 3 1 5))))
+(device 23 CONTEXT
+(properties
+(name "OpenP1dBCal")
+(variableScope cont)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "rec")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "freq")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "gain")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FILESELECT
+(properties
+(name "File Name Selection")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory
+"C:\\Users\\sapplen\\Documents\\GitHub\\NGC_N19-6457\\VEE Calibration Files\\N19_6457"
+)
+(initialFile "CalPwrRFCablePad2023_03_21_152311.txt")
+(dialogMode Reading))
+(interface
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 1 FROMFILE
+(properties
+(variableScope cont)
+(transactions 3 "EXECUTE REWIND" "READ CONTAINER x" "READ CONTAINER y"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(name "y")
+(optional yes)))
+(implementation
+(attr iopath file read
+"C:\\Users\\sapplen\\Documents\\GitHub\\NGC_N19-6457\\VEE Calibration Files\\N19_6457\\CalPwrRFCablePad2023_03_21_152311.txt"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 2 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 12 FORMULA
+(properties
+(name "rec.field")
+(variableScope cont)
+(expr 2 "a=rec.rf_out;" "B=rec.rf_pad;"))
+(interface
+(input 1
+(name "rec")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "A")
+(optional yes))
+(output 3
+(name "B")
+(optional yes))))
+(device 13 TEXTDISPLAY
+(properties
+(name "P1dB 36pnt Cal")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:1 D1:1)
+(connect D0:2 D2:0)
+(connect D1:2 D3:1)
+(connect D0:1 D4:1)
+(connect D1:2 O1:1)
+(connect D3:2 O2:1)
+(connect D3:3 O3:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 905 50)
+(drawGrid "on")
+(widget 4 detail
+(relativeOrigin 0 0)
+(PID 1)
+(title on)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 904 26)))
+(detail
+(extent 575 403)
+(anchorPt -165 -91)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 419 106))
+(terminals on)
+(pinCenter 80 140))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 233 108))
+(terminals on)
+(pinCenter 360 130))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 66 31))
+(pinCenter 130 230))
+(devCarrierFor 12
+(active open)
+(icon)
+(open
+(extent 231 70))
+(terminals on)
+(pinCenter 400 300))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 94 0))
+(open
+(extent 904 26))
+(pinCenter 620 360))
+(connect D0:1 D1:1
+(points 2 143 130 171 130))
+(connect D0:2 D2:0
+(points 5 143 150 150 150 150 170 130 170 130 194))
+(connect D1:2 D3:1
+(points 6 509 160 530 160 530 210 230 210 230 300 252 300))
+(connect D0:1 D4:1
+(points 6 143 130 150 130 150 110 0 110 0 360 165 360))
+(connect D1:2 O1:1
+(points 4 509 160 530 160 530 162 739 162))
+(connect D3:2 O2:1
+(points 4 568 300 590 300 590 292 739 292))
+(connect D3:3 O3:1
+(points 4 568 320 590 320 590 422 739 422)))
+(stackingOrder 0 1 2 3 4))))
+(device 27 DECLVAR
+(properties
+(name "Declare P1dBCal")
+(scope glob)
+(globalName "P1dBCal"))
+(implementation
+(value Record
+(schema
+(numFields 8)
+(fieldName "rf_cable"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "rf_CablePad"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "rf_pad"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "if_cable"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "if_CablePad"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "if_pad"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "rf_out"
+(type Real64)
+(numDims 1)
+(size 36))
+(fieldName "if_in"
+(type Real64)
+(numDims 1)
+(size 36)))
+(data 
+(record
+("rf_cable" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 ])
+("rf_CablePad" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 ])
+("rf_pad" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 ])
+("if_cable" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 ])
+("if_CablePad" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 ])
+("if_pad" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 ])
+("rf_out" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 ])
+("if_in" [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 ]))))))
+(device 30 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 31 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "index=0"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 32 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "index=index+1" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 33 FORMULA
+(properties
+(name "rec.field")
+(variableScope cont)
+(expr 2 "a=rec.rf_out[index];" "B=rec.rf_pad[index]"))
+(interface
+(input 1
+(name "rec")
+(optional yes))
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "B")
+(optional yes))))
+(device 34 TEXTDISPLAY
+(properties
+(name "P1dBCal")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 36 DECLVAR
+(properties
+(name "Declare index")
+(scope glob)
+(globalName "index"))
+(implementation
+(value Int16
+(data  0))))
+(device 37 SCROLLINGTEXTDISPLAY
+(properties
+(name "Freq   P1dBCal   Lookup  delta")
+(variableScope cont)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(device 38 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+\"  \"+B+\"  \"+C+\"  \"+D;"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 39 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "x=100*(B-A);" "Round(x)/100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 40 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 41 TEXTDISPLAY
+(properties
+(name "delta")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 42 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "swept cal hp8757"))
+(initValue Text
+(data  ""))))
+(device 43 CONFIRM25
+(properties
+(name "quit")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 47 CONTEXT
+(properties
+(name "veeosInit")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\nveeosInit has no underlying function\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nPlace this object at the beginning of any program that uses the veeos library. Set \"Run Every Time\" to cause this object to execute each time your program is run.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 33)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 12 START25
+(properties
+(variableScope cont)))
+(device 18 TOGGLE25
+(properties
+(name "Run Every Time")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 20 IFTHENELSE
+(properties
+(name "force run")
+(variableScope cont)
+(cases 1 "A==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 21 TOGLOBAL
+(properties
+(name "Set veeosInit_already_run")
+(variableScope cont)
+(globalName "veeosInit_already_run"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 22 CONSTANT
+(properties
+(name "0")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "UInt8")
+(lock name constraints)))
+(implementation
+(value UInt8
+(data  0))
+(initValue UInt8
+(data  0))))
+(device 24 LABEL
+(properties
+(name "This item FIRST in all VEEOS programs")
+(variableScope cont)
+(labelValue "This item FIRST in all VEEOS programs"))
+(implementation))
+(device 25 CONTEXT
+(properties
+(name "choose bootstrap library")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "local bootstrap")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "bootstrapLib.vxe"))
+(initValue Text
+(data  ""))))
+(device 2 FORMULA
+(properties
+(name "system bootstrap")
+(variableScope cont)
+(expr 1 "installDir()+\"/veeos/lib/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOMEPATH\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 VECTORCONCATENATOR
+(properties
+(name "bootstrap file list")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 9 CONTEXT
+(properties
+(name "choose bootstrap source")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 16)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 8 EXITCONTEXT
+(properties
+(variableScope cont)))
+(device 11 FORMULA
+(properties
+(name "each item")
+(variableScope cont)
+(expr 1 "A[n]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "n")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 12 FORMULA
+(properties
+(name "how many?")
+(variableScope cont)
+(expr 1 "totSize(A)"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORCOUNT
+(properties
+(variableScope cont)
+(count 5))
+(interface
+(input 1
+(name "Count")
+(tag "Count")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 14 FROMFILE
+(properties
+(name "see if file exists and is finite size")
+(variableScope cont)
+(transactions 2 "READ BINARY x BYTE" "EXECUTE CLOSE"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file read
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 15 GATE
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(tag "InData"))
+(output 1
+(name "X"))))
+(configuration
+(connect D5:0 D0:0)
+(connect D2:1 D1:1)
+(connect D3:1 D1:2)
+(connect I1:1 D2:1)
+(connect D2:2 D3:1)
+(connect D1:0 D4:0)
+(connect D1:1 D4:1)
+(connect D4:1 D5:0)
+(connect D1:1 D5:1)
+(connect D5:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 11 FORMULA
+(properties
+(name "user specified bootstrap")
+(variableScope cont)
+(expr 1 "getenv(\"MY_BOOTSTRAPLIB\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOME\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D5:1 D3:1)
+(connect D0:1 D3:2)
+(connect D6:1 D3:3)
+(connect D2:1 D3:4)
+(connect D1:1 D3:5)
+(connect D3:1 D4:1)
+(connect D4:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 26 IMPORT
+(properties
+(name "Import Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libType userFunction)
+(libName "bootstrapLib")
+(fileName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 27 DELETE
+(properties
+(name "Delete Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libName "bootstrapLib"))
+(implementation))
+(device 29 CALL
+(properties
+(name "Call bootstrapLib.init")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(callFunc "bootstrapLib.init")
+(parmMode rev30))
+(interface
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes))))
+(device 31 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6600)
+(message "no valid VEEOS Bootstrap Library found")))
+(device 32 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6601)
+(message "VEEOS Bootstrap Library: init() function not found or failed")))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D4:1 D3:1)
+(connect D2:1 D4:0)
+(connect D1:0 D6:0)
+(connect D6:0 D7:0)
+(connect D6:1 D7:1)
+(connect D9:0 D8:0)
+(connect D7:0 D9:0)
+(connect D7:1 D10:0)
+(connect D9:1 D11:0)))
+(contextCarrier
+(active panel)
+(panel
+(extent 173 114)
+(drawGrid "off")
+(widget 5 detail
+(relativeOrigin 0 0)
+(bg "Light Beige")
+(fg "Black")
+(font "Arial" 9)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle none)
+(extent 228 27)
+(just l))
+(widget 0 detail
+(relativeOrigin 10 30)
+(bg "Light Beige")
+(fg "Black")
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 151 51))
+(widget 1 detail
+(relativeOrigin 20 90)
+(bg "Light Beige")
+(fg "Black")
+(PID 2)
+(title off)
+(tabIndex 2)
+(borderStyle none)
+(extent 120 25)
+(scaled off)
+(format check box))
+(panelBg "Light Beige"))))
+(device 52 CONTEXT
+(properties
+(name "formating")
+(variableScope cont)
+(trigMode deg)
+(nextID 20)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(output 1
+(type data)
+(name "W")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "X")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Y")
+(lock constraints)
+(optional yes))
+(output 4
+(type data)
+(name "Z")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  5))
+(initValue Int16
+(data  0))))
+(device 1 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 2 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  40))
+(initValue Real
+(data  0))))
+(device 3 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  20.73))
+(initValue Real
+(data  0))))
+(device 4 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 5 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  2))
+(initValue Int16
+(data  0))))
+(device 6 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  19.34))
+(initValue Real
+(data  0))))
+(device 7 CONSTANT
+(properties
+(name "Real64")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(input 1
+(type control)
+(name "Default Value")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  -1.38))
+(initValue Real
+(data  0))))
+(device 8 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  4))
+(initValue Int16
+(data  0))))
+(device 9 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 10 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 11 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  2))
+(initValue Int16
+(data  0))))
+(device 12 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  2))
+(initValue Int16
+(data  0))))
+(device 13 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 14 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  2))
+(initValue Int16
+(data  0))))
+(device 15 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 16 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  2))
+(initValue Int16
+(data  0))))
+(device 17 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 18 CONTEXT
+(properties
+(name "toEngr")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_toEngr")
+(variableScope cont)
+(callFunc "o_toEngr")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "numDig")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(device 19 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  5))
+(initValue Int16
+(data  0))))
+(configuration
+(connect I1:1 D1:1)
+(connect D0:1 D1:2)
+(connect D1:1 D2:1)
+(connect D4:1 D3:1)
+(connect I2:1 D4:1)
+(connect D5:1 D4:2)
+(connect D10:1 D6:1)
+(connect D9:1 D7:1)
+(connect I4:1 D9:1)
+(connect D8:1 D9:2)
+(connect I3:1 D10:1)
+(connect D11:1 D10:2)
+(connect D7:1 D13:1)
+(connect D12:1 D13:2)
+(connect D6:1 D15:1)
+(connect D14:1 D15:2)
+(connect D3:1 D17:1)
+(connect D16:1 D17:2)
+(connect D2:1 D18:1)
+(connect D19:1 D18:2)
+(connect D18:1 O1:1)
+(connect D17:1 O2:1)
+(connect D15:1 O3:1)
+(connect D7:1 O4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 650 473)
+(anchorPt -8 -7)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 100 110))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 235 100))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 43 15))
+(open
+(extent 79 29)
+(showFormat real))
+(pinCenter 320 100))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 43 15))
+(open
+(extent 79 29)
+(showFormat real))
+(pinCenter 310 200))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 225 200))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 90 210))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 43 15))
+(open
+(extent 79 29)
+(showFormat real))
+(pinCenter 320 290))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 43 15))
+(open
+(extent 79 29)
+(showFormat real))
+(pinCenter 310 390))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 90 400))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 225 390))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 235 290))
+(devCarrierFor 11
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 100 300))
+(devCarrierFor 12
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 420 420))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 555 410))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 430 320))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 565 310))
+(devCarrierFor 16
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 420 230))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 555 220))
+(devCarrierFor 18
+(active open)
+(icon
+(extent 40 25))
+(open
+(extent 34 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 565 120))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 430 130))
+(connect I1:1 D1:1
+(points 4 8 63 150 63 150 90 155 90))
+(connect D0:1 D1:2
+(points 2 136 110 155 110))
+(connect D1:1 D2:1
+(points 2 284 100 296 100))
+(connect D4:1 D3:1
+(points 2 274 200 286 200))
+(connect I2:1 D4:1
+(points 6 8 183 10 183 10 160 140 160 140 190 145 190))
+(connect D5:1 D4:2
+(points 2 126 210 145 210))
+(connect D10:1 D6:1
+(points 2 284 290 296 290))
+(connect D9:1 D7:1
+(points 2 274 390 286 390))
+(connect I4:1 D9:1
+(points 6 8 423 10 423 10 350 140 350 140 380 145 380))
+(connect D8:1 D9:2
+(points 2 126 400 145 400))
+(connect I3:1 D10:1
+(points 6 8 303 10 303 10 250 150 250 150 280 155 280))
+(connect D11:1 D10:2
+(points 2 136 300 155 300))
+(connect D7:1 D13:1
+(points 6 334 390 350 390 350 370 470 370 470 400 475 400))
+(connect D12:1 D13:2
+(points 2 456 420 475 420))
+(connect D6:1 D15:1
+(points 6 344 290 360 290 360 270 480 270 480 300 485 300))
+(connect D14:1 D15:2
+(points 2 466 320 485 320))
+(connect D3:1 D17:1
+(points 6 334 200 350 200 350 180 470 180 470 210 475 210))
+(connect D16:1 D17:2
+(points 2 456 230 475 230))
+(connect D2:1 D18:1
+(points 6 344 100 360 100 360 80 480 80 480 110 485 110))
+(connect D19:1 D18:2
+(points 2 466 130 485 130))
+(connect D18:1 O1:1
+(points 4 614 120 630 120 630 63 657 63))
+(connect D17:1 O2:1
+(points 4 604 220 620 220 620 183 657 183))
+(connect D15:1 O3:1
+(points 4 614 310 630 310 630 303 657 303))
+(connect D7:1 O4:1
+(points 6 334 390 360 390 360 460 620 460 620 423 657 423)))
+(stackingOrder 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19))))
+(device 53 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+\"  \"+B+\"  \"+C+\"  \"+D;"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 54 SCROLLINGTEXTDISPLAY
+(properties
+(name "Freq   P1dBCal   Lookup  delta")
+(variableScope cont)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D10:1 D0:1)
+(connect D4:4 D0:2)
+(connect D4:2 D0:3)
+(connect D4:1 D1:1)
+(connect D4:3 D1:2)
+(connect D18:1 D1:3)
+(connect D16:1 D2:1)
+(connect D10:1 D3:1)
+(connect D20:0 D4:0)
+(connect D4:0 D5:0)
+(connect D8:0 D7:0)
+(connect D5:2 D7:1)
+(connect D0:0 D9:0)
+(connect D7:1 D10:0)
+(connect D5:1 D10:1)
+(connect D10:2 D11:1)
+(connect D14:1 D13:1)
+(connect D10:1 D14:1)
+(connect D10:2 D14:2)
+(connect D16:1 D14:3)
+(connect D15:2 D14:4)
+(connect D10:2 D15:1)
+(connect D16:1 D15:2)
+(connect D0:1 D16:1)
+(connect D15:2 D17:1)
+(connect D7:0 D19:0)
+(connect D10:1 D21:1)
+(connect D10:2 D21:2)
+(connect D16:1 D21:3)
+(connect D15:2 D21:4)
+(connect D10:1 D22:1)
+(connect D21:2 D22:2)
+(connect D21:3 D22:3)
+(connect D15:2 D22:4)
+(connect D22:1 D23:1))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin 56 15)
+(wndState res)
+(active detail)
+(panel
+(extent 1448 850)
+(drawGrid "on")
+(widget 1 detail
+(relativeOrigin 50 50)
+(PID 0)
+(title on)
+(tabIndex 0)
+(borderStyle flat)
+(extent 319 280)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -20.4 -18.6 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 3 detail
+(relativeOrigin 370 620)
+(PID 1)
+(title on)
+(tabStop off)
+(tabIndex 1)
+(borderStyle flat)
+(extent 124 22))
+(widget 2 detail
+(relativeOrigin 630 620)
+(PID 2)
+(title on)
+(tabStop off)
+(tabIndex 2)
+(borderStyle flat)
+(extent 124 22))
+(widget 11 detail
+(relativeOrigin 500 620)
+(PID 3)
+(title on)
+(tabStop off)
+(tabIndex 3)
+(borderStyle flat)
+(extent 124 22))
+(widget 13 detail
+(relativeOrigin 370 10)
+(PID 5)
+(title on)
+(tabStop off)
+(tabIndex 5)
+(borderStyle flat)
+(extent 486 588)
+(noformatter))
+(widget 17 detail
+(relativeOrigin 760 620)
+(PID 6)
+(title on)
+(tabStop off)
+(tabIndex 6)
+(borderStyle flat)
+(extent 124 22))
+(widget 19 detail
+(relativeOrigin 260 400)
+(PID 7)
+(title off)
+(tabIndex 7)
+(borderStyle none)
+(extent 44 23))
+(widget 4 panel
+(relativeOrigin 10 660)
+(bg "Light Blue Gray")
+(PID 9)
+(title off)
+(tabStop off)
+(tabIndex 8)
+(borderStyle flat)
+(extent 906 36)
+(carbonCopy))
+(widget 5 panel
+(relativeOrigin 10 700)
+(bg "Light Blue Gray")
+(PID 14)
+(title off)
+(tabStop off)
+(tabIndex 9)
+(borderStyle flat)
+(extent 906 36)
+(carbonCopy))
+(widget 23 detail
+(relativeOrigin 740 30)
+(PID 15)
+(title off)
+(tabStop off)
+(tabIndex 10)
+(borderStyle flat)
+(extent 514 616)
+(noformatter)))
+(detail
+(extent 1346 720)
+(anchorPt -987 -150)
+(configuration
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 82 51)
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 1170 660))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 110 0)
+(iconImage "display.icn"))
+(open
+(extent 319 280)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -20.4 -18.6 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1270 340))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 46 0))
+(open
+(extent 124 22))
+(pinCenter 1400 660))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 64 0))
+(open
+(extent 124 22))
+(pinCenter 1400 560))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 73 54))
+(open
+(extent 911 70)
+(carbonCopy))
+(terminals on)
+(pinCenter 820 350))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 85 34))
+(open
+(extent 907 34)
+(carbonCopy))
+(terminals on)
+(pinCenter 820 410))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 329 282))
+(pinCenter 1010 210))
+(devCarrierFor 30
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open
+(extent 158 31))
+(pinCenter 990 540))
+(devCarrierFor 31
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 990 490))
+(devCarrierFor 32
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 1170 710))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 231 70))
+(terminals on)
+(pinCenter 1170 570))
+(devCarrierFor 34
+(active open)
+(icon
+(extent 52 0))
+(open
+(extent 124 22))
+(pinCenter 1400 610))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 202 115))
+(pinCenter 740 260))
+(devCarrierFor 37
+(active open)
+(icon
+(extent 183 0))
+(open
+(extent 364 616)
+(noformatter))
+(pinCenter 1710 560))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 50 45))
+(open
+(extent 234 116))
+(terminals on)
+(pinCenter 1400 810))
+(devCarrierFor 39
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 194 76))
+(terminals on)
+(pinCenter 1300 830))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 1270 660))
+(devCarrierFor 41
+(active open)
+(icon
+(extent 32 0))
+(open
+(extent 124 22))
+(pinCenter 1400 710))
+(devCarrierFor 42
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 990 300))
+(devCarrierFor 43
+(active open)
+(icon
+(extent 25 0))
+(open
+(extent 44 23))
+(title off)
+(pinCenter 990 730))
+(devCarrierFor 47
+(active icon)
+(icon
+(extent 53 15))
+(open
+(extent 175 117)
+(carbonCopy))
+(titleBg "Light Beige")
+(pinCenter 820 230))
+(devCarrierFor 52
+(active icon)
+(icon
+(extent 60 45))
+(terminals on)
+(pinCenter 1400 920))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 50 45))
+(open
+(extent 234 116))
+(terminals on)
+(pinCenter 1500 920))
+(devCarrierFor 54
+(active open)
+(icon
+(extent 183 0))
+(open
+(extent 514 616)
+(noformatter))
+(pinCenter 2230 770))
+(connect D10:1 D0:1
+(points 6 1197 560 1220 560 1220 610 1110 610 1110 650 1126 650))
+(connect D4:4 D0:2
+(points 4 859 360 1080 360 1080 660 1126 660))
+(connect D4:2 D0:3
+(points 6 859 340 870 340 870 370 900 370 900 670 1126 670))
+(connect D4:1 D1:1
+(points 4 859 330 880 330 880 250 1108 250))
+(connect D4:3 D1:2
+(points 4 859 350 880 350 880 340 1108 340))
+(connect D18:1 D1:3
+(points 4 1079 300 1090 300 1090 430 1108 430))
+(connect D16:1 D2:1
+(points 2 1297 660 1335 660))
+(connect D10:1 D3:1
+(points 2 1197 560 1335 560))
+(connect D20:0 D4:0
+(points 2 820 240 820 320))
+(connect D4:0 D5:0
+(points 2 820 379 820 390))
+(connect D8:0 D7:0
+(points 2 990 500 990 512))
+(connect D5:2 D7:1
+(points 4 865 410 890 410 890 540 926 540))
+(connect D0:0 D9:0
+(points 2 1170 688 1170 700))
+(connect D7:1 D10:0
+(points 3 1053 540 1170 540 1170 555))
+(connect D5:1 D10:1
+(points 4 865 400 1070 400 1070 570 1142 570))
+(connect D10:2 D11:1
+(points 4 1197 580 1230 580 1230 610 1335 610))
+(connect D14:1 D13:1
+(points 4 1427 810 1480 810 1480 560 1525 560))
+(connect D10:1 D14:1
+(points 8 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 790 1372
+790))
+(connect D10:2 D14:2
+(points 6 1197 580 1230 580 1230 780 1340 780 1340 800 1372 800))
+(connect D16:1 D14:3
+(points 8 1297 660 1320 660 1320 690 1310 690 1310 790 1330 790 1330 810 1372
+810))
+(connect D15:2 D14:4
+(points 4 1327 840 1340 840 1340 820 1372 820))
+(connect D10:2 D15:1
+(points 6 1197 580 1230 580 1230 780 1210 780 1210 820 1272 820))
+(connect D16:1 D15:2
+(points 8 1297 660 1320 660 1320 690 1310 690 1310 790 1260 790 1260 840 1272
+840))
+(connect D0:1 D16:1
+(points 2 1213 660 1242 660))
+(connect D15:2 D17:1
+(points 6 1327 840 1340 840 1340 870 1250 870 1250 710 1335 710))
+(connect D7:0 D19:0
+(points 2 990 568 990 716))
+(connect D10:1 D21:1
+(points 12 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 770 1450
+770 1450 860 1360 860 1360 900 1367 900))
+(connect D10:2 D21:2
+(points 6 1197 580 1230 580 1230 780 1210 780 1210 910 1367 910))
+(connect D16:1 D21:3
+(points 10 1297 660 1320 660 1320 690 1310 690 1310 790 1330 790 1330 810 1350
+810 1350 920 1367 920))
+(connect D15:2 D21:4
+(points 4 1327 840 1340 840 1340 930 1367 930))
+(connect D10:1 D22:1
+(points 10 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 770 1450
+770 1450 900 1472 900))
+(connect D21:2 D22:2
+(points 2 1432 910 1472 910))
+(connect D21:3 D22:3
+(points 2 1432 920 1472 920))
+(connect D15:2 D22:4
+(points 8 1327 840 1340 840 1340 930 1350 930 1350 970 1450 970 1450 930 1472
+930))
+(connect D22:1 D23:1
+(points 4 1527 920 1910 920 1910 770 1970 770)))
+(stackingOrder 0 2 6 12 4 18 19 17 11 3 10 7 8 9 16 1 13 5 20 15 22 21 14 23))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
