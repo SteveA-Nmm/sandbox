@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 22/Mar/2023 12:27:56 ")
+(date "Wed 22/Mar/2023 17:00:18 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -688,7 +688,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 55)
+(nextID 74)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -737,7 +737,7 @@
 (implementation))
 (device 10 XYPLOT
 (properties
-(name "swept cal hp8757")
+(name "swept cal hp8757 801pt rf_pad")
 (variableScope cont))
 (interface
 (input 1
@@ -757,9 +757,7 @@
 (optional yes)))
 (implementation
 (tracePin 2)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
+(graphMode rectangular)))
 (device 13 TEXTDISPLAY
 (properties
 (name "Lookup")
@@ -825,7 +823,7 @@
 (variableScope cont)
 (prompt "Enter File Name:")
 (initialDirectory "C:\\Users\\sapplen\\Documents\\GitHub\\sandbox")
-(initialFile "SweptCal2023_03_21_161447.txt")
+(initialFile "SweptCal2023_03_22_144524.txt")
 (dialogMode Reading))
 (interface
 (input 1
@@ -884,7 +882,7 @@
 (optional yes)))
 (implementation
 (attr iopath file read
-"C:\\Users\\sapplen\\Documents\\GitHub\\sandbox\\SweptCal2023_03_21_161447.txt"
+"C:\\Users\\sapplen\\Documents\\GitHub\\sandbox\\SweptCal2023_03_22_144524.txt"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -909,7 +907,7 @@
 (connect D3:2 O3:1)
 (connect D3:2 O4:1)))
 (contextCarrier
-(active panel)
+(active detail)
 (panel
 (extent 906 53)
 (drawGrid "on")
@@ -922,8 +920,8 @@
 (borderStyle flat)
 (extent 904 26)))
 (detail
-(extent 1041 388)
-(anchorPt 1 0)
+(extent 1317 585)
+(anchorPt 159 79)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -932,7 +930,7 @@
 (open
 (extent 282 65))
 (terminals on)
-(pinCenter 160 70))
+(pinCenter 110 30))
 (devCarrierFor 1
 (active icon)
 (icon
@@ -940,14 +938,14 @@
 (open
 (extent 419 106))
 (terminals on)
-(pinCenter 160 120))
+(pinCenter 350 30))
 (devCarrierFor 2
 (active open)
 (icon
 (iconImage "stop.icn"))
 (open
 (extent 66 31))
-(pinCenter 160 200))
+(pinCenter 470 100))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -955,7 +953,7 @@
 (open
 (extent 135 65))
 (terminals on)
-(pinCenter 170 290))
+(pinCenter 440 180))
 (devCarrierFor 4
 (active icon)
 (icon
@@ -970,34 +968,34 @@
 (extent 83 0))
 (open
 (extent 904 26))
-(pinCenter 550 120))
+(pinCenter 520 -30))
 (connect D0:1 D1:1
-(points 6 255 70 280 70 280 40 50 40 50 120 96 120))
+(points 2 205 30 286 30))
 (connect D1:2 D2:0
-(points 5 223 130 230 130 230 150 160 150 160 164))
+(points 3 413 40 470 40 470 64))
 (connect D4:2 D3:1
-(points 6 380 120 400 120 400 240 120 240 120 290 141 290))
+(points 4 380 120 390 120 390 180 411 180))
 (connect D1:0 D4:0
-(points 6 160 135 160 150 40 150 40 30 350 30 350 95))
+(points 2 350 45 350 95))
 (connect D1:1 D4:1
-(points 2 223 110 319 110))
+(points 6 413 20 420 20 420 0 270 0 270 110 319 110))
 (connect D1:1 D5:1
-(points 6 223 110 240 110 240 230 90 230 90 120 95 120))
+(points 8 413 20 420 20 420 0 270 0 270 60 0 60 0 -30 65 -30))
 (connect D3:1 O1:1
-(points 6 199 280 410 280 410 140 1010 140 1010 53 1039 53))
+(points 6 469 170 490 170 490 140 1130 140 1130 3 1157 3))
 (connect D3:1 O2:1
-(points 4 199 280 410 280 410 143 1039 143))
+(points 4 469 170 490 170 490 143 1157 143))
 (connect D3:2 O3:1
-(points 6 199 300 220 300 220 320 1010 320 1010 233 1039 233))
+(points 4 469 190 490 190 490 283 1157 283))
 (connect D3:2 O4:1
-(points 4 199 300 220 300 220 323 1039 323)))
-(stackingOrder 0 2 4 3 1 5))))
+(points 6 469 190 490 190 490 280 1130 280 1130 423 1157 423)))
+(stackingOrder 4 1 2 0 5 3))))
 (device 23 CONTEXT
 (properties
 (name "OpenP1dBCal")
 (variableScope cont)
 (trigMode deg)
-(nextID 14)
+(nextID 15)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (interface
@@ -1025,7 +1023,7 @@
 (initialDirectory
 "C:\\Users\\sapplen\\Documents\\GitHub\\NGC_N19-6457\\VEE Calibration Files\\N19_6457"
 )
-(initialFile "CalPwrRFCablePad2023_03_21_152311.txt")
+(initialFile "CalPwrRFCablePad_2023_03_22_143232.txt")
 (dialogMode Reading))
 (interface
 (output 1
@@ -1056,7 +1054,7 @@
 (optional yes)))
 (implementation
 (attr iopath file read
-"C:\\Users\\sapplen\\Documents\\GitHub\\NGC_N19-6457\\VEE Calibration Files\\N19_6457\\CalPwrRFCablePad2023_03_21_152311.txt"
+"C:\\Users\\sapplen\\Documents\\GitHub\\NGC_N19-6457\\VEE Calibration Files\\N19_6457\\CalPwrRFCablePad_2023_03_22_143232.txt"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -1094,6 +1092,7 @@
 (input 1
 (name "Data"))))
 (configuration
+(connect D0:0 D1:0)
 (connect D0:1 D1:1)
 (connect D0:2 D2:0)
 (connect D1:2 D3:1)
@@ -1102,7 +1101,7 @@
 (connect D3:2 O2:1)
 (connect D3:3 O3:1)))
 (contextCarrier
-(active panel)
+(active detail)
 (panel
 (extent 905 50)
 (drawGrid "on")
@@ -1115,60 +1114,64 @@
 (borderStyle flat)
 (extent 904 26)))
 (detail
-(extent 575 403)
-(anchorPt -165 -91)
+(extent 1257 572)
+(anchorPt 61 72)
 (configuration
 (devCarrierFor 0
 (active icon)
 (icon
 (extent 122 25))
 (open
-(extent 419 106))
+(extent 654 96))
 (terminals on)
-(pinCenter 80 140))
+(pinCenter 500 50))
 (devCarrierFor 1
-(active open)
-(icon)
+(active icon)
+(icon
+(extent 57 25))
 (open
 (extent 233 108))
 (terminals on)
-(pinCenter 360 130))
+(pinCenter 500 140))
 (devCarrierFor 2
 (active open)
 (icon
 (iconImage "stop.icn"))
 (open
 (extent 66 31))
-(pinCenter 130 230))
+(pinCenter 620 120))
 (devCarrierFor 12
-(active open)
-(icon)
+(active icon)
+(icon
+(extent 47 34))
 (open
 (extent 231 70))
 (terminals on)
-(pinCenter 400 300))
+(pinCenter 580 230))
 (devCarrierFor 13
 (active open)
 (icon
 (extent 94 0))
 (open
 (extent 904 26))
-(pinCenter 620 360))
+(pinCenter 540 0))
+(connect D0:0 D1:0
+(points 2 500 65 500 125))
 (connect D0:1 D1:1
-(points 2 143 130 171 130))
+(points 6 563 40 570 40 570 90 450 90 450 140 469 140))
 (connect D0:2 D2:0
-(points 5 143 150 150 150 150 170 130 170 130 194))
+(points 3 563 60 620 60 620 84))
 (connect D1:2 D3:1
-(points 6 509 160 530 160 530 210 230 210 230 300 252 300))
+(points 6 531 150 550 150 550 180 530 180 530 230 554 230))
 (connect D0:1 D4:1
-(points 6 143 130 150 130 150 110 0 110 0 360 165 360))
+(points 6 563 40 570 40 570 90 70 90 70 0 85 0))
 (connect D1:2 O1:1
-(points 4 509 160 530 160 530 162 739 162))
+(points 6 531 150 550 150 550 160 1010 160 1010 23 1195 23))
 (connect D3:2 O2:1
-(points 4 568 300 590 300 590 292 739 292))
+(points 4 606 230 630 230 630 213 1195 213))
 (connect D3:3 O3:1
-(points 4 568 320 590 320 590 422 739 422)))
-(stackingOrder 0 1 2 3 4))))
+(points 4 606 240 630 240 630 403 1195 403)))
+(stackingOrder 1 3 2 0 4))))
 (device 27 DECLVAR
 (properties
 (name "Declare P1dBCal")
@@ -1812,900 +1815,6 @@
 (scaled off)
 (format check box))
 (panelBg "Light Beige"))))
-(device 52 CONTEXT
-(properties
-(name "formating")
-(variableScope cont)
-(trigMode deg)
-(nextID 20)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "B")
-(optional yes))
-(input 3
-(name "C")
-(optional yes))
-(input 4
-(name "D")
-(optional yes))
-(output 1
-(type data)
-(name "W")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "X")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Y")
-(lock constraints)
-(optional yes))
-(output 4
-(type data)
-(name "Z")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  5))
-(initValue Int16
-(data  0))))
-(device 1 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 2 CONSTANT
-(properties
-(name "Real64")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(input 1
-(type control)
-(name "Default Value")
-(requires
-(datatype Real64))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  40))
-(initValue Real
-(data  0))))
-(device 3 CONSTANT
-(properties
-(name "Real64")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(input 1
-(type control)
-(name "Default Value")
-(requires
-(datatype Real64))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  20.73))
-(initValue Real
-(data  0))))
-(device 4 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 5 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  2))
-(initValue Int16
-(data  0))))
-(device 6 CONSTANT
-(properties
-(name "Real64")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(input 1
-(type control)
-(name "Default Value")
-(requires
-(datatype Real64))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  19.34))
-(initValue Real
-(data  0))))
-(device 7 CONSTANT
-(properties
-(name "Real64")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(input 1
-(type control)
-(name "Default Value")
-(requires
-(datatype Real64))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  -1.38))
-(initValue Real
-(data  0))))
-(device 8 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  4))
-(initValue Int16
-(data  0))))
-(device 9 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 10 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 11 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  2))
-(initValue Int16
-(data  0))))
-(device 12 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  2))
-(initValue Int16
-(data  0))))
-(device 13 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 14 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  2))
-(initValue Int16
-(data  0))))
-(device 15 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 16 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  2))
-(initValue Int16
-(data  0))))
-(device 17 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 18 CONTEXT
-(properties
-(name "toEngr")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_toEngr(a,numdig)\\par\r\n    a: scalar numeric - value to be formatted\\par\r\n    numdig: scalar int - number of fractional digits to include\\par\r\n    return: scalar text - formatted value\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nOne of the few things that a To String cannot do is to write in Engineering standard format. This function adds that ability.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_toEngr")
-(variableScope cont)
-(callFunc "o_toEngr")
-(parmMode rev30))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(input 2
-(name "numDig")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 19 CONSTANT
-(properties
-(name "Int16")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int16")
-(lock name constraints)))
-(implementation
-(value Int16
-(data  5))
-(initValue Int16
-(data  0))))
-(configuration
-(connect I1:1 D1:1)
-(connect D0:1 D1:2)
-(connect D1:1 D2:1)
-(connect D4:1 D3:1)
-(connect I2:1 D4:1)
-(connect D5:1 D4:2)
-(connect D10:1 D6:1)
-(connect D9:1 D7:1)
-(connect I4:1 D9:1)
-(connect D8:1 D9:2)
-(connect I3:1 D10:1)
-(connect D11:1 D10:2)
-(connect D7:1 D13:1)
-(connect D12:1 D13:2)
-(connect D6:1 D15:1)
-(connect D14:1 D15:2)
-(connect D3:1 D17:1)
-(connect D16:1 D17:2)
-(connect D2:1 D18:1)
-(connect D19:1 D18:2)
-(connect D18:1 O1:1)
-(connect D17:1 O2:1)
-(connect D15:1 O3:1)
-(connect D7:1 O4:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 650 473)
-(anchorPt -8 -7)
-(configuration
-(devCarrierFor 0
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 100 110))
-(devCarrierFor 1
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 235 100))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 43 15))
-(open
-(extent 79 29)
-(showFormat real))
-(pinCenter 320 100))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 43 15))
-(open
-(extent 79 29)
-(showFormat real))
-(pinCenter 310 200))
-(devCarrierFor 4
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 225 200))
-(devCarrierFor 5
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 90 210))
-(devCarrierFor 6
-(active icon)
-(icon
-(extent 43 15))
-(open
-(extent 79 29)
-(showFormat real))
-(pinCenter 320 290))
-(devCarrierFor 7
-(active icon)
-(icon
-(extent 43 15))
-(open
-(extent 79 29)
-(showFormat real))
-(pinCenter 310 390))
-(devCarrierFor 8
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 90 400))
-(devCarrierFor 9
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 225 390))
-(devCarrierFor 10
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 235 290))
-(devCarrierFor 11
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 100 300))
-(devCarrierFor 12
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 420 420))
-(devCarrierFor 13
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 555 410))
-(devCarrierFor 14
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 430 320))
-(devCarrierFor 15
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 565 310))
-(devCarrierFor 16
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 420 230))
-(devCarrierFor 17
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 555 220))
-(devCarrierFor 18
-(active open)
-(icon
-(extent 40 25))
-(open
-(extent 34 46)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 565 120))
-(devCarrierFor 19
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 430 130))
-(connect I1:1 D1:1
-(points 4 8 63 150 63 150 90 155 90))
-(connect D0:1 D1:2
-(points 2 136 110 155 110))
-(connect D1:1 D2:1
-(points 2 284 100 296 100))
-(connect D4:1 D3:1
-(points 2 274 200 286 200))
-(connect I2:1 D4:1
-(points 6 8 183 10 183 10 160 140 160 140 190 145 190))
-(connect D5:1 D4:2
-(points 2 126 210 145 210))
-(connect D10:1 D6:1
-(points 2 284 290 296 290))
-(connect D9:1 D7:1
-(points 2 274 390 286 390))
-(connect I4:1 D9:1
-(points 6 8 423 10 423 10 350 140 350 140 380 145 380))
-(connect D8:1 D9:2
-(points 2 126 400 145 400))
-(connect I3:1 D10:1
-(points 6 8 303 10 303 10 250 150 250 150 280 155 280))
-(connect D11:1 D10:2
-(points 2 136 300 155 300))
-(connect D7:1 D13:1
-(points 6 334 390 350 390 350 370 470 370 470 400 475 400))
-(connect D12:1 D13:2
-(points 2 456 420 475 420))
-(connect D6:1 D15:1
-(points 6 344 290 360 290 360 270 480 270 480 300 485 300))
-(connect D14:1 D15:2
-(points 2 466 320 485 320))
-(connect D3:1 D17:1
-(points 6 334 200 350 200 350 180 470 180 470 210 475 210))
-(connect D16:1 D17:2
-(points 2 456 230 475 230))
-(connect D2:1 D18:1
-(points 6 344 100 360 100 360 80 480 80 480 110 485 110))
-(connect D19:1 D18:2
-(points 2 466 130 485 130))
-(connect D18:1 O1:1
-(points 4 614 120 630 120 630 63 657 63))
-(connect D17:1 O2:1
-(points 4 604 220 620 220 620 183 657 183))
-(connect D15:1 O3:1
-(points 4 614 310 630 310 630 303 657 303))
-(connect D7:1 O4:1
-(points 6 334 390 360 390 360 460 620 460 620 423 657 423)))
-(stackingOrder 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19))))
 (device 53 FORMULA
 (properties
 (variableScope cont)
@@ -2736,7 +1845,131 @@
 (interface
 (input 1
 (name "Data"))))
+(device 56 FORMULA
+(properties
+(name "round 2 sigfig")
+(variableScope cont)
+(expr 2 "x=100*(A);" "Round(x)/100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 57 FORMULA
+(properties
+(name "round 2 sigfig")
+(variableScope cont)
+(expr 2 "x=100*(A);" "Round(x)/100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 63 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 65 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 69 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "x=100*(B-A);" "Round(x)/100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 70 XYPLOT
+(properties
+(name "delta=LookUp-P1dBCal")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoY)))
+(device 71 XYPLOT
+(properties
+(name "LookUp")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 72 XYPLOT
+(properties
+(name "P1dBCal 36pt rf_pad")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 73 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "-a"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
 (configuration
+(connect D10:0 D0:0)
 (connect D10:1 D0:1)
 (connect D4:4 D0:2)
 (connect D4:2 D0:3)
@@ -2749,45 +1982,61 @@
 (connect D4:0 D5:0)
 (connect D8:0 D7:0)
 (connect D5:2 D7:1)
-(connect D0:0 D9:0)
+(connect D21:0 D9:0)
 (connect D7:1 D10:0)
 (connect D5:1 D10:1)
 (connect D10:2 D11:1)
 (connect D14:1 D13:1)
+(connect D15:0 D14:0)
 (connect D10:1 D14:1)
 (connect D10:2 D14:2)
 (connect D16:1 D14:3)
 (connect D15:2 D14:4)
+(connect D16:0 D15:0)
 (connect D10:2 D15:1)
 (connect D16:1 D15:2)
+(connect D0:0 D16:0)
 (connect D0:1 D16:1)
 (connect D15:2 D17:1)
 (connect D7:0 D19:0)
+(connect D27:0 D21:0)
 (connect D10:1 D21:1)
-(connect D10:2 D21:2)
-(connect D16:1 D21:3)
-(connect D15:2 D21:4)
-(connect D10:1 D22:1)
-(connect D21:2 D22:2)
-(connect D21:3 D22:3)
-(connect D15:2 D22:4)
-(connect D22:1 D23:1))
+(connect D23:2 D21:2)
+(connect D24:2 D21:3)
+(connect D27:2 D21:4)
+(connect D21:1 D22:1)
+(connect D14:0 D23:0)
+(connect D10:2 D23:1)
+(connect D23:0 D24:0)
+(connect D16:1 D24:1)
+(connect D27:1 D25:1)
+(connect D27:2 D26:1)
+(connect D24:0 D27:0)
+(connect D10:2 D27:1)
+(connect D16:1 D27:2)
+(connect D10:1 D28:1)
+(connect D27:2 D28:2)
+(connect D10:1 D29:1)
+(connect D0:1 D29:2)
+(connect D10:1 D30:1)
+(connect D31:1 D30:2)
+(connect D10:2 D31:1))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 56 15)
+(wndOrigin 11 16)
 (wndState res)
-(active detail)
+(active panel)
 (panel
-(extent 1448 850)
+(extent 927 796)
 (drawGrid "on")
 (widget 1 detail
-(relativeOrigin 50 50)
+(relativeOrigin 0 0)
 (PID 0)
 (title on)
 (tabIndex 0)
 (borderStyle flat)
-(extent 319 280)
-(displayMode 47)
+(extent 319 309)
+(displayMode 39)
 (graphType cartesian)
 (gridType grid)
 (scale 0
@@ -2797,16 +2046,17 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -20.4 -18.6 4 linear))
-(domain 0 40000 4 linear)
+(range -20 -19 4 linear))
+(domain 15000 40000 4 linear)
 (trace 0 onScale 0
 (name "YData1")
 (traceColor "Yellow")
 (lineType 12)
 (pointType 0))
+(marker 0 onTrace 0)
 (markerColor "White"))
 (widget 3 detail
-(relativeOrigin 370 620)
+(relativeOrigin 370 650)
 (PID 1)
 (title on)
 (tabStop off)
@@ -2814,7 +2064,7 @@
 (borderStyle flat)
 (extent 124 22))
 (widget 2 detail
-(relativeOrigin 630 620)
+(relativeOrigin 630 650)
 (PID 2)
 (title on)
 (tabStop off)
@@ -2822,24 +2072,15 @@
 (borderStyle flat)
 (extent 124 22))
 (widget 11 detail
-(relativeOrigin 500 620)
+(relativeOrigin 500 650)
 (PID 3)
 (title on)
 (tabStop off)
 (tabIndex 3)
 (borderStyle flat)
 (extent 124 22))
-(widget 13 detail
-(relativeOrigin 370 10)
-(PID 5)
-(title on)
-(tabStop off)
-(tabIndex 5)
-(borderStyle flat)
-(extent 486 588)
-(noformatter))
 (widget 17 detail
-(relativeOrigin 760 620)
+(relativeOrigin 760 650)
 (PID 6)
 (title on)
 (tabStop off)
@@ -2847,14 +2088,14 @@
 (borderStyle flat)
 (extent 124 22))
 (widget 19 detail
-(relativeOrigin 260 400)
+(relativeOrigin 320 630)
 (PID 7)
 (title off)
 (tabIndex 7)
 (borderStyle none)
 (extent 44 23))
 (widget 4 panel
-(relativeOrigin 10 660)
+(relativeOrigin 0 690)
 (bg "Light Blue Gray")
 (PID 9)
 (title off)
@@ -2864,7 +2105,7 @@
 (extent 906 36)
 (carbonCopy))
 (widget 5 panel
-(relativeOrigin 10 700)
+(relativeOrigin 0 730)
 (bg "Light Blue Gray")
 (PID 14)
 (title off)
@@ -2873,18 +2114,96 @@
 (borderStyle flat)
 (extent 906 36)
 (carbonCopy))
-(widget 23 detail
-(relativeOrigin 740 30)
+(widget 22 detail
+(relativeOrigin 330 30)
 (PID 15)
-(title off)
+(title on)
 (tabStop off)
 (tabIndex 10)
 (borderStyle flat)
-(extent 514 616)
-(noformatter)))
+(extent 216 568)
+(noformatter))
+(widget 28 detail
+(relativeOrigin 0 320)
+(PID 16)
+(title on)
+(tabIndex 11)
+(borderStyle flat)
+(extent 319 309)
+(displayMode 39)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -0.3 0.05 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(marker 0 onTrace 0)
+(markerColor "White"))
+(widget 29 detail
+(relativeOrigin 560 0)
+(PID 17)
+(title on)
+(tabIndex 12)
+(borderStyle flat)
+(extent 319 309)
+(displayMode 39)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -20 -19 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(marker 0 onTrace 0)
+(markerColor "White"))
+(widget 30 detail
+(relativeOrigin 560 320)
+(PID 18)
+(title on)
+(tabIndex 13)
+(borderStyle flat)
+(extent 319 309)
+(displayMode 39)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -20 -19 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(marker 0 onTrace 0)
+(markerColor "White")))
 (detail
-(extent 1346 720)
-(anchorPt -987 -150)
+(extent 1487 819)
+(anchorPt -643 -32)
 (configuration
 (devCarrierFor 7
 (active icon)
@@ -2913,7 +2232,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -20.4 -18.6 4 linear))
+(range -20.4 -18.8 4 linear))
 (domain 0 40000 4 linear)
 (trace 0 onScale 0
 (name "YData1")
@@ -2923,16 +2242,16 @@
 (markerColor "White"))
 (pinCenter 1270 340))
 (devCarrierFor 13
-(active open)
+(active icon)
 (icon
-(extent 46 0))
+(extent 45 15))
 (open
 (extent 124 22))
 (pinCenter 1400 660))
 (devCarrierFor 17
-(active open)
+(active icon)
 (icon
-(extent 64 0))
+(extent 62 15))
 (open
 (extent 124 22))
 (pinCenter 1400 560))
@@ -2982,9 +2301,9 @@
 (icon
 (extent 50 15))
 (open
-(extent 145 50))
+(extent 145 65))
 (terminals on)
-(pinCenter 1170 710))
+(pinCenter 1170 1160))
 (devCarrierFor 33
 (active icon)
 (icon
@@ -2994,9 +2313,9 @@
 (terminals on)
 (pinCenter 1170 570))
 (devCarrierFor 34
-(active open)
+(active icon)
 (icon
-(extent 52 0))
+(extent 53 15))
 (open
 (extent 124 22))
 (pinCenter 1400 610))
@@ -3022,7 +2341,7 @@
 (open
 (extent 234 116))
 (terminals on)
-(pinCenter 1400 810))
+(pinCenter 1170 850))
 (devCarrierFor 39
 (active icon)
 (icon
@@ -3030,7 +2349,7 @@
 (open
 (extent 194 76))
 (terminals on)
-(pinCenter 1300 830))
+(pinCenter 1170 800))
 (devCarrierFor 40
 (active icon)
 (icon
@@ -3038,11 +2357,11 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 1270 660))
+(pinCenter 1170 720))
 (devCarrierFor 41
-(active open)
+(active icon)
 (icon
-(extent 32 0))
+(extent 31 15))
 (open
 (extent 124 22))
 (pinCenter 1400 710))
@@ -3069,12 +2388,6 @@
 (carbonCopy))
 (titleBg "Light Beige")
 (pinCenter 820 230))
-(devCarrierFor 52
-(active icon)
-(icon
-(extent 60 45))
-(terminals on)
-(pinCenter 1400 920))
 (devCarrierFor 53
 (active icon)
 (icon
@@ -3082,21 +2395,144 @@
 (open
 (extent 234 116))
 (terminals on)
-(pinCenter 1500 920))
+(pinCenter 1170 1120))
 (devCarrierFor 54
 (active open)
 (icon
 (extent 183 0))
 (open
-(extent 514 616)
+(extent 234 606)
 (noformatter))
-(pinCenter 2230 770))
+(pinCenter 2040 550))
+(devCarrierFor 56
+(active icon)
+(icon
+(extent 82 25))
+(open
+(extent 194 76))
+(terminals on)
+(pinCenter 1170 940))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 82 25))
+(open
+(extent 194 76))
+(terminals on)
+(pinCenter 1170 970))
+(devCarrierFor 63
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 1360 1000))
+(devCarrierFor 65
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 1360 1040))
+(devCarrierFor 69
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 194 76))
+(terminals on)
+(pinCenter 1170 1010))
+(devCarrierFor 70
+(active open)
+(icon
+(extent 143 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -0.3 0.05 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1690 1050))
+(devCarrierFor 71
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -19.7 -19.1 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1660 740))
+(devCarrierFor 72
+(active open)
+(icon
+(extent 125 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -19.7 -19.1 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 2110 1050))
+(devCarrierFor 73
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 1730 1230))
+(connect D10:0 D0:0
+(points 2 1170 585 1170 632))
 (connect D10:1 D0:1
-(points 6 1197 560 1220 560 1220 610 1110 610 1110 650 1126 650))
+(points 6 1197 560 1210 560 1210 540 1110 540 1110 650 1126 650))
 (connect D4:4 D0:2
-(points 4 859 360 1080 360 1080 660 1126 660))
+(points 4 859 360 900 360 900 660 1126 660))
 (connect D4:2 D0:3
-(points 6 859 340 870 340 870 370 900 370 900 670 1126 670))
+(points 6 859 340 870 340 870 370 880 370 880 670 1126 670))
 (connect D4:1 D1:1
 (points 4 859 330 880 330 880 250 1108 250))
 (connect D4:3 D1:2
@@ -3104,9 +2540,9 @@
 (connect D18:1 D1:3
 (points 4 1079 300 1090 300 1090 430 1108 430))
 (connect D16:1 D2:1
-(points 2 1297 660 1335 660))
+(points 6 1197 720 1220 720 1220 760 1240 760 1240 660 1375 660))
 (connect D10:1 D3:1
-(points 2 1197 560 1335 560))
+(points 2 1197 560 1366 560))
 (connect D20:0 D4:0
 (points 2 820 240 820 320))
 (connect D4:0 D5:0
@@ -3115,60 +2551,96 @@
 (points 2 990 500 990 512))
 (connect D5:2 D7:1
 (points 4 865 410 890 410 890 540 926 540))
-(connect D0:0 D9:0
-(points 2 1170 688 1170 700))
+(connect D21:0 D9:0
+(points 2 1170 1145 1170 1150))
 (connect D7:1 D10:0
-(points 3 1053 540 1170 540 1170 555))
+(points 5 1053 540 1070 540 1070 530 1170 530 1170 555))
 (connect D5:1 D10:1
-(points 4 865 400 1070 400 1070 570 1142 570))
+(points 4 865 400 1080 400 1080 570 1142 570))
 (connect D10:2 D11:1
-(points 4 1197 580 1230 580 1230 610 1335 610))
+(points 4 1197 580 1220 580 1220 610 1371 610))
 (connect D14:1 D13:1
-(points 4 1427 810 1480 810 1480 560 1525 560))
+(points 4 1197 850 1450 850 1450 560 1525 560))
+(connect D15:0 D14:0
+(points 2 1170 815 1170 825))
 (connect D10:1 D14:1
-(points 8 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 790 1372
-790))
+(points 8 1197 560 1210 560 1210 540 1110 540 1110 600 1080 600 1080 830 1142
+830))
 (connect D10:2 D14:2
-(points 6 1197 580 1230 580 1230 780 1340 780 1340 800 1372 800))
-(connect D16:1 D14:3
-(points 8 1297 660 1320 660 1320 690 1310 690 1310 790 1330 790 1330 810 1372
-810))
-(connect D15:2 D14:4
-(points 4 1327 840 1340 840 1340 820 1372 820))
-(connect D10:2 D15:1
-(points 6 1197 580 1230 580 1230 780 1210 780 1210 820 1272 820))
-(connect D16:1 D15:2
-(points 8 1297 660 1320 660 1320 690 1310 690 1310 790 1260 790 1260 840 1272
+(points 8 1197 580 1220 580 1220 610 1100 610 1100 790 1090 790 1090 840 1142
 840))
+(connect D16:1 D14:3
+(points 6 1197 720 1220 720 1220 760 1120 760 1120 850 1142 850))
+(connect D15:2 D14:4
+(points 6 1197 810 1220 810 1220 900 1120 900 1120 860 1142 860))
+(connect D16:0 D15:0
+(points 2 1170 730 1170 785))
+(connect D10:2 D15:1
+(points 6 1197 580 1220 580 1220 610 1100 610 1100 790 1142 790))
+(connect D16:1 D15:2
+(points 6 1197 720 1220 720 1220 760 1120 760 1120 810 1142 810))
+(connect D0:0 D16:0
+(points 2 1170 688 1170 710))
 (connect D0:1 D16:1
-(points 2 1213 660 1242 660))
+(points 6 1213 660 1230 660 1230 750 1120 750 1120 720 1142 720))
 (connect D15:2 D17:1
-(points 6 1327 840 1340 840 1340 870 1250 870 1250 710 1335 710))
+(points 4 1197 810 1250 810 1250 710 1382 710))
 (connect D7:0 D19:0
 (points 2 990 568 990 716))
+(connect D27:0 D21:0
+(points 2 1170 1025 1170 1095))
 (connect D10:1 D21:1
-(points 12 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 770 1450
-770 1450 860 1360 860 1360 900 1367 900))
-(connect D10:2 D21:2
-(points 6 1197 580 1230 580 1230 780 1210 780 1210 910 1367 910))
-(connect D16:1 D21:3
-(points 10 1297 660 1320 660 1320 690 1310 690 1310 790 1330 790 1330 810 1350
-810 1350 920 1367 920))
-(connect D15:2 D21:4
-(points 4 1327 840 1340 840 1340 930 1367 930))
-(connect D10:1 D22:1
-(points 10 1197 560 1320 560 1320 650 1330 650 1330 740 1350 740 1350 770 1450
-770 1450 900 1472 900))
-(connect D21:2 D22:2
-(points 2 1432 910 1472 910))
-(connect D21:3 D22:3
-(points 2 1432 920 1472 920))
-(connect D15:2 D22:4
-(points 8 1327 840 1340 840 1340 930 1350 930 1350 970 1450 970 1450 930 1472
-930))
-(connect D22:1 D23:1
-(points 4 1527 920 1910 920 1910 770 1970 770)))
-(stackingOrder 0 2 6 12 4 18 19 17 11 3 10 7 8 9 16 1 13 5 20 15 22 21 14 23))
+(points 8 1197 560 1210 560 1210 540 1110 540 1110 600 1080 600 1080 1100 1142
+1100))
+(connect D23:2 D21:2
+(points 6 1213 950 1230 950 1230 910 1110 910 1110 1110 1142 1110))
+(connect D24:2 D21:3
+(points 6 1213 980 1230 980 1230 1070 1130 1070 1130 1120 1142 1120))
+(connect D27:2 D21:4
+(points 6 1197 1020 1220 1020 1220 1050 1120 1050 1120 1130 1142 1130))
+(connect D21:1 D22:1
+(points 4 1197 1120 1910 1120 1910 550 1920 550))
+(connect D14:0 D23:0
+(points 2 1170 875 1170 925))
+(connect D10:2 D23:1
+(points 8 1197 580 1220 580 1220 610 1100 610 1100 790 1090 790 1090 940 1126
+940))
+(connect D23:0 D24:0
+(points 1 1170 955))
+(connect D16:1 D24:1
+(points 8 1197 720 1220 720 1220 760 1120 760 1120 850 1100 850 1100 970 1126
+970))
+(connect D27:1 D25:1
+(points 2 1197 1000 1297 1000))
+(connect D27:2 D26:1
+(points 4 1197 1020 1220 1020 1220 1040 1297 1040))
+(connect D24:0 D27:0
+(points 2 1170 985 1170 995))
+(connect D10:2 D27:1
+(points 8 1197 580 1220 580 1220 610 1100 610 1100 790 1090 790 1090 1000 1142
+1000))
+(connect D16:1 D27:2
+(points 10 1197 720 1220 720 1220 760 1120 760 1120 850 1100 850 1100 970 1120
+970 1120 1020 1142 1020))
+(connect D10:1 D28:1
+(points 6 1197 560 1350 560 1350 530 1460 530 1460 980 1528 980))
+(connect D27:2 D28:2
+(points 8 1197 1020 1220 1020 1220 1040 1280 1040 1280 1110 1520 1110 1520 1120
+1528 1120))
+(connect D10:1 D29:1
+(points 6 1197 560 1350 560 1350 530 1460 530 1460 670 1498 670))
+(connect D0:1 D29:2
+(points 6 1213 660 1230 660 1230 750 1260 750 1260 810 1498 810))
+(connect D10:1 D30:1
+(points 10 1197 560 1350 560 1350 530 1460 530 1460 980 1510 980 1510 1210 1920
+1210 1920 980 1948 980))
+(connect D31:1 D30:2
+(points 4 1855 1230 1930 1230 1930 1120 1948 1120))
+(connect D10:2 D31:1
+(points 10 1197 580 1220 580 1220 610 1100 610 1100 790 1090 790 1090 1000 1100
+1000 1100 1230 1625 1230)))
+(stackingOrder 6 12 18 7 8 1 13 20 5 4 3 11 17 0 10 2 9 21 22 19 26 25 24 14 23
+15 27 28 16 29 30 31))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
