@@ -1,0 +1,48 @@
+6.7.4	Calibration. 
+
+6.7.4.1		Calibrate for IF & Test Port VSWR and Test Port Insertion Loss and save the calibration in Register 2 of the Scalar Analyzer. 
+The IF VSWR frequency range is a sub set of the 2-18GHz calibration and the excel worksheet plots only the correct frequency range.
+Sweeper settings: 
+Start frequency 2GHz, Stop frequency 18GHz, 
+Sweeper Power Level setting -3dBm 
+Power Slope ~= 0.13 dB/GHz to acheive a "flat" power across band. 
+Nominal power across band should be between -10dBm and -15dBm measured with the Scalar's own detector.
+
+Scalar settings: 401 points/sweep, 
+Channel 1, measure A, detector; display MEAS-MEM, Trace Format dB 
+	calibrate thru to directional bridge
+	scale 5dB/div , position 4
+
+Channel 2, measure B, directional bridge; display MEAS-MEM, Trace Format  SWR
+	calibrate Short/Open VSWR
+	scale 1dB/div, positon 4
+
+Save calibration to Register 2. 
+
+
+6.7.4.2		Calibrate for RF VSWR and save the calibration in Register 3 of the Scalar Analyzer.
+Sweeper settings: 
+Start frequency 26GHz, Stop frequency 40GHz, 
+Sweeper Power Level setting -3dBm 
+Power Slope ~= 0.13 dB/GHz to acheive a "flat" power across band. 
+Nominal power across band should be between -10dBm and -15dBm measured with the Scalar's own detector.
+
+Scalar settings: 201 points/sweep,
+Channel 2, measure B, directional bridge; display MEAS-MEM Trace Format  SWR
+ 	calibrate Short/Open VSWR
+	scale 1/div , reference level 2 SWR, position 4
+
+Save calibration to Register 3
+
+
+6.7.4.3		Setup for Test Port Switch On/Off Isolation calibration and save the setup in Register 5. 
+Sweeper settings:
+Start frequency 2GHz , Stop frequency 18GHz , 401 points/sweep , Power level -15dBm nominal 
+
+Scalar settings: 401 points/sweep , Power level -15dBm nominal 
+Channel 1, measure A, detector; display MEAS-MEM 
+	<This is a setup only.  Register 5 can not save calibration data.
+	The calibraton is done live for each DUT. 
+	Isolaton of thru port of the DUT and will change with each new DUT.>
+
+		Save setup to Register 5
