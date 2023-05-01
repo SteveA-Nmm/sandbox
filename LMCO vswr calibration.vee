@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Fri 28/Apr/2023 11:18:26 ")
+(date "Mon 01/May/2023 13:14:52 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "newInstrument"
 (type GPIB-VISA)
@@ -521,7 +521,7 @@
 (active detail)
 (detail
 (extent 861 490)
-(anchorPt 261 -49)
+(anchorPt 260 58)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -786,7 +786,7 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 2 "WRITE TEXT \"RC2\" EOL" "WRITE TEXT \"C2\" EOL"))
+(transactions 2 "WRITE TEXT \"RC3\" EOL" "WRITE TEXT \"C2\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -816,7 +816,7 @@
 (active detail)
 (detail
 (extent 541 496)
-(anchorPt -21 -763)
+(anchorPt 38 -864)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -957,7 +957,7 @@
 (extent 104 426))
 (pinCenter 620 310))
 (devCarrierFor 20
-(active icon)
+(active open)
 (icon
 (extent 225 51)
 (iconImage "io.icn"))
@@ -1006,7 +1006,7 @@
 (connect D0:1 D18:1
 (points 4 464 130 480 130 480 310 565 310))
 (connect D12:0 D19:0
-(points 2 260 1110 260 1142)))
+(points 4 260 1110 260 1126 260 1126 260 1112)))
 (stackingOrder 2 16 1 11 17 18 0 6 12 15 5 8 3 14 7 13 4 10 9 19))))
 (device 42 MESSAGEBOX
 (properties
@@ -1048,6 +1048,7 @@
 (device 1 MESSAGEBOX
 (properties
 (variableScope cont)
+(position 205 209)
 (message "Connect Thru ")
 (symbol Information))
 (interface
@@ -1746,7 +1747,7 @@
 (name "Reg2Setup")
 (variableScope cont)
 (trigMode deg)
-(nextID 10)
+(nextID 11)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -1786,7 +1787,7 @@
 (name "newInstrument3 ( @GPIB0::17::INSTR)")
 (variableScope cont)
 (transactions 4 "WRITE TEXT \"FA 2000 Mz\" EOL" "WRITE TEXT \"FB 18000Mz\" EOL"
-"WRITE TEXT \"PL-3\" EOL" "WRITE TEXT \"PS .13\" EOL"))
+"WRITE TEXT \"PL-3\" EOL" "/NOP/ WRITE TEXT \"PS .13\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument3")))
@@ -1798,17 +1799,28 @@
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
+(device 10 IODEVICE
+(properties
+(name "newInstrument ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 7 "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL"
+"WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C1\" EOL"
+"WRITE TEXT \"C2\" EOL" "WRITE TEXT \"C0\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "newInstrument")))
 (configuration
-(connect D1:0 D0:0)
+(connect D6:0 D0:0)
 (connect D0:0 D2:0)
 (connect D2:0 D3:0)
 (connect D3:0 D4:0)
-(connect D4:0 D5:0)))
+(connect D4:0 D5:0)
+(connect D1:0 D6:0)))
 (contextCarrier
 (active detail)
 (detail
 (extent 501 822)
-(anchorPt 4 60)
+(anchorPt -5 95)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1824,7 +1836,7 @@
 (open
 (extent 47 22))
 (title off)
-(pinCenter 250 70))
+(pinCenter 250 -30))
 (devCarrierFor 2
 (active open)
 (icon
@@ -1857,8 +1869,17 @@
 (extent 221 74))
 (terminals on)
 (pinCenter 250 840))
-(connect D1:0 D0:0
-(points 2 250 83 250 116))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 225 51)
+(iconImage "io.icn"))
+(open
+(extent 304 166))
+(terminals on)
+(pinCenter 250 50))
+(connect D6:0 D0:0
+(points 2 250 78 250 116))
 (connect D0:0 D2:0
 (points 2 250 305 250 316))
 (connect D2:0 D3:0
@@ -1866,8 +1887,10 @@
 (connect D3:0 D4:0
 (points 2 250 609 250 626))
 (connect D4:0 D5:0
-(points 2 250 755 250 782)))
-(stackingOrder 1 2 3 4 5 0))))
+(points 2 250 755 250 782))
+(connect D1:0 D6:0
+(points 2 250 -17 250 22)))
+(stackingOrder 4 5 0 2 1 3 6))))
 (device 1 CONTEXT
 (properties
 (name "Reg3Setup")
@@ -1881,10 +1904,12 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 11 "WRITE TEXT \"SP 201\" EOL" "WRITE TEXT \"C2\" EOL"
-"WRITE TEXT \"C1\" EOL" "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"IB\" EOL"
-"WRITE TEXT \"DS1\" EOL" "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL2\" EOL"
-"WRITE TEXT \"RP5\" EOL" "WRITE TEXT \"SD1\" EOL" "WRITE TEXT \"AN1\" EOL"))
+(transactions 15 "WRITE TEXT \"SP 201\" EOL" "WRITE TEXT \"C0\" EOL"
+"WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL"
+"WRITE TEXT \"C2\" EOL" "WRITE TEXT \"C1\" EOL" "WRITE TEXT \"C0\" EOL"
+"WRITE TEXT \"IB\" EOL" "WRITE TEXT \"DS1\" EOL" "WRITE TEXT \"MN\" EOL"
+"WRITE TEXT \"RL2\" EOL" "WRITE TEXT \"RP5\" EOL" "WRITE TEXT \"SD1\" EOL"
+"WRITE TEXT \"AN1\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -1903,8 +1928,8 @@
 (properties
 (name "newInstrument3 ( @GPIB0::17::INSTR)")
 (variableScope cont)
-(transactions 4 "WRITE TEXT \"FA 18000 Mz\" EOL" "WRITE TEXT \"FB 40000Mz\" EOL"
-"WRITE TEXT \"PL-3\" EOL" "WRITE TEXT \"PS .13\" EOL"))
+(transactions 4 "WRITE TEXT \"FA 26000 Mz\" EOL" "WRITE TEXT \"FB 40000Mz\" EOL"
+"WRITE TEXT \"PL-3\" EOL" "/NOP/ WRITE TEXT \"PS .13\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument3")))
@@ -1925,16 +1950,16 @@
 (active detail)
 (detail
 (extent 501 822)
-(anchorPt 119 -422)
+(anchorPt -34 42)
 (configuration
 (devCarrierFor 0
 (active open)
 (icon
 (iconImage "io.icn"))
 (open
-(extent 304 206))
+(extent 304 296))
 (terminals on)
-(pinCenter 250 240))
+(pinCenter 250 290))
 (devCarrierFor 1
 (active open)
 (icon)
@@ -1949,7 +1974,7 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 250 570))
+(pinCenter 250 530))
 (devCarrierFor 4
 (active open)
 (icon
@@ -1957,7 +1982,7 @@
 (open
 (extent 254 106))
 (terminals on)
-(pinCenter 250 700))
+(pinCenter 250 670))
 (devCarrierFor 5
 (active open)
 (icon
@@ -1965,22 +1990,22 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 250 830))
+(pinCenter 250 810))
 (connect D1:0 D0:0
-(points 2 250 83 250 116))
+(points 2 250 83 250 121))
 (connect D0:0 D2:0
-(points 2 250 345 250 512))
+(points 2 250 440 250 472))
 (connect D2:0 D3:0
-(points 2 250 609 250 626))
+(points 2 250 569 250 596))
 (connect D3:0 D4:0
-(points 2 250 755 250 772)))
-(stackingOrder 1 2 3 0 4))))
+(points 2 250 725 250 752)))
+(stackingOrder 1 0 2 3 4))))
 (device 2 CONTEXT
 (properties
 (name "Reg5Setup")
 (variableScope cont)
 (trigMode deg)
-(nextID 6)
+(nextID 7)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -1988,10 +2013,10 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 11 "WRITE TEXT \"SP 401\" EOL" "WRITE TEXT \"C2\" EOL"
-"WRITE TEXT \"C1\" EOL" "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"IB\" EOL"
-"WRITE TEXT \"DS1\" EOL" "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL\" EOL"
-"WRITE TEXT \"RP5\" EOL" "WRITE TEXT \"SD5\" EOL" "WRITE TEXT \"AN1\" EOL"))
+(transactions 11 "WRITE TEXT \"SP 401\" EOL" "WRITE TEXT \"C1\" EOL"
+"WRITE TEXT \"C2\" EOL" "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"IA\" EOL"
+"WRITE TEXT \"DS0\" EOL" "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL-30\" EOL"
+"WRITE TEXT \"RP4\" EOL" "WRITE TEXT \"SD10\" EOL" "WRITE TEXT \"AN1\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -2011,7 +2036,7 @@
 (name "newInstrument3 ( @GPIB0::17::INSTR)")
 (variableScope cont)
 (transactions 4 "WRITE TEXT \"FA 2000 Mz\" EOL" "WRITE TEXT \"FB 18000Mz\" EOL"
-"WRITE TEXT \"PL-3\" EOL" "WRITE TEXT \"PS .13\" EOL"))
+"WRITE TEXT \"PL0\" EOL" "/NOP/ WRITE TEXT \"PS.00013\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument3")))
@@ -2023,16 +2048,26 @@
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
+(device 6 IODEVICE
+(properties
+(name "newInstrument ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 4 "WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL"
+"WRITE TEXT \"C0\" EOL" "WRITE TEXT \"C0\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "newInstrument")))
 (configuration
-(connect D1:0 D0:0)
+(connect D5:0 D0:0)
 (connect D0:0 D2:0)
 (connect D2:0 D3:0)
-(connect D3:0 D4:0)))
+(connect D3:0 D4:0)
+(connect D1:0 D5:0)))
 (contextCarrier
 (active detail)
 (detail
 (extent 501 822)
-(anchorPt 287 -50)
+(anchorPt -33 57)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -2041,7 +2076,7 @@
 (open
 (extent 304 206))
 (terminals on)
-(pinCenter 250 240))
+(pinCenter 250 370))
 (devCarrierFor 1
 (active open)
 (icon)
@@ -2056,7 +2091,7 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 250 570))
+(pinCenter 250 550))
 (devCarrierFor 4
 (active open)
 (icon
@@ -2073,15 +2108,25 @@
 (extent 221 74))
 (terminals on)
 (pinCenter 250 830))
-(connect D1:0 D0:0
-(points 2 250 83 250 116))
+(devCarrierFor 6
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 304 96))
+(terminals on)
+(pinCenter 250 170))
+(connect D5:0 D0:0
+(points 2 250 220 250 246))
 (connect D0:0 D2:0
-(points 2 250 345 250 512))
+(points 2 250 475 250 492))
 (connect D2:0 D3:0
-(points 2 250 609 250 626))
+(points 2 250 589 250 626))
 (connect D3:0 D4:0
-(points 2 250 755 250 772)))
-(stackingOrder 1 2 3 0 4))))
+(points 2 250 755 250 772))
+(connect D1:0 D5:0
+(points 2 250 83 250 101)))
+(stackingOrder 1 3 4 5 0 2))))
 (configuration
 (connect D0:0 D1:0)
 (connect D1:0 D2:0)))
@@ -2113,7 +2158,7 @@
 (points 2 100 80 100 100))
 (connect D1:0 D2:0
 (points 2 100 120 100 140)))
-(stackingOrder 0 1 2))))
+(stackingOrder 2 0 1))))
 (configuration
 (connect D3:0 D0:0)
 (connect D6:0 D1:0)
@@ -2123,10 +2168,12 @@
 (connect D5:0 D6:0)
 (connect D0:0 D7:0)))
 (contextCarrier
+(wndOrigin 35 33)
+(wndState res)
 (active detail)
 (detail
 (extent 941 579)
-(anchorPt 502 163)
+(anchorPt 600 181)
 (configuration
 (devCarrierFor 31
 (active icon)
@@ -2193,7 +2240,7 @@
 (points 2 -350 155 -350 175))
 (connect D0:0 D7:0
 (points 2 -350 0 -350 30)))
-(stackingOrder 3 7 2 5 4 6 1 0))
+(stackingOrder 3 2 5 6 0 4 7 1))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
