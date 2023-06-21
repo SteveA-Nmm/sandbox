@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Tue 20/Jun/2023 11:40:47 ")
+(date "Tue 20/Jun/2023 18:17:29 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -794,7 +794,7 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 3 "WRITE TEXT \"RC3\" EOL" "WRITE TEXT \"FR1\" EOL"
+(transactions 3 "/NOP/ WRITE TEXT \"FR1\" EOL" "WRITE TEXT \"DS1\" EOL"
 "WRITE TEXT \"SV3\" EOL"))
 (implementation
 (ioDevType 13)
@@ -803,8 +803,9 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 3 "WRITE TEXT \"RC2\" EOL" "WRITE TEXT \"FR1\" EOL"
-"WRITE TEXT \"SV2\" EOL"))
+(transactions 5 "WRITE TEXT \"RC2\" EOL" "WRITE TEXT \"C2\" EOL"
+"/NOP/ WRITE TEXT \"FR1\" EOL" "WRITE TEXT \"DS1\" EOL" "WRITE TEXT \"SV2\" EOL"
+))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -836,16 +837,16 @@
 (active detail)
 (detail
 (extent 858 496)
-(anchorPt 260 -782)
+(anchorPt 192 -810)
 (configuration
 (devCarrierFor 0
 (active open)
 (icon
 (extent 50 15))
 (open
-(extent 324 126))
+(extent 324 86))
 (terminals on)
-(pinCenter 250 130))
+(pinCenter 250 150))
 (devCarrierFor 1
 (active open)
 (icon
@@ -969,7 +970,7 @@
 (open
 (extent 47 22))
 (title off)
-(pinCenter 260 0))
+(pinCenter 260 50))
 (devCarrierFor 19
 (active open)
 (icon)
@@ -991,20 +992,20 @@
 (extent 225 51)
 (iconImage "io.icn"))
 (open
-(extent 234 86))
+(extent 244 106))
 (terminals on)
-(pinCenter 270 1340))
+(pinCenter 260 1310))
 (devCarrierFor 22
 (active open)
 (icon
 (extent 225 51)
 (iconImage "io.icn"))
 (open
-(extent 234 106))
+(extent 234 136))
 (terminals on)
-(pinCenter 270 1490))
+(pinCenter 260 1470))
 (connect D17:0 D0:0
-(points 2 260 13 260 46))
+(points 2 260 63 260 86))
 (connect D0:0 D1:0
 (points 2 260 195 260 202))
 (connect D3:0 D2:0
@@ -1042,14 +1043,14 @@
 (connect D2:0 D16:0
 (points 2 260 455 260 460))
 (connect D0:1 D18:1
-(points 4 464 130 480 130 480 310 565 310))
+(points 4 464 150 480 150 480 310 565 310))
 (connect D12:0 D19:0
 (points 2 260 1110 260 1116))
 (connect D19:0 D20:0
-(points 4 260 1225 260 1250 270 1250 270 1276))
+(points 2 260 1225 260 1236))
 (connect D20:0 D21:0
-(points 2 270 1385 270 1416)))
-(stackingOrder 2 16 1 11 17 18 0 6 12 15 5 8 3 14 7 13 4 10 9 19 21 20))))
+(points 2 260 1365 260 1381)))
+(stackingOrder 2 16 1 11 18 0 6 12 15 5 8 3 14 7 13 4 10 9 19 17 21 20))))
 (device 42 MESSAGEBOX
 (properties
 (variableScope cont)
@@ -2094,7 +2095,7 @@
 (properties
 (name "newInstrument ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 11 "WRITE TEXT \"SP 401\" EOL" "WRITE TEXT \"C1\" EOL"
+(transactions 11 "WRITE TEXT \"SP 201\" EOL" "WRITE TEXT \"C1\" EOL"
 "WRITE TEXT \"C2\" EOL" "WRITE TEXT \"C0\" EOL"
 "WRITE TEXT \"I\"+DetectorInput EOL" "WRITE TEXT \"DS0\" EOL"
 "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL-30\" EOL" "WRITE TEXT \"RP4\" EOL"
@@ -2530,7 +2531,7 @@
 (points 2 -350 155 -350 175))
 (connect D0:0 D7:0
 (points 2 -350 0 -350 30)))
-(stackingOrder 3 2 6 4 7 0 5 1))
+(stackingOrder 3 2 6 4 0 5 7 1))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
