@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Mon 27/Sep/2021 17:09:52 ")
+(date "Thu 13/Jul/2023 13:58:22 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder M.180.21 M M.180)
+(workspaceStackingOrder M.180.21 M.182 M.138 M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -432,7 +432,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 181)
+(nextID 193)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -1528,7 +1528,7 @@
 (variableScope cont)
 (popupTitle "Int32 Input")
 (prompt "Enter month between 1 and 12:")
-(initialValue "6")
+(initialValue "7")
 (valueConstraint "1<=value AND value<=12")
 (vErrorMessage "You must enter a number."))
 (interface
@@ -1555,7 +1555,7 @@
 (variableScope cont)
 (popupTitle "Int32 Input")
 (prompt "Enter day between 1 and 31")
-(initialValue "17")
+(initialValue "13")
 (valueConstraint "0<=value AND value<=31")
 (vErrorMessage "You must enter a number."))
 (interface
@@ -1581,9 +1581,9 @@
 (name "year input")
 (variableScope cont)
 (popupTitle "Int32 Input")
-(prompt "Enter Year between 2021 and 2022")
-(initialValue "2022")
-(valueConstraint "2021<=value AND value<=2022")
+(prompt "Enter Year between 2023 and 2024")
+(initialValue "2024")
+(valueConstraint "2023<=value AND value<=2024")
 (vErrorMessage "You must enter a 4 digit year number.")
 (errorMessagePosition 53 389))
 (interface
@@ -1666,7 +1666,7 @@
 (lock name constraints)))
 (implementation
 (value Int64
-(data  63791218800))
+(data  63856623600))
 (initValue Int64
 (data  0))))
 (device 24 TEXTDISPLAY
@@ -2020,33 +2020,33 @@
 (terminals on)
 (pinCenter 1090 350))
 (connect D3:1 D0:1
-(points 4 1874 170 1930 170 1930 240 2032 240))
+(points 4 1864 170 1930 170 1930 240 2032 240))
 (connect D2:1 D0:2
-(points 6 1874 30 1890 30 1890 140 1920 140 1920 250 2032 250))
+(points 6 1864 30 1890 30 1890 140 1920 140 1920 250 2032 250))
 (connect D4:1 D0:3
-(points 4 1879 310 1900 310 1900 260 2032 260))
+(points 4 1869 310 1900 310 1900 260 2032 260))
 (connect D6:0 D1:0
 (points 2 1090 125 1090 180))
 (connect D1:1 D2:1
-(points 4 1137 190 1160 190 1160 60 1225 60))
+(points 4 1137 190 1160 190 1160 60 1245 60))
 (connect D2:0 D3:0
-(points 2 1550 118 1550 124))
+(points 2 1555 118 1555 124))
 (connect D1:2 D3:1
-(points 2 1137 200 1225 200))
+(points 2 1137 200 1245 200))
 (connect D3:0 D4:0
-(points 2 1550 258 1540 264))
+(points 2 1555 258 1550 264))
 (connect D1:3 D4:1
-(points 4 1137 210 1160 210 1160 310 1200 310))
+(points 4 1137 210 1160 210 1160 310 1230 310))
 (connect D18:1 D4:2
-(points 2 1142 340 1200 340))
+(points 2 1142 340 1230 340))
 (connect D18:2 D4:3
-(points 4 1142 360 1160 360 1160 370 1200 370))
+(points 4 1142 360 1160 360 1160 370 1230 370))
 (connect D2:1 D5:1
-(points 4 1874 30 1890 30 1890 140 1950 140))
+(points 4 1864 30 1890 30 1890 140 1960 140))
 (connect D3:1 D5:2
-(points 2 1874 170 1950 170))
+(points 2 1864 170 1960 170))
 (connect D4:1 D5:3
-(points 4 1879 310 1900 310 1900 200 1950 200))
+(points 4 1869 310 1900 310 1900 200 1960 200))
 (connect D0:1 D7:1
 (points 8 2148 250 2160 250 2160 280 2020 280 2020 270 1950 270 1950 430 1965
 430))
@@ -2067,11 +2067,12 @@
 (connect D12:0 D15:0
 (points 4 2140 368 2140 390 2210 390 2210 410))
 (connect D2:2 D16:1
-(points 6 1874 90 1880 90 1880 70 2260 70 2260 210 2364 210))
+(points 6 1864 90 1880 90 1880 70 2260 70 2260 210 2364 210))
 (connect D3:2 D16:2
-(points 8 1874 230 1890 230 1890 190 1900 190 1900 80 2250 80 2250 220 2364 220))
+(points 8 1864 230 1890 230 1890 190 1900 190 1900 80 2250 80 2250 220 2364 220)
+)
 (connect D4:2 D16:3
-(points 8 1879 370 1900 370 1900 380 2220 380 2220 390 2330 390 2330 230 2364
+(points 8 1869 370 1900 370 1900 380 2220 380 2220 390 2330 390 2330 230 2364
 230))
 (connect D16:1 D17:0
 (points 3 2395 220 2440 220 2440 262))
@@ -2868,11 +2869,11 @@
 (extent 66 32))
 (pinCenter 160 170))
 (connect D2:1 D0:1
-(points 4 414 40 185 40 185 60 230 60))
+(points 4 404 40 185 40 185 60 230 60))
 (connect D0:0 D1:0
 (points 4 250 70 250 80 250 80 250 90))
 (connect D2:2 D3:0
-(points 3 414 100 160 100 160 142)))
+(points 3 404 100 160 100 160 142)))
 (stackingOrder 3 0 1 2))))
 (device 134 CONTEXT
 (properties
@@ -3361,7 +3362,9 @@
 (ShowOnExecPanel
 (relativeOrigin 330 2)))
 (contextCarrier
-(active panel)
+(wndOrigin 719 6)
+(wndState res)
+(active detail)
 (panel
 (extent 159 846)
 (drawGrid "on")
@@ -3387,7 +3390,7 @@
 (noformatter)))
 (detail
 (extent 1131 826)
-(anchorPt -39 119)
+(anchorPt 0 143)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -3396,7 +3399,7 @@
 (iconImage "loop.icn"))
 (open)
 (terminals on)
-(pinCenter 100 90))
+(pinCenter 100 60))
 (devCarrierFor 1
 (active icon)
 (icon
@@ -3411,7 +3414,7 @@
 (extent 30 15))
 (open)
 (terminals on)
-(pinCenter 240 140))
+(pinCenter 250 150))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -3419,14 +3422,14 @@
 (open
 (extent 536 111))
 (terminals on)
-(pinCenter 190 180))
+(pinCenter 190 190))
 (devCarrierFor 4
 (active icon)
 (icon
 (extent 30 15))
 (open)
 (terminals on)
-(pinCenter 240 210))
+(pinCenter 250 220))
 (devCarrierFor 5
 (active open)
 (icon
@@ -3440,7 +3443,7 @@
 (extent 27 0))
 (open
 (extent 124 25))
-(pinCenter 400 170))
+(pinCenter 400 180))
 (devCarrierFor 7
 (active icon)
 (icon
@@ -3448,7 +3451,7 @@
 (open
 (extent 145 51))
 (terminals on)
-(pinCenter 380 250))
+(pinCenter 360 240))
 (devCarrierFor 8
 (active icon)
 (icon
@@ -3456,7 +3459,7 @@
 (open
 (extent 261 137))
 (terminals on)
-(pinCenter 380 300))
+(pinCenter 190 310))
 (devCarrierFor 9
 (active icon)
 (icon
@@ -3507,7 +3510,7 @@
 (extent 26 25))
 (open)
 (terminals on)
-(pinCenter 440 370))
+(pinCenter 390 370))
 (devCarrierFor 16
 (active icon)
 (icon
@@ -3558,7 +3561,7 @@
 (terminals on)
 (pinCenter 450 480))
 (devCarrierFor 22
-(active icon)
+(active open)
 (icon
 (extent 52 34))
 (open
@@ -3566,7 +3569,7 @@
 (carbonCopy))
 (terminals on)
 (titleBg "Golden Beige")
-(pinCenter 1020 410))
+(pinCenter 1030 400))
 (devCarrierFor 23
 (active open)
 (icon
@@ -3574,7 +3577,7 @@
 (open
 (extent 88 53))
 (terminals on)
-(pinCenter 1030 530))
+(pinCenter 1025 540))
 (devCarrierFor 24
 (active icon)
 (icon
@@ -3590,45 +3593,46 @@
 (terminals on)
 (pinCenter 560 550))
 (connect D0:1 D1:0
-(points 5 136 90 150 90 150 80 190 80 190 95))
+(points 3 136 60 190 60 190 95))
 (connect D1:2 D2:0
-(points 2 242 120 240 130))
+(points 3 242 120 250 120 250 140))
 (connect D1:0 D3:0
-(points 4 190 125 190 145 190 145 190 165))
+(points 2 190 125 190 175))
 (connect D3:2 D4:0
-(points 3 222 190 240 190 240 200))
+(points 3 222 200 250 200 250 210))
 (connect D1:1 D5:1
-(points 4 242 100 287 100 287 100 333 100))
+(points 2 242 100 333 100))
 (connect D3:1 D6:1
-(points 4 222 170 278 170 278 170 335 170))
+(points 2 222 180 335 180))
 (connect D1:1 D7:1
-(points 8 242 100 310 100 310 140 320 140 320 210 330 210 330 240 341 240))
+(points 4 242 100 300 100 300 230 321 230))
 (connect D3:1 D7:2
-(points 4 222 170 310 170 310 260 341 260))
+(points 4 222 180 290 180 290 250 321 250))
 (connect D3:0 D8:0
-(points 4 190 195 190 280 380 280 380 285))
+(points 2 190 205 190 295))
 (connect D7:1 D8:1
-(points 6 419 250 440 250 440 220 320 220 320 300 335 300))
+(points 6 399 240 420 240 420 280 130 280 130 310 145 310))
 (connect D10:1 D9:0
 (points 5 534 320 550 320 550 250 600 250 600 270))
 (connect D1:1 D9:1
-(points 8 242 100 310 100 310 140 320 140 320 210 450 210 450 280 582 280))
+(points 6 242 100 300 100 300 210 430 210 430 280 582 280))
 (connect D8:1 D10:0
-(points 3 424 290 520 290 520 310))
+(points 5 234 300 250 300 250 290 520 290 520 310))
 (connect D9:1 D11:1
-(points 4 617 280 630 280 630 280 644 280))
+(points 2 617 280 644 280))
 (connect D10:0 D12:0
 (points 2 520 330 520 340))
 (connect D9:0 D13:0
 (points 2 600 290 600 350))
 (connect D3:1 D13:1
-(points 6 222 170 310 170 310 420 560 420 560 360 582 360))
+(points 12 222 180 290 180 290 250 300 250 300 300 480 300 480 360 490 360 490
+380 560 380 560 360 582 360))
 (connect D13:1 D14:1
-(points 4 617 360 630 360 630 360 644 360))
+(points 2 617 360 644 360))
 (connect D8:2 D15:1
-(points 6 424 310 440 310 440 340 410 340 410 360 424 360))
+(points 4 234 320 250 320 250 360 374 360))
 (connect D8:0 D15:2
-(points 3 380 315 380 380 424 380))
+(points 3 190 325 190 380 374 380))
 (connect D17:1 D16:1
 (points 2 800 410 848 410))
 (connect D20:1 D16:2
@@ -3636,29 +3640,29 @@
 (connect D9:1 D17:1
 (points 6 617 280 630 280 630 310 700 310 700 400 739 400))
 (connect D0:0 D17:2
-(points 5 100 118 100 430 570 430 570 420 739 420))
+(points 3 100 88 100 420 739 420))
 (connect D13:1 D20:1
 (points 4 617 360 630 360 630 440 739 440))
 (connect D0:0 D20:2
-(points 7 100 118 100 430 570 430 570 420 620 420 620 460 739 460))
+(points 5 100 88 100 420 620 420 620 460 739 460))
 (connect D15:1 D21:0
-(points 5 455 370 480 370 480 410 450 410 450 465))
+(points 3 405 370 450 370 450 465))
 (connect D18:1 D22:1
-(points 4 917 330 960 330 960 400 991 400))
+(points 6 917 330 940 330 940 350 950 350 950 380 955 380))
 (connect D19:1 D22:2
-(points 4 917 360 950 360 950 410 991 410))
+(points 4 917 360 940 360 940 400 955 400))
 (connect D16:1 D22:3
-(points 2 932 420 991 420))
+(points 2 932 420 955 420))
 (connect D22:0 D23:0
-(points 4 1020 429 1020 459 1020 459 1020 483))
+(points 2 1020 435 1020 493))
 (connect D22:1 D23:1
-(points 6 1048 410 1070 410 1070 450 960 450 960 530 933 530))
+(points 6 1084 400 1100 400 1100 470 920 470 920 540 938 540))
 (connect D21:2 D24:0
 (points 3 494 490 510 490 510 540))
 (connect D21:1 D25:0
 (points 3 494 470 560 470 560 540)))
-(stackingOrder 0 2 4 5 6 7 9 10 12 13 15 16 17 20 22 24 25 23 19 18 3 8 21 14 11
-1))))
+(stackingOrder 5 9 10 12 13 17 20 24 25 21 14 1 0 11 23 18 19 22 16 2 7 6 3 4 15
+8))))
 (device 140 FROMGLOBAL
 (properties
 (name "Get ENRcal")
@@ -3689,7 +3693,7 @@
 (optional yes)))
 (implementation
 (attr iopath file write
-"C:\\VEE Calibration Files\\ENR_Cal_Files\\qwe_132_ENRtable.txt"
+"C:\\VEE Calibration Files\\ENR_Cal_Files\\wsws_wsws_ENRtable.txt"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -3770,7 +3774,7 @@
 (active detail)
 (detail
 (extent 383 199)
-(anchorPt -4 0)
+(anchorPt -93 -6)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -3785,7 +3789,7 @@
 (icon
 (extent 50 25))
 (open
-(extent 234 46))
+(extent 234 50))
 (terminals on)
 (pinCenter 280 110))
 (devCarrierFor 2
@@ -3807,11 +3811,11 @@
 (connect D0:1 D1:1
 (points 4 152 70 200 70 200 100 252 100))
 (connect D2:1 D1:2
-(points 4 180 120 211 120 211 120 252 120))
+(points 2 180 120 252 120))
 (connect D1:1 D3:1
-(points 4 307 110 314 110 314 110 332 110))
+(points 2 307 110 332 110))
 (connect D3:1 O1:1
-(points 4 387 110 410 110 410 99 386 99)))
+(points 4 387 110 410 110 410 105 475 105)))
 (stackingOrder 3 0 2 1))))
 (device 168 CALL
 (properties
@@ -3989,15 +3993,15 @@
 (terminals on)
 (pinCenter 580 240))
 (connect D0:1 D5:1
-(points 4 300 110 330 110 330 220 463 220))
+(points 4 290 110 330 110 330 220 463 220))
 (connect D1:1 D5:2
-(points 4 300 200 320 200 320 230 463 230))
+(points 4 290 200 320 200 320 230 463 230))
 (connect D2:1 D5:3
-(points 4 300 290 320 290 320 240 463 240))
+(points 4 290 290 320 290 320 240 463 240))
 (connect D3:1 D5:4
-(points 4 300 370 330 370 330 250 463 250))
+(points 4 290 370 330 370 330 250 463 250))
 (connect D4:1 D5:5
-(points 4 300 450 340 450 340 260 463 260))
+(points 4 290 450 340 450 340 260 463 260))
 (connect D5:1 O1:1
 (points 4 696 240 720 240 720 268 767 268)))
 (stackingOrder 0 1 2 3 4 5))))
@@ -4326,7 +4330,7 @@
 (optional yes)))
 (implementation
 (attr iopath file read
-"C:\\Users\\sapplen\\Documents\\GitHub\\sandbox\\Init_metadata.vee"
+"C:\\Users\\Test\\Documents\\GitHub\\sandbox\\write ENR.vee"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -4535,17 +4539,17 @@
 (editing enabled))
 (pinCenter 120 310))
 (connect D4:0 D2:0
-(points 2 710 358 710 395))
+(points 2 705 358 720 395))
 (connect D4:1 D2:1
-(points 6 830 330 840 330 840 380 510 380 510 470 531 470))
+(points 6 820 330 840 330 840 380 510 380 510 470 551 470))
 (connect D2:0 D3:0
-(points 4 710 526 710 545 710 545 710 565))
+(points 4 720 526 710 545 710 545 710 565))
 (connect D1:1 D3:1
 (points 4 553 570 573 570 573 570 594 570))
 (connect D7:1 D3:2
 (points 8 986 470 1010 470 1010 540 890 540 890 620 570 620 570 590 594 590))
 (connect D5:0 D4:0
-(points 2 710 225 710 284))
+(points 2 710 225 705 284))
 (connect D3:1 D6:1
 (points 4 826 570 869 570 869 570 913 570))
 (connect D2:1 D7:1
@@ -4747,13 +4751,10 @@
 (connect D2:1 D9:1)
 (connect D8:0 D11:0)))
 (contextCarrier
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 1492 791)
-(wndState max)
 (active detail)
 (detail
-(extent 1833 869)
-(anchorPt 829 406)
+(extent 1492 787)
+(anchorPt 529 407)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -4865,14 +4866,280 @@
 (connect D11:0 D2:0
 (points 2 140 -130 140 155))
 (connect D9:23 D3:1
-(points 4 458 390 470 390 470 200 480 200))
+(points 4 438 390 470 390 470 200 480 200))
 (connect D1:0 D8:0
 (points 6 -180 544 -180 570 40 570 40 -200 140 -200 140 -181))
 (connect D2:1 D9:1
-(points 2 194 170 201 170))
+(points 2 194 170 221 170))
 (connect D8:0 D11:0
 (points 2 140 -160 140 -150)))
 (stackingOrder 3 6 5 9 2 12 1 7 4 8 11 0 10))))
+(device 181 TOFILE
+(properties
+(variableScope cont)
+(transactions 2 "EXECUTE CLEAR" "WRITE TEXT a EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file append
+"C:\\VEE Calibration Files\\ENR_Cal_Files\\wsws_wsws_ENRtable.cvs"
+(readTerm "\n")
+(fs "\r\n")
+(eol "\r\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 182 CONTEXT
+(properties
+(name "Name the file")
+(variableScope cont)
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "Result")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "model")
+(variableScope cont)
+(expr 1 "ENRtable.ModelNum"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A+\"_\"+B+\"_ENRtable.cvs\""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 FORMULA
+(properties
+(name "long serial number")
+(variableScope cont)
+(expr 1 "ENRtable.SerialNum"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "\"C:\\\\VEE Calibration Files\\\\ENR_Cal_Files\\\\\"+ A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D0:1 D1:1)
+(connect D2:1 D1:2)
+(connect D1:1 D3:1)
+(connect D3:1 O1:1)))
+(contextCarrier
+(wndOrigin 122 122)
+(wndState res)
+(active detail)
+(detail
+(extent 461 199)
+(anchorPt -93 -6)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 39 15))
+(open
+(extent 215 106))
+(terminals on)
+(pinCenter 130 70))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 50 25))
+(open
+(extent 234 50))
+(terminals on)
+(pinCenter 270 110))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 116 15))
+(open
+(extent 215 106))
+(terminals on)
+(pinCenter 120 120))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 504 76))
+(terminals on)
+(pinCenter 360 110))
+(connect D0:1 D1:1
+(points 4 152 70 200 70 200 100 120 100))
+(connect D2:1 D1:2
+(points 4 180 120 216 120 216 120 120 120))
+(connect D1:1 D3:1
+(points 4 439 110 319 110 319 110 332 110))
+(connect D3:1 O1:1
+(points 4 387 110 410 110 410 105 553 105)))
+(stackingOrder 0 2 3 1))))
+(device 184 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "ENRtable")
+(tag "B")
+(optional yes))))
+(device 186 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "GHz")
+(tag "A")
+(optional yes))
+(output 4
+(name "ENR")
+(tag "B")
+(optional yes))))
+(device 188 SUBRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record")
+(tag "record")
+(requires
+(datatype Record))
+(lock name constraints))
+(input 2
+(name "fields")
+(tag "fields")
+(requires
+(datatype Text))
+(lock name constraints))
+(output 1
+(name "Record")
+(tag "record")
+(lock name constraints)))
+(implementation
+(fields exclude)))
+(device 189 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "ENRtable"))
+(initValue Text
+(data  ""))))
+(device 190 TOFILE
+(properties
+(variableScope cont)
+(transactions 1 "WRITE TEXT a EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file append
+"C:\\VEE Calibration Files\\ENR_Cal_Files\\wsws_wsws_ENRtable.cvs"
+(readTerm "\n")
+(fs "\r\n")
+(eol "\r\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 191 VECTORCONCATENATOR
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Array")
+(tag "Array"))))
 (configuration
 (connect D8:0 D0:0)
 (connect D16:0 D3:0)
@@ -4896,7 +5163,20 @@
 (connect D3:0 D18:0)
 (connect D21:1 D20:1)
 (connect D15:1 D21:1)
-(connect D4:0 D22:0))
+(connect D4:0 D22:0)
+(connect D24:0 D23:0)
+(connect D27:1 D23:1)
+(connect D24:1 D23:2)
+(connect D14:0 D24:0)
+(connect D13:1 D25:1)
+(connect D25:3 D26:1)
+(connect D13:1 D27:1)
+(connect D28:1 D27:2)
+(connect D23:0 D29:0)
+(connect D30:1 D29:1)
+(connect D24:1 D29:2)
+(connect D26:3 D30:1)
+(connect D26:4 D30:2))
 (ShowOnExecPanel))
 (contextCarrier
 (wndOrigin 3 6)
@@ -4914,7 +5194,7 @@
 (extent 51 26)))
 (detail
 (extent 1347 749)
-(anchorPt 615 903)
+(anchorPt 584 498)
 (configuration
 (devCarrierFor 77
 (active icon)
@@ -4930,7 +5210,7 @@
 (extent 377 235))
 (pinCenter -240 -560))
 (devCarrierFor 95
-(active icon)
+(active open)
 (icon
 (extent 45 15))
 (open
@@ -4938,13 +5218,13 @@
 (formatters))
 (pinCenter -140 -560))
 (devCarrierFor 98
-(active icon)
+(active open)
 (icon
 (extent 80 15))
 (open
 (extent 100 53))
 (terminals on)
-(pinCenter -40 -560))
+(pinCenter -35 -560))
 (devCarrierFor 110
 (active icon)
 (icon
@@ -5083,12 +5363,74 @@
 (extent 134 24))
 (terminals on)
 (pinCenter -40 -630))
+(devCarrierFor 181
+(active icon)
+(icon
+(extent 40 25))
+(open
+(extent 233 127))
+(terminals on)
+(pinCenter 550 -130))
+(devCarrierFor 182
+(active icon)
+(icon
+(extent 81 15))
+(terminals on)
+(pinCenter 550 -170))
+(devCarrierFor 184
+(active open)
+(icon
+(extent 95 51)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 90))
+(terminals on)
+(pinCenter -32 -90))
+(devCarrierFor 186
+(active open)
+(icon
+(extent 95 51)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 90))
+(terminals on)
+(pinCenter 188 -60))
+(devCarrierFor 188
+(active open)
+(icon
+(iconImage "unbuild.icn"))
+(open
+(extent 95 50))
+(terminals on)
+(pinCenter -10 210))
+(devCarrierFor 189
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter -250 220))
+(devCarrierFor 190
+(active icon)
+(icon
+(extent 40 25))
+(open
+(extent 233 127))
+(terminals on)
+(pinCenter 560 -40))
+(devCarrierFor 191
+(active open)
+(icon
+(extent 81 25))
+(open
+(extent 47 50))
+(terminals on)
+(pinCenter 415 60))
 (connect D8:0 D0:0
 (points 2 -40 -400 -40 -390))
 (connect D16:0 D3:0
-(points 2 -40 -580 -40 -570))
+(points 4 -40 -580 -40 -575 -40 -575 -40 -607))
 (connect D2:1 D3:1
-(points 4 -115 -560 -100 -560 -100 -560 -83 -560))
+(points 4 -15 -560 -99 -560 -99 -560 -128 -560))
 (connect D19:0 D4:0
 (points 4 -40 -705 -40 -643 -40 -643 -40 -680))
 (connect D18:1 D5:0
@@ -5102,7 +5444,7 @@
 (connect D7:0 D9:0
 (points 2 -40 -460 -40 -450))
 (connect D17:0 D10:0
-(points 4 -40 -330 -40 -323 -40 -323 -40 -315))
+(points 2 -40 -330 -40 -315))
 (connect D10:2 D11:0
 (points 3 21 -290 30 -290 30 -240))
 (connect D10:1 D12:0
@@ -5120,16 +5462,44 @@
 (connect D22:0 D16:0
 (points 2 -40 -616 -40 -600))
 (connect D0:0 D17:0
-(points 4 -40 -370 -40 -360 -40 -360 -40 -350))
+(points 2 -40 -370 -40 -350))
 (connect D3:0 D18:0
-(points 2 -40 -550 -40 -545))
+(points 4 -40 -531 -40 -548 -40 -548 -40 -545))
 (connect D21:1 D20:1
 (points 2 364 -280 405 -280))
 (connect D15:1 D21:1
 (points 2 263 -280 296 -280))
 (connect D4:0 D22:0
-(points 2 -40 -660 -40 -645)))
-(stackingOrder 13 3 10 9 2 4 7 1 15 6 5 19 21 12 18 16 0 20 14 11 8 17 22))
+(points 2 -40 -660 -40 -645))
+(connect D24:0 D23:0
+(points 2 550 -160 550 -145))
+(connect D27:1 D23:1
+(points 6 100 210 510 210 510 -60 500 -60 500 -140 527 -140))
+(connect D24:1 D23:2
+(points 6 593 -170 610 -170 610 -90 510 -90 510 -120 527 -120))
+(connect D14:0 D24:0
+(points 2 550 -205 550 -180))
+(connect D13:1 D25:1
+(points 6 146 -230 180 -230 180 -190 -150 -190 -150 -90 -130 -90))
+(connect D25:3 D26:1
+(points 2 49 -60 90 -60))
+(connect D13:1 D27:1
+(points 8 146 -230 180 -230 180 -190 -150 -190 -150 -20 -140 -20 -140 200 -120
+200))
+(connect D28:1 D27:2
+(points 2 -161 220 -120 220))
+(connect D23:0 D29:0
+(points 4 550 -115 550 -80 560 -80 560 -55))
+(connect D30:1 D29:1
+(points 4 481 60 500 60 500 -50 537 -50))
+(connect D24:1 D29:2
+(points 6 593 -170 610 -170 610 -90 520 -90 520 -30 537 -30))
+(connect D26:3 D30:1
+(points 4 269 -50 300 -50 300 50 359 50))
+(connect D26:4 D30:2
+(points 4 269 -30 290 -30 290 70 359 70)))
+(stackingOrder 13 9 4 7 6 5 19 21 16 0 20 11 8 18 22 24 15 14 23 25 28 29 30 27
+1 10 17 12 3 2 26))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
