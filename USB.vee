@@ -1,0 +1,1147 @@
+(saveFormat "7.0")
+(date "Wed 29/Mar/2023 15:37:13 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "8720B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::18::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::18::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "InstrumentGPIB"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HPEPM"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "SpecAna"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP856XE"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument3"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "nwa"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Hp871xC"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "SkalarAnalyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757d.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "Skalar analyzer"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument7"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument8"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::5::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::5::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument9"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::9::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::9::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstr19200"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 19200)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstr9600"
+(type ASRL)
+(channel 193)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL3::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL3::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "hp8757A"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "PassThru"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757C"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c.cid")
+(ppAddr "GPIB0::16::INSTR")
+(ppquery "N")
+(ppreset "N")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488.2)))
+(iodevice "hp8757c5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c5.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757c6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c6.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757c4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757c4.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d4"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d4.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d5"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d5.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d6.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp8757d7"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp8757d7.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument6"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP8753"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "HP3478"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(idFileName "hp3478a.cid")
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument10"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Jedi"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "newInstrument11"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "serial"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(ppAddr "")
+(model "")
+(eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "Arduino_Uno"
+(type USB)
+(channel 176)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "USB6::2391::1031::US432109::0::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "USB6::2391::1031::US432109::0::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument12"
+(type ASRL)
+(channel 196)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL6::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL6::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 19200)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake XonXoff)
+(recvBufferSize 4096)))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 28)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 1 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 2 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"x\" EOL" "READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 3 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 2 "READ TEXT x STR" "WRITE TEXT \"x\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 4 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 5 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 6 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 3 "READ TEXT x STR" "READ TEXT x STR" "/NOP/ READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 7 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 8 START25
+(properties
+(variableScope cont)))
+(device 10 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 2 "READ TEXT x STR" "/NOP/ READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 11 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 12 DELAY
+(properties
+(variableScope cont)
+(delay 6))
+(interface
+(output 1
+(name "Done"))))
+(device 13 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 14 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 3 "READ TEXT x STR" "/NOP/ READ TEXT x STR"
+"/NOP/ READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 15 DELAY
+(properties
+(variableScope cont)
+(delay 4))
+(interface
+(output 1
+(name "Done"))))
+(device 17 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 18 DELAY
+(properties
+(variableScope cont)
+(delay 4))
+(interface
+(output 1
+(name "Done"))))
+(device 19 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 20 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"x\" EOL" "READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 24 DELAY
+(properties
+(variableScope cont)
+(delay 4))
+(interface
+(output 1
+(name "Done"))))
+(device 25 IODEVICE
+(properties
+(name "newInstrument12 ( @ASRL6::INSTR)")
+(variableScope cont)
+(transactions 2 "READ TEXT x STR" "/NOP/ READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 19)
+(iopath "newInstrument12")))
+(device 26 SCROLLINGTEXTDISPLAY
+(properties
+(variableScope cont)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(device 27 DELAY
+(properties
+(variableScope cont)
+(delay 4))
+(interface
+(output 1
+(name "Done"))))
+(configuration
+(connect D1:1 D0:1)
+(connect D5:0 D1:0)
+(connect D7:0 D2:0)
+(connect D2:1 D3:1)
+(connect D5:1 D4:1)
+(connect D6:0 D5:0)
+(connect D2:0 D6:0)
+(connect D10:0 D8:0)
+(connect D8:1 D9:1)
+(connect D1:0 D10:0)
+(connect D12:1 D11:1)
+(connect D13:0 D12:0)
+(connect D8:0 D13:0)
+(connect D21:0 D14:0)
+(connect D17:0 D15:0)
+(connect D17:1 D16:1)
+(connect D14:1 D17:0)
+(connect D19:0 D18:0)
+(connect D15:0 D19:0)
+(connect D19:1 D20:1)
+(connect D12:0 D21:0)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 702 385)
+(wndState max)
+(active detail)
+(detail
+(extent 1507 883)
+(anchorPt 190 -639)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 124 22))
+(pinCenter 550 590))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 270 590))
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 86))
+(terminals on)
+(pinCenter 270 280))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 514 156))
+(pinCenter 830 280))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 324 66))
+(pinCenter 640 460))
+(devCarrierFor 6
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 96))
+(terminals on)
+(pinCenter 270 460))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 44 23))
+(title off)
+(pinCenter 270 360))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 44 23))
+(title off)
+(pinCenter 20 230))
+(devCarrierFor 10
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 116))
+(terminals on)
+(pinCenter 270 760))
+(devCarrierFor 11
+(active open)
+(icon)
+(open
+(extent 264 46))
+(pinCenter 650 760))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 270 650))
+(devCarrierFor 13
+(active open)
+(icon)
+(open
+(extent 264 46))
+(pinCenter 680 960))
+(devCarrierFor 14
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 116))
+(terminals on)
+(pinCenter 270 960))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 270 850))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter 270 1080))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 540 1240))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 144 46))
+(pinCenter 860 1170))
+(devCarrierFor 20
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 234 96))
+(terminals on)
+(pinCenter 540 1170))
+(devCarrierFor 24
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 540 1420))
+(devCarrierFor 25
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 116))
+(terminals on)
+(pinCenter 540 1340))
+(devCarrierFor 26
+(active open)
+(icon)
+(open
+(extent 176 177)
+(noformatter))
+(pinCenter 880 1340))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 270 1040))
+(connect D1:1 D0:1
+(points 2 413 590 485 590))
+(connect D5:0 D1:0
+(points 2 270 510 270 532))
+(connect D7:0 D2:0
+(points 6 20 244 20 260 60 260 60 200 270 200 270 216))
+(connect D2:1 D3:1
+(points 2 414 280 570 280))
+(connect D5:1 D4:1
+(points 2 414 460 475 460))
+(connect D6:0 D5:0
+(points 2 270 374 270 391))
+(connect D2:0 D6:0
+(points 2 270 325 270 346))
+(connect D10:0 D8:0
+(points 2 270 660 270 681))
+(connect D8:1 D9:1
+(points 2 414 760 515 760))
+(connect D1:0 D10:0
+(points 2 270 629 270 640))
+(connect D12:1 D11:1
+(points 2 414 960 545 960))
+(connect D13:0 D12:0
+(points 2 270 860 270 881))
+(connect D8:0 D13:0
+(points 2 270 820 270 840))
+(connect D21:0 D14:0
+(points 2 270 1050 270 1052))
+(connect D17:0 D15:0
+(points 2 540 1220 540 1230))
+(connect D17:1 D16:1
+(points 2 689 1170 785 1170))
+(connect D14:1 D17:0
+(points 3 306 1080 540 1080 540 1101))
+(connect D19:0 D18:0
+(points 2 540 1400 540 1410))
+(connect D15:0 D19:0
+(points 2 540 1250 540 1261))
+(connect D19:1 D20:1
+(points 2 684 1340 789 1340))
+(connect D12:0 D21:0
+(points 2 270 1020 270 1030)))
+(stackingOrder 0 6 5 7 2 3 4 1 12 11 14 10 9 13 8 21 16 17 15 19 18 20))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
