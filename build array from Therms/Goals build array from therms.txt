@@ -1,0 +1,28 @@
+Goals :
+
+build an array of N number of records
+	each record has 2 fields
+	the 1 field is the temperature
+	the 2 field is the data taken at that temperature
+
+Why:  Every test is taken at 1 or more temperatures. 
+	Write code that grows and builds the data array as needed from a user configuration file.
+the value of the temperature changes from model to model and even from test to test within a given model or production run
+	
+
+flow chart sudo code:
+1.)
+read the temperature values in from a text file
+create an array the size of the number of temperatures in the text file
+each field in the array is named incrementally therm0, therm1, therm2, ... ,thermN
+The value of each temperature field is the temperature setting
+	
+2.)
+use this array to build a data array for the data at each temperature setting
+
+3.)
+unbuild the data array to individual records and send to named ranges in a worksheet.
+the named ranges will be therm0, therm1, therm2, ... ,thermN
+
+4.)
+profit

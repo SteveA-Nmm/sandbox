@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 31/Aug/2023 10:09:04 ")
+(date "Tue 26/Sep/2023 07:24:40 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M M.84)
+(workspaceStackingOrder M.84.30 M M.83)
 (sysconfig
 (iodevice "8720B"
 (type GPIB-VISA)
@@ -888,21 +888,21 @@
 (terminals on)
 (pinCenter 220 330))
 (devCarrierFor 6
-(active icon)
+(active open)
 (icon
 (extent 135 15))
 (open
 (extent 133 51))
 (terminals on)
-(pinCenter 220 90))
+(pinCenter 215 90))
 (connect D1:0 D0:0
 (points 2 220 160 220 190))
 (connect D1:1 D0:1
-(points 6 261 150 280 150 280 120 160 120 160 200 180 200))
+(points 6 261 150 270 150 270 170 160 170 160 200 180 200))
 (connect D4:1 D0:2
-(points 6 290 90 310 90 310 60 130 60 130 220 180 220))
+(points 6 324 90 340 90 340 20 100 20 100 220 180 220))
 (connect D4:0 D1:0
-(points 2 220 100 220 140))
+(points 2 220 118 220 140))
 (connect D0:0 D2:0
 (points 2 220 229 220 250))
 (connect D0:2 D2:1
@@ -912,8 +912,8 @@
 (connect D0:1 D3:1
 (points 6 260 200 290 200 290 360 160 360 160 330 178 330))
 (connect D0:3 O1:1
-(points 4 260 220 300 220 300 219 702 219)))
-(stackingOrder 0 3 1 2 4))))
+(points 4 260 220 481 220 481 219 702 219)))
+(stackingOrder 1 4 0 3 2))))
 (device 14 CONTEXT
 (properties
 (name "veeosInit")
@@ -1339,22 +1339,6 @@
 (scaled off)
 (format check box))
 (panelBg "Light Beige"))))
-(device 46 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "Therm1" ""))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 47 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
 (device 77 START25
 (properties
 (variableScope cont)))
@@ -1363,7 +1347,7 @@
 (name "validation of therms")
 (variableScope cont)
 (trigMode deg)
-(nextID 9)
+(nextID 10)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -1382,7 +1366,7 @@
 (device 1 FORMULA
 (properties
 (variableScope cont)
-(expr 2 "formula =\"Therm\"+B +\"=A\";" "//Therm = \"Therm\"+B;"))
+(expr 2 "//formula =\"Therm\"+B +\"=A\";" "formula = \"Therm\"+B;"))
 (interface
 (input 1
 (name "A")
@@ -1414,7 +1398,7 @@
 (device 5 FORMULA
 (properties
 (variableScope cont)
-(expr 1 "Therm"))
+(expr 2 "Therm" "//artifact from declarations"))
 (interface
 (output 1
 (name "Result")
@@ -1430,7 +1414,7 @@
 (device 7 FORMULA
 (properties
 (variableScope cont)
-(expr 1 "Therm1=A"))
+(expr 1 "Therm0"))
 (interface
 (input 1
 (name "A")
@@ -1468,10 +1452,12 @@
 (connect D1:1 D7:2)
 (connect D7:1 D8:1)))
 (contextCarrier
+(wndOrigin 175 15)
+(wndState res)
 (active detail)
 (detail
-(extent 561 612)
-(anchorPt 0 0)
+(extent 756 801)
+(anchorPt 38 71)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1511,7 +1497,7 @@
 (active open)
 (icon)
 (open
-(extent 145 50))
+(extent 205 56))
 (terminals on)
 (pinCenter 190 410))
 (devCarrierFor 6
@@ -1548,18 +1534,18 @@
 (connect D1:1 D4:1
 (points 2 334 290 365 290))
 (connect D1:0 D5:0
-(points 2 200 327 200 364))
+(points 2 200 327 200 361))
 (connect D5:1 D6:1
-(points 2 315 410 365 410))
+(points 2 345 410 365 410))
 (connect D5:0 D7:0
-(points 2 200 437 200 474))
+(points 2 200 440 200 474))
 (connect D0:1 D7:1
 (points 8 304 110 320 110 320 90 340 90 340 40 40 40 40 510 70 510))
 (connect D1:1 D7:2
 (points 6 334 290 350 290 350 570 50 570 50 530 70 530))
 (connect D7:1 D8:1
 (points 2 330 520 365 520)))
-(stackingOrder 0 1 2 3 4 5 6 7 8))))
+(stackingOrder 0 2 3 4 6 7 8 1 5))))
 (device 84 CONTEXT
 (properties
 (name "define temperatures")
@@ -1716,7 +1702,7 @@
 (active detail)
 (detail
 (extent 563 323)
-(anchorPt 0 0)
+(anchorPt 1 0)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -1827,8 +1813,7 @@
 (points 2 250 170 250 180))
 (connect D8:0 D10:0
 (points 2 250 200 250 210)))
-(stackingOrder 0 1 2 3 4 5 6 7 8 9
-10 11 12))))
+(stackingOrder 0 1 2 3 5 7 8 9 10 11 4 6 12))))
 (device 30 CONTEXT
 (properties
 (name "build therm array")
@@ -2186,19 +2171,21 @@
 (connect D12:1 D11:1)
 (connect D13:1 D12:1)))
 (contextCarrier
+(wndOrigin 2 2)
+(wndState res)
 (active detail)
 (detail
 (extent 1100 785)
-(anchorPt 68 68)
+(anchorPt 246 -65)
 (configuration
 (devCarrierFor 0
-(active icon)
+(active open)
 (icon
 (extent 135 15))
 (open
 (extent 101 51))
 (terminals on)
-(pinCenter 150 110))
+(pinCenter 145 110))
 (devCarrierFor 1
 (active icon)
 (icon
@@ -2232,7 +2219,6 @@
 (devCarrierFor 48
 (active open)
 (icon
-
 (extent 59 25))
 (open
 (extent 64 46)
@@ -2250,7 +2236,6 @@
 (devCarrierFor 62
 (active open)
 (icon
-
 (extent 74 15))
 (open
 (extent 74 51))
@@ -2259,7 +2244,6 @@
 (devCarrierFor 63
 (active open)
 (icon
-
 (iconImage "build.icn"))
 (open
 (extent 34 50))
@@ -2268,7 +2252,6 @@
 (devCarrierFor 64
 (active open)
 (icon
-
 (extent 74 15))
 (open
 (extent 74 51))
@@ -2290,7 +2273,6 @@
 (devCarrierFor 67
 (active open)
 (icon
-
 (iconImage "build.icn"))
 (open
 (extent 100 54))
@@ -2303,13 +2285,13 @@
 (extent 174 29))
 (pinCenter -60 30))
 (connect D12:0 D0:0
-(points 2 150 59 150 100))
+(points 4 150 59 150 79 150 79 150 64))
 (connect D0:0 D1:0
-(points 2 150 120 150 180))
+(points 4 150 138 150 150 150 150 150 180))
 (connect D1:0 D2:0
 (points 2 150 200 150 232))
 (connect D0:1 D2:1
-(points 6 220 110 240 110 240 140 70 140 70 260 86 260))
+(points 6 238 110 240 110 240 140 70 140 70 260 86 260))
 (connect D5:0 D3:0
 (points 2 380 675 380 750))
 (connect D7:0 D5:0
@@ -2336,8 +2318,7 @@
 (points 2 247 30 285 30))
 (connect D13:1 D12:1
 (points 2 29 30 52 30)))
-(stackingOrder 2 1 7 8 3 10 0 13 12 11
-6 4 5 9))))
+(stackingOrder 2 7 8 3 10 13 12 11 6 4 5 1 0 9))))
 (device 31 CONTEXT
 (properties
 (name "build therm list")
@@ -2470,8 +2451,6 @@
 (connect D3:0 D2:0)
 (connect D1:0 D3:0)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (detail
 (extent 1542 862)
@@ -2482,7 +2461,7 @@
 (icon
 (extent 122 15))
 (open
-(extent 202 115))
+(extent 204 115))
 (pinCenter 320 130))
 (devCarrierFor 19
 (active icon)
@@ -2506,20 +2485,19 @@
 (points 2 490 130 490 330))
 (connect D1:0 D3:0
 (points 2 490 100 490 110)))
-(stackingOrder 1 0 3 2))))
+(stackingOrder 2 1 3 0))))
 (configuration
-(connect D6:0 D0:0)
-(connect D4:0 D1:0)
-(connect D2:1 D3:1)
-(connect D0:0 D5:0)
-(connect D1:0 D6:0)))
+(connect D4:0 D0:0)
+(connect D2:0 D1:0)
+(connect D0:0 D3:0)
+(connect D1:0 D4:0)))
 (contextCarrier
-(wndOrigin 2 2)
+(wndOrigin 739 4)
 (wndState res)
 (active detail)
 (detail
 (extent 929 800)
-(anchorPt -258 -71)
+(anchorPt -259 2)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -2536,20 +2514,6 @@
 (carbonCopy))
 (titleBg "Light Beige")
 (pinCenter 700 250))
-(devCarrierFor 46
-(active open)
-(icon)
-(open
-(extent 145 65))
-(terminals on)
-(pinCenter 690 1210))
-(devCarrierFor 47
-(active open)
-(icon
-(extent 88 15))
-(open
-(extent 124 22))
-(pinCenter 950 1210))
 (devCarrierFor 77
 (active open)
 (icon)
@@ -2569,17 +2533,15 @@
 (extent 127 15))
 (terminals on)
 (pinCenter 700 330))
-(connect D6:0 D0:0
+(connect D4:0 D0:0
 (points 2 700 340 700 425))
-(connect D4:0 D1:0
+(connect D2:0 D1:0
 (points 2 700 184 700 240))
-(connect D2:1 D3:1
-(points 2 815 1210 885 1210))
-(connect D0:0 D5:0
+(connect D0:0 D3:0
 (points 2 700 455 700 540))
-(connect D1:0 D6:0
+(connect D1:0 D4:0
 (points 2 700 260 700 320)))
-(stackingOrder 2 3 1 4 5 0 6))
+(stackingOrder 1 2 3 0 4))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

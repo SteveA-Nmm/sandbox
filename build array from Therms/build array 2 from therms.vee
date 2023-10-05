@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Thu 31/Aug/2023 17:54:30 ")
+(date "Tue 26/Sep/2023 07:54:52 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -2995,6 +2995,7 @@
 (connect D0:0 D1:0)
 (connect D1:0 D2:0)
 (connect D5:0 D3:0)
+(connect D8:0 D4:0)
 (connect D7:0 D5:0)
 (connect D2:0 D7:0)
 (connect D8:1 D7:1)
@@ -3007,7 +3008,7 @@
 (active detail)
 (detail
 (extent 789 731)
-(anchorPt 390 23)
+(anchorPt 392 23)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -3084,6 +3085,8 @@
 (points 2 170 130 170 190))
 (connect D5:0 D3:0
 (points 2 170 564 170 580))
+(connect D8:0 D4:0
+(points 4 20 290 20 300 -30 300 -30 324))
 (connect D7:0 D5:0
 (points 2 170 309 170 536))
 (connect D2:0 D7:0
@@ -3096,7 +3099,7 @@
 (points 4 170 74 170 90 20 90 20 270))
 (connect D6:1 D8:1
 (points 2 -41 280 -35 280)))
-(stackingOrder 0 1 3 5 6 4 2 7 8 9))
+(stackingOrder 0 1 3 5 6 2 7 8 9 4))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

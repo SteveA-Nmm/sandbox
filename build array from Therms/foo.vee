@@ -1,0 +1,74 @@
+(saveFormat "7.0")
+(date "Wed 27/Sep/2023 15:55:28 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idn "anml2487a")
+(isPresent 1)
+(ppAddr "GPIB0::13::INSTR")
+(ScpiFileName "anml2487a.xml")
+(model "anml2487a")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model "anml2487a"
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(device 0 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "0<=A AND A<10"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(configuration))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 702 385)
+(wndState max)
+(active detail)
+(detail
+(extent 687 333)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 120 51))
+(terminals on)
+(pinCenter 255 100))))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))

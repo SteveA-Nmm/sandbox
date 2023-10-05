@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 06/Jan/2022 08:39:24 ")
+(date "Wed 04/Oct/2023 17:48:55 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder M.29 M.45 M M.50 F5)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "HP8340B"
 (type GPIB-VISA)
@@ -425,7 +425,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 51)
+(nextID 53)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -561,7 +561,7 @@
 (connect D3:4 D9:1)
 (connect D6:1 D10:1)))
 (contextCarrier
-(active detail)
+(active panel)
 (panel
 (extent 386 216)
 (drawGrid "on")
@@ -708,7 +708,7 @@
 (connect D3:4 D9:1
 (points 4 297 270 306 270 306 270 315 270))
 (connect D6:1 D10:1
-(points 4 325 350 258 350 258 350 325 350)))
+(points 4 315 350 258 350 258 350 325 350)))
 (stackingOrder 5 7 9 10 8 1 0 4 2 3 6))))
 (context 2
 (properties
@@ -2954,25 +2954,25 @@
 (terminals on)
 (pinCenter 870 480))
 (connect I1:1 D0:1
-(points 4 421 332 10 332 10 350 440 350))
+(points 4 421 332 10 332 10 350 450 350))
 (connect I2:1 D0:2
-(points 4 421 472 20 472 20 450 440 450))
+(points 4 421 472 20 472 20 450 450 450))
 (connect D0:0 D1:0
-(points 6 720 505 720 470 660 470 660 330 870 330 870 345))
+(points 6 715 505 720 470 660 470 660 330 870 330 870 345))
 (connect D0:1 D1:1
-(points 4 999 330 802 330 802 360 842 360))
+(points 4 979 330 802 330 802 360 842 360))
 (connect D1:0 D2:0
 (points 4 870 375 870 380 870 380 870 385))
 (connect D0:2 D2:1
-(points 4 999 350 780 350 780 400 842 400))
+(points 4 979 350 780 350 780 400 842 400))
 (connect D2:0 D3:0
 (points 4 870 415 870 420 870 420 870 425))
 (connect D0:3 D3:1
-(points 6 999 370 770 370 770 410 780 410 780 440 842 440))
+(points 6 979 370 770 370 770 410 780 410 780 440 842 440))
 (connect D3:0 D4:0
 (points 4 870 455 870 460 870 460 870 465))
 (connect D0:5 D4:1
-(points 4 999 410 790 410 790 480 842 480))
+(points 4 979 410 790 410 790 480 842 480))
 (connect D1:1 O1:1
 (points 4 897 360 910 360 910 292 772 292))
 (connect D2:1 O2:1
@@ -3211,12 +3211,10 @@
 (connect D6:1 D11:1)
 (connect D8:1 O1:1)))
 (contextCarrier
-(wndOrigin 82 82)
-(wndState res)
 (active detail)
 (detail
 (extent 1401 594)
-(anchorPt 96 -9)
+(anchorPt 283 110)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -3315,9 +3313,9 @@
 (terminals on)
 (pinCenter 1030 320))
 (connect I1:1 D0:1
-(points 4 -96 155 -60 155 -60 190 87 190))
+(points 4 -283 36 -60 36 -60 190 87 190))
 (connect I2:1 D0:2
-(points 4 -96 455 -60 455 -60 210 87 210))
+(points 4 -283 336 -60 336 -60 210 87 210))
 (connect D0:1 D1:1
 (points 4 172 180 190 180 190 270 222 270))
 (connect D0:2 D1:2
@@ -3329,15 +3327,15 @@
 (connect D0:4 D2:2
 (points 4 172 210 360 210 360 330 380 330))
 (connect D2:0 D3:0
-(points 6 540 350 540 370 710 370 710 280 750 280 750 300))
+(points 6 535 350 535 370 710 370 710 280 750 280 750 300))
 (connect D2:1 D3:1
-(points 4 699 310 708 310 708 310 722 310))
+(points 2 689 310 722 310))
 (connect D3:1 D6:1
 (points 2 777 310 886 310))
 (connect D10:2 D6:2
 (points 4 847 350 870 350 870 320 886 320))
 (connect D10:1 D6:3
-(points 4 847 330 866 330 866 330 886 330))
+(points 2 847 330 886 330))
 (connect D1:1 D7:1
 (points 6 338 290 370 290 370 230 1070 230 1070 300 1085 300))
 (connect D11:1 D7:2
@@ -3349,8 +3347,8 @@
 (connect D6:1 D11:1
 (points 2 973 320 1000 320))
 (connect D8:1 O1:1
-(points 4 1260 320 1296 320 1296 305 1304 305)))
-(stackingOrder 1 5 4 0 6 3 11 7 8 10 2 9))))
+(points 4 1260 320 1296 320 1296 186 1117 186)))
+(stackingOrder 1 8 2 9 6 4 5 3 10 11 7 0))))
 (context 1
 (properties
 (name "timenow")
@@ -4154,7 +4152,7 @@
 (connect D2:1 D0:1)
 (connect D2:2 D1:1)))
 (contextCarrier
-(active detail)
+(active panel)
 (panel
 (extent 159 846)
 (drawGrid "on")
@@ -10358,10 +10356,6 @@
 (connect D20:0 D23:0)
 (connect D20:1 D23:1)))
 (contextCarrier
-(wndOrigin 162 867)
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 1523 1415)
-(wndState min)
 (active detail)
 (detail
 (extent 1523 1415)
@@ -10567,19 +10561,19 @@
 (connect D0:0 D2:0
 (points 6 910 600 910 620 870 620 870 540 910 540 910 560))
 (connect D23:1 D3:1
-(points 6 617 740 680 740 680 530 950 530 950 550 991 550))
+(points 6 617 740 680 740 680 530 950 530 950 550 1001 550))
 (connect D2:1 D3:2
-(points 2 926 570 991 570))
+(points 2 926 570 1001 570))
 (connect D0:1 D3:3
-(points 2 925 590 991 590))
+(points 2 925 590 1001 590))
 (connect D19:1 D5:1
 (points 6 408 590 430 590 430 650 480 650 480 670 1167 670))
 (connect D3:1 D5:2
 (points 4 1128 570 1150 570 1150 690 1167 690))
 (connect D5:1 D6:1
-(points 2 1292 680 1319 680))
+(points 2 1292 680 1329 680))
 (connect D19:0 D6:2
-(points 7 350 633 350 640 860 640 860 730 1300 730 1300 720 1319 720))
+(points 7 350 633 350 640 860 640 860 730 1300 730 1300 720 1329 720))
 (connect D6:1 D7:1
 (points 4 1541 700 1560 700 1560 610 1615 610))
 (connect D9:0 D8:0
@@ -10587,17 +10581,17 @@
 (connect D15:1 D10:1
 (points 4 835 330 860 330 860 350 989 350))
 (connect D16:0 D12:0
-(points 8 200 435 200 460 340 460 340 450 510 450 510 230 580 230 580 245))
+(points 8 195 435 200 460 340 460 340 450 510 450 510 230 580 230 580 245))
 (connect D16:1 D12:1
-(points 2 479 260 552 260))
+(points 2 459 260 552 260))
 (connect D12:0 D13:0
 (points 2 580 275 580 285))
 (connect D16:2 D13:1
-(points 4 479 280 500 280 500 300 552 300))
+(points 4 459 280 500 280 500 300 552 300))
 (connect D13:0 D14:0
 (points 2 580 315 580 325))
 (connect D16:3 D14:1
-(points 6 479 300 490 300 490 310 500 310 500 340 552 340))
+(points 6 459 300 490 300 490 310 500 310 500 340 552 340))
 (connect D12:1 D15:1
 (points 4 607 260 640 260 640 310 804 310))
 (connect D13:1 D15:2
@@ -10607,15 +10601,15 @@
 (connect D18:1 D15:4
 (points 4 607 380 640 380 640 340 804 340))
 (connect D8:0 D16:0
-(points 4 670 110 670 130 200 130 200 206))
+(points 4 670 110 670 130 200 130 195 206))
 (connect D17:1 D16:1
-(points 2 -181 280 -80 280))
+(points 2 -181 280 -70 280))
 (connect D11:1 D16:2
-(points 2 -254 380 -80 380))
+(points 2 -254 380 -70 380))
 (connect D14:0 D18:0
 (points 2 580 355 580 365))
 (connect D16:5 D18:1
-(points 6 479 340 490 340 490 350 500 350 500 380 552 380))
+(points 6 459 340 490 340 490 350 500 350 500 380 552 380))
 (connect D18:0 D19:0
 (points 4 580 395 580 460 350 460 350 528))
 (connect D12:1 D19:1
@@ -10631,9 +10625,9 @@
 (connect D23:1 D22:1
 (points 2 617 740 697 740))
 (connect D20:0 D23:0
-(points 6 310 783 310 800 480 800 480 710 590 710 590 730))
+(points 6 305 783 310 800 480 800 480 710 590 710 590 730))
 (connect D20:1 D23:1
-(points 2 459 740 562 740)))
+(points 2 449 740 562 740)))
 (stackingOrder 6 2 0 5 9 10 12 13 14 15 18 16 11 17 8 19 3 7 22 21 20 23 4 1))))
 (device 31 CONTEXT
 (properties
@@ -15792,7 +15786,7 @@
 (stackingOrder 7 4 8 10 1 12 9 5 14 11 13 2 3 0 6))))
 (device 45 CONTEXT
 (properties
-(name "select ENR table")
+(name "select ENR workbook")
 (variableScope cont)
 (trigMode deg)
 (nextID 31)
@@ -16075,10 +16069,6 @@
 (ShowOnExecPanel
 (relativeOrigin 2 2)))
 (contextCarrier
-(wndOrigin 2 867)
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 1272 746)
-(wndState min)
 (active detail)
 (panel
 (extent 1115 869)
@@ -16092,7 +16082,7 @@
 (extent 51 26)))
 (detail
 (extent 1272 746)
-(anchorPt 44 -21)
+(anchorPt 41 7)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -16155,7 +16145,7 @@
 (iconImage "loop.icn"))
 (open)
 (terminals on)
-(pinCenter 470 190))
+(pinCenter 480 170))
 (devCarrierFor 10
 (active icon)
 (icon
@@ -16217,19 +16207,19 @@
 (terminals on)
 (pinCenter 580 470))
 (devCarrierFor 26
-(active icon)
+(active open)
 (icon
 (extent 28 15))
 (open
 (extent 214 30))
 (pinCenter 190 340))
 (devCarrierFor 27
-(active icon)
+(active open)
 (icon
 (extent 28 15))
 (open
 (extent 214 30))
-(pinCenter 200 430))
+(pinCenter 180 430))
 (devCarrierFor 28
 (active open)
 (icon)
@@ -16245,21 +16235,21 @@
 (showFormat int))
 (pinCenter 400 500))
 (connect D7:1 D2:0
-(points 3 506 190 580 190 580 255))
+(points 3 516 170 580 170 580 255))
 (connect D0:1 D2:1
 (points 4 424 240 498 240 498 270 516 270))
 (connect D2:0 D3:0
 (points 2 580 285 580 310))
 (connect D2:1 D3:1
-(points 6 643 260 650 260 650 240 500 240 500 320 533 320))
+(points 6 643 260 650 260 650 230 490 230 490 320 533 320))
 (connect D3:1 D4:1
-(points 4 626 320 636 320 636 320 647 320))
+(points 2 626 320 647 320))
 (connect D15:0 D5:0
 (points 2 580 489 580 520))
 (connect D11:0 D6:0
 (points 4 580 580 580 605 580 605 580 630))
 (connect D1:0 D7:0
-(points 6 580 95 580 120 530 120 530 110 470 110 470 162))
+(points 4 580 95 580 120 480 120 480 142))
 (connect D6:1 D8:0
 (points 3 624 640 880 640 880 670))
 (connect D6:2 D9:0
@@ -16271,7 +16261,7 @@
 (connect D4:0 D12:0
 (points 4 690 330 690 340 580 340 580 360))
 (connect D16:1 D12:1
-(points 6 206 340 230 340 230 310 450 310 450 370 463 370))
+(points 6 299 340 230 340 230 310 450 310 450 370 463 370))
 (connect D13:1 D12:2
 (points 4 436 370 450 370 450 380 463 380))
 (connect D14:1 D12:3
@@ -16279,12 +16269,12 @@
 (connect D12:0 D15:0
 (points 2 580 399 580 450))
 (connect D17:1 D15:1
-(points 6 216 430 240 430 240 440 450 440 450 460 463 460))
+(points 6 289 430 310 430 310 440 450 440 450 460 463 460))
 (connect D19:1 D15:2
 (points 4 436 500 450 500 450 470 463 470))
 (connect D18:1 D15:3
 (points 6 436 560 460 560 460 490 440 490 440 480 463 480)))
-(stackingOrder 1 9 8 10 2 18 12 15 14 13 16 17 19 7 6 11 5 4 3 0))))
+(stackingOrder 1 9 8 10 2 18 15 14 13 19 6 11 0 7 16 17 5 3 4 12))))
 (device 49 START25
 (properties
 (variableScope cont)))
@@ -16341,8 +16331,8 @@
 (implementation
 (value Real
 (numDims 1)
-(size 8)
-(data  [ 37000 13.82 38000 13.57 39000 13.36 40000 13.21 ]))
+(size 11)
+(data  [ 37000 13.82 38000 13.57 39000 13.36 40000 13.21 0 0 0 ]))
 (initValue Real
 (data  0))))
 (device 24 CONTEXT
@@ -20644,7 +20634,7 @@
 (active detail)
 (detail
 (extent 1395 816)
-(anchorPt -373 -497)
+(anchorPt -531 -373)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -21003,38 +20993,38 @@
 (title off)
 (pinCenter 1130 280))
 (connect D27:0 D1:0
-(points 8 1170 835 1170 870 1070 870 1070 740 1210 740 1210 690 1400 690 1400
+(points 8 1170 835 1170 870 1070 870 1070 740 1210 740 1210 690 1400 690 1405
 708))
 (connect D27:1 D1:1
-(points 4 1247 760 1220 760 1220 740 1259 740))
+(points 4 1247 760 1220 760 1220 740 1279 740))
 (connect D27:2 D1:2
-(points 6 1247 770 1220 770 1220 770 1230 770 1230 760 1259 760))
+(points 6 1247 770 1220 770 1220 770 1230 770 1230 760 1279 760))
 (connect D27:3 D1:3
-(points 4 1247 780 1230 780 1230 780 1259 780))
+(points 4 1247 780 1230 780 1230 780 1279 780))
 (connect D27:4 D1:4
-(points 4 1247 790 1233 790 1233 800 1259 800))
+(points 4 1247 790 1233 790 1233 800 1279 800))
 (connect D27:5 D1:5
-(points 4 1247 800 1230 800 1230 820 1259 820))
+(points 4 1247 800 1230 800 1230 820 1279 820))
 (connect D27:6 D1:6
-(points 6 1247 810 1220 810 1220 830 1230 830 1230 840 1259 840))
+(points 6 1247 810 1220 810 1220 830 1230 830 1230 840 1279 840))
 (connect D27:7 D1:7
-(points 6 1247 820 1220 820 1220 850 1230 850 1230 860 1259 860))
+(points 6 1247 820 1220 820 1220 850 1230 850 1230 860 1279 860))
 (connect D1:0 D2:0
-(points 6 1400 873 1400 900 1570 900 1570 770 1660 770 1660 790))
+(points 6 1405 873 1400 900 1570 900 1570 770 1660 770 1660 790))
 (connect D1:1 D2:1
-(points 2 1541 800 1591 800))
+(points 2 1531 800 1591 800))
 (connect D6:0 D3:0
-(points 2 1150 615 1150 670))
+(points 2 1145 615 1150 670))
 (connect D2:0 D4:0
 (points 4 1660 810 1660 825 1660 825 1660 840))
 (connect D4:0 D5:0
 (points 4 1660 860 1660 870 1660 870 1660 880))
 (connect D1:1 D5:1
-(points 4 1541 800 1560 800 1560 890 1581 890))
+(points 4 1531 800 1560 800 1560 890 1581 890))
 (connect D4:1 D5:2
 (points 6 1729 850 1760 850 1760 940 1560 940 1560 910 1581 910))
 (connect D47:0 D6:0
-(points 4 1130 295 1130 310 1150 310 1150 326))
+(points 4 1130 295 1130 310 1150 310 1145 326))
 (connect D27:0 D7:0
 (points 4 1170 835 1170 887 1150 887 1150 930))
 (connect D10:1 D7:1
@@ -21052,9 +21042,9 @@
 (connect D28:0 D29:0
 (points 4 1520 1020 1520 1030 1520 1030 1520 1040))
 (connect D1:0 D30:0
-(points 2 1400 873 1400 982))
+(points 2 1405 873 1400 982))
 (connect D1:1 D30:1
-(points 6 1541 800 1560 800 1560 890 1340 890 1340 1000 1362 1000))
+(points 6 1531 800 1560 800 1560 890 1340 890 1340 1000 1362 1000))
 (connect D31:1 D30:2
 (points 4 1344 1020 1343 1020 1343 1020 1362 1020))
 (connect D37:0 D32:0
@@ -21076,17 +21066,17 @@
 (connect D35:6 D34:6
 (points 2 1630 1440 1668 1440))
 (connect D36:0 D35:0
-(points 4 1400 1318 1400 1340 1580 1340 1580 1385))
+(points 4 1395 1318 1400 1340 1580 1340 1580 1385))
 (connect D36:1 D35:1
-(points 4 1479 1290 1500 1290 1500 1420 1530 1420))
+(points 4 1469 1290 1500 1290 1500 1420 1530 1420))
 (connect D38:0 D36:0
-(points 2 1400 1218 1400 1244))
+(points 2 1405 1218 1395 1244))
 (connect D8:0 D37:0
 (points 2 1150 1020 1150 1175))
 (connect D37:0 D38:0
-(points 6 1150 1205 1150 1230 1230 1230 1230 1120 1400 1120 1400 1144))
+(points 6 1150 1205 1150 1230 1230 1230 1230 1120 1400 1120 1405 1144))
 (connect D37:1 D38:1
-(points 2 1205 1190 1321 1190))
+(points 2 1205 1190 1331 1190))
 (connect D33:0 D39:0
 (points 2 1150 1370 1150 1425))
 (connect D39:1 D40:1
@@ -21286,12 +21276,10 @@
 (connect D5:1 D14:1)
 (connect D7:1 D14:2)))
 (contextCarrier
-(wndOrigin 413 36)
-(wndState res)
 (active detail)
 (detail
-(extent 1496 800)
-(anchorPt 332 131)
+(extent 1664 800)
+(anchorPt 69 215)
 (configuration
 (devCarrierFor 1
 (active icon)
@@ -21301,7 +21289,7 @@
 (open
 (extent 484 636)
 (editing enabled))
-(pinCenter -90 420))
+(pinCenter -140 430))
 (devCarrierFor 5
 (active icon)
 (icon
@@ -21346,7 +21334,7 @@
 (extent 28 15))
 (open
 (extent 214 30))
-(pinCenter -280 70))
+(pinCenter -240 70))
 (devCarrierFor 60
 (active open)
 (icon
@@ -21421,38 +21409,953 @@
 (connect D3:0 D6:0
 (points 2 460 0 460 33))
 (connect D11:1 D6:1
-(points 2 395 70 410 70))
+(points 2 385 70 410 70))
 (connect D6:1 D7:0
 (points 3 510 70 580 70 580 93))
 (connect D6:1 D7:1
 (points 4 510 70 520 70 520 130 535 130))
 (connect D5:1 D8:1
-(points 4 -171 70 -175 70 -175 70 -88 70))
+(points 2 -131 70 -88 70))
 (connect D10:0 D9:0
 (points 2 460 130 460 140))
 (connect D6:0 D10:0
 (points 2 460 88 460 110))
 (connect D8:1 D11:1
-(points 4 -33 70 -49 70 -49 70 -15 70))
+(points 2 -33 70 -5 70))
 (connect D13:0 D12:0
-(points 6 270 408 270 430 410 430 410 360 590 360 590 375))
+(points 6 265 408 265 430 400 430 400 360 590 360 590 375))
 (connect D13:1 D12:1
-(points 2 390 380 568 380))
+(points 2 380 380 568 380))
 (connect D14:1 D12:2
 (points 6 852 190 870 190 870 430 550 430 550 400 568 400))
 (connect D7:1 D13:1
 (points 6 625 130 650 130 650 200 130 200 130 380 150 380))
 (connect D5:1 D14:1
-(points 4 -171 70 -160 70 -160 180 667 180))
+(points 4 -131 70 -110 70 -110 180 667 180))
 (connect D7:1 D14:2
 (points 4 625 130 650 130 650 200 667 200)))
-(stackingOrder 6 4 7 9 11 3 0 1 13 10 12 8 5 2 14))))
+(stackingOrder 6 4 9 11 13 2 1 0 3 5 8 10 12 7 14))))
+(device 51 CONTEXT
+(properties
+(name "select ENR table")
+(variableScope cont)
+(trigMode deg)
+(nextID 31)
+(popupTitleText "UserObject"))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "Directory Name")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "C:\\VEE Calibration Files\\ENR_Cal_Files\\"))
+(initValue Text
+(data  ""))))
+(device 2 START25
+(properties
+(variableScope cont)))
+(device 3 FILESELECT
+(properties
+(name "File Name Selection")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory "C:\\VEE Calibration Files\\ENR_Cal_Files\\")
+(initialFile "*.*")
+(dialogMode Reading))
+(interface
+(input 1
+(name "Initial Directory")
+(tag "Initial Directory")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 4 FROMDATASET
+(properties
+(variableScope cont)
+(readRecs one)
+(expr 1 "1"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(tag "records")))
+(implementation
+(attr iopath file read "C:\\VEE Calibration Files\\ENR_Cal_Files\\foo.txt"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 5 TOGLOBAL
+(properties
+(name "Set ENRtable")
+(variableScope cont)
+(globalName "ENRtable"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 6 CALL
+(properties
+(name "Call ENRheader")
+(variableScope cont)
+(callFunc "ENRheader")
+(parmMode rev30)))
+(device 8 MESSAGEBOX
+(properties
+(variableScope cont)
+(position 283 371)
+(message "Does this match the cal sticker?")
+(symbol Question))
+(interface
+(output 1
+(name "Yes")
+(lock name constraints))
+(output 2
+(name "No")
+(lock name constraints))
+(output 3
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "Yes  No  Cancel")
+(buttonLabel1 "Yes")
+(buttonLabel2 "No")
+(buttonLabel3 "Cancel")
+(bdefault "Yes")))
+(device 9 REPEATUNTILBREAK
+(properties
+(variableScope cont))
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 10 BREAK
+(properties
+(variableScope cont)))
+(device 11 NEXT
+(properties
+(variableScope cont)))
+(device 12 EXITPROCESS
+(properties
+(variableScope cont)
+(code 0)))
+(device 15 CALL
+(properties
+(name "Call ViewENRtable")
+(variableScope cont)
+(callFunc "ViewENRtable")
+(parmMode rev30)))
+(device 19 FORMULA
+(properties
+(name "showPanel(UFName,x,y,width,height)")
+(variableScope cont)
+(expr 2 "//showPanel(UFName,x,y,width,height)" "showPanel(UFName,x,y)"))
+(interface
+(input 1
+(name "UFName")
+(optional yes))
+(input 2
+(name "x")
+(optional yes))
+(input 3
+(name "y")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 23 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  100))
+(initValue Int16
+(data  0))))
+(device 24 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  10))
+(initValue Int16
+(data  0))))
+(device 25 FORMULA
+(properties
+(name "showPanel(UFName,x,y,width,height)")
+(variableScope cont)
+(expr 2 "//showPanel(UFName,x,y,width,height)" "showPanel(UFName,x,y)"))
+(interface
+(input 1
+(name "UFName")
+(optional yes))
+(input 2
+(name "x")
+(optional yes))
+(input 3
+(name "y")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 26 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "ViewENRtable"))
+(initValue Text
+(data  ""))))
+(device 27 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "ENRheader"))
+(initValue Text
+(data  ""))))
+(device 28 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  100))
+(initValue Int16
+(data  0))))
+(device 29 CONSTANT
+(properties
+(name "Int16")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  300))
+(initValue Int16
+(data  0))))
 (configuration
-(connect D5:0 D4:0)
-(connect D4:0 D6:0))
+(connect D7:1 D2:0)
+(connect D0:1 D2:1)
+(connect D2:0 D3:0)
+(connect D2:1 D3:1)
+(connect D3:1 D4:1)
+(connect D15:0 D5:0)
+(connect D11:0 D6:0)
+(connect D1:0 D7:0)
+(connect D6:1 D8:0)
+(connect D6:2 D9:0)
+(connect D6:3 D10:0)
+(connect D5:0 D11:0)
+(connect D4:0 D12:0)
+(connect D16:1 D12:1)
+(connect D13:1 D12:2)
+(connect D14:1 D12:3)
+(connect D12:0 D15:0)
+(connect D17:1 D15:1)
+(connect D19:1 D15:2)
+(connect D18:1 D15:3))
+(ShowOnExecPanel
+(relativeOrigin 2 2)))
+(contextCarrier
+(active detail)
+(panel
+(extent 1115 869)
+(drawGrid "on")
+(widget 1 detail
+(relativeOrigin 720 0)
+(PID 0)
+(title off)
+(tabIndex 0)
+(borderStyle none)
+(extent 51 26)))
+(detail
+(extent 1272 746)
+(anchorPt 42 6)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 96 15))
+(open
+(extent 424 56))
+(pinCenter 210 240))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 580 80))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 515 110))
+(terminals on)
+(pinCenter 580 270))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 88 15))
+(open
+(extent 258 113))
+(terminals on)
+(pinCenter 580 320))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 80 15))
+(open
+(extent 88 53))
+(terminals on)
+(pinCenter 690 320))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 216 53))
+(terminals on)
+(pinCenter 580 530))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 84 34))
+(open
+(extent 261 137))
+(terminals on)
+(pinCenter 580 650))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open)
+(terminals on)
+(pinCenter 480 170))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 38 15))
+(open)
+(terminals on)
+(pinCenter 880 680))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 30 15))
+(open)
+(terminals on)
+(pinCenter 830 680))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 66 32))
+(pinCenter 760 710))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 216 53))
+(terminals on)
+(pinCenter 580 570))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 228 34))
+(open
+(extent 292 110))
+(terminals on)
+(pinCenter 580 380))
+(devCarrierFor 23
+(active open)
+(icon)
+(open
+(extent 68 30)
+(showFormat int))
+(pinCenter 400 370))
+(devCarrierFor 24
+(active open)
+(icon)
+(open
+(extent 68 30)
+(showFormat int))
+(pinCenter 400 430))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 228 34))
+(open
+(extent 292 110))
+(terminals on)
+(pinCenter 580 470))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 28 15))
+(open
+(extent 214 30))
+(pinCenter 190 340))
+(devCarrierFor 27
+(active open)
+(icon
+(extent 28 15))
+(open
+(extent 214 30))
+(pinCenter 180 470))
+(devCarrierFor 28
+(active open)
+(icon)
+(open
+(extent 68 30)
+(showFormat int))
+(pinCenter 400 560))
+(devCarrierFor 29
+(active open)
+(icon)
+(open
+(extent 68 30)
+(showFormat int))
+(pinCenter 400 500))
+(connect D7:1 D2:0
+(points 3 516 170 580 170 580 255))
+(connect D0:1 D2:1
+(points 4 424 240 440 240 440 270 516 270))
+(connect D2:0 D3:0
+(points 2 580 285 580 310))
+(connect D2:1 D3:1
+(points 6 643 260 650 260 650 240 500 240 500 320 533 320))
+(connect D3:1 D4:1
+(points 2 626 320 647 320))
+(connect D15:0 D5:0
+(points 2 580 489 580 520))
+(connect D11:0 D6:0
+(points 4 580 580 580 605 580 605 580 630))
+(connect D1:0 D7:0
+(points 4 580 95 580 120 480 120 480 142))
+(connect D6:1 D8:0
+(points 3 624 640 880 640 880 670))
+(connect D6:2 D9:0
+(points 3 624 650 830 650 830 670))
+(connect D6:3 D10:0
+(points 3 624 660 760 660 760 682))
+(connect D5:0 D11:0
+(points 2 580 540 580 560))
+(connect D4:0 D12:0
+(points 4 690 330 690 340 580 340 580 360))
+(connect D16:1 D12:1
+(points 6 299 340 320 340 320 310 450 310 450 370 463 370))
+(connect D13:1 D12:2
+(points 4 436 370 450 370 450 380 463 380))
+(connect D14:1 D12:3
+(points 4 436 430 450 430 450 390 463 390))
+(connect D12:0 D15:0
+(points 2 580 399 580 450))
+(connect D17:1 D15:1
+(points 6 289 470 310 470 310 440 450 440 450 460 463 460))
+(connect D19:1 D15:2
+(points 4 436 500 450 500 450 470 463 470))
+(connect D18:1 D15:3
+(points 6 436 560 460 560 460 490 440 490 440 480 463 480)))
+(stackingOrder 1 9 8 10 18 15 14 13 19 6 0 7 16 17 12 5 11 2 3 4))))
+(device 52 CONTEXT
+(properties
+(name "veeosInit")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\nveeosInit has no underlying function\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nPlace this object at the beginning of any program that uses the veeos library. Set \"Run Every Time\" to cause this object to execute each time your program is run.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 33)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 12 START25
+(properties
+(variableScope cont)))
+(device 18 TOGGLE25
+(properties
+(name "Run Every Time")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 20 IFTHENELSE
+(properties
+(name "force run")
+(variableScope cont)
+(cases 1 "A==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 21 TOGLOBAL
+(properties
+(name "Set veeosInit_already_run")
+(variableScope cont)
+(globalName "veeosInit_already_run"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 22 CONSTANT
+(properties
+(name "0")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "UInt8")
+(lock name constraints)))
+(implementation
+(value UInt8
+(data  0))
+(initValue UInt8
+(data  0))))
+(device 24 LABEL
+(properties
+(name "This item FIRST in all VEEOS programs")
+(variableScope cont)
+(labelValue "This item FIRST in all VEEOS programs"))
+(implementation))
+(device 25 CONTEXT
+(properties
+(name "choose bootstrap library")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "local bootstrap")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "bootstrapLib.vxe"))
+(initValue Text
+(data  ""))))
+(device 2 FORMULA
+(properties
+(name "system bootstrap")
+(variableScope cont)
+(expr 1 "installDir()+\"/veeos/lib/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOMEPATH\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 VECTORCONCATENATOR
+(properties
+(name "bootstrap file list")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 9 CONTEXT
+(properties
+(name "choose bootstrap source")
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 16)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 8 EXITCONTEXT
+(properties
+(variableScope cont)))
+(device 11 FORMULA
+(properties
+(name "each item")
+(variableScope cont)
+(expr 1 "A[n]"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "n")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 12 FORMULA
+(properties
+(name "how many?")
+(variableScope cont)
+(expr 1 "totSize(A)"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORCOUNT
+(properties
+(variableScope cont)
+(count 5))
+(interface
+(input 1
+(name "Count")
+(tag "Count")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 14 FROMFILE
+(properties
+(name "see if file exists and is finite size")
+(variableScope cont)
+(transactions 2 "READ BINARY x BYTE" "EXECUTE CLOSE"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file read "bootstrapLib.vxe"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 15 GATE
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(tag "InData"))
+(output 1
+(name "X"))))
+(configuration
+(connect D5:0 D0:0)
+(connect D2:1 D1:1)
+(connect D3:1 D1:2)
+(connect I1:1 D2:1)
+(connect D2:2 D3:1)
+(connect D1:0 D4:0)
+(connect D1:1 D4:1)
+(connect D4:1 D5:0)
+(connect D1:1 D5:1)
+(connect D5:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 11 FORMULA
+(properties
+(name "user specified bootstrap")
+(variableScope cont)
+(expr 1 "getenv(\"MY_BOOTSTRAPLIB\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "user bootstrap")
+(variableScope cont)
+(expr 1 "getEnv(\"HOME\")+\"/bootstrapLib.vxe\""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D5:1 D3:1)
+(connect D0:1 D3:2)
+(connect D6:1 D3:3)
+(connect D2:1 D3:4)
+(connect D1:1 D3:5)
+(connect D3:1 D4:1)
+(connect D4:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 400 200)
+(drawGrid "off"))))
+(device 26 IMPORT
+(properties
+(name "Import Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libType userFunction)
+(libName "bootstrapLib")
+(fileName "bootstrapLib.vxe"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(tag "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 27 DELETE
+(properties
+(name "Delete Bootstrap Library")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(libName "bootstrapLib"))
+(implementation))
+(device 29 CALL
+(properties
+(name "Call bootstrapLib.init")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\froman\\fprq2\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset0 Microsoft Sans Serif;}{\\f2\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red255\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\i\\f0\\fs24 Create\\i0  your \\cf1\\b own\\cf0\\b0  template for object Descriptions by editing the file: \\ul\\b <VEE install dir>\\\\templates\\\\description.rtf\\ulnone\\b0\\f1\\fs17\\par\r\n\\f2\\fs20\\par\r\n}\r\n"
+)
+(variableScope cont)
+(callFunc "bootstrapLib.init")
+(parmMode rev30))
+(interface
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes))))
+(device 31 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6600)
+(message "no valid VEEOS Bootstrap Library found")))
+(device 32 ESCAPE
+(properties
+(variableScope cont)
+(errorCode 6601)
+(message "VEEOS Bootstrap Library: init() function not found or failed")))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D4:1 D3:1)
+(connect D2:1 D4:0)
+(connect D1:0 D6:0)
+(connect D6:0 D7:0)
+(connect D6:1 D7:1)
+(connect D9:0 D8:0)
+(connect D7:0 D9:0)
+(connect D7:1 D10:0)
+(connect D9:1 D11:0)))
+(contextCarrier
+(active panel)
+(panel
+(extent 173 114)
+(drawGrid "off")
+(widget 5 detail
+(relativeOrigin 0 0)
+(bg "Light Beige")
+(fg "Black")
+(font "Arial" 9)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle none)
+(extent 228 27)
+(just l))
+(widget 0 detail
+(relativeOrigin 10 30)
+(bg "Light Beige")
+(fg "Black")
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 151 51))
+(widget 1 detail
+(relativeOrigin 20 90)
+(bg "Light Beige")
+(fg "Black")
+(PID 2)
+(title off)
+(tabIndex 2)
+(borderStyle none)
+(extent 120 25)
+(scaled off)
+(format check box))
+(panelBg "Light Beige"))))
+(configuration
+(connect D7:0 D6:0)
+(connect D8:0 D7:0)
+(connect D5:0 D8:0))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 25 21)
+(wndOrigin 115 31)
 (wndState res)
 (active detail)
 (panel
@@ -21466,8 +22369,8 @@
 (borderStyle none)
 (extent 51 26)))
 (detail
-(extent 1677 710)
-(anchorPt -856 207)
+(extent 1062 833)
+(anchorPt -1103 164)
 (configuration
 (devCarrierFor 27
 (active icon)
@@ -21496,30 +22399,50 @@
 (devCarrierFor 45
 (active icon)
 (icon
-(extent 101 15))
+(extent 133 15))
 (open
 (extent 1198 614)
 (carbonCopy))
 (terminals on)
-(pinCenter 1680 120))
+(pinCenter 1430 80))
 (devCarrierFor 49
 (active open)
 (icon)
 (open
 (extent 51 26))
 (title off)
-(pinCenter 1680 60))
+(pinCenter 1670 -110))
 (devCarrierFor 50
 (active icon)
 (icon
 (extent 63 15))
 (terminals on)
-(pinCenter 1680 190))
-(connect D5:0 D4:0
-(points 2 1680 75 1680 110))
-(connect D4:0 D6:0
-(points 2 1680 130 1680 180)))
-(stackingOrder 0 5 4 3 1 2 6))
+(pinCenter 1670 190))
+(devCarrierFor 51
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 1198 614)
+(carbonCopy))
+(terminals on)
+(pinCenter 1670 90))
+(devCarrierFor 52
+(active icon)
+(icon
+(extent 53 15))
+(open
+(extent 175 117)
+(carbonCopy))
+(titleBg "Light Beige")
+(pinCenter 1670 -50))
+(connect D7:0 D6:0
+(points 2 1670 100 1670 180))
+(connect D8:0 D7:0
+(points 2 1670 -40 1670 80))
+(connect D5:0 D8:0
+(points 2 1670 -95 1670 -60)))
+(stackingOrder 0 3 1 2 5 4 8 7 6))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
