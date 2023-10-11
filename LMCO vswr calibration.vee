@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Fri 28/Jul/2023 18:33:25 ")
+(date "Wed 11/Oct/2023 08:48:27 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v8)
 (filterNAN 0)
-(workspaceStackingOrder M M.53 M.53.0 M.53.2)
+(workspaceStackingOrder M)
 (sysconfig
 (iodevice "newInstrument"
 (type GPIB-VISA)
@@ -1223,7 +1223,7 @@
 (properties
 (variableScope cont)
 (position 205 209)
-(message "Connect Thru ")
+(message "Connect Thru , including elbow")
 (symbol Information))
 (interface
 (output 1
@@ -1370,12 +1370,12 @@
 (extent 65 31))
 (pinCenter 280 200))
 (connect D0:0 D1:0
-(points 4 180 129 180 126 180 126 180 135))
+(points 2 180 129 180 135))
 (connect D1:0 D2:0
 (points 2 180 165 180 200))
 (connect D1:2 D3:0
 (points 5 223 160 230 160 230 150 280 150 280 172)))
-(stackingOrder 1 3 2 0))))
+(stackingOrder 3 2 0 1))))
 (device 50 CONTEXT
 (properties
 (name "Short vswr")
@@ -1989,8 +1989,6 @@
 (connect D4:0 D5:0)
 (connect D1:0 D6:0)))
 (contextCarrier
-(wndOrigin 1007 26)
-(wndState res)
 (active detail)
 (detail
 (extent 992 888)
@@ -2274,8 +2272,6 @@
 (connect D3:0 D4:0)
 (connect D1:0 D5:0)))
 (contextCarrier
-(wndOrigin 22 22)
-(wndState res)
 (active detail)
 (detail
 (extent 437 822)
@@ -2694,8 +2690,6 @@
 (connect D5:0 D2:0)
 (connect D1:0 D5:0)))
 (contextCarrier
-(wndOrigin 22 22)
-(wndState res)
 (active detail)
 (detail
 (extent 577 570)
@@ -2757,7 +2751,7 @@
 (connect D5:0 D6:0)
 (connect D0:0 D7:0)))
 (contextCarrier
-(wndOrigin 489 22)
+(wndOrigin 2 2)
 (wndState res)
 (active detail)
 (detail
@@ -2829,7 +2823,7 @@
 (points 2 -350 155 -350 175))
 (connect D0:0 D7:0
 (points 2 -350 10 -350 30)))
-(stackingOrder 2 6 4 1 0 3 5 7))
+(stackingOrder 2 6 1 3 5 7 0 4))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
