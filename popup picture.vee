@@ -1,0 +1,242 @@
+(saveFormat "7.0")
+(date "Wed 11/Oct/2023 10:24:37 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "NFMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::8::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::8::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument2"
+(type ASRL)
+(channel 195)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "ASRL5::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "ASRL5::INSTR")
+(model ""
+(standard 488.2))
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "newInstrument3"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument4"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(UserFunctions
+(nextID 1)
+(context 0
+(properties
+(name "Thru_InsertionLoss_cal")
+(variableName Thru_InsertionLoss_cal)
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 PICTURE
+(properties
+(variableScope cont)
+(pictureImage "C:\\Users\\Test\\Desktop\\thru VSWR.jpg")))
+(device 1 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 4 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Thru calibration for insertion loss measurement \\par\r\nfrom the J6 testport to the J7 IFoutput.\\par\r\nInclude the elbow on this thru calibration.\\par\r\nPress \\b OK \\b0 when the connections are ready.\\par\r\n}\r\n"
+)))
+(configuration))
+(contextCarrier
+(active panel)
+(panel
+(extent 528 546)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 10 120)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 506 406)
+(pictureMode scaled))
+(widget 1 detail
+(relativeOrigin 10 20)
+(PID 1)
+(title off)
+(tabIndex 1)
+(borderStyle none)
+(extent 87 80))
+(widget 2 detail
+(relativeOrigin 110 10)
+(PID 3)
+(title off)
+(tabIndex 3)
+(borderStyle flat)
+(extent 396 96)
+(editing enabled)))
+(detail
+(extent 881 938)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 744 792)
+(pictureMode scaled))
+(pinCenter 440 480))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 60 30))
+(devCarrierFor 4
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 394 116)
+(editing enabled))
+(pinCenter 300 90)))
+(stackingOrder 0 1 2)))))
+(device 3 CALL
+(properties
+(name "Call Thru_InsertionLoss_cal")
+(variableScope cont)
+(callFunc "Thru_InsertionLoss_cal")
+(parmMode rev30)))
+(device 4 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "showPanel(\"Thru_InsertionLoss_cal\")" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active detail)
+(detail
+(extent 913 412)
+(anchorPt 10 -1522)
+(configuration
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 171 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 443 1990))
+(devCarrierFor 4
+(active open)
+(icon)
+(open
+(extent 264 96))
+(terminals on)
+(pinCenter 230 1820)))
+(stackingOrder 0 1))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))

@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 11/Oct/2023 08:48:27 ")
+(date "Mon 16/Oct/2023 14:16:18 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -111,7 +111,7 @@
 (deleteGlobals 0))
 (deviceList
 (UserFunctions
-(nextID 2)
+(nextID 3)
 (context 0
 (properties
 (name "Reg2C2IF")
@@ -304,7 +304,89 @@
 (points 2 210 120 210 140))
 (connect D1:1 O1:1
 (points 4 354 260 370 260 370 145 442 145)))
-(stackingOrder 2 3 1 0)))))
+(stackingOrder 2 3 1 0))))
+(context 2
+(properties
+(name "Thru_InsertionLoss_cal")
+(variableName Thru_InsertionLoss_cal)
+(variableScope glob)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 PICTURE
+(properties
+(variableScope cont)
+(pictureImage "C:\\Users\\Test\\Desktop\\thru VSWR.jpg")))
+(device 1 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 4 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Thru calibration for insertion loss measurement \\par\r\nfrom the J6 testport to the J7 IFoutput.\\par\r\nInclude the elbow on this thru calibration.\\par\r\nPress \\b OK \\b0 when the connections are ready.\\par\r\n}\r\n"
+)))
+(configuration))
+(contextCarrier
+(active panel)
+(panel
+(extent 528 546)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 10 120)
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 506 406)
+(pictureMode scaled))
+(widget 2 detail
+(relativeOrigin 110 10)
+(PID 3)
+(title off)
+(tabIndex 3)
+(borderStyle flat)
+(extent 396 96)
+(editing enabled)))
+(detail
+(extent 881 938)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 744 792)
+(pictureMode scaled))
+(pinCenter 440 480))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 60 30))
+(devCarrierFor 4
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 394 116)
+(editing enabled))
+(pinCenter 300 90)))
+(stackingOrder 0 1 2)))))
 (device 31 CONTEXT
 (properties
 (name "records")
@@ -1207,7 +1289,7 @@
 (name "Thru InsertionLoss")
 (variableScope cont)
 (trigMode deg)
-(nextID 6)
+(nextID 10)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -1219,27 +1301,6 @@
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
-(device 1 MESSAGEBOX
-(properties
-(variableScope cont)
-(position 205 209)
-(message "Connect Thru , including elbow")
-(symbol Information))
-(interface
-(output 1
-(name "OK")
-(lock name constraints))
-(output 2
-(name "Cancel")
-(lock name constraints)))
-(implementation
-(customButtons 0)
-(displayMode 3)
-(buttons "OK  Cancel")
-(buttonLabel1 "OK")
-(buttonLabel2 "Cancel")
-(buttonLabel3 "")
-(bdefault "OK")))
 (device 2 CONTEXT
 (properties
 (name "Reg2ThruC1")
@@ -1324,18 +1385,62 @@
 (connect D1:0 D3:0
 (points 2 200 255 200 262)))
 (stackingOrder 1 0 2 3))))
-(device 5 EXITPROCESS
+(device 6 FORMULA
+(properties
+(name "popup picture")
+(variableScope cont)
+(expr 2 "showPanel(\"Thru_InsertionLoss_cal\")" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "connect thru, include elbow")
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK  Cancel")
+(buttonLabel1 "OK")
+(buttonLabel2 "Cancel")
+(buttonLabel3 "")
+(bdefault "OK")))
+(device 8 EXITPROCESS
 (properties
 (variableScope cont)
 (code 0)))
+(device 9 FORMULA
+(properties
+(name "popup picture")
+(variableScope cont)
+(expr 2 "hidePanel(\"Thru_InsertionLoss_cal\")" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
 (configuration
-(connect D0:0 D1:0)
-(connect D1:0 D2:0)
-(connect D1:2 D3:0)))
+(connect D3:0 D1:0)
+(connect D0:0 D2:0)
+(connect D2:0 D3:0)
+(connect D3:2 D4:0)
+(connect D1:0 D5:0)))
 (contextCarrier
 (active detail)
 (detail
-(extent 382 321)
+(extent 550 432)
 (anchorPt 0 0)
 (configuration
 (devCarrierFor 0
@@ -1347,35 +1452,54 @@
 (extent 221 74))
 (terminals on)
 (pinCenter 180 90))
-(devCarrierFor 1
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 78 15))
+(terminals on)
+(pinCenter 180 250))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 264 96))
+(terminals on)
+(pinCenter 180 160))
+(devCarrierFor 7
 (active icon)
 (icon
 (extent 81 25))
 (open
 (extent 223 134))
 (terminals on)
-(pinCenter 180 150))
-(devCarrierFor 2
-(active icon)
+(pinCenter 180 200))
+(devCarrierFor 8
+(active open)
 (icon
-(extent 78 15))
-(terminals on)
-(pinCenter 180 210))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 68 51)
 (iconImage "stop.icn"))
 (open
 (extent 65 31))
-(pinCenter 280 200))
-(connect D0:0 D1:0
-(points 2 180 129 180 135))
-(connect D1:0 D2:0
-(points 2 180 165 180 200))
-(connect D1:2 D3:0
-(points 5 223 160 230 160 230 150 280 150 280 172)))
-(stackingOrder 3 2 0 1))))
+(pinCenter 260 270))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 264 96))
+(terminals on)
+(pinCenter 180 310))
+(connect D3:0 D1:0
+(points 2 180 215 180 240))
+(connect D0:0 D2:0
+(points 2 180 129 180 150))
+(connect D2:0 D3:0
+(points 2 180 170 180 185))
+(connect D3:2 D4:0
+(points 3 223 210 260 210 260 234))
+(connect D1:0 D5:0
+(points 2 180 260 180 300)))
+(stackingOrder 0 2 3 4 5 1))))
 (device 50 CONTEXT
 (properties
 (name "Short vswr")
@@ -1913,7 +2037,8 @@
 (transactions 10 "WRITE TEXT \"SP 401\" EOL" "WRITE TEXT \"C1\" EOL"
 "WRITE TEXT \"I\"+DetectorInput EOL" "WRITE TEXT \"DS0\" EOL"
 "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL -4.5\" EOL" "WRITE TEXT \"RP1\" EOL"
-"WRITE TEXT \"SD1\" EOL" "WRITE TEXT \"SO1\" EOL" "WRITE TEXT \"SO0\" EOL"))
+"WRITE TEXT \"SD1\" EOL" "WRITE TEXT \"SO1\" EOL" "/NOP/ WRITE TEXT \"SO0\" EOL"
+))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -2099,7 +2224,7 @@
 "WRITE TEXT \"I\"+BridgeInput EOL" "WRITE TEXT \"DS0\" EOL"
 "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL2\" EOL" "WRITE TEXT \"RP5\" EOL"
 "WRITE TEXT \"SD1\" EOL" "WRITE TEXT \"AN1\" EOL" "WRITE TEXT \"SO1\" EOL"
-"WRITE TEXT \"SO0\" EOL"))
+"/NOP/ WRITE TEXT \"SO0\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -2223,7 +2348,7 @@
 "WRITE TEXT \"I\"+DetectorInput EOL" "WRITE TEXT \"DS0\" EOL"
 "WRITE TEXT \"MN\" EOL" "WRITE TEXT \"RL-30\" EOL" "WRITE TEXT \"RP5\" EOL"
 "WRITE TEXT \"SD5\" EOL" "WRITE TEXT \"AN1\" EOL" "WRITE TEXT \"SO1\" EOL"
-"WRITE TEXT \"SO0\" EOL"))
+"/NOP/ WRITE TEXT \"SO0\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -2533,7 +2658,7 @@
 "WRITE TEXT \"I\"+BridgeInput EOL" "WRITE TEXT \"DS0\" EOL"
 "/NOP/ WRITE TEXT \"MN\" EOL" "WRITE TEXT \"MEAS\" EOL" "WRITE TEXT \"RL0\" EOL"
 "WRITE TEXT \"RP8\" EOL" "WRITE TEXT \"SD2\" EOL" "WRITE TEXT \"SO1\" EOL"
-"WRITE TEXT \"SO0\" EOL"))
+"/NOP/ WRITE TEXT \"SO0\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "newInstrument")))
@@ -2596,7 +2721,7 @@
 (active detail)
 (detail
 (extent 992 888)
-(anchorPt 45 -85)
+(anchorPt -59 50)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -2741,7 +2866,7 @@
 (points 2 100 160 100 180))
 (connect D1:0 D5:0
 (points 2 100 120 100 140)))
-(stackingOrder 4 3 1 5 2 0))))
+(stackingOrder 4 2 5 1 0 3))))
 (configuration
 (connect D3:0 D0:0)
 (connect D6:0 D1:0)
@@ -2823,7 +2948,7 @@
 (points 2 -350 155 -350 175))
 (connect D0:0 D7:0
 (points 2 -350 10 -350 30)))
-(stackingOrder 2 6 1 3 5 7 0 4))
+(stackingOrder 2 6 3 1 0 5 4 7))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
