@@ -1,6 +1,6 @@
 (saveFormat "7.0")
-(date "Wed 07/Dec/2022 11:00:35 ")
-(veerev "9.32.17704.1")
+(date "Thu 11/Jul/2024 14:50:39 ")
+(veerev "9.33.1811.0201")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
@@ -407,36 +407,40 @@
 (device 1 PICTURE
 (properties
 (variableScope cont)
-(pictureImage "C:\\Users\\sapplen\\Pictures\\Untitled.png")))
+(pictureImage
+"C:\\Users\\test\\Documents\\GitHub\\sandbox\\NordenMillimeter_110x50.png")))
 (configuration)
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 3 3)
+(wndOrigin 3 2)
 (wndState res)
 (active detail)
 (panel
-(extent 590 239)
+(extent 722 293)
 (drawGrid "on")
 (widget 0 detail
-(relativeOrigin 120 0)
+(relativeOrigin 1 1)
+(bg "Light Gray")
 (PID 1)
 (title off)
 (tabStop off)
 (tabIndex 1)
-(borderStyle flat)
-(extent 106 46)
+(borderStyle none)
+(extent 110 50)
 (pictureMode actual)))
 (detail
-(extent 590 239)
-(anchorPt -229 -90)
+(extent 708 327)
+(anchorPt -230 -92)
 (configuration
 (devCarrierFor 1
 (active open)
-(icon)
+(icon
+(extent 42 15))
 (open
-(extent 104 46)
+(extent 114 54)
 (pictureMode actual))
-(pinCenter 400 150))))
+(title off)
+(pinCenter 290 120))))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)

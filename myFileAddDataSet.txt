@@ -25,70 +25,70 @@
  ( "AllResults"
   (record
    ( "TestNum" "test0")
-   ( "RandNum" 0.174102783203125)
+   ( "RandNum" 0.001251220703125)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test1")
-   ( "RandNum" 0.858917236328125)
+   ( "RandNum" 0.563568115234375)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test2")
-   ( "RandNum" 0.710479736328125)
+   ( "RandNum" 0.19329833984375)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test3")
-   ( "RandNum" 0.513519287109375)
+   ( "RandNum" 0.8087158203125)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test4")
-   ( "RandNum" 0.303985595703125)
+   ( "RandNum" 0.584991455078125)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test5")
-   ( "RandNum" 0.014984130859375)
+   ( "RandNum" 0.4798583984375)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test6")
-   ( "RandNum" 0.091400146484375)
+   ( "RandNum" 0.35028076171875)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test7")
-   ( "RandNum" 0.36444091796875)
+   ( "RandNum" 0.89593505859375)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test8")
-   ( "RandNum" 0.147308349609375)
+   ( "RandNum" 0.82281494140625)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
   )
   (record
    ( "TestNum" "test9")
-   ( "RandNum" 0.1658935546875)
+   ( "RandNum" 0.74658203125)
    ( "TestArray"
 	 [ 1 2 3 ]
    )
