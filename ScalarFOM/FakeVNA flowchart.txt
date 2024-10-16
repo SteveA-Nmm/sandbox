@@ -1,0 +1,39 @@
+InputRecord
+ScalarArray
+	freq (801pts)
+	dBm
+MeterArray
+	freq (201pts) and linear extrap to 801pts.
+	dBm
+ErrorArray
+	freq (801pts)
+	dB 
+
+why? the ErrorArray is used to validate the calibration method desplayed back on the ScalarNetoworkAnalyzer. Therefore 801pts matches.... or does it matter.
+
+input range is 4.48 -- 11.6
+split into six subsets and subsets are normalized into 801pts.
+
+What is the reason for using normalized 801pts on the scalar network analizer? It only has 4 nonvolatile registers for saving calibration and I need 6. Also, reloading regisisters from disk is slow. Using 1 nonvolatile register with daptive normalization is the built in feature. 
+
+flow chart:
+create records 
+set input frequencys and power
+display sweep on NeworkAnalyzer
+Scalar data into array
+set output frequencies and power
+Scalar data into array
+
+set input frequencies and power
+Meter data inot array
+set outpup frequencies and poer
+Meter data into array
+
+calculate input error array
+calculate ouupt error array
+plot validation array
+
+design test for subsets 
+
+
+=CONCATENATE("day ",calculator!A3)
