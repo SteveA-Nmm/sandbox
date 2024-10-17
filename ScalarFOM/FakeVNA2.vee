@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Thu 17/Oct/2024 12:21:08 ")
+(date "Thu 17/Oct/2024 15:13:30 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -10426,7 +10426,7 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (name "hp8360 inputFreq")
 (variableScope cont)
 (trigMode deg)
-(nextID 12)
+(nextID 14)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -10472,20 +10472,6 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
-(device 5 IODEVICE
-(properties
-(name "hp8757D ( @GPIB0::16::INSTR)")
-(variableScope cont)
-(transactions 6 "WRITE TEXT \"SP801\" EOL" "WAIT INTERVAL:1"
-"/NOP/ WRITE TEXT \"ME\" EOL" "WRITE TEXT \"AS\" EOL" "WRITE TEXT \"OD\" EOL"
-"READ TEXT x REAL64 ARRAY:801"))
-(interface
-(output 1
-(name "x")
-(optional yes)))
-(implementation
-(ioDevType 13)
-(iopath "hp8757D")))
 (device 6 FORMULA
 (properties
 (variableScope cont)
@@ -10525,25 +10511,55 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (device 11 START25
 (properties
 (variableScope cont)))
+(device 12 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"A0\" EOL" "WRITE TEXT \"SW1\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 13 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 5 "WRITE TEXT \"SP801\" EOL" "WRITE TEXT \"AF16\" EOL"
+"WRITE TEXT \"SW2\" EOL" "WRITE TEXT \"RS\" EOL" "WRITE TEXT \"TS 17\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 5 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 3 "WRITE TEXT \"AS\" EOL" "WRITE TEXT \"OD\" EOL"
+"READ TEXT x REAL64 ARRAY:801"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
 (configuration
 (connect D2:0 D1:0)
 (connect D0:1 D1:1)
 (connect D0:2 D1:2)
 (connect D0:3 D1:3)
-(connect D7:0 D2:0)
-(connect D1:0 D3:0)
-(connect D3:0 D4:0)
-(connect D3:1 D4:1)
-(connect D6:0 D5:0)
-(connect D3:1 D5:1)
-(connect D4:0 D6:0)))
+(connect D6:0 D2:0)
+(connect D9:1 D3:1)
+(connect D5:1 D4:1)
+(connect D3:0 D5:0)
+(connect D9:0 D7:0)
+(connect D1:0 D8:0)
+(connect D8:0 D9:0)))
 (contextCarrier
 (wndOrigin 949 61)
 (wndState res)
 (active detail)
 (detail
 (extent 1010 764)
-(anchorPt -46 -170)
+(anchorPt -29 -174)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -10568,21 +10584,13 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (extent 221 74))
 (terminals on)
 (pinCenter 440 140))
-(devCarrierFor 5
-(active open)
-(icon
-(iconImage "io.icn"))
-(open
-(extent 224 156))
-(terminals on)
-(pinCenter 440 480))
 (devCarrierFor 6
 (active open)
 (icon)
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 720 460))
+(pinCenter 750 580))
 (devCarrierFor 8
 (active open)
 (icon
@@ -10599,7 +10607,7 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -11.3 -10 4 linear))
+(range -11.2 -10 4 linear))
 (domain 0 800 4 linear)
 (trace 0 onScale 0
 (name "Trace1")
@@ -10607,14 +10615,14 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (lineType 12)
 (pointType 0))
 (markerColor "White"))
-(pinCenter 790 670))
+(pinCenter 780 860))
 (devCarrierFor 9
 (active open)
 (icon)
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 440 600))
+(pinCenter 750 660))
 (devCarrierFor 11
 (active open)
 (icon)
@@ -10622,6 +10630,32 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (extent 47 22))
 (title off)
 (pinCenter 450 30))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 191 51)
+(iconImage "io.icn"))
+(open
+(extent 234 86))
+(terminals on)
+(pinCenter 440 720))
+(devCarrierFor 13
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 284 136))
+(terminals on)
+(pinCenter 440 440))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 191 51)
+(iconImage "io.icn"))
+(open
+(extent 224 156))
+(terminals on)
+(pinCenter 440 580))
 (connect D2:0 D1:0
 (points 2 440 179 440 211))
 (connect D0:1 D1:1
@@ -10630,27 +10664,27 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (points 2 259 290 290 290))
 (connect D0:3 D1:3
 (points 2 259 330 290 330))
-(connect D7:0 D2:0
+(connect D6:0 D2:0
 (points 4 450 43 450 60 440 60 440 82))
-(connect D1:0 D3:0
-(points 2 440 350 440 381))
-(connect D3:0 D4:0
-(points 6 440 560 440 650 280 650 280 370 730 370 730 414))
-(connect D3:1 D4:1
-(points 4 584 480 590 480 590 460 615 460))
-(connect D6:0 D5:0
-(points 8 450 627 450 650 600 650 600 390 870 390 870 500 790 500 790 510))
-(connect D3:1 D5:1
-(points 6 584 480 590 480 590 530 610 530 610 670 629 670))
-(connect D4:0 D6:0
-(points 6 730 487 730 500 610 500 610 520 450 520 450 554)))
-(stackingOrder 0 1 4 6 7 5 2 3))))
+(connect D9:1 D3:1
+(points 2 538 580 645 580))
+(connect D5:1 D4:1
+(points 8 875 660 900 660 900 490 630 490 630 680 600 680 600 860 619 860))
+(connect D3:0 D5:0
+(points 2 760 607 760 614))
+(connect D9:0 D7:0
+(points 2 440 608 440 656))
+(connect D1:0 D8:0
+(points 2 440 350 440 351))
+(connect D8:0 D9:0
+(points 2 440 510 440 552)))
+(stackingOrder 0 1 6 2 4 7 8 9 5 3))))
 (device 148 CONTEXT
 (properties
 (name "hp8360 outputFreq")
 (variableScope cont)
 (trigMode deg)
-(nextID 11)
+(nextID 12)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -10752,8 +10786,16 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (properties
 (name "hp8757D ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 5 "WRITE TEXT \"SP801\" EOL" "WAIT INTERVAL:1"
-"WRITE TEXT \"SW2\" EOL" "WRITE TEXT \"TS 16\" EOL" "WRITE TEXT \"SW1\" EOL"))
+(transactions 5 "WRITE TEXT \"SP801\" EOL" "WRITE TEXT \"AF16\" EOL"
+"WRITE TEXT \"SW2\" EOL" "WRITE TEXT \"RS\" EOL" "WRITE TEXT \"TS 17\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 11 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"A0\" EOL" "WRITE TEXT \"SW1\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
@@ -10767,14 +10809,15 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (connect D8:0 D4:0)
 (connect D6:1 D5:1)
 (connect D3:0 D6:0)
-(connect D1:0 D8:0)))
+(connect D1:0 D8:0)
+(connect D4:0 D9:0)))
 (contextCarrier
-(wndOrigin 2 2)
+(wndOrigin 86 6)
 (wndState res)
 (active detail)
 (detail
 (extent 931 860)
-(anchorPt -82 213)
+(anchorPt -57 161)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -10861,6 +10904,15 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (extent 284 136))
 (terminals on)
 (pinCenter 450 270))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 191 51)
+(iconImage "io.icn"))
+(open
+(extent 234 86))
+(terminals on)
+(pinCenter 450 680))
 (connect D2:0 D1:0
 (points 2 450 -1 450 11))
 (connect D0:1 D1:1
@@ -10880,8 +10932,10 @@ M.143.15 M.143.9 M.143.1.3 M.143.1.3.2 M.143.1 M.143 M.143.6 M.147 M M.148)
 (connect D3:0 D6:0
 (points 2 770 510 770 524))
 (connect D1:0 D8:0
-(points 2 450 150 450 181)))
-(stackingOrder 0 1 2 7 5 8 4 3 6))))
+(points 2 450 150 450 181))
+(connect D4:0 D9:0
+(points 2 450 585 450 616)))
+(stackingOrder 0 1 2 7 5 4 3 6 9 8))))
 (configuration
 (connect D5:0 D1:0)
 (connect D0:0 D2:0)
