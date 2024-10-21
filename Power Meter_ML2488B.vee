@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Wed 25/Jan/2023 11:34:37 ")
+(date "Mon 21/Oct/2024 15:39:46 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -7,21 +7,6 @@
 (filterNAN 0)
 (workspaceStackingOrder M)
 (sysconfig
-(iodevice "ML2437A"
-(type GPIB)
-(gateway "This host")
-(channel 7)
-(subchannel 13)
-(readTerm "\n")
-(fs ",")
-(eol "\n")
-(multiField dataOnly)
-(arrayFormat linear)
-(timeout 5)
-(byteOrder 0)
-(eoiEnabled 1)
-(model ""
-(standard 488)))
 (iodevice "8563E"
 (type GPIB)
 (gateway "This host")
@@ -35,6 +20,38 @@
 (timeout 5)
 (byteOrder 0)
 (eoiEnabled 1)
+(model ""
+(standard 488)))
+(iodevice "ML2487A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML2437A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
 (model ""
 (standard 488))))
 (SaveCF no)
@@ -52,7 +69,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 56)
+(nextID 58)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -92,7 +109,7 @@
 (name "Data"))))
 (device 18 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
 (transactions 2 "WRITE TEXT a EOL" "READ TEXT x STR"))
 (interface
@@ -103,19 +120,19 @@
 (name "x")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 21 FORCOUNT
 (properties
 (variableScope cont)
-(count 0))
+(count 5))
 (interface
 (output 1
 (name "Count")
 (lock name constraints))))
 (device 22 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
 (transactions 5 "WRITE TEXT \"*IDN?\" EOL" "READ TEXT y STR"
 "WRITE TEXT \"*RST\" EOL" "WRITE TEXT \"*TST?\" EOL" "READ TEXT Z STR"))
@@ -127,7 +144,7 @@
 (name "z")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 34 TEXTDISPLAY
 (properties
@@ -146,9 +163,10 @@
 (name "Data"))))
 (device 37 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 1 "WRITE TEXT \"CHMODE 1,CW\" EOL"))
+(transactions 2 "WRITE TEXT \"CHACTIV 2\" EOL"
+"/NOP/ WRITE TEXT \"CHMODE 1,CW\" EOL"))
 (interface
 (output 1
 (name "y")
@@ -157,13 +175,13 @@
 (name "z")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 38 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 1 "WRITE TEXT \"SNCFSRC A,FREQ; SNCFRQ A, 10000 MHz\" EOL"))
+(transactions 1 "WRITE TEXT \"SNCFSRC A,FREQ; SNCFRQ A, 15000 MHz\" EOL"))
 (interface
 (output 1
 (name "y")
@@ -172,11 +190,11 @@
 (name "z")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 39 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
 (transactions 1 "WRITE TEXT \"CWAVG 1, AUTO\" EOL"))
 (interface
@@ -187,13 +205,14 @@
 (name "z")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 41 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 2 "WRITE TEXT \"CWO 1\" EOL" "READ TEXT x STR"))
+(transactions 3 "WRITE TEXT \"CWO 2\" EOL" "/NOP/ WRITE TEXT \"CWO 1\" EOL"
+"READ TEXT x STR"))
 (interface
 (output 1
 (name "y")
@@ -205,7 +224,7 @@
 (name "x")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 42 TEXTDISPLAY
 (properties
@@ -215,7 +234,7 @@
 (name "Data"))))
 (device 46 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
 (transactions 1 "WRITE TEXT \"TR1 1\" EOL"))
 (interface
@@ -226,7 +245,7 @@
 (name "z")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (device 51 CONFIRM25
 (properties
@@ -248,7 +267,7 @@
 (name "Data"))))
 (device 55 IODEVICE
 (properties
-(name "ML2437A ( @ 713)")
+(name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
 (transactions 1 "READ TEXT x STR"))
 (interface
@@ -262,7 +281,7 @@
 (name "x")
 (optional yes)))
 (implementation
-(ioDevType 1)
+(ioDevType 13)
 (iopath "ML2437A")))
 (configuration
 (connect D16:0 D0:0)
@@ -290,8 +309,8 @@
 (wndState max)
 (active detail)
 (detail
-(extent 1167 743)
-(anchorPt -133 206)
+(extent 800 860)
+(anchorPt 70 495)
 (configuration
 (devCarrierFor 3
 (active open)
@@ -299,26 +318,26 @@
 (open
 (extent 254 107))
 (terminals on)
-(pinCenter 380 240))
+(pinCenter 930 -180))
 (devCarrierFor 5
 (active open)
 (icon)
 (open
 (extent 334 26))
-(pinCenter 1040 420))
+(pinCenter 1360 -210))
 (devCarrierFor 10
 (active open)
 (icon
 (iconImage "stop.icn"))
 (open
 (extent 65 31))
-(pinCenter -30 110))
+(pinCenter 830 -280))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
 (extent 334 26))
-(pinCenter 1090 320))
+(pinCenter 1360 -20))
 (devCarrierFor 18
 (active open)
 (icon
@@ -326,7 +345,7 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 190 450))
+(pinCenter 940 -20))
 (devCarrierFor 21
 (active open)
 (icon
@@ -334,7 +353,7 @@
 (iconImage "loop.icn"))
 (open
 (extent 95 31))
-(pinCenter 190 80))
+(pinCenter 830 -340))
 (devCarrierFor 22
 (active open)
 (icon
@@ -369,9 +388,9 @@
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 234 56))
+(extent 234 106))
 (terminals on)
-(pinCenter 190 -140))
+(pinCenter 190 -180))
 (devCarrierFor 38
 (active open)
 (icon
@@ -380,7 +399,7 @@
 (open
 (extent 404 56))
 (terminals on)
-(pinCenter 960 -220))
+(pinCenter 190 -60))
 (devCarrierFor 39
 (active open)
 (icon
@@ -389,22 +408,22 @@
 (open
 (extent 404 56))
 (terminals on)
-(pinCenter 960 -130))
+(pinCenter 190 30))
 (devCarrierFor 41
 (active open)
 (icon
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 404 62))
+(extent 404 96))
 (terminals on)
-(pinCenter 960 -40))
+(pinCenter 190 140))
 (devCarrierFor 42
 (active open)
 (icon)
 (open
 (extent 124 26))
-(pinCenter 1290 -20))
+(pinCenter 520 140))
 (devCarrierFor 46
 (active open)
 (icon
@@ -413,20 +432,20 @@
 (open
 (extent 404 56))
 (terminals on)
-(pinCenter 620 500))
+(pinCenter 940 80))
 (devCarrierFor 51
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 390 130))
+(pinCenter 940 -290))
 (devCarrierFor 54
 (active open)
 (icon)
 (open
 (extent 334 26))
-(pinCenter 1060 640))
+(pinCenter 1360 190))
 (devCarrierFor 55
 (active open)
 (icon
@@ -435,21 +454,21 @@
 (open
 (extent 404 62))
 (terminals on)
-(pinCenter 630 620))
+(pinCenter 940 170))
 (connect D16:0 D0:0
-(points 2 390 143 390 166))
+(points 2 940 -277 940 -254))
 (connect D0:1 D1:1
-(points 4 559 210 580 210 580 420 870 420))
+(points 2 1109 -210 1190 -210))
 (connect D5:0 D2:0
-(points 6 190 98 190 110 120 110 120 50 -30 50 -30 74))
+(points 2 830 -322 830 -316))
 (connect D4:1 D3:1
-(points 8 333 450 340 450 340 420 350 420 350 410 690 410 690 320 920 320))
+(points 2 1083 -20 1190 -20))
 (connect D0:0 D4:0
-(points 4 390 296 390 320 190 320 190 392))
+(points 2 940 -124 940 -78))
 (connect D0:1 D4:1
-(points 6 559 210 580 210 580 370 30 370 30 450 47 450))
+(points 6 1109 -210 1130 -210 1130 -100 780 -100 780 -20 797 -20))
 (connect D13:0 D5:0
-(points 4 960 -7 960 10 190 10 190 44))
+(points 6 190 190 190 210 690 210 690 -400 830 -400 830 -376))
 (connect D8:0 D6:0
 (points 2 190 -387 190 -349))
 (connect D6:1 D7:1
@@ -457,24 +476,24 @@
 (connect D6:2 D9:1
 (points 2 339 -240 395 -240))
 (connect D6:0 D10:0
-(points 2 190 -210 190 -189))
+(points 6 190 -210 190 -200 180 -200 180 -260 190 -260 190 -254))
 (connect D10:0 D11:0
-(points 6 190 -110 190 -90 690 -90 690 -290 960 -290 960 -269))
+(points 2 190 -125 190 -109))
 (connect D11:0 D12:0
-(points 2 960 -190 960 -179))
+(points 2 190 -30 190 -19))
 (connect D12:0 D13:0
-(points 2 960 -100 960 -92))
+(points 2 190 60 190 71))
 (connect D13:3 D14:1
-(points 2 1194 -20 1225 -20))
+(points 4 424 170 440 170 440 140 455 140))
 (connect D4:0 D15:0
-(points 6 190 489 190 510 350 510 350 430 620 430 620 451))
+(points 2 940 19 940 31))
 (connect D5:1 D16:0
-(points 3 240 80 390 80 390 116))
+(points 3 880 -340 940 -340 940 -304))
 (connect D18:3 D17:1
-(points 2 864 640 890 640))
+(points 2 1174 190 1190 190))
 (connect D15:0 D18:0
-(points 4 620 530 620 550 630 550 630 568)))
-(stackingOrder 4 6 8 15 18 17 1 14 9 7 3 10 5 2 0 16 13 12 11))
+(points 2 940 110 940 118)))
+(stackingOrder 6 8 14 9 10 13 12 11 5 16 0 1 4 18 17 3 2 15 7))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
