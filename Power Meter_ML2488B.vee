@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Mon 21/Oct/2024 15:39:46 ")
+(date "Tue 22/Oct/2024 15:25:43 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -69,7 +69,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 58)
+(nextID 74)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -125,7 +125,7 @@
 (device 21 FORCOUNT
 (properties
 (variableScope cont)
-(count 5))
+(count 8))
 (interface
 (output 1
 (name "Count")
@@ -196,7 +196,8 @@
 (properties
 (name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 1 "WRITE TEXT \"CWAVG 1, AUTO\" EOL"))
+(transactions 2 "WRITE TEXT \"CWAVG 2, AUTO\" EOL"
+"/NOP/ WRITE TEXT \"CWAVG 1, AUTO\" EOL"))
 (interface
 (output 1
 (name "y")
@@ -236,13 +237,16 @@
 (properties
 (name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 1 "WRITE TEXT \"TR1 1\" EOL"))
+(transactions 2 "WRITE TEXT \"TR2 2\" EOL" "READ TEXT x STR"))
 (interface
 (output 1
 (name "y")
 (optional yes))
 (output 2
 (name "z")
+(optional yes))
+(output 3
+(name "x")
 (optional yes)))
 (implementation
 (ioDevType 13)
@@ -259,23 +263,64 @@
 (name "Go")
 (lock name constraints)))
 (implementation))
-(device 54 TEXTDISPLAY
+(device 55 IODEVICE
+(properties
+(name "ML2437A ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 3 "WRITE TEXT \"TR0\" EOL" "WRITE TEXT \"TR3\" EOL"
+"/NOP/ READ TEXT x STR"))
+(interface
+(output 1
+(name "Y")
+(optional yes))
+(output 2
+(name "Z")
+(optional yes))
+(output 3
+(name "X")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "ML2437A")))
+(device 61 NOTE
+(properties
+(name "BKM ML248xA")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 IMPORTANT: TR# commands must be followed by a read or else the program hangs.\\par\r\n\\par\r\nML2487A is much different than our older ML2437A.\\par\r\nTR# commands are recommeded for data acquisition. \\par\r\nThe older CWO, used on ML2437A, are still supported.\\par\r\nConfiguration changes need time to ripple thru the\\par\r\nmeasurement averaging buffers.  CWO need explicit wait delay\\par\r\nbefore to guarentee changes are completed. TR# commands\\par\r\nclear the averaging buffer and hold off any new samples untill\\par\r\na qualified trigger event. \\par\r\n\\par\r\nTR0  clear buffer and hold\\par\r\nTR1  single shot and add to buffer average\\par\r\nTR2  clear buffer and take as many samples as required for mode selected. e.g. CW AutoAveraging will repeate as many samples and needed before placing results into the output buffrer.\\par\r\nTR3 return to free run triggering.\\par\r\n\\par\r\n\\par\r\n}\r\n"
+)))
+(device 63 COUNTER
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))
+(output 1
+(name "Count"))))
+(device 64 TEXTDISPLAY
 (properties
 (variableScope cont))
 (interface
 (input 1
 (name "Data"))))
-(device 55 IODEVICE
+(device 66 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 65 IODEVICE
 (properties
 (name "ML2437A ( @GPIB0::13::INSTR)")
 (variableScope cont)
-(transactions 1 "READ TEXT x STR"))
+(transactions 4 "WRITE TEXT \"TR0\" EOL" "WRITE TEXT \"TR3\" EOL"
+"WRITE TEXT \"CWO 2\" EOL" "READ TEXT x STR"))
 (interface
 (output 1
-(name "y")
+(name "Y")
 (optional yes))
 (output 2
-(name "z")
+(name "Z")
 (optional yes))
 (output 3
 (name "x")
@@ -283,6 +328,33 @@
 (implementation
 (ioDevType 13)
 (iopath "ML2437A")))
+(device 68 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 70 NOTE
+(properties
+(name "BKM ML248xA")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 TR2 2 (clear averaging buffer and qualify trigger)\\par\r\nmust be followed by a read\\par\r\n}\r\n"
+)))
+(device 72 NOTE
+(properties
+(name "BKM ML248xA")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 TR0 and TR3  (clear & hold, and free run)\\par\r\nmust NOT be followed by a read\\par\r\n}\r\n"
+)))
+(device 73 NOTE
+(properties
+(name "BKM ML248xA")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 TR0 and TR3 \\par\r\nIf not using TR2 2 then CWO 2 must be used \\par\r\nAND must be followed by a read\\par\r\n}\r\n"
+)))
 (configuration
 (connect D16:0 D0:0)
 (connect D0:1 D1:1)
@@ -301,16 +373,20 @@
 (connect D13:3 D14:1)
 (connect D4:0 D15:0)
 (connect D5:1 D16:0)
-(connect D18:3 D17:1)
-(connect D15:0 D18:0)))
+(connect D15:0 D17:0)
+(connect D5:1 D19:1)
+(connect D15:3 D20:1)
+(connect D22:3 D21:1)
+(connect D17:0 D22:0)
+(connect D17:3 D23:1)))
 (contextCarrier
 (wndRestoredOrigin 2 2)
 (wndRestoredExtent 492 377)
 (wndState max)
 (active detail)
 (detail
-(extent 800 860)
-(anchorPt 70 495)
+(extent 668 860)
+(anchorPt -800 333)
 (configuration
 (devCarrierFor 3
 (active open)
@@ -318,26 +394,26 @@
 (open
 (extent 254 107))
 (terminals on)
-(pinCenter 930 -180))
+(pinCenter 940 -180))
 (devCarrierFor 5
 (active open)
 (icon)
 (open
 (extent 334 26))
-(pinCenter 1360 -210))
+(pinCenter 1370 -210))
 (devCarrierFor 10
 (active open)
 (icon
 (iconImage "stop.icn"))
 (open
 (extent 65 31))
-(pinCenter 830 -280))
+(pinCenter 840 -280))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
 (extent 334 26))
-(pinCenter 1360 -20))
+(pinCenter 1380 -20))
 (devCarrierFor 18
 (active open)
 (icon
@@ -345,7 +421,7 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 940 -20))
+(pinCenter 950 -20))
 (devCarrierFor 21
 (active open)
 (icon
@@ -353,7 +429,7 @@
 (iconImage "loop.icn"))
 (open
 (extent 95 31))
-(pinCenter 830 -340))
+(pinCenter 840 -340))
 (devCarrierFor 22
 (active open)
 (icon
@@ -362,13 +438,13 @@
 (open
 (extent 234 116))
 (terminals on)
-(pinCenter 190 -270))
+(pinCenter 190 -300))
 (devCarrierFor 34
 (active open)
 (icon)
 (open
 (extent 304 26))
-(pinCenter 520 -300))
+(pinCenter 520 -330))
 (devCarrierFor 35
 (active open)
 (icon)
@@ -381,16 +457,16 @@
 (icon)
 (open
 (extent 144 26))
-(pinCenter 470 -240))
+(pinCenter 470 -270))
 (devCarrierFor 37
 (active open)
 (icon
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 234 106))
+(extent 314 86))
 (terminals on)
-(pinCenter 190 -180))
+(pinCenter 190 -170))
 (devCarrierFor 38
 (active open)
 (icon
@@ -399,14 +475,14 @@
 (open
 (extent 404 56))
 (terminals on)
-(pinCenter 190 -60))
+(pinCenter 190 -70))
 (devCarrierFor 39
 (active open)
 (icon
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 404 56))
+(extent 404 76))
 (terminals on)
 (pinCenter 190 30))
 (devCarrierFor 41
@@ -417,83 +493,155 @@
 (open
 (extent 404 96))
 (terminals on)
-(pinCenter 190 140))
+(pinCenter 190 150))
 (devCarrierFor 42
 (active open)
 (icon)
 (open
 (extent 124 26))
-(pinCenter 520 140))
+(pinCenter 520 180))
 (devCarrierFor 46
 (active open)
 (icon
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 404 56))
+(extent 414 116))
 (terminals on)
-(pinCenter 940 80))
+(pinCenter 950 130))
 (devCarrierFor 51
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 940 -290))
-(devCarrierFor 54
-(active open)
-(icon)
-(open
-(extent 334 26))
-(pinCenter 1360 190))
+(pinCenter 950 -290))
 (devCarrierFor 55
 (active open)
 (icon
 (extent 111 51)
 (iconImage "io.icn"))
 (open
-(extent 404 62))
+(extent 404 136))
 (terminals on)
-(pinCenter 940 170))
+(pinCenter 950 290))
+(devCarrierFor 61
+(active open)
+(icon
+(extent 84 51)
+(iconImage "notepad.icn"))
+(open
+(extent 424 366)
+(editing enabled))
+(pinCenter 1380 -270))
+(devCarrierFor 63
+(active open)
+(icon)
+(open
+(extent 84 31))
+(pinCenter 1040 -340))
+(devCarrierFor 64
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 1390 170))
+(devCarrierFor 66
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 1390 500))
+(devCarrierFor 65
+(active open)
+(icon
+(extent 111 51)
+(iconImage "io.icn"))
+(open
+(extent 404 136))
+(terminals on)
+(pinCenter 950 460))
+(devCarrierFor 68
+(active open)
+(icon)
+(open
+(extent 334 26))
+(pinCenter 1390 330))
+(devCarrierFor 70
+(active open)
+(icon
+(extent 84 0)
+(iconImage "notepad.icn"))
+(open
+(extent 344 56)
+(editing enabled))
+(pinCenter 1390 100))
+(devCarrierFor 72
+(active open)
+(icon
+(extent 84 0)
+(iconImage "notepad.icn"))
+(open
+(extent 344 56)
+(editing enabled))
+(pinCenter 1390 260))
+(devCarrierFor 73
+(active open)
+(icon
+(extent 84 0)
+(iconImage "notepad.icn"))
+(open
+(extent 344 76)
+(editing enabled))
+(pinCenter 1390 430))
 (connect D16:0 D0:0
-(points 2 940 -277 940 -254))
+(points 2 950 -277 950 -254))
 (connect D0:1 D1:1
-(points 2 1109 -210 1190 -210))
+(points 2 1119 -210 1200 -210))
 (connect D5:0 D2:0
-(points 2 830 -322 830 -316))
+(points 2 840 -322 840 -316))
 (connect D4:1 D3:1
-(points 2 1083 -20 1190 -20))
+(points 2 1093 -20 1210 -20))
 (connect D0:0 D4:0
-(points 2 940 -124 940 -78))
+(points 2 950 -124 950 -78))
 (connect D0:1 D4:1
-(points 6 1109 -210 1130 -210 1130 -100 780 -100 780 -20 797 -20))
+(points 6 1119 -210 1140 -210 1140 -100 790 -100 790 -20 807 -20))
 (connect D13:0 D5:0
-(points 6 190 190 190 210 690 210 690 -400 830 -400 830 -376))
+(points 6 190 200 190 220 690 220 690 -400 840 -400 840 -376))
 (connect D8:0 D6:0
-(points 2 190 -387 190 -349))
+(points 2 190 -387 190 -379))
 (connect D6:1 D7:1
-(points 2 339 -300 365 -300))
+(points 2 339 -330 365 -330))
 (connect D6:2 D9:1
-(points 2 339 -240 395 -240))
+(points 2 339 -270 395 -270))
 (connect D6:0 D10:0
-(points 6 190 -210 190 -200 180 -200 180 -260 190 -260 190 -254))
+(points 2 190 -240 190 -234))
 (connect D10:0 D11:0
-(points 2 190 -125 190 -109))
+(points 2 190 -125 190 -119))
 (connect D11:0 D12:0
-(points 2 190 -30 190 -19))
+(points 2 190 -40 190 -29))
 (connect D12:0 D13:0
-(points 2 190 60 190 71))
+(points 2 190 70 190 81))
 (connect D13:3 D14:1
-(points 4 424 170 440 170 440 140 455 140))
+(points 2 424 180 455 180))
 (connect D4:0 D15:0
-(points 2 940 19 940 31))
+(points 2 950 19 950 51))
 (connect D5:1 D16:0
-(points 3 880 -340 940 -340 940 -304))
-(connect D18:3 D17:1
-(points 2 1174 190 1190 190))
-(connect D15:0 D18:0
-(points 2 940 110 940 118)))
-(stackingOrder 6 8 14 9 10 13 12 11 5 16 0 1 4 18 17 3 2 15 7))
+(points 3 890 -340 950 -340 950 -304))
+(connect D15:0 D17:0
+(points 2 950 190 950 201))
+(connect D5:1 D19:1
+(points 2 890 -340 995 -340))
+(connect D15:3 D20:1
+(points 2 1189 170 1220 170))
+(connect D22:3 D21:1
+(points 2 1184 500 1220 500))
+(connect D17:0 D22:0
+(points 2 950 360 950 371))
+(connect D17:3 D23:1
+(points 2 1184 330 1220 330)))
+(stackingOrder 8 13 5 0 1 2 11 12 14 6 10 4 19 7 9 16 22 21 17 23 15 20 24 26 25
+3 18))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
