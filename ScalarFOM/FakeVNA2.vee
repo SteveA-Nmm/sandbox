@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Tue 22/Oct/2024 16:09:09 ")
-(veerev "9.32.17704.1")
+(date "Wed 23/Oct/2024 10:27:28 ")
+(veerev "9.33.1811.0201")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder F7 F6 M)
+(workspaceStackingOrder M.143.1.2 M.143.2 M.143 M)
 (SaveCF no)
 (device 0 ROOTCONTEXT
 (assemblyRefs
@@ -29,7 +29,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 159)
+(nextID 177)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -42,9 +42,15 @@
 (variableName Get_Power_Power_Meter)
 (variableScope glob)
 (trigMode deg)
-(nextID 39)
+(nextID 40)
 (popupTitleText "UserFunction1")
 (popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "MRF_Pwr")
+(lock constraints)
+(optional yes)))
 (deviceList
 (device 0 FORMULA
 (properties
@@ -346,6 +352,22 @@
 (implementation
 (ioDevType 13)
 (iopath "ML243xA")))
+(device 39 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(output 1
+(name "Data"))))
 (configuration
 (connect D24:0 D0:0)
 (connect D24:1 D0:1)
@@ -381,14 +403,16 @@
 (connect D7:0 D24:0)
 (connect D17:2 D25:0)
 (connect D6:1 D25:1)
-(connect D15:0 D26:0)))
+(connect D15:0 D26:0)
+(connect D0:1 D27:1)
+(connect D21:1 D27:2)
+(connect D10:1 D27:3)
+(connect D27:1 O1:1)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (detail
-(extent 1153 721)
-(anchorPt -48 -270)
+(extent 1113 721)
+(anchorPt -220 -266)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -451,13 +475,13 @@
 (terminals on)
 (pinCenter 1060 380))
 (devCarrierFor 11
-(active icon)
+(active open)
 (icon
 (extent 58 15))
 (open
 (extent 144 50))
 (terminals on)
-(pinCenter 500 160))
+(pinCenter 490 160))
 (devCarrierFor 12
 (active open)
 (icon)
@@ -587,6 +611,14 @@
 (extent 224 86))
 (terminals on)
 (pinCenter 210 760))
+(devCarrierFor 39
+(active open)
+(icon
+(extent 26 25))
+(open
+(extent 12 62))
+(terminals on)
+(pinCenter 995 850))
 (connect D24:0 D0:0
 (points 2 1060 509 1060 540))
 (connect D24:1 D0:1
@@ -608,9 +640,9 @@
 (connect D2:1 D7:0
 (points 3 245 340 1060 340 1060 370))
 (connect D5:0 D8:0
-(points 2 500 110 500 150))
+(points 4 500 110 500 130 500 130 500 114))
 (connect D5:1 D8:1
-(points 6 528 100 550 100 550 70 450 70 450 160 468 160))
+(points 6 528 100 550 100 550 70 450 70 450 160 385 160))
 (connect D10:1 D9:1
 (points 2 241 850 290 850))
 (connect D26:0 D10:0
@@ -624,7 +656,7 @@
 (connect D5:1 D13:1
 (points 4 528 100 550 100 550 110 660 110))
 (connect D8:1 D14:1
-(points 2 531 160 665 160))
+(points 4 614 160 598 160 598 160 665 160))
 (connect D25:0 D15:0
 (points 2 210 639 210 670))
 (connect D12:1 D16:1
@@ -656,9 +688,17 @@
 (connect D6:1 D25:1
 (points 6 198 210 320 210 320 480 50 480 50 580 65 580))
 (connect D15:0 D26:0
-(points 2 210 690 210 696)))
-(stackingOrder 1 11 12 13 14 8 5 0 6 2 18 21 23 22 3 4 9 15 20 16 17 19 24 7 10
-26 25))))
+(points 2 210 690 210 696))
+(connect D0:1 D27:1
+(points 6 1091 550 1110 550 1110 580 940 580 940 830 956 830))
+(connect D21:1 D27:2
+(points 4 651 730 680 730 680 850 956 850))
+(connect D10:1 D27:3
+(points 6 241 850 270 850 270 900 420 900 420 870 956 870))
+(connect D27:1 O1:1
+(points 4 1043 850 1344 850 1344 626 1332 626)))
+(stackingOrder 1 11 12 13 14 5 0 6 2 18 21 23 22 3 9 15 20 16 17 19 24 7 10 26
+25 8 4 27))))
 (context 1
 (properties
 (name "head")
@@ -1126,7 +1166,7 @@
 (active detail)
 (detail
 (extent 1113 560)
-(anchorPt -131 165)
+(anchorPt -121 10)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1832,8 +1872,6 @@
 (connect D9:0 D4:0)
 (connect D4:0 D5:0)))
 (contextCarrier
-(wndOrigin 182 78)
-(wndState res)
 (active detail)
 (detail
 (extent 1113 494)
@@ -1936,7 +1974,7 @@
 (variableName P1dB_Test_Equipment)
 (variableScope glob)
 (trigMode deg)
-(nextID 20)
+(nextID 21)
 (popupTitleText "UserFunction2")
 (popupMoveable 1))
 (deviceList
@@ -2092,20 +2130,27 @@
 (implementation
 (itemList
 (numDims 1)
-(size 4)
-(data  [ "None" "HPE4419B" "ML2437A" "HP438A" ]))
-(defaultValue "ML2437A")))
+(size 5)
+(data  [ "None" "HPE4419B" "ML2437A" "HP438A" "ML248xA" ]))
+(defaultValue "ML248xA")))
 (device 13 EXITPROCESS
-(properties
-(variableScope cont)
-(code 0)))
-(device 14 EXITPROCESS
 (properties
 (variableScope cont)
 (code 0)))
 (device 19 START25
 (properties
 (variableScope cont)))
+(device 20 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
 (configuration
 (connect D2:0 D0:0)
 (connect D4:0 D1:0)
@@ -2124,15 +2169,16 @@
 (connect D12:2 D9:1)
 (connect D12:0 D10:0)
 (connect D12:1 D10:1)
-(connect D15:0 D11:0)
+(connect D14:0 D11:0)
 (connect D1:0 D12:0)
-(connect D12:3 D13:0)
-(connect D11:3 D14:0)))
+(connect D15:1 D13:0)
+(connect D11:3 D15:1)
+(connect D12:3 D15:2)))
 (contextCarrier
 (active detail)
 (detail
 (extent 1598 892)
-(anchorPt 102 70)
+(anchorPt 58 84)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -2140,7 +2186,7 @@
 (extent 67 15))
 (open)
 (terminals on)
-(pinCenter 460 410))
+(pinCenter 470 400))
 (devCarrierFor 1
 (active icon)
 (icon
@@ -2148,7 +2194,7 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 460 150))
+(pinCenter 470 150))
 (devCarrierFor 2
 (active icon)
 (icon
@@ -2156,7 +2202,7 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 460 350))
+(pinCenter 470 330))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -2164,7 +2210,7 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 460 70))
+(pinCenter 470 80))
 (devCarrierFor 4
 (active icon)
 (icon
@@ -2172,31 +2218,31 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 460 110))
+(pinCenter 470 110))
 (devCarrierFor 5
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 590 70))
+(pinCenter 590 80))
 (devCarrierFor 6
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 590 110))
+(pinCenter 590 120))
 (devCarrierFor 7
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 590 310))
+(pinCenter 590 290))
 (devCarrierFor 8
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 590 270))
+(pinCenter 590 250))
 (devCarrierFor 9
 (active icon)
 (icon
@@ -2204,7 +2250,7 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 460 300))
+(pinCenter 470 280))
 (devCarrierFor 10
 (active icon)
 (icon
@@ -2212,7 +2258,7 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 460 270))
+(pinCenter 470 250))
 (devCarrierFor 11
 (active open)
 (icon
@@ -2220,7 +2266,7 @@
 (open
 (extent 172 96))
 (terminals on)
-(pinCenter 225 110))
+(pinCenter 210 110))
 (devCarrierFor 12
 (active open)
 (icon
@@ -2228,72 +2274,74 @@
 (open
 (extent 172 96))
 (terminals on)
-(pinCenter 220 300))
+(pinCenter 210 280))
 (devCarrierFor 13
-(active open)
+(active icon)
 (icon
+(extent 68 51)
 (iconImage "stop.icn"))
 (open
 (extent 65 31))
-(pinCenter 330 520))
-(devCarrierFor 14
-(active open)
-(icon
-(iconImage "stop.icn"))
-(open
-(extent 65 31))
-(pinCenter 410 520))
+(pinCenter 470 500))
 (devCarrierFor 19
 (active open)
 (icon)
 (open
 (extent 44 23))
 (title off)
-(pinCenter 240 -20))
+(pinCenter 220 -20))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 470 440))
 (connect D2:0 D0:0
-(points 2 460 360 460 400))
+(points 2 470 340 470 390))
 (connect D4:0 D1:0
-(points 2 460 120 460 140))
+(points 2 470 120 470 140))
 (connect D11:1 D1:1
-(points 4 363 80 390 80 390 150 418 150))
+(points 4 348 80 400 80 400 150 428 150))
 (connect D9:0 D2:0
-(points 2 460 310 460 340))
+(points 2 470 290 470 320))
 (connect D12:1 D2:1
-(points 4 358 270 390 270 390 350 418 350))
+(points 4 348 250 400 250 400 330 428 330))
 (connect D11:0 D3:0
-(points 8 235 160 240 170 230 170 230 180 90 180 90 20 460 20 460 60))
+(points 8 220 160 220 170 230 170 230 190 370 190 370 50 470 50 470 70))
 (connect D11:1 D3:1
-(points 4 363 80 390 80 390 70 432 70))
+(points 2 348 80 442 80))
 (connect D3:0 D4:0
-(points 2 460 80 460 100))
+(points 2 470 90 470 100))
 (connect D11:2 D4:1
-(points 2 363 110 432 110))
+(points 2 348 110 442 110))
 (connect D3:1 D5:1
-(points 2 487 70 527 70))
+(points 2 497 80 527 80))
 (connect D4:1 D6:1
-(points 2 487 110 527 110))
+(points 4 497 110 510 110 510 120 527 120))
 (connect D9:1 D7:1
-(points 4 487 300 510 300 510 310 527 310))
+(points 4 497 280 510 280 510 290 527 290))
 (connect D10:1 D8:1
-(points 2 487 270 527 270))
+(points 2 497 250 527 250))
 (connect D10:0 D9:0
-(points 2 460 280 460 290))
+(points 2 470 260 470 270))
 (connect D12:2 D9:1
-(points 2 358 300 432 300))
+(points 2 348 280 442 280))
 (connect D12:0 D10:0
-(points 6 230 350 230 380 400 380 400 240 460 240 460 260))
+(points 6 220 330 220 350 380 350 380 220 470 220 470 240))
 (connect D12:1 D10:1
-(points 2 358 270 432 270))
-(connect D15:0 D11:0
-(points 4 240 -6 240 17 235 17 235 41))
+(points 2 348 250 442 250))
+(connect D14:0 D11:0
+(points 2 220 -6 220 41))
 (connect D1:0 D12:0
-(points 4 460 160 460 200 230 200 230 231))
-(connect D12:3 D13:0
-(points 5 358 330 380 330 380 370 330 370 330 484))
-(connect D11:3 D14:0
-(points 11 363 140 380 140 380 160 390 160 390 190 410 190 410 390 400 390 400
-440 410 440 410 484)))
-(stackingOrder 0 5 7 8 13 14 3 4 6 1 12 11 15 9 10 2))))
+(points 4 470 160 470 180 220 180 220 211))
+(connect D15:1 D13:0
+(points 5 485 440 500 440 500 460 470 460 470 472))
+(connect D11:3 D15:1
+(points 4 348 140 390 140 390 430 454 430))
+(connect D12:3 D15:2
+(points 4 348 310 370 310 370 450 454 450)))
+(stackingOrder 5 7 8 4 6 1 12 14 9 10 2 11 15 3 0 13))))
 (context 0
 (properties
 (name "tail")
@@ -2434,7 +2482,7 @@
 (lock name constraints))))
 (device 4 LITERALCONSTANT
 (properties
-(name "HP8340")
+(name "HP83650B")
 (variableScope cont)
 (enableEditing 1))
 (interface
@@ -2610,7 +2658,7 @@
 (active detail)
 (detail
 (extent 786 675)
-(anchorPt -410 118)
+(anchorPt -144 88)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -2632,7 +2680,7 @@
 (icon)
 (open
 (extent 71 31))
-(pinCenter 580 580))
+(pinCenter 570 600))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -2640,14 +2688,14 @@
 (open
 (extent 61 51))
 (terminals on)
-(pinCenter 450 570))
+(pinCenter 450 550))
 (devCarrierFor 4
 (active icon)
 (icon
-(extent 49 15))
+(extent 66 15))
 (open
 (extent 174 29))
-(pinCenter 360 250))
+(pinCenter 370 250))
 (devCarrierFor 5
 (active icon)
 (icon
@@ -2703,20 +2751,20 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 620 420))
+(pinCenter 630 360))
 (devCarrierFor 13
 (active open)
 (icon
 (extent 85 15))
 (open
 (extent 94 26))
-(pinCenter 750 420))
+(pinCenter 750 360))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
 (extent 94 26))
-(pinCenter 750 470))
+(pinCenter 750 410))
 (devCarrierFor 15
 (active open)
 (icon
@@ -2745,11 +2793,11 @@
 (connect D16:0 D1:0
 (points 2 450 398 450 470))
 (connect D3:1 D2:0
-(points 5 476 560 510 560 510 520 580 520 580 544))
+(points 3 476 540 570 540 570 564))
 (connect D1:0 D3:0
-(points 2 450 490 450 555))
+(points 2 450 490 450 535))
 (connect D1:1 D3:1
-(points 6 482 480 500 480 500 510 400 510 400 570 424 570))
+(points 6 482 480 500 480 500 510 400 510 400 550 424 550))
 (connect D8:2 D5:0
 (points 5 486 140 500 140 500 160 460 160 460 170))
 (connect D5:0 D6:0
@@ -2757,7 +2805,7 @@
 (connect D5:1 D6:1
 (points 6 508 180 530 180 530 210 420 210 420 230 433 230))
 (connect D4:1 D6:2
-(points 2 387 250 433 250))
+(points 2 405 250 433 250))
 (connect D10:0 D7:0
 (points 2 460 0 460 40))
 (connect D7:0 D8:0
@@ -2767,11 +2815,11 @@
 (connect D9:0 D10:0
 (points 2 460 -60 460 -20))
 (connect D16:1 D11:1
-(points 4 551 360 560 360 560 420 566 420))
+(points 2 551 360 576 360))
 (connect D11:1 D12:1
-(points 2 674 420 700 420))
+(points 2 684 360 700 360))
 (connect D16:2 D13:1
-(points 4 551 380 680 380 680 470 700 470))
+(points 4 551 380 570 380 570 410 700 410))
 (connect D9:1 D14:1
 (points 2 514 -70 640 -70))
 (connect D10:1 D15:1
@@ -2782,7 +2830,7 @@
 (points 6 514 -70 530 -70 530 -100 300 -100 300 360 348 360))
 (connect D10:1 D16:2
 (points 6 519 -10 540 -10 540 20 310 20 310 380 348 380)))
-(stackingOrder 2 6 8 12 13 11 7 14 15 0 4 5 10 9 3 1 16))))
+(stackingOrder 8 14 15 0 9 7 10 6 11 12 13 16 1 3 2 5 4))))
 (context 8
 (properties
 (name "Write_Cal_Factor")
@@ -3619,7 +3667,7 @@
 (optional yes)))
 (implementation
 (attr iopath file read
-"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"
+"C:\\Program Files (x86)\\Keysight\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -3695,7 +3743,7 @@
 (libType userFunction)
 (libName "bootstrapLib")
 (fileName
-"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"))
+"C:\\Program Files (x86)\\Keysight\\VEE Pro 9.3/veeos/lib/bootstrapLib.vxe"))
 (interface
 (input 1
 (type control)
@@ -4974,6 +5022,8 @@
 (connect D1:2 O2:1)
 (connect D1:3 O3:1)))
 (contextCarrier
+(wndOrigin 102 102)
+(wndState res)
 (active detail)
 (detail
 (extent 447 422)
@@ -5047,7 +5097,7 @@
 (points 4 275 210 300 210 300 161 322 161))
 (connect D1:3 O3:1
 (points 4 275 230 300 230 300 301 322 301)))
-(stackingOrder 3 2 1 4 0))))
+(stackingOrder 3 2 4 0 1))))
 (device 3 CONTEXT
 (properties
 (name "InputScalarRec")
@@ -5911,7 +5961,7 @@
 (terminals on)
 (pinCenter 200 220))
 (devCarrierFor 5
-(active icon)
+(active open)
 (icon
 (extent 50 34))
 (open
@@ -5943,7 +5993,7 @@
 (connect D2:0 D4:0
 (points 2 200 204 200 210))
 (connect D4:0 D5:0
-(points 2 200 230 200 240))
+(points 4 200 230 200 235 200 235 200 184))
 (connect D3:3 D6:1
 (points 2 248 120 294 120))
 (connect D2:3 D6:2
@@ -5951,12 +6001,12 @@
 (connect D6:1 D7:1
 (points 2 486 140 496 140))
 (connect D5:1 O1:1
-(points 6 227 250 250 250 250 210 660 210 660 73 729 73))
+(points 6 319 230 250 230 250 210 660 210 660 73 729 73))
 (connect D5:2 O2:1
-(points 4 227 260 260 260 260 183 729 183))
+(points 4 319 260 260 260 260 183 729 183))
 (connect D5:3 O3:1
-(points 4 227 270 250 270 250 293 729 293)))
-(stackingOrder 0 1 5 4 7 2 6 3))))
+(points 4 319 290 250 290 250 293 729 293)))
+(stackingOrder 0 1 4 7 5 2 6 3))))
 (device 2 CONTEXT
 (properties
 (name "OutRec")
@@ -7308,6 +7358,8 @@
 (connect D5:2 O2:1)
 (connect D5:3 O3:1)))
 (contextCarrier
+(wndOrigin 42 42)
+(wndState res)
 (active detail)
 (detail
 (extent 712 482)
@@ -7354,7 +7406,7 @@
 (terminals on)
 (pinCenter 200 260))
 (devCarrierFor 6
-(active icon)
+(active open)
 (icon
 (extent 78 51)
 (iconImage "build.icn"))
@@ -7415,18 +7467,18 @@
 (connect D4:0 D5:0
 (points 2 200 230 200 240))
 (connect D3:3 D6:1
-(points 4 254 110 270 110 270 130 358 130))
+(points 4 254 110 270 110 270 120 299 120))
 (connect D2:3 D6:2
-(points 4 251 190 270 190 270 150 358 150))
+(points 4 251 190 270 190 270 160 299 160))
 (connect D6:1 D7:1
-(points 4 441 140 487 140 487 140 496 140))
+(points 4 501 140 487 140 487 140 496 140))
 (connect D5:1 O1:1
 (points 4 227 250 460 250 460 -20 699 -20))
 (connect D5:2 O2:1
 (points 4 227 260 630 260 630 140 699 140))
 (connect D5:3 O3:1
 (points 4 227 270 250 270 250 300 699 300)))
-(stackingOrder 1 0 8 9 6 2 3 5 4 7))))
+(stackingOrder 1 0 8 9 2 3 5 4 7 6))))
 (device 3 CONTEXT
 (properties
 (name "InputValidation")
@@ -13358,6 +13410,8 @@
 (connect D18:1 D17:1)
 (connect D16:0 D18:0)))
 (contextCarrier
+(wndOrigin 22 22)
+(wndState res)
 (active detail)
 (detail
 (extent 437 531)
@@ -13547,7 +13601,7 @@
 (points 2 149 460 183 460))
 (connect D16:0 D18:0
 (points 2 110 440 110 450)))
-(stackingOrder 0 2 3 4 5 8 9 10 11 12 13 14 15 16 17 18 1 7 6))))
+(stackingOrder 0 4 5 8 9 10 11 12 13 14 15 16 17 18 7 2 3 1 6))))
 (device 147 CONTEXT
 (properties
 (name "hp8360 inputFreq")
@@ -13560,7 +13614,7 @@
 (device 1 FORMULA
 (properties
 (variableScope cont)
-(expr 3 "FA=4480;" "FB=11600;" "PL=0;"))
+(expr 3 "FA=4480;" "FB=11600;" "PL=RF_Source_Power;"))
 (interface
 (output 1
 (name "FA")
@@ -13575,18 +13629,18 @@
 (properties
 (name "PassThru ( @GPIB0::17::INSTR)")
 (variableScope cont)
-(transactions 5 "WRITE TEXT \"FA\"+A+\"MZ\" EOL"
-"WRITE TEXT \"FB\"+B+\"MZ\" EOL" "WRITE TEXT \"PL\"+P EOL" "WAIT INTERVAL:1"
+(transactions 5 "WRITE TEXT \"FA\"+FA+\"MZ\" EOL"
+"WRITE TEXT \"FB\"+FB+\"MZ\" EOL" "WRITE TEXT \"PL\"+PL EOL" "WAIT INTERVAL:1"
 "EXECUTE CLEAR"))
 (interface
 (input 1
-(name "A")
+(name "FA")
 (optional yes))
 (input 2
-(name "B")
+(name "FB")
 (optional yes))
 (input 3
-(name "P")
+(name "PL")
 (optional yes)))
 (implementation
 (ioDevType 13)
@@ -13684,7 +13738,7 @@
 (active detail)
 (detail
 (extent 1010 764)
-(anchorPt -227 -308)
+(anchorPt -29 -126)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -13708,7 +13762,7 @@
 (open
 (extent 221 74))
 (terminals on)
-(pinCenter 440 140))
+(pinCenter 440 110))
 (devCarrierFor 6
 (active open)
 (icon)
@@ -13782,7 +13836,7 @@
 (terminals on)
 (pinCenter 440 580))
 (connect D2:0 D1:0
-(points 2 440 179 440 211))
+(points 2 440 149 440 211))
 (connect D0:1 D1:1
 (points 2 259 250 290 250))
 (connect D0:2 D1:2
@@ -13790,7 +13844,7 @@
 (connect D0:3 D1:3
 (points 2 259 330 290 330))
 (connect D6:0 D2:0
-(points 2 440 43 440 82))
+(points 2 440 43 440 52))
 (connect D9:1 D3:1
 (points 2 538 580 645 580))
 (connect D5:1 D4:1
@@ -13803,7 +13857,7 @@
 (points 2 440 350 440 351))
 (connect D8:0 D9:0
 (points 2 440 510 440 552)))
-(stackingOrder 0 1 2 4 7 8 9 5 3 6))))
+(stackingOrder 0 4 7 8 9 5 3 6 1 2))))
 (device 148 CONTEXT
 (properties
 (name "hp8360 outputFreq")
@@ -13816,7 +13870,7 @@
 (device 1 FORMULA
 (properties
 (variableScope cont)
-(expr 3 "FA=4000;" "FB=18000;" "PL=0;"))
+(expr 3 "FA=4000;" "FB=18000;" "PL=RF_Source_Power;"))
 (interface
 (output 1
 (name "FA")
@@ -13831,18 +13885,18 @@
 (properties
 (name "PassThru ( @GPIB0::17::INSTR)")
 (variableScope cont)
-(transactions 5 "WRITE TEXT \"FA\"+A+\"MZ\" EOL"
-"WRITE TEXT \"FB\"+B+\"MZ\" EOL" "WRITE TEXT \"PL\"+P EOL" "WAIT INTERVAL:1"
+(transactions 5 "WRITE TEXT \"FA\"+FA+\"MZ\" EOL"
+"WRITE TEXT \"FB\"+FB+\"MZ\" EOL" "WRITE TEXT \"PL\"+PL EOL" "WAIT INTERVAL:1"
 "EXECUTE CLEAR"))
 (interface
 (input 1
-(name "A")
+(name "FA")
 (optional yes))
 (input 2
-(name "B")
+(name "FB")
 (optional yes))
 (input 3
-(name "P")
+(name "PL")
 (optional yes)))
 (implementation
 (ioDevType 13)
@@ -13940,7 +13994,7 @@
 (active detail)
 (detail
 (extent 931 860)
-(anchorPt -235 -410)
+(anchorPt 130 33)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -14058,26 +14112,32 @@
 (points 2 450 150 450 181))
 (connect D4:0 D9:0
 (points 2 450 585 450 616)))
-(stackingOrder 0 1 2 7 5 4 3 6 9 8))))
+(stackingOrder 0 2 7 5 4 3 6 9 8 1))))
 (device 152 CALL
 (properties
 (name "Call Get_Power_Power_Meter")
 (variableScope cont)
 (callFunc "Get_Power_Power_Meter")
-(parmMode rev30)))
+(parmMode rev30))
+(interface
+(output 1
+(name "MRF_Pwr")
+(lock name constraints)
+(optional yes))))
 (device 153 FORMULA
 (properties
-(name "Power Meter")
+(name "settings")
 (variableScope cont)
-(expr 2 "Power_Meter_On=1;" "Power_Meter_TXT=\"ML248xA\"")))
+(expr 6 "Power_Meter_On=\"Success\";" "Power_Meter_TXT=\"ML248xA\";"
+"RF_Source_Power=0;" "RF_Source_Txt=\"HP83650B\";" "RF_Source_On=1;" "")))
 (device 154 DECLVAR
 (properties
 (name "Declare Power_Meter_On")
 (scope glob)
 (globalName "Power_Meter_On"))
 (implementation
-(value UInt8
-(data  0))))
+(value Text
+(data  ""))))
 (device 155 DECLVAR
 (properties
 (name "Declare Power_Meter_TXT")
@@ -14092,19 +14152,156 @@
 (variableScope cont)
 (callFunc "ML248xA")
 (parmMode rev30)))
+(device 159 FORMULA
+(properties
+(variableScope cont)
+(expr 8 "InRec.Scalar.Freq;" "InRec.Scalar.dBm;" "InRec.Scalar.error;"
+"InRec.Meter.Freq;" "InRec.Meter.dBm;" "" "" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 163 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 164 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "InRec.Meter.Freq"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 166 DECLVAR
+(properties
+(name "Declare MRF_Pwr")
+(scope glob)
+(globalName "MRF_Pwr"))
+(implementation
+(value Real64
+(data  0))))
+(device 167 CALL
+(properties
+(name "Call HP83650B")
+(variableScope cont)
+(callFunc "HP83650B")
+(parmMode rev30)))
+(device 168 FORMULA
+(properties
+(name "RF_Source_Freq")
+(variableScope cont)
+(expr 1 "RF_Source_Freq=A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 169 CALL
+(properties
+(name "Call Tune_RF_Source")
+(variableScope cont)
+(callFunc "Tune_RF_Source")
+(parmMode rev30)))
+(device 170 DECLVAR
+(properties
+(name "Declare RF_Source_Freq")
+(scope glob)
+(globalName "RF_Source_Freq"))
+(implementation
+(value Real64
+(data  0))))
+(device 171 DECLVAR
+(properties
+(name "Declare RF_Source_On")
+(scope glob)
+(globalName "RF_Source_On"))
+(implementation
+(value UInt8
+(data  0))))
+(device 172 DECLVAR
+(properties
+(name "Declare RF_Source_Power")
+(scope glob)
+(globalName "RF_Source_Power"))
+(implementation
+(value Real64
+(data  0))))
+(device 173 DECLVAR
+(properties
+(name "Declare RF_Source_Txt")
+(scope glob)
+(globalName "RF_Source_Txt"))
+(implementation
+(value Text
+(data  ""))))
+(device 175 COLLECTOR
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 176 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "inRec.Meter.dBm"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
 (configuration
 (connect D0:0 D2:0)
 (connect D2:0 D3:0)
 (connect D4:0 D5:0)
+(connect D17:0 D6:0)
 (connect D3:0 D7:0)
-(connect D7:0 D10:0)))
+(connect D7:0 D12:0)
+(connect D13:1 D12:1)
+(connect D12:1 D16:0)
+(connect D12:1 D16:1)
+(connect D16:0 D17:0)
+(connect D6:0 D22:0)
+(connect D6:1 D22:1)
+(connect D12:0 D22:2)
+(connect D12:0 D23:0)
+(connect D22:1 D23:1)))
 (contextCarrier
-(wndOrigin 2 2)
+(wndOrigin 1 2)
 (wndState res)
 (active detail)
 (detail
-(extent 1488 538)
-(anchorPt 19 -116)
+(extent 1488 634)
+(anchorPt 301 -141)
 (configuration
 (devCarrierFor 110
 (active open)
@@ -14112,7 +14309,7 @@
 (open
 (extent 47 22))
 (title off)
-(pinCenter 330 120))
+(pinCenter 330 100))
 (devCarrierFor 111
 (active open)
 (icon
@@ -14128,25 +14325,25 @@
 (extent 175 117)
 (carbonCopy))
 (titleBg "Light Beige")
-(pinCenter 330 150))
+(pinCenter 330 130))
 (devCarrierFor 143
 (active icon)
 (icon
 (extent 118 15))
 (terminals on)
-(pinCenter 330 180))
+(pinCenter 330 160))
 (devCarrierFor 147
 (active icon)
 (icon
 (extent 106 15))
 (terminals on)
-(pinCenter 330 220))
+(pinCenter 330 200))
 (devCarrierFor 148
 (active icon)
 (icon
 (extent 114 15))
 (terminals on)
-(pinCenter 330 250))
+(pinCenter 330 230))
 (devCarrierFor 152
 (active icon)
 (icon
@@ -14154,29 +14351,29 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 330 470))
+(pinCenter 550 440))
 (devCarrierFor 153
-(active icon)
+(active open)
 (icon
-(extent 74 15))
+(extent 48 15))
 (open
-(extent 224 65))
+(extent 224 146))
 (terminals on)
-(pinCenter 330 390))
+(pinCenter 90 170))
 (devCarrierFor 154
 (active icon)
 (icon
 (extent 155 15))
 (open
 (extent 199 115))
-(pinCenter 610 190))
+(pinCenter 710 90))
 (devCarrierFor 155
 (active icon)
 (icon
 (extent 160 15))
 (open
 (extent 199 115))
-(pinCenter 620 230))
+(pinCenter 710 160))
 (devCarrierFor 158
 (active icon)
 (icon
@@ -14184,18 +14381,135 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 330 430))
+(pinCenter -10 300))
+(devCarrierFor 159
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 154 236))
+(terminals on)
+(pinCenter 910 360))
+(devCarrierFor 163
+(active open)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open
+(extent 158 31))
+(pinCenter 320 380))
+(devCarrierFor 164
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 70 380))
+(devCarrierFor 166
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 199 115))
+(pinCenter 550 190))
+(devCarrierFor 167
+(active icon)
+(icon
+(extent 93 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 100 300))
+(devCarrierFor 168
+(active icon)
+(icon
+(extent 103 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 550 380))
+(devCarrierFor 169
+(active icon)
+(icon
+(extent 134 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 550 410))
+(devCarrierFor 170
+(active icon)
+(icon
+(extent 154 15))
+(open
+(extent 199 115))
+(pinCenter 540 110))
+(devCarrierFor 171
+(active icon)
+(icon
+(extent 144 15))
+(open
+(extent 199 115))
+(pinCenter 540 90))
+(devCarrierFor 172
+(active icon)
+(icon
+(extent 165 15))
+(open
+(extent 201 115))
+(pinCenter 540 130))
+(devCarrierFor 173
+(active icon)
+(icon
+(extent 143 15))
+(open
+(extent 199 115))
+(pinCenter 530 160))
+(devCarrierFor 175
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 95 54))
+(terminals on)
+(pinCenter 550 510))
+(devCarrierFor 176
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 310 630))
 (connect D0:0 D2:0
-(points 2 330 133 330 140))
+(points 2 330 113 330 120))
 (connect D2:0 D3:0
-(points 2 330 160 330 170))
+(points 2 330 140 330 150))
 (connect D4:0 D5:0
-(points 2 330 230 330 240))
+(points 2 330 210 330 220))
+(connect D17:0 D6:0
+(points 2 550 420 550 430))
 (connect D3:0 D7:0
-(points 6 330 190 330 200 410 200 410 280 330 280 330 380))
-(connect D7:0 D10:0
-(points 2 330 400 330 420)))
-(stackingOrder 0 2 1 3 6 8 9 7 4 5 10))
+(points 6 330 170 330 180 250 180 250 60 90 60 90 76))
+(connect D7:0 D12:0
+(points 4 90 245 90 270 320 270 320 344))
+(connect D13:1 D12:1
+(points 2 195 380 238 380))
+(connect D12:1 D16:0
+(points 5 401 380 480 380 480 350 550 350 550 370))
+(connect D12:1 D16:1
+(points 2 401 380 496 380))
+(connect D16:0 D17:0
+(points 2 550 390 550 400))
+(connect D6:0 D22:0
+(points 2 550 450 550 495))
+(connect D6:1 D22:1
+(points 6 643 440 660 440 660 470 510 470 510 500 521 500))
+(connect D12:0 D22:2
+(points 3 320 398 320 520 521 520))
+(connect D12:0 D23:0
+(points 2 320 398 320 584))
+(connect D22:1 D23:1
+(points 6 579 510 600 510 600 550 190 550 190 630 205 630)))
+(stackingOrder 0 2 1 12 18 19 21 9 8 20 5 16 14 7 10 15 17 13 11 6 4 3 23 22))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
