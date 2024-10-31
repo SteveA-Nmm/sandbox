@@ -1,11 +1,12 @@
 (saveFormat "7.0")
-(date "Tue 29/Oct/2024 17:35:24 ")
+(date "Thu 31/Oct/2024 14:16:11 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder F6 M.143.1.2 M.143.2 M.143.1 M.190 M.143 F7 M)
+(workspaceStackingOrder M.143.1.2 M.143.2 M.143.1 M.147 M.148 M.212 M.206 M.205
+M)
 (SaveCF no)
 (device 0 ROOTCONTEXT
 (assemblyRefs
@@ -29,7 +30,7 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 200)
+(nextID 213)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
@@ -42,7 +43,7 @@
 (variableName Get_Power_Power_Meter)
 (variableScope glob)
 (trigMode deg)
-(nextID 44)
+(nextID 47)
 (popupTitleText "UserFunction1")
 (popupMoveable 1))
 (interface
@@ -101,43 +102,12 @@
 (interface
 (input 1
 (name "Data"))))
-(device 8 FORMULA
-(properties
-(name "RF_Freq")
-(variableScope cont)
-(expr 1 "Cal_RF_Freq"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
 (device 9 FORMULA
 (properties
 (name "RF_Freq")
 (variableScope cont)
 (expr 1 "Cal_RF_Freq"))
 (interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 10 CALL
-(properties
-(name "Call Write_Cal_Factor")
-(variableScope cont)
-(callFunc "Write_Cal_Factor")
-(parmMode rev30)))
-(device 11 FORMULA
-(properties
-(name "MRF_Pwr")
-(variableScope cont)
-(expr 1 "MRF_Pwr = Temp1 +  A/1000"))
-(interface
-(input 1
-(name "A")
-(optional yes))
 (output 1
 (name "Result")
 (tag "Result")
@@ -169,25 +139,6 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
-(device 16 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 17 TEXTDISPLAY
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Data"))))
-(device 20 DELAY
-(properties
-(variableScope cont)
-(delay 0.01))
-(interface
-(output 1
-(name "Done"))))
 (device 21 TEXTDISPLAY
 (properties
 (variableScope cont))
@@ -226,46 +177,6 @@
 (data  "ML248xA"))
 (initValue Text
 (data  ""))))
-(device 34 IODEVICE
-(properties
-(name "HP438A ( @GPIB0::13::INSTR)")
-(variableScope cont)
-(transactions 2 "WRITE TEXT \"AP\" EOL" "READ TEXT x STR"))
-(interface
-(output 1
-(name "X")
-(optional yes)))
-(implementation
-(ioDevType 13)
-(iopath "HP438A")))
-(device 36 IODEVICE
-(properties
-(name "ML243xA ( @GPIB0::13::INSTR)")
-(variableScope cont)
-(transactions 3 "WRITE TEXT \"FR\", a, \"MZ\" EOL" "WRITE TEXT \"TK?\" EOL"
-"READ TEXT x REAL64"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "X")
-(optional yes)))
-(implementation
-(ioDevType 13)
-(iopath "ML243xA")))
-(device 38 IODEVICE
-(properties
-(name "ML243xA ( @GPIB0::13::INSTR)")
-(variableScope cont)
-(transactions 2 "WRITE TEXT \"TK?\" EOL" "READ TEXT x REAL64"))
-(interface
-(output 1
-(name "X")
-(optional yes)))
-(implementation
-(ioDevType 13)
-(iopath "ML243xA")))
 (device 39 JUNCTION
 (properties
 (name "JCT")
@@ -371,7 +282,7 @@
 (properties
 (name "Scalar ON")
 (variableScope cont)
-(expr 2 "A=Scalar_On;" "B=1;"))
+(expr 2 "A=Scalar_On;" "B=2;"))
 (interface
 (output 1
 (name "A")
@@ -419,8 +330,8 @@
 (contextCarrier
 (active detail)
 (detail
-(extent 984 597)
-(anchorPt 400 302)
+(extent 1171 685)
+(anchorPt 381 298)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -473,7 +384,7 @@
 (connect D2:2 D0:0
 (points 5 -5 -190 10 -190 10 30 310 30 310 41))
 (connect I1:1 D0:1
-(points 4 -400 -4 -120 -4 -120 120 65 120))
+(points 4 -381 44 -120 44 -120 120 65 120))
 (connect D0:0 D1:0
 (points 2 310 180 310 187))
 (connect D3:1 D2:1
@@ -483,54 +394,298 @@
 (connect D2:1 D4:0
 (points 3 -5 -210 310 -210 310 -194))
 (connect I1:1 D4:1
-(points 4 -400 -4 -130 -4 -130 -80 70 -80))
+(points 4 -381 44 -130 44 -130 -80 70 -80))
 (connect D4:1 D5:1
 (points 4 549 -80 570 -80 570 60 644 60))
 (connect D1:1 D5:2
 (points 4 554 260 570 260 570 80 644 80))
 (connect D5:1 O1:1
-(points 4 675 70 700 70 700 -4 583 -4)))
-(stackingOrder 2 5 0 1 4 3))))
+(points 4 675 70 700 70 700 44 789 44)))
+(stackingOrder 2 5 0 4 3 1))))
+(device 44 CONTEXT
+(properties
+(name "ML243xA")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "ML243xA ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 3 "WRITE TEXT \"FR\", a, \"MZ\" EOL" "WRITE TEXT \"TK?\" EOL"
+"READ TEXT x REAL64"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "ML243xA")))
+(device 1 DELAY
+(properties
+(variableScope cont)
+(delay 0.01))
+(interface
+(output 1
+(name "Done"))))
+(device 2 IODEVICE
+(properties
+(name "ML243xA ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"TK?\" EOL" "READ TEXT x REAL64"))
+(interface
+(output 1
+(name "X")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "ML243xA")))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:0 D1:0)
+(connect D1:0 D2:0)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 421 426)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 114))
+(terminals on)
+(pinCenter 210 140))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 210 240))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 86))
+(terminals on)
+(pinCenter 210 320))
+(connect I1:1 D0:1
+(points 4 0 212 10 212 10 140 65 140))
+(connect D0:0 D1:0
+(points 2 210 199 210 230))
+(connect D1:0 D2:0
+(points 2 210 250 210 256))
+(connect D2:1 O1:1
+(points 4 354 320 370 320 370 212 420 212)))
+(stackingOrder 0 1 2))))
+(device 45 CONTEXT
+(properties
+(name "HP438A")
+(variableScope cont)
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call Write_Cal_Factor")
+(variableScope cont)
+(callFunc "Write_Cal_Factor")
+(parmMode rev30)))
+(device 1 IODEVICE
+(properties
+(name "HP438A ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"AP\" EOL" "READ TEXT x STR"))
+(interface
+(output 1
+(name "X")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "HP438A")))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 418 282)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 132 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 200 70))
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 200 180))
+(connect D0:0 D1:0
+(points 2 200 80 200 122))
+(connect D1:1 O1:1
+(points 4 343 180 360 180 360 140 417 140)))
+(stackingOrder 1 0))))
+(device 46 CONTEXT
+(properties
+(name "MakeUpDummyData")
+(variableScope cont)
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "RF_Freq")
+(variableScope cont)
+(expr 1 "Cal_RF_Freq"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FORMULA
+(properties
+(name "MRF_Pwr")
+(variableScope cont)
+(expr 1 "MRF_Pwr = Temp1 +  A/1000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 3 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D0:1 D2:1)
+(connect D1:1 D3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 646 234)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 254 60))
+(terminals on)
+(pinCenter 180 70))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 58 15))
+(open
+(extent 144 50))
+(terminals on)
+(pinCenter 170 140))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 234 26))
+(pinCenter 460 90))
+(devCarrierFor 3
+(active open)
+(icon)
+(open
+(extent 234 26))
+(pinCenter 460 140))
+(connect D0:0 D1:0
+(points 2 180 80 180 94))
+(connect D0:1 D1:1
+(points 6 208 70 230 70 230 40 50 40 50 140 65 140))
+(connect D0:1 D2:1
+(points 4 208 70 310 70 310 90 340 90))
+(connect D1:1 D3:1
+(points 2 294 140 340 140)))
+(stackingOrder 0 1 2 3))))
 (configuration
 (connect D2:0 D1:0)
 (connect D2:1 D1:1)
 (connect D0:1 D1:2)
-(connect D5:0 D2:0)
+(connect D4:0 D2:0)
 (connect D2:1 D3:1)
-(connect D8:1 D4:0)
-(connect D8:2 D5:0)
-(connect D1:1 D6:0)
-(connect D4:0 D7:0)
-(connect D4:1 D7:1)
-(connect D9:0 D8:0)
-(connect D9:1 D8:1)
-(connect D20:0 D9:0)
-(connect D4:1 D10:1)
-(connect D7:1 D11:1)
-(connect D17:0 D12:0)
-(connect D9:1 D13:1)
-(connect D1:2 D14:0)
-(connect D2:1 D14:1)
-(connect D15:1 D14:2)
-(connect D6:0 D16:0)
-(connect D14:2 D17:0)
-(connect D5:1 D17:1)
-(connect D12:0 D18:0)
-(connect D16:1 D19:1)
-(connect D23:1 D19:2)
-(connect D18:1 D19:3)
-(connect D22:1 D21:1)
-(connect D19:1 D22:1)
-(connect D14:1 D23:0)
-(connect D5:1 D23:1)
-(connect D19:1 O1:1)))
+(connect D5:2 D4:0)
+(connect D6:0 D5:0)
+(connect D6:1 D5:1)
+(connect D11:0 D6:0)
+(connect D6:1 D7:1)
+(connect D1:2 D8:0)
+(connect D2:1 D8:1)
+(connect D9:1 D8:2)
+(connect D16:1 D10:1)
+(connect D14:1 D10:2)
+(connect D15:1 D10:3)
+(connect D13:1 D12:1)
+(connect D10:1 D13:1)
+(connect D8:1 D14:0)
+(connect D4:1 D14:1)
+(connect D8:2 D15:0)
+(connect D4:1 D15:1)
+(connect D1:1 D16:0)
+(connect D5:1 D17:0)
+(connect D10:1 O1:1)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (detail
 (extent 1201 721)
-(anchorPt 97 -238)
+(anchorPt 45 -33)
 (configuration
 (devCarrierFor 4
 (active open)
@@ -553,21 +708,13 @@
 (open
 (extent 144 50))
 (terminals on)
-(pinCenter 220 270))
+(pinCenter 220 280))
 (devCarrierFor 7
 (active open)
 (icon)
 (open
 (extent 121 22))
-(pinCenter 440 270))
-(devCarrierFor 8
-(active icon)
-(icon
-(extent 52 15))
-(open
-(extent 254 60))
-(terminals on)
-(pinCenter 500 100))
+(pinCenter 350 280))
 (devCarrierFor 9
 (active icon)
 (icon
@@ -575,23 +722,7 @@
 (open
 (extent 254 60))
 (terminals on)
-(pinCenter 170 210))
-(devCarrierFor 10
-(active icon)
-(icon
-(extent 132 15))
-(open
-(extent 176 51))
-(terminals on)
-(pinCenter 1050 380))
-(devCarrierFor 11
-(active open)
-(icon
-(extent 58 15))
-(open
-(extent 144 50))
-(terminals on)
-(pinCenter 490 160))
+(pinCenter 220 250))
 (devCarrierFor 14
 (active icon)
 (icon
@@ -607,32 +738,13 @@
 (open
 (extent 244 56))
 (terminals on)
-(pinCenter 170 110))
-(devCarrierFor 16
-(active open)
-(icon)
-(open
-(extent 234 26))
-(pinCenter 780 110))
-(devCarrierFor 17
-(active open)
-(icon)
-(open
-(extent 124 26))
-(pinCenter 730 160))
-(devCarrierFor 20
-(active icon)
-(icon
-(extent 35 15))
-(open
-(extent 71 31))
-(pinCenter 210 680))
+(pinCenter 170 120))
 (devCarrierFor 21
 (active open)
 (icon)
 (open
-(extent 94 26))
-(pinCenter 330 110))
+(extent 124 26))
+(pinCenter 360 120))
 (devCarrierFor 23
 (active icon)
 (icon
@@ -647,30 +759,6 @@
 (open
 (extent 84 26))
 (pinCenter 120 420))
-(devCarrierFor 34
-(active open)
-(icon
-(iconImage "io.icn"))
-(open
-(extent 221 74))
-(terminals on)
-(pinCenter 1050 490))
-(devCarrierFor 36
-(active open)
-(icon
-(iconImage "io.icn"))
-(open
-(extent 224 114))
-(terminals on)
-(pinCenter 210 580))
-(devCarrierFor 38
-(active open)
-(icon
-(iconImage "io.icn"))
-(open
-(extent 224 86))
-(terminals on)
-(pinCenter 210 760))
 (devCarrierFor 39
 (active open)
 (icon
@@ -678,7 +766,7 @@
 (open
 (extent 12 62))
 (terminals on)
-(pinCenter 875 800))
+(pinCenter 675 670))
 (devCarrierFor 40
 (active open)
 (icon)
@@ -691,7 +779,7 @@
 (icon)
 (open
 (extent 94 26))
-(pinCenter 1230 850))
+(pinCenter 930 670))
 (devCarrierFor 42
 (active icon)
 (icon
@@ -699,78 +787,83 @@
 (open
 (extent 124 56))
 (terminals on)
-(pinCenter 1100 850))
+(pinCenter 830 670))
 (devCarrierFor 43
 (active icon)
 (icon
 (extent 53 25))
 (terminals on)
-(pinCenter 620 570))
+(pinCenter 400 560))
+(devCarrierFor 44
+(active icon)
+(icon
+(extent 53 25))
+(terminals on)
+(pinCenter 230 560))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 49 25))
+(terminals on)
+(pinCenter 530 560))
+(devCarrierFor 46
+(active icon)
+(icon
+(extent 125 15))
+(terminals on)
+(pinCenter 350 180))
 (connect D2:0 D1:0
-(points 2 220 280 220 335))
+(points 2 220 290 220 335))
 (connect D2:1 D1:1
-(points 6 259 270 280 270 280 300 180 300 180 340 194 340))
+(points 6 259 280 270 280 270 310 180 310 180 340 194 340))
 (connect D0:1 D1:2
 (points 2 164 360 194 360))
-(connect D5:0 D2:0
-(points 4 170 220 170 240 220 240 220 260))
+(connect D4:0 D2:0
+(points 2 220 260 220 270))
 (connect D2:1 D3:1
-(points 2 259 270 377 270))
-(connect D8:1 D4:0
-(points 5 196 150 250 150 250 60 500 60 500 90))
-(connect D8:2 D5:0
-(points 5 196 170 210 170 210 190 170 190 170 200))
-(connect D1:1 D6:0
-(points 3 245 340 1050 340 1050 370))
-(connect D4:0 D7:0
-(points 2 500 110 500 114))
-(connect D4:1 D7:1
-(points 8 528 100 540 100 540 90 630 90 630 210 370 210 370 160 385 160))
-(connect D9:0 D8:0
-(points 2 170 120 170 145))
-(connect D9:1 D8:1
-(points 6 222 110 240 110 240 80 100 80 100 160 144 160))
-(connect D20:0 D9:0
-(points 2 170 63 170 100))
-(connect D4:1 D10:1
-(points 6 528 100 540 100 540 90 630 90 630 110 660 110))
-(connect D7:1 D11:1
-(points 2 614 160 665 160))
-(connect D17:0 D12:0
-(points 2 210 639 210 670))
-(connect D9:1 D13:1
-(points 2 222 110 280 110))
-(connect D1:2 D14:0
+(points 2 259 280 287 280))
+(connect D5:2 D4:0
+(points 3 196 170 220 170 220 240))
+(connect D6:0 D5:0
+(points 2 170 130 170 145))
+(connect D6:1 D5:1
+(points 6 222 120 240 120 240 90 100 90 100 160 144 160))
+(connect D11:0 D6:0
+(points 2 170 63 170 110))
+(connect D6:1 D7:1
+(points 2 222 120 295 120))
+(connect D1:2 D8:0
 (points 5 245 360 260 360 260 380 230 380 230 395))
-(connect D2:1 D14:1
-(points 6 259 270 280 270 280 300 180 300 180 400 204 400))
-(connect D15:1 D14:2
+(connect D2:1 D8:1
+(points 6 259 280 270 280 270 310 180 310 180 400 204 400))
+(connect D9:1 D8:2
 (points 2 164 420 204 420))
-(connect D6:0 D16:0
-(points 2 1050 390 1050 432))
-(connect D14:2 D17:0
-(points 5 255 420 280 420 280 450 210 450 210 502))
-(connect D5:1 D17:1
-(points 6 198 210 210 210 210 250 50 250 50 580 65 580))
-(connect D12:0 D18:0
-(points 2 210 690 210 696))
-(connect D16:1 D19:1
-(points 6 1193 490 1210 490 1210 550 820 550 820 780 836 780))
-(connect D23:1 D19:2
-(points 4 649 570 670 570 670 800 836 800))
-(connect D18:1 D19:3
-(points 4 354 760 370 760 370 820 836 820))
-(connect D22:1 D21:1
-(points 2 1131 850 1180 850))
-(connect D19:1 D22:1
-(points 4 923 800 940 800 940 850 1068 850))
-(connect D14:1 D23:0
-(points 3 255 400 620 400 620 555))
-(connect D5:1 D23:1
-(points 6 198 210 220 210 220 220 520 220 520 570 591 570))
-(connect D19:1 O1:1
-(points 4 923 800 950 800 950 598 1103 598)))
-(stackingOrder 0 8 9 10 11 4 1 15 2 12 13 18 17 7 3 5 20 6 16 21 22 19 14 23))))
+(connect D16:1 D10:1
+(points 4 557 560 580 560 580 650 636 650))
+(connect D14:1 D10:2
+(points 4 429 560 450 560 450 670 636 670))
+(connect D15:1 D10:3
+(points 6 259 560 270 560 270 570 290 570 290 690 636 690))
+(connect D13:1 D12:1
+(points 2 861 670 880 670))
+(connect D10:1 D13:1
+(points 2 723 670 798 670))
+(connect D8:1 D14:0
+(points 3 255 400 400 400 400 545))
+(connect D4:1 D14:1
+(points 10 248 250 270 250 270 220 60 220 60 560 180 560 180 600 280 600 280 560
+371 560))
+(connect D8:2 D15:0
+(points 5 255 420 280 420 280 450 230 450 230 545))
+(connect D4:1 D15:1
+(points 6 248 250 270 250 270 220 60 220 60 560 201 560))
+(connect D1:1 D16:0
+(points 3 245 340 530 340 530 545))
+(connect D5:1 D17:0
+(points 3 196 150 350 150 350 170))
+(connect D10:1 O1:1
+(points 4 723 670 780 670 780 393 1155 393)))
+(stackingOrder 0 5 1 9 11 8 10 13 12 16 15 4 2 3 7 17 6 14))))
 (context 1
 (properties
 (name "head")
@@ -1238,7 +1331,7 @@
 (active detail)
 (detail
 (extent 1113 860)
-(anchorPt -209 193)
+(anchorPt -277 -507)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -1944,10 +2037,6 @@
 (connect D9:0 D4:0)
 (connect D4:0 D5:0)))
 (contextCarrier
-(wndOrigin 2 854)
-(wndRestoredOrigin 2 2)
-(wndRestoredExtent 1113 494)
-(wndState min)
 (active detail)
 (detail
 (extent 1113 494)
@@ -2513,7 +2602,7 @@
 (variableName Tune_RF_Source)
 (variableScope glob)
 (trigMode deg)
-(nextID 29)
+(nextID 30)
 (popupTitleText "UserFunction1")
 (popupMoveable 1))
 (deviceList
@@ -2709,7 +2798,7 @@
 (properties
 (name "Scalar ON")
 (variableScope cont)
-(expr 2 "A=Scalar_On;" "B=0;"))
+(expr 2 "A=Scalar_On;" "B=1;"))
 (interface
 (output 1
 (name "A")
@@ -2739,6 +2828,18 @@
 (name "B"))
 (output 1
 (name "Data"))))
+(device 29 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 2 "WRITE TEXT \"OI\" EOL" "READ TEXT x STR"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
 (configuration
 (connect D2:1 D0:1)
 (connect D5:2 D2:0)
@@ -2766,12 +2867,13 @@
 (connect D14:1 D17:1)
 (connect D12:1 D17:2)
 (connect D14:2 D18:1)
-(connect D12:2 D18:2)))
+(connect D12:2 D18:2)
+(connect D14:0 D19:0)))
 (contextCarrier
 (active detail)
 (detail
 (extent 840 807)
-(anchorPt -292 -34)
+(anchorPt -220 182)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -2847,7 +2949,7 @@
 (icon)
 (open
 (extent 94 26))
-(pinCenter 950 450))
+(pinCenter 950 540))
 (devCarrierFor 15
 (active open)
 (icon
@@ -2870,7 +2972,7 @@
 (open
 (extent 294 164))
 (terminals on)
-(pinCenter 680 450))
+(pinCenter 680 540))
 (devCarrierFor 20
 (active open)
 (icon)
@@ -2896,7 +2998,7 @@
 (terminals on)
 (pinCenter 450 300))
 (devCarrierFor 23
-(active open)
+(active icon)
 (icon
 (extent 61 25))
 (open
@@ -2916,7 +3018,16 @@
 (extent 26 25))
 (open)
 (terminals on)
-(pinCenter 840 450))
+(pinCenter 840 540))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 191 51)
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 680 410))
 (connect D2:1 D0:1
 (points 2 508 180 620 180))
 (connect D5:2 D2:0
@@ -2940,17 +3051,17 @@
 (connect D17:1 D8:1
 (points 2 855 340 900 340))
 (connect D18:1 D9:1
-(points 2 855 450 900 450))
+(points 2 855 540 900 540))
 (connect D6:1 D10:1
 (points 2 514 -70 640 -70))
 (connect D7:1 D11:1
 (points 2 519 -10 640 -10))
 (connect D15:2 D12:0
-(points 5 475 310 500 310 500 400 680 400 680 422))
+(points 5 475 310 500 310 500 480 680 480 680 512))
 (connect D6:1 D12:1
-(points 4 514 -70 560 -70 560 440 578 440))
+(points 4 514 -70 560 -70 560 530 578 530))
 (connect D7:1 D12:2
-(points 4 519 -10 550 -10 550 460 578 460))
+(points 4 519 -10 550 -10 550 550 578 550))
 (connect D15:1 D14:0
 (points 3 475 290 680 290 680 320))
 (connect D6:1 D14:1
@@ -2960,18 +3071,20 @@
 (connect D3:1 D15:0
 (points 5 486 230 510 230 510 280 450 280 450 285))
 (connect D16:1 D15:1
-(points 4 475 280 413 280 413 290 424 290))
+(points 2 403 290 424 290))
 (connect D16:2 D15:2
-(points 4 475 320 413 320 413 310 424 310))
+(points 2 403 310 424 310))
 (connect D14:1 D17:1
 (points 2 779 330 824 330))
 (connect D12:1 D17:2
-(points 6 781 440 790 440 790 430 810 430 810 350 824 350))
+(points 6 781 530 790 530 790 520 810 520 810 350 824 350))
 (connect D14:2 D18:1
-(points 4 779 370 800 370 800 440 824 440))
+(points 4 779 370 800 370 800 530 824 530))
 (connect D12:2 D18:2
-(points 2 781 460 824 460)))
-(stackingOrder 5 10 11 0 7 13 6 15 9 14 18 17 8 3 1 2 4 12 16))))
+(points 2 781 550 824 550))
+(connect D14:0 D19:0
+(points 2 680 379 680 382)))
+(stackingOrder 5 10 11 0 7 13 6 9 18 17 8 3 1 2 4 12 15 14 19 16))))
 (context 8
 (properties
 (name "Write_Cal_Factor")
@@ -3300,7 +3413,7 @@
 (active detail)
 (detail
 (extent 1153 675)
-(anchorPt -443 10)
+(anchorPt 151 2)
 (configuration
 (devCarrierFor 1
 (active icon)
@@ -3497,7 +3610,7 @@
 (connect D4:1 D7:1
 (points 6 384 480 400 480 400 580 120 580 120 630 152 630))
 (connect D0:1 D7:2
-(points 6 208 90 230 90 230 120 110 120 110 650 152 650))
+(points 6 208 90 230 90 230 120 90 120 90 650 152 650))
 (connect D6:1 D7:3
 (points 6 384 540 390 540 390 590 130 590 130 670 152 670))
 (connect D7:1 D8:0
@@ -3552,7 +3665,7 @@
 (connect D21:1 D22:1
 (points 10 1123 70 1180 70 1180 390 960 390 960 470 950 470 950 590 600 590 600
 480 617 480)))
-(stackingOrder 1 2 3 7 10 11 12 13 17 9 5 6 14 0 21 19 18 20 15 16 8 4 22)))))
+(stackingOrder 1 2 3 7 10 11 12 13 17 9 5 6 14 21 19 18 20 15 16 8 4 22 0)))))
 (device 110 START25
 (properties
 (variableScope cont)))
@@ -13553,8 +13666,6 @@
 (connect D18:1 D17:1)
 (connect D16:0 D18:0)))
 (contextCarrier
-(wndOrigin 22 22)
-(wndState res)
 (active detail)
 (detail
 (extent 437 531)
@@ -13747,17 +13858,17 @@
 (stackingOrder 0 4 5 8 9 10 11 12 13 14 15 16 17 18 7 2 3 6 1))))
 (device 147 CONTEXT
 (properties
-(name "hp8360 inputFreq")
+(name "hp8757 inputFreq")
 (variableScope cont)
 (trigMode deg)
-(nextID 14)
+(nextID 15)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
 (device 1 FORMULA
 (properties
 (variableScope cont)
-(expr 4 "FA=4480;" "FB=11600;" "//PL = RF_Source_Power;" "PL=0"))
+(expr 4 "FA=4480;" "FB=11600;" "PL = RF_Source_Power;" "//PL=0"))
 (interface
 (output 1
 (name "FA")
@@ -13792,7 +13903,7 @@
 (properties
 (name "hp8757D ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 1 "WRITE TEXT \"PT 19\" EOL"))
+(transactions 1 "WRITE TEXT \"PT19\" EOL"))
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
@@ -13865,6 +13976,13 @@
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
+(device 14 DELAY
+(properties
+(variableScope cont)
+(delay 1))
+(interface
+(output 1
+(name "Done"))))
 (configuration
 (connect D2:0 D0:0)
 (connect D0:0 D1:0)
@@ -13877,12 +13995,15 @@
 (connect D3:0 D5:0)
 (connect D9:0 D7:0)
 (connect D1:0 D8:0)
-(connect D8:0 D9:0)))
+(connect D10:0 D9:0)
+(connect D8:0 D10:0)))
 (contextCarrier
+(wndOrigin 22 22)
+(wndState res)
 (active detail)
 (detail
-(extent 1010 762)
-(anchorPt 80 -325)
+(extent 1071 762)
+(anchorPt -8 -286)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -13911,9 +14032,9 @@
 (active open)
 (icon)
 (open
-(extent 145 50))
+(extent 184 50))
 (terminals on)
-(pinCenter 750 580))
+(pinCenter 760 650))
 (devCarrierFor 8
 (active open)
 (icon
@@ -13930,7 +14051,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -62 -53 4 linear))
+(range -11.3 -10 4 linear))
 (domain 0 800 4 linear)
 (trace 0 onScale 0
 (name "Trace1")
@@ -13938,14 +14059,14 @@
 (lineType 12)
 (pointType 0))
 (markerColor "White"))
-(pinCenter 780 860))
+(pinCenter 780 930))
 (devCarrierFor 9
 (active open)
 (icon)
 (open
-(extent 145 50))
+(extent 184 50))
 (terminals on)
-(pinCenter 750 660))
+(pinCenter 760 730))
 (devCarrierFor 11
 (active open)
 (icon)
@@ -13959,26 +14080,32 @@
 (extent 191 51)
 (iconImage "io.icn"))
 (open
-(extent 234 86))
+(extent 224 96))
 (terminals on)
-(pinCenter 440 720))
+(pinCenter 440 780))
 (devCarrierFor 13
 (active open)
 (icon
 (iconImage "io.icn"))
 (open
-(extent 284 136))
+(extent 224 126))
 (terminals on)
 (pinCenter 440 440))
 (devCarrierFor 5
-(active icon)
+(active open)
 (icon
 (extent 191 51)
 (iconImage "io.icn"))
 (open
-(extent 224 156))
+(extent 224 96))
 (terminals on)
-(pinCenter 440 580))
+(pinCenter 440 650))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 71 31))
+(pinCenter 440 550))
 (connect D2:0 D0:0
 (points 4 440 149 440 170 140 170 140 196))
 (connect D0:0 D1:0
@@ -13992,24 +14119,26 @@
 (connect D6:0 D2:0
 (points 2 440 43 440 52))
 (connect D9:1 D3:1
-(points 2 538 580 645 580))
+(points 2 584 650 635 650))
 (connect D5:1 D4:1
-(points 8 875 660 900 660 900 490 630 490 630 680 600 680 600 860 619 860))
+(points 6 904 730 920 730 920 580 600 580 600 930 619 930))
 (connect D3:0 D5:0
-(points 2 760 607 760 614))
+(points 2 770 677 770 684))
 (connect D9:0 D7:0
-(points 2 440 608 440 656))
+(points 2 440 700 440 711))
 (connect D1:0 D8:0
-(points 2 440 350 440 351))
-(connect D8:0 D9:0
-(points 2 440 510 440 552)))
-(stackingOrder 4 7 8 9 5 3 6 1 0 2))))
+(points 2 440 350 440 356))
+(connect D10:0 D9:0
+(points 2 440 568 440 581))
+(connect D8:0 D10:0
+(points 2 440 505 440 514)))
+(stackingOrder 4 6 1 0 2 7 3 5 8 9 10))))
 (device 148 CONTEXT
 (properties
-(name "hp8360 outputFreq")
+(name "hp8757 outputFreq")
 (variableScope cont)
 (trigMode deg)
-(nextID 12)
+(nextID 15)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -14081,29 +14210,6 @@
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
-(device 7 YPLOT
-(properties
-(name "XY Trace")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 8 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "outRec.Scalar.dBm"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
 (device 9 START25
 (properties
 (variableScope cont)))
@@ -14124,23 +14230,51 @@
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
+(device 12 DELAY
+(properties
+(variableScope cont)
+(delay 2))
+(interface
+(output 1
+(name "Done"))))
+(device 13 YPLOT
+(properties
+(name "XY Trace")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 14 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 AFd Averaging on and factor d\\par\r\nSW2 Sweep hold mode; non-swept mode with HP-IB bus hold off until completion of TSd\\par\r\nRS Restart averaging\\par\r\nTSd Take d sweeps, then hold display\\par\r\n\\par\r\nAS Autoscale\\par\r\nOD output trace data\\par\r\nA0 Averaging off\\par\r\nSW1 Swept mode; normal swept operation\\par\r\n}\r\n"
+)))
 (configuration
 (connect D2:0 D1:0)
 (connect D0:1 D1:1)
 (connect D0:2 D1:2)
 (connect D0:3 D1:3)
-(connect D7:0 D2:0)
+(connect D5:0 D2:0)
 (connect D4:1 D3:1)
 (connect D8:0 D4:0)
-(connect D6:1 D5:1)
-(connect D3:0 D6:0)
-(connect D1:0 D8:0)
-(connect D4:0 D9:0)))
+(connect D1:0 D6:0)
+(connect D4:0 D7:0)
+(connect D6:0 D8:0)
+(connect D3:1 D9:1)))
 (contextCarrier
+(wndOrigin 2 2)
+(wndState res)
 (active detail)
 (detail
 (extent 931 860)
-(anchorPt -89 166)
+(anchorPt -202 -176)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -14171,47 +14305,15 @@
 (open
 (extent 184 56))
 (terminals on)
-(pinCenter 760 480))
+(pinCenter 760 470))
 (devCarrierFor 6
 (active open)
 (icon
 (iconImage "io.icn"))
 (open
-(extent 261 206))
+(extent 264 86))
 (terminals on)
-(pinCenter 450 480))
-(devCarrierFor 7
-(active open)
-(icon
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -11.8 -9.600000000000001 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 770 840))
-(devCarrierFor 8
-(active open)
-(icon)
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 760 570))
+(pinCenter 450 470))
 (devCarrierFor 9
 (active open)
 (icon)
@@ -14236,6 +14338,46 @@
 (extent 234 86))
 (terminals on)
 (pinCenter 450 680))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 450 380))
+(devCarrierFor 13
+(active open)
+(icon
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -11.8 -9.800000000000001 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 800 680))
+(devCarrierFor 14
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 410 180)
+(editing enabled))
+(pinCenter 480 880))
 (connect D2:0 D1:0
 (points 2 450 -1 450 11))
 (connect D0:1 D1:1
@@ -14244,39 +14386,28 @@
 (points 2 269 90 300 90))
 (connect D0:3 D1:3
 (points 2 269 130 300 130))
-(connect D7:0 D2:0
+(connect D5:0 D2:0
 (points 2 450 -107 450 -98))
 (connect D4:1 D3:1
-(points 2 613 480 635 480))
+(points 2 614 470 635 470))
 (connect D8:0 D4:0
-(points 2 450 340 450 356))
-(connect D6:1 D5:1
-(points 6 885 570 910 570 910 620 590 620 590 840 609 840))
-(connect D3:0 D6:0
-(points 2 770 510 770 524))
-(connect D1:0 D8:0
+(points 2 450 398 450 406))
+(connect D1:0 D6:0
 (points 2 450 150 450 181))
-(connect D4:0 D9:0
-(points 2 450 585 450 616)))
-(stackingOrder 0 2 7 5 4 3 6 9 1 8))))
-(device 152 CALL
-(properties
-(name "Call Get_Power_Power_Meter")
-(variableScope cont)
-(callFunc "Get_Power_Power_Meter")
-(parmMode rev30))
-(interface
-(output 1
-(name "MRF_Pwr")
-(lock name constraints)
-(optional yes))))
+(connect D4:0 D7:0
+(points 2 450 515 450 616))
+(connect D6:0 D8:0
+(points 2 450 340 450 344))
+(connect D3:1 D9:1
+(points 6 904 470 920 470 920 400 620 400 620 680 639 680)))
+(stackingOrder 0 2 5 7 1 6 4 3 8 9 10))))
 (device 153 FORMULA
 (properties
-(name "settings")
+(name "Knob Settings")
 (variableScope cont)
 (expr 7 "Power_Meter_On=\"Success\";" "Power_Meter_TXT=\"ML248xA\";"
 "RF_Source_Power = 0;" "RF_Source_Txt=\"HP83650B\";" "RF_Source_On=1;"
-"Scalar_On=0" "")))
+"Scalar_On=1" "")))
 (device 154 DECLVAR
 (properties
 (name "Declare Power_Meter_On")
@@ -14293,46 +14424,12 @@
 (implementation
 (value Text
 (data  ""))))
-(device 158 CALL
-(properties
-(name "Call ML248xA")
-(variableScope cont)
-(callFunc "ML248xA")
-(parmMode rev30)))
 (device 159 FORMULA
 (properties
+(name "Input Record decode")
 (variableScope cont)
 (expr 8 "InRec.Scalar.Freq;" "InRec.Scalar.dBm;" "InRec.Scalar.error;"
-"InRec.Meter.Freq;" "InRec.Meter.dBm;" "" "" ""))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 163 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 164 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "InRec.Meter.Freq"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
+"InRec.Meter.Freq;" "InRec.Meter.dBm;" "" "" "")))
 (device 166 DECLVAR
 (properties
 (name "Declare MRF_Pwr")
@@ -14341,32 +14438,6 @@
 (implementation
 (value Real64
 (data  0))))
-(device 167 CALL
-(properties
-(name "Call HP83650B")
-(variableScope cont)
-(callFunc "HP83650B")
-(parmMode rev30)))
-(device 168 FORMULA
-(properties
-(name "RF_Source_Freq")
-(variableScope cont)
-(expr 2 "RF_Source_Freq=A;" "Cal_RF_Freq=A"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 169 CALL
-(properties
-(name "Call Tune_RF_Source")
-(variableScope cont)
-(callFunc "Tune_RF_Source")
-(parmMode rev30)))
 (device 170 DECLVAR
 (properties
 (name "Declare RF_Source_Freq")
@@ -14399,7 +14470,119 @@
 (implementation
 (value Text
 (data  ""))))
-(device 175 COLLECTOR
+(device 178 DECLVAR
+(properties
+(name "Declare Cal_RF_Freq")
+(scope glob)
+(globalName "Cal_RF_Freq"))
+(implementation
+(value Real64
+(data  0))))
+(device 196 DECLVAR
+(properties
+(name "Declare Scalar_On")
+(scope glob)
+(globalName "Scalar_On"))
+(implementation
+(value Real64
+(data  0))))
+(device 199 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "Scalar is done. Connect Power Sensor.")
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK  Cancel")
+(buttonLabel1 "OK")
+(buttonLabel2 "Cancel")
+(buttonLabel3 "")
+(bdefault "OK")))
+(device 203 CONTEXT
+(properties
+(name "PowerSensor inputFreq")
+(variableScope cont)
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "InRec.Meter.Freq"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "inRec.Meter.dBm[*]=A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 CALL
+(properties
+(name "Call Get_Power_Power_Meter")
+(variableScope cont)
+(callFunc "Get_Power_Power_Meter")
+(parmMode rev30))
+(interface
+(output 1
+(name "MRF_Pwr")
+(lock name constraints)
+(optional yes))))
+(device 4 CALL
+(properties
+(name "Call Tune_RF_Source")
+(variableScope cont)
+(callFunc "Tune_RF_Source")
+(parmMode rev30)))
+(device 5 FORMULA
+(properties
+(name "RF_Source_Freq")
+(variableScope cont)
+(expr 2 "RF_Source_Freq=A;" "Cal_RF_Freq=A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 COLLECTOR
 (properties
 (variableScope cont))
 (interface
@@ -14413,10 +14596,137 @@
 (output 1
 (name "Array")
 (tag "Array"))))
-(device 176 FORMULA
+(configuration
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:0 D2:0)
+(connect D6:1 D2:1)
+(connect D4:0 D3:0)
+(connect D5:0 D4:0)
+(connect D1:1 D5:0)
+(connect D1:1 D5:1)
+(connect D3:0 D6:0)
+(connect D3:1 D6:1)
+(connect D1:0 D6:2)))
+(contextCarrier
+(active detail)
+(detail
+(extent 570 506)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 170 110))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open
+(extent 158 31))
+(pinCenter 180 180))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 170 420))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 181 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 250))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 134 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 220))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 103 15))
+(open
+(extent 154 80))
+(terminals on)
+(pinCenter 410 180))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 95 54))
+(terminals on)
+(pinCenter 410 300))
+(connect D0:0 D1:0
+(points 2 180 137 180 144))
+(connect D0:1 D1:1
+(points 6 295 110 320 110 320 40 40 40 40 180 98 180))
+(connect D1:0 D2:0
+(points 2 180 198 180 374))
+(connect D6:1 D2:1
+(points 6 439 300 460 300 460 350 40 350 40 420 65 420))
+(connect D4:0 D3:0
+(points 2 410 230 410 240))
+(connect D5:0 D4:0
+(points 2 410 190 410 210))
+(connect D1:1 D5:0
+(points 5 261 180 340 180 340 150 410 150 410 170))
+(connect D1:1 D5:1
+(points 2 261 180 356 180))
+(connect D3:0 D6:0
+(points 2 410 260 410 285))
+(connect D3:1 D6:1
+(points 6 503 250 520 250 520 340 360 340 360 290 381 290))
+(connect D1:0 D6:2
+(points 3 180 198 180 310 381 310)))
+(stackingOrder 0 1 2 4 5 6 3))))
+(device 204 CONTEXT
+(properties
+(name "PowerSensor outputFreq")
+(variableScope cont)
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
 (properties
 (variableScope cont)
-(expr 1 "inRec.Meter.dBm[*]=A"))
+(expr 1 "outRec.Meter.Freq"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "outRec.Meter.dBm[*]=A"))
 (interface
 (input 1
 (name "A")
@@ -14426,15 +14736,156 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
-(device 178 DECLVAR
+(device 3 CALL
 (properties
-(name "Declare Cal_RF_Freq")
-(scope glob)
-(globalName "Cal_RF_Freq"))
-(implementation
-(value Real64
-(data  0))))
-(device 179 CONSTANT
+(name "Call Get_Power_Power_Meter")
+(variableScope cont)
+(callFunc "Get_Power_Power_Meter")
+(parmMode rev30))
+(interface
+(output 1
+(name "MRF_Pwr")
+(lock name constraints)
+(optional yes))))
+(device 4 CALL
+(properties
+(name "Call Tune_RF_Source")
+(variableScope cont)
+(callFunc "Tune_RF_Source")
+(parmMode rev30)))
+(device 5 FORMULA
+(properties
+(name "RF_Source_Freq")
+(variableScope cont)
+(expr 2 "RF_Source_Freq=A;" "Cal_RF_Freq=A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 COLLECTOR
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(configuration
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:0 D2:0)
+(connect D6:1 D2:1)
+(connect D4:0 D3:0)
+(connect D5:0 D4:0)
+(connect D1:1 D5:0)
+(connect D1:1 D5:1)
+(connect D3:0 D6:0)
+(connect D3:1 D6:1)
+(connect D1:0 D6:2)))
+(contextCarrier
+(active detail)
+(detail
+(extent 570 506)
+(anchorPt -83 -20)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 155 50))
+(terminals on)
+(pinCenter 170 110))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open
+(extent 158 31))
+(pinCenter 180 180))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 174 50))
+(terminals on)
+(pinCenter 170 420))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 181 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 250))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 134 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 220))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 103 15))
+(open
+(extent 154 80))
+(terminals on)
+(pinCenter 410 180))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 95 54))
+(terminals on)
+(pinCenter 410 300))
+(connect D0:0 D1:0
+(points 2 180 137 180 144))
+(connect D0:1 D1:1
+(points 6 300 110 320 110 320 40 40 40 40 180 98 180))
+(connect D1:0 D2:0
+(points 2 180 198 180 374))
+(connect D6:1 D2:1
+(points 6 439 300 460 300 460 350 30 350 30 420 50 420))
+(connect D4:0 D3:0
+(points 2 410 230 410 240))
+(connect D5:0 D4:0
+(points 2 410 190 410 210))
+(connect D1:1 D5:0
+(points 5 261 180 340 180 340 150 410 150 410 170))
+(connect D1:1 D5:1
+(points 2 261 180 356 180))
+(connect D3:0 D6:0
+(points 2 410 260 410 285))
+(connect D3:1 D6:1
+(points 6 503 250 520 250 520 340 360 340 360 290 381 290))
+(connect D1:0 D6:2
+(points 3 180 198 180 310 381 310)))
+(stackingOrder 1 5 6 0 2 3 4))))
+(device 205 CONTEXT
+(properties
+(name "InputErrorCalc")
+(variableScope cont)
+(trigMode deg)
+(nextID 15)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
 (properties
 (name "Meter dBm")
 (variableScope cont)
@@ -14470,30 +14921,7 @@
 -10.9 -10.904 ]))
 (initValue Real
 (data  0))))
-(device 180 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "inRec.Meter.dBm[*]=a;" ""))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 181 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "InRec.Scalar.dBm"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 183 CONSTANT
+(device 1 CONSTANT
 (properties
 (name "Scalar dBm")
 (variableScope cont)
@@ -14589,33 +15017,7 @@
 -11.257 ]))
 (initValue Real
 (data  0))))
-(device 184 XYPLOT
-(properties
-(name "Meter ")
-(variableScope cont))
-(interface
-(input 1
-(name "XData")
-(lock constraints))
-(input 2
-(name "Meter dBm")
-(lock constraints)))
-(implementation
-(tracePin 2)
-(graphMode rectangular)
-(autoAutoX)))
-(device 185 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "M=InRec.Meter.Freq;" "S=InRec.Scalar.Freq;"))
-(interface
-(output 1
-(name "M")
-(optional yes))
-(output 2
-(name "S")
-(optional yes))))
-(device 186 CONSTANT
+(device 2 CONSTANT
 (properties
 (name "Meter Freq")
 (variableScope cont)
@@ -14654,7 +15056,7 @@
 11279.6 11315.2 11350.8 11386.4 11422 11457.6 11493.2 11528.8 11564.4 11600 ]))
 (initValue Real
 (data  0))))
-(device 187 CONSTANT
+(device 3 CONSTANT
 (properties
 (name "Scalar Freq")
 (variableScope cont)
@@ -14769,280 +15171,9 @@
 11555.5 11564.4 11573.3 11582.2 11591.1 11600 ]))
 (initValue Real
 (data  0))))
-(device 189 XYPLOT
+(device 4 CONSTANT
 (properties
-(name "Scalar ")
-(variableScope cont))
-(interface
-(input 1
-(name "XData")
-(lock constraints))
-(input 2
-(name "Scalar dBm")
-(lock constraints)))
-(implementation
-(tracePin 2)
-(graphMode rectangular)
-(autoAutoX)))
-(device 190 CONTEXT
-(properties
-(name "Extrapolate")
-(variableScope cont)
-(trigMode deg)
-(nextID 7)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 1 FORMULA
-(properties
-(variableScope cont)
-(expr 4 "x=InRec.Scalar.freq;" "yA=InRec.Meter.dBm;" "xA=InRec.Meter.freq;" ""))
-(interface
-(output 1
-(name "x")
-(optional yes))
-(output 2
-(name "yA")
-(optional yes))
-(output 3
-(name "xA")
-(optional yes))))
-(device 2 EXVEEOBJECT
-(properties
-(name "Lookup Table")
-(variableScope cont)
-(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
-)
-(assemblyName
-"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
-))
-(interface
-(input 1
-(name "x")
-(tag "x")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "yArray")
-(tag "yArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(type control)
-(name "xArray")
-(tag "xArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "y")
-(lock name constraints)
-(optional yes)))
-(implementation))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "InRec.Scalar.error[*] = InRec.Scalar.dBm - Meter" ""))
-(interface
-(input 1
-(name "Meter")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 6 NOTE
-(properties
-(variableScope cont)
-(text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 After the Power Meter is done measureing\\par\r\nthen extrapolate its array to 801pnts\\par\r\nand calculate the error and save in the InRec.\\par\r\n\\par\r\nmeasured = actuall + error\\par\r\nScalar = meter + error\\par\r\nerror = measured - actual\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
-)))
-(configuration
-(connect D1:0 D0:0)
-(connect D1:1 D0:1)
-(connect D0:1 D2:1)
-(connect D1:2 D2:2)
-(connect D1:3 D2:3)
-(connect D2:1 D3:1)
-(connect D0:0 D3:2)
-(connect D0:0 D4:0)
-(connect D3:1 D4:1)
-(connect D3:1 O1:1)))
-(contextCarrier
-(wndOrigin 162 162)
-(wndState res)
-(active detail)
-(detail
-(extent 953 536)
-(anchorPt 147 29)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 130 190))
-(devCarrierFor 1
-(active open)
-(icon
-(extent 50 34))
-(open
-(extent 144 110))
-(terminals on)
-(pinCenter 130 90))
-(devCarrierFor 2
-(active open)
-(icon
-(iconImage "vTools\\General\\table-lookup.jpg"))
-(open
-(extent 42 76))
-(terminals on)
-(titleBg "Light Golden Orange")
-(pinCenter 370 210))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 490 290))
-(devCarrierFor 5
-(active open)
-(icon
-(extent 50 15))
-(open
-(extent 314 66))
-(terminals on)
-(pinCenter 130 410))
-(devCarrierFor 6
-(active icon)
-(icon
-(extent 68 51)
-(iconImage "notepad.icn"))
-(open
-(extent 410 180)
-(editing enabled))
-(pinCenter 480 120))
-(connect D1:0 D0:0
-(points 4 130 147 130 135 130 135 130 162))
-(connect D1:1 D0:1
-(points 6 234 60 180 60 180 50 50 50 50 190 66 190))
-(connect D0:1 D2:1
-(points 2 193 190 296 190))
-(connect D1:2 D2:2
-(points 4 234 90 210 90 210 210 296 210))
-(connect D1:3 D2:3
-(points 6 234 120 200 120 200 220 210 220 210 230 296 230))
-(connect D2:1 D3:1
-(points 4 423 210 440 210 440 280 461 280))
-(connect D0:0 D3:2
-(points 3 130 218 130 300 461 300))
-(connect D0:0 D4:0
-(points 4 130 218 130 309 130 309 130 356))
-(connect D3:1 D4:1
-(points 6 519 290 540 290 540 440 80 440 80 410 -80 410))
-(connect D3:1 O1:1
-(points 4 519 290 550 290 550 238 805 238)))
-(stackingOrder 0 2 3 5 1 4))))
-(device 191 XYPLOT
-(properties
-(name "Scalar-error  equals Meter")
-(variableScope cont))
-(interface
-(input 1
-(name "XData")
-(lock constraints))
-(input 2
-(name "Scalar dBm")
-(lock constraints))
-(input 3
-(name "Meter dBm")
-(lock constraints)
-(optional yes))
-(input 4
-(name "Scalar-error")
-(lock constraints)
-(optional yes)))
-(implementation
-(tracePin 2)
-(tracePin 3)
-(tracePin 4)
-(graphMode rectangular)
-(autoAutoX)))
-(device 192 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "InRec.Scalar.error"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 193 XYPLOT
-(properties
-(name "Scalar error")
-(variableScope cont))
-(interface
-(input 1
-(name "XData")
-(lock constraints))
-(input 2
-(name "Scalar error")
-(lock constraints)))
-(implementation
-(tracePin 2)
-(graphMode rectangular)
-(autoAutoX)))
-(device 194 CONSTANT
-(properties
-(name "Scalar error")
+(name "InScalar error")
 (variableScope cont)
 (enableEditing 1))
 (interface
@@ -15255,7 +15386,48 @@
 -0.3689999999999998 ]))
 (initValue Real
 (data  0))))
-(device 195 FORMULA
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "InRec.Meter.dBm;" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "InRec.Scalar.dBm"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "M=InRec.Meter.Freq;" "S=InRec.Scalar.Freq;"))
+(interface
+(output 1
+(name "M")
+(optional yes))
+(output 2
+(name "S")
+(optional yes))))
+(device 8 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "InRec.Scalar.error"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 9 FORMULA
 (properties
 (variableScope cont)
 (expr 1 "InRec.Scalar.dBm-InRec.Scalar.error"))
@@ -15265,294 +15437,386 @@
 (tag "Result")
 (lock name constraints)
 (optional yes))))
-(device 196 DECLVAR
+(device 10 CONTEXT
 (properties
-(name "Declare Scalar_On")
-(scope glob)
-(globalName "Scalar_On"))
-(implementation
-(value Real64
-(data  0))))
-(device 198 EXITPROCESS
-(properties
+(name "Extrapolate InputErr")
 (variableScope cont)
-(code 0)))
-(device 199 MESSAGEBOX
-(properties
-(variableScope cont)
-(message "Scalar is done. Connect Power Sensor.")
-(symbol Information))
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
 (interface
 (output 1
-(name "OK")
-(lock name constraints))
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 4 "x=InRec.Scalar.freq;" "yA=InRec.Meter.dBm;" "xA=InRec.Meter.freq;" ""))
+(interface
+(output 1
+(name "x")
+(optional yes))
 (output 2
-(name "Cancel")
-(lock name constraints)))
-(implementation
-(customButtons 0)
-(displayMode 3)
-(buttons "OK  Cancel")
-(buttonLabel1 "OK")
-(buttonLabel2 "Cancel")
-(buttonLabel3 "")
-(bdefault "OK")))
+(name "yA")
+(optional yes))
+(output 3
+(name "xA")
+(optional yes))))
+(device 2 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "InRec.Scalar.error[*] = InRec.Scalar.dBm - Meter" ""))
+(interface
+(input 1
+(name "Meter")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 After the Power Meter is done measureing\\par\r\nthen extrapolate its array to 801pnts\\par\r\nand calculate the error and save in the InRec.\\par\r\n\\par\r\nmeasured = actuall + error\\par\r\nScalar = meter + error\\par\r\nerror = measured - actual\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
+)))
 (configuration
-(connect D0:0 D2:0)
-(connect D2:0 D3:0)
-(connect D3:0 D4:0)
-(connect D17:0 D6:0)
-(connect D4:0 D7:0)
-(connect D13:0 D12:0)
-(connect D13:1 D12:1)
-(connect D42:1 D13:0)
-(connect D12:1 D16:0)
-(connect D12:1 D16:1)
-(connect D16:0 D17:0)
-(connect D6:0 D22:0)
-(connect D6:1 D22:1)
-(connect D12:0 D22:2)
-(connect D12:0 D23:0)
-(connect D22:1 D23:1)
-(connect D25:1 D26:1)
-(connect D26:0 D27:0)
-(connect D30:1 D29:1)
-(connect D26:1 D29:2)
-(connect D27:0 D30:0)
-(connect D30:2 D33:1)
-(connect D27:1 D33:2)
-(connect D30:0 D34:0)
-(connect D30:2 D35:1)
-(connect D27:1 D35:2)
-(connect D34:1 D35:3)
-(connect D39:1 D35:4)
-(connect D34:0 D36:0)
-(connect D30:2 D37:1)
-(connect D36:1 D37:2)
-(connect D36:0 D39:0)
-(connect D7:0 D42:0)))
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:1 D2:1)
+(connect D1:2 D2:2)
+(connect D1:3 D2:3)
+(connect D2:1 D3:1)
+(connect D0:0 D3:2)
+(connect D0:0 D4:0)
+(connect D3:1 D4:1)
+(connect D4:1 O1:1)))
 (contextCarrier
-(wndOrigin 42 41)
-(wndState res)
 (active detail)
 (detail
-(extent 2116 853)
-(anchorPt 280 211)
+(extent 953 536)
+(anchorPt 147 29)
 (configuration
-(devCarrierFor 110
-(active open)
-(icon)
-(open
-(extent 47 22))
-(title off)
-(pinCenter 330 100))
-(devCarrierFor 111
-(active open)
-(icon
-(iconImage "stop.icn"))
-(open
-(extent 65 31))
-(pinCenter 320 710))
-(devCarrierFor 131
+(devCarrierFor 0
 (active icon)
-(icon
-(extent 53 15))
-(open
-(extent 175 117)
-(carbonCopy))
-(titleBg "Light Beige")
-(pinCenter 330 130))
-(devCarrierFor 143
-(active icon)
-(icon
-(extent 118 15))
-(terminals on)
-(pinCenter 330 160))
-(devCarrierFor 147
-(active icon)
-(icon
-(extent 106 15))
-(terminals on)
-(pinCenter 330 190))
-(devCarrierFor 148
-(active icon)
-(icon
-(extent 114 15))
-(terminals on)
-(pinCenter 330 230))
-(devCarrierFor 152
-(active icon)
-(icon
-(extent 181 15))
-(open
-(extent 176 51))
-(terminals on)
-(pinCenter 550 450))
-(devCarrierFor 153
-(active open)
-(icon
-(extent 48 15))
-(open
-(extent 274 186))
-(terminals on)
-(pinCenter 50 30))
-(devCarrierFor 154
-(active icon)
-(icon
-(extent 155 15))
-(open
-(extent 199 115))
-(pinCenter 740 90))
-(devCarrierFor 155
-(active icon)
-(icon
-(extent 160 15))
-(open
-(extent 199 115))
-(pinCenter 740 160))
-(devCarrierFor 158
-(active icon)
-(icon
-(extent 81 15))
-(open
-(extent 176 51))
-(terminals on)
-(pinCenter -30 310))
-(devCarrierFor 159
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 154 236))
-(terminals on)
-(pinCenter 880 170))
-(devCarrierFor 163
-(active open)
 (icon
 (extent 122 51)
 (iconImage "loop.icn"))
-(open
-(extent 158 31))
-(pinCenter 320 380))
-(devCarrierFor 164
+(open)
+(pinCenter 130 190))
+(devCarrierFor 1
 (active open)
-(icon)
+(icon
+(extent 50 34))
 (open
-(extent 145 50))
+(extent 184 96))
 (terminals on)
-(pinCenter 310 310))
-(devCarrierFor 166
-(active icon)
+(pinCenter 130 90))
+(devCarrierFor 2
+(active open)
 (icon
-(extent 108 15))
+(iconImage "vTools\\General\\table-lookup.jpg"))
 (open
-(extent 199 115))
-(pinCenter 540 180))
-(devCarrierFor 167
-(active icon)
-(icon
-(extent 93 15))
-(open
-(extent 176 51))
+(extent 42 76))
 (terminals on)
-(pinCenter 70 310))
-(devCarrierFor 168
-(active icon)
-(icon
-(extent 103 15))
-(open
-(extent 154 80))
-(terminals on)
-(pinCenter 550 380))
-(devCarrierFor 169
-(active icon)
-(icon
-(extent 134 15))
-(open
-(extent 176 51))
-(terminals on)
-(pinCenter 550 410))
-(devCarrierFor 170
-(active icon)
-(icon
-(extent 154 15))
-(open
-(extent 199 115))
-(pinCenter 540 110))
-(devCarrierFor 171
-(active icon)
-(icon
-(extent 144 15))
-(open
-(extent 199 115))
-(pinCenter 540 90))
-(devCarrierFor 172
-(active icon)
-(icon
-(extent 165 15))
-(open
-(extent 201 115))
-(pinCenter 540 130))
-(devCarrierFor 173
-(active icon)
-(icon
-(extent 143 15))
-(open
-(extent 199 115))
-(pinCenter 540 150))
-(devCarrierFor 175
+(titleBg "Light Golden Orange")
+(pinCenter 370 210))
+(devCarrierFor 4
 (active icon)
 (icon
 (extent 53 25))
-(open
-(extent 95 54))
+(open)
 (terminals on)
-(pinCenter 550 500))
-(devCarrierFor 176
+(pinCenter 490 290))
+(devCarrierFor 5
 (active open)
-(icon)
+(icon
+(extent 50 15))
 (open
-(extent 145 50))
+(extent 334 66))
 (terminals on)
-(pinCenter 310 620))
-(devCarrierFor 178
+(pinCenter 130 410))
+(devCarrierFor 6
 (active icon)
 (icon
-(extent 132 15))
+(extent 68 51)
+(iconImage "notepad.icn"))
 (open
-(extent 199 115))
-(pinCenter 640 220))
-(devCarrierFor 179
+(extent 410 180)
+(editing enabled))
+(pinCenter 480 120))
+(connect D1:0 D0:0
+(points 2 130 140 130 162))
+(connect D1:1 D0:1
+(points 6 254 60 270 60 270 0 -10 0 -10 190 66 190))
+(connect D0:1 D2:1
+(points 2 193 190 296 190))
+(connect D1:2 D2:2
+(points 4 254 90 280 90 280 210 296 210))
+(connect D1:3 D2:3
+(points 4 254 120 270 120 270 230 296 230))
+(connect D2:1 D3:1
+(points 4 423 210 440 210 440 280 461 280))
+(connect D0:0 D3:2
+(points 3 130 218 130 300 461 300))
+(connect D0:0 D4:0
+(points 2 130 218 130 356))
+(connect D3:1 D4:1
+(points 6 519 290 540 290 540 330 -110 330 -110 410 -90 410))
+(connect D4:1 O1:1
+(points 4 349 410 550 410 550 238 805 238)))
+(stackingOrder 0 2 3 5 1 4))))
+(device 11 XYPLOT
+(properties
+(name "Meter ")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Meter dBm")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 12 XYPLOT
+(properties
+(name "Scalar error")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar error")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 13 XYPLOT
+(properties
+(name "Scalar ")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar dBm")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 14 XYPLOT
+(properties
+(name "Scalar-error  equals Meter")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar dBm")
+(lock constraints))
+(input 3
+(name "Meter dBm")
+(lock constraints)
+(optional yes))
+(input 4
+(name "Scalar-error")
+(lock constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(tracePin 3)
+(tracePin 4)
+(graphMode rectangular)
+(autoAutoX)))
+(configuration
+(connect D5:0 D6:0)
+(connect D6:0 D7:0)
+(connect D10:0 D8:0)
+(connect D8:0 D9:0)
+(connect D7:0 D10:0)
+(connect D7:1 D11:1)
+(connect D5:1 D11:2)
+(connect D7:2 D12:1)
+(connect D8:1 D12:2)
+(connect D7:2 D13:1)
+(connect D6:1 D13:2)
+(connect D7:2 D14:1)
+(connect D6:1 D14:2)
+(connect D10:1 D14:3)
+(connect D9:1 D14:4)))
+(contextCarrier
+(wndOrigin -285 211)
+(wndState res)
+(active detail)
+(detail
+(extent 1524 863)
+(anchorPt -30 -3)
+(configuration
+(devCarrierFor 0
 (active open)
 (icon
 (extent 64 0))
 (open
 (extent 117 74)
 (showFormat real))
-(pinCenter 870 640))
-(devCarrierFor 180
-(active open)
-(icon)
-(open
-(extent 164 70))
-(terminals on)
-(pinCenter 1090 640))
-(devCarrierFor 181
-(active open)
-(icon)
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 1090 730))
-(devCarrierFor 183
+(pinCenter 120 290))
+(devCarrierFor 1
 (active open)
 (icon
 (extent 70 0))
 (open
 (extent 117 74)
 (showFormat real))
-(pinCenter 730 770))
-(devCarrierFor 184
+(pinCenter 120 390))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 63 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 490))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 69 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 590))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 81 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 700))
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 144 76))
+(terminals on)
+(pinCenter 380 290))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 380 380))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 174 76))
+(terminals on)
+(pinCenter 390 490))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 380 650))
+(devCarrierFor 9
+(active open)
+(icon)
+(open
+(extent 265 76))
+(terminals on)
+(pinCenter 380 760))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 117 15))
+(terminals on)
+(pinCenter 390 570))
+(devCarrierFor 11
 (active open)
 (icon
 (extent 68 0)
@@ -15569,7 +15833,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -11.5 -10 4 linear))
+(range -14 -10 4 linear))
 (domain 4000 12000 4 linear)
 (trace 0 onScale 0
 (name "Meter dBm")
@@ -15577,106 +15841,8 @@
 (lineType 12)
 (pointType 0))
 (markerColor "White"))
-(pinCenter 1540 570))
-(devCarrierFor 185
-(active open)
-(icon)
-(open
-(extent 164 66))
-(terminals on)
-(pinCenter 1100 840))
-(devCarrierFor 186
-(active open)
-(icon
-(extent 63 0))
-(open
-(extent 117 74)
-(showFormat real))
-(pinCenter 850 890))
-(devCarrierFor 187
-(active open)
-(icon
-(extent 69 0))
-(open
-(extent 117 74)
-(showFormat real))
-(pinCenter 800 960))
-(devCarrierFor 189
-(active open)
-(icon
-(extent 68 0)
-(iconImage "display.icn"))
-(open
-(extent 318 279)
-(displayMode 37)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Scalar dBm")
-(domainName "Scalar Freq")
-(Yspacing 2)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -11.5 -10 4 linear))
-(domain 4000 12000 4 linear)
-(trace 0 onScale 0
-(name "Scalar dBm")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 1990 570))
-(devCarrierFor 190
-(active icon)
-(icon
-(extent 67 15))
-(terminals on)
-(pinCenter 1100 910))
-(devCarrierFor 191
-(active open)
-(icon
-(extent 156 0)
-(iconImage "display.icn"))
-(open
-(extent 318 279)
-(displayMode 37)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "dBm")
-(domainName "Scalar Freq")
-(Yspacing 2)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -11.5 -10 4 linear))
-(domain 4000 12000 4 linear)
-(trace 0 onScale 0
-(name "Scalar dBm")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(trace 1 onScale 0
-(name "Meter dBm")
-(traceColor "Green")
-(lineType 12)
-(pointType 0))
-(trace 2 onScale 0
-(name "Scalar-error")
-(traceColor "Red")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 2000 940))
-(devCarrierFor 192
-(active open)
-(icon)
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 1090 1000))
-(devCarrierFor 193
+(pinCenter 830 220))
+(devCarrierFor 12
 (active open)
 (icon
 (extent 70 0)
@@ -15701,36 +15867,1319 @@
 (lineType 12)
 (pointType 0))
 (markerColor "White"))
-(pinCenter 1540 930))
-(devCarrierFor 194
+(pinCenter 830 580))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Scalar dBm")
+(domainName "Scalar Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -14 -10 4 linear))
+(domain 4000 12000 4 linear)
+(trace 0 onScale 0
+(name "Scalar dBm")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1290 240))
+(devCarrierFor 14
+(active open)
+(icon
+(extent 156 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "Scalar Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -14 -10 4 linear))
+(domain 4000 12000 4 linear)
+(trace 0 onScale 0
+(name "Scalar dBm")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(trace 1 onScale 0
+(name "Meter dBm")
+(traceColor "Green")
+(lineType 12)
+(pointType 0))
+(trace 2 onScale 0
+(name "Scalar-error")
+(traceColor "Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1290 590))
+(connect D5:0 D6:0
+(points 2 390 330 390 334))
+(connect D6:0 D7:0
+(points 2 390 407 390 431))
+(connect D10:0 D8:0
+(points 2 390 580 390 604))
+(connect D8:0 D9:0
+(points 2 390 677 390 701))
+(connect D7:0 D10:0
+(points 2 390 530 390 560))
+(connect D7:1 D11:1
+(points 4 509 470 530 470 530 150 668 150))
+(connect D5:1 D11:2
+(points 2 504 290 668 290))
+(connect D7:2 D12:1
+(points 2 509 510 668 510))
+(connect D8:1 D12:2
+(points 2 505 650 668 650))
+(connect D7:2 D13:1
+(points 8 509 510 650 510 650 400 1010 400 1010 480 1100 480 1100 170 1128 170))
+(connect D6:1 D13:2
+(points 4 505 380 1010 380 1010 310 1128 310))
+(connect D7:2 D14:1
+(points 6 509 510 650 510 650 400 1010 400 1010 480 1128 480))
+(connect D6:1 D14:2
+(points 4 505 380 1020 380 1020 550 1128 550))
+(connect D10:1 D14:3
+(points 8 451 570 590 570 590 740 1000 740 1000 680 1010 680 1010 620 1128 620))
+(connect D9:1 D14:4
+(points 4 565 760 1010 760 1010 690 1128 690)))
+(stackingOrder 0 1 2 3 4 5 6 7 8 9 12 10 13 14 11))))
+(device 206 CONTEXT
+(properties
+(name "OutputErrorCalc")
+(variableScope cont)
+(trigMode deg)
+(nextID 15)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Meter dBm")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 201)
+(data  [ -11.485 -11.553 -11.532 -11.532 -11.554 -11.547 -11.542 -11.598 -11.565
+-11.604 -11.645 -11.612 -11.619 -11.669 -11.723 -11.737 -11.783 -11.763 -11.758
+-11.737 -11.759 -11.76 -11.734 -11.741 -11.705 -11.699 -11.75 -11.726 -11.731
+-11.745 -11.732 -11.755 -11.812 -11.852 -11.84 -11.826 -11.803 -11.812 -11.826
+-11.83 -11.83 -11.877 -11.918 -11.939 -11.953 -11.974 -11.977 -11.967 -11.915
+-11.955 -11.963 -11.94 -11.948 -11.967 -11.962 -11.982 -12.017 -12.037 -12.085
+-12.097 -12.08 -12.088 -12.08 -12.088 -12.09 -12.144 -12.17 -12.188 -12.207
+-12.289 -12.243 -12.256 -12.28 -12.318 -12.362 -12.357 -12.299 -12.27 -12.255
+-12.245 -12.29 -12.267 -12.246 -12.276 -12.312 -12.293 -12.295 -12.327 -12.306
+-12.285 -12.28 -12.296 -12.329 -12.306 -12.368 -12.387 -12.352 -12.398 -12.363
+-12.354 -12.45 -12.513 -12.362 -12.244 -12.245 -12.275 -12.328 -12.403 -12.368
+-12.269 -12.383 -12.427 -12.406 -12.507 -12.502 -12.626 -12.588 -12.572 -12.412
+-12.459 -12.573 -12.518 -12.557 -12.658 -12.526 -12.513 -12.62 -12.541 -12.804
+-12.512 -12.442 -12.441 -12.618 -12.565 -12.507 -12.649 -12.696 -12.731 -12.845
+-12.835 -12.775 -12.798 -12.771 -12.737 -12.739 -12.728 -12.708 -12.712 -12.713
+-12.723 -12.755 -12.771 -12.759 -12.743 -12.72 -12.8 -12.844 -12.765 -12.742
+-12.758 -12.727 -12.801 -12.858 -12.759 -12.838 -12.889 -12.802 -12.833 -12.823
+-12.766 -12.901 -12.876 -12.735 -12.814 -12.882 -12.877 -13 -12.944 -12.926
+-13.15 -13.254 -13.161 -13.307 -13.227 -13.15 -13.303 -13.316 -13.295 -14.277
+-14.38 -13.141 -13.128 -13.11 -13.047 -13.109 -13.108 -13.012 -13.018 -13.112
+-12.991 -12.94 ]))
+(initValue Real
+(data  0))))
+(device 1 CONSTANT
+(properties
+(name "Scalar dBm")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 801)
+(data  [ -10.216 -10.219 -10.221 -10.219 -10.219 -10.205 -10.205 -10.211 -10.221
+-10.235 -10.243 -10.241 -10.241 -10.238 -10.246 -10.263 -10.268 -10.263 -10.263
+-10.26 -10.26 -10.263 -10.268 -10.276 -10.287 -10.293 -10.293 -10.29 -10.282
+-10.287 -10.298 -10.309 -10.318 -10.32 -10.318 -10.323 -10.323 -10.323 -10.329
+-10.331 -10.326 -10.329 -10.326 -10.326 -10.329 -10.323 -10.329 -10.337 -10.34
+-10.342 -10.342 -10.34 -10.351 -10.364 -10.367 -10.378 -10.384 -10.386 -10.386
+-10.386 -10.389 -10.395 -10.386 -10.381 -10.381 -10.378 -10.378 -10.386 -10.392
+-10.4 -10.408 -10.414 -10.425 -10.425 -10.422 -10.422 -10.427 -10.433 -10.436
+-10.436 -10.438 -10.436 -10.436 -10.438 -10.438 -10.449 -10.455 -10.452 -10.449
+-10.449 -10.458 -10.471 -10.482 -10.491 -10.491 -10.485 -10.482 -10.48 -10.477
+-10.474 -10.474 -10.471 -10.471 -10.482 -10.485 -10.491 -10.493 -10.496 -10.513
+-10.521 -10.515 -10.529 -10.529 -10.535 -10.546 -10.546 -10.543 -10.535 -10.529
+-10.529 -10.537 -10.54 -10.54 -10.543 -10.543 -10.551 -10.546 -10.548 -10.554
+-10.562 -10.565 -10.568 -10.573 -10.573 -10.579 -10.581 -10.581 -10.573 -10.581
+-10.584 -10.579 -10.584 -10.584 -10.598 -10.612 -10.617 -10.625 -10.631 -10.653
+-10.655 -10.653 -10.653 -10.655 -10.664 -10.661 -10.658 -10.647 -10.642 -10.642
+-10.642 -10.65 -10.653 -10.658 -10.661 -10.661 -10.661 -10.664 -10.669 -10.68
+-10.688 -10.694 -10.694 -10.779 -10.694 -10.669 -10.677 -10.691 -10.702 -10.721
+-10.721 -10.71 -10.71 -10.71 -10.732 -10.754 -10.768 -10.76 -10.749 -10.749
+-10.765 -10.779 -10.779 -10.771 -10.765 -10.774 -10.774 -10.768 -10.765 -10.765
+-10.776 -10.782 -10.779 -10.774 -10.774 -10.774 -10.779 -10.787 -10.793 -10.796
+-10.804 -10.798 -10.787 -10.785 -10.787 -10.798 -10.815 -10.812 -10.798 -10.793
+-10.798 -10.807 -10.82 -10.818 -10.815 -10.818 -10.828 -10.834 -10.837 -10.834
+-10.834 -10.839 -10.845 -10.848 -10.839 -10.828 -10.823 -10.82 -10.826 -10.831
+-10.831 -10.848 -10.853 -10.856 -10.861 -10.867 -10.883 -10.883 -10.894 -10.894
+-10.897 -10.892 -10.881 -10.881 -10.886 -10.889 -10.889 -10.886 -10.878 -10.878
+-10.883 -10.892 -10.9 -10.914 -10.925 -10.936 -10.927 -10.925 -10.927 -10.941
+-10.947 -10.947 -10.941 -10.927 -10.916 -10.905 -10.903 -10.905 -10.914 -10.925
+-10.93 -10.936 -10.936 -10.941 -10.947 -10.96 -10.974 -10.974 -10.969 -10.96
+-10.96 -10.96 -10.952 -10.949 -10.952 -10.952 -10.952 -10.952 -10.955 -10.96
+-10.971 -10.982 -10.988 -10.993 -10.991 -10.993 -10.999 -10.999 -11.004 -10.988
+-10.98 -10.977 -10.977 -10.977 -10.98 -10.98 -10.985 -10.991 -10.993 -10.999
+-11.004 -11.01 -11.015 -11.018 -11.024 -11.024 -11.018 -11.015 -11.018 -11.018
+-11.018 -11.018 -11.007 -11.01 -11.018 -11.029 -11.037 -11.037 -11.048 -11.056
+-11.065 -11.073 -11.073 -11.081 -11.076 -11.073 -11.073 -11.073 -11.081 -11.076
+-11.081 -11.081 -11.076 -11.073 -11.073 -11.073 -11.078 -11.087 -11.089 -11.087
+-11.087 -11.087 -11.092 -11.098 -11.106 -11.111 -11.111 -11.109 -11.1 -11.098
+-11.106 -11.12 -11.128 -11.128 -11.128 -11.125 -11.131 -11.131 -11.125 -11.131
+-11.139 -11.142 -11.139 -11.131 -11.128 -11.139 -11.15 -11.164 -11.169 -11.153
+-11.144 -11.144 -11.153 -11.158 -11.164 -11.169 -11.175 -11.177 -11.175 -11.169
+-11.169 -11.172 -11.175 -11.183 -11.183 -11.177 -11.175 -11.177 -11.183 -11.191
+-11.199 -11.194 -11.186 -11.186 -11.186 -11.186 -11.188 -11.197 -11.208 -11.21
+-11.208 -11.205 -11.202 -11.208 -11.219 -11.23 -11.235 -11.243 -11.241 -11.23
+-11.221 -11.219 -11.221 -11.23 -11.241 -11.241 -11.235 -11.221 -11.221 -11.23
+-11.241 -11.246 -11.249 -11.246 -11.243 -11.249 -11.241 -11.241 -11.243 -11.254
+-11.254 -11.254 -11.243 -11.241 -11.243 -11.249 -11.254 -11.254 -11.243 -11.241
+-11.243 -11.243 -11.254 -11.254 -11.262 -11.268 -11.271 -11.273 -11.271 -11.268
+-11.271 -11.268 -11.271 -11.271 -11.271 -11.273 -11.279 -11.279 -11.276 -11.287
+-11.293 -11.298 -11.301 -11.301 -11.295 -11.298 -11.295 -11.295 -11.298 -11.301
+-11.298 -11.29 -11.29 -11.29 -11.301 -11.306 -11.312 -11.315 -11.312 -11.312
+-11.312 -11.312 -11.315 -11.32 -11.32 -11.326 -11.326 -11.328 -11.331 -11.328
+-11.339 -11.345 -11.345 -11.35 -11.361 -11.37 -11.372 -11.372 -11.372 -11.381
+-11.381 -11.375 -11.378 -11.378 -11.375 -11.381 -11.364 -11.353 -11.35 -11.35
+-11.356 -11.361 -11.375 -11.372 -11.375 -11.383 -11.392 -11.405 -11.405 -11.403
+-11.392 -11.375 -11.375 -11.37 -11.381 -11.477 -11.4 -11.386 -11.381 -11.378
+-11.392 -11.414 -11.43 -11.43 -11.425 -11.43 -11.433 -11.433 -11.433 -11.427
+-11.433 -11.427 -11.425 -11.416 -11.408 -11.405 -11.403 -11.419 -11.427 -11.43
+-11.419 -11.422 -11.422 -11.419 -11.422 -11.427 -11.425 -11.425 -11.419 -11.419
+-11.416 -11.416 -11.43 -11.436 -11.444 -11.444 -11.447 -11.452 -11.468 -11.477
+-11.49 -11.49 -11.488 -11.479 -11.479 -11.479 -11.477 -11.474 -11.477 -11.482
+-11.49 -11.482 -11.474 -11.474 -11.477 -11.493 -11.49 -11.493 -11.496 -11.499
+-11.501 -11.504 -11.504 -11.507 -11.507 -11.501 -11.49 -11.477 -11.468 -11.471
+-11.488 -11.501 -11.504 -11.485 -11.482 -11.482 -11.496 -11.507 -11.515 -11.523
+-11.534 -11.532 -11.54 -11.534 -11.534 -11.529 -11.526 -11.523 -11.518 -11.51
+-11.512 -11.515 -11.526 -11.526 -11.529 -11.534 -11.529 -11.532 -11.537 -11.529
+-11.532 -11.534 -11.534 -11.537 -11.534 -11.526 -11.523 -11.521 -11.518 -11.521
+-11.526 -11.532 -11.534 -11.543 -11.548 -11.548 -11.559 -11.562 -11.562 -11.578
+-11.581 -11.567 -11.567 -11.559 -11.565 -11.573 -11.581 -11.589 -11.587 -11.581
+-11.576 -11.573 -11.581 -11.592 -11.609 -11.614 -11.609 -11.595 -11.578 -11.581
+-11.598 -11.609 -11.606 -11.598 -11.581 -11.573 -11.578 -11.581 -11.589 -11.606
+-11.622 -11.625 -11.617 -11.603 -11.6 -11.611 -11.628 -11.636 -11.631 -11.62
+-11.6 -11.587 -11.592 -11.603 -11.614 -11.631 -11.644 -11.647 -11.642 -11.639
+-11.647 -11.68 -11.71 -11.713 -11.688 -11.647 -11.633 -11.636 -11.663 -11.677
+-11.685 -11.674 -11.647 -11.628 -11.625 -11.636 -11.658 -11.68 -11.696 -11.694
+-11.672 -11.653 -11.65 -11.666 -11.688 -11.694 -11.68 -11.666 -11.655 -11.647
+-11.655 -11.666 -11.685 -11.702 -11.694 -11.672 -11.666 -11.68 -11.716 -11.754
+-11.754 -11.732 -11.71 -11.702 -11.71 -11.724 -11.743 -11.743 -11.735 -11.738
+-11.727 -11.713 -11.699 -11.702 -11.721 -11.738 -11.732 -11.713 -11.694 -11.694
+-11.707 -11.721 -11.729 -11.729 -11.732 -11.727 -11.721 -11.716 -11.716 -11.729
+-11.729 -11.727 -11.716 -11.71 -11.71 -11.716 -11.729 -11.729 -11.724 -11.729
+-11.727 -11.721 ]))
+(initValue Real
+(data  0))))
+(device 2 CONSTANT
+(properties
+(name "Meter Freq")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 201)
+(data  [ 18000 18110 18220 18330 18440 18550 18660 18770 18880 18990 19100 19210
+19320 19430 19540 19650 19760 19870 19980 20090 20200 20310 20420 20530 20640
+20750 20860 20970 21080 21190 21300 21410 21520 21630 21740 21850 21960 22070
+22180 22290 22400 22510 22620 22730 22840 22950 23060 23170 23280 23390 23500
+23610 23720 23830 23940 24050 24160 24270 24380 24490 24600 24710 24820 24930
+25040 25150 25260 25370 25480 25590 25700 25810 25920 26030 26140 26250 26360
+26470 26580 26690 26800 26910 27020 27130 27240 27350 27460 27570 27680 27790
+27900 28010 28120 28230 28340 28450 28560 28670 28780 28890 29000 29110 29220
+29330 29440 29550 29660 29770 29880 29990 30100 30210 30320 30430 30540 30650
+30760 30870 30980 31090 31200 31310 31420 31530 31640 31750 31860 31970 32080
+32190 32300 32410 32520 32630 32740 32850 32960 33070 33180 33290 33400 33510
+33620 33730 33840 33950 34060 34170 34280 34390 34500 34610 34720 34830 34940
+35050 35160 35270 35380 35490 35600 35710 35820 35930 36040 36150 36260 36370
+36480 36590 36700 36810 36920 37030 37140 37250 37360 37470 37580 37690 37800
+37910 38020 38130 38240 38350 38460 38570 38680 38790 38900 39010 39120 39230
+39340 39450 39560 39670 39780 39890 40000 ]))
+(initValue Real
+(data  0))))
+(device 3 CONSTANT
+(properties
+(name "Scalar Freq")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 801)
+(data  [ 18000 18027.5 18055 18082.5 18110 18137.5 18165 18192.5 18220 18247.5
+18275 18302.5 18330 18357.5 18385 18412.5 18440 18467.5 18495 18522.5 18550
+18577.5 18605 18632.5 18660 18687.5 18715 18742.5 18770 18797.5 18825 18852.5
+18880 18907.5 18935 18962.5 18990 19017.5 19045 19072.5 19100 19127.5 19155
+19182.5 19210 19237.5 19265 19292.5 19320 19347.5 19375 19402.5 19430 19457.5
+19485 19512.5 19540 19567.5 19595 19622.5 19650 19677.5 19705 19732.5 19760
+19787.5 19815 19842.5 19870 19897.5 19925 19952.5 19980 20007.5 20035 20062.5
+20090 20117.5 20145 20172.5 20200 20227.5 20255 20282.5 20310 20337.5 20365
+20392.5 20420 20447.5 20475 20502.5 20530 20557.5 20585 20612.5 20640 20667.5
+20695 20722.5 20750 20777.5 20805 20832.5 20860 20887.5 20915 20942.5 20970
+20997.5 21025 21052.5 21080 21107.5 21135 21162.5 21190 21217.5 21245 21272.5
+21300 21327.5 21355 21382.5 21410 21437.5 21465 21492.5 21520 21547.5 21575
+21602.5 21630 21657.5 21685 21712.5 21740 21767.5 21795 21822.5 21850 21877.5
+21905 21932.5 21960 21987.5 22015 22042.5 22070 22097.5 22125 22152.5 22180
+22207.5 22235 22262.5 22290 22317.5 22345 22372.5 22400 22427.5 22455 22482.5
+22510 22537.5 22565 22592.5 22620 22647.5 22675 22702.5 22730 22757.5 22785
+22812.5 22840 22867.5 22895 22922.5 22950 22977.5 23005 23032.5 23060 23087.5
+23115 23142.5 23170 23197.5 23225 23252.5 23280 23307.5 23335 23362.5 23390
+23417.5 23445 23472.5 23500 23527.5 23555 23582.5 23610 23637.5 23665 23692.5
+23720 23747.5 23775 23802.5 23830 23857.5 23885 23912.5 23940 23967.5 23995
+24022.5 24050 24077.5 24105 24132.5 24160 24187.5 24215 24242.5 24270 24297.5
+24325 24352.5 24380 24407.5 24435 24462.5 24490 24517.5 24545 24572.5 24600
+24627.5 24655 24682.5 24710 24737.5 24765 24792.5 24820 24847.5 24875 24902.5
+24930 24957.5 24985 25012.5 25040 25067.5 25095 25122.5 25150 25177.5 25205
+25232.5 25260 25287.5 25315 25342.5 25370 25397.5 25425 25452.5 25480 25507.5
+25535 25562.5 25590 25617.5 25645 25672.5 25700 25727.5 25755 25782.5 25810
+25837.5 25865 25892.5 25920 25947.5 25975 26002.5 26030 26057.5 26085 26112.5
+26140 26167.5 26195 26222.5 26250 26277.5 26305 26332.5 26360 26387.5 26415
+26442.5 26470 26497.5 26525 26552.5 26580 26607.5 26635 26662.5 26690 26717.5
+26745 26772.5 26800 26827.5 26855 26882.5 26910 26937.5 26965 26992.5 27020
+27047.5 27075 27102.5 27130 27157.5 27185 27212.5 27240 27267.5 27295 27322.5
+27350 27377.5 27405 27432.5 27460 27487.5 27515 27542.5 27570 27597.5 27625
+27652.5 27680 27707.5 27735 27762.5 27790 27817.5 27845 27872.5 27900 27927.5
+27955 27982.5 28010 28037.5 28065 28092.5 28120 28147.5 28175 28202.5 28230
+28257.5 28285 28312.5 28340 28367.5 28395 28422.5 28450 28477.5 28505 28532.5
+28560 28587.5 28615 28642.5 28670 28697.5 28725 28752.5 28780 28807.5 28835
+28862.5 28890 28917.5 28945 28972.5 29000 29027.5 29055 29082.5 29110 29137.5
+29165 29192.5 29220 29247.5 29275 29302.5 29330 29357.5 29385 29412.5 29440
+29467.5 29495 29522.5 29550 29577.5 29605 29632.5 29660 29687.5 29715 29742.5
+29770 29797.5 29825 29852.5 29880 29907.5 29935 29962.5 29990 30017.5 30045
+30072.5 30100 30127.5 30155 30182.5 30210 30237.5 30265 30292.5 30320 30347.5
+30375 30402.5 30430 30457.5 30485 30512.5 30540 30567.5 30595 30622.5 30650
+30677.5 30705 30732.5 30760 30787.5 30815 30842.5 30870 30897.5 30925 30952.5
+30980 31007.5 31035 31062.5 31090 31117.5 31145 31172.5 31200 31227.5 31255
+31282.5 31310 31337.5 31365 31392.5 31420 31447.5 31475 31502.5 31530 31557.5
+31585 31612.5 31640 31667.5 31695 31722.5 31750 31777.5 31805 31832.5 31860
+31887.5 31915 31942.5 31970 31997.5 32025 32052.5 32080 32107.5 32135 32162.5
+32190 32217.5 32245 32272.5 32300 32327.5 32355 32382.5 32410 32437.5 32465
+32492.5 32520 32547.5 32575 32602.5 32630 32657.5 32685 32712.5 32740 32767.5
+32795 32822.5 32850 32877.5 32905 32932.5 32960 32987.5 33015 33042.5 33070
+33097.5 33125 33152.5 33180 33207.5 33235 33262.5 33290 33317.5 33345 33372.5
+33400 33427.5 33455 33482.5 33510 33537.5 33565 33592.5 33620 33647.5 33675
+33702.5 33730 33757.5 33785 33812.5 33840 33867.5 33895 33922.5 33950 33977.5
+34005 34032.5 34060 34087.5 34115 34142.5 34170 34197.5 34225 34252.5 34280
+34307.5 34335 34362.5 34390 34417.5 34445 34472.5 34500 34527.5 34555 34582.5
+34610 34637.5 34665 34692.5 34720 34747.5 34775 34802.5 34830 34857.5 34885
+34912.5 34940 34967.5 34995 35022.5 35050 35077.5 35105 35132.5 35160 35187.5
+35215 35242.5 35270 35297.5 35325 35352.5 35380 35407.5 35435 35462.5 35490
+35517.5 35545 35572.5 35600 35627.5 35655 35682.5 35710 35737.5 35765 35792.5
+35820 35847.5 35875 35902.5 35930 35957.5 35985 36012.5 36040 36067.5 36095
+36122.5 36150 36177.5 36205 36232.5 36260 36287.5 36315 36342.5 36370 36397.5
+36425 36452.5 36480 36507.5 36535 36562.5 36590 36617.5 36645 36672.5 36700
+36727.5 36755 36782.5 36810 36837.5 36865 36892.5 36920 36947.5 36975 37002.5
+37030 37057.5 37085 37112.5 37140 37167.5 37195 37222.5 37250 37277.5 37305
+37332.5 37360 37387.5 37415 37442.5 37470 37497.5 37525 37552.5 37580 37607.5
+37635 37662.5 37690 37717.5 37745 37772.5 37800 37827.5 37855 37882.5 37910
+37937.5 37965 37992.5 38020 38047.5 38075 38102.5 38130 38157.5 38185 38212.5
+38240 38267.5 38295 38322.5 38350 38377.5 38405 38432.5 38460 38487.5 38515
+38542.5 38570 38597.5 38625 38652.5 38680 38707.5 38735 38762.5 38790 38817.5
+38845 38872.5 38900 38927.5 38955 38982.5 39010 39037.5 39065 39092.5 39120
+39147.5 39175 39202.5 39230 39257.5 39285 39312.5 39340 39367.5 39395 39422.5
+39450 39477.5 39505 39532.5 39560 39587.5 39615 39642.5 39670 39697.5 39725
+39752.5 39780 39807.5 39835 39862.5 39890 39917.5 39945 39972.5 40000 ]))
+(initValue Real
+(data  0))))
+(device 4 CONSTANT
+(properties
+(name "OutScalar error")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(numDims 1)
+(size 801)
+(data  [ 1.269 1.283 1.298 1.317000000000002 1.334000000000001 1.342750000000001
+1.3375 1.32625 1.311 1.297000000000001 1.289 1.291 1.291 1.2995
+1.296999999999999 1.285500000000001 1.286 1.289250000000001 1.2875 1.28875
+1.287000000000001 1.28275 1.276499999999999 1.267250000000001 1.254999999999999
+1.263000000000002 1.277000000000001 1.294000000000001 1.316000000000001 1.30275
+1.2835 1.264250000000001 1.247 1.25475 1.266499999999999 1.271249999999998
+1.280999999999999 1.291249999999998 1.295499999999999 1.303750000000001
+1.318999999999999 1.307749999999999 1.302499999999998 1.29425 1.283
+1.290749999999999 1.2865 1.280250000000001 1.279 1.289499999999999 1.302
+1.316500000000001 1.318 1.3185 1.329000000000001 1.3315 1.339 1.340500000000002
+1.344000000000001 1.3475 1.348000000000001 1.3535 1.374000000000001
+1.390499999999999 1.401999999999999 1.399999999999999 1.395 1.382000000000001
+1.371 1.361749999999999 1.352500000000001 1.34525 1.332999999999998
+1.327749999999998 1.325499999999998 1.32025 1.310000000000001 1.3095
+1.312000000000001 1.317500000000001 1.321 1.32325 1.323499999999999 1.32175
+1.321999999999999 1.304499999999999 1.292 1.288500000000001 1.285 1.28675
+1.279500000000001 1.26825 1.259 1.241 1.231999999999999 1.229000000000001
+1.223000000000001 1.2235 1.225 1.2265 1.225 1.24075 1.253499999999999 1.25525
+1.265000000000001 1.253 1.244999999999999 1.236000000000001 1.213000000000001
+1.206250000000001 1.2135 1.200749999999999 1.202 1.199500000000001 1.192
+1.195499999999999 1.202 1.20675 1.209499999999999 1.206249999999999
+1.194999999999999 1.197750000000001 1.203500000000002 1.206250000000001
+1.212000000000002 1.218249999999999 1.237500000000001 1.249750000000001
+1.257999999999999 1.26 1.267000000000001 1.274000000000001 1.279 1.276 1.267
+1.262000000000001 1.259 1.263500000000001 1.252000000000001 1.2455 1.247
+1.236250000000002 1.230500000000001 1.210749999999999 1.191000000000001 1.18825
+1.182500000000001 1.178749999999999 1.158999999999999 1.160500000000001
+1.165999999999999 1.169499999999999 1.171000000000001 1.163 1.167
+1.171000000000001 1.183 1.188000000000001 1.188000000000001 1.188000000000001
+1.18 1.188750000000001 1.195500000000001 1.20425 1.216000000000001 1.22625
+1.233500000000001 1.23875 1.238 1.235249999999999 1.234499999999999
+1.239749999999999 1.16 1.248499999999998 1.276999999999999 1.272500000000001
+1.261999999999999 1.25625 1.2425 1.24775 1.263999999999999 1.264749999999999
+1.265499999999999 1.244250000000001 1.223000000000001 1.2065 1.212000000000002
+1.2205 1.218 1.189 1.161999999999999 1.148999999999999 1.143999999999998
+1.159999999999998 1.161 1.171000000000001 1.186999999999999 1.192
+1.193999999999999 1.184999999999999 1.180999999999999 1.178249999999999 1.1775
+1.171750000000001 1.166 1.163 1.156999999999998 1.153000000000001
+1.152000000000001 1.14875 1.1595 1.17525 1.182 1.178749999999999
+1.166500000000001 1.148250000000001 1.15 1.168999999999999 1.179 1.179
+1.174999999999999 1.170749999999998 1.1815 1.193250000000001 1.199
+1.194000000000001 1.193000000000001 1.195 1.203000000000001 1.215000000000002
+1.222 1.228 1.237 1.249000000000001 1.263000000000002 1.270999999999999
+1.276999999999999 1.266749999999998 1.2575 1.253250000000001 1.231999999999999
+1.229000000000001 1.228 1.224999999999998 1.220999999999998 1.202999999999999
+1.201000000000001 1.188000000000001 1.186 1.185000000000001 1.192
+1.204999999999998 1.206999999999999 1.202500000000001 1.199999999999999 1.2005
+1.204000000000001 1.2255 1.239000000000001 1.247500000000001 1.252000000000001
+1.250500000000001 1.243 1.238499999999998 1.234 1.247500000000001 1.254
+1.256500000000001 1.247 1.245750000000001 1.250500000000002 1.26125
+1.280000000000001 1.311500000000001 1.343000000000002 1.365499999999999 1.384
+1.3635 1.340999999999999 1.324500000000001 1.307 1.31025 1.3085
+1.305750000000002 1.295999999999999 1.288 1.294000000000001 1.305
+1.319999999999999 1.3295 1.338999999999999 1.356499999999999 1.369
+1.377000000000001 1.388 1.398999999999999 1.41 1.405749999999999 1.3995 1.38725
+1.375 1.3545 1.334999999999999 1.3225 1.305999999999999 1.29275
+1.285499999999999 1.273249999999999 1.282 1.286249999999999 1.285499999999999
+1.281750000000001 1.278000000000001 1.272500000000001 1.27 1.262499999999999
+1.254 1.263249999999999 1.268499999999998 1.274749999999999 1.279999999999999
+1.26925 1.260499999999999 1.248749999999999 1.243 1.243749999999999
+1.241499999999999 1.23325 1.228 1.2355 1.242999999999999 1.2615 1.266 1.267
+1.265000000000001 1.265999999999998 1.274999999999999 1.25925 1.246499999999999
+1.232749999999999 1.219999999999999 1.2205 1.213000000000001 1.218499999999999
+1.222 1.23 1.238 1.238 1.250999999999999 1.24075 1.2355 1.235249999999999
+1.232999999999999 1.227749999999999 1.2225 1.212250000000001 1.198
+1.194749999999999 1.195499999999999 1.19425 1.193 1.191999999999998 1.19 1.186
+1.184999999999999 1.193249999999999 1.2035 1.220750000000001 1.231 1.21725
+1.1975 1.18375 1.177999999999999 1.1935 1.212 1.221499999999999 1.237 1.24775
+1.246500000000001 1.243250000000002 1.245000000000001 1.239250000000002 1.2385
+1.232749999999999 1.213000000000001 1.2135 1.211 1.217499999999999
+1.244999999999999 1.24525 1.2365 1.218749999999998 1.205 1.19675
+1.189499999999999 1.181249999999999 1.177 1.202999999999999 1.232999999999999
+1.256999999999998 1.277999999999999 1.290749999999999 1.298500000000001 1.31425
+1.336 1.300249999999998 1.2605 1.216750000000001 1.170999999999999 1.1335 1.109
+1.0875 1.058 1.058249999999999 1.058499999999999 1.056749999999999 1.048
+1.044499999999999 1.049999999999999 1.0595 1.07 1.08625 1.093500000000001
+1.095750000000001 1.097999999999999 1.111750000000001 1.122500000000001 1.14325
+1.173 1.17325 1.166500000000001 1.155750000000001 1.138 1.102250000000002
+1.077500000000001 1.05875 1.048 1.076499999999999 1.096 1.1135 1.136999999999999
+1.144999999999998 1.158999999999999 1.173 1.177999999999999 1.18075 1.1755
+1.168250000000001 1.152000000000001 1.177250000000001 1.202500000000001 1.23875
+1.266 1.262749999999999 1.2555 1.249250000000002 1.248000000000001
+1.290000000000001 1.323 1.351999999999999 1.382999999999999 1.362499999999999
+1.353 1.3355 1.319999999999999 1.312999999999999 1.306999999999999
+1.304999999999998 1.303999999999999 1.260999999999999 1.224 1.180999999999999
+1.141 1.152749999999999 1.162500000000001 1.168250000000001 1.18
+1.211500000000001 1.228999999999999 1.2515 1.275 1.25825 1.2445
+1.236750000000001 1.220000000000001 1.232750000000001 1.242500000000002 1.24925
+1.256 1.28425 1.317500000000001 1.342750000000001 1.368 1.324 1.286 1.247 1.211
+1.210750000000001 1.207500000000001 1.20425 1.201000000000001 1.22475
+1.246499999999999 1.273249999999999 1.293999999999999 1.274249999999999
+1.252500000000001 1.229750000000001 1.213000000000001 1.26775 1.327499999999999
+1.39325 1.454000000000001 1.369999999999999 1.288000000000002 1.213000000000001
+1.140000000000001 1.122500000000001 1.096 1.0785 1.067 1.063750000000001
+1.063500000000001 1.06625 1.060000000000001 1.12125 1.176500000000001
+1.223750000000001 1.268000000000001 1.248749999999999 1.230499999999999
+1.203250000000001 1.193 1.1755 1.153000000000001 1.1295 1.102 1.137500000000001
+1.174999999999999 1.221499999999999 1.273999999999999 1.28575 1.3025
+1.303249999999999 1.218999999999999 1.30475 1.327500000000001 1.341249999999999
+1.353 1.3675 1.374000000000001 1.386500000000002 1.415000000000001 1.4175 1.41
+1.404500000000001 1.402000000000001 1.387000000000001 1.378 1.357000000000001
+1.348000000000001 1.355750000000001 1.3705 1.38425 1.393000000000001
+1.388249999999999 1.365500000000001 1.350750000000001 1.341000000000001
+1.343500000000001 1.332000000000001 1.323499999999999 1.318 1.3155 1.311
+1.313499999999999 1.314 1.31725 1.314499999999999 1.31475 1.311999999999999
+1.292999999999999 1.282 1.269 1.263999999999999 1.262000000000001
+1.258000000000001 1.243 1.234999999999999 1.222249999999999 1.222499999999998
+1.22475 1.234 1.2365 1.239000000000001 1.243500000000001 1.249000000000001
+1.254000000000001 1.257000000000001 1.257 1.273000000000002 1.285
+1.289000000000002 1.290000000000001 1.278000000000001 1.278000000000001 1.272
+1.266 1.26 1.254000000000001 1.247000000000002 1.243 1.236000000000001 1.23025
+1.230500000000001 1.235750000000001 1.243 1.272 1.289000000000002
+1.292000000000002 1.299000000000001 1.307 1.337 1.351000000000001 1.362
+1.328249999999999 1.297500000000001 1.26975 1.242000000000001 1.225250000000001
+1.221500000000001 1.207750000000001 1.208 1.212 1.221 1.228 1.234999999999999
+1.232249999999999 1.2325 1.22275 1.212 1.2195 1.238 1.253500000000001 1.267
+1.286250000000001 1.297499999999999 1.306749999999999 1.329000000000001 1.30125
+1.2745 1.249750000000001 1.222 1.24475 1.272500000000001 1.295249999999999
+1.316999999999998 1.332749999999999 1.342499999999998 1.350249999999999
+1.356999999999999 1.333249999999998 1.3025 1.27575 1.254 1.25075 1.2555
+1.263250000000001 1.255000000000001 1.249500000000001 1.260999999999999 1.2585
+1.264000000000001 1.24375 1.221499999999999 1.199250000000001 1.177 1.21275
+1.252500000000001 1.29125 1.327999999999999 1.313750000000001 1.2965
+1.273249999999999 1.261999999999999 1.23175 1.210499999999998 1.19225 1.154
+1.156749999999999 1.1655 1.18825 1.215999999999999 1.25 1.274999999999999
+1.287000000000001 1.301 1.291749999999999 1.2735 1.256250000000001
+1.252000000000001 1.290749999999999 1.335500000000002 1.369250000000001
+1.388999999999999 1.358000000000001 1.336000000000002 1.327 1.324000000000002
+1.339500000000001 1.348000000000001 1.3385 1.323 1.367999999999999 1.407
+1.450000000000001 1.503 1.534000000000001 1.563000000000001 1.581 1.574 1.52075
+1.4945 1.496249999999998 1.513999999999999 1.564500000000001 1.598000000000001
+1.6075 1.630000000000001 1.602 1.593 1.6 1.599 1.582750000000001
+1.552500000000002 1.51125 1.470000000000001 1.49225 1.532500000000001
+1.592750000000001 1.65 1.65625 1.6435 1.624750000000001 1.622 1.630750000000001
+1.6395 1.645250000000001 1.648 1.8855 2.119999999999999 2.346499999999999
+2.574999999999999 2.608749999999999 2.656499999999999 2.68825 2.700000000000001
+2.354250000000002 2.006500000000001 1.69675 1.409000000000001 1.42775
+1.432499999999999 1.421249999999999 1.404 1.3805 1.375999999999999 1.3795 1.372
+1.367249999999999 1.365500000000001 1.363750000000001 1.345000000000001 1.3415
+1.34 1.361500000000001 1.396000000000001 1.41475 1.414499999999999
+1.401249999999999 1.387000000000001 1.355 1.331000000000001 1.304000000000002
+1.285 1.2925 1.299000000000001 1.300500000000001 1.289000000000002
+1.312500000000002 1.338000000000001 1.372500000000001 1.401999999999999
+1.371749999999999 1.335500000000002 1.292250000000001 1.262000000000001
+1.254249999999999 1.2365 1.22575 1.218999999999999 ]))
+(initValue Real
+(data  0))))
+(device 5 FORMULA
+(properties
+(name "dBm")
+(variableScope cont)
+(expr 2 "OutRec.Meter.dBm;" ""))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 FORMULA
+(properties
+(name "dBm")
+(variableScope cont)
+(expr 1 "OutRec.Scalar.dBm"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 FORMULA
+(properties
+(name "Freq")
+(variableScope cont)
+(expr 2 "M=OutRec.Meter.Freq;" "S=OutRec.Scalar.Freq;"))
+(interface
+(output 1
+(name "M")
+(optional yes))
+(output 2
+(name "S")
+(optional yes))))
+(device 8 FORMULA
+(properties
+(name "error")
+(variableScope cont)
+(expr 1 "OutRec.Scalar.error"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 9 FORMULA
+(properties
+(name "sanity check")
+(variableScope cont)
+(expr 1 "OutRec.Scalar.dBm-OutRec.Scalar.error"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 10 CONTEXT
+(properties
+(name "Extrapolate OutputErr")
+(variableScope cont)
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 4 "x=OutRec.Scalar.freq;" "yA=OutRec.Meter.dBm;" "xA=OutRec.Meter.freq;"
+""))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "yA")
+(optional yes))
+(output 3
+(name "xA")
+(optional yes))))
+(device 2 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "OutRec.Scalar.error[*] = OutRec.Scalar.dBm - Meter" ""))
+(interface
+(input 1
+(name "Meter")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 After the Power Meter is done measureing\\par\r\nthen extrapolate its array to 801pnts\\par\r\nand calculate the error and save in the InRec.\\par\r\n\\par\r\nmeasured = actuall + error\\par\r\nScalar = meter + error\\par\r\nerror = measured - actual\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:1 D2:1)
+(connect D1:2 D2:2)
+(connect D1:3 D2:3)
+(connect D2:1 D3:1)
+(connect D0:0 D3:2)
+(connect D0:0 D4:0)
+(connect D3:1 D4:1)
+(connect D4:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 953 536)
+(anchorPt 147 29)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 130 190))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 50 34))
+(open
+(extent 184 96))
+(terminals on)
+(pinCenter 130 90))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 370 210))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 490 290))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 50 15))
+(open
+(extent 334 66))
+(terminals on)
+(pinCenter 130 410))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "notepad.icn"))
+(open
+(extent 410 180)
+(editing enabled))
+(pinCenter 480 120))
+(connect D1:0 D0:0
+(points 2 130 140 130 162))
+(connect D1:1 D0:1
+(points 6 254 60 270 60 270 0 -10 0 -10 190 66 190))
+(connect D0:1 D2:1
+(points 2 193 190 296 190))
+(connect D1:2 D2:2
+(points 4 254 90 280 90 280 210 296 210))
+(connect D1:3 D2:3
+(points 4 254 120 270 120 270 230 296 230))
+(connect D2:1 D3:1
+(points 4 423 210 440 210 440 280 461 280))
+(connect D0:0 D3:2
+(points 3 130 218 130 300 461 300))
+(connect D0:0 D4:0
+(points 2 130 218 130 356))
+(connect D3:1 D4:1
+(points 6 519 290 540 290 540 330 -110 330 -110 410 -90 410))
+(connect D4:1 O1:1
+(points 4 349 410 550 410 550 238 805 238)))
+(stackingOrder 0 2 3 5 1 4))))
+(device 11 XYPLOT
+(properties
+(name "Meter ")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Meter dBm")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 12 XYPLOT
+(properties
+(name "Scalar error")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar error")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 13 XYPLOT
+(properties
+(name "Scalar ")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar dBm")
+(lock constraints)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 14 XYPLOT
+(properties
+(name "Scalar-error  equals Meter")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "Scalar dBm")
+(lock constraints))
+(input 3
+(name "Meter dBm")
+(lock constraints)
+(optional yes))
+(input 4
+(name "Scalar-error")
+(lock constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(tracePin 3)
+(tracePin 4)
+(graphMode rectangular)
+(autoAutoX)))
+(configuration
+(connect D5:0 D6:0)
+(connect D6:0 D7:0)
+(connect D10:0 D8:0)
+(connect D8:0 D9:0)
+(connect D7:0 D10:0)
+(connect D7:1 D11:1)
+(connect D5:1 D11:2)
+(connect D7:2 D12:1)
+(connect D8:1 D12:2)
+(connect D7:2 D13:1)
+(connect D6:1 D13:2)
+(connect D7:2 D14:1)
+(connect D6:1 D14:2)
+(connect D10:1 D14:3)
+(connect D9:1 D14:4)))
+(contextCarrier
+(wndOrigin 719 704)
+(wndState res)
+(active detail)
+(detail
+(extent 1524 863)
+(anchorPt 2 4)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 64 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 260))
+(devCarrierFor 1
 (active open)
 (icon
 (extent 70 0))
 (open
 (extent 117 74)
 (showFormat real))
-(pinCenter 780 1070))
-(devCarrierFor 195
+(pinCenter 120 370))
+(devCarrierFor 2
 (active open)
-(icon)
+(icon
+(extent 63 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 490))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 69 0))
+(open
+(extent 117 74)
+(showFormat real))
+(pinCenter 120 600))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 91 0))
+(open
+(extent 127 74)
+(showFormat real))
+(pinCenter 130 710))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 30 0))
+(open
+(extent 144 76))
+(terminals on)
+(pinCenter 380 280))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 30 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 380 380))
+(devCarrierFor 7
+(active open)
+(icon
+(extent 29 0))
+(open
+(extent 174 76))
+(terminals on)
+(pinCenter 390 490))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 30 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 380 650))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 73 0))
 (open
 (extent 265 76))
 (terminals on)
-(pinCenter 1090 1110))
+(pinCenter 380 760))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 127 15))
+(terminals on)
+(pinCenter 390 570))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Meter dBm")
+(domainName "Meter Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -14 -10 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "Meter dBm")
+(traceColor "Green")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 830 210))
+(devCarrierFor 12
+(active open)
+(icon
+(extent 70 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB err")
+(domainName "Scalar Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 1 2.8 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "Scalar error")
+(traceColor "Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 830 580))
+(devCarrierFor 13
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Scalar dBm")
+(domainName "Scalar Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -14 -10 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "Scalar dBm")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1270 220))
+(devCarrierFor 14
+(active open)
+(icon
+(extent 156 0)
+(iconImage "display.icn"))
+(open
+(extent 354 316)
+(displayMode 37)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "Scalar Freq")
+(Yspacing 2)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -14 -10 4 linear))
+(domain 15000 40000 4 linear)
+(trace 0 onScale 0
+(name "Scalar dBm")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(trace 1 onScale 0
+(name "Meter dBm")
+(traceColor "Green")
+(lineType 12)
+(pointType 0))
+(trace 2 onScale 0
+(name "Scalar-error")
+(traceColor "Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 1290 580))
+(connect D5:0 D6:0
+(points 2 390 320 390 334))
+(connect D6:0 D7:0
+(points 2 390 407 390 431))
+(connect D10:0 D8:0
+(points 2 390 580 390 604))
+(connect D8:0 D9:0
+(points 2 390 677 390 701))
+(connect D7:0 D10:0
+(points 2 390 530 390 560))
+(connect D7:1 D11:1
+(points 4 509 470 530 470 530 140 668 140))
+(connect D5:1 D11:2
+(points 2 504 280 668 280))
+(connect D7:2 D12:1
+(points 2 509 510 668 510))
+(connect D8:1 D12:2
+(points 2 505 650 668 650))
+(connect D7:2 D13:1
+(points 6 509 510 650 510 650 400 1010 400 1010 150 1108 150))
+(connect D6:1 D13:2
+(points 4 505 380 1020 380 1020 290 1108 290))
+(connect D7:2 D14:1
+(points 6 509 510 650 510 650 400 1010 400 1010 460 1110 460))
+(connect D6:1 D14:2
+(points 4 505 380 1030 380 1030 540 1110 540))
+(connect D10:1 D14:3
+(points 8 456 570 590 570 590 740 1000 740 1000 690 1010 690 1010 620 1110 620))
+(connect D9:1 D14:4
+(points 4 565 760 1010 760 1010 700 1110 700)))
+(stackingOrder 2 7 6 8 9 5 3 0 1 10 11 13 14 12 4))))
+(device 207 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 208 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"MDoff\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 209 START25
+(properties
+(variableScope cont)))
+(device 210 IODEVICE
+(properties
+(name "ML248xA ( @GPIB0::13::INSTR)")
+(variableScope cont)
+(transactions 3 "WRITE TEXT \"TR2 2\" EOL" "READ TEXT dBm STR"
+"WRITE TEXT \"TR3\" EOL"))
+(interface
+(output 1
+(name "dBm")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "ML248xA")))
+(device 212 CONTEXT
+(properties
+(name "ErrOut-ErrIn")
+(variableScope cont)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "OutRec.Scalar.error-InRec.Scalar.error"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration))
+(contextCarrier
+(wndOrigin 863 415)
+(wndState res)
+(active detail)
+(detail
+(extent 632 216)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 415 70))
+(terminals on)
+(pinCenter 300 120))))))
+(configuration
+(connect D22:1 D1:0)
+(connect D0:0 D2:0)
+(connect D6:0 D3:0)
+(connect D3:0 D4:0)
+(connect D4:0 D5:0)
+(connect D2:0 D6:0)
+(connect D5:0 D17:0)
+(connect D17:1 D18:0)
+(connect D18:0 D19:0)
+(connect D19:0 D20:0)
+(connect D20:0 D21:0)
+(connect D17:2 D22:1)
+(connect D21:0 D22:2)
+(connect D24:0 D23:0)))
+(contextCarrier
+(wndOrigin 726 77)
+(wndState res)
+(active detail)
+(detail
+(extent 2149 853)
+(anchorPt 287 97)
+(configuration
+(devCarrierFor 110
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter -20 -240))
+(devCarrierFor 111
+(active open)
+(icon
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 330 410))
+(devCarrierFor 131
+(active icon)
+(icon
+(extent 53 15))
+(open
+(extent 175 117)
+(carbonCopy))
+(titleBg "Light Beige")
+(pinCenter -20 -210))
+(devCarrierFor 143
+(active icon)
+(icon
+(extent 118 15))
+(terminals on)
+(pinCenter -20 10))
+(devCarrierFor 147
+(active icon)
+(icon
+(extent 114 14))
+(terminals on)
+(pinCenter -20 40))
+(devCarrierFor 148
+(active icon)
+(icon
+(extent 114 15))
+(terminals on)
+(pinCenter -20 70))
+(devCarrierFor 153
+(active open)
+(icon
+(extent 84 15))
+(open
+(extent 254 146))
+(terminals on)
+(pinCenter -20 -90))
+(devCarrierFor 154
+(active icon)
+(icon
+(extent 155 15))
+(open
+(extent 199 115))
+(pinCenter 470 -170))
+(devCarrierFor 155
+(active icon)
+(icon
+(extent 160 15))
+(open
+(extent 199 115))
+(pinCenter 470 -150))
+(devCarrierFor 159
+(active open)
+(icon
+(extent 125 15))
+(open
+(extent 154 236))
+(terminals on)
+(pinCenter 650 20))
+(devCarrierFor 166
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 199 115))
+(pinCenter 270 -90))
+(devCarrierFor 170
+(active icon)
+(icon
+(extent 154 15))
+(open
+(extent 199 115))
+(pinCenter 270 -150))
+(devCarrierFor 171
+(active icon)
+(icon
+(extent 144 15))
+(open
+(extent 199 115))
+(pinCenter 270 -170))
+(devCarrierFor 172
+(active icon)
+(icon
+(extent 165 15))
+(open
+(extent 201 115))
+(pinCenter 270 -130))
+(devCarrierFor 173
+(active icon)
+(icon
+(extent 143 15))
+(open
+(extent 199 115))
+(pinCenter 270 -110))
+(devCarrierFor 178
+(active icon)
+(icon
+(extent 132 15))
+(open
+(extent 199 115))
+(pinCenter 270 -70))
 (devCarrierFor 196
 (active icon)
 (icon
 (extent 114 15))
 (open
 (extent 199 115))
-(pinCenter 720 50))
-(devCarrierFor 198
-(active open)
-(icon
-(iconImage "stop.icn"))
-(open
-(extent 65 31))
-(pinCenter 1090 500))
+(pinCenter 470 -190))
 (devCarrierFor 199
 (active icon)
 (icon
@@ -15738,76 +17187,97 @@
 (open
 (extent 223 134))
 (terminals on)
-(pinCenter 50 170))
+(pinCenter -20 120))
+(devCarrierFor 203
+(active icon)
+(icon
+(extent 143 15))
+(terminals on)
+(pinCenter 110 230))
+(devCarrierFor 204
+(active icon)
+(icon
+(extent 150 15))
+(terminals on)
+(pinCenter 110 260))
+(devCarrierFor 205
+(active icon)
+(icon
+(extent 86 15))
+(terminals on)
+(pinCenter 110 290))
+(devCarrierFor 206
+(active icon)
+(icon
+(extent 96 15))
+(terminals on)
+(pinCenter 110 320))
+(devCarrierFor 207
+(active icon)
+(icon
+(extent 26 34))
+(open)
+(terminals on)
+(pinCenter 250 350))
+(devCarrierFor 208
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 960 -160))
+(devCarrierFor 209
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 960 -260))
+(devCarrierFor 210
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 414 104))
+(terminals on)
+(pinCenter 1025 -20))
+(devCarrierFor 212
+(active icon)
+(icon
+(extent 71 15))
+(terminals on)
+(pinCenter 160 550))
+(connect D22:1 D1:0
+(points 3 265 350 330 350 330 374))
 (connect D0:0 D2:0
-(points 2 330 113 330 120))
-(connect D2:0 D3:0
-(points 2 330 140 330 150))
+(points 2 -20 -227 -20 -220))
+(connect D6:0 D3:0
+(points 2 -20 -15 -20 0))
 (connect D3:0 D4:0
-(points 2 330 170 330 180))
-(connect D17:0 D6:0
-(points 2 550 420 550 440))
-(connect D4:0 D7:0
-(points 6 330 200 330 210 260 210 260 -90 50 -90 50 -84))
-(connect D13:0 D12:0
-(points 2 320 337 320 344))
-(connect D13:1 D12:1
-(points 6 435 310 460 310 460 420 220 420 220 380 238 380))
-(connect D42:1 D13:0
-(points 5 93 160 250 160 250 250 320 250 320 264))
-(connect D12:1 D16:0
-(points 5 401 380 480 380 480 350 550 350 550 370))
-(connect D12:1 D16:1
-(points 2 401 380 496 380))
-(connect D16:0 D17:0
-(points 2 550 390 550 400))
-(connect D6:0 D22:0
-(points 2 550 460 550 485))
-(connect D6:1 D22:1
-(points 6 643 450 660 450 660 480 510 480 510 490 521 490))
-(connect D12:0 D22:2
-(points 3 320 398 320 510 521 510))
-(connect D12:0 D23:0
-(points 2 320 398 320 574))
-(connect D22:1 D23:1
-(points 6 579 500 600 500 600 540 190 540 190 620 205 620))
-(connect D25:1 D26:1
-(points 2 931 640 975 640))
-(connect D26:0 D27:0
-(points 2 1100 677 1100 684))
-(connect D30:1 D29:1
-(points 4 1214 820 1240 820 1240 500 1378 500))
-(connect D26:1 D29:2
-(points 2 1224 640 1378 640))
-(connect D27:0 D30:0
-(points 2 1100 757 1100 786))
-(connect D30:2 D33:1
-(points 6 1214 860 1360 860 1360 750 1720 750 1720 500 1828 500))
-(connect D27:1 D33:2
-(points 4 1215 730 1810 730 1810 640 1828 640))
-(connect D30:0 D34:0
-(points 2 1100 875 1100 900))
-(connect D30:2 D35:1
-(points 6 1214 860 1360 860 1360 750 1720 750 1720 830 1838 830))
-(connect D27:1 D35:2
-(points 4 1215 730 1810 730 1810 900 1838 900))
-(connect D34:1 D35:3
-(points 8 1136 910 1300 910 1300 1090 1710 1090 1710 1030 1720 1030 1720 970
-1838 970))
-(connect D39:1 D35:4
-(points 4 1275 1110 1720 1110 1720 1040 1838 1040))
-(connect D34:0 D36:0
-(points 2 1100 920 1100 954))
-(connect D30:2 D37:1
-(points 2 1214 860 1378 860))
-(connect D36:1 D37:2
-(points 2 1215 1000 1378 1000))
-(connect D36:0 D39:0
-(points 2 1100 1027 1100 1051))
-(connect D7:0 D42:0
-(points 2 50 125 50 155)))
-(stackingOrder 0 2 1 18 19 22 13 24 16 25 26 28 3 38 27 31 32 34 30 36 39 29 33
-37 35 5 11 8 9 14 21 40 10 20 41 12 7 23 6 17 15 4 42))
+(points 2 -20 20 -20 30))
+(connect D4:0 D5:0
+(points 2 -20 49 -20 60))
+(connect D2:0 D6:0
+(points 2 -20 -200 -20 -184))
+(connect D5:0 D17:0
+(points 2 -20 80 -20 105))
+(connect D17:1 D18:0
+(points 3 23 110 110 110 110 220))
+(connect D18:0 D19:0
+(points 2 110 240 110 250))
+(connect D19:0 D20:0
+(points 2 110 270 110 280))
+(connect D20:0 D21:0
+(points 2 110 300 110 310))
+(connect D17:2 D22:1
+(points 4 23 130 210 130 210 340 234 340))
+(connect D21:0 D22:2
+(points 3 110 330 110 360 234 360))
+(connect D24:0 D23:0
+(points 2 960 -247 960 -218)))
+(stackingOrder 0 2 11 12 7 14 13 3 6 8 10 15 16 22 1 9 17 24 4 5 18 23 20 19 21
+25 26))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
