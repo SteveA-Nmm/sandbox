@@ -1,12 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 31/Oct/2024 14:16:11 ")
+(date "Fri 01/Nov/2024 12:23:09 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M.143.1.2 M.143.2 M.143.1 M.147 M.148 M.212 M.206 M.205
-M)
+(workspaceStackingOrder M.143.0 M F11)
 (SaveCF no)
 (device 0 ROOTCONTEXT
 (assemblyRefs
@@ -30,13 +29,886 @@ M)
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 213)
+(nextID 238)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
 (deviceList
 (UserFunctions
-(nextID 10)
+(nextID 12)
+(context 11
+(properties
+(name "BxErrorTotal")
+(variableName BxErrorTotal)
+(variableScope cont)
+(trigMode deg)
+(nextID 23)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "ScalarError")
+(optional yes))
+(input 2
+(name "ScalarFreq")
+(optional yes))
+(input 3
+(name "inFA")
+(optional yes))
+(input 4
+(name "inFB")
+(optional yes))
+(input 5
+(name "outFA")
+(optional yes))
+(input 6
+(name "outFB")
+(optional yes))
+(input 7
+(name "Pnts")
+(optional yes))
+(output 1
+(type data)
+(name "Gain")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 3 FORMULA
+(properties
+(name "B6 Input")
+(variableScope cont)
+(expr 8 "//From=4800;" "//Thru=7300;" "//Step=(Thru-From)/800;"
+"Step=(Thru-From)/Pnts;" "yArray=InRec.Scalar.error;"
+"xArray=InRec.Scalar.Freq;" "//yArray=Rec.Scalar.error;"
+"//xArray=Rec.Scalar.Freq;"))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "Pnts")
+(optional yes))
+(output 1
+(name "From")
+(optional yes))
+(output 2
+(name "Thru")
+(optional yes))
+(output 3
+(name "Step")
+(optional yes))
+(output 4
+(name "yArray")
+(optional yes))
+(output 5
+(name "xArray")
+(optional yes))))
+(device 11 FORMULA
+(properties
+(name "B6 Output")
+(variableScope cont)
+(expr 8 "//From=37500;" "//Thru=40000;" "//Step=(Thru-From)/800;"
+"Step=(Thru-From)/Pnts;" "yArray=OutRec.Scalar.error;"
+"xArray=OutRec.Scalar.Freq;" "//yArray=Rec.Scalar.error;"
+"//xArray=Rec.Scalar.Freq;"))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "Pnts")
+(optional yes))
+(output 1
+(name "From")
+(optional yes))
+(output 2
+(name "Thru")
+(optional yes))
+(output 3
+(name "Step")
+(optional yes))
+(output 4
+(name "yArray")
+(optional yes))
+(output 5
+(name "xArray")
+(optional yes))))
+(device 12 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "//ErrorRec.B6error[*]=Out-In;" "Out-In"))
+(interface
+(input 1
+(name "In")
+(optional yes))
+(input 2
+(name "Out")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 20 CONTEXT
+(properties
+(name "InErrorLookup")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 2
+(name "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 3
+(name "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 4
+(name "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(input 5
+(name "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(output 1
+(type data)
+(name "Array")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORRANGE
+(properties
+(variableScope cont)
+(from 4800)
+(thru 7300)
+(step 3.125))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Step")
+(tag "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 1 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 2 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 3 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 4 TEXTDISPLAY
+(properties
+(name "Validate - Range must be Increasing")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:1 D1:1)
+(connect I4:1 D1:2)
+(connect I5:1 D1:3)
+(connect D1:1 D2:1)
+(connect D0:0 D2:2)
+(connect D0:1 D3:1)
+(connect D0:0 D3:2)
+(connect D3:1 D4:1)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 392 433)
+(anchorPt -4 -44)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 99 79))
+(pinCenter 110 120))
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 130 270))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 260 280))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 260 180))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 218 15))
+(open
+(extent 254 96)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(pinCenter 240 390))
+(connect I1:1 D0:1
+(points 4 4 100 30 100 30 100 58 100))
+(connect I2:1 D0:2
+(points 4 4 180 10 180 10 120 58 120))
+(connect I3:1 D0:3
+(points 4 4 260 20 260 20 140 58 140))
+(connect D0:1 D1:1
+(points 6 162 120 180 120 180 180 40 180 40 250 56 250))
+(connect I4:1 D1:2
+(points 4 4 340 10 340 10 270 56 270))
+(connect I5:1 D1:3
+(points 4 4 420 20 420 20 290 56 290))
+(connect D1:1 D2:1
+(points 2 183 270 231 270))
+(connect D0:0 D2:2
+(points 5 110 162 110 190 200 190 200 290 231 290))
+(connect D0:1 D3:1
+(points 4 162 120 180 120 180 170 231 170))
+(connect D0:0 D3:2
+(points 3 110 162 110 190 231 190))
+(connect D3:1 D4:1
+(points 6 289 180 320 180 320 330 110 330 110 390 128 390))
+(connect D2:1 O1:1
+(points 4 289 280 310 280 310 260 395 260)))
+(stackingOrder 2 3 1 0 4))))
+(device 21 CONTEXT
+(properties
+(name "OutErrorLookup")
+(variableScope cont)
+(trigMode deg)
+(nextID 8)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 2
+(name "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 3
+(name "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 4
+(name "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(input 5
+(name "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORRANGE
+(properties
+(variableScope cont)
+(from 37500)
+(thru 40000)
+(step 3.125))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Step")
+(tag "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 1 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 2 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 3 CONTEXT
+(properties
+(name "arrayRev")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_arrayRev(a)\\par\r\n    a: array 1D Any - 1D array to be processed\\par\r\n    return: same type as input - array is in reverse order\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nUse any time you would like a 1D array in reverse order. Works with any data type.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call    o_arrayRev")
+(variableScope cont)
+(callFunc "o_arrayRev")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 433 197)
+(drawGrid "on"))))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 TEXTDISPLAY
+(properties
+(name "Validate - out is Reversed")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 6 CONTEXT
+(properties
+(name "arrayRev")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_arrayRev(a)\\par\r\n    a: array 1D Any - 1D array to be processed\\par\r\n    return: same type as input - array is in reverse order\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nUse any time you would like a 1D array in reverse order. Works with any data type.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call    o_arrayRev")
+(variableScope cont)
+(callFunc "o_arrayRev")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 433 197)
+(drawGrid "on"))))
+(device 7 NOTE
+(properties
+(name "Why arrayRev?\r\n")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Why? theOutErrorLookup is for an Image mode converter.\\par\r\n\\par\r\nThis converter has the  input(IF)< LO frequency. This is image mode.\\par\r\nAlso, the desired output(RF) is the difference of the input(IF) and LO.\\par\r\ntherefore:\\par\r\nThe output difference signal sweeps in the opposite direction of the input, and a low pass filter picks off this output frequency range and helps isloate the LO from bleedthru.\\par\r\n\\par\r\nThe Lookup Table functon only works with increasing arrays. \\par\r\nThe arrayRev makes it look like it works with decreasing arrays.\\par\r\n\\par\r\n \\par\r\n}\r\n"
+)))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:1 D1:1)
+(connect I4:1 D1:2)
+(connect I5:1 D1:3)
+(connect D1:1 D2:1)
+(connect D0:0 D2:2)
+(connect D2:0 D3:0)
+(connect D2:1 D3:1)
+(connect D0:1 D4:1)
+(connect D0:0 D4:2)
+(connect D6:1 D5:1)
+(connect D4:0 D6:0)
+(connect D4:1 D6:1)
+(connect D3:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 723 516)
+(anchorPt 10 -35)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 99 79))
+(pinCenter 110 120))
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 170 290))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 350 300))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 44 26)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 350 340))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 350 390))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 152 0))
+(open
+(extent 192 162)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(pinCenter 540 370))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 44 26)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 350 430))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 89 51)
+(iconImage "notepad.icn"))
+(open
+(extent 470 190)
+(editing enabled))
+(pinCenter 350 220))
+(connect I1:1 D0:1
+(points 4 -10 92 10 92 10 100 58 100))
+(connect I2:1 D0:2
+(points 4 -10 192 20 192 20 120 58 120))
+(connect I3:1 D0:3
+(points 4 -10 292 30 292 30 140 58 140))
+(connect D0:1 D1:1
+(points 6 162 120 180 120 180 180 80 180 80 270 96 270))
+(connect I4:1 D1:2
+(points 4 -10 392 10 392 10 290 96 290))
+(connect I5:1 D1:3
+(points 4 -10 492 20 492 20 310 96 310))
+(connect D1:1 D2:1
+(points 2 223 290 321 290))
+(connect D0:0 D2:2
+(points 5 110 162 110 190 240 190 240 310 321 310))
+(connect D2:0 D3:0
+(points 2 350 315 350 330))
+(connect D2:1 D3:1
+(points 6 379 300 400 300 400 270 300 270 300 340 321 340))
+(connect D0:1 D4:1
+(points 6 162 120 180 120 180 180 250 180 250 380 321 380))
+(connect D0:0 D4:2
+(points 5 110 162 110 190 240 190 240 400 321 400))
+(connect D6:1 D5:1
+(points 4 378 430 410 430 410 370 441 370))
+(connect D4:0 D6:0
+(points 2 350 405 350 420))
+(connect D4:1 D6:1
+(points 6 379 390 400 390 400 460 300 460 300 430 321 430))
+(connect D3:1 O1:1
+(points 6 378 340 410 340 410 250 650 250 650 292 712 292)))
+(stackingOrder 0 1 2 3 4 6 7 5))))
+(device 22 NOTE
+(properties
+(name "FA<FB")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 FA < FB for Lookup Table to work.\\par\r\nThe arrayRev fixes image mode of output\\par\r\n}\r\n"
+)))
+(configuration
+(connect I3:1 D0:1)
+(connect I4:1 D0:2)
+(connect I7:1 D0:3)
+(connect I5:1 D1:1)
+(connect I6:1 D1:2)
+(connect I7:1 D1:3)
+(connect D4:0 D2:0)
+(connect D3:1 D2:1)
+(connect D4:1 D2:2)
+(connect D0:1 D3:1)
+(connect D0:2 D3:2)
+(connect D0:3 D3:3)
+(connect D0:4 D3:4)
+(connect D0:5 D3:5)
+(connect D3:0 D4:0)
+(connect D1:1 D4:1)
+(connect D1:2 D4:2)
+(connect D1:3 D4:3)
+(connect D1:4 D4:4)
+(connect D1:5 D4:5)
+(connect D2:1 O1:1)))
+(contextCarrier
+(wndOrigin 49 96)
+(wndState res)
+(active detail)
+(detail
+(extent 767 449)
+(anchorPt 374 86)
+(configuration
+(devCarrierFor 3
+(active open)
+(icon
+(extent 49 0))
+(open
+(extent 204 176))
+(terminals on)
+(pinCenter -185 30))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 59 0))
+(open
+(extent 204 186))
+(terminals on)
+(pinCenter -185 240))
+(devCarrierFor 12
+(active open)
+(icon)
+(open
+(extent 194 76))
+(terminals on)
+(pinCenter 270 140))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 85 54))
+(terminals on)
+(pinCenter 50 30))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 94 54))
+(terminals on)
+(pinCenter 50 240))
+(devCarrierFor 22
+(active open)
+(icon
+(extent 68 0)
+(iconImage "notepad.icn"))
+(open
+(extent 284 56)
+(editing enabled))
+(pinCenter 250 -30))
+(connect I3:1 D0:1
+(points 4 -374 78 -360 78 -360 -30 -330 -30))
+(connect I4:1 D0:2
+(points 4 -374 138 -360 138 -360 30 -330 30))
+(connect I7:1 D0:3
+(points 4 -374 318 -380 318 -380 90 -330 90))
+(connect I5:1 D1:1
+(points 4 -374 198 -360 198 -360 180 -330 180))
+(connect I6:1 D1:2
+(points 4 -374 258 -360 258 -360 240 -330 240))
+(connect I7:1 D1:3
+(points 4 -374 318 -360 318 -360 300 -330 300))
+(connect D4:0 D2:0
+(points 8 50 269 50 290 130 290 130 200 110 200 110 60 280 60 280 81))
+(connect D3:1 D2:1
+(points 4 95 30 120 30 120 120 140 120))
+(connect D4:1 D2:2
+(points 4 99 240 120 240 120 160 140 160))
+(connect D0:1 D3:1
+(points 4 -31 -30 0 -30 0 10 5 10))
+(connect D0:2 D3:2
+(points 4 -31 0 -10 0 -10 20 5 20))
+(connect D0:3 D3:3
+(points 2 -31 30 5 30))
+(connect D0:4 D3:4
+(points 4 -31 60 -10 60 -10 40 5 40))
+(connect D0:5 D3:5
+(points 4 -31 90 0 90 0 50 5 50))
+(connect D3:0 D4:0
+(points 2 50 59 50 210))
+(connect D1:1 D4:1
+(points 4 -31 180 -10 180 -10 220 0 220))
+(connect D1:2 D4:2
+(points 4 -31 210 -20 210 -20 230 0 230))
+(connect D1:3 D4:3
+(points 2 -31 240 0 240))
+(connect D1:4 D4:4
+(points 4 -31 270 -20 270 -20 250 0 250))
+(connect D1:5 D4:5
+(points 4 -31 300 -10 300 -10 260 0 260))
+(connect D2:1 O1:1
+(points 4 419 140 423 140 423 138 392 138)))
+(stackingOrder 0 1 2 3 4 5))))
 (context 7
 (properties
 (name "Get_Power_Power_Meter")
@@ -2507,6 +3379,210 @@ M)
 (connect D12:3 D15:2
 (points 4 348 310 370 310 370 450 454 450)))
 (stackingOrder 5 7 8 4 6 1 12 14 9 10 2 11 15 3 0 13))))
+(context 10
+(properties
+(name "ScalarPulseOnOff")
+(variableName ScalarPulseOnOff)
+(variableScope cont)
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 2 "/NOP/ WRITE TEXT \"DM0\" EOL" "/NOP/ WRITE TEXT \"DM1\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 2 IODEVICE
+(properties
+(name "PassThru ( @GPIB0::17::INSTR)")
+(variableScope cont)
+(transactions 3 "/NOP/ WRITE TEXT \"PM0\" EOL" "/NOP/ WRITE TEXT \"SHPM\" EOL"
+"WRITE TEXT A EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(implementation
+(ioDevType 13)
+(iopath "PassThru")))
+(device 3 IODEVICE
+(properties
+(name "hp8757D ( @GPIB0::16::INSTR)")
+(variableScope cont)
+(transactions 1 "WRITE TEXT \"PT19\" EOL"))
+(implementation
+(ioDevType 13)
+(iopath "hp8757D")))
+(device 5 NOTE
+(properties
+(name "Skin a cat")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Remember to turn the AC mode back on after doing whatever \\par\r\nSCPI:\\par\r\nPULSe:SOURce SCALar\\par\r\nPULSe[:STATe] ON]OFF]l]O\\par\r\nAnalyzer: SHPM function on, PM0 function off.\\par\r\nhp8360 PassThru command \\par\r\nPM0     turns OFF just the sweeper scalar pulse. \\par\r\nSHPM  turns ON just the sweeper scalar pulse\\par\r\n\\par\r\nhp8757  GPIB 16\\par\r\nDM0  turns OFF all the stuff so it\'s in DC mode\\par\r\nDM1   turns ON the AC mode for all detectors and turns ON the sweeper\'s scalar pulse.\\par\r\n}\r\n"
+)))
+(device 6 IFTHENELSE
+(properties
+(name "If A == \"ON\"")
+(variableScope cont)
+(cases 1 "A==\"ON\""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 7 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 8 LITERALCONSTANT
+(properties
+(name "Pulse Off")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "PM0"))
+(initValue Text
+(data  ""))))
+(device 9 LITERALCONSTANT
+(properties
+(name "Pulse On")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "SHPM"))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D1:0 D0:0)
+(connect D2:0 D1:0)
+(connect D5:1 D1:1)
+(connect D4:0 D2:0)
+(connect I1:1 D4:0)
+(connect I1:1 D4:1)
+(connect D7:1 D5:1)
+(connect D6:1 D5:2)
+(connect D4:2 D6:0)
+(connect D4:1 D7:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 968 638)
+(anchorPt -361 97)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 86))
+(terminals on)
+(pinCenter 630 440))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 224 96))
+(terminals on)
+(pinCenter 630 310))
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 221 74))
+(terminals on)
+(pinCenter 630 190))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 68 0)
+(iconImage "notepad.icn"))
+(open
+(extent 464 296)
+(editing enabled))
+(pinCenter 1040 320))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 66 25))
+(open
+(extent 77 51))
+(terminals on)
+(pinCenter 625 40))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 1020 30))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 55 0))
+(open
+(extent 174 29))
+(pinCenter 850 90))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 56 0))
+(open
+(extent 174 29))
+(pinCenter 850 20))
+(connect D1:0 D0:0
+(points 2 630 360 630 376))
+(connect D2:0 D1:0
+(points 2 630 229 630 241))
+(connect D5:1 D1:1
+(points 6 1035 30 1060 30 1060 -40 470 -40 470 310 485 310))
+(connect D4:0 D2:0
+(points 2 630 68 630 132))
+(connect I1:1 D4:0
+(points 7 361 221 370 221 370 40 530 40 530 -30 630 -30 630 -6))
+(connect I1:1 D4:1
+(points 4 361 221 370 221 370 40 554 40))
+(connect D7:1 D5:1
+(points 2 939 20 1004 20))
+(connect D6:1 D5:2
+(points 4 939 90 960 90 960 40 1004 40))
+(connect D4:2 D6:0
+(points 3 706 50 850 50 850 55))
+(connect D4:1 D7:0
+(points 5 706 30 730 30 730 -30 850 -30 850 -15)))
+(stackingOrder 2 0 1 4 7 5 6 3))))
 (context 0
 (properties
 (name "tail")
@@ -2873,7 +3949,7 @@ M)
 (active detail)
 (detail
 (extent 840 807)
-(anchorPt -220 182)
+(anchorPt -289 196)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -3084,7 +4160,7 @@ M)
 (points 2 781 550 824 550))
 (connect D14:0 D19:0
 (points 2 680 379 680 382)))
-(stackingOrder 5 10 11 0 7 13 6 9 18 17 8 3 1 2 4 12 15 14 19 16))))
+(stackingOrder 5 10 11 0 7 13 9 18 17 8 3 1 2 4 12 15 19 6 14 16))))
 (context 8
 (properties
 (name "Write_Cal_Factor")
@@ -4103,7 +5179,7 @@ M)
 (name "Build Error Records")
 (variableScope cont)
 (trigMode deg)
-(nextID 19)
+(nextID 20)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -4146,7 +5222,7 @@ M)
 (name "ErrorTotalRec")
 (variableScope cont)
 (trigMode deg)
-(nextID 11)
+(nextID 12)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (interface
@@ -4174,7 +5250,7 @@ M)
 (name "DataGenerator")
 (variableScope cont)
 (trigMode deg)
-(nextID 6)
+(nextID 7)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (interface
@@ -4314,6 +5390,13 @@ M)
 (output 1
 (name "Array")
 (tag "Array"))))
+(device 6 NOTE
+(properties
+(name "Why DataGenerator?")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Why DataGenerator?\\par\r\nis it not useful to plot each band, 1 thru 6, to debug the code?\\par\r\n}\r\n"
+)))
 (configuration
 (connect I1:1 D0:1)
 (connect I2:1 D0:2)
@@ -4379,6 +5462,15 @@ M)
 (open)
 (terminals on)
 (pinCenter 360 150))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 125 51)
+(iconImage "notepad.icn"))
+(open
+(extent 384 90)
+(editing enabled))
+(pinCenter 110 0))
 (connect I1:1 D0:1
 (points 4 -103 0 -90 0 -90 60 80 60))
 (connect I2:1 D0:2
@@ -4405,7 +5497,7 @@ M)
 (points 6 389 150 410 150 410 110 430 110 430 30 471 30))
 (connect D4:1 O2:1
 (points 4 389 190 430 190 430 210 471 210)))
-(stackingOrder 4 5 1 0 3 2))))
+(stackingOrder 4 5 1 0 3 2 6))))
 (device 2 CONTEXT
 (properties
 (name "RecordBuilder")
@@ -4549,7 +5641,7 @@ M)
 (points 4 520 150 540 150 540 142 664 142))
 (connect D0:1 O3:1
 (points 4 381 180 400 180 400 232 664 232)))
-(stackingOrder 0 1))))
+(stackingOrder 1 0))))
 (device 3 CONSTANT
 (properties
 (name "From")
@@ -4622,6 +5714,13 @@ M)
 (data  0))
 (from 4480)
 (thru 11600)))
+(device 11 NOTE
+(properties
+(name "Why ErrorTotalRec?")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Why ErrorTotalRec?\\par\r\nThe hp8757D was calibrated with Adaptive Normalization ON.\\par\r\nEach band will be written to the hp8757D memory so the correction can be displayed in real time.\\par\r\n\\par\r\nThere is a debate if this method is the most useful. The other request is post process the hp8757D data and display on the computer screen. This would be useful to compare hp8757D to the \"corrected\" results.\\par\r\n}\r\n"
+)))
 (configuration
 (connect D2:1 D0:1)
 (connect D3:1 D0:2)
@@ -4638,7 +5737,7 @@ M)
 (active detail)
 (detail
 (extent 528 422)
-(anchorPt 44 84)
+(anchorPt 8 79)
 (configuration
 (devCarrierFor 1
 (active icon)
@@ -4664,7 +5763,7 @@ M)
 (realSigDigits 4)
 (realRadixSpec 2)
 (integerBase decimal)))
-(pinCenter -100 40))
+(pinCenter 120 10))
 (devCarrierFor 4
 (active open)
 (icon
@@ -4677,7 +5776,7 @@ M)
 (realSigDigits 4)
 (realRadixSpec 2)
 (integerBase decimal)))
-(pinCenter -100 90))
+(pinCenter 120 60))
 (devCarrierFor 7
 (active icon)
 (icon
@@ -4685,30 +5784,40 @@ M)
 (open
 (extent 194 121))
 (terminals on)
-(pinCenter 110 110))
+(pinCenter 120 110))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 118 51)
+(iconImage "notepad.icn"))
+(open
+(extent 410 180)
+(editing enabled))
+(pinCenter 280 100))
 (connect D2:1 D0:1
-(points 6 -58 40 -30 40 -30 100 50 100 50 150 73 150))
+(points 10 162 10 190 10 190 -50 50 -50 50 100 70 100 70 130 60 130 60 150 73
+150))
 (connect D3:1 D0:2
-(points 6 -58 90 -40 90 -40 110 40 110 40 170 73 170))
+(points 8 162 60 180 60 180 -40 60 -40 60 110 50 110 50 170 73 170))
 (connect I1:1 D0:3
-(points 6 -44 126 -190 126 -190 120 30 120 30 190 73 190))
+(points 4 -8 131 40 131 40 190 73 190))
 (connect D4:1 D1:1
-(points 2 150 110 204 110))
+(points 2 160 110 204 110))
 (connect D0:1 D1:2
 (points 2 167 150 204 150))
 (connect D2:1 D4:1
-(points 4 -58 40 -30 40 -30 100 70 100))
+(points 6 162 10 190 10 190 -50 50 -50 50 100 80 100))
 (connect D3:1 D4:2
-(points 4 -58 90 -40 90 -40 110 70 110))
+(points 6 162 60 180 60 180 -40 60 -40 60 110 80 110))
 (connect I1:1 D4:3
-(points 4 -44 126 -190 126 -190 120 70 120))
+(points 4 -8 131 34 131 34 120 80 120))
 (connect D1:1 O1:1
-(points 4 295 110 320 110 320 -14 483 -14))
+(points 4 295 110 320 110 320 -9 519 -9))
 (connect D1:2 O2:1
-(points 6 295 130 340 130 340 150 450 150 450 126 483 126))
+(points 4 295 130 320 130 320 131 519 131))
 (connect D1:3 O3:1
-(points 4 295 150 320 150 320 266 483 266)))
-(stackingOrder 3 2 4 0 1))))
+(points 4 295 150 320 150 320 271 519 271)))
+(stackingOrder 3 2 4 0 1 5))))
 (device 7 TOGLOBAL
 (properties
 (name "Set ErrorRec")
@@ -4725,6 +5834,8 @@ M)
 (connect D1:1 O1:1)
 (connect D1:2 O2:1)))
 (contextCarrier
+(wndOrigin 377 394)
+(wndState res)
 (active detail)
 (detail
 (extent 702 337)
@@ -4736,7 +5847,7 @@ M)
 (open
 (extent 67 29)
 (showFormat int))
-(pinCenter 100 100))
+(pinCenter 100 110))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -4752,3655 +5863,14 @@ M)
 (terminals on)
 (pinCenter 385 160))
 (connect D0:1 D1:1
-(points 4 136 100 150 100 150 110 156 110))
+(points 2 136 110 156 110))
 (connect D1:3 D2:1
 (points 4 243 140 260 140 260 160 306 160))
 (connect D1:1 O1:1
 (points 4 243 80 260 80 260 33 719 33))
 (connect D1:2 O2:1
 (points 6 243 110 270 110 270 80 510 80 510 213 719 213)))
-(stackingOrder 0 2 1))))
-(device 1 CONTEXT
-(properties
-(name "InRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 9)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(output 1
-(type data)
-(name "A")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "B")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "C")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  801))
-(initValue Int32
-(data  0))))
-(device 1 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  201))
-(initValue Int32
-(data  0))))
-(device 2 CONTEXT
-(properties
-(name "InputMeterRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 11)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "NumPts")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 CONTEXT
-(properties
-(name "DataGenerator")
-(variableScope cont)
-(trigMode deg)
-(nextID 6)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(optional yes))
-(output 1
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Meter")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "201")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  2))
-(from 4480)
-(thru 11600)))
-(device 1 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 2 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "(A*sin(PI*A))/500"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:0 D1:0)
-(connect D0:1 D1:1)
-(connect D1:1 D2:1)
-(connect D1:1 D3:1)
-(connect D2:1 D4:1)
-(connect D1:0 D4:2)
-(connect D3:1 D5:1)
-(connect D1:0 D5:2)
-(connect D5:1 O1:1)
-(connect D4:1 O2:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 575 361)
-(anchorPt 103 60)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 120 70))
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 120 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 180))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 25))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 140))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 190))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 150))
-(connect I1:1 D0:1
-(points 4 -103 0 -90 0 -90 60 80 60))
-(connect I2:1 D0:2
-(points 4 -103 120 -90 120 -90 70 80 70))
-(connect I3:1 D0:3
-(points 4 -103 240 -80 240 -80 80 80 80))
-(connect D0:0 D1:0
-(points 2 120 89 120 112))
-(connect D0:1 D1:1
-(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
-(connect D1:1 D2:1
-(points 4 183 140 200 140 200 180 222 180))
-(connect D1:1 D3:1
-(points 2 183 140 222 140))
-(connect D2:1 D4:1
-(points 2 277 180 331 180))
-(connect D1:0 D4:2
-(points 5 120 168 120 210 300 210 300 200 331 200))
-(connect D3:1 D5:1
-(points 2 277 140 331 140))
-(connect D1:0 D5:2
-(points 5 120 168 120 210 300 210 300 160 331 160))
-(connect D5:1 O1:1
-(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
-(connect D4:1 O2:1
-(points 4 389 190 430 190 430 210 471 210)))
-(stackingOrder 4 5 1 0 3 2))))
-(device 2 CONTEXT
-(properties
-(name "RecordBuilder")
-(variableScope cont)
-(trigMode deg)
-(nextID 3)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(name "Record"))))
-(device 2 FROMRECORD
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Record Data")
-(requires
-(datatype Record))
-(lock name constraints))
-(output 1
-(name "Name List")
-(tag "Name List")
-(lock name constraints)
-(optional yes))
-(output 2
-(name "Type List")
-(tag "Type List")
-(lock name constraints)
-(optional yes))
-(output 3
-(name "Freq")
-(tag "A")
-(optional yes))
-(output 4
-(name "dBm")
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 D1:1)
-(connect D1:3 O1:1)
-(connect D1:4 O2:1)
-(connect D0:1 O3:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 649 268)
-(anchorPt 52 2)
-(configuration
-(devCarrierFor 1
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 97 82))
-(terminals on)
-(pinCenter 170 130))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 95 65)
-(iconImage "unbuild.icn"))
-(open
-(extent 17 122))
-(terminals on)
-(pinCenter 400 130))
-(connect I1:1 D0:1
-(points 4 -52 61 -40 61 -40 110 79 110))
-(connect I2:1 D0:2
-(points 4 -52 201 -40 201 -40 150 79 150))
-(connect D0:1 D1:1
-(points 2 281 130 350 130))
-(connect D1:3 O1:1
-(points 6 450 130 460 130 460 120 470 120 470 41 596 41))
-(connect D1:4 O2:1
-(points 4 450 140 470 140 470 131 596 131))
-(connect D0:1 O3:1
-(points 6 281 130 300 130 300 140 360 140 360 221 596 221)))
-(stackingOrder 0 1))))
-(device 3 CONSTANT
-(properties
-(name "From")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  4480))
-(initValue Real
-(data  0))))
-(device 4 CONSTANT
-(properties
-(name "Thru")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  11600))
-(initValue Real
-(data  0))))
-(device 7 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "201")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  0))
-(from 4480)
-(thru 11600)))
-(configuration
-(connect D2:1 D0:1)
-(connect D3:1 D0:2)
-(connect I1:1 D0:3)
-(connect D4:1 D1:1)
-(connect D0:2 D1:2)
-(connect D2:1 D4:1)
-(connect D3:1 D4:2)
-(connect I1:1 D4:3)
-(connect D1:1 O1:1)
-(connect D1:2 O2:1)
-(connect D1:3 O3:1)))
-(contextCarrier
-(wndOrigin 102 102)
-(wndState res)
-(active detail)
-(detail
-(extent 447 422)
-(anchorPt 124 49)
-(configuration
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 89 65))
-(terminals on)
-(pinCenter 90 210))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 86 65))
-(terminals on)
-(pinCenter 230 210))
-(devCarrierFor 3
-(active open)
-(icon
-(extent 33 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter -70 60))
-(devCarrierFor 4
-(active open)
-(icon
-(extent 29 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter -70 110))
-(devCarrierFor 7
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 100 150))
-(connect D2:1 D0:1
-(points 6 -28 60 0 60 0 140 20 140 20 190 43 190))
-(connect D3:1 D0:2
-(points 6 -28 110 -10 110 -10 150 10 150 10 210 43 210))
-(connect I1:1 D0:3
-(points 4 -124 161 0 161 0 230 43 230))
-(connect D4:1 D1:1
-(points 4 140 150 170 150 170 190 184 190))
-(connect D0:2 D1:2
-(points 2 137 230 184 230))
-(connect D2:1 D4:1
-(points 4 -28 60 0 60 0 140 60 140))
-(connect D3:1 D4:2
-(points 4 -28 110 -10 110 -10 150 60 150))
-(connect I1:1 D4:3
-(points 4 -124 161 -78 161 -78 160 60 160))
-(connect D1:1 O1:1
-(points 4 275 190 290 190 290 21 322 21))
-(connect D1:2 O2:1
-(points 4 275 210 300 210 300 161 322 161))
-(connect D1:3 O3:1
-(points 4 275 230 300 230 300 301 322 301)))
-(stackingOrder 3 2 4 0 1))))
-(device 3 CONTEXT
-(properties
-(name "InputScalarRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 11)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "NumPts")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 CONTEXT
-(properties
-(name "DataGenerator")
-(variableScope cont)
-(trigMode deg)
-(nextID 6)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(optional yes))
-(output 1
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Meter")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "801")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  2))
-(from 4480)
-(thru 11600)))
-(device 1 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 2 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "(A*sin(PI*A))/500"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:0 D1:0)
-(connect D0:1 D1:1)
-(connect D1:1 D2:1)
-(connect D1:1 D3:1)
-(connect D2:1 D4:1)
-(connect D1:0 D4:2)
-(connect D3:1 D5:1)
-(connect D1:0 D5:2)
-(connect D5:1 O1:1)
-(connect D4:1 O2:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 575 361)
-(anchorPt 103 60)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 120 70))
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 120 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 180))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 25))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 140))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 190))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 150))
-(connect I1:1 D0:1
-(points 4 -103 0 -90 0 -90 60 80 60))
-(connect I2:1 D0:2
-(points 4 -103 120 -90 120 -90 70 80 70))
-(connect I3:1 D0:3
-(points 4 -103 240 -80 240 -80 80 80 80))
-(connect D0:0 D1:0
-(points 2 120 89 120 112))
-(connect D0:1 D1:1
-(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
-(connect D1:1 D2:1
-(points 4 183 140 200 140 200 180 222 180))
-(connect D1:1 D3:1
-(points 2 183 140 222 140))
-(connect D2:1 D4:1
-(points 2 277 180 331 180))
-(connect D1:0 D4:2
-(points 5 120 168 120 210 300 210 300 200 331 200))
-(connect D3:1 D5:1
-(points 2 277 140 331 140))
-(connect D1:0 D5:2
-(points 5 120 168 120 210 300 210 300 160 331 160))
-(connect D5:1 O1:1
-(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
-(connect D4:1 O2:1
-(points 4 389 190 430 190 430 210 471 210)))
-(stackingOrder 4 5 1 0 3 2))))
-(device 2 CONTEXT
-(properties
-(name "RecordBuilder")
-(variableScope cont)
-(trigMode deg)
-(nextID 4)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "error")
-(lock constraints)
-(optional yes))
-(output 4
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(input 3
-(name "error")
-(optional yes))
-(output 1
-(name "Record"))))
-(device 2 FROMRECORD
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Record Data")
-(requires
-(datatype Record))
-(lock name constraints))
-(output 1
-(name "Name List")
-(tag "Name List")
-(lock name constraints)
-(optional yes))
-(output 2
-(name "Type List")
-(tag "Type List")
-(lock name constraints)
-(optional yes))
-(output 3
-(name "Freq")
-(tag "A")
-(optional yes))
-(output 4
-(name "dBm")
-(tag "B")
-(optional yes))
-(output 5
-(name "error")
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "A-A"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D2:1 D0:3)
-(connect D0:1 D1:1)
-(connect I2:1 D2:1)
-(connect D1:3 O1:1)
-(connect D1:4 O2:1)
-(connect D1:5 O3:1)
-(connect D0:1 O4:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 665 285)
-(anchorPt 0 0)
-(configuration
-(devCarrierFor 1
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 97 82))
-(terminals on)
-(pinCenter 270 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 95 65)
-(iconImage "unbuild.icn"))
-(open
-(extent 17 122))
-(terminals on)
-(pinCenter 470 140))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 130 160))
-(connect I1:1 D0:1
-(points 4 0 72 10 72 10 120 179 120))
-(connect I2:1 D0:2
-(points 4 0 212 82 212 82 140 179 140))
-(connect D2:1 D0:3
-(points 2 157 160 179 160))
-(connect D0:1 D1:1
-(points 2 381 140 420 140))
-(connect I2:1 D2:1
-(points 4 0 212 80 212 80 160 102 160))
-(connect D1:3 O1:1
-(points 4 520 140 530 140 530 32 664 32))
-(connect D1:4 O2:1
-(points 4 520 150 540 150 540 102 664 102))
-(connect D1:5 O3:1
-(points 4 520 160 540 160 540 172 664 172))
-(connect D0:1 O4:1
-(points 4 381 140 400 140 400 242 664 242)))
-(stackingOrder 0 2 1))))
-(device 3 CONSTANT
-(properties
-(name "From")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  4480))
-(initValue Real
-(data  0))))
-(device 4 CONSTANT
-(properties
-(name "Thru")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  11600))
-(initValue Real
-(data  0))))
-(device 7 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "801")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  0))
-(from 4480)
-(thru 11600)))
-(configuration
-(connect D2:1 D0:1)
-(connect D3:1 D0:2)
-(connect I1:1 D0:3)
-(connect D4:1 D1:1)
-(connect D0:1 D1:2)
-(connect D2:1 D4:1)
-(connect D3:1 D4:2)
-(connect I1:1 D4:3)
-(connect D1:1 O1:1)
-(connect D1:2 O2:1)
-(connect D1:4 O3:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 528 418)
-(anchorPt 175 90)
-(configuration
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 89 65))
-(terminals on)
-(pinCenter 120 170))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 86 65))
-(terminals on)
-(pinCenter 250 130))
-(devCarrierFor 3
-(active open)
-(icon
-(extent 33 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter -100 40))
-(devCarrierFor 4
-(active open)
-(icon
-(extent 29 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter -100 90))
-(devCarrierFor 7
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 110 110))
-(connect D2:1 D0:1
-(points 6 -58 40 -30 40 -30 100 50 100 50 150 73 150))
-(connect D3:1 D0:2
-(points 6 -58 90 -40 90 -40 110 40 110 40 170 73 170))
-(connect I1:1 D0:3
-(points 6 -175 118 -190 118 -190 120 30 120 30 190 73 190))
-(connect D4:1 D1:1
-(points 2 150 110 204 110))
-(connect D0:1 D1:2
-(points 2 167 150 204 150))
-(connect D2:1 D4:1
-(points 4 -58 40 -30 40 -30 100 70 100))
-(connect D3:1 D4:2
-(points 4 -58 90 -40 90 -40 110 70 110))
-(connect I1:1 D4:3
-(points 4 -175 118 -190 118 -190 120 70 120))
-(connect D1:1 O1:1
-(points 4 295 110 320 110 320 -22 352 -22))
-(connect D1:2 O2:1
-(points 4 295 120 320 120 320 118 352 118))
-(connect D1:4 O3:1
-(points 4 295 140 320 140 320 258 352 258)))
-(stackingOrder 3 2 4 0 1))))
-(device 4 CONTEXT
-(properties
-(name "Extrapolate")
-(variableScope cont)
-(trigMode deg)
-(nextID 7)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(deviceList
-(device 0 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 1 FORMULA
-(properties
-(variableScope cont)
-(expr 4 "x=InRec.Scalar.freq;" "yA=InRec.Meter.dBm;" "xA=InRec.Meter.freq;" ""))
-(interface
-(output 1
-(name "x")
-(optional yes))
-(output 2
-(name "yA")
-(optional yes))
-(output 3
-(name "xA")
-(optional yes))))
-(device 2 EXVEEOBJECT
-(properties
-(name "Lookup Table")
-(variableScope cont)
-(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
-)
-(assemblyName
-"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
-))
-(interface
-(input 1
-(name "x")
-(tag "x")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "yArray")
-(tag "yArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(type control)
-(name "xArray")
-(tag "xArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "y")
-(lock name constraints)
-(optional yes)))
-(implementation))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "InRec.Scalar.error[*] = InRec.Scalar.dBm - Meter" ""))
-(interface
-(input 1
-(name "Meter")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 6 NOTE
-(properties
-(variableScope cont)
-(text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 After the Power Meter is done measureing\\par\r\nthen extrapolate its array to 801pnts\\par\r\nand calculate the error and save in the InRec.\\par\r\n\\par\r\nmeasured = actuall + error\\par\r\nScalar = meter + error\\par\r\nerror = measured - actual\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
-)))
-(configuration
-(connect D1:0 D0:0)
-(connect D1:1 D0:1)
-(connect D0:1 D2:1)
-(connect D1:2 D2:2)
-(connect D1:3 D2:3)
-(connect D2:1 D3:1)
-(connect D0:0 D3:2)
-(connect D0:0 D4:0)
-(connect D3:1 D4:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 953 536)
-(anchorPt 147 29)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 130 190))
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 50 34))
-(open
-(extent 144 110))
-(terminals on)
-(pinCenter 130 90))
-(devCarrierFor 2
-(active open)
-(icon
-(iconImage "vTools\\General\\table-lookup.jpg"))
-(open
-(extent 42 76))
-(terminals on)
-(titleBg "Light Golden Orange")
-(pinCenter 370 210))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 490 290))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 314 66))
-(terminals on)
-(pinCenter 130 410))
-(devCarrierFor 6
-(active icon)
-(icon
-(extent 68 51)
-(iconImage "notepad.icn"))
-(open
-(extent 410 180)
-(editing enabled))
-(pinCenter 480 120))
-(connect D1:0 D0:0
-(points 2 130 109 130 162))
-(connect D1:1 D0:1
-(points 6 157 80 180 80 180 50 50 50 50 190 66 190))
-(connect D0:1 D2:1
-(points 2 193 190 296 190))
-(connect D1:2 D2:2
-(points 6 157 90 210 90 210 230 290 230 290 210 296 210))
-(connect D1:3 D2:3
-(points 6 157 100 200 100 200 240 290 240 290 230 296 230))
-(connect D2:1 D3:1
-(points 4 423 210 440 210 440 280 461 280))
-(connect D0:0 D3:2
-(points 3 130 218 130 300 461 300))
-(connect D0:0 D4:0
-(points 2 130 218 130 400))
-(connect D3:1 D4:1
-(points 6 519 290 540 290 540 440 80 440 80 410 102 410)))
-(stackingOrder 0 2 3 1 5 4))))
-(device 5 FORMULA
-(properties
-(variableScope cont)
-(expr 5 "A=InRec.Scalar.dBm;" "B=InRec.Meter.dBm;" "C=InRec.Scalar.error" "" "")
-)
-(interface
-(output 1
-(name "A")
-(optional yes))
-(output 2
-(name "B")
-(optional yes))
-(output 3
-(name "C")
-(optional yes))))
-(device 6 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Scalar")
-(optional yes))
-(input 2
-(name "Meter")
-(optional yes))
-(output 1
-(name "Input"))))
-(device 7 TOGLOBAL
-(properties
-(name "Set InRec")
-(variableScope cont)
-(globalName "InRec"))
-(interface
-(input 1
-(name "Data")
-(tag "Data")
-(lock name))))
-(configuration
-(connect D3:0 D2:0)
-(connect D1:1 D2:1)
-(connect D0:1 D3:1)
-(connect D2:0 D4:0)
-(connect D4:0 D5:0)
-(connect D3:3 D6:1)
-(connect D2:3 D6:2)
-(connect D6:1 D7:1)
-(connect D5:1 O1:1)
-(connect D5:2 O2:1)
-(connect D5:3 O3:1)))
-(contextCarrier
-(wndOrigin 102 102)
-(wndState res)
-(active detail)
-(detail
-(extent 712 337)
-(anchorPt -18 -15)
-(configuration
-(devCarrierFor 0
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 100 100))
-(devCarrierFor 1
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 100 170))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 94 64))
-(terminals on)
-(pinCenter 200 170))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 92 65))
-(terminals on)
-(pinCenter 200 100))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 67 15))
-(terminals on)
-(pinCenter 200 220))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 50 34))
-(open
-(extent 174 110))
-(terminals on)
-(pinCenter 200 260))
-(devCarrierFor 6
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 97 54))
-(terminals on)
-(pinCenter 395 140))
-(devCarrierFor 7
-(active open)
-(icon
-(extent 58 0))
-(open
-(extent 73 51))
-(terminals on)
-(pinCenter 575 140))
-(connect D3:0 D2:0
-(points 2 200 135 200 135))
-(connect D1:1 D2:1
-(points 2 136 170 150 170))
-(connect D0:1 D3:1
-(points 2 136 100 151 100))
-(connect D2:0 D4:0
-(points 2 200 204 200 210))
-(connect D4:0 D5:0
-(points 2 200 230 200 240))
-(connect D3:3 D6:1
-(points 2 248 120 294 120))
-(connect D2:3 D6:2
-(points 4 249 190 270 190 270 160 294 160))
-(connect D6:1 D7:1
-(points 2 486 140 496 140))
-(connect D5:1 O1:1
-(points 6 227 250 650 250 650 170 660 170 660 73 729 73))
-(connect D5:2 O2:1
-(points 4 227 260 660 260 660 183 729 183))
-(connect D5:3 O3:1
-(points 4 227 270 250 270 250 293 729 293)))
-(stackingOrder 0 1 7 2 6 3 5 4))))
-(device 2 CONTEXT
-(properties
-(name "OutRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 10)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(output 1
-(type data)
-(name "A")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "B")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "C")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  801))
-(initValue Int32
-(data  0))))
-(device 1 CONSTANT
-(properties
-(name "Int32")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Int32")
-(lock name constraints)))
-(implementation
-(value Int32
-(data  201))
-(initValue Int32
-(data  0))))
-(device 2 CONTEXT
-(properties
-(name "OutPutMeterRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 11)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 CONTEXT
-(properties
-(name "DataGenerator")
-(variableScope cont)
-(trigMode deg)
-(nextID 6)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(optional yes))
-(output 1
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Meter")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "201")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  2))
-(from 18000)
-(thru 40000)))
-(device 1 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 2 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "(A*sin(PI*A))/500"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:0 D1:0)
-(connect D0:1 D1:1)
-(connect D1:1 D2:1)
-(connect D1:1 D3:1)
-(connect D2:1 D4:1)
-(connect D1:0 D4:2)
-(connect D3:1 D5:1)
-(connect D1:0 D5:2)
-(connect D5:1 O1:1)
-(connect D4:1 O2:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 575 361)
-(anchorPt 103 60)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 120 70))
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 120 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 180))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 25))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 140))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 190))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 150))
-(connect I1:1 D0:1
-(points 4 -103 0 -90 0 -90 60 80 60))
-(connect I2:1 D0:2
-(points 4 -103 120 -90 120 -90 70 80 70))
-(connect I3:1 D0:3
-(points 4 -103 240 -80 240 -80 80 80 80))
-(connect D0:0 D1:0
-(points 2 120 89 120 112))
-(connect D0:1 D1:1
-(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
-(connect D1:1 D2:1
-(points 4 183 140 200 140 200 180 222 180))
-(connect D1:1 D3:1
-(points 2 183 140 222 140))
-(connect D2:1 D4:1
-(points 2 277 180 331 180))
-(connect D1:0 D4:2
-(points 5 120 168 120 210 300 210 300 200 331 200))
-(connect D3:1 D5:1
-(points 2 277 140 331 140))
-(connect D1:0 D5:2
-(points 5 120 168 120 210 300 210 300 160 331 160))
-(connect D5:1 O1:1
-(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
-(connect D4:1 O2:1
-(points 4 389 190 430 190 430 210 471 210)))
-(stackingOrder 4 5 1 0 3 2))))
-(device 2 CONTEXT
-(properties
-(name "RecordBuilder")
-(variableScope cont)
-(trigMode deg)
-(nextID 3)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(name "Record"))))
-(device 2 FROMRECORD
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Record Data")
-(requires
-(datatype Record))
-(lock name constraints))
-(output 1
-(name "Name List")
-(tag "Name List")
-(lock name constraints)
-(optional yes))
-(output 2
-(name "Type List")
-(tag "Type List")
-(lock name constraints)
-(optional yes))
-(output 3
-(name "Freq")
-(tag "A")
-(optional yes))
-(output 4
-(name "dBm")
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D0:1 D1:1)
-(connect D1:3 O1:1)
-(connect D1:4 O2:1)
-(connect D0:1 O3:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 649 268)
-(anchorPt 52 2)
-(configuration
-(devCarrierFor 1
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 97 82))
-(terminals on)
-(pinCenter 170 130))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 95 65)
-(iconImage "unbuild.icn"))
-(open
-(extent 17 122))
-(terminals on)
-(pinCenter 400 130))
-(connect I1:1 D0:1
-(points 4 -52 61 -40 61 -40 110 79 110))
-(connect I2:1 D0:2
-(points 4 -52 201 -40 201 -40 150 79 150))
-(connect D0:1 D1:1
-(points 2 281 130 350 130))
-(connect D1:3 O1:1
-(points 6 450 130 460 130 460 120 470 120 470 41 596 41))
-(connect D1:4 O2:1
-(points 4 450 140 470 140 470 131 596 131))
-(connect D0:1 O3:1
-(points 6 281 130 300 130 300 140 360 140 360 221 596 221)))
-(stackingOrder 0 1))))
-(device 7 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "201")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  0))
-(from 18000)
-(thru 40000)))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D2:1 D1:1)
-(connect D0:2 D1:2)
-(connect I1:1 D2:1)
-(connect I2:1 D2:2)
-(connect I3:1 D2:3)
-(connect D1:1 O1:1)
-(connect D1:2 O2:1)
-(connect D1:3 O3:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 447 422)
-(anchorPt 124 49)
-(configuration
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 89 65))
-(terminals on)
-(pinCenter 90 210))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 86 65))
-(terminals on)
-(pinCenter 230 210))
-(devCarrierFor 7
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 100 150))
-(connect I1:1 D0:1
-(points 6 -124 21 -110 21 -110 140 10 140 10 190 43 190))
-(connect I2:1 D0:2
-(points 6 -124 161 -110 161 -110 150 0 150 0 210 43 210))
-(connect I3:1 D0:3
-(points 4 -124 301 0 301 0 230 43 230))
-(connect D2:1 D1:1
-(points 4 140 150 170 150 170 190 184 190))
-(connect D0:2 D1:2
-(points 2 137 230 184 230))
-(connect I1:1 D2:1
-(points 4 -124 21 -110 21 -110 140 60 140))
-(connect I2:1 D2:2
-(points 4 -124 161 -110 161 -110 150 60 150))
-(connect I3:1 D2:3
-(points 4 -124 301 -78 301 -78 160 60 160))
-(connect D1:1 O1:1
-(points 4 275 190 290 190 290 21 322 21))
-(connect D1:2 O2:1
-(points 4 275 210 300 210 300 161 322 161))
-(connect D1:3 O3:1
-(points 4 275 230 300 230 300 301 322 301)))
-(stackingOrder 2 1 0))))
-(device 3 CONTEXT
-(properties
-(name "OutPutScalarRec")
-(variableScope cont)
-(trigMode deg)
-(nextID 11)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 CONTEXT
-(properties
-(name "DataGenerator")
-(variableScope cont)
-(trigMode deg)
-(nextID 6)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "From")
-(optional yes))
-(input 2
-(name "Thru")
-(optional yes))
-(input 3
-(name "NumPts")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(optional yes))
-(output 1
-(type data)
-(name "Scalar")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "Meter")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "801")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  2))
-(from 18000)
-(thru 40000)))
-(device 1 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 2 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "(A*sin(PI*A))/500"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:0 D1:0)
-(connect D0:1 D1:1)
-(connect D1:1 D2:1)
-(connect D1:1 D3:1)
-(connect D2:1 D4:1)
-(connect D1:0 D4:2)
-(connect D3:1 D5:1)
-(connect D1:0 D5:2)
-(connect D5:1 O1:1)
-(connect D4:1 O2:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 575 361)
-(anchorPt 103 60)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 120 70))
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 120 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 180))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 25))
-(open
-(extent 324 130))
-(terminals on)
-(pinCenter 250 140))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 190))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 360 150))
-(connect I1:1 D0:1
-(points 4 -103 0 -90 0 -90 60 80 60))
-(connect I2:1 D0:2
-(points 4 -103 120 -90 120 -90 70 80 70))
-(connect I3:1 D0:3
-(points 4 -103 240 -80 240 -80 80 80 80))
-(connect D0:0 D1:0
-(points 2 120 89 120 112))
-(connect D0:1 D1:1
-(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
-(connect D1:1 D2:1
-(points 4 183 140 200 140 200 180 222 180))
-(connect D1:1 D3:1
-(points 2 183 140 222 140))
-(connect D2:1 D4:1
-(points 2 277 180 331 180))
-(connect D1:0 D4:2
-(points 5 120 168 120 210 300 210 300 200 331 200))
-(connect D3:1 D5:1
-(points 2 277 140 331 140))
-(connect D1:0 D5:2
-(points 5 120 168 120 210 300 210 300 160 331 160))
-(connect D5:1 O1:1
-(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
-(connect D4:1 O2:1
-(points 4 389 190 430 190 430 210 471 210)))
-(stackingOrder 4 5 1 0 3 2))))
-(device 2 CONTEXT
-(properties
-(name "RecordBuilder")
-(variableScope cont)
-(trigMode deg)
-(nextID 4)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(output 1
-(type data)
-(name "Freq")
-(lock constraints)
-(optional yes))
-(output 2
-(type data)
-(name "dBm")
-(lock constraints)
-(optional yes))
-(output 3
-(type data)
-(name "error")
-(lock constraints)
-(optional yes))
-(output 4
-(type data)
-(name "Record")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 1 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Freq")
-(optional yes))
-(input 2
-(name "dBm")
-(optional yes))
-(input 3
-(name "error")
-(optional yes))
-(output 1
-(name "Record"))))
-(device 2 FROMRECORD
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "Record Data")
-(requires
-(datatype Record))
-(lock name constraints))
-(output 1
-(name "Name List")
-(tag "Name List")
-(lock name constraints)
-(optional yes))
-(output 2
-(name "Type List")
-(tag "Type List")
-(lock name constraints)
-(optional yes))
-(output 3
-(name "Freq")
-(tag "A")
-(optional yes))
-(output 4
-(name "dBm")
-(tag "B")
-(optional yes))
-(output 5
-(name "error")
-(optional yes))))
-(device 3 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "A-A"))
-(interface
-(input 1
-(name "A")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect D2:1 D0:3)
-(connect D0:1 D1:1)
-(connect I2:1 D2:1)
-(connect D1:3 O1:1)
-(connect D1:4 O2:1)
-(connect D1:5 O3:1)
-(connect D0:1 O4:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 665 285)
-(anchorPt 0 0)
-(configuration
-(devCarrierFor 1
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 97 82))
-(terminals on)
-(pinCenter 270 140))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 95 65)
-(iconImage "unbuild.icn"))
-(open
-(extent 17 122))
-(terminals on)
-(pinCenter 470 140))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 50 15))
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 130 160))
-(connect I1:1 D0:1
-(points 4 0 72 10 72 10 120 179 120))
-(connect I2:1 D0:2
-(points 4 0 212 82 212 82 140 179 140))
-(connect D2:1 D0:3
-(points 2 157 160 179 160))
-(connect D0:1 D1:1
-(points 2 381 140 420 140))
-(connect I2:1 D2:1
-(points 4 0 212 80 212 80 160 102 160))
-(connect D1:3 O1:1
-(points 4 520 140 530 140 530 32 664 32))
-(connect D1:4 O2:1
-(points 4 520 150 540 150 540 102 664 102))
-(connect D1:5 O3:1
-(points 4 520 160 540 160 540 172 664 172))
-(connect D0:1 O4:1
-(points 4 381 140 400 140 400 242 664 242)))
-(stackingOrder 0 2 1))))
-(device 7 ALLOCATEARRAY
-(properties
-(name "Alloc Real64")
-(variableScope cont))
-(interface
-(input 1
-(name "From")
-(tag "From")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "Thru")
-(tag "Thru")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(name "Dim Size 1")
-(tag "Dim Size 1")
-(requires
-(datatype Int32)
-(shape "Scalar"))
-(lock constraints)
-(optional yes)
-(buffer YES))
-(output 1
-(name "Array")
-(tag "Array")))
-(implementation
-(numDims 1)
-(dimSizes "801")
-(type "Real64")
-(initEnum "Lin Ramp")
-(initialValue
-(data  0))
-(from 18000)
-(thru 40000)))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D2:1 D1:1)
-(connect D0:1 D1:2)
-(connect I1:1 D2:1)
-(connect I2:1 D2:2)
-(connect I3:1 D2:3)
-(connect D1:1 O1:1)
-(connect D1:2 O2:1)
-(connect D1:4 O3:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 528 422)
-(anchorPt 175 90)
-(configuration
-(devCarrierFor 1
-(active icon)
-(icon
-(extent 89 65))
-(terminals on)
-(pinCenter 120 170))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 86 65))
-(terminals on)
-(pinCenter 250 130))
-(devCarrierFor 7
-(active icon)
-(icon
-(extent 75 34))
-(open
-(extent 194 121))
-(terminals on)
-(pinCenter 110 110))
-(connect I1:1 D0:1
-(points 6 -175 -20 -160 -20 -160 100 40 100 40 150 73 150))
-(connect I2:1 D0:2
-(points 6 -175 120 -160 120 -160 110 30 110 30 170 73 170))
-(connect I3:1 D0:3
-(points 4 -175 260 -160 260 -160 190 73 190))
-(connect D2:1 D1:1
-(points 2 150 110 204 110))
-(connect D0:1 D1:2
-(points 2 167 150 204 150))
-(connect I1:1 D2:1
-(points 4 -175 -20 -160 -20 -160 100 70 100))
-(connect I2:1 D2:2
-(points 4 -175 120 -160 120 -160 110 70 110))
-(connect I3:1 D2:3
-(points 4 -175 260 -160 260 -160 120 70 120))
-(connect D1:1 O1:1
-(points 4 295 110 320 110 320 -20 352 -20))
-(connect D1:2 O2:1
-(points 4 295 120 320 120 320 120 352 120))
-(connect D1:4 O3:1
-(points 4 295 140 320 140 320 260 352 260)))
 (stackingOrder 2 0 1))))
-(device 4 CONTEXT
-(properties
-(name "Extrapolate")
-(variableScope cont)
-(trigMode deg)
-(nextID 7)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(deviceList
-(device 0 FOREACH
-(properties
-(name "For Each Element In")
-(variableScope cont))
-(interface
-(input 1
-(name "Collection")
-(tag "Collection")
-(lock name)
-(optional yes))
-(output 1
-(name "Element")
-(lock name constraints))))
-(device 1 FORMULA
-(properties
-(variableScope cont)
-(expr 4 "x=OutRec.Scalar.freq;" "yA=OutRec.Meter.dBm;" "xA=OutRec.Meter.freq;"
-""))
-(interface
-(output 1
-(name "x")
-(optional yes))
-(output 2
-(name "yA")
-(optional yes))
-(output 3
-(name "xA")
-(optional yes))))
-(device 2 EXVEEOBJECT
-(properties
-(name "Lookup Table")
-(variableScope cont)
-(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
-)
-(assemblyName
-"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
-))
-(interface
-(input 1
-(name "x")
-(tag "x")
-(requires
-(datatype Real64)
-(shape "Scalar"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 2
-(name "yArray")
-(tag "yArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes)
-(buffer YES))
-(input 3
-(type control)
-(name "xArray")
-(tag "xArray")
-(requires
-(datatype Real64)
-(shape "Array 1D"))
-(lock name constraints)
-(optional yes))
-(output 1
-(name "y")
-(lock name constraints)
-(optional yes)))
-(implementation))
-(device 4 COLLECTOR
-(properties
-(variableScope cont)
-(output1D 0))
-(interface
-(input 1
-(name "Data")
-(tag "Data"))
-(input 2
-(type trigger)
-(name "XEQ")
-(lock name constraints))
-(output 1
-(name "Array")
-(tag "Array"))))
-(device 5 FORMULA
-(properties
-(variableScope cont)
-(expr 2 "OutRec.Scalar.error[*] = OutRec.Scalar.dBm - Meter" ""))
-(interface
-(input 1
-(name "Meter")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(device 6 NOTE
-(properties
-(variableScope cont)
-(text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 After the Power Meter is done measureing\\par\r\nthen extrapolate its array to 801pnts\\par\r\nand calculate the error and save in the InRec.\\par\r\n\\par\r\nmeasured = actuall + error\\par\r\nScalar = meter + error\\par\r\nerror = measured - actual\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
-)))
-(configuration
-(connect D1:0 D0:0)
-(connect D1:1 D0:1)
-(connect D0:1 D2:1)
-(connect D1:2 D2:2)
-(connect D1:3 D2:3)
-(connect D2:1 D3:1)
-(connect D0:0 D3:2)
-(connect D0:0 D4:0)
-(connect D3:1 D4:1)))
-(contextCarrier
-(active detail)
-(detail
-(extent 953 536)
-(anchorPt 149 30)
-(configuration
-(devCarrierFor 0
-(active icon)
-(icon
-(extent 122 51)
-(iconImage "loop.icn"))
-(open)
-(pinCenter 130 190))
-(devCarrierFor 1
-(active open)
-(icon
-(extent 50 34))
-(open
-(extent 154 110))
-(terminals on)
-(pinCenter 130 90))
-(devCarrierFor 2
-(active open)
-(icon
-(iconImage "vTools\\General\\table-lookup.jpg"))
-(open
-(extent 42 76))
-(terminals on)
-(titleBg "Light Golden Orange")
-(pinCenter 370 210))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 53 25))
-(open)
-(terminals on)
-(pinCenter 490 290))
-(devCarrierFor 5
-(active open)
-(icon)
-(open
-(extent 344 66))
-(terminals on)
-(pinCenter 130 410))
-(devCarrierFor 6
-(active icon)
-(icon
-(extent 68 51)
-(iconImage "notepad.icn"))
-(open
-(extent 410 180)
-(editing enabled))
-(pinCenter 480 120))
-(connect D1:0 D0:0
-(points 2 130 147 130 162))
-(connect D1:1 D0:1
-(points 6 239 60 260 60 260 -10 0 -10 0 190 66 190))
-(connect D0:1 D2:1
-(points 2 193 190 296 190))
-(connect D1:2 D2:2
-(points 4 239 90 270 90 270 210 296 210))
-(connect D1:3 D2:3
-(points 4 239 120 260 120 260 230 296 230))
-(connect D2:1 D3:1
-(points 4 423 210 440 210 440 280 461 280))
-(connect D0:0 D3:2
-(points 3 130 218 130 300 461 300))
-(connect D0:0 D4:0
-(points 2 130 218 130 356))
-(connect D3:1 D4:1
-(points 6 519 290 540 290 540 330 -110 330 -110 410 -95 410)))
-(stackingOrder 0 2 3 5 4 1))))
-(device 5 FORMULA
-(properties
-(variableScope cont)
-(expr 5 "A=OutRec.Scalar.dBm;" "B=OutRec.Meter.dBm;" "C=OutRec.Scalar.error" ""
-""))
-(interface
-(output 1
-(name "A")
-(optional yes))
-(output 2
-(name "B")
-(optional yes))
-(output 3
-(name "C")
-(optional yes))))
-(device 6 TORECORD
-(properties
-(variableScope cont)
-(outputType scalar))
-(interface
-(input 1
-(name "Scalar")
-(optional yes))
-(input 2
-(name "Meter")
-(optional yes))
-(output 1
-(name "output"))))
-(device 7 TOGLOBAL
-(properties
-(name "Set OutRec")
-(variableScope cont)
-(globalName "OutRec"))
-(interface
-(input 1
-(name "Data")
-(tag "Data")
-(lock name))))
-(device 8 CONSTANT
-(properties
-(name "From")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  18000))
-(initValue Real
-(data  0))))
-(device 9 CONSTANT
-(properties
-(name "Thru")
-(variableScope cont)
-(enableEditing 1))
-(interface
-(output 1
-(name "Real64")
-(lock name constraints)))
-(implementation
-(value Real
-(data  40000))
-(initValue Real
-(data  0))))
-(configuration
-(connect D3:0 D2:0)
-(connect D8:1 D2:1)
-(connect D9:1 D2:2)
-(connect D1:1 D2:3)
-(connect D8:1 D3:1)
-(connect D9:1 D3:2)
-(connect D0:1 D3:3)
-(connect D2:0 D4:0)
-(connect D4:0 D5:0)
-(connect D3:3 D6:1)
-(connect D2:3 D6:2)
-(connect D6:1 D7:1)
-(connect D5:1 O1:1)
-(connect D5:2 O2:1)
-(connect D5:3 O3:1)))
-(contextCarrier
-(wndOrigin 42 42)
-(wndState res)
-(active detail)
-(detail
-(extent 712 482)
-(anchorPt 12 100)
-(configuration
-(devCarrierFor 0
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 50 110))
-(devCarrierFor 1
-(active open)
-(icon)
-(open
-(extent 67 29)
-(showFormat int))
-(pinCenter 50 190))
-(devCarrierFor 2
-(active icon)
-(icon
-(extent 97 64))
-(terminals on)
-(pinCenter 200 170))
-(devCarrierFor 3
-(active icon)
-(icon
-(extent 103 65))
-(terminals on)
-(pinCenter 200 90))
-(devCarrierFor 4
-(active icon)
-(icon
-(extent 67 15))
-(terminals on)
-(pinCenter 200 220))
-(devCarrierFor 5
-(active icon)
-(icon
-(extent 50 34))
-(open
-(extent 174 110))
-(terminals on)
-(pinCenter 200 260))
-(devCarrierFor 6
-(active open)
-(icon
-(extent 78 51)
-(iconImage "build.icn"))
-(open
-(extent 97 54))
-(terminals on)
-(pinCenter 400 140))
-(devCarrierFor 7
-(active open)
-(icon
-(extent 68 15))
-(open
-(extent 73 51))
-(terminals on)
-(pinCenter 575 140))
-(devCarrierFor 8
-(active open)
-(icon
-(extent 33 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter 60 -40))
-(devCarrierFor 9
-(active open)
-(icon
-(extent 29 0))
-(open
-(extent 80 29)
-(showFormat real)
-(formatter
-(realFormat fixed)
-(realSigDigits 4)
-(realRadixSpec 2)
-(integerBase decimal)))
-(pinCenter 60 20))
-(connect D3:0 D2:0
-(points 2 200 125 200 135))
-(connect D8:1 D2:1
-(points 4 102 -40 130 -40 130 150 149 150))
-(connect D9:1 D2:2
-(points 4 102 20 120 20 120 170 149 170))
-(connect D1:1 D2:3
-(points 2 86 190 149 190))
-(connect D8:1 D3:1
-(points 4 102 -40 130 -40 130 70 146 70))
-(connect D9:1 D3:2
-(points 4 102 20 120 20 120 90 146 90))
-(connect D0:1 D3:3
-(points 2 86 110 146 110))
-(connect D2:0 D4:0
-(points 2 200 204 200 210))
-(connect D4:0 D5:0
-(points 2 200 230 200 240))
-(connect D3:3 D6:1
-(points 4 254 110 270 110 270 120 299 120))
-(connect D2:3 D6:2
-(points 4 251 190 270 190 270 160 299 160))
-(connect D6:1 D7:1
-(points 4 501 140 487 140 487 140 496 140))
-(connect D5:1 O1:1
-(points 4 227 250 460 250 460 -20 699 -20))
-(connect D5:2 O2:1
-(points 4 227 260 630 260 630 140 699 140))
-(connect D5:3 O3:1
-(points 4 227 270 250 270 250 300 699 300)))
-(stackingOrder 1 0 8 9 2 3 5 4 7 6))))
-(device 3 CONTEXT
-(properties
-(name "InputValidation")
-(variableScope cont)
-(trigMode deg)
-(nextID 5)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "InScalar")
-(optional yes))
-(input 2
-(name "InMeter")
-(optional yes))
-(input 3
-(name "InError")
-(optional yes)))
-(deviceList
-(device 0 YPLOT
-(properties
-(name "InputScalar")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 1 YPLOT
-(properties
-(name "InputMeter")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 2 YPLOT
-(properties
-(name "InputCorrected")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 3 YPLOT
-(properties
-(name "InputError")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 4 FORMULA
-(properties
-(name "Formula Validation")
-(variableScope cont)
-(expr 1 "scalar-error"))
-(interface
-(input 1
-(name "scalar")
-(optional yes))
-(input 2
-(name "error")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D1:1)
-(connect D4:1 D2:1)
-(connect I3:1 D3:1)
-(connect I1:1 D4:1)
-(connect I3:1 D4:2)))
-(contextCarrier
-(active panel)
-(panel
-(extent 1285 301)
-(drawGrid "on")
-(widget 0 detail
-(relativeOrigin 0 0)
-(PID 0)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 0)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -25 25 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 1 detail
-(relativeOrigin 320 0)
-(PID 1)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 1)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -12 10 4 linear))
-(domain 0 200 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 3 detail
-(relativeOrigin 640 0)
-(PID 2)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 2)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 2 detail
-(relativeOrigin 960 0)
-(PID 3)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 3)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -12 10 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White")))
-(detail
-(extent 1134 735)
-(anchorPt 0 0)
-(configuration
-(devCarrierFor 0
-(active open)
-(icon
-(extent 68 51)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -25 25 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 220 220))
-(devCarrierFor 1
-(active open)
-(icon
-(extent 68 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -12 10 4 linear))
-(domain 0 200 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 570 220))
-(devCarrierFor 2
-(active open)
-(icon
-(extent 89 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -12 10 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 570 530))
-(devCarrierFor 3
-(active open)
-(icon
-(extent 68 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 910 220))
-(devCarrierFor 4
-(active open)
-(icon
-(extent 112 0))
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 210 530))
-(connect I1:1 D0:1
-(points 4 0 127 10 127 10 220 59 220))
-(connect I2:1 D1:1
-(points 6 0 367 10 367 10 380 390 380 390 220 409 220))
-(connect D4:1 D2:1
-(points 2 335 530 409 530))
-(connect I3:1 D3:1
-(points 8 0 607 20 607 20 690 750 690 750 380 740 380 740 220 749 220))
-(connect I1:1 D4:1
-(points 6 0 127 10 127 10 220 40 220 40 520 85 520))
-(connect I3:1 D4:2
-(points 4 0 607 10 607 10 540 85 540)))
-(stackingOrder 4 0 1 3 2))))
-(device 4 CONTEXT
-(properties
-(name "OutputValidation")
-(variableScope cont)
-(trigMode deg)
-(nextID 5)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "OutScalar")
-(optional yes))
-(input 2
-(name "OutMeter")
-(optional yes))
-(input 3
-(name "OutError")
-(optional yes)))
-(deviceList
-(device 0 YPLOT
-(properties
-(name "OutputScalar")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 1 YPLOT
-(properties
-(name "OutputMeter")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 2 YPLOT
-(properties
-(name "OutputCorrected")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 3 YPLOT
-(properties
-(name "OutputError")
-(variableScope cont))
-(interface
-(input 1
-(name "Trace1")
-(lock constraints)))
-(implementation
-(tracePin 1)
-(graphMode rectangular)
-(autoAutoX)
-(autoAutoY)))
-(device 4 FORMULA
-(properties
-(name "Formula Validation")
-(variableScope cont)
-(expr 1 "scalar-error"))
-(interface
-(input 1
-(name "scalar")
-(optional yes))
-(input 2
-(name "error")
-(optional yes))
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D1:1)
-(connect D4:1 D2:1)
-(connect I3:1 D3:1)
-(connect I1:1 D4:1)
-(connect I3:1 D4:2)))
-(contextCarrier
-(active panel)
-(panel
-(extent 1292 305)
-(drawGrid "on")
-(widget 0 detail
-(relativeOrigin 0 0)
-(PID 0)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 0)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -80 80 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 1 detail
-(relativeOrigin 320 0)
-(PID 1)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 1)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 200 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 3 detail
-(relativeOrigin 640 0)
-(PID 2)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 2)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -120 100 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(widget 2 detail
-(relativeOrigin 960 0)
-(PID 3)
-(title on)
-(titleBg "Light Blue Gray")
-(tabIndex 3)
-(borderStyle flat)
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White")))
-(detail
-(extent 1124 836)
-(anchorPt 0 0)
-(configuration
-(devCarrierFor 0
-(active open)
-(icon
-(extent 78 51)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -80 80 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 220 220))
-(devCarrierFor 1
-(active open)
-(icon
-(extent 72 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 200 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 570 220))
-(devCarrierFor 2
-(active open)
-(icon
-(extent 99 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -40 40 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 580 550))
-(devCarrierFor 3
-(active open)
-(icon
-(extent 69 0)
-(iconImage "display.icn"))
-(open
-(extent 317 279)
-(displayMode 47)
-(graphType cartesian)
-(gridType grid)
-(scale 0
-(name "Y name")
-(domainName "X name")
-(Yspacing 1)
-(Xspacing 2)
-(scaleColor "Dark Gray")
-(show 1)
-(range -120 100 4 linear))
-(domain 0 800 4 linear)
-(trace 0 onScale 0
-(name "Trace1")
-(traceColor "Yellow")
-(lineType 12)
-(pointType 0))
-(markerColor "White"))
-(pinCenter 910 220))
-(devCarrierFor 4
-(active open)
-(icon
-(extent 112 0))
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 220 550))
-(connect I1:1 D0:1
-(points 4 0 137 10 137 10 220 59 220))
-(connect I2:1 D1:1
-(points 4 0 417 400 417 400 220 409 220))
-(connect D4:1 D2:1
-(points 2 345 550 419 550))
-(connect I3:1 D3:1
-(points 8 0 697 20 697 20 710 760 710 760 380 740 380 740 220 749 220))
-(connect I1:1 D4:1
-(points 6 0 137 10 137 10 220 40 220 40 540 95 540))
-(connect I3:1 D4:2
-(points 4 0 697 10 697 10 560 95 560)))
-(stackingOrder 4 0 1 3 2))))
 (device 5 NOTE
 (properties
 (name "Records Schema")
@@ -9130,8 +6600,8 @@ M)
 (contextCarrier
 (active detail)
 (detail
-(extent 762 425)
-(anchorPt 285 99)
+(extent 791 425)
+(anchorPt 328 81)
 (configuration
 (devCarrierFor 3
 (active open)
@@ -9203,7 +6673,7 @@ M)
 (connect D1:5 D4:5
 (points 4 -36 240 10 240 10 200 20 200))
 (connect D2:1 O1:1
-(points 4 449 130 460 130 460 113 476 113)))
+(points 4 449 130 460 130 460 131 462 131)))
 (stackingOrder 0 3 1 4 5 2))))
 (device 7 CONTEXT
 (properties
@@ -9234,7 +6704,7 @@ M)
 (configuration
 (connect I1:1 D0:1)))
 (contextCarrier
-(active detail)
+(active panel)
 (panel
 (extent 329 308)
 (drawGrid "on")
@@ -9292,9 +6762,9 @@ M)
 (lineType 12)
 (pointType 0))
 (markerColor "White"))
-(pinCenter 220 220))
+(pinCenter 220 210))
 (connect I1:1 D0:1
-(points 4 0 212 10 212 10 220 59 220))))))
+(points 4 0 212 29 212 29 210 59 210))))))
 (device 8 CONTEXT
 (properties
 (name "B2errorTotal")
@@ -10164,10 +7634,10 @@ M)
 (points 4 0 212 10 212 10 220 59 220))))))
 (device 10 NOTE
 (properties
-(name "Frequencies")
+(name "N19-6457 Bands Frequencies")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 band1   4.48 --> 8.88 \\par\r\nLO        26.88\\par\r\nRF        22.40-->18.00\\par\r\n\\par\r\nband2   5.66 - 9.46\\par\r\nLO       31.36\\par\r\nRF        21.90-->25.70\\par\r\n\\par\r\nband3     6.34-->10.64\\par\r\nLO         35.84\\par\r\nRF          25.20-->29.50\\par\r\n\\par\r\nband4      6.62-->11.32\\par\r\nLO          40.32\\par\r\nRF           29.00-->33.70\\par\r\n\\par\r\n\\par\r\nband5    6.80-->11.6\\par\r\nLO     44.80\\par\r\nRF     33.20-->38.00\\par\r\n\\par\r\nband6  4.80--7.30\\par\r\nLO  44.80\\par\r\nRF   37.50-->40.00\\par\r\n\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 band1   4.48 --> 8.88 \\par\r\nLO        26.88\\par\r\nRF         22400-->18000\\par\r\n\\par\r\nband2   5.66 - 9.46\\par\r\nLO       31.36\\par\r\nRF        25700-->21900\\par\r\n\\par\r\nband3     6.34-->10.64\\par\r\nLO         35.84\\par\r\nRF          29500-->25200\\par\r\n\\par\r\nband4      6.62-->11.32\\par\r\nLO          40.32\\par\r\nRF           33700-->29000\\par\r\n\\par\r\nband5    6.80-->11.6\\par\r\nLO        44.80\\par\r\nRF        38000-->33200\\par\r\n\\par\r\nband6  4.80--7.30\\par\r\nLO      44.80\\par\r\nRF       40000-->37500\\par\r\n\\par\r\n}\r\n"
 )))
 (device 11 CONTEXT
 (properties
@@ -10206,6 +7676,7 @@ M)
 (relativeOrigin 0 0)
 (PID 0)
 (title on)
+(titleBg "Light Blue Gray")
 (tabIndex 0)
 (borderStyle flat)
 (extent 317 279)
@@ -11073,6 +8544,7 @@ M)
 (relativeOrigin 0 0)
 (PID 0)
 (title on)
+(titleBg "Light Blue Gray")
 (tabIndex 0)
 (borderStyle flat)
 (extent 317 279)
@@ -13454,12 +10926,11 @@ M)
 (active detail)
 (detail
 (extent 723 516)
-(anchorPt 5 1)
+(anchorPt 7 7)
 (configuration
 (devCarrierFor 0
 (active open)
 (icon
-
 (iconImage "loop.icn"))
 (open
 (extent 99 79))
@@ -13467,7 +10938,6 @@ M)
 (devCarrierFor 1
 (active open)
 (icon
-
 (iconImage "vTools\\General\\table-lookup.jpg"))
 (open
 (extent 42 76))
@@ -13486,7 +10956,6 @@ M)
 (icon
 (extent 52 15))
 (open
-
 (extent 44 26)
 (carbonCopy))
 (terminals on)
@@ -13502,7 +10971,6 @@ M)
 (devCarrierFor 5
 (active open)
 (icon
-
 (extent 156 0))
 (open
 (extent 192 162)
@@ -13517,24 +10985,23 @@ M)
 (icon
 (extent 52 15))
 (open
-
 (extent 44 26)
 (carbonCopy))
 (terminals on)
 (titleBg "Light Beige")
 (pinCenter 350 430))
 (connect I1:1 D0:1
-(points 4 -5 56 10 56 10 100 58 100))
+(points 4 -7 50 10 50 10 100 58 100))
 (connect I2:1 D0:2
-(points 4 -5 156 20 156 20 120 58 120))
+(points 4 -7 150 20 150 20 120 58 120))
 (connect I3:1 D0:3
-(points 4 -5 256 30 256 30 140 58 140))
+(points 4 -7 250 30 250 30 140 58 140))
 (connect D0:1 D1:1
 (points 6 162 120 180 120 180 180 80 180 80 270 96 270))
 (connect I4:1 D1:2
-(points 4 -5 356 10 356 10 290 96 290))
+(points 4 -7 350 10 350 10 290 96 290))
 (connect I5:1 D1:3
-(points 4 -5 456 20 456 20 310 96 310))
+(points 4 -7 450 20 450 20 310 96 310))
 (connect D1:1 D2:1
 (points 2 223 290 321 290))
 (connect D0:0 D2:2
@@ -13554,7 +11021,7 @@ M)
 (connect D4:1 D6:1
 (points 6 379 390 400 390 400 460 300 460 300 430 321 430))
 (connect D3:1 O1:1
-(points 6 378 340 410 340 410 250 650 250 650 256 717 256)))
+(points 6 378 340 410 340 410 250 650 250 650 250 715 250)))
 (stackingOrder 0 1 2 3 4 6 5))))
 (configuration
 (connect D4:0 D2:0)
@@ -13575,8 +11042,8 @@ M)
 (contextCarrier
 (active detail)
 (detail
-(extent 762 425)
-(anchorPt 329 92)
+(extent 760 425)
+(anchorPt 347 104)
 (configuration
 (devCarrierFor 3
 (active open)
@@ -13642,39 +11109,3683 @@ M)
 (connect D1:5 D4:5
 (points 4 -36 240 10 240 10 200 20 200))
 (connect D2:1 O1:1
-(points 4 424 120 428 120 428 120 432 120)))
-(stackingOrder 2 3 4 0 1))))
+(points 4 424 120 428 120 428 108 412 108)))
+(stackingOrder 2 0 1 4 3))))
+(device 19 CONTEXT
+(properties
+(name "ScalarDetectorFlatnessRecord")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 CONTEXT
+(properties
+(name "InRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 9)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "SdBm")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "MdBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "error")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  801))
+(initValue Int32
+(data  0))))
+(device 1 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  201))
+(initValue Int32
+(data  0))))
+(device 2 CONTEXT
+(properties
+(name "InputMeterRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "NumPts")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 CONTEXT
+(properties
+(name "DataGenerator")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Meter")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "201")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  2))
+(from 4480)
+(thru 11600)))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "(A*sin(PI*A))/500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
 (configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
 (connect D0:0 D1:0)
-(connect D1:0 D2:0)
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)
 (connect D1:1 D3:1)
-(connect D1:2 D3:2)
-(connect D1:3 D3:3)
 (connect D2:1 D4:1)
-(connect D2:2 D4:2)
-(connect D2:3 D4:3)
-(connect D2:0 D6:0)
-(connect D6:1 D7:1)
-(connect D6:0 D8:0)
-(connect D8:1 D9:1)
-(connect D12:1 D11:1)
-(connect D8:0 D12:0)
-(connect D14:1 D13:1)
-(connect D12:0 D14:0)
-(connect D16:1 D15:1)
-(connect D14:0 D16:0)
-(connect D18:1 D17:1)
-(connect D16:0 D18:0)))
+(connect D1:0 D4:2)
+(connect D3:1 D5:1)
+(connect D1:0 D5:2)
+(connect D5:1 O1:1)
+(connect D4:1 O2:1)))
 (contextCarrier
 (active detail)
 (detail
-(extent 437 531)
-(anchorPt 3 0)
+(extent 575 361)
+(anchorPt 103 60)
 (configuration
 (devCarrierFor 0
 (active icon)
 (icon
-(extent 84 45))
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 120 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 120 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 140))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 190))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 150))
+(connect I1:1 D0:1
+(points 4 -103 0 -90 0 -90 60 80 60))
+(connect I2:1 D0:2
+(points 4 -103 120 -90 120 -90 70 80 70))
+(connect I3:1 D0:3
+(points 4 -103 240 -80 240 -80 80 80 80))
+(connect D0:0 D1:0
+(points 2 120 89 120 112))
+(connect D0:1 D1:1
+(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
+(connect D1:1 D2:1
+(points 4 183 140 200 140 200 180 222 180))
+(connect D1:1 D3:1
+(points 2 183 140 222 140))
+(connect D2:1 D4:1
+(points 2 277 180 331 180))
+(connect D1:0 D4:2
+(points 5 120 168 120 210 300 210 300 200 331 200))
+(connect D3:1 D5:1
+(points 2 277 140 331 140))
+(connect D1:0 D5:2
+(points 5 120 168 120 210 300 210 300 160 331 160))
+(connect D5:1 O1:1
+(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
+(connect D4:1 O2:1
+(points 4 389 190 430 190 430 210 471 210)))
+(stackingOrder 4 5 1 0 3 2))))
+(device 2 CONTEXT
+(properties
+(name "RecordBuilder")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 2 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "Freq")
+(tag "A")
+(optional yes))
+(output 4
+(name "dBm")
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 D1:1)
+(connect D1:3 O1:1)
+(connect D1:4 O2:1)
+(connect D0:1 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 649 268)
+(anchorPt 52 2)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 82))
+(terminals on)
+(pinCenter 170 130))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 65)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 122))
+(terminals on)
+(pinCenter 400 130))
+(connect I1:1 D0:1
+(points 4 -52 61 -40 61 -40 110 79 110))
+(connect I2:1 D0:2
+(points 4 -52 201 -40 201 -40 150 79 150))
+(connect D0:1 D1:1
+(points 2 281 130 350 130))
+(connect D1:3 O1:1
+(points 6 450 130 460 130 460 120 470 120 470 41 596 41))
+(connect D1:4 O2:1
+(points 4 450 140 470 140 470 131 596 131))
+(connect D0:1 O3:1
+(points 6 281 130 300 130 300 140 360 140 360 221 596 221)))
+(stackingOrder 0 1))))
+(device 3 CONSTANT
+(properties
+(name "From")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  4480))
+(initValue Real
+(data  0))))
+(device 4 CONSTANT
+(properties
+(name "Thru")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  11600))
+(initValue Real
+(data  0))))
+(device 7 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "201")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  0))
+(from 4480)
+(thru 11600)))
+(configuration
+(connect D2:1 D0:1)
+(connect D3:1 D0:2)
+(connect I1:1 D0:3)
+(connect D4:1 D1:1)
+(connect D0:2 D1:2)
+(connect D2:1 D4:1)
+(connect D3:1 D4:2)
+(connect I1:1 D4:3)
+(connect D1:1 O1:1)
+(connect D1:2 O2:1)
+(connect D1:3 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 447 422)
+(anchorPt 124 49)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 89 65))
+(terminals on)
+(pinCenter 90 210))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 86 65))
+(terminals on)
+(pinCenter 230 210))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 33 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter -70 60))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 29 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter -70 110))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 100 150))
+(connect D2:1 D0:1
+(points 6 -28 60 0 60 0 140 20 140 20 190 43 190))
+(connect D3:1 D0:2
+(points 6 -28 110 -10 110 -10 150 10 150 10 210 43 210))
+(connect I1:1 D0:3
+(points 4 -124 161 0 161 0 230 43 230))
+(connect D4:1 D1:1
+(points 4 140 150 170 150 170 190 184 190))
+(connect D0:2 D1:2
+(points 2 137 230 184 230))
+(connect D2:1 D4:1
+(points 4 -28 60 0 60 0 140 60 140))
+(connect D3:1 D4:2
+(points 4 -28 110 -10 110 -10 150 60 150))
+(connect I1:1 D4:3
+(points 4 -124 161 -78 161 -78 160 60 160))
+(connect D1:1 O1:1
+(points 4 275 190 290 190 290 21 322 21))
+(connect D1:2 O2:1
+(points 4 275 210 300 210 300 161 322 161))
+(connect D1:3 O3:1
+(points 4 275 230 300 230 300 301 322 301)))
+(stackingOrder 3 2 4 0 1))))
+(device 3 CONTEXT
+(properties
+(name "InputScalarRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "NumPts")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 CONTEXT
+(properties
+(name "DataGenerator")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Meter")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "801")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  2))
+(from 4480)
+(thru 11600)))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "(A*sin(PI*A))/500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)
+(connect D1:1 D3:1)
+(connect D2:1 D4:1)
+(connect D1:0 D4:2)
+(connect D3:1 D5:1)
+(connect D1:0 D5:2)
+(connect D5:1 O1:1)
+(connect D4:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 575 361)
+(anchorPt 103 60)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 120 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 120 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 140))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 190))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 150))
+(connect I1:1 D0:1
+(points 4 -103 0 -90 0 -90 60 80 60))
+(connect I2:1 D0:2
+(points 4 -103 120 -90 120 -90 70 80 70))
+(connect I3:1 D0:3
+(points 4 -103 240 -80 240 -80 80 80 80))
+(connect D0:0 D1:0
+(points 2 120 89 120 112))
+(connect D0:1 D1:1
+(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
+(connect D1:1 D2:1
+(points 4 183 140 200 140 200 180 222 180))
+(connect D1:1 D3:1
+(points 2 183 140 222 140))
+(connect D2:1 D4:1
+(points 2 277 180 331 180))
+(connect D1:0 D4:2
+(points 5 120 168 120 210 300 210 300 200 331 200))
+(connect D3:1 D5:1
+(points 2 277 140 331 140))
+(connect D1:0 D5:2
+(points 5 120 168 120 210 300 210 300 160 331 160))
+(connect D5:1 O1:1
+(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
+(connect D4:1 O2:1
+(points 4 389 190 430 190 430 210 471 210)))
+(stackingOrder 4 5 1 0 3 2))))
+(device 2 CONTEXT
+(properties
+(name "RecordBuilder")
+(variableScope cont)
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "error")
+(lock constraints)
+(optional yes))
+(output 4
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(input 3
+(name "error")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 2 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "Freq")
+(tag "A")
+(optional yes))
+(output 4
+(name "dBm")
+(tag "B")
+(optional yes))
+(output 5
+(name "error")
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D2:1 D0:3)
+(connect D0:1 D1:1)
+(connect I2:1 D2:1)
+(connect D1:3 O1:1)
+(connect D1:4 O2:1)
+(connect D1:5 O3:1)
+(connect D0:1 O4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 665 285)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 82))
+(terminals on)
+(pinCenter 270 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 65)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 122))
+(terminals on)
+(pinCenter 470 140))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 130 160))
+(connect I1:1 D0:1
+(points 4 0 72 10 72 10 120 179 120))
+(connect I2:1 D0:2
+(points 4 0 212 82 212 82 140 179 140))
+(connect D2:1 D0:3
+(points 2 157 160 179 160))
+(connect D0:1 D1:1
+(points 2 381 140 420 140))
+(connect I2:1 D2:1
+(points 4 0 212 80 212 80 160 102 160))
+(connect D1:3 O1:1
+(points 4 520 140 530 140 530 32 664 32))
+(connect D1:4 O2:1
+(points 4 520 150 540 150 540 102 664 102))
+(connect D1:5 O3:1
+(points 4 520 160 540 160 540 172 664 172))
+(connect D0:1 O4:1
+(points 4 381 140 400 140 400 242 664 242)))
+(stackingOrder 0 2 1))))
+(device 3 CONSTANT
+(properties
+(name "From")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  4480))
+(initValue Real
+(data  0))))
+(device 4 CONSTANT
+(properties
+(name "Thru")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  11600))
+(initValue Real
+(data  0))))
+(device 7 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "801")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  0))
+(from 4480)
+(thru 11600)))
+(configuration
+(connect D2:1 D0:1)
+(connect D3:1 D0:2)
+(connect I1:1 D0:3)
+(connect D4:1 D1:1)
+(connect D0:1 D1:2)
+(connect D2:1 D4:1)
+(connect D3:1 D4:2)
+(connect I1:1 D4:3)
+(connect D1:1 O1:1)
+(connect D1:2 O2:1)
+(connect D1:4 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 528 418)
+(anchorPt 175 90)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 89 65))
+(terminals on)
+(pinCenter 120 170))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 86 65))
+(terminals on)
+(pinCenter 250 130))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 33 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter -100 40))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 29 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter -100 90))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 110 110))
+(connect D2:1 D0:1
+(points 6 -58 40 -30 40 -30 100 50 100 50 150 73 150))
+(connect D3:1 D0:2
+(points 6 -58 90 -40 90 -40 110 40 110 40 170 73 170))
+(connect I1:1 D0:3
+(points 6 -175 118 -190 118 -190 120 30 120 30 190 73 190))
+(connect D4:1 D1:1
+(points 2 150 110 204 110))
+(connect D0:1 D1:2
+(points 2 167 150 204 150))
+(connect D2:1 D4:1
+(points 4 -58 40 -30 40 -30 100 70 100))
+(connect D3:1 D4:2
+(points 4 -58 90 -40 90 -40 110 70 110))
+(connect I1:1 D4:3
+(points 4 -175 118 -190 118 -190 120 70 120))
+(connect D1:1 O1:1
+(points 4 295 110 320 110 320 -22 352 -22))
+(connect D1:2 O2:1
+(points 4 295 120 320 120 320 118 352 118))
+(connect D1:4 O3:1
+(points 4 295 140 320 140 320 258 352 258)))
+(stackingOrder 3 2 4 0 1))))
+(device 4 CONTEXT
+(properties
+(name "Extrapolate")
+(variableScope cont)
+(trigMode deg)
+(nextID 8)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 4 "x=InRec.Scalar.freq;" "yA=InRec.Meter.dBm;" "xA=InRec.Meter.freq;" ""))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "yA")
+(optional yes))
+(output 3
+(name "xA")
+(optional yes))))
+(device 2 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 FORMULA
+(properties
+(name "InRec.Scalar.error[*]")
+(variableScope cont)
+(expr 2 "InRec.Scalar.error[*] = InRec.Scalar.dBm - Meter" ""))
+(interface
+(input 1
+(name "Meter")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 NOTE
+(properties
+(name "Why Extrapolate")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Why? The power sensor takes much MUCH longer than the scalar detector therefore, its arrary is fewer points.\\par\r\n\\par\r\nAfter the Power Meter is done measureing, then extrapolate its array to match the size of the scalar\'s array. \\par\r\nCalculate the scalar detector flatness error and save that in the *Rec.Scalar.error[*] of the same size.\\par\r\n\\par\r\nmeasured = actual + error\\par\r\nerror = measured - actual\\par\r\nScalar = meter + error\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:1 D2:1)
+(connect D1:2 D2:2)
+(connect D1:3 D2:3)
+(connect D2:1 D3:1)
+(connect D0:0 D3:2)
+(connect D0:0 D4:0)
+(connect D3:1 D4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 656 536)
+(anchorPt 80 -1)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 130 190))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 50 34))
+(open
+(extent 144 110))
+(terminals on)
+(pinCenter 130 90))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 370 210))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 490 290))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 119 15))
+(open
+(extent 314 66))
+(terminals on)
+(pinCenter 130 410))
+(devCarrierFor 7
+(active open)
+(icon
+(extent 95 51)
+(iconImage "notepad.icn"))
+(open
+(extent 454 266)
+(editing enabled))
+(pinCenter 210 260))
+(connect D1:0 D0:0
+(points 2 130 109 130 162))
+(connect D1:1 D0:1
+(points 6 157 80 180 80 180 50 50 50 50 190 66 190))
+(connect D0:1 D2:1
+(points 2 193 190 296 190))
+(connect D1:2 D2:2
+(points 6 157 90 210 90 210 230 290 230 290 210 296 210))
+(connect D1:3 D2:3
+(points 6 157 100 200 100 200 240 290 240 290 230 296 230))
+(connect D2:1 D3:1
+(points 4 423 210 440 210 440 280 461 280))
+(connect D0:0 D3:2
+(points 3 130 218 130 300 461 300))
+(connect D0:0 D4:0
+(points 2 130 218 130 400))
+(connect D3:1 D4:1
+(points 6 519 290 540 290 540 440 50 440 50 410 68 410)))
+(stackingOrder 0 2 3 1 4 5))))
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 5 "A=InRec.Scalar.dBm;" "B=InRec.Meter.dBm;" "C=InRec.Scalar.error" "" "")
+)
+(interface
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "B")
+(optional yes))
+(output 3
+(name "C")
+(optional yes))))
+(device 6 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Scalar")
+(optional yes))
+(input 2
+(name "Meter")
+(optional yes))
+(output 1
+(name "Input"))))
+(device 7 TOGLOBAL
+(properties
+(name "Set InRec")
+(variableScope cont)
+(globalName "InRec"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(configuration
+(connect D3:0 D2:0)
+(connect D1:1 D2:1)
+(connect D0:1 D3:1)
+(connect D2:0 D4:0)
+(connect D4:0 D5:0)
+(connect D3:3 D6:1)
+(connect D2:3 D6:2)
+(connect D6:1 D7:1)
+(connect D5:1 O1:1)
+(connect D5:2 O2:1)
+(connect D5:3 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 692 337)
+(anchorPt -18 -15)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 100 100))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 100 170))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 94 64))
+(terminals on)
+(pinCenter 200 170))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 92 65))
+(terminals on)
+(pinCenter 200 100))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 67 15))
+(terminals on)
+(pinCenter 200 220))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 50 34))
+(open
+(extent 174 110))
+(terminals on)
+(pinCenter 200 260))
+(devCarrierFor 6
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 54))
+(terminals on)
+(pinCenter 395 140))
+(devCarrierFor 7
+(active open)
+(icon
+(extent 58 0))
+(open
+(extent 73 51))
+(terminals on)
+(pinCenter 575 140))
+(connect D3:0 D2:0
+(points 2 200 135 200 135))
+(connect D1:1 D2:1
+(points 2 136 170 150 170))
+(connect D0:1 D3:1
+(points 2 136 100 151 100))
+(connect D2:0 D4:0
+(points 2 200 204 200 210))
+(connect D4:0 D5:0
+(points 2 200 230 200 240))
+(connect D3:3 D6:1
+(points 2 248 120 294 120))
+(connect D2:3 D6:2
+(points 4 249 190 270 190 270 160 294 160))
+(connect D6:1 D7:1
+(points 2 486 140 496 140))
+(connect D5:1 O1:1
+(points 6 227 250 650 250 650 170 660 170 660 73 709 73))
+(connect D5:2 O2:1
+(points 4 227 260 660 260 660 183 709 183))
+(connect D5:3 O3:1
+(points 4 227 270 250 270 250 293 709 293)))
+(stackingOrder 0 1 7 2 6 3 5 4))))
+(device 1 CONTEXT
+(properties
+(name "OutRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 10)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "SdBm")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "MdBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "error")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  801))
+(initValue Int32
+(data  0))))
+(device 1 CONSTANT
+(properties
+(name "Int32")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  201))
+(initValue Int32
+(data  0))))
+(device 2 CONTEXT
+(properties
+(name "OutPutMeterRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 CONTEXT
+(properties
+(name "DataGenerator")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Meter")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "201")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  2))
+(from 18000)
+(thru 40000)))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "(A*sin(PI*A))/500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)
+(connect D1:1 D3:1)
+(connect D2:1 D4:1)
+(connect D1:0 D4:2)
+(connect D3:1 D5:1)
+(connect D1:0 D5:2)
+(connect D5:1 O1:1)
+(connect D4:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 575 361)
+(anchorPt 103 60)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 120 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 120 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 140))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 190))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 150))
+(connect I1:1 D0:1
+(points 4 -103 0 -90 0 -90 60 80 60))
+(connect I2:1 D0:2
+(points 4 -103 120 -90 120 -90 70 80 70))
+(connect I3:1 D0:3
+(points 4 -103 240 -80 240 -80 80 80 80))
+(connect D0:0 D1:0
+(points 2 120 89 120 112))
+(connect D0:1 D1:1
+(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
+(connect D1:1 D2:1
+(points 4 183 140 200 140 200 180 222 180))
+(connect D1:1 D3:1
+(points 2 183 140 222 140))
+(connect D2:1 D4:1
+(points 2 277 180 331 180))
+(connect D1:0 D4:2
+(points 5 120 168 120 210 300 210 300 200 331 200))
+(connect D3:1 D5:1
+(points 2 277 140 331 140))
+(connect D1:0 D5:2
+(points 5 120 168 120 210 300 210 300 160 331 160))
+(connect D5:1 O1:1
+(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
+(connect D4:1 O2:1
+(points 4 389 190 430 190 430 210 471 210)))
+(stackingOrder 4 5 1 0 3 2))))
+(device 2 CONTEXT
+(properties
+(name "RecordBuilder")
+(variableScope cont)
+(trigMode deg)
+(nextID 3)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 2 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "Freq")
+(tag "A")
+(optional yes))
+(output 4
+(name "dBm")
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 D1:1)
+(connect D1:3 O1:1)
+(connect D1:4 O2:1)
+(connect D0:1 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 649 268)
+(anchorPt 52 2)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 82))
+(terminals on)
+(pinCenter 170 130))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 65)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 122))
+(terminals on)
+(pinCenter 400 130))
+(connect I1:1 D0:1
+(points 4 -52 61 -40 61 -40 110 79 110))
+(connect I2:1 D0:2
+(points 4 -52 201 -40 201 -40 150 79 150))
+(connect D0:1 D1:1
+(points 2 281 130 350 130))
+(connect D1:3 O1:1
+(points 6 450 130 460 130 460 120 470 120 470 41 596 41))
+(connect D1:4 O2:1
+(points 4 450 140 470 140 470 131 596 131))
+(connect D0:1 O3:1
+(points 6 281 130 300 130 300 140 360 140 360 221 596 221)))
+(stackingOrder 0 1))))
+(device 7 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "201")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  0))
+(from 18000)
+(thru 40000)))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D2:1 D1:1)
+(connect D0:2 D1:2)
+(connect I1:1 D2:1)
+(connect I2:1 D2:2)
+(connect I3:1 D2:3)
+(connect D1:1 O1:1)
+(connect D1:2 O2:1)
+(connect D1:3 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 447 422)
+(anchorPt 124 49)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 89 65))
+(terminals on)
+(pinCenter 90 210))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 86 65))
+(terminals on)
+(pinCenter 230 210))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 100 150))
+(connect I1:1 D0:1
+(points 6 -124 21 -110 21 -110 140 10 140 10 190 43 190))
+(connect I2:1 D0:2
+(points 6 -124 161 -110 161 -110 150 0 150 0 210 43 210))
+(connect I3:1 D0:3
+(points 4 -124 301 0 301 0 230 43 230))
+(connect D2:1 D1:1
+(points 4 140 150 170 150 170 190 184 190))
+(connect D0:2 D1:2
+(points 2 137 230 184 230))
+(connect I1:1 D2:1
+(points 4 -124 21 -110 21 -110 140 60 140))
+(connect I2:1 D2:2
+(points 4 -124 161 -110 161 -110 150 60 150))
+(connect I3:1 D2:3
+(points 4 -124 301 -78 301 -78 160 60 160))
+(connect D1:1 O1:1
+(points 4 275 190 290 190 290 21 322 21))
+(connect D1:2 O2:1
+(points 4 275 210 300 210 300 161 322 161))
+(connect D1:3 O3:1
+(points 4 275 230 300 230 300 301 322 301)))
+(stackingOrder 2 1 0))))
+(device 3 CONTEXT
+(properties
+(name "OutPutScalarRec")
+(variableScope cont)
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 CONTEXT
+(properties
+(name "DataGenerator")
+(variableScope cont)
+(trigMode deg)
+(nextID 6)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "From")
+(optional yes))
+(input 2
+(name "Thru")
+(optional yes))
+(input 3
+(name "NumPts")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(optional yes))
+(output 1
+(type data)
+(name "Scalar")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Meter")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "801")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  2))
+(from 18000)
+(thru 40000)))
+(device 1 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 2 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "((A+1)*sin(PI*10*(A+1))+A*sin(Pi*100*A+10*A))/2000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "(A*sin(PI*A))/500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)
+(connect D1:1 D3:1)
+(connect D2:1 D4:1)
+(connect D1:0 D4:2)
+(connect D3:1 D5:1)
+(connect D1:0 D5:2)
+(connect D5:1 O1:1)
+(connect D4:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 575 361)
+(anchorPt 103 60)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 120 70))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 120 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 180))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 324 130))
+(terminals on)
+(pinCenter 250 140))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 190))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 53 25))
+(open)
+(terminals on)
+(pinCenter 360 150))
+(connect I1:1 D0:1
+(points 4 -103 0 -90 0 -90 60 80 60))
+(connect I2:1 D0:2
+(points 4 -103 120 -90 120 -90 70 80 70))
+(connect I3:1 D0:3
+(points 4 -103 240 -80 240 -80 80 80 80))
+(connect D0:0 D1:0
+(points 2 120 89 120 112))
+(connect D0:1 D1:1
+(points 6 160 70 180 70 180 30 40 30 40 140 56 140))
+(connect D1:1 D2:1
+(points 4 183 140 200 140 200 180 222 180))
+(connect D1:1 D3:1
+(points 2 183 140 222 140))
+(connect D2:1 D4:1
+(points 2 277 180 331 180))
+(connect D1:0 D4:2
+(points 5 120 168 120 210 300 210 300 200 331 200))
+(connect D3:1 D5:1
+(points 2 277 140 331 140))
+(connect D1:0 D5:2
+(points 5 120 168 120 210 300 210 300 160 331 160))
+(connect D5:1 O1:1
+(points 6 389 150 410 150 410 110 430 110 430 30 471 30))
+(connect D4:1 O2:1
+(points 4 389 190 430 190 430 210 471 210)))
+(stackingOrder 4 5 1 0 3 2))))
+(device 2 CONTEXT
+(properties
+(name "RecordBuilder")
+(variableScope cont)
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(output 1
+(type data)
+(name "Freq")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "dBm")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "error")
+(lock constraints)
+(optional yes))
+(output 4
+(type data)
+(name "Record")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 1 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Freq")
+(optional yes))
+(input 2
+(name "dBm")
+(optional yes))
+(input 3
+(name "error")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 2 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "Freq")
+(tag "A")
+(optional yes))
+(output 4
+(name "dBm")
+(tag "B")
+(optional yes))
+(output 5
+(name "error")
+(optional yes))))
+(device 3 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "A-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D2:1 D0:3)
+(connect D0:1 D1:1)
+(connect I2:1 D2:1)
+(connect D1:3 O1:1)
+(connect D1:4 O2:1)
+(connect D1:5 O3:1)
+(connect D0:1 O4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 665 285)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 1
+(active open)
+(icon
+(iconImage "build.icn"))
+(open
+(extent 97 82))
+(terminals on)
+(pinCenter 270 140))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 65)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 122))
+(terminals on)
+(pinCenter 470 140))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 130 160))
+(connect I1:1 D0:1
+(points 4 0 72 10 72 10 120 179 120))
+(connect I2:1 D0:2
+(points 4 0 212 82 212 82 140 179 140))
+(connect D2:1 D0:3
+(points 2 157 160 179 160))
+(connect D0:1 D1:1
+(points 2 381 140 420 140))
+(connect I2:1 D2:1
+(points 4 0 212 80 212 80 160 102 160))
+(connect D1:3 O1:1
+(points 4 520 140 530 140 530 32 664 32))
+(connect D1:4 O2:1
+(points 4 520 150 540 150 540 102 664 102))
+(connect D1:5 O3:1
+(points 4 520 160 540 160 540 172 664 172))
+(connect D0:1 O4:1
+(points 4 381 140 400 140 400 242 664 242)))
+(stackingOrder 0 2 1))))
+(device 7 ALLOCATEARRAY
+(properties
+(name "Alloc Real64")
+(variableScope cont))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Dim Size 1")
+(tag "Dim Size 1")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "801")
+(type "Real64")
+(initEnum "Lin Ramp")
+(initialValue
+(data  0))
+(from 18000)
+(thru 40000)))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D2:1 D1:1)
+(connect D0:1 D1:2)
+(connect I1:1 D2:1)
+(connect I2:1 D2:2)
+(connect I3:1 D2:3)
+(connect D1:1 O1:1)
+(connect D1:2 O2:1)
+(connect D1:4 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 528 422)
+(anchorPt 175 90)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 89 65))
+(terminals on)
+(pinCenter 120 170))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 86 65))
+(terminals on)
+(pinCenter 250 130))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 75 34))
+(open
+(extent 194 121))
+(terminals on)
+(pinCenter 110 110))
+(connect I1:1 D0:1
+(points 6 -175 -20 -160 -20 -160 100 40 100 40 150 73 150))
+(connect I2:1 D0:2
+(points 6 -175 120 -160 120 -160 110 30 110 30 170 73 170))
+(connect I3:1 D0:3
+(points 4 -175 260 -160 260 -160 190 73 190))
+(connect D2:1 D1:1
+(points 2 150 110 204 110))
+(connect D0:1 D1:2
+(points 2 167 150 204 150))
+(connect I1:1 D2:1
+(points 4 -175 -20 -160 -20 -160 100 70 100))
+(connect I2:1 D2:2
+(points 4 -175 120 -160 120 -160 110 70 110))
+(connect I3:1 D2:3
+(points 4 -175 260 -160 260 -160 120 70 120))
+(connect D1:1 O1:1
+(points 4 295 110 320 110 320 -20 352 -20))
+(connect D1:2 O2:1
+(points 4 295 120 320 120 320 120 352 120))
+(connect D1:4 O3:1
+(points 4 295 140 320 140 320 260 352 260)))
+(stackingOrder 2 0 1))))
+(device 4 CONTEXT
+(properties
+(name "Extrapolate")
+(variableScope cont)
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FOREACH
+(properties
+(name "For Each Element In")
+(variableScope cont))
+(interface
+(input 1
+(name "Collection")
+(tag "Collection")
+(lock name)
+(optional yes))
+(output 1
+(name "Element")
+(lock name constraints))))
+(device 1 FORMULA
+(properties
+(variableScope cont)
+(expr 4 "x=OutRec.Scalar.freq;" "yA=OutRec.Meter.dBm;" "xA=OutRec.Meter.freq;"
+""))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "yA")
+(optional yes))
+(output 3
+(name "xA")
+(optional yes))))
+(device 2 EXVEEOBJECT
+(properties
+(name "Lookup Table")
+(variableScope cont)
+(fullClassName "Agilent.VeeToolbox.SignalAndDataAnalysis.DataScalingTableLookup"
+)
+(assemblyName
+"C:\\Program Files (x86)\\Agilent\\VEE Pro 9.3\\Lib\\vTools\\General\\Components\\DataScaling.dll"
+))
+(interface
+(input 1
+(name "x")
+(tag "x")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "yArray")
+(tag "yArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(type control)
+(name "xArray")
+(tag "xArray")
+(requires
+(datatype Real64)
+(shape "Array 1D"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "y")
+(lock name constraints)
+(optional yes)))
+(implementation))
+(device 4 COLLECTOR
+(properties
+(variableScope cont)
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 5 FORMULA
+(properties
+(name "OutRec.Scalar.error[*]")
+(variableScope cont)
+(expr 2 "OutRec.Scalar.error[*] = OutRec.Scalar.dBm - Meter" ""))
+(interface
+(input 1
+(name "Meter")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 6 NOTE
+(properties
+(name "Why Extrapolate")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Why? The power sensor takes much MUCH longer than the scalar detector therefore, its arrary is fewer points.\\par\r\n\\par\r\nAfter the Power Meter is done measureing, then extrapolate its array to match the size of the scalar\'s array. \\par\r\nCalculate the scalar detector flatness error and save that in the *Rec.Scalar.error[*] of the same size.\\par\r\n\\par\r\nmeasured = actual + error\\par\r\nerror = measured - actual\\par\r\nScalar = meter + error\\par\r\nerror = Scalar - meter\\par\r\n\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D0:1 D2:1)
+(connect D1:2 D2:2)
+(connect D1:3 D2:3)
+(connect D2:1 D3:1)
+(connect D0:0 D3:2)
+(connect D0:0 D4:0)
+(connect D3:1 D4:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 953 536)
+(anchorPt 149 30)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 122 51)
+(iconImage "loop.icn"))
+(open)
+(pinCenter 130 190))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 50 34))
+(open
+(extent 154 110))
+(terminals on)
+(pinCenter 130 90))
+(devCarrierFor 2
+(active open)
+(icon
+(iconImage "vTools\\General\\table-lookup.jpg"))
+(open
+(extent 42 76))
+(terminals on)
+(titleBg "Light Golden Orange")
+(pinCenter 370 210))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 95 54))
+(terminals on)
+(pinCenter 490 290))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 129 15))
+(open
+(extent 344 66))
+(terminals on)
+(pinCenter 130 410))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 95 51)
+(iconImage "notepad.icn"))
+(open
+(extent 454 266)
+(editing enabled))
+(pinCenter 160 250))
+(connect D1:0 D0:0
+(points 2 130 147 130 162))
+(connect D1:1 D0:1
+(points 6 239 60 260 60 260 -10 0 -10 0 190 66 190))
+(connect D0:1 D2:1
+(points 2 193 190 296 190))
+(connect D1:2 D2:2
+(points 4 239 90 270 90 270 210 296 210))
+(connect D1:3 D2:3
+(points 4 239 120 260 120 260 230 296 230))
+(connect D2:1 D3:1
+(points 4 423 210 440 210 440 280 461 280))
+(connect D0:0 D3:2
+(points 3 130 218 130 300 461 300))
+(connect D0:0 D4:0
+(points 2 130 218 130 400))
+(connect D3:1 D4:1
+(points 6 519 290 540 290 540 440 40 440 40 410 63 410)))
+(stackingOrder 0 2 1 3 4 5))))
+(device 5 FORMULA
+(properties
+(variableScope cont)
+(expr 5 "A=OutRec.Scalar.dBm;" "B=OutRec.Meter.dBm;" "C=OutRec.Scalar.error" ""
+""))
+(interface
+(output 1
+(name "A")
+(optional yes))
+(output 2
+(name "B")
+(optional yes))
+(output 3
+(name "C")
+(optional yes))))
+(device 6 TORECORD
+(properties
+(variableScope cont)
+(outputType scalar))
+(interface
+(input 1
+(name "Scalar")
+(optional yes))
+(input 2
+(name "Meter")
+(optional yes))
+(output 1
+(name "output"))))
+(device 7 TOGLOBAL
+(properties
+(name "Set OutRec")
+(variableScope cont)
+(globalName "OutRec"))
+(interface
+(input 1
+(name "Data")
+(tag "Data")
+(lock name))))
+(device 8 CONSTANT
+(properties
+(name "From")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  18000))
+(initValue Real
+(data  0))))
+(device 9 CONSTANT
+(properties
+(name "Thru")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  40000))
+(initValue Real
+(data  0))))
+(configuration
+(connect D3:0 D2:0)
+(connect D8:1 D2:1)
+(connect D9:1 D2:2)
+(connect D1:1 D2:3)
+(connect D8:1 D3:1)
+(connect D9:1 D3:2)
+(connect D0:1 D3:3)
+(connect D2:0 D4:0)
+(connect D4:0 D5:0)
+(connect D3:3 D6:1)
+(connect D2:3 D6:2)
+(connect D6:1 D7:1)
+(connect D5:1 O1:1)
+(connect D5:2 O2:1)
+(connect D5:3 O3:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 692 482)
+(anchorPt 15 112)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 50 110))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 50 190))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 97 64))
+(terminals on)
+(pinCenter 200 170))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 103 65))
+(terminals on)
+(pinCenter 200 90))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 67 15))
+(terminals on)
+(pinCenter 200 220))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 50 34))
+(open
+(extent 174 110))
+(terminals on)
+(pinCenter 200 260))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 78 51)
+(iconImage "build.icn"))
+(open
+(extent 97 54))
+(terminals on)
+(pinCenter 400 140))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 73 51))
+(terminals on)
+(pinCenter 570 140))
+(devCarrierFor 8
+(active open)
+(icon
+(extent 33 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter 60 -40))
+(devCarrierFor 9
+(active open)
+(icon
+(extent 29 0))
+(open
+(extent 80 29)
+(showFormat real)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal)))
+(pinCenter 60 20))
+(connect D3:0 D2:0
+(points 2 200 125 200 135))
+(connect D8:1 D2:1
+(points 4 102 -40 130 -40 130 150 149 150))
+(connect D9:1 D2:2
+(points 4 102 20 120 20 120 170 149 170))
+(connect D1:1 D2:3
+(points 2 86 190 149 190))
+(connect D8:1 D3:1
+(points 4 102 -40 130 -40 130 70 146 70))
+(connect D9:1 D3:2
+(points 4 102 20 120 20 120 90 146 90))
+(connect D0:1 D3:3
+(points 2 86 110 146 110))
+(connect D2:0 D4:0
+(points 2 200 204 200 210))
+(connect D4:0 D5:0
+(points 2 200 230 200 240))
+(connect D3:3 D6:1
+(points 4 254 110 270 110 270 130 358 130))
+(connect D2:3 D6:2
+(points 4 251 190 270 190 270 150 358 150))
+(connect D6:1 D7:1
+(points 2 441 140 533 140))
+(connect D5:1 O1:1
+(points 4 227 250 460 250 460 -32 676 -32))
+(connect D5:2 O2:1
+(points 4 227 260 630 260 630 128 676 128))
+(connect D5:3 O3:1
+(points 4 227 270 250 270 250 288 676 288)))
+(stackingOrder 1 0 8 9 3 6 7 2 4 5))))
+(device 2 CONTEXT
+(properties
+(name "InputValidation")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "InScalar")
+(optional yes))
+(input 2
+(name "InMeter")
+(optional yes))
+(input 3
+(name "InError")
+(optional yes)))
+(deviceList
+(device 0 YPLOT
+(properties
+(name "InputScalar")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 1 YPLOT
+(properties
+(name "InputMeter")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 2 YPLOT
+(properties
+(name "InputCorrected")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 3 YPLOT
+(properties
+(name "InputError")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 4 FORMULA
+(properties
+(name "Formula Validation")
+(variableScope cont)
+(expr 1 "scalar-error"))
+(interface
+(input 1
+(name "scalar")
+(optional yes))
+(input 2
+(name "error")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D1:1)
+(connect D4:1 D2:1)
+(connect I3:1 D3:1)
+(connect I1:1 D4:1)
+(connect I3:1 D4:2)))
+(contextCarrier
+(active detail)
+(panel
+(extent 1285 301)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 0 0)
+(PID 0)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 0)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -25 25 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 1 detail
+(relativeOrigin 320 0)
+(PID 1)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 1)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 10 4 linear))
+(domain 0 200 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 3 detail
+(relativeOrigin 640 0)
+(PID 2)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 2)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 2 detail
+(relativeOrigin 960 0)
+(PID 3)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 3)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 10 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White")))
+(detail
+(extent 1134 735)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 68 51)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -25 25 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 220 220))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 10 4 linear))
+(domain 0 200 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 570 220))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 89 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 10 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 570 530))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 910 220))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 112 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 210 530))
+(connect I1:1 D0:1
+(points 4 0 127 10 127 10 220 59 220))
+(connect I2:1 D1:1
+(points 6 0 367 10 367 10 380 390 380 390 220 409 220))
+(connect D4:1 D2:1
+(points 2 335 530 409 530))
+(connect I3:1 D3:1
+(points 8 0 607 20 607 20 690 750 690 750 380 740 380 740 220 749 220))
+(connect I1:1 D4:1
+(points 6 0 127 10 127 10 220 40 220 40 520 85 520))
+(connect I3:1 D4:2
+(points 4 0 607 10 607 10 540 85 540)))
+(stackingOrder 4 0 1 3 2))))
+(device 3 CONTEXT
+(properties
+(name "OutputValidation")
+(variableScope cont)
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "OutScalar")
+(optional yes))
+(input 2
+(name "OutMeter")
+(optional yes))
+(input 3
+(name "OutError")
+(optional yes)))
+(deviceList
+(device 0 YPLOT
+(properties
+(name "OutputScalar")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 1 YPLOT
+(properties
+(name "OutputMeter")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 2 YPLOT
+(properties
+(name "OutputCorrected")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 3 YPLOT
+(properties
+(name "OutputError")
+(variableScope cont))
+(interface
+(input 1
+(name "Trace1")
+(lock constraints)))
+(implementation
+(tracePin 1)
+(graphMode rectangular)
+(autoAutoX)
+(autoAutoY)))
+(device 4 FORMULA
+(properties
+(name "Formula Validation")
+(variableScope cont)
+(expr 1 "scalar-error"))
+(interface
+(input 1
+(name "scalar")
+(optional yes))
+(input 2
+(name "error")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D1:1)
+(connect D4:1 D2:1)
+(connect I3:1 D3:1)
+(connect I1:1 D4:1)
+(connect I3:1 D4:2)))
+(contextCarrier
+(active detail)
+(panel
+(extent 1292 305)
+(drawGrid "on")
+(widget 0 detail
+(relativeOrigin 0 0)
+(PID 0)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 0)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -80 80 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 1 detail
+(relativeOrigin 320 0)
+(PID 1)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 1)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 200 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 3 detail
+(relativeOrigin 640 0)
+(PID 2)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 2)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -120 100 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 2 detail
+(relativeOrigin 960 0)
+(PID 3)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 3)
+(borderStyle flat)
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White")))
+(detail
+(extent 1124 836)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 78 51)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -80 80 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 220 220))
+(devCarrierFor 1
+(active open)
+(icon
+(extent 72 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 200 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 570 220))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 99 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -40 40 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 580 550))
+(devCarrierFor 3
+(active open)
+(icon
+(extent 69 0)
+(iconImage "display.icn"))
+(open
+(extent 317 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -120 100 4 linear))
+(domain 0 800 4 linear)
+(trace 0 onScale 0
+(name "Trace1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(pinCenter 910 220))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 112 0))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 220 550))
+(connect I1:1 D0:1
+(points 4 0 137 10 137 10 220 59 220))
+(connect I2:1 D1:1
+(points 4 0 417 400 417 400 220 409 220))
+(connect D4:1 D2:1
+(points 2 345 550 419 550))
+(connect I3:1 D3:1
+(points 8 0 697 20 697 20 710 760 710 760 380 740 380 740 220 749 220))
+(connect I1:1 D4:1
+(points 6 0 137 10 137 10 220 40 220 40 540 95 540))
+(connect I3:1 D4:2
+(points 4 0 697 10 697 10 560 95 560)))
+(stackingOrder 4 0 1 3 2))))
+(device 4 NOTE
+(properties
+(name "Why FlatnessRecord?")
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 This tracer bullet doesn\'t save results to a file. It breaks the measurement into two bands, input and output, to save time. \\par\r\nThe request is a single scalar detector flatnes calibration Record saved to Shared Files directory.\\par\r\n}\r\n"
+)))
+(configuration
+(connect D0:0 D1:0)
+(connect D0:1 D2:1)
+(connect D0:2 D2:2)
+(connect D0:3 D2:3)
+(connect D1:1 D3:1)
+(connect D1:2 D3:2)
+(connect D1:3 D3:3)))
+(contextCarrier
+(active detail)
+(detail
+(extent 357 227)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 84 44))
 (terminals on)
 (pinCenter 110 90))
 (devCarrierFor 1
@@ -13686,19 +14797,13 @@ M)
 (devCarrierFor 2
 (active icon)
 (icon
-(extent 84 44))
-(terminals on)
-(pinCenter 110 210))
-(devCarrierFor 3
-(active icon)
-(icon
 (extent 88 34))
 (open
 (extent 1318 372)
 (carbonCopy))
 (terminals on)
-(pinCenter 230 150))
-(devCarrierFor 4
+(pinCenter 230 90))
+(devCarrierFor 3
 (active icon)
 (icon
 (extent 97 34))
@@ -13706,16 +14811,66 @@ M)
 (extent 1292 309)
 (carbonCopy))
 (terminals on)
-(pinCenter 230 210))
-(devCarrierFor 5
+(pinCenter 230 150))
+(devCarrierFor 4
 (active icon)
+(icon
+(extent 133 51)
+(iconImage "notepad.icn"))
+(open
+(extent 314 136)
+(editing enabled))
+(pinCenter 180 110))
+(connect D0:0 D1:0
+(points 2 110 114 110 125))
+(connect D0:1 D2:1
+(points 2 154 80 183 80))
+(connect D0:2 D2:2
+(points 2 154 90 183 90))
+(connect D0:3 D2:3
+(points 2 154 100 183 100))
+(connect D1:1 D3:1
+(points 2 154 140 179 140))
+(connect D1:2 D3:2
+(points 2 154 150 179 150))
+(connect D1:3 D3:3
+(points 2 154 160 179 160)))
+(stackingOrder 4 0 2 3 1))))
+(configuration
+(connect D15:0 D2:0)
+(connect D2:1 D3:1)
+(connect D2:0 D4:0)
+(connect D4:1 D5:1)
+(connect D8:1 D7:1)
+(connect D4:0 D8:0)
+(connect D10:1 D9:1)
+(connect D8:0 D10:0)
+(connect D12:1 D11:1)
+(connect D10:0 D12:0)
+(connect D14:1 D13:1)
+(connect D12:0 D14:0)
+(connect D0:0 D15:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 697 616)
+(anchorPt 154 -2)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 84 45))
+(terminals on)
+(pinCenter 110 40))
+(devCarrierFor 5
+(active open)
 (icon
 (extent 105 51)
 (iconImage "notepad.icn"))
 (open
 (extent 494 426)
 (editing enabled))
-(pinCenter 120 250))
+(pinCenter 540 240))
 (devCarrierFor 6
 (active icon)
 (icon
@@ -13749,12 +14904,12 @@ M)
 (devCarrierFor 10
 (active icon)
 (icon
-(extent 75 51)
+(extent 182 51)
 (iconImage "notepad.icn"))
 (open
-(extent 454 406)
+(extent 454 476)
 (editing enabled))
-(pinCenter 330 90))
+(pinCenter 140 320))
 (devCarrierFor 11
 (active icon)
 (icon
@@ -13815,47 +14970,39 @@ M)
 (extent 73 15))
 (terminals on)
 (pinCenter 110 460))
-(connect D0:0 D1:0
-(points 2 110 115 110 125))
-(connect D1:0 D2:0
-(points 2 110 174 110 185))
-(connect D1:1 D3:1
-(points 2 154 140 183 140))
-(connect D1:2 D3:2
-(points 2 154 150 183 150))
-(connect D1:3 D3:3
-(points 2 154 160 183 160))
-(connect D2:1 D4:1
-(points 2 154 200 179 200))
-(connect D2:2 D4:2
-(points 2 154 210 179 210))
-(connect D2:3 D4:3
-(points 2 154 220 179 220))
-(connect D2:0 D6:0
-(points 2 110 234 110 280))
-(connect D6:1 D7:1
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 185 15))
+(terminals on)
+(pinCenter 110 100))
+(connect D15:0 D2:0
+(points 2 110 110 110 280))
+(connect D2:1 D3:1
 (points 2 149 290 183 290))
-(connect D6:0 D8:0
+(connect D2:0 D4:0
 (points 2 110 300 110 310))
-(connect D8:1 D9:1
+(connect D4:1 D5:1
 (points 2 149 320 183 320))
-(connect D12:1 D11:1
+(connect D8:1 D7:1
 (points 2 149 360 183 360))
-(connect D8:0 D12:0
+(connect D4:0 D8:0
 (points 2 110 330 110 350))
-(connect D14:1 D13:1
+(connect D10:1 D9:1
 (points 2 149 390 183 390))
-(connect D12:0 D14:0
+(connect D8:0 D10:0
 (points 2 110 370 110 380))
-(connect D16:1 D15:1
+(connect D12:1 D11:1
 (points 2 149 430 183 430))
-(connect D14:0 D16:0
+(connect D10:0 D12:0
 (points 2 110 400 110 420))
-(connect D18:1 D17:1
+(connect D14:1 D13:1
 (points 2 149 460 183 460))
-(connect D16:0 D18:0
-(points 2 110 440 110 450)))
-(stackingOrder 0 4 5 8 9 10 11 12 13 14 15 16 17 18 7 2 3 6 1))))
+(connect D12:0 D14:0
+(points 2 110 440 110 450))
+(connect D0:0 D15:0
+(points 2 110 65 110 90)))
+(stackingOrder 4 7 8 9 10 11 5 12 13 3 0 1 15 2 6 14))))
 (device 147 CONTEXT
 (properties
 (name "hp8757 inputFreq")
@@ -13998,8 +15145,6 @@ M)
 (connect D10:0 D9:0)
 (connect D8:0 D10:0)))
 (contextCarrier
-(wndOrigin 22 22)
-(wndState res)
 (active detail)
 (detail
 (extent 1071 762)
@@ -14269,12 +15414,10 @@ M)
 (connect D6:0 D8:0)
 (connect D3:1 D9:1)))
 (contextCarrier
-(wndOrigin 2 2)
-(wndState res)
 (active detail)
 (detail
 (extent 931 860)
-(anchorPt -202 -176)
+(anchorPt -65 436)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -14511,12 +15654,13 @@ M)
 (name "PowerSensor inputFreq")
 (variableScope cont)
 (trigMode deg)
-(nextID 7)
+(nextID 11)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
 (device 0 FORMULA
 (properties
+(name "Frequency Array")
 (variableScope cont)
 (expr 1 "InRec.Meter.Freq"))
 (interface
@@ -14540,6 +15684,7 @@ M)
 (lock name constraints))))
 (device 2 FORMULA
 (properties
+(name "Fill Record")
 (variableScope cont)
 (expr 1 "inRec.Meter.dBm[*]=A"))
 (interface
@@ -14596,7 +15741,56 @@ M)
 (output 1
 (name "Array")
 (tag "Array"))))
+(device 7 CALL
+(properties
+(name "Call ScalarPulseOnOff")
+(variableScope cont)
+(callFunc "ScalarPulseOnOff")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 8 CALL
+(properties
+(name "Call ScalarPulseOnOff")
+(variableScope cont)
+(callFunc "ScalarPulseOnOff")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 9 LITERALCONSTANT
+(properties
+(name "ON")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "ON"))
+(initValue Text
+(data  ""))))
+(device 10 LITERALCONSTANT
+(properties
+(name "OFF")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "OFF"))
+(initValue Text
+(data  ""))))
 (configuration
+(connect D7:0 D0:0)
 (connect D0:0 D1:0)
 (connect D0:1 D1:1)
 (connect D1:0 D2:0)
@@ -14607,16 +15801,20 @@ M)
 (connect D1:1 D5:1)
 (connect D3:0 D6:0)
 (connect D3:1 D6:1)
-(connect D1:0 D6:2)))
+(connect D1:0 D6:2)
+(connect D10:1 D7:1)
+(connect D2:0 D8:0)
+(connect D9:1 D8:1)))
 (contextCarrier
 (active detail)
 (detail
-(extent 570 506)
-(anchorPt 0 0)
+(extent 570 627)
+(anchorPt 16 75)
 (configuration
 (devCarrierFor 0
 (active open)
-(icon)
+(icon
+(extent 94 0))
 (open
 (extent 145 50))
 (terminals on)
@@ -14631,7 +15829,8 @@ M)
 (pinCenter 180 180))
 (devCarrierFor 2
 (active open)
-(icon)
+(icon
+(extent 64 0))
 (open
 (extent 145 50))
 (terminals on)
@@ -14643,7 +15842,7 @@ M)
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 410 250))
+(pinCenter 410 240))
 (devCarrierFor 4
 (active icon)
 (icon
@@ -14651,7 +15850,7 @@ M)
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 410 220))
+(pinCenter 410 210))
 (devCarrierFor 5
 (active icon)
 (icon
@@ -14667,7 +15866,39 @@ M)
 (open
 (extent 95 54))
 (terminals on)
-(pinCenter 410 300))
+(pinCenter 410 290))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 135 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 180 -10))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 135 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 180 480))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 174 29))
+(pinCenter 80 480))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 27 15))
+(open
+(extent 174 29))
+(pinCenter 80 -10))
+(connect D7:0 D0:0
+(points 2 180 0 180 64))
 (connect D0:0 D1:0
 (points 2 180 137 180 144))
 (connect D0:1 D1:1
@@ -14675,22 +15906,28 @@ M)
 (connect D1:0 D2:0
 (points 2 180 198 180 374))
 (connect D6:1 D2:1
-(points 6 439 300 460 300 460 350 40 350 40 420 65 420))
+(points 6 439 290 460 290 460 340 50 340 50 420 65 420))
 (connect D4:0 D3:0
-(points 2 410 230 410 240))
+(points 2 410 220 410 230))
 (connect D5:0 D4:0
-(points 2 410 190 410 210))
+(points 2 410 190 410 200))
 (connect D1:1 D5:0
 (points 5 261 180 340 180 340 150 410 150 410 170))
 (connect D1:1 D5:1
 (points 2 261 180 356 180))
 (connect D3:0 D6:0
-(points 2 410 260 410 285))
+(points 2 410 250 410 275))
 (connect D3:1 D6:1
-(points 6 503 250 520 250 520 340 360 340 360 290 381 290))
+(points 6 503 240 520 240 520 270 370 270 370 280 381 280))
 (connect D1:0 D6:2
-(points 3 180 198 180 310 381 310)))
-(stackingOrder 0 1 2 4 5 6 3))))
+(points 3 180 198 180 300 381 300))
+(connect D10:1 D7:1
+(points 2 96 -10 110 -10))
+(connect D2:0 D8:0
+(points 2 180 447 180 470))
+(connect D9:1 D8:1
+(points 2 94 480 110 480)))
+(stackingOrder 1 5 8 10 9 0 2 6 4 3 7))))
 (device 204 CONTEXT
 (properties
 (name "PowerSensor outputFreq")
@@ -15728,12 +16965,10 @@ M)
 (connect D10:1 D14:3)
 (connect D9:1 D14:4)))
 (contextCarrier
-(wndOrigin -285 211)
-(wndState res)
 (active detail)
 (detail
 (extent 1524 863)
-(anchorPt -30 -3)
+(anchorPt -43 -80)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -16729,8 +17964,6 @@ M)
 (connect D10:1 D14:3)
 (connect D9:1 D14:4)))
 (contextCarrier
-(wndOrigin 719 704)
-(wndState res)
 (active detail)
 (detail
 (extent 1524 863)
@@ -16978,17 +18211,6 @@ M)
 (name "B"))
 (output 1
 (name "Data"))))
-(device 208 IODEVICE
-(properties
-(name "hp8757D ( @GPIB0::16::INSTR)")
-(variableScope cont)
-(transactions 1 "WRITE TEXT \"MDoff\" EOL"))
-(implementation
-(ioDevType 13)
-(iopath "hp8757D")))
-(device 209 START25
-(properties
-(variableScope cont)))
 (device 210 IODEVICE
 (properties
 (name "ML248xA ( @GPIB0::13::INSTR)")
@@ -17023,11 +18245,9 @@ M)
 (optional yes))))
 (configuration))
 (contextCarrier
-(wndOrigin 863 415)
-(wndState res)
 (active detail)
 (detail
-(extent 632 216)
+(extent 700 427)
 (anchorPt 0 0)
 (configuration
 (devCarrierFor 0
@@ -17036,7 +18256,7 @@ M)
 (open
 (extent 415 70))
 (terminals on)
-(pinCenter 300 120))))))
+(pinCenter 360 220))))))
 (configuration
 (connect D22:1 D1:0)
 (connect D0:0 D2:0)
@@ -17050,15 +18270,14 @@ M)
 (connect D19:0 D20:0)
 (connect D20:0 D21:0)
 (connect D17:2 D22:1)
-(connect D21:0 D22:2)
-(connect D24:0 D23:0)))
+(connect D21:0 D22:2)))
 (contextCarrier
-(wndOrigin 726 77)
+(wndOrigin 45 8)
 (wndState res)
 (active detail)
 (detail
 (extent 2149 853)
-(anchorPt 287 97)
+(anchorPt 781 456)
 (configuration
 (devCarrierFor 110
 (active open)
@@ -17102,7 +18321,7 @@ M)
 (terminals on)
 (pinCenter -20 70))
 (devCarrierFor 153
-(active open)
+(active icon)
 (icon
 (extent 84 15))
 (open
@@ -17130,7 +18349,7 @@ M)
 (open
 (extent 154 236))
 (terminals on)
-(pinCenter 650 20))
+(pinCenter 570 80))
 (devCarrierFor 166
 (active icon)
 (icon
@@ -17187,7 +18406,7 @@ M)
 (open
 (extent 223 134))
 (terminals on)
-(pinCenter -20 120))
+(pinCenter -20 110))
 (devCarrierFor 203
 (active icon)
 (icon
@@ -17219,51 +18438,37 @@ M)
 (open)
 (terminals on)
 (pinCenter 250 350))
-(devCarrierFor 208
-(active open)
-(icon
-(iconImage "io.icn"))
-(open
-(extent 221 74))
-(terminals on)
-(pinCenter 960 -160))
-(devCarrierFor 209
-(active open)
-(icon)
-(open
-(extent 47 22))
-(title off)
-(pinCenter 960 -260))
 (devCarrierFor 210
 (active open)
 (icon
+(extent 188 51)
 (iconImage "io.icn"))
 (open
 (extent 414 104))
 (terminals on)
-(pinCenter 1025 -20))
+(pinCenter 595 310))
 (devCarrierFor 212
 (active icon)
 (icon
 (extent 71 15))
 (terminals on)
-(pinCenter 160 550))
+(pinCenter 110 400))
 (connect D22:1 D1:0
 (points 3 265 350 330 350 330 374))
 (connect D0:0 D2:0
 (points 2 -20 -227 -20 -220))
 (connect D6:0 D3:0
-(points 2 -20 -15 -20 0))
+(points 2 -20 -80 -20 0))
 (connect D3:0 D4:0
 (points 2 -20 20 -20 30))
 (connect D4:0 D5:0
 (points 2 -20 49 -20 60))
 (connect D2:0 D6:0
-(points 2 -20 -200 -20 -184))
+(points 2 -20 -200 -20 -100))
 (connect D5:0 D17:0
-(points 2 -20 80 -20 105))
+(points 2 -20 80 -20 95))
 (connect D17:1 D18:0
-(points 3 23 110 110 110 110 220))
+(points 3 23 100 110 100 110 220))
 (connect D18:0 D19:0
 (points 2 110 240 110 250))
 (connect D19:0 D20:0
@@ -17271,13 +18476,11 @@ M)
 (connect D20:0 D21:0
 (points 2 110 300 110 310))
 (connect D17:2 D22:1
-(points 4 23 130 210 130 210 340 234 340))
+(points 4 23 120 210 120 210 340 234 340))
 (connect D21:0 D22:2
-(points 3 110 330 110 360 234 360))
-(connect D24:0 D23:0
-(points 2 960 -247 960 -218)))
-(stackingOrder 0 2 11 12 7 14 13 3 6 8 10 15 16 22 1 9 17 24 4 5 18 23 20 19 21
-25 26))
+(points 3 110 330 110 360 234 360)))
+(stackingOrder 0 2 11 12 7 14 13 8 10 15 16 22 1 4 5 19 21 20 9 18 23 17 24 6 3)
+)
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
