@@ -1,6 +1,6 @@
 (saveFormat "7.0")
-(date "Fri 01/Nov/2024 16:51:29 ")
-(veerev "9.32.17704.1")
+(date "Mon 04/Nov/2024 13:34:51 ")
+(veerev "9.33.1811.0201")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
@@ -3599,7 +3599,7 @@
 (active detail)
 (detail
 (extent 662 337)
-(anchorPt -84 -32)
+(anchorPt 152 42)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -3660,17 +3660,17 @@
 (connect D3:0 D2:0
 (points 2 200 135 200 135))
 (connect I1:1 D2:1
-(points 6 84 90 -120 90 -120 50 120 50 120 150 150 150))
+(points 6 -152 16 -120 16 -120 50 120 50 120 150 150 150))
 (connect I2:1 D2:2
-(points 6 84 200 -120 200 -120 130 110 130 110 170 150 170))
+(points 6 -152 126 -120 126 -120 130 110 130 110 170 150 170))
 (connect I3:1 D2:3
-(points 6 84 310 30 310 30 230 60 230 60 190 150 190))
+(points 6 -152 236 30 236 30 230 60 230 60 190 150 190))
 (connect I1:1 D3:1
-(points 6 84 90 -120 90 -120 50 140 50 140 80 151 80))
+(points 6 -152 16 -120 16 -120 50 140 50 140 80 151 80))
 (connect I2:1 D3:2
-(points 6 84 200 -120 200 -120 130 130 130 130 100 151 100))
+(points 6 -152 126 -120 126 -120 130 130 130 130 100 151 100))
 (connect I3:1 D3:3
-(points 4 84 310 30 310 30 120 151 120))
+(points 4 -152 236 30 236 30 120 151 120))
 (connect D2:0 D4:0
 (points 2 200 204 200 210))
 (connect D4:0 D5:0
@@ -3682,12 +3682,12 @@
 (connect D6:1 D7:1
 (points 2 486 140 496 140))
 (connect D5:1 O1:1
-(points 4 227 250 660 250 660 90 745 90))
+(points 4 227 250 660 250 660 16 509 16))
 (connect D5:2 O2:1
-(points 4 227 260 270 260 270 200 745 200))
+(points 4 227 260 270 260 270 126 509 126))
 (connect D5:3 O3:1
-(points 4 227 270 250 270 250 310 745 310)))
-(stackingOrder 7 6 3 0 2 1 5 4))))
+(points 4 227 270 250 270 250 236 509 236)))
+(stackingOrder 7 6 0 1 5 3 2 4))))
 (device 2 CONTEXT
 (properties
 (name "InputValidation")
@@ -4654,7 +4654,7 @@
 (points 2 180 447 180 470))
 (connect D9:1 D8:1
 (points 2 94 480 110 480)))
-(stackingOrder 1 5 8 10 9 0 2 6 7 3 4))))
+(stackingOrder 1 5 10 9 0 2 6 7 3 4 8))))
 (device 13 CONTEXT
 (properties
 (name "InputErrorCalc")
@@ -5762,6 +5762,7 @@
 (name "Record"))))
 (device 15 FORMULA
 (properties
+(name "MetaData")
 (variableScope cont)
 (expr 6 "model=\"model\";" "SN=\"234\";" "Tech=\"sapplen\";" "Bench=\"U2\";"
 "Date=now()" ""))
@@ -5880,6 +5881,7 @@
 (tag "Record"))))
 (device 28 FORMULA
 (properties
+(name "InRec")
 (variableScope cont)
 (expr 1 "InRec"))
 (interface
@@ -5926,8 +5928,8 @@
 (implementation
 (value Text
 (data 
-"C:\\Users\\test\\Documents\\GitHub\\sandbox\\ScalarFOM\\Scalar-Detector-error")
-)
+"C:\\Users\\test\\Documents\\GitHub\\sandbox\\ScalarFOM\\Scalar-Detector-error2"
+))
 (initValue Text
 (data  ""))))
 (device 31 FORMULA
@@ -5954,35 +5956,6 @@
 (properties
 (variableScope cont)
 (code 0)))
-(device 34 MERGEREC
-(properties
-(variableScope cont))
-(interface
-(input 1
-(name "A")
-(requires
-(datatype Record))
-(lock constraints)
-(optional yes))
-(input 2
-(name "B")
-(requires
-(datatype Record))
-(lock constraints)
-(optional yes))
-(output 1
-(name "Record")
-(tag "Record"))))
-(device 35 FORMULA
-(properties
-(variableScope cont)
-(expr 1 "InRec"))
-(interface
-(output 1
-(name "Result")
-(tag "Result")
-(lock name constraints)
-(optional yes))))
 (device 36 NOTE
 (properties
 (variableScope cont)
@@ -5990,9 +5963,9 @@
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 11/1/2024 Friday  It\'s Alive!\\par\r\n}\r\n"
 )))
 (configuration
-(connect D9:0 D0:0)
+(connect D1:0 D0:0)
 (connect D2:0 D1:0)
-(connect D0:0 D3:0)
+(connect D9:0 D3:0)
 (connect D4:1 D3:1)
 (connect D4:2 D3:2)
 (connect D4:3 D3:3)
@@ -6003,7 +5976,7 @@
 (connect D5:0 D6:0)
 (connect D6:1 D7:0)
 (connect D7:0 D8:0)
-(connect D1:0 D9:0)
+(connect D0:0 D9:0)
 (connect D10:1 D9:1)
 (connect D10:2 D9:2)
 (connect D10:3 D9:3)
@@ -6019,16 +5992,15 @@
 (connect D24:1 D25:1)
 (connect D10:1 D25:2)
 (connect D10:2 D25:3)
-(connect D23:0 D26:0)
-(connect D28:0 D27:0)
-(connect D28:1 D27:2)))
+(connect D23:0 D26:0)))
 (contextCarrier
-(wndOrigin 9 63)
-(wndState res)
+(wndRestoredOrigin 118 56)
+(wndRestoredExtent 1401 671)
+(wndState max)
 (active detail)
 (detail
-(extent 1401 671)
-(anchorPt 427 172)
+(extent 1554 892)
+(anchorPt 499 43)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -6037,7 +6009,7 @@
 (open
 (extent 254 146))
 (terminals on)
-(pinCenter 310 240))
+(pinCenter 310 70))
 (devCarrierFor 1
 (active icon)
 (icon
@@ -6046,33 +6018,33 @@
 (extent 175 117)
 (carbonCopy))
 (titleBg "Light Beige")
-(pinCenter 310 50))
+(pinCenter 310 40))
 (devCarrierFor 2
 (active open)
 (icon)
 (open
 (extent 47 22))
 (title off)
-(pinCenter 310 20))
+(pinCenter 310 10))
 (devCarrierFor 7
 (active icon)
 (icon
 (extent 185 34))
 (terminals on)
-(pinCenter 310 330))
+(pinCenter 310 340))
 (devCarrierFor 8
 (active open)
 (icon)
 (open
-(extent 144 96))
+(extent 144 116))
 (terminals on)
-(pinCenter 5 350))
+(pinCenter 5 370))
 (devCarrierFor 9
 (active icon)
 (icon
 (extent 114 34))
 (terminals on)
-(pinCenter 310 400))
+(pinCenter 310 390))
 (devCarrierFor 10
 (active icon)
 (icon
@@ -6080,19 +6052,19 @@
 (open
 (extent 223 134))
 (terminals on)
-(pinCenter 310 470))
+(pinCenter 310 460))
 (devCarrierFor 11
 (active icon)
 (icon
 (extent 143 15))
 (terminals on)
-(pinCenter 410 510))
+(pinCenter 520 490))
 (devCarrierFor 13
 (active icon)
 (icon
 (extent 86 15))
 (terminals on)
-(pinCenter 410 550))
+(pinCenter 520 520))
 (devCarrierFor 14
 (active icon)
 (icon
@@ -6101,15 +6073,15 @@
 (open
 (extent 97 102))
 (terminals on)
-(pinCenter 310 140))
+(pinCenter 310 130))
 (devCarrierFor 15
 (active open)
 (icon
-(extent 50 54))
+(extent 57 54))
 (open
-(extent 145 122))
+(extent 174 116))
 (terminals on)
-(pinCenter 10 140))
+(pinCenter 20 110))
 (devCarrierFor 16
 (active open)
 (icon
@@ -6117,98 +6089,100 @@
 (open
 (extent 154 236))
 (terminals on)
-(pinCenter 880 430))
+(pinCenter 750 300))
 (devCarrierFor 17
 (active icon)
 (icon
 (extent 132 15))
 (open
 (extent 199 115))
-(pinCenter 580 280))
+(pinCenter 540 250))
 (devCarrierFor 18
 (active icon)
 (icon
 (extent 108 15))
 (open
 (extent 199 115))
-(pinCenter 580 260))
+(pinCenter 540 220))
 (devCarrierFor 19
 (active icon)
 (icon
 (extent 114 15))
 (open
 (extent 199 115))
-(pinCenter 780 160))
+(pinCenter 540 0))
 (devCarrierFor 20
 (active icon)
 (icon
 (extent 143 15))
 (open
 (extent 199 115))
-(pinCenter 580 240))
+(pinCenter 540 190))
 (devCarrierFor 21
 (active icon)
 (icon
 (extent 160 15))
 (open
 (extent 199 115))
-(pinCenter 780 200))
+(pinCenter 540 60))
 (devCarrierFor 22
 (active icon)
 (icon
 (extent 155 15))
 (open
 (extent 199 115))
-(pinCenter 780 180))
+(pinCenter 540 30))
 (devCarrierFor 23
 (active icon)
 (icon
 (extent 165 15))
 (open
 (extent 201 115))
-(pinCenter 580 220))
+(pinCenter 540 160))
 (devCarrierFor 24
 (active icon)
 (icon
 (extent 154 15))
 (open
 (extent 199 115))
-(pinCenter 580 200))
+(pinCenter 540 120))
 (devCarrierFor 25
 (active icon)
 (icon
 (extent 144 15))
 (open
 (extent 199 115))
-(pinCenter 580 180))
+(pinCenter 540 90))
 (devCarrierFor 27
-(active open)
+(active icon)
 (icon
+(extent 84 51)
 (iconImage "build.icn"))
 (open
 (extent 30 50))
 (terminals on)
-(pinCenter 395 720))
+(pinCenter 520 640))
 (devCarrierFor 28
-(active open)
-(icon)
+(active icon)
+(icon
+(extent 36 15))
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 400 620))
+(pinCenter 520 550))
 (devCarrierFor 29
 (active open)
 (icon)
 (open
 (extent 146 58))
 (terminals on)
-(pinCenter 600 870))
+(pinCenter 770 660))
 (devCarrierFor 30
 (active open)
 (icon)
 (open
-(extent 174 29))
-(pinCenter -60 870))
+(extent 464 36))
+(pinCenter -380 220))
 (devCarrierFor 31
 (active open)
 (icon
@@ -6216,104 +6190,84 @@
 (open
 (extent 214 66))
 (terminals on)
-(pinCenter 250 890))
+(pinCenter 60 240))
 (devCarrierFor 32
 (active open)
 (icon
 (iconImage "stop.icn"))
 (open
 (extent 65 31))
-(pinCenter 580 1010))
-(devCarrierFor 34
-(active open)
-(icon
-(iconImage "build.icn"))
-(open
-(extent 30 50))
-(terminals on)
-(pinCenter 635 130))
-(devCarrierFor 35
-(active open)
-(icon)
-(open
-(extent 145 50))
-(terminals on)
-(pinCenter 640 30))
+(pinCenter 750 760))
 (devCarrierFor 36
 (active open)
 (icon
 (iconImage "notepad.icn"))
 (open
-(extent 410 180)
+(extent 404 76)
 (editing enabled))
-(pinCenter -110 -20))
-(connect D9:0 D0:0
-(points 2 310 169 310 230))
+(pinCenter -360 110))
+(connect D1:0 D0:0
+(points 2 310 50 310 60))
 (connect D2:0 D1:0
-(points 2 310 33 310 40))
-(connect D0:0 D3:0
-(points 2 310 250 310 310))
+(points 2 310 23 310 30))
+(connect D9:0 D3:0
+(points 2 310 159 310 320))
 (connect D4:1 D3:1
-(points 2 139 320 215 320))
+(points 4 139 320 160 320 160 330 215 330))
 (connect D4:2 D3:2
-(points 4 139 340 160 340 160 330 215 330))
+(points 4 139 350 160 350 160 340 215 340))
 (connect D4:3 D3:3
-(points 4 139 360 170 360 170 340 215 340))
+(points 4 139 380 170 380 170 350 215 350))
 (connect D3:0 D5:0
-(points 2 310 349 310 380))
+(points 2 310 359 310 370))
 (connect D4:1 D5:1
-(points 4 139 320 200 320 200 390 250 390))
+(points 6 139 320 160 320 160 330 210 330 210 380 250 380))
 (connect D4:2 D5:2
-(points 4 139 340 160 340 160 400 250 400))
+(points 6 139 350 160 350 160 340 200 340 200 390 250 390))
 (connect D4:4 D5:3
-(points 4 139 380 150 380 150 410 250 410))
+(points 4 139 410 160 410 160 400 250 400))
 (connect D5:0 D6:0
-(points 2 310 419 310 455))
+(points 2 310 409 310 445))
 (connect D6:1 D7:0
-(points 3 353 460 410 460 410 500))
+(points 3 353 450 520 450 520 480))
 (connect D7:0 D8:0
-(points 2 410 520 410 540))
-(connect D1:0 D9:0
-(points 2 310 60 310 110))
+(points 2 520 500 520 510))
+(connect D0:0 D9:0
+(points 2 310 80 310 100))
 (connect D10:1 D9:1
-(points 4 135 100 170 100 170 120 268 120))
+(points 4 159 70 210 70 210 110 268 110))
 (connect D10:2 D9:2
-(points 4 135 120 160 120 160 130 268 130))
+(points 4 159 90 200 90 200 120 268 120))
 (connect D10:3 D9:3
-(points 2 135 140 268 140))
+(points 4 159 110 190 110 190 130 268 130))
 (connect D10:4 D9:4
-(points 4 135 160 160 160 160 150 268 150))
+(points 4 159 130 180 130 180 140 268 140))
 (connect D10:5 D9:5
-(points 4 135 180 170 180 170 160 268 160))
+(points 2 159 150 268 150))
 (connect D22:0 D21:0
-(points 2 410 647 410 674))
+(points 2 520 560 520 612))
 (connect D9:1 D21:1
-(points 6 351 140 430 140 430 440 250 440 250 710 347 710))
+(points 4 351 130 430 130 430 630 475 630))
 (connect D22:1 D21:2
-(points 6 525 620 550 620 550 770 330 770 330 730 347 730))
+(points 6 540 550 560 550 560 580 460 580 460 650 475 650))
 (connect D8:0 D22:0
-(points 2 410 560 410 574))
+(points 2 520 530 520 540))
 (connect D21:0 D23:0
-(points 4 410 747 410 790 580 790 580 820))
+(points 6 520 668 520 690 580 690 580 590 750 590 750 610))
 (connect D21:1 D23:1
-(points 6 472 720 490 720 490 780 430 780 430 850 454 850))
+(points 2 564 640 624 640))
 (connect D25:1 D23:2
-(points 2 409 890 454 890))
+(points 6 219 240 420 240 420 700 610 700 610 680 624 680))
 (connect D24:1 D25:1
-(points 2 29 870 90 870))
+(points 2 -146 220 -100 220))
 (connect D10:1 D25:2
-(points 10 135 100 170 100 170 120 180 120 180 220 -120 220 -120 420 50 420 50
-890 90 890))
+(points 6 159 70 180 70 180 10 -120 10 -120 240 -100 240))
 (connect D10:2 D25:3
-(points 8 135 120 160 120 160 130 190 130 190 230 -170 230 -170 910 90 910))
+(points 6 159 90 190 90 190 0 -130 0 -130 260 -100 260))
 (connect D23:0 D26:0
-(points 2 580 901 580 974))
-(connect D28:0 D27:0
-(points 2 650 57 650 84))
-(connect D28:1 D27:2
-(points 6 765 30 790 30 790 180 570 180 570 140 587 140)))
-(stackingOrder 1 2 6 7 8 11 12 13 14 15 16 17 18 19 20 22 21 23 24 25 26 3 10 0
-5 4 9 28 27 29))
+(points 2 750 691 750 724)))
+(stackingOrder 1 2 12 13 14 15 16 17 18 19 20 23 5 9 22 26 8 6 25 0 24 21 7 3 27
+10 4 11))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
