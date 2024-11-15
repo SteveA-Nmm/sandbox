@@ -1,6 +1,6 @@
 (saveFormat "7.0")
-(date "Thu 07/Nov/2024 16:02:57 ")
-(veerev "9.32.17704.1")
+(date "Fri 15/Nov/2024 08:36:15 ")
+(veerev "9.33.1811.0201")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
@@ -4601,7 +4601,7 @@
 (properties
 (name "file name")
 (variableScope cont)
-(expr 1 "base+\"_\"+Model+\"_\"+SN"))
+(expr 1 "base+Model+\"_\"+SN"))
 (interface
 (input 1
 (name "base")
@@ -4963,7 +4963,7 @@
 (active detail)
 (detail
 (extent 1401 751)
-(anchorPt -159 -166)
+(anchorPt 533 77)
 (configuration
 (devCarrierFor 0
 (active icon)
