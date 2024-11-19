@@ -1,6 +1,6 @@
 (saveFormat "7.0")
-(date "Fri 15/Nov/2024 08:36:15 ")
-(veerev "9.33.1811.0201")
+(date "Tue 19/Nov/2024 14:51:05 ")
+(veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
@@ -4314,7 +4314,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -13.5 -8.5 4 linear))
+(range -12 -8.5 4 linear))
 (domain 0 800 4 linear)
 (trace 0 onScale 0
 (name "Trace1")
@@ -4577,7 +4577,7 @@
 (optional yes)))
 (implementation
 (attr iopath file write
-"C:\\Users\\test\\Documents\\GitHub\\sandbox\\ScalarFOM\\_CableLoss_234"
+"C:\\Users\\test\\Documents\\GitHub\\sandbox\\ScalarFOM\\CableLoss_234"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -4962,8 +4962,8 @@
 (wndState res)
 (active detail)
 (detail
-(extent 1401 751)
-(anchorPt 533 77)
+(extent 1589 751)
+(anchorPt 549 17)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -5211,7 +5211,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -1 1 4 linear))
+(range 9 13 4 linear))
 (domain 0 800 4 linear)
 (trace 0 onScale 0
 (name "Trace1")
@@ -5304,8 +5304,8 @@
 (points 6 324 590 380 590 380 600 830 600 830 700 869 700))
 (connect D30:0 D32:0
 (points 2 310 570 310 580)))
-(stackingOrder 1 2 10 11 12 13 14 15 16 17 18 7 23 0 22 19 25 8 4 3 6 27 5 28 29
-21 26 9 30 32 20 24 31))
+(stackingOrder 1 2 10 11 12 13 14 15 16 17 18 7 23 22 19 25 8 4 3 5 28 29 21 26
+9 30 32 20 24 31 6 0 27))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
