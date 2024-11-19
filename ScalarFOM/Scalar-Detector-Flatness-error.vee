@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Tue 19/Nov/2024 13:37:14 ")
+(date "Tue 19/Nov/2024 14:06:09 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -5047,7 +5047,7 @@
 (name "InputErrorCalc")
 (variableScope cont)
 (trigMode deg)
-(nextID 16)
+(nextID 17)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -5864,11 +5864,11 @@
 (name "Scalar dBm")
 (lock constraints))
 (input 3
-(name "Meter dBm")
+(name "Scalar(dBm - error)")
 (lock constraints)
 (optional yes))
 (input 4
-(name "Scalar-error")
+(name "Scalar error")
 (lock constraints)
 (optional yes)))
 (implementation
@@ -5880,6 +5880,12 @@
 (device 15 START25
 (properties
 (variableScope cont)))
+(device 16 NOTE
+(properties
+(variableScope cont)
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 The Meter graph, upper left green trace, should now match the\\par\r\nScalar (dBm - error) graph, lower right green trace. This shows\\par\r\nthat the scalar detector measurement, yellow trace, minus the calculated error equals the power sensor measurement. The scalar detector has about a 2dB roll off with inreasing frequency.\\par\r\n}\r\n"
+)))
 (configuration
 (connect D15:0 D5:0)
 (connect D5:0 D6:0)
@@ -5895,15 +5901,15 @@
 (connect D6:1 D13:2)
 (connect D7:2 D14:1)
 (connect D6:1 D14:2)
-(connect D10:1 D14:3)
-(connect D9:1 D14:4)))
+(connect D9:1 D14:3)
+(connect D10:1 D14:4)))
 (contextCarrier
 (wndOrigin 2 2)
 (wndState res)
 (active detail)
 (detail
 (extent 1524 863)
-(anchorPt -106 -17)
+(anchorPt -641 -42)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -6089,12 +6095,12 @@
 (lineType 12)
 (pointType 0))
 (trace 1 onScale 0
-(name "Meter dBm")
+(name "Scalar(dBm - error)")
 (traceColor "Green")
 (lineType 12)
 (pointType 0))
 (trace 2 onScale 0
-(name "Scalar-error")
+(name "Scalar error")
 (traceColor "Red")
 (lineType 12)
 (pointType 0))
@@ -6107,6 +6113,14 @@
 (extent 47 22))
 (title off)
 (pinCenter 390 180))
+(devCarrierFor 16
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 414 120)
+(editing enabled))
+(pinCenter 1240 820))
 (connect D15:0 D5:0
 (points 2 390 193 390 231))
 (connect D5:0 D6:0
@@ -6135,11 +6149,11 @@
 (points 6 509 510 650 510 650 400 1010 400 1010 480 1128 480))
 (connect D6:1 D14:2
 (points 4 505 380 1020 380 1020 550 1128 550))
-(connect D10:1 D14:3
-(points 8 451 570 590 570 590 740 1000 740 1000 680 1010 680 1010 620 1128 620))
-(connect D9:1 D14:4
-(points 4 565 760 1010 760 1010 690 1128 690)))
-(stackingOrder 0 1 2 3 4 5 6 7 8 9 10 15 14 13 11 12))))
+(connect D9:1 D14:3
+(points 4 565 760 1010 760 1010 620 1128 620))
+(connect D10:1 D14:4
+(points 6 451 570 590 570 590 740 1020 740 1020 690 1128 690)))
+(stackingOrder 0 1 2 3 4 5 6 7 8 9 10 15 13 11 12 14 16))))
 (device 14 TORECORD
 (properties
 (variableScope cont)
