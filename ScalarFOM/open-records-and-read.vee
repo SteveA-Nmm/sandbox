@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Tue 03/Dec/2024 11:49:40 ")
+(date "Tue 03/Dec/2024 12:51:24 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder M)
+(workspaceStackingOrder M.82 M)
 (sysconfig
 (iodevice "nwa"
 (type GPIB-VISA)
@@ -9498,7 +9498,8 @@
 (points 6 534 570 580 570 580 520 690 520 690 470 721 470))
 (connect D11:2 D24:12
 (points 4 534 610 550 610 550 480 721 480)))
-(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2))))
+(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2)
+)))
 (device 45 CONTEXT
 (properties
 (name "veeosInit")
@@ -10753,7 +10754,7 @@
 (name "SaveErrorFile")
 (variableScope cont)
 (trigMode deg)
-(nextID 18)
+(nextID 24)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (deviceList
@@ -10815,122 +10816,6 @@
 (name "Data")
 (tag "Data")
 (lock name constraints))))
-(device 5 CONTEXT
-(properties
-(name "addField")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_addField(rec,name,value)\\par\r\n    rec: Record - an existing record\\par\r\n    name: scalar Text - the name of a field that is to be added to the existing record\\par\r\n    value: scalar Any - the value of a field that is to be added to the existing record\\par\r\n    return: record - existing record with one additional field added\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nCreates a new field with specified name and value and adds it to an existing record.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "rec")
-(optional yes))
-(input 2
-(name "name")
-(optional yes))
-(input 3
-(name "value")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_addField")
-(variableScope cont)
-(callFunc "o_addField")
-(parmMode rev30))
-(interface
-(input 1
-(name "rec")
-(optional yes))
-(input 2
-(name "name")
-(optional yes))
-(input 3
-(name "value")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
-(device 6 CONTEXT
-(properties
-(name "addField")
-(description2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_addField(rec,name,value)\\par\r\n    rec: Record - an existing record\\par\r\n    name: scalar Text - the name of a field that is to be added to the existing record\\par\r\n    value: scalar Any - the value of a field that is to be added to the existing record\\par\r\n    return: record - existing record with one additional field added\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nCreates a new field with specified name and value and adds it to an existing record.\\par\r\n}\r\n"
-)
-(variableScope cont)
-(locked 1)
-(trigMode deg)
-(nextID 1)
-(popupTitleText "UserObject")
-(popupMoveable 1))
-(interface
-(input 1
-(name "rec")
-(optional yes))
-(input 2
-(name "name")
-(optional yes))
-(input 3
-(name "value")
-(optional yes))
-(output 1
-(type data)
-(name "X")
-(lock constraints)
-(optional yes)))
-(deviceList
-(device 0 CALL
-(properties
-(name "Call o_addField")
-(variableScope cont)
-(callFunc "o_addField")
-(parmMode rev30))
-(interface
-(input 1
-(name "rec")
-(optional yes))
-(input 2
-(name "name")
-(optional yes))
-(input 3
-(name "value")
-(optional yes))
-(output 1
-(name "X")
-(lock name constraints)
-(optional yes))))
-(configuration
-(connect I1:1 D0:1)
-(connect I2:1 D0:2)
-(connect I3:1 D0:3)
-(connect D0:1 O1:1)))
-(contextCarrier
-(active panel)
-(panel
-(extent 410 300)
-(drawGrid "on"))))
 (device 7 TODATASET
 (properties
 (variableScope cont))
@@ -10951,7 +10836,7 @@
 (optional yes)))
 (implementation
 (attr iopath file write
-"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_03_114815"
+"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_03_124847"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -10973,7 +10858,7 @@
 (data  ""))))
 (device 9 FORMULA
 (properties
-(name "Product Flatness Error File\r\n")
+(name "Product Flatness Error File\r\n name")
 (variableScope cont)
 (expr 1
 "dir+Product+\"_ScalarFlatnessError_\"+DetectorModel+\"-\"+DetectorSN+\"_\"+TimeStamp"
@@ -11125,34 +11010,166 @@
 (output 2
 (name "B")
 (optional yes))))
+(device 20 CONTEXT
+(properties
+(name "buildField")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_buildField(name,value)\\par\r\n    name: scalar Text - the name of a field that is to be created\\par\r\n    value: scalar Any - the value of a field that is to be created\\par\r\n    return: record - record with one field as specified\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nCreates a record with a single field with specified name and value.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "name")
+(optional yes))
+(input 2
+(name "value")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_buildField")
+(variableScope cont)
+(callFunc "o_buildField")
+(parmMode rev30))
+(interface
+(input 1
+(name "name")
+(optional yes))
+(input 2
+(name "value")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
 (configuration
-(connect D4:0 D5:0)
-(connect D4:1 D5:1)
-(connect D0:1 D5:2)
-(connect D1:1 D5:3)
-(connect D5:0 D6:0)
-(connect D5:1 D6:1)
-(connect D2:1 D6:2)
-(connect D3:1 D6:3)
-(connect D9:0 D7:0)
-(connect D11:1 D7:1)
-(connect D9:1 D7:2)
-(connect D14:0 D9:0)
-(connect D8:1 D9:1)
-(connect D10:1 D9:2)
-(connect D15:1 D9:3)
-(connect D15:2 D9:4)
-(connect D14:1 D9:5)
-(connect D6:0 D11:0)
-(connect D6:1 D11:1)
-(connect D12:1 D11:2)
-(connect D13:1 D11:3)
-(connect D11:0 D14:0)))
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect D0:1 O1:1)))
 (contextCarrier
+(active panel)
+(panel
+(extent 161 50)
+(drawGrid "on"))))
+(device 22 MERGEREC
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(requires
+(datatype Record))
+(lock constraints)
+(optional yes))
+(input 2
+(name "B")
+(requires
+(datatype Record))
+(lock constraints)
+(optional yes))
+(output 1
+(name "Record")
+(tag "Record"))))
+(device 23 CONTEXT
+(properties
+(name "addField")
+(description2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 Syntax\\par\r\n\\par\r\no_addField(rec,name,value)\\par\r\n    rec: Record - an existing record\\par\r\n    name: scalar Text - the name of a field that is to be added to the existing record\\par\r\n    value: scalar Any - the value of a field that is to be added to the existing record\\par\r\n    return: record - existing record with one additional field added\\par\r\n\\par\r\nUsage\\par\r\n\\par\r\nCreates a new field with specified name and value and adds it to an existing record.\\par\r\n}\r\n"
+)
+(variableScope cont)
+(locked 1)
+(trigMode deg)
+(nextID 1)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "rec")
+(optional yes))
+(input 2
+(name "name")
+(optional yes))
+(input 3
+(name "value")
+(optional yes))
+(output 1
+(type data)
+(name "X")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call o_addField")
+(variableScope cont)
+(callFunc "o_addField")
+(parmMode rev30))
+(interface
+(input 1
+(name "rec")
+(optional yes))
+(input 2
+(name "name")
+(optional yes))
+(input 3
+(name "value")
+(optional yes))
+(output 1
+(name "X")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I3:1 D0:3)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 410 300)
+(drawGrid "on"))))
+(configuration
+(connect D9:0 D4:0)
+(connect D7:0 D5:0)
+(connect D15:1 D5:1)
+(connect D7:1 D5:2)
+(connect D12:0 D7:0)
+(connect D6:1 D7:1)
+(connect D8:1 D7:2)
+(connect D13:1 D7:3)
+(connect D13:2 D7:4)
+(connect D12:1 D7:5)
+(connect D16:0 D9:0)
+(connect D16:1 D9:1)
+(connect D10:1 D9:2)
+(connect D11:1 D9:3)
+(connect D15:0 D12:0)
+(connect D0:1 D14:1)
+(connect D1:1 D14:2)
+(connect D4:0 D15:0)
+(connect D9:1 D15:1)
+(connect D4:1 D15:2)
+(connect D14:0 D16:0)
+(connect D14:1 D16:1)
+(connect D2:1 D16:2)
+(connect D3:1 D16:3)))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
 (active detail)
 (detail
 (extent 1132 647)
-(anchorPt 474 -308)
+(anchorPt 116 -123)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -11161,73 +11178,53 @@
 (extent 174 29))
 (pinCenter 190 170))
 (devCarrierFor 1
-(active open)
+(active icon)
 (icon
-(extent 150 0))
+(extent 150 15))
 (open
 (extent 191 51))
 (terminals on)
-(pinCenter 185 240))
+(pinCenter 180 200))
 (devCarrierFor 2
 (active open)
 (icon)
 (open
 (extent 174 29))
-(pinCenter 190 320))
+(pinCenter 190 280))
 (devCarrierFor 3
-(active open)
+(active icon)
 (icon
-(extent 225 0))
+(extent 199 15))
 (open
 (extent 331 61))
 (terminals on)
-(pinCenter 115 390))
+(pinCenter 180 310))
 (devCarrierFor 4
-(active open)
+(active icon)
 (icon
-(extent 78 0))
+(extent 78 15))
 (open
 (extent 73 51))
 (terminals on)
-(pinCenter 435 110))
-(devCarrierFor 5
-(active open)
-(icon
-(extent 52 34))
-(open
-(extent 44 66)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 450 230))
-(devCarrierFor 6
-(active open)
-(icon
-(extent 52 34))
-(open
-(extent 44 66)
-(carbonCopy))
-(terminals on)
-(titleBg "Light Beige")
-(pinCenter 450 340))
+(pinCenter 440 440))
 (devCarrierFor 7
 (active open)
 (icon)
 (open
 (extent 146 58))
 (terminals on)
-(pinCenter 460 830))
+(pinCenter 760 660))
 (devCarrierFor 8
 (active open)
 (icon
 (extent 21 0))
 (open
 (extent 294 26))
-(pinCenter -130 480))
+(pinCenter 60 580))
 (devCarrierFor 9
 (active icon)
 (icon
-(extent 160 54))
+(extent 199 54))
 (open
 (extent 714 206))
 (terminals on)
@@ -11237,8 +11234,8 @@
 (icon
 (extent 112 0))
 (open
-(extent 294 49))
-(pinCenter -120 540))
+(extent 294 26))
+(pinCenter 60 630))
 (devCarrierFor 11
 (active open)
 (icon
@@ -11248,19 +11245,19 @@
 (carbonCopy))
 (terminals on)
 (titleBg "Light Beige")
-(pinCenter 450 460))
+(pinCenter 450 390))
 (devCarrierFor 13
 (active open)
 (icon)
 (open
 (extent 174 29))
-(pinCenter 190 460))
+(pinCenter 190 380))
 (devCarrierFor 14
 (active open)
 (icon)
 (open
 (extent 174 29))
-(pinCenter 190 520))
+(pinCenter 190 430))
 (devCarrierFor 15
 (active icon)
 (icon
@@ -11268,59 +11265,92 @@
 (open
 (extent 176 51))
 (terminals on)
-(pinCenter 440 580))
+(pinCenter 440 590))
 (devCarrierFor 16
 (active open)
 (icon)
 (open
-(extent 145 65))
+(extent 234 55))
 (terminals on)
-(pinCenter -230 700))
-(connect D4:0 D5:0
-(points 2 440 138 440 176))
-(connect D4:1 D5:1
-(points 6 514 110 530 110 530 160 350 160 350 210 375 210))
-(connect D0:1 D5:2
-(points 4 279 170 340 170 340 230 375 230))
-(connect D1:1 D5:3
-(points 4 323 240 340 240 340 250 375 250))
-(connect D5:0 D6:0
-(points 2 440 265 440 286))
-(connect D5:1 D6:1
-(points 6 504 230 520 230 520 270 350 270 350 320 375 320))
-(connect D2:1 D6:2
-(points 4 279 320 340 320 340 340 375 340))
-(connect D3:1 D6:3
-(points 4 323 390 340 390 340 360 375 360))
-(connect D9:0 D7:0
-(points 2 440 709 440 780))
-(connect D11:1 D7:1
-(points 6 504 460 550 460 550 740 300 740 300 810 314 810))
-(connect D9:1 D7:2
-(points 6 522 680 540 680 540 730 290 730 290 850 314 850))
-(connect D14:0 D9:0
-(points 2 440 595 440 650))
-(connect D8:1 D9:1
-(points 4 19 480 60 480 60 660 357 660))
+(pinCenter 50 710))
+(devCarrierFor 20
+(active open)
+(icon
+(extent 59 25))
+(open
+(extent 64 46)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 450 190))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 84 51)
+(iconImage "build.icn"))
+(open
+(extent 30 50))
+(terminals on)
+(pinCenter 440 530))
+(devCarrierFor 23
+(active open)
+(icon
+(extent 52 34))
+(open
+(extent 44 66)
+(carbonCopy))
+(terminals on)
+(titleBg "Light Beige")
+(pinCenter 450 290))
+(connect D9:0 D4:0
+(points 2 440 425 440 430))
+(connect D7:0 D5:0
+(points 6 440 709 440 730 570 730 570 590 740 590 740 610))
+(connect D15:1 D5:1
+(points 4 484 530 560 530 560 640 614 640))
+(connect D7:1 D5:2
+(points 2 542 680 614 680))
+(connect D12:0 D7:0
+(points 2 440 605 440 650))
+(connect D6:1 D7:1
+(points 4 209 580 240 580 240 660 338 660))
+(connect D8:1 D7:2
+(points 4 209 630 230 630 230 670 338 670))
+(connect D13:1 D7:3
+(points 4 199 690 220 690 220 680 338 680))
+(connect D13:2 D7:4
+(points 4 199 730 230 730 230 690 338 690))
+(connect D12:1 D7:5
+(points 6 491 580 510 580 510 630 320 630 320 700 338 700))
+(connect D16:0 D9:0
+(points 2 440 325 440 336))
+(connect D16:1 D9:1
+(points 6 504 290 520 290 520 230 360 230 360 370 375 370))
 (connect D10:1 D9:2
-(points 4 29 540 50 540 50 670 357 670))
-(connect D15:1 D9:3
-(points 2 -125 680 357 680))
-(connect D15:2 D9:4
-(points 4 -125 720 -100 720 -100 690 357 690))
-(connect D14:1 D9:5
-(points 6 491 570 510 570 510 620 340 620 340 700 357 700))
-(connect D6:0 D11:0
-(points 2 440 375 440 406))
-(connect D6:1 D11:1
-(points 6 504 340 530 340 530 520 360 520 360 440 375 440))
-(connect D12:1 D11:2
-(points 2 279 460 375 460))
-(connect D13:1 D11:3
-(points 4 279 520 300 520 300 480 375 480))
-(connect D11:0 D14:0
-(points 2 440 495 440 565)))
-(stackingOrder 0 1 2 4 5 6 11 12 13 3 14 8 10 15 9 7))))
+(points 4 279 380 300 380 300 390 375 390))
+(connect D11:1 D9:3
+(points 4 279 430 300 430 300 410 375 410))
+(connect D15:0 D12:0
+(points 2 440 558 440 575))
+(connect D0:1 D14:1
+(points 4 279 170 300 170 300 180 365 180))
+(connect D1:1 D14:2
+(points 2 257 200 365 200))
+(connect D4:0 D15:0
+(points 2 440 450 440 502))
+(connect D9:1 D15:1
+(points 6 504 390 520 390 520 490 390 490 390 520 395 520))
+(connect D4:1 D15:2
+(points 6 481 440 490 440 490 470 380 470 380 540 395 540))
+(connect D14:0 D16:0
+(points 2 440 215 440 236))
+(connect D14:1 D16:1
+(points 6 514 190 530 190 530 130 350 130 350 270 375 270))
+(connect D2:1 D16:2
+(points 4 279 280 300 280 300 290 375 290))
+(connect D3:1 D16:3
+(points 2 282 310 375 310)))
+(stackingOrder 16 14 9 1 2 3 10 11 0 15 4 6 8 13 7 12 5))))
 (device 83 NOTE
 (properties
 (variableScope cont)
@@ -11375,7 +11405,7 @@
 (connect D16:0 D18:0))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 95 12)
+(wndOrigin 35 8)
 (wndState res)
 (active detail)
 (panel
@@ -11404,7 +11434,7 @@
 (extent 47 22)))
 (detail
 (extent 1513 678)
-(anchorPt 239 60)
+(anchorPt 193 -29)
 (configuration
 (devCarrierFor 13
 (active open)
@@ -11584,7 +11614,7 @@
 (points 2 110 233 110 284))
 (connect D16:0 D18:0
 (points 4 110 357 110 380 240 380 240 636)))
-(stackingOrder 0 4 6 5 9 13 8 1 12 17 18 3 10 16 7 19 11 2 14 15))
+(stackingOrder 0 4 6 5 9 13 8 1 12 17 18 3 10 16 19 11 2 15 14 7))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
