@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 05/Dec/2024 10:42:09 ")
+(date "Thu 05/Dec/2024 11:51:46 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder F2 M)
+(workspaceStackingOrder F2 M.82 M)
 (sysconfig
 (iodevice "nwa"
 (type GPIB-VISA)
@@ -9500,8 +9500,7 @@
 (points 6 534 570 580 570 580 520 690 520 690 470 721 470))
 (connect D11:2 D24:12
 (points 4 534 610 550 610 550 480 721 480)))
-(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2)
-)))
+(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2))))
 (device 45 CONTEXT
 (properties
 (name "veeosInit")
@@ -10394,10 +10393,12 @@
 (connect D2:1 D16:2)
 (connect D3:1 D16:3)))
 (contextCarrier
+(wndOrigin 37 175)
+(wndState res)
 (active detail)
 (detail
 (extent 1132 647)
-(anchorPt 114 -100)
+(anchorPt 115 -172)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -10450,13 +10451,13 @@
 (extent 294 26))
 (pinCenter 60 580))
 (devCarrierFor 9
-(active icon)
+(active open)
 (icon
 (extent 199 54))
 (open
 (extent 714 206))
 (terminals on)
-(pinCenter 440 680))
+(pinCenter 465 680))
 (devCarrierFor 10
 (active open)
 (icon
@@ -10533,23 +10534,23 @@
 (connect D9:0 D4:0
 (points 2 440 425 440 430))
 (connect D7:0 D5:0
-(points 6 440 709 440 730 570 730 570 590 740 590 740 610))
+(points 6 440 785 440 730 570 730 570 590 740 590 740 610))
 (connect D15:1 D5:1
 (points 4 484 530 560 530 560 640 614 640))
 (connect D7:1 D5:2
-(points 2 542 680 614 680))
+(points 4 874 680 578 680 578 680 614 680))
 (connect D12:0 D7:0
-(points 2 440 605 440 650))
+(points 4 440 605 440 627 440 627 440 556))
 (connect D6:1 D7:1
-(points 4 209 580 240 580 240 660 338 660))
+(points 4 209 580 240 580 240 600 5 600))
 (connect D8:1 D7:2
-(points 4 209 630 230 630 230 670 338 670))
+(points 4 209 630 230 630 230 640 5 640))
 (connect D13:1 D7:3
-(points 4 199 690 220 690 220 680 338 680))
+(points 4 199 690 220 690 220 680 5 680))
 (connect D13:2 D7:4
-(points 4 199 730 230 730 230 690 338 690))
+(points 4 199 730 230 730 230 720 5 720))
 (connect D12:1 D7:5
-(points 6 491 580 510 580 510 630 320 630 320 700 338 700))
+(points 6 491 580 510 580 510 630 320 630 320 760 5 760))
 (connect D16:0 D9:0
 (points 2 440 325 440 336))
 (connect D16:1 D9:1
@@ -10578,7 +10579,7 @@
 (points 4 279 280 300 280 300 290 375 290))
 (connect D3:1 D16:3
 (points 2 282 310 375 310)))
-(stackingOrder 16 14 9 1 2 3 10 11 0 15 4 8 5 12 6 7 13))))
+(stackingOrder 16 14 9 1 2 3 10 11 0 15 4 8 5 12 6 13 7))))
 (device 83 NOTE
 (properties
 (variableScope cont)
@@ -10587,9 +10588,10 @@
 )))
 (device 87 NOTE
 (properties
+(name "usage")
 (variableScope cont)
 (text2 1
-"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 input: Scalar Detector Response File\\par\r\nScalarDetector_85025D-US38013041_Response-TimeStamp\\par\r\n<ScalarDetector_DetectorModel-SerialNum_Response-TimeStamp>\\par\r\n\\par\r\noutput: Product Flatness Error File\\par\r\n<Product_ScalarFlatnessError_DetectorModel-SerialNum_TimeStamp>\\par\r\nN19-6457_ScalarFlatnessError_85025D-US38013041_TimeStamp\\par\r\n\\par\r\n\\par\r\n}\r\n"
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\fnil Arial;}{\\f2\\fnil\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;\\red139\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Generates a product specific frequency offset error correction record from a scalar detector response record.\\par\r\nThe frequency offset error is subtracted from normalize gain measurment from the scalar network analyzer.\\par\r\n\\par\r\ninput: Scalar Detector Response File\\par\r\nexample:\\par\r\nScalarDetector_85025D-US38013041_Response-TimeStamp\\par\r\n<ScalarDetector_DetectorModel-SerialNum_Response-TimeStamp>\\par\r\n\\par\r\noutput: Product Flatness Error File\\par\r\nexample:\\par\r\n<Product_ScalarFlatnessError_DetectorModel-SerialNum_TimeStamp>\\par\r\nN19-6457_ScalarFlatnessError_85025D-US38013041_TimeStamp\\par\r\n\\f1\\fs18 dir+Product+\\cf2 \"_ScalarFlatnessError_\"\\cf1 +DetectorModel+\\cf2 \"-\"\\cf1 +DetectorSN+\\cf2 \"_\"\\cf1 +TimeStamp\\f2\\\\\\f0\\fs24\\par\r\n\\par\r\n}\r\n"
 )))
 (device 88 FORMULA
 (properties
@@ -10674,7 +10676,7 @@
 (extent 47 22)))
 (detail
 (extent 1513 678)
-(anchorPt -91 -10)
+(anchorPt -242 25)
 (configuration
 (devCarrierFor 13
 (active open)
@@ -10767,13 +10769,14 @@
 (editing enabled))
 (pinCenter 260 130))
 (devCarrierFor 87
-(active open)
+(active icon)
 (icon
+(extent 68 51)
 (iconImage "notepad.icn"))
 (open
-(extent 534 280)
+(extent 784 280)
 (editing enabled))
-(pinCenter 910 190))
+(pinCenter 720 170))
 (devCarrierFor 88
 (active icon)
 (icon
@@ -10823,7 +10826,7 @@
 (points 2 510 540 510 554))
 (connect D10:0 D15:0
 (points 2 510 480 510 486)))
-(stackingOrder 0 4 1 2 14 10 7 3 9 6 11 13 8 15 5 12))
+(stackingOrder 0 4 1 2 14 7 3 9 6 11 13 8 15 5 10 12))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
