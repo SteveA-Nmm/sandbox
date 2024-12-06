@@ -1,0 +1,789 @@
+(saveFormat "7.0")
+(date "Fri 06/Dec/2024 10:22:57 ")
+(veerev "9.32.17704.1")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "PassThru"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::17::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::17::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp8757D"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::16::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::16::INSTR")
+(model ""
+(standard 488)))
+(iodevice "PowerMeter"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP8340B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HPE4419B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML248xA"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "ML243xA"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "newInstrument"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::12::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::12::INSTR")
+(model ""
+(standard 488)))
+(iodevice "HP438A"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::13::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::13::INSTR")
+(model ""
+(standard 488)))
+(iodevice "hp83650B"
+(type GPIB-VISA)
+(channel 130)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(ppAddr "GPIB0::19::INSTR")
+(model "")
+(eoiEnabled 1)
+(VISAddr "GPIB0::19::INSTR")
+(model ""
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 34)
+(popupTitleText "Untitled Main")
+(popupMoveable 1))
+(deviceList
+(UserFunctions
+(nextID 1)
+(context 0
+(properties
+(name "VisualCheckScalarError")
+(variableName VisualCheckScalarError)
+(variableScope glob)
+(trigMode deg)
+(nextID 12)
+(popupMoveable 1))
+(deviceList
+(device 0 FILESELECT
+(properties
+(name "ScalarDetectorResponseError")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory "C:\\VEE Calibration Files\\Scalar_Detector")
+(initialFile "ScalarDetector85025D-01482_Response-2024_12_05_142629")
+(dialogMode Reading))
+(interface
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 1 FROMDATASET
+(properties
+(variableScope cont)
+(readRecs one)
+(expr 1 "1"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(tag "records")))
+(implementation
+(attr iopath file read
+"C:\\VEE Calibration Files\\Scalar_Detector\\ScalarDetector85025D-01482_Response-2024_12_05_142629"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 2 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "DetectorModel")
+(optional yes))
+(output 4
+(name "DetectorSN")
+(optional yes))
+(output 5
+(name "Tech")
+(optional yes))
+(output 6
+(name "Bench")
+(optional yes))
+(output 7
+(name "Date")
+(optional yes))
+(output 8
+(name "Scalar")
+(optional yes))
+(output 9
+(name "Meter")
+(optional yes))))
+(device 3 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Freq")
+(optional yes))
+(output 3
+(name "dBm")
+(optional yes))
+(output 4
+(name "error")
+(optional yes))))
+(device 4 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Freq")
+(optional yes))
+(output 3
+(name "dBm")
+(optional yes))))
+(device 5 XYPLOT
+(properties
+(name "Scalar Network Analyzer")
+(variableScope cont))
+(interface
+(input 1
+(name "frequency")
+(lock constraints))
+(input 2
+(name "Scalar")
+(lock constraints))
+(input 3
+(name "Error")
+(lock constraints)
+(optional yes))
+(input 4
+(name "S-E")
+(lock constraints)
+(optional yes))
+(input 5
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(tracePin 3)
+(tracePin 4)
+(graphMode rectangular)
+(autoAutoX)))
+(device 6 XYPLOT
+(properties
+(name "Power Meter")
+(variableScope cont))
+(interface
+(input 1
+(name "frequency")
+(lock constraints))
+(input 2
+(name "Meter")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)
+(autoAutoX)))
+(device 7 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "B-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 8 LITERALCONSTANT
+(properties
+(name "Title")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Scalar Network Analyzer"))
+(initValue Text
+(data  ""))))
+(device 9 LITERALCONSTANT
+(properties
+(name "Title")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Power Meter"))
+(initValue Text
+(data  ""))))
+(device 10 START25
+(properties
+(variableScope cont)))
+(device 11 LABEL
+(properties
+(name "If the red traces look alike, it\'s good.")
+(variableScope cont)
+(labelValue "If the red traces look alike, it\'s good."))
+(implementation))
+(configuration
+(connect D10:0 D0:0)
+(connect D0:0 D1:0)
+(connect D0:1 D1:1)
+(connect D1:1 D2:1)
+(connect D2:8 D3:1)
+(connect D2:9 D4:1)
+(connect D3:2 D5:1)
+(connect D3:3 D5:2)
+(connect D3:4 D5:3)
+(connect D7:1 D5:4)
+(connect D8:1 D5:5)
+(connect D4:2 D6:1)
+(connect D4:3 D6:2)
+(connect D9:1 D6:3)
+(connect D3:4 D7:1)
+(connect D3:3 D7:2)))
+(contextCarrier
+(active panel)
+(panel
+(extent 643 329)
+(drawGrid "on")
+(widget 5 detail
+(relativeOrigin 0 0)
+(PID 0)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 0)
+(borderStyle flat)
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 2 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "Scalar")
+(traceColor "Med Yellow Green")
+(lineType 12)
+(pointType 0))
+(trace 1 onScale 0
+(name "Error")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(trace 2 onScale 0
+(name "S-E")
+(traceColor "Warning Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 6 detail
+(relativeOrigin 320 0)
+(PID 1)
+(title on)
+(titleBg "Light Blue Gray")
+(tabIndex 1)
+(borderStyle flat)
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 2 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "Meter")
+(traceColor "Warning Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 11 detail
+(relativeOrigin 230 300)
+(PID 2)
+(title off)
+(tabStop off)
+(tabIndex 2)
+(borderStyle none)
+(extent 206 27)
+(just l)))
+(detail
+(extent 1377 735)
+(anchorPt -19 -33)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 182 0))
+(open
+(extent 383 106))
+(terminals on)
+(pinCenter 280 230))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 206 109))
+(terminals on)
+(pinCenter 315 400))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 94)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 182))
+(terminals on)
+(pinCenter 530 400))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 95 51)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 90))
+(terminals on)
+(pinCenter 680 250))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 95 51)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 90))
+(terminals on)
+(pinCenter 680 440))
+(devCarrierFor 5
+(active open)
+(icon
+(extent 143 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 2 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "Scalar")
+(traceColor "Med Yellow Green")
+(lineType 12)
+(pointType 0))
+(trace 1 onScale 0
+(name "Error")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(trace 2 onScale 0
+(name "S-E")
+(traceColor "Warning Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 1110 220))
+(devCarrierFor 6
+(active open)
+(icon
+(extent 74 0)
+(iconImage "display.icn"))
+(open
+(extent 318 279)
+(displayMode 47)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dBm")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -12 2 4 linear))
+(domain 0 40000 4 linear)
+(trace 0 onScale 0
+(name "Meter")
+(traceColor "Warning Red")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 1110 530))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 830 270))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 27 15))
+(open
+(extent 174 29))
+(pinCenter 840 320))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 27 15))
+(open
+(extent 174 29))
+(pinCenter 840 620))
+(devCarrierFor 10
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 300 120))
+(devCarrierFor 11
+(active open)
+(icon
+(extent 213 0))
+(open
+(extent 206 27)
+(just l))
+(title off)
+(pinCenter 390 520))
+(connect D10:0 D0:0
+(points 2 300 133 300 156))
+(connect D0:0 D1:0
+(points 2 300 285 300 325))
+(connect D0:1 D1:1
+(points 6 544 200 560 200 560 310 120 310 120 400 139 400))
+(connect D1:1 D2:1
+(points 2 460 400 480 400))
+(connect D2:8 D3:1
+(points 4 580 430 600 430 600 250 630 250))
+(connect D2:9 D4:1
+(points 2 580 440 630 440))
+(connect D3:2 D5:1
+(points 4 730 240 750 240 750 120 878 120))
+(connect D3:3 D5:2
+(points 4 730 250 760 250 760 170 878 170))
+(connect D3:4 D5:3
+(points 4 730 260 780 260 780 220 878 220))
+(connect D7:1 D5:4
+(points 2 857 270 878 270))
+(connect D8:1 D5:5
+(points 2 856 320 878 320))
+(connect D4:2 D6:1
+(points 2 730 440 878 440))
+(connect D4:3 D6:2
+(points 4 730 450 750 450 750 530 878 530))
+(connect D9:1 D6:3
+(points 2 856 620 878 620))
+(connect D3:4 D7:1
+(points 2 730 260 802 260))
+(connect D3:3 D7:2
+(points 4 730 250 750 250 750 280 802 280)))
+(stackingOrder 0 1 2 3 4 5 6 7 8 9 10 11)))))
+(device 22 CONFIRM25
+(properties
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 24 CALL
+(properties
+(name "Call VisualCheckScalarError")
+(variableScope cont)
+(callFunc "VisualCheckScalarError")
+(parmMode rev30)))
+(device 27 START25
+(properties
+(variableScope cont)))
+(device 29 FORMULA
+(properties
+(name "ShowPanel(\"VisualCheckScalarError\")")
+(variableScope cont)
+(expr 1 "ShowPanel(\"VisualCheckScalarError\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D3:0 D0:0)
+(connect D2:0 D1:0)
+(connect D1:0 D3:0))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin -5 406)
+(wndState res)
+(active detail)
+(panel
+(extent 880 676)
+(drawGrid "on"))
+(detail
+(extent 1074 685)
+(anchorPt -274 -228)
+(configuration
+(devCarrierFor 22
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 640 510))
+(devCarrierFor 24
+(active icon)
+(icon
+(extent 171 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 640 360))
+(devCarrierFor 27
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 640 300))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 231 15))
+(open
+(extent 244 56))
+(terminals on)
+(pinCenter 640 400))
+(connect D3:0 D0:0
+(points 2 640 410 640 496))
+(connect D2:0 D1:0
+(points 2 640 313 640 350))
+(connect D1:0 D3:0
+(points 2 640 370 640 390)))
+(stackingOrder 0 2 1 3))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
