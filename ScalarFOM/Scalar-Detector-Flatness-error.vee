@@ -1,5 +1,5 @@
 (saveFormat "7.0")
-(date "Fri 06/Dec/2024 10:58:40 ")
+(date "Fri 06/Dec/2024 16:11:38 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
@@ -686,25 +686,25 @@
 (terminals on)
 (pinCenter 315 -90))
 (connect D2:2 D0:0
-(points 5 -5 -190 10 -190 10 30 310 30 320 41))
+(points 5 -5 -190 10 -190 10 30 310 30 310 40))
 (connect I1:1 D0:1
-(points 4 -197 -113 -120 -113 -120 120 75 120))
+(points 4 -197 -113 -120 -113 -120 120 55 120))
 (connect D0:0 D1:0
-(points 2 320 180 310 187))
+(points 2 310 180 315 186))
 (connect D3:1 D2:1
 (points 4 -185 -230 -160 -230 -160 -210 -56 -210))
 (connect D3:2 D2:2
 (points 2 -185 -190 -56 -190))
 (connect D2:1 D4:0
-(points 5 -5 -210 20 -210 20 -340 320 -340 320 -394))
+(points 5 -5 -210 20 -210 20 -340 320 -340 310 -395))
 (connect I1:1 D4:1
-(points 6 -197 -113 -120 -113 -120 -120 30 -120 30 -290 85 -290))
+(points 6 -197 -113 -120 -113 -120 -120 30 -120 30 -290 65 -290))
 (connect D6:1 D5:1
-(points 4 544 -90 580 -90 580 60 644 60))
+(points 4 554 -90 580 -90 580 60 644 60))
 (connect D1:1 D5:2
-(points 4 554 260 570 260 570 80 644 80))
+(points 4 564 260 570 260 570 80 644 80))
 (connect D4:0 D6:0
-(points 4 320 -205 320 -228 320 -228 320 -194))
+(points 4 310 -205 320 -228 320 -228 325 -195))
 (connect D5:1 O1:1
 (points 4 675 70 700 70 700 -113 756 -113)))
 (stackingOrder 2 5 3 1 0 6 4))))
@@ -781,7 +781,7 @@
 (device 17 MULTIDEV
 (properties
 (variableScope cont)
-(transactions 6 "WRITE \"hp8757D\" TEXT \"PT13\" EOL"
+(transactions 6 "/NOP/ WRITE \"hp8757D\" TEXT \"PT13\" EOL"
 "WRITE \"PassThru\" TEXT \"SNCFRQ A, \", RF_Freq, \"MHz\" EOL"
 "WRITE \"PassThru\" TEXT \"TR0\" EOL" "WRITE \"PassThru\" TEXT \"TR2 2\" EOL"
 "READ \"PassThru\" TEXT dBm STR" "WRITE \"PassThru\" TEXT \"TR3\" EOL"))
@@ -806,8 +806,8 @@
 (contextCarrier
 (active detail)
 (detail
-(extent 609 675)
-(anchorPt 106 18)
+(extent 890 860)
+(anchorPt 23 142)
 (configuration
 (devCarrierFor 1
 (active open)
@@ -824,7 +824,7 @@
 (open
 (extent 454 156))
 (terminals on)
-(pinCenter 240 100))
+(pinCenter 245 60))
 (devCarrierFor 10
 (active open)
 (icon
@@ -838,7 +838,7 @@
 (icon)
 (open
 (extent 121 25))
-(pinCenter 540 130))
+(pinCenter 630 60))
 (devCarrierFor 14
 (active open)
 (icon)
@@ -850,7 +850,7 @@
 (icon)
 (open
 (extent 121 25))
-(pinCenter 510 510))
+(pinCenter 620 510))
 (devCarrierFor 17
 (active open)
 (icon
@@ -861,25 +861,24 @@
 (terminals on)
 (pinCenter 245 510))
 (connect D1:0 D0:0
-(points 2 230 180 230 194))
+(points 2 230 140 230 193))
 (connect I1:1 D1:1
-(points 4 -106 319 -80 319 -80 100 -50 100))
+(points 4 -23 287 -410 287 -410 60 -65 60))
 (connect D0:0 D2:0
-(points 2 230 248 230 277))
+(points 2 230 248 230 276))
 (connect D1:1 D3:1
-(points 8 509 100 520 100 520 110 510 110 510 120 470 120 470 130 477 130))
+(points 2 524 60 567 60))
 (connect D2:1 D4:1
 (points 2 374 340 427 340))
 (connect D6:1 D5:1
-(points 4 514 510 377 510 377 510 447 510))
+(points 4 524 510 330 510 330 510 557 510))
 (connect D2:0 D6:0
-(points 4 230 384 230 433 230 433 235 411))
+(points 4 230 384 230 433 230 433 230 410))
 (connect I1:1 D6:1
-(points 4 -106 319 -50 319 -50 510 -45 510))
+(points 4 -23 287 -400 287 -400 510 -65 510))
 (connect D1:1 O1:1
-(points 10 509 100 520 100 520 110 510 110 510 160 530 160 530 200 480 200 480
-319 502 319)))
-(stackingOrder 3 5 0 2 4 6 1))))
+(points 6 524 60 550 60 550 100 570 100 570 287 866 287)))
+(stackingOrder 0 2 4 1 3 5 6))))
 (device 45 CONTEXT
 (properties
 (name "HP438A")
@@ -1067,7 +1066,7 @@
 (active detail)
 (detail
 (extent 673 719)
-(anchorPt 58 -45)
+(anchorPt -21 -16)
 (configuration
 (devCarrierFor 4
 (active open)
@@ -1160,8 +1159,8 @@
 (active open)
 (icon)
 (open
-(extent 94 26))
-(pinCenter 930 670))
+(extent 104 45))
+(pinCenter 950 670))
 (devCarrierFor 42
 (active icon)
 (icon
@@ -1227,9 +1226,9 @@
 (connect D15:1 D10:3
 (points 6 259 560 270 560 270 570 290 570 290 690 636 690))
 (connect D13:1 D12:1
-(points 2 861 670 880 670))
+(points 4 861 670 870 670 870 670 895 670))
 (connect D10:1 D13:1
-(points 2 723 670 798 670))
+(points 2 733 670 798 670))
 (connect D8:1 D14:0
 (points 3 255 400 400 400 400 545))
 (connect D4:1 D14:1
@@ -1244,8 +1243,8 @@
 (connect D5:1 D17:0
 (points 3 196 150 350 150 350 170))
 (connect D10:1 O1:1
-(points 4 723 670 780 670 780 404 614 404)))
-(stackingOrder 0 5 1 9 11 8 10 13 12 16 2 3 7 17 6 4 15 14))))
+(points 4 733 670 780 670 780 375 693 375)))
+(stackingOrder 0 5 1 9 11 8 10 13 16 2 3 7 17 6 4 14 12 15))))
 (context 3
 (properties
 (name "ML243xA")
@@ -1698,7 +1697,12 @@
 (properties
 (name "hp8757D ( @GPIB0::16::INSTR)")
 (variableScope cont)
-(transactions 2 "/NOP/ WRITE TEXT \"DM0\" EOL" "/NOP/ WRITE TEXT \"DM1\" EOL"))
+(transactions 4 "WRITE TEXT \"OI\" EOL" "READ TEXT x STR"
+"/NOP/ WRITE TEXT \"DM0\" EOL" "/NOP/ WRITE TEXT \"DM1\" EOL"))
+(interface
+(output 1
+(name "x")
+(optional yes)))
 (implementation
 (ioDevType 13)
 (iopath "hp8757D")))
@@ -1798,17 +1802,17 @@
 (contextCarrier
 (active detail)
 (detail
-(extent 970 638)
-(anchorPt -283 118)
+(extent 1025 688)
+(anchorPt -242 88)
 (configuration
 (devCarrierFor 0
 (active open)
 (icon
 (iconImage "io.icn"))
 (open
-(extent 224 86))
+(extent 224 145))
 (terminals on)
-(pinCenter 630 440))
+(pinCenter 630 470))
 (devCarrierFor 2
 (active open)
 (icon
@@ -1864,25 +1868,25 @@
 (extent 174 29))
 (pinCenter 850 20))
 (connect D1:0 D0:0
-(points 2 630 360 630 376))
+(points 4 630 360 630 367 630 367 630 376))
 (connect D2:0 D1:0
-(points 4 630 219 630 234 630 234 630 241))
+(points 4 630 219 630 234 630 234 630 240))
 (connect D5:1 D1:1
 (points 6 1035 30 1060 30 1060 -40 470 -40 470 310 485 310))
 (connect D4:0 D2:0
-(points 2 630 68 630 122))
+(points 2 635 68 630 121))
 (connect I1:1 D4:0
-(points 7 283 200 370 200 370 40 530 40 530 -30 630 -30 630 -6))
+(points 7 242 255 370 255 370 40 530 40 530 -30 630 -30 635 -7))
 (connect I1:1 D4:1
-(points 4 283 200 370 200 370 40 554 40))
+(points 4 242 255 370 255 370 40 554 40))
 (connect D7:1 D5:1
 (points 2 939 20 1004 20))
 (connect D6:1 D5:2
 (points 4 939 90 960 90 960 40 1004 40))
 (connect D4:2 D6:0
-(points 3 706 50 850 50 850 55))
+(points 3 716 50 850 50 850 54))
 (connect D4:1 D7:0
-(points 5 706 30 730 30 730 -30 850 -30 850 -15)))
+(points 5 716 30 730 30 730 -30 850 -30 850 -16)))
 (stackingOrder 0 1 4 7 5 6 3 2))))
 (context 5
 (properties
@@ -2580,7 +2584,7 @@
 (active detail)
 (detail
 (extent 840 807)
-(anchorPt -233 77)
+(anchorPt -274 93)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -2791,7 +2795,7 @@
 (points 4 781 550 802 550 802 550 824 550))
 (connect D14:0 D19:0
 (points 2 680 379 680 392)))
-(stackingOrder 5 10 11 0 7 13 9 18 17 8 3 1 2 4 15 12 16 19 6 14))))
+(stackingOrder 5 10 11 0 7 13 9 18 17 8 3 1 2 4 15 16 19 6 14 12))))
 (context 6
 (properties
 (name "UserInputsDisplay")
@@ -5568,7 +5572,7 @@
 (active detail)
 (detail
 (extent 1071 762)
-(anchorPt 105 22)
+(anchorPt 91 -254)
 (configuration
 (devCarrierFor 2
 (active open)
@@ -5665,29 +5669,29 @@
 (extent 71 31))
 (pinCenter 440 550))
 (connect D1:0 D0:0
-(points 4 440 149 440 179 440 179 440 171))
+(points 4 440 149 440 179 440 179 440 170))
 (connect I1:1 D0:1
-(points 4 -105 108 -90 108 -90 220 290 220))
+(points 4 -91 384 -90 384 -90 220 290 220))
 (connect I2:1 D0:2
-(points 4 -105 358 -90 358 -90 260 290 260))
+(points 4 -91 634 -90 634 -90 260 290 260))
 (connect I3:1 D0:3
-(points 4 -105 608 -80 608 -80 300 290 300))
+(points 4 -91 884 -80 884 -80 300 290 300))
 (connect D5:0 D1:0
-(points 2 440 43 440 52))
+(points 2 440 43 440 51))
 (connect D8:1 D2:1
 (points 4 614 650 609 650 609 650 635 650))
 (connect D4:1 D3:1
-(points 6 904 730 920 730 920 580 600 580 600 930 619 930))
+(points 6 914 730 920 730 920 580 600 580 600 930 619 930))
 (connect D2:0 D4:0
-(points 2 770 677 770 684))
+(points 2 775 677 775 683))
 (connect D8:0 D6:0
-(points 4 440 700 440 705 440 705 440 711))
+(points 4 440 700 440 705 440 705 440 710))
 (connect D0:0 D7:0
-(points 2 440 330 440 336))
+(points 2 440 330 440 335))
 (connect D9:0 D8:0
-(points 4 440 568 440 574 440 574 440 581))
+(points 4 440 568 440 574 440 574 440 580))
 (connect D7:0 D9:0
-(points 4 440 485 440 509 440 509 440 514)))
+(points 4 440 485 440 509 440 509 440 513)))
 (stackingOrder 3 5 6 2 4 9 7 1 8 0))))
 (device 10 MESSAGEBOX
 (properties
@@ -5906,7 +5910,7 @@
 (open
 (extent 145 50))
 (terminals on)
-(pinCenter 180 420))
+(pinCenter 175 420))
 (devCarrierFor 3
 (active icon)
 (icon
@@ -5987,13 +5991,13 @@
 (connect D12:0 D0:0
 (points 2 190 51 190 89))
 (connect D0:0 D1:0
-(points 4 190 111 190 135 190 135 190 144))
+(points 2 190 111 190 143))
 (connect D0:1 D1:1
-(points 8 242 100 330 100 330 160 300 160 300 220 90 220 90 180 108 180))
+(points 6 242 100 260 100 260 70 90 70 90 180 108 180))
 (connect D1:0 D2:0
-(points 2 190 198 190 374))
+(points 2 190 198 190 373))
 (connect D6:1 D2:1
-(points 6 439 290 460 290 460 340 60 340 60 420 75 420))
+(points 6 439 290 460 290 460 340 50 340 50 420 70 420))
 (connect D4:0 D3:0
 (points 2 410 220 410 230))
 (connect D5:0 D4:0
@@ -6018,7 +6022,7 @@
 (points 2 94 480 120 480))
 (connect D7:0 D12:0
 (points 2 190 0 190 29)))
-(stackingOrder 10 9 2 6 1 8 11 0 3 12 7 5 4))))
+(stackingOrder 10 9 6 1 11 0 5 4 3 2 8 12 7))))
 (device 13 CONTEXT
 (properties
 (name "InputErrorCalc")
@@ -6888,9 +6892,9 @@
 (connect D9:1 D14:4))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 344 117)
+(wndOrigin 2 2)
 (wndState res)
-(active panel)
+(active detail)
 (panel
 (extent 640 329)
 (drawGrid "on")
@@ -6965,7 +6969,7 @@
 (just l)))
 (detail
 (extent 1524 863)
-(anchorPt -17 -196)
+(anchorPt -58 -32)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -7189,37 +7193,37 @@
 (title off)
 (pinCenter 760 830))
 (connect D15:0 D5:0
-(points 2 390 193 390 231))
+(points 2 390 193 395 230))
 (connect D5:0 D6:0
-(points 2 390 330 390 334))
+(points 2 395 330 395 333))
 (connect D6:0 D7:0
-(points 2 390 407 390 431))
+(points 2 395 407 390 430))
 (connect D10:0 D8:0
-(points 2 390 580 390 604))
+(points 2 390 580 395 603))
 (connect D8:0 D9:0
-(points 2 390 677 390 701))
+(points 2 395 677 395 700))
 (connect D7:0 D10:0
 (points 2 390 530 390 560))
 (connect D7:1 D11:1
-(points 4 509 470 530 470 530 150 613 150))
+(points 4 509 470 530 470 530 150 593 150))
 (connect D5:1 D11:2
-(points 4 504 290 520 290 520 290 613 290))
+(points 4 514 290 520 290 520 290 593 290))
 (connect D7:2 D12:1
 (points 2 509 510 668 510))
 (connect D8:1 D12:2
-(points 2 505 650 668 650))
+(points 2 515 650 668 650))
 (connect D7:2 D13:1
 (points 6 509 510 650 510 650 400 1010 400 1010 150 1128 150))
 (connect D6:1 D13:2
-(points 4 505 380 1020 380 1020 290 1128 290))
+(points 4 515 380 1020 380 1020 290 1128 290))
 (connect D7:2 D14:1
-(points 8 509 510 650 510 650 400 1010 400 1010 480 1100 480 1100 470 1073 470))
+(points 8 509 510 650 510 650 400 1010 400 1010 480 1100 480 1100 470 1043 470))
 (connect D6:1 D14:2
-(points 4 505 380 1020 380 1020 540 1073 540))
+(points 4 515 380 1020 380 1020 540 1043 540))
 (connect D10:1 D14:3
-(points 6 451 570 590 570 590 740 1020 740 1020 610 1073 610))
+(points 6 451 570 590 570 590 740 1020 740 1020 610 1043 610))
 (connect D9:1 D14:4
-(points 4 565 760 1030 760 1030 680 1073 680)))
+(points 4 575 760 1030 760 1030 680 1043 680)))
 (stackingOrder 0 1 2 3 4 5 6 7 8 9 15 12 13 11 16 14 17 10))))
 (device 16 FORMULA
 (properties
@@ -7372,7 +7376,7 @@
 (optional yes)))
 (implementation
 (attr iopath file write
-"C:\\VEE Calibration Files\\Scalar_Detector\\ScalarDetector85025D-foo_Response-2024_12_05_145954"
+"C:\\VEE Calibration Files\\Scalar_Detector\\ScalarDetector85025D-US38013041_Response-2024_12_06_160737"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -7597,21 +7601,21 @@
 (connect D5:1 D4:1
 (points 2 -61 270 -21 270))
 (connect D6:1 D4:2
-(points 6 -111 0 -90 0 -90 20 -30 20 -30 280 -21 280))
+(points 6 -101 0 -90 0 -90 20 -30 20 -30 280 -21 280))
 (connect D6:2 D4:3
-(points 4 -111 30 -50 30 -50 290 -21 290))
+(points 4 -101 30 -50 30 -50 290 -21 290))
 (connect D3:1 D4:4
 (points 4 -59 -110 -40 -110 -40 300 -21 300))
 (connect D3:0 D7:0
 (points 4 -110 -85 -110 -60 110 -60 110 10))
 (connect D6:1 D7:1
-(points 4 -111 0 -90 0 -90 20 68 20))
+(points 4 -101 0 -90 0 -90 20 68 20))
 (connect D6:2 D7:2
-(points 2 -111 30 68 30))
+(points 2 -101 30 68 30))
 (connect D6:3 D7:3
-(points 4 -111 60 -90 60 -90 40 68 40))
+(points 4 -101 60 -90 60 -90 40 68 40))
 (connect D6:4 D7:4
-(points 4 -111 90 -80 90 -80 50 68 50))
+(points 4 -101 90 -80 90 -80 50 68 50))
 (connect D3:1 D7:5
 (points 4 -59 -110 -40 -110 -40 60 68 60)))
 (stackingOrder 5 7 3 0 2 6 4 8 1))))
@@ -8114,8 +8118,8 @@
 (wndState res)
 (active detail)
 (detail
-(extent 1401 706)
-(anchorPt 692 99)
+(extent 1717 860)
+(anchorPt 262 113)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -8349,19 +8353,19 @@
 (connect D29:0 D3:0
 (points 2 320 310 320 320))
 (connect D4:1 D3:1
-(points 4 149 320 170 320 170 330 219 330))
+(points 4 159 320 170 320 170 330 219 330))
 (connect D4:2 D3:2
-(points 4 149 350 170 350 170 340 219 340))
+(points 4 159 350 170 350 170 340 219 340))
 (connect D4:3 D3:3
-(points 4 149 380 180 380 180 350 219 350))
+(points 4 159 380 180 380 180 350 219 350))
 (connect D3:0 D5:0
 (points 2 320 359 320 370))
 (connect D4:1 D5:1
-(points 6 149 320 170 320 170 330 200 330 200 380 260 380))
+(points 6 159 320 170 320 170 330 200 330 200 380 260 380))
 (connect D4:2 D5:2
-(points 4 149 350 170 350 170 390 260 390))
+(points 4 159 350 170 350 170 390 260 390))
 (connect D4:4 D5:3
-(points 4 149 410 170 410 170 400 260 400))
+(points 4 159 410 170 410 170 400 260 400))
 (connect D5:0 D6:0
 (points 2 320 409 320 425))
 (connect D6:1 D7:0
@@ -8369,9 +8373,9 @@
 (connect D7:0 D8:0
 (points 2 520 500 520 510))
 (connect D22:0 D19:0
-(points 2 520 589 520 604))
+(points 2 520 589 520 603))
 (connect D24:1 D21:0
-(points 3 635 440 740 440 740 494))
+(points 3 635 440 740 440 740 493))
 (connect D8:0 D22:0
 (points 2 520 530 520 550))
 (connect D28:0 D23:0
@@ -8383,13 +8387,13 @@
 (connect D26:1 D25:1
 (points 2 -7 770 25 770))
 (connect D27:0 D26:0
-(points 2 -150 675 -150 712))
+(points 2 -150 675 -150 711))
 (connect D0:0 D28:0
 (points 2 260 80 260 120))
 (connect D23:1 D29:0
 (points 3 303 160 320 160 320 290)))
-(stackingOrder 2 10 11 12 13 14 15 16 17 18 1 19 6 21 24 26 27 25 9 29 23 3 5 7
-22 8 4 30 20 0 28))
+(stackingOrder 2 10 11 12 13 14 15 16 17 18 1 19 6 21 24 26 27 25 9 29 23 3 4 30
+20 0 28 22 8 5 7))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
