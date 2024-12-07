@@ -1,0 +1,12 @@
+reset all
+
+source
+1G - 40G
+sweep time 500mSec
+power level 0dBm
+
+hp8757
+system num pts 801
+display measure  (very important it's not meas-mem, leftovers)
+autoscale
+cursor on

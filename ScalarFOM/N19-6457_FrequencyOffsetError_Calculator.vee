@@ -1,11 +1,11 @@
 (saveFormat "7.0")
-(date "Thu 05/Dec/2024 11:51:46 ")
+(date "Fri 06/Dec/2024 17:40:36 ")
 (veerev "9.32.17704.1")
 (platform "PC")
 (execMode v6)
 (prefExecMode v9)
 (filterNAN 0)
-(workspaceStackingOrder F2 M.82 M)
+(workspaceStackingOrder M M.98)
 (sysconfig
 (iodevice "nwa"
 (type GPIB-VISA)
@@ -348,13 +348,13 @@
 (variableName Main)
 (variableScope glob)
 (trigMode deg)
-(nextID 92)
+(nextID 102)
 (popupTitleText "Untitled")
 (popupMoveable 1)
 (deleteGlobals 0))
 (deviceList
 (UserFunctions
-(nextID 9)
+(nextID 10)
 (context 1
 (properties
 (name "B1errorTotal")
@@ -2896,7 +2896,7 @@
 (variableName dothiswork)
 (variableScope glob)
 (trigMode deg)
-(nextID 12)
+(nextID 13)
 (popupTitleText "UserObject")
 (popupMoveable 1))
 (interface
@@ -3355,7 +3355,7 @@
 (markerColor "White")))
 (detail
 (extent 707 755)
-(anchorPt 53 13)
+(anchorPt 242 162)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -3551,51 +3551,51 @@
 (markerColor "White"))
 (pinCenter 290 1550))
 (connect D1:0 D0:0
-(points 6 100 327 100 350 50 350 50 40 310 40 310 60))
+(points 6 100 327 100 350 50 350 50 40 310 40 310 59))
 (connect I2:1 D0:1
-(points 4 -53 94 20 94 20 130 150 130))
+(points 4 -242 -55 20 -55 20 130 150 130))
 (connect I1:1 D0:2
-(points 4 -53 34 10 34 10 220 150 220))
+(points 4 -242 -115 10 -115 10 220 150 220))
 (connect D1:1 D0:3
 (points 2 134 310 150 310))
 (connect D3:0 D2:0
-(points 6 100 657 100 680 50 680 50 380 310 380 310 390))
+(points 6 100 657 100 680 50 680 50 380 310 380 310 389))
 (connect I4:1 D2:1
-(points 6 -53 214 10 214 10 710 -10 710 -10 460 150 460))
+(points 6 -242 65 10 65 10 710 -10 710 -10 460 150 460))
 (connect I3:1 D2:2
-(points 4 -53 154 10 154 10 550 150 550))
+(points 4 -242 5 10 5 10 550 150 550))
 (connect D3:1 D2:3
 (points 2 134 640 150 640))
 (connect D4:0 D5:0
-(points 6 90 1317 90 1340 40 1340 40 1040 300 1040 300 1050))
+(points 6 90 1317 90 1340 40 1340 40 1040 300 1040 300 1049))
 (connect I8:1 D5:1
-(points 4 -53 454 -560 454 -560 1120 140 1120))
+(points 4 -242 305 -560 305 -560 1120 140 1120))
 (connect I7:1 D5:2
-(points 4 -53 394 -570 394 -570 1210 140 1210))
+(points 4 -242 245 -570 245 -570 1210 140 1210))
 (connect D4:1 D5:3
 (points 2 124 1300 140 1300))
 (connect D6:0 D7:0
-(points 6 90 987 90 1010 40 1010 40 700 300 700 300 720))
+(points 6 90 987 90 1010 40 1010 40 700 300 700 300 719))
 (connect I6:1 D7:1
-(points 4 -53 334 -560 334 -560 790 99 790))
+(points 4 -242 185 -560 185 -560 790 99 790))
 (connect I5:1 D7:2
-(points 4 -53 274 -570 274 -570 880 99 880))
+(points 4 -242 125 -570 125 -570 880 99 880))
 (connect D6:1 D7:3
 (points 4 124 970 132 970 132 970 99 970))
 (connect D8:0 D9:0
-(points 6 80 1987 80 2010 30 2010 30 1710 290 1710 290 1720))
+(points 6 80 1987 80 2010 30 2010 30 1710 290 1710 290 1719))
 (connect I12:1 D9:1
-(points 4 -53 694 -620 694 -620 1790 130 1790))
+(points 4 -242 545 -620 545 -620 1790 130 1790))
 (connect I11:1 D9:2
-(points 4 -53 634 -630 634 -630 1880 130 1880))
+(points 4 -242 485 -630 485 -630 1880 130 1880))
 (connect D8:1 D9:3
 (points 2 114 1970 130 1970))
 (connect D10:0 D11:0
-(points 6 80 1657 80 1680 30 1680 30 1370 290 1370 290 1390))
+(points 6 80 1657 80 1680 30 1680 30 1370 290 1370 290 1389))
 (connect I10:1 D11:1
-(points 4 -53 574 -640 574 -640 1460 130 1460))
+(points 4 -242 425 -640 425 -640 1460 130 1460))
 (connect I9:1 D11:2
-(points 4 -53 514 -650 514 -650 1550 130 1550))
+(points 4 -242 365 -650 365 -650 1550 130 1550))
 (connect D10:1 D11:3
 (points 2 114 1640 130 1640)))
 (stackingOrder 1 3 2 0 4 6 8 10 7 5 11 9))))
@@ -3788,7 +3788,7 @@
 (contextCarrier
 (active panel)
 (panel
-(extent 775 159)
+(extent 835 125)
 (drawGrid "on")
 (widget 1 detail
 (relativeOrigin 0 50)
@@ -3798,7 +3798,7 @@
 (tabStop off)
 (tabIndex 0)
 (borderStyle flat)
-(extent 726 22))
+(extent 826 27))
 (widget 2 detail
 (relativeOrigin 0 0)
 (PID 1)
@@ -3807,7 +3807,7 @@
 (tabStop off)
 (tabIndex 1)
 (borderStyle flat)
-(extent 596 22)))
+(extent 826 22)))
 (detail
 (extent 979 233)
 (anchorPt 12 26)
@@ -3843,9 +3843,9 @@
 (terminals on)
 (pinCenter 175 20))
 (connect D0:1 D1:1
-(points 2 313 120 350 120))
+(points 2 323 120 350 120))
 (connect D3:1 D2:1
-(points 2 313 20 333 20)))
+(points 2 323 20 333 20)))
 (stackingOrder 1 3 2 0))))
 (context 7
 (properties
@@ -4617,6 +4617,7 @@
 (relativeOrigin 0 0)
 (PID 0)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 0)
 (borderStyle flat)
@@ -4643,6 +4644,7 @@
 (relativeOrigin 320 0)
 (PID 1)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 1)
 (borderStyle flat)
@@ -4669,6 +4671,7 @@
 (relativeOrigin 640 0)
 (PID 2)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 2)
 (borderStyle flat)
@@ -4695,6 +4698,7 @@
 (relativeOrigin 0 298)
 (PID 3)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 3)
 (borderStyle flat)
@@ -4721,6 +4725,7 @@
 (relativeOrigin 320 298)
 (PID 4)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 4)
 (borderStyle flat)
@@ -4747,6 +4752,7 @@
 (relativeOrigin 640 298)
 (PID 5)
 (title on)
+(titleBg "Light Blue Gray")
 (tabStop off)
 (tabIndex 5)
 (borderStyle flat)
@@ -4967,7 +4973,7 @@
 (markerColor "White"))
 (pinCenter 290 1550))
 (connect D1:0 D0:0
-(points 6 100 327 100 350 50 350 50 40 310 40 310 60))
+(points 6 100 327 100 350 50 350 50 40 310 40 310 59))
 (connect I2:1 D0:1
 (points 4 -179 1239 20 1239 20 130 150 130))
 (connect I1:1 D0:2
@@ -4975,7 +4981,7 @@
 (connect D1:1 D0:3
 (points 2 134 310 150 310))
 (connect D3:0 D2:0
-(points 6 100 657 100 680 50 680 50 380 310 380 310 390))
+(points 6 100 657 100 680 50 680 50 380 310 380 310 389))
 (connect I4:1 D2:1
 (points 6 -179 1359 10 1359 10 710 -10 710 -10 460 150 460))
 (connect I3:1 D2:2
@@ -4983,7 +4989,7 @@
 (connect D3:1 D2:3
 (points 2 134 640 150 640))
 (connect D4:0 D5:0
-(points 6 90 1317 90 1340 40 1340 40 1040 300 1040 300 1050))
+(points 6 90 1317 90 1340 40 1340 40 1040 300 1040 300 1049))
 (connect I8:1 D5:1
 (points 4 -179 1599 -560 1599 -560 1120 140 1120))
 (connect I7:1 D5:2
@@ -4991,7 +4997,7 @@
 (connect D4:1 D5:3
 (points 2 124 1300 140 1300))
 (connect D6:0 D7:0
-(points 6 90 987 90 1010 40 1010 40 700 300 700 300 720))
+(points 6 90 987 90 1010 40 1010 40 700 300 700 300 719))
 (connect I6:1 D7:1
 (points 4 -179 1479 -560 1479 -560 790 99 790))
 (connect I5:1 D7:2
@@ -4999,7 +5005,7 @@
 (connect D6:1 D7:3
 (points 4 124 970 132 970 132 970 99 970))
 (connect D8:0 D9:0
-(points 6 80 1987 80 2010 30 2010 30 1710 290 1710 290 1720))
+(points 6 80 1987 80 2010 30 2010 30 1710 290 1710 290 1719))
 (connect I12:1 D9:1
 (points 4 -179 1839 -620 1839 -620 1790 130 1790))
 (connect I11:1 D9:2
@@ -5007,7 +5013,7 @@
 (connect D8:1 D9:3
 (points 2 114 1970 130 1970))
 (connect D10:0 D11:0
-(points 6 80 1657 80 1680 30 1680 30 1370 290 1370 290 1390))
+(points 6 80 1657 80 1680 30 1680 30 1370 290 1370 290 1389))
 (connect I10:1 D11:1
 (points 4 -179 1719 -640 1719 -640 1460 130 1460))
 (connect I9:1 D11:2
@@ -5029,15 +5035,13 @@
 (connect I11:1 D0:11)
 (connect I12:1 D0:12)))
 (contextCarrier
-(wndOrigin 79 107)
-(wndState res)
 (active detail)
 (panel
 (extent 471 440)
 (drawGrid "on"))
 (detail
 (extent 215 324)
-(anchorPt 1 0)
+(anchorPt 18 8)
 (configuration
 (devCarrierFor 0
 (active icon)
@@ -5049,29 +5053,738 @@
 (terminals on)
 (pinCenter 110 160))
 (connect I1:1 D0:1
-(points 4 -1 51 50 51 50 100 79 100))
+(points 4 -18 43 50 43 50 100 79 100))
 (connect I2:1 D0:2
-(points 4 -1 71 40 71 40 110 79 110))
+(points 4 -18 63 40 63 40 110 79 110))
 (connect I3:1 D0:3
-(points 4 -1 91 30 91 30 120 79 120))
+(points 4 -18 83 30 83 30 120 79 120))
 (connect I4:1 D0:4
-(points 4 -1 111 20 111 20 130 79 130))
+(points 4 -18 103 20 103 20 130 79 130))
 (connect I5:1 D0:5
-(points 4 -1 131 10 131 10 140 79 140))
+(points 4 -18 123 10 123 10 140 79 140))
 (connect I6:1 D0:6
-(points 4 -1 151 39 151 39 150 79 150))
+(points 4 -18 143 39 143 39 150 79 150))
 (connect I7:1 D0:7
-(points 4 -1 171 10 171 10 160 79 160))
+(points 4 -18 163 10 163 10 160 79 160))
 (connect I8:1 D0:8
-(points 4 -1 191 20 191 20 170 79 170))
+(points 4 -18 183 20 183 20 170 79 170))
 (connect I9:1 D0:9
-(points 4 -1 211 30 211 30 180 79 180))
+(points 4 -18 203 30 203 30 180 79 180))
 (connect I10:1 D0:10
-(points 4 -1 231 40 231 40 190 79 190))
+(points 4 -18 223 40 223 40 190 79 190))
 (connect I11:1 D0:11
-(points 4 -1 251 50 251 50 200 79 200))
+(points 4 -18 243 50 243 50 200 79 200))
 (connect I12:1 D0:12
-(points 4 -1 271 60 271 60 210 79 210)))))))
+(points 4 -18 263 60 263 60 210 79 210))))))
+(context 9
+(properties
+(name "XvsYplotsViewer")
+(variableName XvsYplotsViewer)
+(variableScope glob)
+(trigMode deg)
+(nextID 25)
+(popupTitleText "UserFunction")
+(popupMoveable 1))
+(interface
+(input 1
+(name "B1y")
+(optional yes))
+(input 2
+(name "B1x")
+(optional yes))
+(input 3
+(name "B2y")
+(optional yes))
+(input 4
+(name "B2x")
+(optional yes))
+(input 5
+(name "B3y")
+(optional yes))
+(input 6
+(name "B3x")
+(optional yes))
+(input 7
+(name "B4y")
+(optional yes))
+(input 8
+(name "B4x")
+(optional yes))
+(input 9
+(name "B5y")
+(optional yes))
+(input 10
+(name "B5x")
+(optional yes))
+(input 11
+(name "B6y")
+(optional yes))
+(input 12
+(name "B6x")
+(optional yes)))
+(deviceList
+(device 23 XYPLOT
+(properties
+(name "B5")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 20 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B5"))
+(initValue Text
+(data  ""))))
+(device 24 XYPLOT
+(properties
+(name "B6")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 19 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B6"))
+(initValue Text
+(data  ""))))
+(device 21 XYPLOT
+(properties
+(name "B3")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 18 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B3"))
+(initValue Text
+(data  ""))))
+(device 22 XYPLOT
+(properties
+(name "B4")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 17 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B4"))
+(initValue Text
+(data  ""))))
+(device 14 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B2"))
+(initValue Text
+(data  ""))))
+(device 15 XYPLOT
+(properties
+(name "B2")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 13 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "B1"))
+(initValue Text
+(data  ""))))
+(device 16 XYPLOT
+(properties
+(name "B1")
+(variableScope cont))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Title")
+(tag "Title")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(configuration
+(connect D1:0 D0:0)
+(connect I10:1 D0:1)
+(connect I9:1 D0:2)
+(connect D1:1 D0:3)
+(connect D3:0 D2:0)
+(connect I12:1 D2:1)
+(connect I11:1 D2:2)
+(connect D3:1 D2:3)
+(connect D5:0 D4:0)
+(connect I6:1 D4:1)
+(connect I5:1 D4:2)
+(connect D5:1 D4:3)
+(connect D7:0 D6:0)
+(connect I8:1 D6:1)
+(connect I7:1 D6:2)
+(connect D7:1 D6:3)
+(connect D8:0 D9:0)
+(connect I4:1 D9:1)
+(connect I3:1 D9:2)
+(connect D8:1 D9:3)
+(connect D10:0 D11:0)
+(connect I2:1 D11:1)
+(connect I1:1 D11:2)
+(connect D10:1 D11:3))
+(ShowOnExecPanel
+(relativeOrigin 140 64)))
+(contextCarrier
+(active panel)
+(panel
+(extent 1036 721)
+(drawGrid "on")
+(widget 11 detail
+(relativeOrigin 0 0)
+(PID 0)
+(title on)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 4000 9000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 9 detail
+(relativeOrigin 320 0)
+(PID 1)
+(title on)
+(tabStop off)
+(tabIndex 1)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 5500 9500 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 4 detail
+(relativeOrigin 640 0)
+(PID 2)
+(title on)
+(tabStop off)
+(tabIndex 2)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 6000 11000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 6 detail
+(relativeOrigin 0 320)
+(PID 3)
+(title on)
+(tabStop off)
+(tabIndex 3)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 6500 11500 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 0 detail
+(relativeOrigin 320 320)
+(PID 4)
+(title on)
+(tabStop off)
+(tabIndex 4)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 6500 12000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(widget 2 detail
+(relativeOrigin 640 320)
+(PID 5)
+(title on)
+(tabStop off)
+(tabIndex 5)
+(borderStyle flat)
+(extent 315 279)
+(displayMode 54)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "dB")
+(domainName "frequency")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 3 4 linear))
+(domain 4000 9000 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White")))
+(detail
+(extent 770 840)
+(anchorPt 101 -1239)
+(configuration
+(devCarrierFor 23
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 310 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 6800 11600 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 355 1530))
+(devCarrierFor 20
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 130 1620))
+(devCarrierFor 24
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 310 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 4800 7300 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 355 1860))
+(devCarrierFor 19
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 130 1950))
+(devCarrierFor 21
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 306 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 6340 10640 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 365 860))
+(devCarrierFor 18
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 140 950))
+(devCarrierFor 22
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 310 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 6620 11320 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 365 1190))
+(devCarrierFor 17
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 140 1280))
+(devCarrierFor 14
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 150 620))
+(devCarrierFor 15
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 310 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 5660 9460 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 375 530))
+(devCarrierFor 13
+(active open)
+(icon)
+(open
+(extent 64 29))
+(pinCenter 150 290))
+(devCarrierFor 16
+(active open)
+(icon
+(extent 68 0)
+(iconImage "display.icn"))
+(open
+(extent 310 279)
+(displayMode 4)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 1)
+(Xspacing 2)
+(scaleColor "Dark Gray")
+(show 1)
+(range -2 3 4 linear))
+(domain 4480 8880 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0))
+(markerColor "White"))
+(terminals on)
+(pinCenter 375 200))
+(connect D1:0 D0:0
+(points 6 130 1637 130 1660 80 1660 80 1350 340 1350 340 1369))
+(connect I10:1 D0:1
+(points 6 -101 1898 -10 1898 -10 1660 -30 1660 -30 1440 137 1440))
+(connect I9:1 D0:2
+(points 4 -101 1828 -10 1828 -10 1530 137 1530))
+(connect D1:1 D0:3
+(points 4 164 1620 172 1620 172 1620 137 1620))
+(connect D3:0 D2:0
+(points 10 130 1967 130 1980 120 1980 120 1970 100 1970 100 1950 80 1950 80 1690
+340 1690 340 1699))
+(connect I12:1 D2:1
+(points 4 -101 2038 -10 2038 -10 1770 137 1770))
+(connect I11:1 D2:2
+(points 6 -101 1968 -10 1968 -10 1750 -30 1750 -30 1860 137 1860))
+(connect D3:1 D2:3
+(points 4 164 1950 172 1950 172 1950 137 1950))
+(connect D5:0 D4:0
+(points 6 140 967 140 990 90 990 90 680 350 680 350 699))
+(connect I6:1 D4:1
+(points 6 -101 1618 0 1618 0 1380 -30 1380 -30 770 149 770))
+(connect I5:1 D4:2
+(points 4 -101 1548 0 1548 0 860 149 860))
+(connect D5:1 D4:3
+(points 2 174 950 149 950))
+(connect D7:0 D6:0
+(points 6 140 1297 140 1320 90 1320 90 1020 350 1020 350 1029))
+(connect I8:1 D6:1
+(points 6 -101 1758 -10 1758 -10 1520 -40 1520 -40 1100 147 1100))
+(connect I7:1 D6:2
+(points 4 -101 1688 -10 1688 -10 1190 147 1190))
+(connect D7:1 D6:3
+(points 4 174 1280 182 1280 182 1280 147 1280))
+(connect D8:0 D9:0
+(points 6 150 637 150 660 100 660 100 360 360 360 360 369))
+(connect I4:1 D9:1
+(points 4 -101 1478 10 1478 10 440 157 440))
+(connect I3:1 D9:2
+(points 4 -101 1408 -10 1408 -10 530 157 530))
+(connect D8:1 D9:3
+(points 4 184 620 192 620 192 620 157 620))
+(connect D10:0 D11:0
+(points 6 150 307 150 330 100 330 100 20 360 20 360 39))
+(connect I2:1 D11:1
+(points 4 -101 1338 30 1338 30 110 157 110))
+(connect I1:1 D11:2
+(points 4 -101 1268 20 1268 20 200 157 200))
+(connect D10:1 D11:3
+(points 4 184 290 192 290 192 290 157 290)))
+(stackingOrder 10 8 7 5 3 1 11 9 4 6 2 0)))))
 (device 13 START25
 (properties
 (variableScope cont)))
@@ -6528,29 +7241,29 @@
 (connect D16:1 D2:1
 (points 2 505 -10 542 -10))
 (connect D10:0 D3:0
-(points 2 590 49 590 103))
+(points 2 590 49 595 102))
 (connect D3:0 D4:0
-(points 2 590 258 590 311))
+(points 2 595 258 590 310))
 (connect D1:1 D4:1
-(points 2 406 350 521 350))
+(points 2 406 350 511 350))
 (connect D3:2 D4:2
-(points 6 724 190 740 190 740 280 500 280 500 370 521 370))
+(points 6 734 190 740 190 740 280 500 280 500 370 511 370))
 (connect D3:1 D4:3
-(points 6 724 150 750 150 750 290 490 290 490 390 521 390))
+(points 6 734 150 750 150 750 290 490 290 490 390 511 390))
 (connect D4:1 D5:1
-(points 2 658 350 727 350))
+(points 2 668 350 727 350))
 (connect D4:0 D6:0
-(points 2 590 410 590 431))
+(points 2 590 410 585 430))
 (connect D10:2 D6:1
-(points 6 617 30 650 30 650 70 440 70 440 510 455 510))
+(points 6 617 30 650 30 650 70 440 70 440 510 445 510))
 (connect D6:2 D7:1
 (points 2 724 540 727 540))
 (connect D3:2 D8:1
-(points 6 724 190 870 190 870 310 880 310 880 550 910 550))
+(points 6 734 190 870 190 870 310 880 310 880 550 910 550))
 (connect D3:1 D9:1
-(points 2 724 150 910 150))
+(points 2 734 150 910 150))
 (connect D3:2 D9:2
-(points 4 724 190 870 190 870 310 910 310))
+(points 4 734 190 870 190 870 310 910 310))
 (connect D2:0 D10:0
 (points 2 590 0 590 10))
 (connect D6:1 D11:1
@@ -6572,7 +7285,7 @@
 (connect D15:1 D18:0
 (points 5 185 -40 210 -40 210 -90 380 -90 380 -75))
 (connect D15:3 D20:0
-(points 3 185 -20 200 -20 200 44)))
+(points 3 185 -20 200 -20 200 43)))
 (stackingOrder 7 0 6 13 12 14 4 5 1 9 8 11 10 3 16 19 2 17 15 20 18 21))))
 (device 26 CONTEXT
 (properties
@@ -6602,7 +7315,7 @@
 (tag "records")))
 (implementation
 (attr iopath file read
-"C:\\VEE Calibration Files\\Scalar_Detector\\ScalarDetector_85025D-US38013041_Response-timestamp"
+"C:\\VEE Calibration Files\\Scalar_Detector\\ScalarDetector85025D-US38013041_Response-2024_12_06_160737"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -6979,7 +7692,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -37 -24 4 linear))
+(range 0 3.5 4 linear))
 (domain 0 800 4 linear)
 (trace 0 onScale 0
 (name "Trace1")
@@ -7004,7 +7717,7 @@
 (Xspacing 2)
 (scaleColor "Dark Gray")
 (show 1)
-(range -37 -24 4 linear))
+(range 0 3.5 4 linear))
 (domain 0 40000 4 linear)
 (trace 0 onScale 0
 (name "YData1")
@@ -7097,23 +7810,23 @@
 (terminals on)
 (pinCenter 670 60))
 (connect D11:0 D0:0
-(points 2 180 65 180 115))
+(points 2 180 65 170 114))
 (connect D11:1 D0:1
-(points 6 319 40 340 40 340 90 0 90 0 190 19 190))
+(points 6 319 40 340 40 340 90 0 90 0 190 -1 190))
 (connect D7:0 D2:0
 (points 2 670 130 670 180))
 (connect D8:3 D2:1
 (points 4 460 190 480 190 480 200 644 200))
 (connect D2:0 D3:0
-(points 4 670 219 670 240 600 240 600 311))
+(points 4 670 219 670 240 600 240 600 310))
 (connect D1:1 D3:1
-(points 2 506 350 531 350))
+(points 2 506 350 521 350))
 (connect D2:2 D3:2
-(points 6 696 200 720 200 720 290 520 290 520 370 531 370))
+(points 6 696 200 720 200 720 290 520 290 520 370 521 370))
 (connect D2:1 D3:3
-(points 6 696 190 730 190 730 260 410 260 410 390 531 390))
+(points 6 696 190 730 190 730 260 410 260 410 390 521 390))
 (connect D3:1 D4:1
-(points 2 668 350 687 350))
+(points 2 678 350 687 350))
 (connect D2:2 D5:1
 (points 6 696 200 720 200 720 300 880 300 880 530 909 530))
 (connect D2:1 D6:1
@@ -7133,11 +7846,11 @@
 (connect D12:1 D11:2
 (points 4 -61 100 -40 100 -40 60 41 60))
 (connect D13:2 D14:0
-(points 3 129 -40 420 -40 420 -16))
+(points 3 129 -40 420 -40 420 -17))
 (connect D0:0 D15:0
-(points 2 180 247 180 274))
+(points 2 170 247 175 273))
 (connect D11:1 D15:1
-(points 6 319 40 340 40 340 90 0 90 0 320 47 320))
+(points 6 319 40 340 40 340 90 0 90 0 320 37 320))
 (connect D8:5 D16:1
 (points 4 460 210 490 210 490 20 621 20))
 (connect D8:4 D17:1
@@ -9500,7 +10213,8 @@
 (points 6 534 570 580 570 580 520 690 520 690 470 721 470))
 (connect D11:2 D24:12
 (points 4 534 610 550 610 550 480 721 480)))
-(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2))))
+(stackingOrder 18 19 20 12 17 4 7 8 9 10 13 14 1 22 23 24 3 15 16 0 5 6 11 21 2)
+)))
 (device 45 CONTEXT
 (properties
 (name "veeosInit")
@@ -10065,7 +10779,7 @@
 (optional yes)))
 (implementation
 (attr iopath file write
-"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_03_124847"
+"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_06_161533"
 (readTerm "\n")
 (fs " ")
 (eol "\n")
@@ -10393,12 +11107,10 @@
 (connect D2:1 D16:2)
 (connect D3:1 D16:3)))
 (contextCarrier
-(wndOrigin 37 175)
-(wndState res)
 (active detail)
 (detail
 (extent 1132 647)
-(anchorPt 115 -172)
+(anchorPt 116 -172)
 (configuration
 (devCarrierFor 0
 (active open)
@@ -10451,13 +11163,13 @@
 (extent 294 26))
 (pinCenter 60 580))
 (devCarrierFor 9
-(active open)
+(active icon)
 (icon
 (extent 199 54))
 (open
 (extent 714 206))
 (terminals on)
-(pinCenter 465 680))
+(pinCenter 430 680))
 (devCarrierFor 10
 (active open)
 (icon
@@ -10534,25 +11246,25 @@
 (connect D9:0 D4:0
 (points 2 440 425 440 430))
 (connect D7:0 D5:0
-(points 6 440 785 440 730 570 730 570 590 740 590 740 610))
+(points 6 430 709 440 730 570 730 570 590 740 590 730 609))
 (connect D15:1 D5:1
-(points 4 484 530 560 530 560 640 614 640))
+(points 4 484 530 560 530 560 640 594 640))
 (connect D7:1 D5:2
-(points 4 874 680 578 680 578 680 614 680))
+(points 4 532 680 578 680 578 680 594 680))
 (connect D12:0 D7:0
-(points 4 440 605 440 627 440 627 440 556))
+(points 4 440 605 440 627 440 627 430 650))
 (connect D6:1 D7:1
-(points 4 209 580 240 580 240 600 5 600))
+(points 4 209 580 240 580 240 660 328 660))
 (connect D8:1 D7:2
-(points 4 209 630 230 630 230 640 5 640))
+(points 4 209 630 230 630 230 670 328 670))
 (connect D13:1 D7:3
-(points 4 199 690 220 690 220 680 5 680))
+(points 4 199 690 220 690 220 680 328 680))
 (connect D13:2 D7:4
-(points 4 199 730 230 730 230 720 5 720))
+(points 4 199 730 230 730 230 690 328 690))
 (connect D12:1 D7:5
-(points 6 491 580 510 580 510 630 320 630 320 760 5 760))
+(points 6 491 580 510 580 510 630 320 630 320 700 328 700))
 (connect D16:0 D9:0
-(points 2 440 325 440 336))
+(points 2 440 325 440 335))
 (connect D16:1 D9:1
 (points 6 504 290 520 290 520 230 360 230 360 370 375 370))
 (connect D10:1 D9:2
@@ -10560,26 +11272,26 @@
 (connect D11:1 D9:3
 (points 4 279 430 300 430 300 410 375 410))
 (connect D15:0 D12:0
-(points 2 440 558 440 575))
+(points 4 440 558 440 566 440 566 440 575))
 (connect D0:1 D14:1
 (points 4 279 170 300 170 300 180 365 180))
 (connect D1:1 D14:2
 (points 2 257 200 365 200))
 (connect D4:0 D15:0
-(points 2 440 450 440 502))
+(points 4 440 450 440 476 440 476 440 502))
 (connect D9:1 D15:1
 (points 6 504 390 520 390 520 490 390 490 390 520 395 520))
 (connect D4:1 D15:2
 (points 6 481 440 490 440 490 470 380 470 380 540 395 540))
 (connect D14:0 D16:0
-(points 2 440 215 440 236))
+(points 2 440 215 440 235))
 (connect D14:1 D16:1
 (points 6 514 190 530 190 530 130 350 130 350 270 375 270))
 (connect D2:1 D16:2
 (points 4 279 280 300 280 300 290 375 290))
 (connect D3:1 D16:3
 (points 2 282 310 375 310)))
-(stackingOrder 16 14 9 1 2 3 10 11 0 15 4 8 5 12 6 13 7))))
+(stackingOrder 16 14 9 1 2 3 10 11 0 4 8 5 12 6 13 7 15))))
 (device 83 NOTE
 (properties
 (variableScope cont)
@@ -10600,7 +11312,7 @@
 "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil Arial;}{\\f1\\fswiss\\fcharset0 Arial;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs18 UF, X, Y, W, H\\cf0\\f1\\fs20\\par\r\n}\r\n"
 )
 (variableScope cont)
-(expr 1 "ShowPanel(\"FileNameStatus\",200,200,800,150)"))
+(expr 1 "ShowPanel(\"FileNameStatus\",200,200,850,150)"))
 (interface
 (output 1
 (name "Result")
@@ -10624,6 +11336,648 @@
 (name "Go")
 (lock name constraints)))
 (implementation))
+(device 98 CONTEXT
+(properties
+(name "Viewer")
+(variableScope cont)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 5 FROMDATASET
+(properties
+(variableScope cont)
+(readRecs one)
+(expr 1 "1"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(tag "records")))
+(implementation
+(attr iopath file read
+"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_06_133406"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 6 FILESELECT
+(properties
+(name "File Name Selection")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory "C:\\VEE Calibration Files\\N19_6457")
+(initialFile "N19-6457_ScalarFlatnessError_*.*")
+(dialogMode Reading))
+(interface
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 7 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "B1error")
+(optional yes))
+(output 4
+(name "B1FreqInput")
+(optional yes))
+(output 5
+(name "B2error")
+(optional yes))
+(output 6
+(name "B2FreqInput")
+(optional yes))
+(output 7
+(name "B3error")
+(optional yes))
+(output 8
+(name "B3FreqInput")
+(optional yes))
+(output 9
+(name "B4error")
+(optional yes))
+(output 10
+(name "B4FreqInput")
+(optional yes))
+(output 11
+(name "B5error")
+(optional yes))
+(output 12
+(name "B5FreqInput")
+(optional yes))
+(output 13
+(name "B6error")
+(optional yes))
+(output 14
+(name "B1FreqInput")
+(optional yes))))
+(device 8 START25
+(properties
+(variableScope cont)))
+(device 9 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 10 CONFIRM25
+(properties
+(name "DONE")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 12 CALL
+(properties
+(name "Call XvsYplotsViewer")
+(variableScope cont)
+(callFunc "XvsYplotsViewer")
+(parmMode rev30))
+(interface
+(input 1
+(name "B1y")
+(optional yes))
+(input 2
+(name "B1x")
+(optional yes))
+(input 3
+(name "B2y")
+(optional yes))
+(input 4
+(name "B2x")
+(optional yes))
+(input 5
+(name "B3y")
+(optional yes))
+(input 6
+(name "B3x")
+(optional yes))
+(input 7
+(name "B4y")
+(optional yes))
+(input 8
+(name "B4x")
+(optional yes))
+(input 9
+(name "B5y")
+(optional yes))
+(input 10
+(name "B5x")
+(optional yes))
+(input 11
+(name "B6y")
+(optional yes))
+(input 12
+(name "B6x")
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "ShowPanel(\"XvsYplotsViewer\")")
+(variableScope cont)
+(expr 1 "ShowPanel(\"XvsYplotsViewer\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D3:0 D1:0)
+(connect D0:0 D2:0)
+(connect D0:1 D2:1)
+(connect D2:1 D4:1)
+(connect D7:0 D5:0)
+(connect D2:0 D6:0)
+(connect D2:3 D6:1)
+(connect D2:4 D6:2)
+(connect D2:5 D6:3)
+(connect D2:6 D6:4)
+(connect D2:7 D6:5)
+(connect D2:8 D6:6)
+(connect D2:9 D6:7)
+(connect D2:10 D6:8)
+(connect D2:11 D6:9)
+(connect D2:12 D6:10)
+(connect D2:13 D6:11)
+(connect D2:14 D6:12)
+(connect D6:0 D7:0)))
+(contextCarrier
+(wndOrigin 12 35)
+(wndState res)
+(active detail)
+(panel
+(extent 784 598)
+(drawGrid "on"))
+(detail
+(extent 876 598)
+(anchorPt 40 169)
+(configuration
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 213 109))
+(terminals on)
+(pinCenter 175 120))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 463 106))
+(terminals on)
+(pinCenter 150 20))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 92 145)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 282))
+(terminals on)
+(pinCenter 400 120))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 150 -30))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 83 17))
+(open
+(extent 164 385))
+(pinCenter 710 -30))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 41 0))
+(open
+(extent 51 26))
+(title off)
+(pinCenter 560 280))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 132 125))
+(open
+(extent 176 250))
+(terminals on)
+(pinCenter 560 130))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 185 17))
+(open
+(extent 214 50))
+(terminals on)
+(pinCenter 560 250))
+(connect D1:0 D0:0
+(points 2 150 35 150 44))
+(connect D1:1 D0:1
+(points 6 213 10 220 10 220 -70 -40 -70 -40 120 -24 120))
+(connect D3:0 D1:0
+(points 2 150 -15 150 5))
+(connect D0:0 D2:0
+(points 2 150 177 400 45))
+(connect D0:1 D2:1
+(points 2 324 120 351 120))
+(connect D2:1 D4:1
+(points 4 448 50 460 50 460 -30 666 -30))
+(connect D7:0 D5:0
+(points 4 560 261 560 257 560 257 560 264))
+(connect D2:0 D6:0
+(points 2 400 195 560 65))
+(connect D2:3 D6:1
+(points 4 448 70 460 70 460 70 491 70))
+(connect D2:4 D6:2
+(points 4 448 80 460 80 460 80 491 80))
+(connect D2:5 D6:3
+(points 4 448 90 460 90 460 90 491 90))
+(connect D2:6 D6:4
+(points 4 448 100 460 100 460 100 491 100))
+(connect D2:7 D6:5
+(points 4 448 110 460 110 460 110 491 110))
+(connect D2:8 D6:6
+(points 4 448 120 460 120 460 120 491 120))
+(connect D2:9 D6:7
+(points 4 448 130 460 130 460 130 491 130))
+(connect D2:10 D6:8
+(points 4 448 140 460 140 460 140 491 140))
+(connect D2:11 D6:9
+(points 4 448 150 460 150 460 150 491 150))
+(connect D2:12 D6:10
+(points 4 448 160 460 160 460 160 491 160))
+(connect D2:13 D6:11
+(points 4 448 170 460 170 460 170 491 170))
+(connect D2:14 D6:12
+(points 4 448 180 470 180 470 180 491 180))
+(connect D6:0 D7:0
+(points 4 560 195 560 212 560 212 560 239)))
+(stackingOrder 1 3 0 4 2 5 7 6))))
+(device 99 START25
+(properties
+(variableScope cont)))
+(device 100 CONTEXT
+(properties
+(name "Viewer")
+(variableScope cont)
+(trigMode deg)
+(nextID 14)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 5 FROMDATASET
+(properties
+(variableScope cont)
+(readRecs one)
+(expr 1 "1"))
+(interface
+(input 1
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "Rec")
+(tag "records")))
+(implementation
+(attr iopath file read
+"C:\\VEE Calibration Files\\N19_6457\\N19-6457_ScalarFlatnessError_85025D-US38013041_2024_12_06_161533"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 6 FILESELECT
+(properties
+(name "File Name Selection")
+(variableScope cont)
+(prompt "Enter File Name:")
+(initialDirectory "C:\\VEE Calibration Files\\N19_6457")
+(initialFile "N19-6457_ScalarFlatnessError_*.*")
+(dialogMode Reading))
+(interface
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 7 FROMRECORD
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Record Data")
+(requires
+(datatype Record))
+(lock name constraints))
+(output 1
+(name "Name List")
+(tag "Name List")
+(lock name constraints)
+(optional yes))
+(output 2
+(name "Type List")
+(tag "Type List")
+(lock name constraints)
+(optional yes))
+(output 3
+(name "B1error")
+(optional yes))
+(output 4
+(name "B1FreqInput")
+(optional yes))
+(output 5
+(name "B2error")
+(optional yes))
+(output 6
+(name "B2FreqInput")
+(optional yes))
+(output 7
+(name "B3error")
+(optional yes))
+(output 8
+(name "B3FreqInput")
+(optional yes))
+(output 9
+(name "B4error")
+(optional yes))
+(output 10
+(name "B4FreqInput")
+(optional yes))
+(output 11
+(name "B5error")
+(optional yes))
+(output 12
+(name "B5FreqInput")
+(optional yes))
+(output 13
+(name "B6error")
+(optional yes))
+(output 14
+(name "B1FreqInput")
+(optional yes))))
+(device 8 START25
+(properties
+(variableScope cont)))
+(device 9 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 10 CONFIRM25
+(properties
+(name "DONE")
+(variableScope cont)
+(enterButton 0)
+(escapeButton 0)
+(isAssigned2FKey None)
+(okDisabled 1))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 12 CALL
+(properties
+(name "Call XvsYplotsViewer")
+(variableScope cont)
+(callFunc "XvsYplotsViewer")
+(parmMode rev30))
+(interface
+(input 1
+(name "B1y")
+(optional yes))
+(input 2
+(name "B1x")
+(optional yes))
+(input 3
+(name "B2y")
+(optional yes))
+(input 4
+(name "B2x")
+(optional yes))
+(input 5
+(name "B3y")
+(optional yes))
+(input 6
+(name "B3x")
+(optional yes))
+(input 7
+(name "B4y")
+(optional yes))
+(input 8
+(name "B4x")
+(optional yes))
+(input 9
+(name "B5y")
+(optional yes))
+(input 10
+(name "B5x")
+(optional yes))
+(input 11
+(name "B6y")
+(optional yes))
+(input 12
+(name "B6x")
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "ShowPanel(\"XvsYplotsViewer\")")
+(variableScope cont)
+(expr 1 "ShowPanel(\"XvsYplotsViewer\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D1:0 D0:0)
+(connect D1:1 D0:1)
+(connect D3:0 D1:0)
+(connect D0:0 D2:0)
+(connect D0:1 D2:1)
+(connect D2:1 D4:1)
+(connect D7:0 D5:0)
+(connect D2:0 D6:0)
+(connect D2:3 D6:1)
+(connect D2:4 D6:2)
+(connect D2:5 D6:3)
+(connect D2:6 D6:4)
+(connect D2:7 D6:5)
+(connect D2:8 D6:6)
+(connect D2:9 D6:7)
+(connect D2:10 D6:8)
+(connect D2:11 D6:9)
+(connect D2:12 D6:10)
+(connect D2:13 D6:11)
+(connect D2:14 D6:12)
+(connect D6:0 D7:0)))
+(contextCarrier
+(active detail)
+(panel
+(extent 784 598)
+(drawGrid "on"))
+(detail
+(extent 724 598)
+(anchorPt -40 127)
+(configuration
+(devCarrierFor 5
+(active open)
+(icon)
+(open
+(extent 213 109))
+(terminals on)
+(pinCenter 175 120))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 463 106))
+(terminals on)
+(pinCenter 150 20))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 92 145)
+(iconImage "unbuild.icn"))
+(open
+(extent 17 282))
+(terminals on)
+(pinCenter 400 120))
+(devCarrierFor 8
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 150 -30))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 83 17))
+(open
+(extent 164 385))
+(pinCenter 710 -30))
+(devCarrierFor 10
+(active open)
+(icon
+(extent 41 0))
+(open
+(extent 51 26))
+(title off)
+(pinCenter 560 280))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 132 125))
+(open
+(extent 176 250))
+(terminals on)
+(pinCenter 560 130))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 185 17))
+(open
+(extent 214 50))
+(terminals on)
+(pinCenter 560 250))
+(connect D1:0 D0:0
+(points 2 150 35 150 44))
+(connect D1:1 D0:1
+(points 6 213 10 220 10 220 -70 -40 -70 -40 120 -24 120))
+(connect D3:0 D1:0
+(points 2 150 -15 150 5))
+(connect D0:0 D2:0
+(points 2 150 177 400 45))
+(connect D0:1 D2:1
+(points 2 324 120 351 120))
+(connect D2:1 D4:1
+(points 4 448 50 460 50 460 -30 666 -30))
+(connect D7:0 D5:0
+(points 4 560 261 560 257 560 257 560 264))
+(connect D2:0 D6:0
+(points 2 400 195 560 65))
+(connect D2:3 D6:1
+(points 4 448 70 460 70 460 70 491 70))
+(connect D2:4 D6:2
+(points 4 448 80 460 80 460 80 491 80))
+(connect D2:5 D6:3
+(points 4 448 90 460 90 460 90 491 90))
+(connect D2:6 D6:4
+(points 4 448 100 460 100 460 100 491 100))
+(connect D2:7 D6:5
+(points 4 448 110 460 110 460 110 491 110))
+(connect D2:8 D6:6
+(points 4 448 120 460 120 460 120 491 120))
+(connect D2:9 D6:7
+(points 4 448 130 460 130 460 130 491 130))
+(connect D2:10 D6:8
+(points 4 448 140 460 140 460 140 491 140))
+(connect D2:11 D6:9
+(points 4 448 150 460 150 460 150 491 150))
+(connect D2:12 D6:10
+(points 4 448 160 460 160 460 160 491 160))
+(connect D2:13 D6:11
+(points 4 448 170 460 170 460 170 491 170))
+(connect D2:14 D6:12
+(points 4 448 180 470 180 470 180 491 180))
+(connect D6:0 D7:0
+(points 4 560 195 560 212 560 212 560 239)))
+(stackingOrder 1 3 0 4 2 5 7 6))))
+(device 101 START25
+(properties
+(variableScope cont)))
 (configuration
 (connect D4:0 D1:0)
 (connect D1:0 D2:0)
@@ -10637,10 +11991,12 @@
 (connect D5:0 D10:0)
 (connect D8:0 D13:0)
 (connect D7:0 D14:0)
-(connect D10:0 D15:0))
+(connect D10:0 D15:0)
+(connect D17:0 D16:0)
+(connect D19:0 D18:0))
 (ShowOnExecPanel))
 (contextCarrier
-(wndOrigin 24 22)
+(wndOrigin 775 20)
 (wndState res)
 (active detail)
 (panel
@@ -10676,7 +12032,7 @@
 (extent 47 22)))
 (detail
 (extent 1513 678)
-(anchorPt -242 25)
+(anchorPt 312 -73)
 (configuration
 (devCarrierFor 13
 (active open)
@@ -10800,6 +12156,38 @@
 (extent 47 22))
 (title off)
 (pinCenter 510 500))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 42 17))
+(open
+(extent 784 598)
+(carbonCopy))
+(terminals on)
+(pinCenter 40 320))
+(devCarrierFor 99
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 40 280))
+(devCarrierFor 100
+(active icon)
+(icon
+(extent 42 17))
+(open
+(extent 784 598)
+(carbonCopy))
+(terminals on)
+(pinCenter 150 310))
+(devCarrierFor 101
+(active open)
+(icon)
+(open
+(extent 51 26))
+(title off)
+(pinCenter 150 270))
 (connect D4:0 D1:0
 (points 2 510 150 510 170))
 (connect D1:0 D2:0
@@ -10823,10 +12211,14 @@
 (connect D8:0 D13:0
 (points 2 510 260 510 270))
 (connect D7:0 D14:0
-(points 2 510 540 510 554))
+(points 2 510 540 510 553))
 (connect D10:0 D15:0
-(points 2 510 480 510 486)))
-(stackingOrder 0 4 1 2 14 7 3 9 6 11 13 8 15 5 10 12))
+(points 2 510 480 510 486))
+(connect D17:0 D16:0
+(points 2 40 295 40 309))
+(connect D19:0 D18:0
+(points 2 150 285 150 299)))
+(stackingOrder 0 4 1 2 14 7 3 9 11 8 15 5 12 13 6 10 17 18 19 16))
 (numberFormats
 (realFormat standard)
 (realSigDigits 4)
